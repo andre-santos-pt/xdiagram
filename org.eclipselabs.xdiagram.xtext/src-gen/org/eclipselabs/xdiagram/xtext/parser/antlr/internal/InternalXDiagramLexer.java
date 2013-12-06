@@ -201,10 +201,11 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:13:7: ( '{' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:13:9: '{'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:13:7: ( 'import' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:13:9: 'import'
             {
-            match('{'); 
+            match("import"); 
+
 
             }
 
@@ -221,10 +222,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:14:7: ( '}' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:14:9: '}'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:14:7: ( '.' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:14:9: '.'
             {
-            match('}'); 
+            match('.'); 
 
             }
 
@@ -241,11 +242,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:15:7: ( 'import' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:15:9: 'import'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:15:7: ( '*' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:15:9: '*'
             {
-            match("import"); 
-
+            match('*'); 
 
             }
 
@@ -262,10 +262,11 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:16:7: ( '.' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:16:9: '.'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:16:7: ( 'style' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:16:9: 'style'
             {
-            match('.'); 
+            match("style"); 
+
 
             }
 
@@ -282,10 +283,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:17:7: ( '*' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:17:9: '*'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:17:7: ( ':' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:17:9: ':'
             {
-            match('*'); 
+            match(':'); 
 
             }
 
@@ -302,11 +303,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:18:7: ( 'style' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:18:9: 'style'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:18:7: ( '{' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:18:9: '{'
             {
-            match("style"); 
-
+            match('{'); 
 
             }
 
@@ -323,10 +323,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:19:7: ( ':' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:19:9: ':'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:19:7: ( '}' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:19:9: '}'
             {
-            match(':'); 
+            match('}'); 
 
             }
 
@@ -2665,10 +2665,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4335:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4335:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:11: ( '^' )?
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4335:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -2677,7 +2677,7 @@ public class InternalXDiagramLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:11: '^'
+                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4335:11: '^'
                     {
                     match('^'); 
 
@@ -2695,7 +2695,7 @@ public class InternalXDiagramLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4335:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -2744,10 +2744,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4345:10: ( ( '0' .. '9' )+ )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4345:12: ( '0' .. '9' )+
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4337:10: ( ( '0' .. '9' )+ )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4337:12: ( '0' .. '9' )+
             {
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4345:12: ( '0' .. '9' )+
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4337:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -2761,7 +2761,7 @@ public class InternalXDiagramLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4345:13: '0' .. '9'
+            	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4337:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2793,10 +2793,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4347:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4347:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4347:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -2814,10 +2814,10 @@ public class InternalXDiagramLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4347:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4347:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -2833,7 +2833,7 @@ public class InternalXDiagramLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4347:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -2849,7 +2849,7 @@ public class InternalXDiagramLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4347:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2874,10 +2874,10 @@ public class InternalXDiagramLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4347:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4347:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -2893,7 +2893,7 @@ public class InternalXDiagramLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4347:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -2909,7 +2909,7 @@ public class InternalXDiagramLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4347:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2952,12 +2952,12 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4349:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4349:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4341:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4341:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4349:24: ( options {greedy=false; } : . )*
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4341:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -2982,7 +2982,7 @@ public class InternalXDiagramLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4349:52: .
+            	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4341:52: .
             	    {
             	    matchAny(); 
 
@@ -3012,12 +3012,12 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4351:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4351:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4351:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -3030,7 +3030,7 @@ public class InternalXDiagramLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4351:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -3050,7 +3050,7 @@ public class InternalXDiagramLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4351:40: ( ( '\\r' )? '\\n' )?
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -3059,9 +3059,9 @@ public class InternalXDiagramLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4351:41: ( '\\r' )? '\\n'
+                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4351:41: ( '\\r' )?
+                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -3070,7 +3070,7 @@ public class InternalXDiagramLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4351:41: '\\r'
+                            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:41: '\\r'
                             {
                             match('\r'); 
 
@@ -3102,10 +3102,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4353:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4353:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4345:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4345:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4353:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4345:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -3159,8 +3159,8 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4355:16: ( . )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4355:18: .
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4347:16: ( . )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4347:18: .
             {
             matchAny(); 
 
@@ -4076,201 +4076,198 @@ public class InternalXDiagramLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\2\75\2\uffff\1\75\2\uffff\1\75\1\uffff\2\75\1\uffff\1\75"+
-        "\1\uffff\1\75\1\uffff\13\75\1\172\10\75\1\uffff\1\71\1\uffff\4\75"+
-        "\2\uffff\1\75\1\uffff\2\75\1\71\2\uffff\3\71\2\uffff\3\75\1\uffff"+
-        "\2\75\1\u00a2\2\75\2\uffff\3\75\2\uffff\4\75\1\uffff\2\75\1\u00b0"+
-        "\1\75\1\uffff\4\75\1\uffff\2\75\1\uffff\1\u00ba\3\75\1\u00bf\10"+
-        "\75\1\u00c9\1\75\1\u00cd\1\75\1\u00d0\13\75\2\uffff\1\u00dd\16\75"+
-        "\3\uffff\4\75\2\uffff\1\75\1\uffff\2\75\5\uffff\6\75\1\uffff\1\75"+
-        "\1\u00fc\5\75\1\u0102\5\75\1\uffff\3\75\1\u010c\5\75\1\uffff\4\75"+
-        "\1\uffff\10\75\1\u0120\1\uffff\3\75\1\uffff\2\75\1\uffff\7\75\1"+
-        "\u012d\1\u012e\3\75\1\uffff\30\75\1\u014a\4\75\1\u0150\1\uffff\1"+
-        "\75\1\u0152\3\75\1\uffff\2\75\1\u0158\1\u0159\3\75\1\u015d\1\75"+
-        "\1\uffff\11\75\1\u0168\2\75\1\u016b\3\75\1\u016f\1\75\1\u0172\1"+
-        "\uffff\1\75\1\u0174\12\75\2\uffff\4\75\1\u0184\10\75\1\u018d\1\75"+
-        "\1\u018f\13\75\1\uffff\5\75\1\uffff\1\75\1\uffff\1\75\1\u01a2\1"+
-        "\u01a3\1\75\1\u01a5\2\uffff\1\75\1\u01a7\1\75\1\uffff\1\75\1\uffff"+
-        "\1\u01ae\5\75\1\u01b4\1\75\2\uffff\1\75\1\uffff\3\75\1\uffff\1\75"+
-        "\2\uffff\1\75\1\uffff\2\75\1\u01c3\1\u01c4\3\75\1\u01c9\6\75\1\u01d0"+
-        "\1\uffff\7\75\1\u01d8\1\uffff\1\75\1\uffff\3\75\1\u01dd\1\u01de"+
-        "\2\75\1\u01e1\1\75\1\u01e3\2\75\1\u01e6\3\75\1\u01ea\1\75\2\uffff"+
-        "\1\u01ec\1\uffff\1\75\1\uffff\1\u01ee\1\75\5\uffff\2\75\1\u01f2"+
-        "\1\u01f3\1\75\1\uffff\1\75\2\uffff\1\u01f6\1\u01f7\1\u01f8\1\75"+
-        "\1\u01fa\3\uffff\2\75\1\u01fd\2\uffff\4\75\1\uffff\6\75\1\uffff"+
-        "\1\u0208\2\75\1\u020b\3\75\1\uffff\1\75\1\u0210\1\75\1\u0212\2\uffff"+
-        "\1\u0213\1\u0214\1\uffff\1\75\1\uffff\2\75\1\uffff\1\u0218\1\u0219"+
-        "\1\u021a\1\uffff\1\75\1\uffff\1\75\1\uffff\3\75\2\uffff\1\u0220"+
-        "\1\75\3\uffff\1\75\1\uffff\2\75\1\uffff\5\75\1\u022a\2\75\1\u022d"+
-        "\1\75\1\uffff\2\75\1\uffff\4\75\1\uffff\1\75\3\uffff\1\u0236\2\75"+
-        "\3\uffff\1\u0239\4\75\1\uffff\1\u023e\1\u023f\6\75\1\u0246\1\uffff"+
-        "\2\75\1\uffff\1\u0249\2\75\1\u024c\1\u024d\3\75\1\uffff\1\u0251"+
-        "\1\u0252\1\uffff\1\u0253\1\75\1\u0255\1\75\2\uffff\1\75\1\u0258"+
-        "\1\u0259\1\75\1\u025b\1\75\1\uffff\1\u025d\1\75\1\uffff\2\75\2\uffff"+
-        "\1\u0262\2\75\3\uffff\1\u0265\1\uffff\1\u0267\1\75\2\uffff\1\75"+
-        "\1\uffff\1\75\1\uffff\1\75\1\u026c\1\u026d\1\75\1\uffff\2\75\1\uffff"+
-        "\1\u0271\1\uffff\1\75\1\u0273\1\u0274\1\75\2\uffff\3\75\1\uffff"+
-        "\1\u0279\2\uffff\4\75\1\uffff\5\75\1\u0283\3\75\1\uffff\2\75\1\u0289"+
-        "\1\u028a\1\u028b\3\uffff";
+        "\1\uffff\3\75\2\uffff\1\75\3\uffff\2\75\1\uffff\1\75\1\uffff\1\75"+
+        "\1\uffff\13\75\1\172\10\75\1\uffff\1\71\1\uffff\4\75\2\uffff\1\75"+
+        "\1\uffff\2\75\1\71\2\uffff\3\71\2\uffff\3\75\1\uffff\2\75\1\u00a2"+
+        "\5\75\2\uffff\4\75\3\uffff\2\75\1\u00b0\1\75\1\uffff\4\75\1\uffff"+
+        "\2\75\1\uffff\1\u00ba\3\75\1\u00bf\10\75\1\u00c9\1\75\1\u00cd\1"+
+        "\75\1\u00d0\13\75\2\uffff\1\u00dd\16\75\3\uffff\4\75\2\uffff\1\75"+
+        "\1\uffff\2\75\5\uffff\6\75\1\uffff\1\75\1\u00fc\5\75\1\u0102\5\75"+
+        "\1\uffff\3\75\1\u010c\5\75\1\uffff\4\75\1\uffff\10\75\1\u0120\1"+
+        "\uffff\3\75\1\uffff\2\75\1\uffff\7\75\1\u012d\1\u012e\3\75\1\uffff"+
+        "\30\75\1\u014a\4\75\1\u0150\1\uffff\1\75\1\u0152\3\75\1\uffff\2"+
+        "\75\1\u0158\1\u0159\3\75\1\u015d\1\75\1\uffff\11\75\1\u0168\2\75"+
+        "\1\u016b\3\75\1\u016f\1\75\1\u0172\1\uffff\1\75\1\u0174\12\75\2"+
+        "\uffff\4\75\1\u0184\10\75\1\u018d\1\75\1\u018f\13\75\1\uffff\5\75"+
+        "\1\uffff\1\75\1\uffff\1\75\1\u01a2\1\u01a3\1\75\1\u01a5\2\uffff"+
+        "\1\75\1\u01a7\1\75\1\uffff\1\75\1\uffff\1\u01ae\5\75\1\u01b4\1\75"+
+        "\2\uffff\1\75\1\uffff\3\75\1\uffff\1\75\2\uffff\1\75\1\uffff\2\75"+
+        "\1\u01c3\1\u01c4\3\75\1\u01c9\6\75\1\u01d0\1\uffff\7\75\1\u01d8"+
+        "\1\uffff\1\75\1\uffff\3\75\1\u01dd\1\u01de\2\75\1\u01e1\1\75\1\u01e3"+
+        "\2\75\1\u01e6\3\75\1\u01ea\1\75\2\uffff\1\u01ec\1\uffff\1\75\1\uffff"+
+        "\1\u01ee\1\75\5\uffff\2\75\1\u01f2\1\u01f3\1\75\1\uffff\1\75\2\uffff"+
+        "\1\u01f6\1\u01f7\1\u01f8\1\75\1\u01fa\3\uffff\2\75\1\u01fd\2\uffff"+
+        "\4\75\1\uffff\6\75\1\uffff\1\u0208\2\75\1\u020b\3\75\1\uffff\1\75"+
+        "\1\u0210\1\75\1\u0212\2\uffff\1\u0213\1\u0214\1\uffff\1\75\1\uffff"+
+        "\2\75\1\uffff\1\u0218\1\u0219\1\u021a\1\uffff\1\75\1\uffff\1\75"+
+        "\1\uffff\3\75\2\uffff\1\u0220\1\75\3\uffff\1\75\1\uffff\2\75\1\uffff"+
+        "\5\75\1\u022a\2\75\1\u022d\1\75\1\uffff\2\75\1\uffff\4\75\1\uffff"+
+        "\1\75\3\uffff\1\u0236\2\75\3\uffff\1\u0239\4\75\1\uffff\1\u023e"+
+        "\1\u023f\6\75\1\u0246\1\uffff\2\75\1\uffff\1\u0249\2\75\1\u024c"+
+        "\1\u024d\3\75\1\uffff\1\u0251\1\u0252\1\uffff\1\u0253\1\75\1\u0255"+
+        "\1\75\2\uffff\1\75\1\u0258\1\u0259\1\75\1\u025b\1\75\1\uffff\1\u025d"+
+        "\1\75\1\uffff\2\75\2\uffff\1\u0262\2\75\3\uffff\1\u0265\1\uffff"+
+        "\1\u0267\1\75\2\uffff\1\75\1\uffff\1\75\1\uffff\1\75\1\u026c\1\u026d"+
+        "\1\75\1\uffff\2\75\1\uffff\1\u0271\1\uffff\1\75\1\u0273\1\u0274"+
+        "\1\75\2\uffff\3\75\1\uffff\1\u0279\2\uffff\4\75\1\uffff\5\75\1\u0283"+
+        "\3\75\1\uffff\2\75\1\u0289\1\u028a\1\u028b\3\uffff";
     static final String DFA12_eofS =
         "\u028c\uffff";
     static final String DFA12_minS =
-        "\1\0\2\141\2\uffff\1\143\2\uffff\1\145\1\uffff\1\157\1\145\1\uffff"+
-        "\1\141\1\uffff\1\145\1\uffff\1\154\1\141\1\142\1\141\1\156\1\141"+
-        "\1\145\2\162\1\105\1\157\1\76\1\160\1\141\2\145\1\162\1\114\1\131"+
-        "\1\151\1\uffff\1\76\1\uffff\1\110\1\122\1\105\1\122\2\uffff\1\151"+
-        "\1\uffff\1\154\1\155\1\101\2\uffff\2\0\1\52\2\uffff\1\164\1\151"+
-        "\1\144\1\uffff\1\141\1\163\1\60\1\163\1\164\2\uffff\1\160\1\157"+
-        "\1\143\2\uffff\1\141\1\164\1\154\1\172\1\uffff\1\144\1\163\1\60"+
-        "\1\147\1\uffff\1\147\1\145\1\156\1\154\1\uffff\2\156\1\uffff\1\60"+
-        "\1\141\1\151\1\156\1\60\1\171\1\146\1\152\1\151\1\164\1\145\1\162"+
-        "\1\170\1\60\1\141\1\60\1\143\1\60\1\142\1\147\1\163\1\162\1\151"+
-        "\1\157\1\104\1\102\1\143\1\165\1\154\2\uffff\1\60\1\151\1\162\1"+
-        "\143\1\162\1\151\1\162\1\141\1\165\1\101\1\160\1\101\1\162\1\154"+
-        "\1\165\3\uffff\1\111\1\105\1\114\1\101\2\uffff\1\144\1\uffff\1\154"+
-        "\1\141\5\uffff\1\141\1\156\1\150\1\144\1\147\1\164\1\uffff\1\150"+
-        "\1\60\1\157\1\156\1\157\1\154\1\143\1\60\1\162\1\151\2\145\1\151"+
-        "\1\uffff\1\150\1\165\1\145\1\60\1\164\1\163\2\156\1\164\1\uffff"+
-        "\1\143\1\156\1\151\1\145\1\uffff\1\157\1\164\1\145\2\147\1\162\1"+
-        "\147\1\164\1\60\1\uffff\1\156\1\145\1\162\1\uffff\1\150\1\154\1"+
-        "\uffff\1\145\1\150\1\145\1\143\1\157\1\141\1\155\2\60\1\164\1\156"+
-        "\1\171\1\uffff\1\156\1\150\1\144\1\153\1\151\1\147\1\164\1\144\1"+
-        "\145\1\103\1\105\1\160\1\116\1\143\1\166\1\141\1\124\1\105\1\114"+
-        "\1\116\1\164\1\151\1\147\1\155\1\60\1\141\1\154\1\162\1\151\1\60"+
-        "\1\uffff\1\162\1\60\1\155\1\145\1\153\1\uffff\1\143\1\144\2\60\1"+
-        "\172\1\164\1\162\1\60\1\147\1\uffff\1\55\1\145\1\141\3\145\1\151"+
-        "\2\164\1\60\1\55\1\165\1\60\1\143\1\151\1\157\1\60\1\145\1\55\1"+
-        "\uffff\1\163\1\60\1\151\1\157\1\145\1\154\1\164\1\127\1\162\1\167"+
-        "\1\156\1\142\2\uffff\1\141\1\144\2\147\1\60\1\145\1\147\1\172\1"+
-        "\150\2\151\1\127\1\113\1\60\1\145\1\60\1\154\1\145\1\162\1\105\1"+
-        "\116\1\117\1\107\1\150\1\160\1\145\1\157\1\uffff\1\164\1\145\1\141"+
-        "\1\156\1\157\1\uffff\1\164\1\uffff\1\151\2\60\1\145\1\60\2\uffff"+
-        "\1\141\1\60\1\145\1\uffff\1\162\1\142\1\60\1\151\1\143\2\162\1\156"+
-        "\1\60\1\151\1\uffff\1\163\1\164\1\uffff\1\164\1\156\1\151\1\uffff"+
-        "\1\164\1\141\1\uffff\1\160\1\uffff\1\142\1\162\2\60\1\107\1\150"+
-        "\1\151\1\60\1\147\1\165\1\156\1\145\1\157\1\151\1\60\1\uffff\2\162"+
-        "\1\157\1\164\1\143\1\145\1\150\1\60\1\uffff\1\162\1\uffff\1\145"+
-        "\1\162\1\145\2\60\1\127\1\105\1\60\1\163\1\60\1\144\1\164\1\60\1"+
-        "\155\1\171\1\164\1\60\1\156\2\uffff\1\60\1\uffff\1\142\1\uffff\1"+
-        "\60\1\157\5\uffff\1\156\1\164\2\60\1\147\1\uffff\1\157\2\uffff\3"+
-        "\60\1\156\1\60\3\uffff\1\141\1\165\1\60\2\uffff\1\162\1\145\1\151"+
-        "\1\160\1\uffff\1\154\1\163\1\147\1\144\2\156\1\uffff\1\60\1\157"+
-        "\1\156\1\60\1\141\1\156\1\151\1\uffff\1\127\1\60\1\127\1\60\2\uffff"+
-        "\2\60\1\uffff\1\145\1\uffff\1\145\1\141\1\uffff\3\60\1\uffff\1\147"+
-        "\1\uffff\1\154\1\uffff\1\165\1\145\1\151\2\uffff\1\60\1\156\3\uffff"+
-        "\1\147\1\uffff\1\162\1\164\1\uffff\1\141\1\154\2\164\1\145\1\60"+
-        "\1\154\1\122\1\60\1\145\1\uffff\1\165\1\164\1\uffff\1\154\2\164"+
-        "\1\150\1\uffff\1\150\3\uffff\1\60\1\154\1\156\3\uffff\1\60\1\145"+
-        "\1\156\1\162\1\157\1\uffff\2\60\2\145\1\171\1\154\1\145\1\151\1"+
-        "\60\1\uffff\2\145\1\uffff\1\60\1\156\1\141\2\60\1\145\2\151\1\uffff"+
-        "\2\60\1\uffff\1\60\1\144\1\60\1\156\2\uffff\1\156\2\60\1\157\1\60"+
-        "\1\157\1\uffff\1\60\1\143\1\uffff\1\144\1\154\2\uffff\1\60\2\164"+
-        "\3\uffff\1\60\1\uffff\1\60\1\143\2\uffff\1\167\1\uffff\1\156\1\uffff"+
-        "\1\164\2\60\1\154\1\uffff\2\145\1\uffff\1\60\1\uffff\1\171\2\60"+
-        "\1\141\2\uffff\1\157\2\107\1\uffff\1\60\2\uffff\1\156\1\163\2\154"+
-        "\1\uffff\1\147\1\163\2\157\1\154\1\60\2\163\1\145\1\uffff\2\163"+
-        "\3\60\3\uffff";
+        "\1\0\2\141\1\143\2\uffff\1\145\3\uffff\1\157\1\145\1\uffff\1\141"+
+        "\1\uffff\1\145\1\uffff\1\154\1\141\1\142\1\141\1\156\1\141\1\145"+
+        "\2\162\1\105\1\157\1\76\1\160\1\141\2\145\1\162\1\114\1\131\1\151"+
+        "\1\uffff\1\76\1\uffff\1\110\1\122\1\105\1\122\2\uffff\1\151\1\uffff"+
+        "\1\154\1\155\1\101\2\uffff\2\0\1\52\2\uffff\1\164\1\151\1\144\1"+
+        "\uffff\1\141\1\163\1\60\1\163\1\164\1\160\1\157\1\143\2\uffff\1"+
+        "\141\1\164\1\154\1\172\3\uffff\1\144\1\163\1\60\1\147\1\uffff\1"+
+        "\147\1\145\1\156\1\154\1\uffff\2\156\1\uffff\1\60\1\141\1\151\1"+
+        "\156\1\60\1\171\1\146\1\152\1\151\1\164\1\145\1\162\1\170\1\60\1"+
+        "\141\1\60\1\143\1\60\1\142\1\147\1\163\1\162\1\151\1\157\1\104\1"+
+        "\102\1\143\1\165\1\154\2\uffff\1\60\1\151\1\162\1\143\1\162\1\151"+
+        "\1\162\1\141\1\165\1\101\1\160\1\101\1\162\1\154\1\165\3\uffff\1"+
+        "\111\1\105\1\114\1\101\2\uffff\1\144\1\uffff\1\154\1\141\5\uffff"+
+        "\1\141\1\156\1\150\1\144\1\147\1\164\1\uffff\1\150\1\60\1\157\1"+
+        "\156\1\157\1\154\1\143\1\60\1\162\1\151\2\145\1\151\1\uffff\1\150"+
+        "\1\165\1\145\1\60\1\164\1\163\2\156\1\164\1\uffff\1\143\1\156\1"+
+        "\151\1\145\1\uffff\1\157\1\164\1\145\2\147\1\162\1\147\1\164\1\60"+
+        "\1\uffff\1\156\1\145\1\162\1\uffff\1\150\1\154\1\uffff\1\145\1\150"+
+        "\1\145\1\143\1\157\1\141\1\155\2\60\1\164\1\156\1\171\1\uffff\1"+
+        "\156\1\150\1\144\1\153\1\151\1\147\1\164\1\144\1\145\1\103\1\105"+
+        "\1\160\1\116\1\143\1\166\1\141\1\124\1\105\1\114\1\116\1\164\1\151"+
+        "\1\147\1\155\1\60\1\141\1\154\1\162\1\151\1\60\1\uffff\1\162\1\60"+
+        "\1\155\1\145\1\153\1\uffff\1\143\1\144\2\60\1\172\1\164\1\162\1"+
+        "\60\1\147\1\uffff\1\55\1\145\1\141\3\145\1\151\2\164\1\60\1\55\1"+
+        "\165\1\60\1\143\1\151\1\157\1\60\1\145\1\55\1\uffff\1\163\1\60\1"+
+        "\151\1\157\1\145\1\154\1\164\1\127\1\162\1\167\1\156\1\142\2\uffff"+
+        "\1\141\1\144\2\147\1\60\1\145\1\147\1\172\1\150\2\151\1\127\1\113"+
+        "\1\60\1\145\1\60\1\154\1\145\1\162\1\105\1\116\1\117\1\107\1\150"+
+        "\1\160\1\145\1\157\1\uffff\1\164\1\145\1\141\1\156\1\157\1\uffff"+
+        "\1\164\1\uffff\1\151\2\60\1\145\1\60\2\uffff\1\141\1\60\1\145\1"+
+        "\uffff\1\162\1\142\1\60\1\151\1\143\2\162\1\156\1\60\1\151\1\uffff"+
+        "\1\163\1\164\1\uffff\1\164\1\156\1\151\1\uffff\1\164\1\141\1\uffff"+
+        "\1\160\1\uffff\1\142\1\162\2\60\1\107\1\150\1\151\1\60\1\147\1\165"+
+        "\1\156\1\145\1\157\1\151\1\60\1\uffff\2\162\1\157\1\164\1\143\1"+
+        "\145\1\150\1\60\1\uffff\1\162\1\uffff\1\145\1\162\1\145\2\60\1\127"+
+        "\1\105\1\60\1\163\1\60\1\144\1\164\1\60\1\155\1\171\1\164\1\60\1"+
+        "\156\2\uffff\1\60\1\uffff\1\142\1\uffff\1\60\1\157\5\uffff\1\156"+
+        "\1\164\2\60\1\147\1\uffff\1\157\2\uffff\3\60\1\156\1\60\3\uffff"+
+        "\1\141\1\165\1\60\2\uffff\1\162\1\145\1\151\1\160\1\uffff\1\154"+
+        "\1\163\1\147\1\144\2\156\1\uffff\1\60\1\157\1\156\1\60\1\141\1\156"+
+        "\1\151\1\uffff\1\127\1\60\1\127\1\60\2\uffff\2\60\1\uffff\1\145"+
+        "\1\uffff\1\145\1\141\1\uffff\3\60\1\uffff\1\147\1\uffff\1\154\1"+
+        "\uffff\1\165\1\145\1\151\2\uffff\1\60\1\156\3\uffff\1\147\1\uffff"+
+        "\1\162\1\164\1\uffff\1\141\1\154\2\164\1\145\1\60\1\154\1\122\1"+
+        "\60\1\145\1\uffff\1\165\1\164\1\uffff\1\154\2\164\1\150\1\uffff"+
+        "\1\150\3\uffff\1\60\1\154\1\156\3\uffff\1\60\1\145\1\156\1\162\1"+
+        "\157\1\uffff\2\60\2\145\1\171\1\154\1\145\1\151\1\60\1\uffff\2\145"+
+        "\1\uffff\1\60\1\156\1\141\2\60\1\145\2\151\1\uffff\2\60\1\uffff"+
+        "\1\60\1\144\1\60\1\156\2\uffff\1\156\2\60\1\157\1\60\1\157\1\uffff"+
+        "\1\60\1\143\1\uffff\1\144\1\154\2\uffff\1\60\2\164\3\uffff\1\60"+
+        "\1\uffff\1\60\1\143\2\uffff\1\167\1\uffff\1\156\1\uffff\1\164\2"+
+        "\60\1\154\1\uffff\2\145\1\uffff\1\60\1\uffff\1\171\2\60\1\141\2"+
+        "\uffff\1\157\2\107\1\uffff\1\60\2\uffff\1\156\1\163\2\154\1\uffff"+
+        "\1\147\1\163\2\157\1\154\1\60\2\163\1\145\1\uffff\2\163\3\60\3\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\151\1\167\2\uffff\1\156\2\uffff\1\164\1\uffff\1\157\1"+
-        "\151\1\uffff\1\162\1\uffff\1\157\1\uffff\1\170\1\151\1\166\1\162"+
-        "\1\164\1\151\1\145\2\162\2\157\1\76\1\163\2\157\1\145\1\162\1\154"+
-        "\1\157\1\161\1\uffff\1\76\1\uffff\1\110\1\122\1\105\1\122\2\uffff"+
-        "\1\151\1\uffff\1\154\1\155\1\172\2\uffff\2\uffff\1\57\2\uffff\1"+
-        "\164\1\156\1\144\1\uffff\1\141\1\163\1\172\1\163\1\164\2\uffff\1"+
-        "\160\1\157\1\143\2\uffff\1\171\1\164\1\165\1\172\1\uffff\1\144\1"+
-        "\163\1\172\1\147\1\uffff\1\147\1\145\1\162\1\154\1\uffff\1\162\1"+
-        "\156\1\uffff\1\172\1\141\1\163\1\156\1\172\1\171\1\146\1\152\1\151"+
-        "\1\164\1\145\1\162\1\170\1\172\1\165\1\172\1\147\1\172\1\142\1\155"+
-        "\1\163\1\162\1\151\1\157\1\104\1\102\1\143\1\165\1\154\2\uffff\1"+
-        "\172\1\151\1\164\1\143\1\162\1\151\1\162\1\141\1\165\1\125\1\160"+
-        "\1\101\1\162\1\154\1\165\3\uffff\1\111\1\105\1\114\1\101\2\uffff"+
-        "\1\144\1\uffff\1\154\1\141\5\uffff\1\141\1\156\1\150\1\144\1\147"+
-        "\1\164\1\uffff\1\150\1\172\1\157\1\156\1\157\1\154\1\143\1\172\1"+
-        "\162\1\151\2\145\1\151\1\uffff\1\150\1\165\1\145\1\172\1\164\1\163"+
-        "\1\164\1\156\1\164\1\uffff\1\143\1\156\1\151\1\153\1\uffff\1\157"+
-        "\1\164\1\145\2\147\1\162\1\147\1\164\1\172\1\uffff\1\156\1\145\1"+
-        "\162\1\uffff\1\150\1\154\1\uffff\1\145\1\150\1\145\1\143\1\157\1"+
-        "\141\1\155\2\172\1\164\1\156\1\171\1\uffff\1\156\1\150\1\144\1\153"+
-        "\1\151\1\147\1\164\1\144\1\145\1\103\1\105\1\160\1\116\1\143\1\166"+
-        "\1\141\1\124\1\105\1\114\1\116\1\164\1\151\1\147\1\155\1\172\1\141"+
-        "\1\154\1\162\1\151\1\172\1\uffff\1\162\1\172\1\155\1\145\1\153\1"+
-        "\uffff\1\143\1\144\3\172\1\164\1\162\1\172\1\147\1\uffff\1\55\1"+
-        "\145\1\141\3\145\1\151\2\164\1\172\1\55\1\165\1\172\1\143\1\151"+
-        "\1\157\1\172\1\145\1\172\1\uffff\1\163\1\172\1\151\1\157\1\145\1"+
-        "\154\1\164\1\127\1\162\1\167\1\156\1\142\2\uffff\1\141\1\144\1\154"+
-        "\1\147\1\172\1\145\1\147\1\172\1\150\2\151\1\127\1\113\1\172\1\145"+
-        "\1\172\1\154\1\145\1\162\1\105\1\116\1\117\1\107\1\150\1\160\1\145"+
-        "\1\157\1\uffff\1\164\1\145\1\141\1\156\1\157\1\uffff\1\164\1\uffff"+
-        "\1\151\2\172\1\145\1\172\2\uffff\1\141\1\172\1\145\1\uffff\1\162"+
-        "\1\163\1\172\1\151\1\143\2\162\1\156\1\172\1\151\1\uffff\1\167\1"+
-        "\164\1\uffff\1\164\1\156\1\151\1\uffff\1\164\1\166\1\uffff\1\160"+
-        "\1\uffff\1\142\1\162\2\172\1\131\1\150\1\151\1\172\1\147\1\165\1"+
-        "\156\1\145\1\157\1\151\1\172\1\uffff\2\162\1\157\1\164\1\143\1\145"+
-        "\1\150\1\172\1\uffff\1\162\1\uffff\1\145\1\162\1\145\2\172\1\127"+
-        "\1\105\1\172\1\163\1\172\1\144\1\164\1\172\1\155\1\171\1\164\1\172"+
-        "\1\156\2\uffff\1\172\1\uffff\1\142\1\uffff\1\172\1\157\5\uffff\1"+
-        "\156\1\164\2\172\1\147\1\uffff\1\157\2\uffff\3\172\1\156\1\172\3"+
-        "\uffff\1\141\1\165\1\172\2\uffff\1\162\1\145\1\151\1\160\1\uffff"+
-        "\1\154\1\163\1\147\1\144\2\156\1\uffff\1\172\1\157\1\156\1\172\1"+
-        "\141\1\156\1\151\1\uffff\1\127\1\172\1\127\1\172\2\uffff\2\172\1"+
-        "\uffff\1\145\1\uffff\1\145\1\141\1\uffff\3\172\1\uffff\1\147\1\uffff"+
-        "\1\154\1\uffff\1\165\1\145\1\151\2\uffff\1\172\1\156\3\uffff\1\147"+
-        "\1\uffff\1\162\1\164\1\uffff\1\141\1\154\2\164\1\145\1\172\1\154"+
-        "\1\122\1\172\1\145\1\uffff\1\165\1\164\1\uffff\1\154\2\164\1\150"+
-        "\1\uffff\1\150\3\uffff\1\172\1\154\1\156\3\uffff\1\172\1\145\1\156"+
-        "\1\162\1\157\1\uffff\2\172\2\145\1\171\1\154\1\145\1\151\1\172\1"+
-        "\uffff\2\145\1\uffff\1\172\1\156\1\141\2\172\1\145\2\151\1\uffff"+
-        "\2\172\1\uffff\1\172\1\144\1\172\1\156\2\uffff\1\156\2\172\1\157"+
-        "\1\172\1\157\1\uffff\1\172\1\143\1\uffff\1\144\1\154\2\uffff\1\172"+
-        "\2\164\3\uffff\1\172\1\uffff\1\172\1\143\2\uffff\1\167\1\uffff\1"+
-        "\156\1\uffff\1\164\2\172\1\154\1\uffff\2\145\1\uffff\1\172\1\uffff"+
-        "\1\171\2\172\1\141\2\uffff\1\157\2\107\1\uffff\1\172\2\uffff\1\156"+
-        "\1\163\2\154\1\uffff\1\147\1\163\2\157\1\154\1\172\2\163\1\145\1"+
-        "\uffff\2\163\3\172\3\uffff";
+        "\1\uffff\1\151\1\167\1\156\2\uffff\1\164\3\uffff\1\157\1\151\1\uffff"+
+        "\1\162\1\uffff\1\157\1\uffff\1\170\1\151\1\166\1\162\1\164\1\151"+
+        "\1\145\2\162\2\157\1\76\1\163\2\157\1\145\1\162\1\154\1\157\1\161"+
+        "\1\uffff\1\76\1\uffff\1\110\1\122\1\105\1\122\2\uffff\1\151\1\uffff"+
+        "\1\154\1\155\1\172\2\uffff\2\uffff\1\57\2\uffff\1\164\1\156\1\144"+
+        "\1\uffff\1\141\1\163\1\172\1\163\1\164\1\160\1\157\1\143\2\uffff"+
+        "\1\171\1\164\1\165\1\172\3\uffff\1\144\1\163\1\172\1\147\1\uffff"+
+        "\1\147\1\145\1\162\1\154\1\uffff\1\162\1\156\1\uffff\1\172\1\141"+
+        "\1\163\1\156\1\172\1\171\1\146\1\152\1\151\1\164\1\145\1\162\1\170"+
+        "\1\172\1\165\1\172\1\147\1\172\1\142\1\155\1\163\1\162\1\151\1\157"+
+        "\1\104\1\102\1\143\1\165\1\154\2\uffff\1\172\1\151\1\164\1\143\1"+
+        "\162\1\151\1\162\1\141\1\165\1\125\1\160\1\101\1\162\1\154\1\165"+
+        "\3\uffff\1\111\1\105\1\114\1\101\2\uffff\1\144\1\uffff\1\154\1\141"+
+        "\5\uffff\1\141\1\156\1\150\1\144\1\147\1\164\1\uffff\1\150\1\172"+
+        "\1\157\1\156\1\157\1\154\1\143\1\172\1\162\1\151\2\145\1\151\1\uffff"+
+        "\1\150\1\165\1\145\1\172\1\164\1\163\1\164\1\156\1\164\1\uffff\1"+
+        "\143\1\156\1\151\1\153\1\uffff\1\157\1\164\1\145\2\147\1\162\1\147"+
+        "\1\164\1\172\1\uffff\1\156\1\145\1\162\1\uffff\1\150\1\154\1\uffff"+
+        "\1\145\1\150\1\145\1\143\1\157\1\141\1\155\2\172\1\164\1\156\1\171"+
+        "\1\uffff\1\156\1\150\1\144\1\153\1\151\1\147\1\164\1\144\1\145\1"+
+        "\103\1\105\1\160\1\116\1\143\1\166\1\141\1\124\1\105\1\114\1\116"+
+        "\1\164\1\151\1\147\1\155\1\172\1\141\1\154\1\162\1\151\1\172\1\uffff"+
+        "\1\162\1\172\1\155\1\145\1\153\1\uffff\1\143\1\144\3\172\1\164\1"+
+        "\162\1\172\1\147\1\uffff\1\55\1\145\1\141\3\145\1\151\2\164\1\172"+
+        "\1\55\1\165\1\172\1\143\1\151\1\157\1\172\1\145\1\172\1\uffff\1"+
+        "\163\1\172\1\151\1\157\1\145\1\154\1\164\1\127\1\162\1\167\1\156"+
+        "\1\142\2\uffff\1\141\1\144\1\154\1\147\1\172\1\145\1\147\1\172\1"+
+        "\150\2\151\1\127\1\113\1\172\1\145\1\172\1\154\1\145\1\162\1\105"+
+        "\1\116\1\117\1\107\1\150\1\160\1\145\1\157\1\uffff\1\164\1\145\1"+
+        "\141\1\156\1\157\1\uffff\1\164\1\uffff\1\151\2\172\1\145\1\172\2"+
+        "\uffff\1\141\1\172\1\145\1\uffff\1\162\1\163\1\172\1\151\1\143\2"+
+        "\162\1\156\1\172\1\151\1\uffff\1\167\1\164\1\uffff\1\164\1\156\1"+
+        "\151\1\uffff\1\164\1\166\1\uffff\1\160\1\uffff\1\142\1\162\2\172"+
+        "\1\131\1\150\1\151\1\172\1\147\1\165\1\156\1\145\1\157\1\151\1\172"+
+        "\1\uffff\2\162\1\157\1\164\1\143\1\145\1\150\1\172\1\uffff\1\162"+
+        "\1\uffff\1\145\1\162\1\145\2\172\1\127\1\105\1\172\1\163\1\172\1"+
+        "\144\1\164\1\172\1\155\1\171\1\164\1\172\1\156\2\uffff\1\172\1\uffff"+
+        "\1\142\1\uffff\1\172\1\157\5\uffff\1\156\1\164\2\172\1\147\1\uffff"+
+        "\1\157\2\uffff\3\172\1\156\1\172\3\uffff\1\141\1\165\1\172\2\uffff"+
+        "\1\162\1\145\1\151\1\160\1\uffff\1\154\1\163\1\147\1\144\2\156\1"+
+        "\uffff\1\172\1\157\1\156\1\172\1\141\1\156\1\151\1\uffff\1\127\1"+
+        "\172\1\127\1\172\2\uffff\2\172\1\uffff\1\145\1\uffff\1\145\1\141"+
+        "\1\uffff\3\172\1\uffff\1\147\1\uffff\1\154\1\uffff\1\165\1\145\1"+
+        "\151\2\uffff\1\172\1\156\3\uffff\1\147\1\uffff\1\162\1\164\1\uffff"+
+        "\1\141\1\154\2\164\1\145\1\172\1\154\1\122\1\172\1\145\1\uffff\1"+
+        "\165\1\164\1\uffff\1\154\2\164\1\150\1\uffff\1\150\3\uffff\1\172"+
+        "\1\154\1\156\3\uffff\1\172\1\145\1\156\1\162\1\157\1\uffff\2\172"+
+        "\2\145\1\171\1\154\1\145\1\151\1\172\1\uffff\2\145\1\uffff\1\172"+
+        "\1\156\1\141\2\172\1\145\2\151\1\uffff\2\172\1\uffff\1\172\1\144"+
+        "\1\172\1\156\2\uffff\1\156\2\172\1\157\1\172\1\157\1\uffff\1\172"+
+        "\1\143\1\uffff\1\144\1\154\2\uffff\1\172\2\164\3\uffff\1\172\1\uffff"+
+        "\1\172\1\143\2\uffff\1\167\1\uffff\1\156\1\uffff\1\164\2\172\1\154"+
+        "\1\uffff\2\145\1\uffff\1\172\1\uffff\1\171\2\172\1\141\2\uffff\1"+
+        "\157\2\107\1\uffff\1\172\2\uffff\1\156\1\163\2\154\1\uffff\1\147"+
+        "\1\163\2\157\1\154\1\172\2\163\1\145\1\uffff\2\163\3\172\3\uffff";
     static final String DFA12_acceptS =
-        "\3\uffff\1\3\1\4\1\uffff\1\6\1\7\1\uffff\1\11\2\uffff\1\16\1\uffff"+
-        "\1\21\1\uffff\1\26\24\uffff\1\117\1\uffff\1\121\4\uffff\1\133\1"+
-        "\134\1\uffff\1\147\3\uffff\1\171\1\172\3\uffff\1\176\1\177\3\uffff"+
-        "\1\171\5\uffff\1\3\1\4\3\uffff\1\6\1\7\4\uffff\1\11\4\uffff\1\16"+
-        "\4\uffff\1\21\2\uffff\1\26\35\uffff\1\162\1\53\17\uffff\1\117\1"+
-        "\120\1\121\4\uffff\1\133\1\134\1\uffff\1\147\2\uffff\1\172\1\173"+
-        "\1\174\1\175\1\176\6\uffff\1\57\15\uffff\1\55\11\uffff\1\27\4\uffff"+
-        "\1\54\11\uffff\1\52\3\uffff\1\40\2\uffff\1\60\14\uffff\1\56\36\uffff"+
-        "\1\160\5\uffff\1\15\11\uffff\1\25\23\uffff\1\136\14\uffff\1\126"+
-        "\1\132\33\uffff\1\17\5\uffff\1\157\1\uffff\1\14\5\uffff\1\112\1"+
-        "\12\3\uffff\1\23\12\uffff\1\30\2\uffff\1\76\3\uffff\1\73\2\uffff"+
-        "\1\41\1\uffff\1\153\17\uffff\1\63\10\uffff\1\124\1\uffff\1\130\22"+
-        "\uffff\1\10\1\22\1\uffff\1\156\1\uffff\1\100\2\uffff\1\144\1\146"+
-        "\1\151\1\152\1\154\5\uffff\1\111\1\uffff\1\135\1\155\5\uffff\1\75"+
-        "\1\145\1\150\3\uffff\1\141\1\42\4\uffff\1\44\6\uffff\1\65\7\uffff"+
-        "\1\123\4\uffff\1\122\1\125\2\uffff\1\137\1\uffff\1\170\2\uffff\1"+
-        "\77\3\uffff\1\5\1\uffff\1\32\1\uffff\1\20\3\uffff\1\142\1\74\2\uffff"+
-        "\1\70\1\31\1\35\1\uffff\1\33\2\uffff\1\51\12\uffff\1\116\2\uffff"+
-        "\1\140\4\uffff\1\166\1\uffff\1\163\1\127\1\131\3\uffff\1\2\1\36"+
-        "\1\161\5\uffff\1\37\11\uffff\1\46\2\uffff\1\47\10\uffff\1\167\2"+
-        "\uffff\1\61\4\uffff\1\113\1\62\6\uffff\1\45\2\uffff\1\50\2\uffff"+
-        "\1\72\1\101\3\uffff\1\1\1\34\1\13\1\uffff\1\24\2\uffff\1\67\1\105"+
-        "\1\uffff\1\110\1\uffff\1\164\4\uffff\1\102\2\uffff\1\115\1\uffff"+
-        "\1\64\4\uffff\1\114\1\71\3\uffff\1\66\1\uffff\1\106\1\43\4\uffff"+
-        "\1\143\11\uffff\1\103\5\uffff\1\165\1\104\1\107";
+        "\4\uffff\1\4\1\5\1\uffff\1\7\1\10\1\11\2\uffff\1\16\1\uffff\1\21"+
+        "\1\uffff\1\26\24\uffff\1\117\1\uffff\1\121\4\uffff\1\133\1\134\1"+
+        "\uffff\1\147\3\uffff\1\171\1\172\3\uffff\1\176\1\177\3\uffff\1\171"+
+        "\10\uffff\1\4\1\5\4\uffff\1\7\1\10\1\11\4\uffff\1\16\4\uffff\1\21"+
+        "\2\uffff\1\26\35\uffff\1\162\1\53\17\uffff\1\117\1\120\1\121\4\uffff"+
+        "\1\133\1\134\1\uffff\1\147\2\uffff\1\172\1\173\1\174\1\175\1\176"+
+        "\6\uffff\1\57\15\uffff\1\55\11\uffff\1\27\4\uffff\1\54\11\uffff"+
+        "\1\52\3\uffff\1\40\2\uffff\1\60\14\uffff\1\56\36\uffff\1\160\5\uffff"+
+        "\1\15\11\uffff\1\25\23\uffff\1\136\14\uffff\1\126\1\132\33\uffff"+
+        "\1\17\5\uffff\1\157\1\uffff\1\14\5\uffff\1\112\1\12\3\uffff\1\23"+
+        "\12\uffff\1\30\2\uffff\1\76\3\uffff\1\73\2\uffff\1\41\1\uffff\1"+
+        "\153\17\uffff\1\63\10\uffff\1\124\1\uffff\1\130\22\uffff\1\6\1\22"+
+        "\1\uffff\1\156\1\uffff\1\100\2\uffff\1\144\1\146\1\151\1\152\1\154"+
+        "\5\uffff\1\111\1\uffff\1\135\1\155\5\uffff\1\75\1\145\1\150\3\uffff"+
+        "\1\141\1\42\4\uffff\1\44\6\uffff\1\65\7\uffff\1\123\4\uffff\1\122"+
+        "\1\125\2\uffff\1\137\1\uffff\1\170\2\uffff\1\77\3\uffff\1\3\1\uffff"+
+        "\1\32\1\uffff\1\20\3\uffff\1\142\1\74\2\uffff\1\70\1\31\1\35\1\uffff"+
+        "\1\33\2\uffff\1\51\12\uffff\1\116\2\uffff\1\140\4\uffff\1\166\1"+
+        "\uffff\1\163\1\127\1\131\3\uffff\1\2\1\36\1\161\5\uffff\1\37\11"+
+        "\uffff\1\46\2\uffff\1\47\10\uffff\1\167\2\uffff\1\61\4\uffff\1\113"+
+        "\1\62\6\uffff\1\45\2\uffff\1\50\2\uffff\1\72\1\101\3\uffff\1\1\1"+
+        "\34\1\13\1\uffff\1\24\2\uffff\1\67\1\105\1\uffff\1\110\1\uffff\1"+
+        "\164\4\uffff\1\102\2\uffff\1\115\1\uffff\1\64\4\uffff\1\114\1\71"+
+        "\3\uffff\1\66\1\uffff\1\106\1\43\4\uffff\1\143\11\uffff\1\103\5"+
+        "\uffff\1\165\1\104\1\107";
     static final String DFA12_specialS =
         "\1\0\64\uffff\1\2\1\1\u0255\uffff}>";
     static final String[] DFA12_transitionS = {
             "\11\71\2\70\2\71\1\70\22\71\1\70\1\71\1\65\2\71\1\20\1\71\1"+
-            "\66\1\54\1\55\1\7\1\57\1\16\1\34\1\6\1\67\12\64\1\11\1\71\1"+
-            "\46\1\14\3\71\1\30\1\42\1\43\1\27\1\60\1\63\1\51\1\63\1\61\2"+
-            "\63\1\26\2\63\1\53\1\33\1\63\1\32\1\44\1\31\2\63\1\50\1\63\1"+
-            "\52\1\63\1\45\1\71\1\47\1\62\1\63\1\71\1\25\1\36\1\17\1\2\1"+
-            "\63\1\15\1\41\1\37\1\5\2\63\1\22\1\1\1\12\1\23\1\21\1\63\1\13"+
-            "\1\10\1\24\1\35\1\40\1\56\3\63\1\3\1\71\1\4\uff82\71",
+            "\66\1\54\1\55\1\5\1\57\1\16\1\34\1\4\1\67\12\64\1\7\1\71\1\46"+
+            "\1\14\3\71\1\30\1\42\1\43\1\27\1\60\1\63\1\51\1\63\1\61\2\63"+
+            "\1\26\2\63\1\53\1\33\1\63\1\32\1\44\1\31\2\63\1\50\1\63\1\52"+
+            "\1\63\1\45\1\71\1\47\1\62\1\63\1\71\1\25\1\36\1\17\1\2\1\63"+
+            "\1\15\1\41\1\37\1\3\2\63\1\22\1\1\1\12\1\23\1\21\1\63\1\13\1"+
+            "\6\1\24\1\35\1\40\1\56\3\63\1\10\1\71\1\11\uff82\71",
             "\1\73\3\uffff\1\72\3\uffff\1\74",
             "\1\101\3\uffff\1\77\3\uffff\1\76\5\uffff\1\102\7\uffff\1\100",
+            "\1\104\11\uffff\1\103\1\105",
             "",
             "",
-            "\1\106\11\uffff\1\105\1\107",
+            "\1\111\3\uffff\1\113\5\uffff\1\112\4\uffff\1\110",
             "",
             "",
-            "\1\113\3\uffff\1\115\5\uffff\1\114\4\uffff\1\112",
             "",
             "\1\117",
             "\1\120\1\uffff\1\121\1\uffff\1\122",
@@ -4330,8 +4327,6 @@ public class InternalXDiagramLexer extends Lexer {
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u00a3",
             "\1\u00a4",
-            "",
-            "",
             "\1\u00a5",
             "\1\u00a6",
             "\1\u00a7",
@@ -4341,6 +4336,8 @@ public class InternalXDiagramLexer extends Lexer {
             "\1\u00aa",
             "\1\u00ac\10\uffff\1\u00ab",
             "\1\u00ad",
+            "",
+            "",
             "",
             "\1\u00ae",
             "\1\u00af",
@@ -4963,19 +4960,19 @@ public class InternalXDiagramLexer extends Lexer {
 
                         else if ( (LA12_0=='d') ) {s = 2;}
 
-                        else if ( (LA12_0=='{') ) {s = 3;}
+                        else if ( (LA12_0=='i') ) {s = 3;}
 
-                        else if ( (LA12_0=='}') ) {s = 4;}
+                        else if ( (LA12_0=='.') ) {s = 4;}
 
-                        else if ( (LA12_0=='i') ) {s = 5;}
+                        else if ( (LA12_0=='*') ) {s = 5;}
 
-                        else if ( (LA12_0=='.') ) {s = 6;}
+                        else if ( (LA12_0=='s') ) {s = 6;}
 
-                        else if ( (LA12_0=='*') ) {s = 7;}
+                        else if ( (LA12_0==':') ) {s = 7;}
 
-                        else if ( (LA12_0=='s') ) {s = 8;}
+                        else if ( (LA12_0=='{') ) {s = 8;}
 
-                        else if ( (LA12_0==':') ) {s = 9;}
+                        else if ( (LA12_0=='}') ) {s = 9;}
 
                         else if ( (LA12_0=='n') ) {s = 10;}
 

@@ -32,21 +32,25 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cModelClassAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final CrossReference cModelClassEClassCrossReference_5_0 = (CrossReference)cModelClassAssignment_5.eContents().get(0);
 		private final RuleCall cModelClassEClassQualifiedNameParserRuleCall_5_0_1 = (RuleCall)cModelClassEClassCrossReference_5_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Alternatives cAlternatives_7 = (Alternatives)cGroup.eContents().get(7);
-		private final Assignment cNodesAssignment_7_0 = (Assignment)cAlternatives_7.eContents().get(0);
-		private final RuleCall cNodesNodeParserRuleCall_7_0_0 = (RuleCall)cNodesAssignment_7_0.eContents().get(0);
-		private final Assignment cLinksAssignment_7_1 = (Assignment)cAlternatives_7.eContents().get(1);
-		private final RuleCall cLinksLinkParserRuleCall_7_1_0 = (RuleCall)cLinksAssignment_7_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Alternatives cAlternatives_6 = (Alternatives)cGroup.eContents().get(6);
+		private final Assignment cNodesAssignment_6_0 = (Assignment)cAlternatives_6.eContents().get(0);
+		private final RuleCall cNodesNodeParserRuleCall_6_0_0 = (RuleCall)cNodesAssignment_6_0.eContents().get(0);
+		private final Assignment cLinksAssignment_6_1 = (Assignment)cAlternatives_6.eContents().get(1);
+		private final RuleCall cLinksLinkParserRuleCall_6_1_0 = (RuleCall)cLinksAssignment_6_1.eContents().get(0);
 		
+		////	'}'
+		//
 		//XDiagram:
 		//	"metamodel" importURI=STRING imports+=ImportStatement styles+=Style* "diagram"
-		//	modelClass=[ecore::EClass|QualifiedName] "{" (nodes+=Node | links+=Link)+ "}";
+		//	modelClass=[ecore::EClass|QualifiedName] (nodes+=Node //    '{'
+		//
+		//	| links+=Link)+;
 		public ParserRule getRule() { return rule; }
 
 		//"metamodel" importURI=STRING imports+=ImportStatement styles+=Style* "diagram" modelClass=[ecore::EClass|QualifiedName]
-		//"{" (nodes+=Node | links+=Link)+ "}"
+		//(nodes+=Node //    '{'
+		//
+		//| links+=Link)+
 		public Group getGroup() { return cGroup; }
 
 		//"metamodel"
@@ -82,26 +86,22 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		//QualifiedName
 		public RuleCall getModelClassEClassQualifiedNameParserRuleCall_5_0_1() { return cModelClassEClassQualifiedNameParserRuleCall_5_0_1; }
 
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_6() { return cLeftCurlyBracketKeyword_6; }
-
-		//(nodes+=Node | links+=Link)+
-		public Alternatives getAlternatives_7() { return cAlternatives_7; }
+		//(nodes+=Node //    '{'
+		//
+		//| links+=Link)+
+		public Alternatives getAlternatives_6() { return cAlternatives_6; }
 
 		//nodes+=Node
-		public Assignment getNodesAssignment_7_0() { return cNodesAssignment_7_0; }
+		public Assignment getNodesAssignment_6_0() { return cNodesAssignment_6_0; }
 
 		//Node
-		public RuleCall getNodesNodeParserRuleCall_7_0_0() { return cNodesNodeParserRuleCall_7_0_0; }
+		public RuleCall getNodesNodeParserRuleCall_6_0_0() { return cNodesNodeParserRuleCall_6_0_0; }
 
 		//links+=Link
-		public Assignment getLinksAssignment_7_1() { return cLinksAssignment_7_1; }
+		public Assignment getLinksAssignment_6_1() { return cLinksAssignment_6_1; }
 
 		//Link
-		public RuleCall getLinksLinkParserRuleCall_7_1_0() { return cLinksLinkParserRuleCall_7_1_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public RuleCall getLinksLinkParserRuleCall_6_1_0() { return cLinksLinkParserRuleCall_6_1_0; }
 	}
 
 	public class ImportStatementElements extends AbstractParserRuleElementFinder {
@@ -266,6 +266,8 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cAnchorsNodeAnchorParserRuleCall_9_0 = (RuleCall)cAnchorsAssignment_9.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
+		//// resizable default?
+		//
 		//// TODO text / icon
 		//
 		//Node:
@@ -2710,9 +2712,13 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
+	////	'}'
+	//
 	//XDiagram:
 	//	"metamodel" importURI=STRING imports+=ImportStatement styles+=Style* "diagram"
-	//	modelClass=[ecore::EClass|QualifiedName] "{" (nodes+=Node | links+=Link)+ "}";
+	//	modelClass=[ecore::EClass|QualifiedName] (nodes+=Node //    '{'
+	//
+	//	| links+=Link)+;
 	public XDiagramElements getXDiagramAccess() {
 		return (pXDiagram != null) ? pXDiagram : (pXDiagram = new XDiagramElements());
 	}
@@ -2763,6 +2769,8 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getStyleAccess().getRule();
 	}
 
+	//// resizable default?
+	//
 	//// TODO text / icon
 	//
 	//Node:

@@ -1088,21 +1088,21 @@ finally {
 
 
 
-rule__XDiagram__Alternatives_7
+rule__XDiagram__Alternatives_6
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getXDiagramAccess().getNodesAssignment_7_0()); }
-(rule__XDiagram__NodesAssignment_7_0)
-{ after(grammarAccess.getXDiagramAccess().getNodesAssignment_7_0()); }
+{ before(grammarAccess.getXDiagramAccess().getNodesAssignment_6_0()); }
+(rule__XDiagram__NodesAssignment_6_0)
+{ after(grammarAccess.getXDiagramAccess().getNodesAssignment_6_0()); }
 )
 
     |(
-{ before(grammarAccess.getXDiagramAccess().getLinksAssignment_7_1()); }
-(rule__XDiagram__LinksAssignment_7_1)
-{ after(grammarAccess.getXDiagramAccess().getLinksAssignment_7_1()); }
+{ before(grammarAccess.getXDiagramAccess().getLinksAssignment_6_1()); }
+(rule__XDiagram__LinksAssignment_6_1)
+{ after(grammarAccess.getXDiagramAccess().getLinksAssignment_6_1()); }
 )
 
 ;
@@ -2432,7 +2432,6 @@ rule__XDiagram__Group__6
     }
 :
 	rule__XDiagram__Group__6__Impl
-	rule__XDiagram__Group__7
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2444,46 +2443,15 @@ rule__XDiagram__Group__6__Impl
     }
 :
 (
-{ before(grammarAccess.getXDiagramAccess().getLeftCurlyBracketKeyword_6()); }
-
-	'{' 
-
-{ after(grammarAccess.getXDiagramAccess().getLeftCurlyBracketKeyword_6()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__XDiagram__Group__7
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__XDiagram__Group__7__Impl
-	rule__XDiagram__Group__8
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__XDiagram__Group__7__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
 (
-(
-{ before(grammarAccess.getXDiagramAccess().getAlternatives_7()); }
-(rule__XDiagram__Alternatives_7)
-{ after(grammarAccess.getXDiagramAccess().getAlternatives_7()); }
+{ before(grammarAccess.getXDiagramAccess().getAlternatives_6()); }
+(rule__XDiagram__Alternatives_6)
+{ after(grammarAccess.getXDiagramAccess().getAlternatives_6()); }
 )
 (
-{ before(grammarAccess.getXDiagramAccess().getAlternatives_7()); }
-(rule__XDiagram__Alternatives_7)*
-{ after(grammarAccess.getXDiagramAccess().getAlternatives_7()); }
+{ before(grammarAccess.getXDiagramAccess().getAlternatives_6()); }
+(rule__XDiagram__Alternatives_6)*
+{ after(grammarAccess.getXDiagramAccess().getAlternatives_6()); }
 )
 )
 
@@ -2491,40 +2459,6 @@ rule__XDiagram__Group__7__Impl
 finally {
 	restoreStackSize(stackSize);
 }
-
-
-rule__XDiagram__Group__8
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__XDiagram__Group__8__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__XDiagram__Group__8__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getXDiagramAccess().getRightCurlyBracketKeyword_8()); }
-
-	'}' 
-
-{ after(grammarAccess.getXDiagramAccess().getRightCurlyBracketKeyword_8()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
-
 
 
 
@@ -9867,14 +9801,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__XDiagram__NodesAssignment_7_0
+rule__XDiagram__NodesAssignment_6_0
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getXDiagramAccess().getNodesNodeParserRuleCall_7_0_0()); }
-	ruleNode{ after(grammarAccess.getXDiagramAccess().getNodesNodeParserRuleCall_7_0_0()); }
+{ before(grammarAccess.getXDiagramAccess().getNodesNodeParserRuleCall_6_0_0()); }
+	ruleNode{ after(grammarAccess.getXDiagramAccess().getNodesNodeParserRuleCall_6_0_0()); }
 )
 
 ;
@@ -9882,14 +9816,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__XDiagram__LinksAssignment_7_1
+rule__XDiagram__LinksAssignment_6_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getXDiagramAccess().getLinksLinkParserRuleCall_7_1_0()); }
-	ruleLink{ after(grammarAccess.getXDiagramAccess().getLinksLinkParserRuleCall_7_1_0()); }
+{ before(grammarAccess.getXDiagramAccess().getLinksLinkParserRuleCall_6_1_0()); }
+	ruleLink{ after(grammarAccess.getXDiagramAccess().getLinksLinkParserRuleCall_6_1_0()); }
 )
 
 ;
