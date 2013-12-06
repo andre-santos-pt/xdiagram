@@ -40,7 +40,7 @@ public class CreateEReferenceFeatureIndirect extends AbstractCreateConnectionFea
 	}
 
 	private static String tooltip(EReference eReference, EReference target) {
-		return "Connect " + ((EClass) eReference.eContainer()).getClass().getName() + " to " + target.getEReferenceType().getName();
+		return "Connect " + ((EClass) eReference.eContainer()).getName() + " to " + target.getEReferenceType().getName();
 	}
 	
 	public boolean canCreate(ICreateConnectionContext context) {
