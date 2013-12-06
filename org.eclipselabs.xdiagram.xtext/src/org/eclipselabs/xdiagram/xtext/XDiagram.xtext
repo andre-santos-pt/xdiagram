@@ -1,0 +1,287 @@
+grammar org.eclipselabs.xdiagram.xtext.XDiagram with org.eclipse.xtext.common.Terminals
+
+import 'http://www.eclipse.org/emf/2002/Ecore' as ecore
+import "http://www.eclipse.org/xtext/common/JavaVMTypes" as jvmTypes
+
+generate xdiagram "http://www.eclipselabs.org/xdiagram/xtext/XDiagram"
+
+XDiagram:
+    'metamodel' importURI=STRING
+    imports+=ImportStatement
+ 	
+    (styles += Style)*
+    
+    'diagram' modelClass=[ecore::EClass|QualifiedName]
+    '{'
+    	((nodes += Node)|(links += Link))+
+	'}';
+
+// importedNamespace apparently cannot be on the root element
+ImportStatement:
+	{ImportStatement}
+	('import' importedNamespace=QualifiedNameWithWildCard)?
+;
+
+QualifiedName:
+  ID ('.' ID)*
+;
+
+QualifiedNameWithWildCard returns ecore::EString :
+    QualifiedName  ('.' '*')?;
+    
+
+Style:
+	'style' ':' name=ID '{'
+	      features=FigureFeatures
+	'}'
+;
+
+
+// TODO text / icon
+Node:
+    'node' modelClass=[ecore::EClass|QualifiedName] 
+    '{'
+   		 (resizable?='resizable')?
+    	 ('style' style=ID)? 
+    	 ('icon' icon=ID)?
+    	(attributes += Attribute)*
+    	(figures += NodeFigure)*
+		(containers += NodeContainer)*
+		(anchors += NodeAnchor)*
+    '}';
+    
+// TODO : EMF default value
+Attribute:
+	'set' key=ID '=' value=AtributeValue
+;
+
+
+// main?
+NodeFigure:
+	(option=('main'))? 'figure' ':' figure=FigureShape (',' 'style' ':' style=ID)? '{'
+	        features=FigureFeatures
+	'}'
+;
+
+// TODO hstack / vstack
+NodeContainer:
+	(type=('stack'|'free'))? 'container' ('for' modelClass=[ecore::EClass|QualifiedName])? (':' value=INT format=('%'|'px'))?
+	'{'
+		(figures += NodeFigure)+
+	'}'
+;
+
+
+
+
+// TODO: validation - complex requires source e target, complex structure
+Link:
+    'link' (
+    	modelReference=[ecore::EReference|QualifiedName] | 
+    	
+    	(complex?='object' modelClass=[ecore::EClass|QualifiedName] 
+    	'source' sourceReference=[ecore::EReference|QualifiedName] 
+    	'target' targetReference=[ecore::EReference|QualifiedName]
+    	)
+    )  
+    '{'
+    	(manhattan?=('manhattan'))?
+    	('style' style=ID)?
+    	(
+    			(attributes += Attribute) |
+	        	(linefeatures += LineFeature) |
+				(colorfeatures += ColorFeature) |
+	        	(integerfeatures += IntegerFeature)
+		)*
+		
+    	('origin' '{'			
+			(sourceStatic = StaticFigure)?
+			(sourceDynamic += DynamicFigure)*			
+		'}')?
+		
+		('destiny' '{'			
+			(targetStatic = StaticFigure)?
+			(targetDynamic += DynamicFigure)*			
+		'}')?
+		
+	    //defenido no modelo? [ecore::EReference]
+	    (placings += PlacingFigure)*		
+    '}';
+    
+    
+    
+
+PlacingFigure:
+	'placing' 'at' pos=INT '%'
+	'{'			
+		(placingStatic = StaticFigure)?
+		(placingDynamic += DynamicFigure)*			
+	'}'
+;
+   
+DynamicFigure:
+	'text' figure=DynamicElement '{'
+    		features=FigureFeatures
+	'}'
+;
+
+DynamicElement:
+  ('Label'|'Description')
+;
+    
+StaticFigure:
+	'figure' ':' figure=StaticElement (',' 'style' ':' style=ID)? '{'
+    		features=FigureFeatures
+	'}'
+;
+
+// TODO enum
+StaticElement:
+  ('Arrow'|'Triangle'|'Rhombus'|'Polygon'|'Polyline')
+;
+
+
+enum FigureShape:
+	SQUARE = 'Square' |
+	RECTANGLE = 'Rectangle' |
+	ROUNDED_RECTANGLE = 'RoundedRectangle' |
+	CIRCLE = 'Circle' |
+	ELLIPSE = 'Ellipse' |
+	TRIANGLE = 'Triangle' |
+	RHOMBUS = 'Rhombus' |
+	POLYGON = 'Polygon' |
+	POLYLINE = 'Polyline' |
+	LABEL = 'Label' |
+	IMAGE = 'Image'
+;
+
+
+
+// TODO: model ids
+NodeAnchor:
+	'anchor' ('to' object=ID)? ':' (passX=('-'))? X=INT formatX=('%'|'lf'|'rg') ',' (passY=('-'))? Y=INT formatY=('%'|'up'|'dw')
+	'{'
+		(figures += NodeFigure)*
+		(arrows += ArrowAnchor)*
+	'}'
+;
+
+// TODO: model ids - change syntax
+ArrowAnchor:
+	'set' reference=ID 'as' type=('incoming'|'outgoing'|'both') 'connection' ('using' N=INT 'connections')?
+;
+
+
+
+
+
+FigureFeatures:
+	{FigureFeatures}
+    		(
+    			(linefeatures += LineFeature) |
+	        	(centerfeatures += CenterFeature) |
+	        	(alignfeatures += AlignFeature) |
+	        	(gradientfeatures += GradientFeature) |	        	
+	        	(pointfeatures += PointFeature) |
+	        	(sizefeatures += SizeFeature) |
+	        	(positionfeatures += PositionFeature) |
+				(colorfeatures += ColorFeature) |
+	        	(integerfeatures += IntegerFeature) |
+	        	(booleanfeatures += BooleanFeature) |
+	        	(stringfeatures += StringFeature) |
+	        	(customfeatures += CustomFeature)
+			)*
+;
+
+CustomFeature:
+	key=('attribute') ':' attribute=ID '=' value=ID
+;
+
+StyleFeature:
+	LayoutFeature | CenterFeature
+;
+
+LayoutFeature:
+	key=('layout') ':' value=('horizontal'|'vertical'|'over')
+;
+
+CenterFeature:
+	key=('center') ':' value=('horizontal'|'vertical'|'both')
+;
+
+AlignFeature:
+	key=('text-align') ':' value=('left'|'middle'|'right')
+;
+
+// TODO: custom gradient
+GradientFeature:
+	key=('gradient') ':' value=('BlueWhite'|'BlueWhiteGloss'|'CopperWhiteGloss'|'LightGray'|'LightYellow'|'SilverWhiteGloss'|'LimeWhite')
+;
+
+PointFeature:
+	('point' ':' X=INT ',' Y=INT)
+;
+
+SizeFeature:
+	('size' ':' Width=INT ',' Height=INT)
+;
+
+PositionFeature:
+	('position' ':' X=INT ',' Y=INT)
+;
+
+ColorFeature:
+	(expression=AtributeExpression)? key=('background'|'foreground'|'border') ':' (value=Color|rgb=RGB) ('[' atribute=ID operator=('='|'<>') option=ID ']')?
+;
+
+// TODO enum
+Color:
+	('WHITE'|'BLACK'|'BLUE'|'GREEN'|'RED'|'YELLOW'|'CYAN'|'ORANGE')
+;
+
+RGB:
+	'RGB' '(' R=INT ',' G=INT ',' B=INT ')'
+;
+
+IntegerFeature:
+	(expression=AtributeExpression)? key=('line-width'|'top'|'left'|'width'|'height'|'angle'|'corner'|'transparency'|'font-size') ':' value=INT
+;
+
+DoubleFeature:
+	key=('transparency') ':' value= INT ('.' INT)?
+;
+
+StringFeature:
+	(expression=AtributeExpression)? key=('text-value'|'font-name'|'icon') ':' ((value=STRING) | (valueL=STRING '+' attribute=ID) | (attribute=ID '+'valueR=STRING)
+		 | (attribute=ID) | (valueL=STRING '+' attribute=ID '+'valueR=STRING) )?
+;
+
+BooleanFeature:
+	(expression=AtributeExpression)? key=('text-editable'|'font-italic'|'font-bold') ':' value=('true'|'false')
+;
+
+LineFeature:
+	 (expression=AtributeExpression)? key=('line-style') ':' value=LineStyle
+;
+
+// TODO enum  - aspeto do dash/dot/...
+LineStyle:
+	('solid'|'dash'|'dot'|'dashdot')
+;
+
+AtributeExpression:
+	key=ID operator=('='|'<>') value=AtributeValue '->'
+;
+
+AtributeValue:
+	(valueINT=INT) |
+	(valueINT=INT '.' valueDEC=INT) |
+	(valueID=ID) |
+	(valueBOOL=('true'|'false')) |
+	(valueSTRING=STRING) |
+	(valueDAY=INT '-' valueMONTH=INT '-' valueYEAR=INT)
+;
+
+
+
+
