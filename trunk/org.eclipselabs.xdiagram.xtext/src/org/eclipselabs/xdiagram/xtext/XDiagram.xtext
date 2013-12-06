@@ -12,9 +12,10 @@ XDiagram:
     (styles += Style)*
     
     'diagram' modelClass=[ecore::EClass|QualifiedName]
-    '{'
+//    '{'
     	((nodes += Node)|(links += Link))+
-	'}';
+//	'}'
+	;
 
 // importedNamespace apparently cannot be on the root element
 ImportStatement:
@@ -37,6 +38,7 @@ Style:
 ;
 
 
+// resizable default?
 // TODO text / icon
 Node:
     'node' modelClass=[ecore::EClass|QualifiedName] 

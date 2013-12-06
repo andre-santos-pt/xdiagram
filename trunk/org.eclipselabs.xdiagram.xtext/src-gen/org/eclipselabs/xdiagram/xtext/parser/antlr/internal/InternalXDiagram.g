@@ -155,23 +155,19 @@ ruleXDiagram returns [EObject current=null]
 	    }
 
 )
-)	otherlv_6='{' 
-    {
-    	newLeafNode(otherlv_6, grammarAccess.getXDiagramAccess().getLeftCurlyBracketKeyword_6());
-    }
-((
+)((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getXDiagramAccess().getNodesNodeParserRuleCall_7_0_0()); 
+	        newCompositeNode(grammarAccess.getXDiagramAccess().getNodesNodeParserRuleCall_6_0_0()); 
 	    }
-		lv_nodes_7_0=ruleNode		{
+		lv_nodes_6_0=ruleNode		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getXDiagramRule());
 	        }
        		add(
        			$current, 
        			"nodes",
-        		lv_nodes_7_0, 
+        		lv_nodes_6_0, 
         		"Node");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -181,26 +177,22 @@ ruleXDiagram returns [EObject current=null]
     |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getXDiagramAccess().getLinksLinkParserRuleCall_7_1_0()); 
+	        newCompositeNode(grammarAccess.getXDiagramAccess().getLinksLinkParserRuleCall_6_1_0()); 
 	    }
-		lv_links_8_0=ruleLink		{
+		lv_links_7_0=ruleLink		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getXDiagramRule());
 	        }
        		add(
        			$current, 
        			"links",
-        		lv_links_8_0, 
+        		lv_links_7_0, 
         		"Link");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))+	otherlv_9='}' 
-    {
-    	newLeafNode(otherlv_9, grammarAccess.getXDiagramAccess().getRightCurlyBracketKeyword_8());
-    }
-)
+))+)
 ;
 
 

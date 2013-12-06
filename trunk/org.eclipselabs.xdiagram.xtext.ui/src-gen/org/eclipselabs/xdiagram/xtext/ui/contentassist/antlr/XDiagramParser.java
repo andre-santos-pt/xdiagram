@@ -37,7 +37,7 @@ public class XDiagramParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getXDiagramAccess().getAlternatives_7(), "rule__XDiagram__Alternatives_7");
+					put(grammarAccess.getXDiagramAccess().getAlternatives_6(), "rule__XDiagram__Alternatives_6");
 					put(grammarAccess.getNodeContainerAccess().getTypeAlternatives_0_0(), "rule__NodeContainer__TypeAlternatives_0_0");
 					put(grammarAccess.getNodeContainerAccess().getFormatAlternatives_3_2_0(), "rule__NodeContainer__FormatAlternatives_3_2_0");
 					put(grammarAccess.getLinkAccess().getAlternatives_1(), "rule__Link__Alternatives_1");
@@ -125,8 +125,8 @@ public class XDiagramParser extends AbstractContentAssistParser {
 					put(grammarAccess.getXDiagramAccess().getImportsAssignment_2(), "rule__XDiagram__ImportsAssignment_2");
 					put(grammarAccess.getXDiagramAccess().getStylesAssignment_3(), "rule__XDiagram__StylesAssignment_3");
 					put(grammarAccess.getXDiagramAccess().getModelClassAssignment_5(), "rule__XDiagram__ModelClassAssignment_5");
-					put(grammarAccess.getXDiagramAccess().getNodesAssignment_7_0(), "rule__XDiagram__NodesAssignment_7_0");
-					put(grammarAccess.getXDiagramAccess().getLinksAssignment_7_1(), "rule__XDiagram__LinksAssignment_7_1");
+					put(grammarAccess.getXDiagramAccess().getNodesAssignment_6_0(), "rule__XDiagram__NodesAssignment_6_0");
+					put(grammarAccess.getXDiagramAccess().getLinksAssignment_6_1(), "rule__XDiagram__LinksAssignment_6_1");
 					put(grammarAccess.getImportStatementAccess().getImportedNamespaceAssignment_1_1(), "rule__ImportStatement__ImportedNamespaceAssignment_1_1");
 					put(grammarAccess.getStyleAccess().getNameAssignment_2(), "rule__Style__NameAssignment_2");
 					put(grammarAccess.getStyleAccess().getFeaturesAssignment_4(), "rule__Style__FeaturesAssignment_4");
