@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypes">
+      <diagramType
+            description="Feature diagram type"
+            id="FeatureDiagramType"
+            name="Feature Diagram Type"
+            type="FeatureDiagram">
+      </diagramType>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypeProviders">
+      <diagramTypeProvider
+            class="org.eclipselabs.xdiagram.interpreter.XDiagramTypeProvider"
+            description="Feature diagram editor"
+            id="FeatureDiagramTypeProvider"
+            name="Feature Diagram Type Provider">
+         <diagramType
+               id="FeatureDiagramType">
+         </diagramType>
+      </diagramTypeProvider>
+   </extension>
+   <extension
+         point="org.eclipselabs.xdiagram.interpreter.providers">
+      <provider
+            diagramType="FeatureDiagram"
+            ePackageURI="http://org.eclipselabs.xdiagram.examples/FeatureModel"
+            provider="org.eclipselabs.xdiagram.provider.LanguageProvider">
+         <property
+               id="file"
+               value="/Users/andre/Documents/EclipseWS/runtime-XDiagramFeature/Test/test.xdiagram">
+         </property>
+      </provider>
+   </extension>
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated featuremodel -->
+      <package
+            uri="http://org.eclipselabs.xdiagram.examples/FeatureModel"
+            class="featuremodel.FeaturemodelPackage"
+            genModel="model/featuremodel.genmodel"/>
+   </extension>
+
+</plugin>
