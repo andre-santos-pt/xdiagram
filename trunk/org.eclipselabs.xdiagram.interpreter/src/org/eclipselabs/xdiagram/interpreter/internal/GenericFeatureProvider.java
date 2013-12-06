@@ -135,9 +135,9 @@ public class GenericFeatureProvider extends DefaultFeatureProvider {
 
 	private boolean isNode(EClass c) {
 		return 
-		!c.isAbstract() &&
-		!rootClass.equals(c) &&
-		graphicsProvider.hasTool(c);
+				!c.isAbstract() &&
+				!rootClass.equals(c) &&
+				graphicsProvider.hasTool(c);
 	}
 
 	@Override
@@ -150,19 +150,23 @@ public class GenericFeatureProvider extends DefaultFeatureProvider {
 		List<ICreateConnectionFeature> list = new ArrayList<ICreateConnectionFeature>();
 		Set<EClass> handledLinks = new HashSet<EClass>();
 
-		for(EClassifier c : getEPackage().getEClassifiers()) {
-			if(c instanceof EClass) { //!graphicsProvider.isLink((EClass) c)) {
+		for(EClassifier c : ePackage.getEClassifiers()) {
+			if(c instanceof EClass) { 
 				EClass eClass = (EClass) c;
 
 				for(EReference ref : eClass.getEReferences()) {
-					EClass refType = (EClass) ref.getEType();
-					if(!handledLinks.contains(refType) && graphicsProvider.isLink(refType)) {
-						EReference target = graphicsProvider.getLinkTarget((EClass) ref.getEType());
-						list.add(new CreateEReferenceFeatureIndirect(this, ref, target));
-						handledLinks.add(refType);
-					}
-					else if(!ref.isContainment() && graphicsProvider.hasTool(ref)) {
+					if(!ref.isContainment() && graphicsProvider.hasTool(ref)) {
 						list.add(new CreateEReferenceFeature(this, ref));
+					}
+					else {
+						EClass refType = (EClass) ref.getEType();
+						for(EClass type : ECoreUtil.allCompatibleClasses(ePackage, refType)) {
+							if(!handledLinks.contains(type) && graphicsProvider.isLink(type)) {
+								EReference target = graphicsProvider.getLinkTarget((EClass) ref.getEType());
+								list.add(new CreateEReferenceFeatureIndirect(this, ref, target, type));
+								handledLinks.add(type);
+							}
+						}
 					}
 				}
 			}

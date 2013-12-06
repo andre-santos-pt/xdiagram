@@ -151,4 +151,13 @@ public class ECoreUtil {
 			owner.eSet(ref, obj);
 		}		
 	}
+	
+	public static Set<EClass> allCompatibleClasses(EPackage ePackage, EClass clazz) {
+		Set<EClass> set = new HashSet<>();
+		for(EClassifier c : ePackage.getEClassifiers())
+			if(c instanceof EClass && clazz.isSuperTypeOf((EClass) c))
+				set.add((EClass) c);
+		
+		return set;
+	}
 }

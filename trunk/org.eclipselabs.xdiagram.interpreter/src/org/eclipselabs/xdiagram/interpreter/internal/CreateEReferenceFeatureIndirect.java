@@ -31,8 +31,8 @@ public class CreateEReferenceFeatureIndirect extends AbstractCreateConnectionFea
 	private final EReference targetRef;
 	private GraphicsProvider provider;
 	
-	public CreateEReferenceFeatureIndirect(GenericFeatureProvider fp, EReference eReference, EReference target) {
-		super(fp, eReference.getEType().getName(), "indirect");
+	public CreateEReferenceFeatureIndirect(GenericFeatureProvider fp, EReference eReference, EReference target, EClass objectType) {
+		super(fp, objectType.getName(), "indirect");
 		this.eReference = eReference;
 		this.sourceType = (EClass) eReference.eContainer();
 		this.targetRef = target;
