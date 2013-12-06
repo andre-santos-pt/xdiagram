@@ -15,7 +15,6 @@
  *******************************************************************************/
 package org.eclipselabs.xdiagram.interpreter.internal;
 
-
 import java.io.IOException;
 
 import org.eclipse.core.runtime.CoreException;
@@ -36,14 +35,32 @@ public class CreateEObjectFeature extends AbstractCreateFeature {
 	private final EClass eClass;
 
 	public CreateEObjectFeature(GenericFeatureProvider provider, EClass eClass) {
-		super(provider, eClass.getName(), "Create " + eClass.getName()); //$NON-NLS-1$ //$NON-NLS-2$
+		super(provider, prettyPrint(eClass.getName()), tooltip(eClass));
 		this.provider = provider;
 		this.eFactory = eClass.getEPackage().getEFactoryInstance();
 		this.eClass = eClass;
 	}
 
+	private static String tooltip(EClass eClass) {
+		return "Create " + prettyPrint(eClass.getName());
+	}
+
+	private static String prettyPrint(String name) {
+		String s = "";
+		for (char c : name.toCharArray()) {
+			if (!s.isEmpty()
+					&& !Character.isUpperCase(s.charAt(s.length() - 1))
+					&& Character.isUpperCase(c))
+				s += ' ';
+			s += c;
+		}
+
+		return s;
+	}
+
 	public boolean canCreate(ICreateContext context) {
-		return ECoreUtil.matchContainment(context.getTargetContainer(), provider.getRootClass(), eClass);
+		return ECoreUtil.matchContainment(context.getTargetContainer(),
+				provider.getRootClass(), eClass);
 	}
 
 	public Object[] create(ICreateContext context) {
@@ -52,35 +69,36 @@ public class CreateEObjectFeature extends AbstractCreateFeature {
 		EReference containingRef = null;
 
 		ContainerShape containerShape = context.getTargetContainer();
-		if(containerShape != null && !(containerShape instanceof Diagram)) {
-			PictogramLink link= containerShape.getLink();
+		if (containerShape != null && !(containerShape instanceof Diagram)) {
+			PictogramLink link = containerShape.getLink();
 			eObjectParent = link.getBusinessObjects().get(0);
-			for(EReference r : eObjectParent.eClass().getEAllContainments()) {
-				if(((EClass) r.getEType()).isSuperTypeOf(eObject.eClass())) {
+			for (EReference r : eObjectParent.eClass().getEAllContainments()) {
+				if (((EClass) r.getEType()).isSuperTypeOf(eObject.eClass())) {
 					containingRef = r;
 					ECoreUtil.setReference(eObjectParent, r, eObject);
-//					if(r.isMany()) {
-//						List<EObject> list = (List<EObject>) eObjectParent.eGet(r);
-//						list.add(eObject);
-//					}
-//					else {
-//						eObjectParent.eSet(r, eObject);
-//					}				
+					// if(r.isMany()) {
+					// List<EObject> list = (List<EObject>)
+					// eObjectParent.eGet(r);
+					// list.add(eObject);
+					// }
+					// else {
+					// eObjectParent.eSet(r, eObject);
+					// }
 					break;
 				}
 			}
 		}
 
-
 		// Add model element to resource.
 		// We add the model element to the resource of the diagram for
 		// simplicity's sake. Normally, a customer would use its own
 		// model persistence layer for storing the business model separately.
-		//getDiagram().eResource().getContents().add(eObject);
+		// getDiagram().eResource().getContents().add(eObject);
 
 		try {
 			try {
-				FileUtil.saveToModelFile(eObject, eObjectParent, containingRef, getDiagram());
+				FileUtil.saveToModelFile(eObject, eObjectParent, containingRef,
+						getDiagram());
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
