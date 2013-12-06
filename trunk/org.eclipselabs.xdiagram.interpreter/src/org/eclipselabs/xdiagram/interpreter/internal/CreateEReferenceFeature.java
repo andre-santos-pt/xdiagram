@@ -32,13 +32,17 @@ public class CreateEReferenceFeature extends AbstractCreateConnectionFeature {
 	private GraphicsProvider provider;
 	
 	public CreateEReferenceFeature(GenericFeatureProvider fp, EReference eReference) {
-		super(fp, eReference.getName(), "direct");
+		super(fp, eReference.getName(), tooltip(eReference));
 		this.eReference = eReference;
 		sourceType = (EClass) eReference.eContainer();
 		targetType = (EClass) eReference.getEType();
 		provider = fp.getGraphicsProvider();
 	}
 
+	private static String tooltip(EReference eReference) {
+		return "Connect " + ((EClass) eReference.eContainer()).getClass().getName() + " to " + eReference.getEReferenceType().getName();
+	}
+	
 	public boolean canCreate(ICreateConnectionContext context) {
 		Anchor sourceAnchor = context.getSourceAnchor();
 		Anchor targetAnchor = context.getTargetAnchor();
