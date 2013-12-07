@@ -1,21 +1,46 @@
 package org.eclipselabs.xdiagram.interpreter.internal.features;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.graphiti.features.IReason;
 import org.eclipse.graphiti.features.context.IUpdateContext;
+import org.eclipse.graphiti.features.context.impl.UpdateContext;
 import org.eclipse.graphiti.features.impl.AbstractUpdateFeature;
 import org.eclipse.graphiti.features.impl.Reason;
+import org.eclipse.graphiti.mm.algorithms.Text;
 import org.eclipse.graphiti.mm.pictograms.Connection;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
+import org.eclipse.graphiti.mm.pictograms.PictogramElement;
+import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipselabs.xdiagram.interpreter.internal.GenericFeatureProvider;
 
 public class UpdateNodeFeature extends AbstractUpdateFeature {
  
 	private GenericFeatureProvider provider;
+	
+	private static ArrayList<UpdateNodeFeature> updateFeatures = new ArrayList<UpdateNodeFeature>();
+	private static ArrayList<GenericFeatureProvider> updateProvides = new ArrayList<GenericFeatureProvider>();
     
     public UpdateNodeFeature(GenericFeatureProvider provider) {
 		super(provider);
 		this.provider = provider;
+
+		if (!updateFeatures.contains(this))
+			updateFeatures.add(this);	
+		if (!updateProvides.contains(provider))
+			updateProvides.add(provider);	
 	}
+    
+    public static ArrayList<UpdateNodeFeature> getInstances(){
+    	return updateFeatures;
+    }
+    
+    public static ArrayList<GenericFeatureProvider> getProviders(){
+    	return updateProvides;
+    }
  
     public boolean canUpdate(IUpdateContext context) {
         // return true, if linked business object is a EClass
@@ -58,8 +83,25 @@ public class UpdateNodeFeature extends AbstractUpdateFeature {
 //        }
     	return Reason.createFalseReason();
     }
+    
+    
+    public boolean update(PictogramElement pe) {
+  	
+	  	System.out.println("UPDATED!!!!!!!!");
+	  	
+	  	if ( pe instanceof Connection )
+	  		provider.getGraphicsProvider().updateLinkFigure(getDiagram(), (Connection)pe);
+	  	else
+	  		provider.getGraphicsProvider().updateNodeFigure(getDiagram(), (ContainerShape)pe);  
+	  	//this.updatePictogramElement(pe);
+	  	
+	  	return true;
+  }
+    
+    
  
     public boolean update(IUpdateContext context) {
+    	
 //        // retrieve name from business model
 //        String businessName = null;
 //        PictogramElement pictogramElement = context.getPictogramElement();
@@ -83,13 +125,6 @@ public class UpdateNodeFeature extends AbstractUpdateFeature {
 // 
 //        return false;
     	
-    	System.out.println("UPDATED!!!!!!!!");
-    	
-    	if ( context.getPictogramElement() instanceof Connection )
-    		provider.getGraphicsProvider().updateLinkFigure(getDiagram(), (Connection)context.getPictogramElement());
-    	else
-    		provider.getGraphicsProvider().updateNodeFigure(getDiagram(), (ContainerShape)context.getPictogramElement());
-    	
-    	return true;
+    	return update(context.getPictogramElement());
     }
 } 
