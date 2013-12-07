@@ -1,12 +1,26 @@
 package org.eclipselabs.xdiagram.interpreter.internal.features;
 
+import java.awt.Point;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.graphiti.datatypes.IDimension;
+import org.eclipse.graphiti.features.context.IAddContext;
 import org.eclipse.graphiti.features.context.IDirectEditingContext;
+import org.eclipse.graphiti.features.context.impl.LocationContext;
 import org.eclipse.graphiti.features.impl.AbstractDirectEditingFeature;
 import org.eclipse.graphiti.mm.algorithms.AbstractText;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
+import org.eclipse.graphiti.mm.algorithms.MultiText;
+import org.eclipse.graphiti.mm.algorithms.Text;
+import org.eclipse.graphiti.mm.algorithms.impl.ImageImpl;
+import org.eclipse.graphiti.mm.algorithms.impl.MultiTextImpl;
+import org.eclipse.graphiti.mm.algorithms.impl.TextImpl;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.mm.pictograms.Shape;
+import org.eclipse.graphiti.services.Graphiti;
+import org.eclipse.graphiti.ui.services.GraphitiUi;
+import org.eclipse.ui.PlatformUI;
 import org.eclipselabs.xdiagram.interpreter.internal.GenericFeatureProvider;
 
 public class DirectEditingFeature extends AbstractDirectEditingFeature {

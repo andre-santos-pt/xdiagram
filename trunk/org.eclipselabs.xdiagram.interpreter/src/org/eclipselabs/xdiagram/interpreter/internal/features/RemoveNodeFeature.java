@@ -3,6 +3,7 @@ package org.eclipselabs.xdiagram.interpreter.internal.features;
 import org.eclipse.graphiti.features.context.IRemoveContext;
 import org.eclipse.graphiti.features.impl.DefaultRemoveFeature;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
+import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipselabs.xdiagram.interpreter.internal.GenericFeatureProvider;
 
 public class RemoveNodeFeature extends DefaultRemoveFeature {

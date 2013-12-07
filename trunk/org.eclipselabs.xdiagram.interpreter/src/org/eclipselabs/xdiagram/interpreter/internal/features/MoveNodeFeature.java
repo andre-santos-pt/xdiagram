@@ -1,9 +1,12 @@
 package org.eclipselabs.xdiagram.interpreter.internal.features;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.graphiti.features.context.IMoveShapeContext;
 import org.eclipse.graphiti.features.impl.DefaultMoveShapeFeature;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
+import org.eclipse.graphiti.mm.pictograms.Shape;
+import org.eclipse.graphiti.services.Graphiti;
 import org.eclipselabs.xdiagram.interpreter.internal.GenericFeatureProvider;
 
 public class MoveNodeFeature extends DefaultMoveShapeFeature {

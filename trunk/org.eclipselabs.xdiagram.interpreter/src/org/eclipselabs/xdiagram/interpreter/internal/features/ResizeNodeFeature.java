@@ -1,9 +1,12 @@
 package org.eclipselabs.xdiagram.interpreter.internal.features;
 
+import org.eclipse.graphiti.features.IFeatureProvider;
+import org.eclipse.graphiti.features.IResizeShapeFeature;
 import org.eclipse.graphiti.features.context.IResizeShapeContext;
 import org.eclipse.graphiti.features.impl.DefaultResizeShapeFeature;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
+import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipselabs.xdiagram.interpreter.internal.GenericFeatureProvider;
 
 public class ResizeNodeFeature extends DefaultResizeShapeFeature {
