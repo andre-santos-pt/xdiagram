@@ -40,6 +40,8 @@ Style:
 
 // resizable default?
 // TODO text / icon
+// TODO validation: unique nodes
+// notation inheritance?
 Node:
     'node' modelClass=[ecore::EClass|QualifiedName] 
     '{'
@@ -65,7 +67,8 @@ NodeFigure:
 	'}'
 ;
 
-// TODO hstack / vstack
+// TODO hstack / vstack (enum?)
+// TODO validation
 NodeContainer:
 	(type=('stack'|'free'))? 'container' ('for' modelClass=[ecore::EClass|QualifiedName])? (':' value=INT format=('%'|'px'))?
 	'{'
@@ -215,6 +218,7 @@ AlignFeature:
 	key=('text-align') ':' value=('left'|'middle'|'right')
 ;
 
+// TODO: enum
 // TODO: custom gradient
 GradientFeature:
 	key=('gradient') ':' value=('BlueWhite'|'BlueWhiteGloss'|'CopperWhiteGloss'|'LightGray'|'LightYellow'|'SilverWhiteGloss'|'LimeWhite')
@@ -236,7 +240,7 @@ ColorFeature:
 	(expression=AtributeExpression)? key=('background'|'foreground'|'border') ':' (value=Color|rgb=RGB) ('[' atribute=ID operator=('='|'<>') option=ID ']')?
 ;
 
-// TODO enum
+// TODO enum , já agora 16 standard
 Color:
 	('WHITE'|'BLACK'|'BLUE'|'GREEN'|'RED'|'YELLOW'|'CYAN'|'ORANGE')
 ;

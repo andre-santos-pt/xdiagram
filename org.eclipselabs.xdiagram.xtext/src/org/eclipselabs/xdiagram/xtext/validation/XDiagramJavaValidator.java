@@ -3,6 +3,12 @@
 */
 package org.eclipselabs.xdiagram.xtext.validation;
 
+import org.eclipse.xtext.validation.Check;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Link;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Node;
+import org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram;
+import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
+
 /**
  * Custom validation rules. 
  *
@@ -10,10 +16,24 @@ package org.eclipselabs.xdiagram.xtext.validation;
  */
 public class XDiagramJavaValidator extends org.eclipselabs.xdiagram.xtext.validation.AbstractXDiagramJavaValidator {
 
-//	@Check
-//	public void checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.getName().charAt(0))) {
-//			warning("Name should start with a capital", MyDslPackage.Literals.GREETING__NAME);
-//		}
-//	}
+	public void validateUniqueNodes(XDiagram diagram) {
+		for(Node n : diagram.getNodes()) {
+			
+		}
+	}
+	
+	@Check
+	public void checkGreetingStartsWithCapital(Link link) {
+		if (link.isComplex() && link.getModelClass().getName().startsWith("C")) {
+			warning("ERRO!", link, XdiagramPackage.Literals.LINK__MODEL_CLASS);
+		}
+	}
+	
+	@Check
+	public void checkOthen(Node node) {
+		if (node.isResizable()) {
+			error("RES!!!", node, XdiagramPackage.Literals.NODE__RESIZABLE);
+		}
+	}
+
 }
