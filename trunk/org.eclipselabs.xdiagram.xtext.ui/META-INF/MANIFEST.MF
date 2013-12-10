@@ -16,7 +16,7 @@ Require-Bundle: org.eclipselabs.xdiagram.xtext;visibility:=reexport,
  org.eclipse.xtext.ui.codetemplates.ui,
  org.eclipse.compare
 Import-Package: org.apache.log4j
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.eclipselabs.xdiagram.xtext.ui.quickfix,
  org.eclipselabs.xdiagram.xtext.ui.contentassist,
  org.eclipselabs.xdiagram.xtext.ui.contentassist.antlr,
