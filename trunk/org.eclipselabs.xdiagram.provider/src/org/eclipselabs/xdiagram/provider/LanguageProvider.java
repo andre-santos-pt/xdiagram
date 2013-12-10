@@ -170,7 +170,7 @@ public class LanguageProvider implements GraphicsProvider {
 					bounds.x, bounds.y, bounds.width-bounds.x, vertical);
 //			String obj = nodecontainer.getObject();
 			
-			EClass childClass = nodecontainer.getModelClass();
+			EClass childClass = (EClass) nodecontainer.getModelReference().getEType();
 			
 //			FigureProperty.setProperties(nodeContainer, obj== null ? this.model.getName() : obj );
 //			FigureProperty.setProperties(nodeContainer, obj== null ? this.model.getModelClass().getName() : obj );
