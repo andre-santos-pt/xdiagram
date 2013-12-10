@@ -153,7 +153,7 @@ public class ECoreUtil {
 	}
 	
 	public static Set<EClass> allCompatibleClasses(EPackage ePackage, EClass clazz) {
-		Set<EClass> set = new HashSet<>();
+		Set<EClass> set = new HashSet<EClass>();
 		for(EClassifier c : ePackage.getEClassifiers())
 			if(c instanceof EClass && clazz.isSuperTypeOf((EClass) c))
 				set.add((EClass) c);
