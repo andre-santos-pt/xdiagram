@@ -715,38 +715,38 @@ public class FigureProvider {
 		if (style==null){
 			style = Graphiti.getGaService().createPlainStyle(diagram, name);
 			style.setBackground(Graphiti.getGaService().manageColor(diagram, ColorConstant.WHITE));
-//			switch (name){
-//				case "BlueWhite":
-//					Graphiti.getGaService().setRenderingStyle(style,
-//							PredefinedColoredAreas.getBlueWhiteAdaptions());
-//					break;
-//				case "BlueWhiteGloss":
-//					Graphiti.getGaService().setRenderingStyle(style,
-//							PredefinedColoredAreas.getBlueWhiteGlossAdaptions());
-//					break;
-//				case "CopperWhiteGloss":
-//					Graphiti.getGaService().setRenderingStyle(style,
-//							PredefinedColoredAreas.getCopperWhiteGlossAdaptions());
-//					break;
-//				case "LightGray":
-//					Graphiti.getGaService().setRenderingStyle(style,
-//							PredefinedColoredAreas.getLightGrayAdaptions());
-//					break;
-//				case "LightYellow":
-//					Graphiti.getGaService().setRenderingStyle(style,
-//							PredefinedColoredAreas.getLightYellowAdaptions());
-//					break;
-//				case "SilverWhiteGloss":
-//					Graphiti.getGaService().setRenderingStyle(style,
-//							PredefinedColoredAreas.getSilverWhiteGlossAdaptions());
-//					break;
-//				case "LimeWhite":
-//					Graphiti.getGaService().setRenderingStyle(style,
-//							CustomRenderingStyle.getLimeWhiteAdaptions());
-//					break;
-//				default:
-//					break;
-//			}
+			switch (name){
+				case "BlueWhite":
+					Graphiti.getGaService().setRenderingStyle(style,
+							PredefinedColoredAreas.getBlueWhiteAdaptions());
+					break;
+				case "BlueWhiteGloss":
+					Graphiti.getGaService().setRenderingStyle(style,
+							PredefinedColoredAreas.getBlueWhiteGlossAdaptions());
+					break;
+				case "CopperWhiteGloss":
+					Graphiti.getGaService().setRenderingStyle(style,
+							PredefinedColoredAreas.getCopperWhiteGlossAdaptions());
+					break;
+				case "LightGray":
+					Graphiti.getGaService().setRenderingStyle(style,
+							PredefinedColoredAreas.getLightGrayAdaptions());
+					break;
+				case "LightYellow":
+					Graphiti.getGaService().setRenderingStyle(style,
+							PredefinedColoredAreas.getLightYellowAdaptions());
+					break;
+				case "SilverWhiteGloss":
+					Graphiti.getGaService().setRenderingStyle(style,
+							PredefinedColoredAreas.getSilverWhiteGlossAdaptions());
+					break;
+				case "LimeWhite":
+					Graphiti.getGaService().setRenderingStyle(style,
+							CustomRenderingStyle.getLimeWhiteAdaptions());
+					break;
+				default:
+					break;
+			}
 		}
 		return style;
 	}
@@ -942,20 +942,20 @@ public class FigureProvider {
 				if ( literal.getName().equals(attribute.getValueID()) )
 					return literal.getInstance();
 		}else if (etype instanceof EDataType){
-			//etype.getEAttributeType().getInstanceClass().equals(boolean.class)
-//			switch (etype.getName()){
-//				case "EBoolean":
-//					return "true".equals(attribute.getValueBOOL());
-//				case "EInt":
-//					return attribute.getValueINT();
-//				case "EFloat":
-//					return (float)attribute.getValueINT() + (float)attribute.getValueDEC()/100.0 ;
-//				case "EDate":
-//					return new Date(attribute.getValueYEAR(), 
-//							attribute.getValueMONTH()-1, attribute.getValueYEAR());
-//				default:
-//					return attribute.getValueSTRING();
-//			}
+//			etype.getEAttributeType().getInstanceClass().equals(boolean.class)
+			switch (etype.getName()){
+				case "EBoolean":
+					return "true".equals(attribute.getValueBOOL());
+				case "EInt":
+					return attribute.getValueINT();
+				case "EFloat":
+					return (float)attribute.getValueINT() + (float)attribute.getValueDEC()/100.0 ;
+				case "EDate":
+					return new Date(attribute.getValueYEAR(), 
+							attribute.getValueMONTH()-1, attribute.getValueYEAR());
+				default:
+					return attribute.getValueSTRING();
+			}
 		}
 		return null;			
 	}
