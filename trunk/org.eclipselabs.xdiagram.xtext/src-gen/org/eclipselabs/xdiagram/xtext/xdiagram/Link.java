@@ -4,8 +4,6 @@ package org.eclipselabs.xdiagram.xtext.xdiagram;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 
 /**
@@ -18,12 +16,9 @@ import org.eclipse.emf.ecore.EReference;
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getModelReference <em>Model Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#isComplex <em>Complex</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getModelClass <em>Model Class</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getSourceReference <em>Source Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getTargetReference <em>Target Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#isManhattan <em>Manhattan</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getStyle <em>Style</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getLinefeatures <em>Linefeatures</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getColorfeatures <em>Colorfeatures</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getIntegerfeatures <em>Integerfeatures</em>}</li>
@@ -39,7 +34,7 @@ import org.eclipse.emf.ecore.EReference;
  * @model
  * @generated
  */
-public interface Link extends EObject
+public interface Link extends DiagramElement
 {
   /**
    * Returns the value of the '<em><b>Model Reference</b></em>' reference.
@@ -92,32 +87,6 @@ public interface Link extends EObject
    * @generated
    */
   void setComplex(boolean value);
-
-  /**
-   * Returns the value of the '<em><b>Model Class</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Model Class</em>' reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Model Class</em>' reference.
-   * @see #setModelClass(EClass)
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getLink_ModelClass()
-   * @model
-   * @generated
-   */
-  EClass getModelClass();
-
-  /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getModelClass <em>Model Class</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Model Class</em>' reference.
-   * @see #getModelClass()
-   * @generated
-   */
-  void setModelClass(EClass value);
 
   /**
    * Returns the value of the '<em><b>Source Reference</b></em>' reference.
@@ -196,48 +165,6 @@ public interface Link extends EObject
    * @generated
    */
   void setManhattan(boolean value);
-
-  /**
-   * Returns the value of the '<em><b>Style</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Style</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Style</em>' attribute.
-   * @see #setStyle(String)
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getLink_Style()
-   * @model
-   * @generated
-   */
-  String getStyle();
-
-  /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getStyle <em>Style</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Style</em>' attribute.
-   * @see #getStyle()
-   * @generated
-   */
-  void setStyle(String value);
-
-  /**
-   * Returns the value of the '<em><b>Attributes</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.Attribute}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Attributes</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Attributes</em>' containment reference list.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getLink_Attributes()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Attribute> getAttributes();
 
   /**
    * Returns the value of the '<em><b>Linefeatures</b></em>' containment reference list.

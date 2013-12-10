@@ -68,6 +68,7 @@ public class InternalXDiagramLexer extends Lexer {
     public static final int T__75=75;
     public static final int T__130=130;
     public static final int T__74=74;
+    public static final int T__131=131;
     public static final int T__73=73;
     public static final int T__79=79;
     public static final int T__78=78;
@@ -406,10 +407,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:23:7: ( 'set' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:23:9: 'set'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:23:7: ( 'name' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:23:9: 'name'
             {
-            match("set"); 
+            match("name"); 
 
 
             }
@@ -427,10 +428,11 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:24:7: ( '=' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:24:9: '='
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:24:7: ( 'set' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:24:9: 'set'
             {
-            match('='); 
+            match("set"); 
+
 
             }
 
@@ -447,11 +449,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:25:7: ( 'main' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:25:9: 'main'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:25:7: ( '=' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:25:9: '='
             {
-            match("main"); 
-
+            match('='); 
 
             }
 
@@ -468,10 +469,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:26:7: ( 'figure' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:26:9: 'figure'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:26:7: ( 'main' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:26:9: 'main'
             {
-            match("figure"); 
+            match("main"); 
 
 
             }
@@ -489,10 +490,11 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:27:7: ( ',' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:27:9: ','
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:27:7: ( 'figure' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:27:9: 'figure'
             {
-            match(','); 
+            match("figure"); 
+
 
             }
 
@@ -509,11 +511,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:28:7: ( 'stack' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:28:9: 'stack'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:28:7: ( ',' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:28:9: ','
             {
-            match("stack"); 
-
+            match(','); 
 
             }
 
@@ -530,10 +531,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:29:7: ( 'free' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:29:9: 'free'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:29:7: ( 'stack' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:29:9: 'stack'
             {
-            match("free"); 
+            match("stack"); 
 
 
             }
@@ -551,10 +552,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:30:7: ( 'container' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:30:9: 'container'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:30:7: ( 'free' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:30:9: 'free'
             {
-            match("container"); 
+            match("free"); 
 
 
             }
@@ -572,10 +573,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:31:7: ( 'for' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:31:9: 'for'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:31:7: ( 'container' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:31:9: 'container'
             {
-            match("for"); 
+            match("container"); 
 
 
             }
@@ -593,10 +594,11 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:32:7: ( '%' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:32:9: '%'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:32:7: ( 'for' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:32:9: 'for'
             {
-            match('%'); 
+            match("for"); 
+
 
             }
 
@@ -613,11 +615,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:33:7: ( 'px' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:33:9: 'px'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:33:7: ( '%' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:33:9: '%'
             {
-            match("px"); 
-
+            match('%'); 
 
             }
 
@@ -634,10 +635,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:34:7: ( 'link' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:34:9: 'link'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:34:7: ( 'px' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:34:9: 'px'
             {
-            match("link"); 
+            match("px"); 
 
 
             }
@@ -655,10 +656,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:35:7: ( 'object' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:35:9: 'object'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:35:7: ( 'link' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:35:9: 'link'
             {
-            match("object"); 
+            match("link"); 
 
 
             }
@@ -676,10 +677,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:36:7: ( 'source' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:36:9: 'source'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:36:7: ( 'object' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:36:9: 'object'
             {
-            match("source"); 
+            match("object"); 
 
 
             }
@@ -697,10 +698,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:37:7: ( 'target' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:37:9: 'target'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:37:7: ( 'source' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:37:9: 'source'
             {
-            match("target"); 
+            match("source"); 
 
 
             }
@@ -718,10 +719,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:38:7: ( 'manhattan' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:38:9: 'manhattan'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:38:7: ( 'target' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:38:9: 'target'
             {
-            match("manhattan"); 
+            match("target"); 
 
 
             }
@@ -739,10 +740,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:39:7: ( 'origin' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:39:9: 'origin'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:39:7: ( 'manhattan' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:39:9: 'manhattan'
             {
-            match("origin"); 
+            match("manhattan"); 
 
 
             }
@@ -760,10 +761,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:40:7: ( 'destiny' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:40:9: 'destiny'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:40:7: ( 'origin' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:40:9: 'origin'
             {
-            match("destiny"); 
+            match("origin"); 
 
 
             }
@@ -781,10 +782,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:41:7: ( 'placing' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:41:9: 'placing'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:41:7: ( 'destiny' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:41:9: 'destiny'
             {
-            match("placing"); 
+            match("destiny"); 
 
 
             }
@@ -802,10 +803,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:42:7: ( 'at' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:42:9: 'at'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:42:7: ( 'placing' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:42:9: 'placing'
             {
-            match("at"); 
+            match("placing"); 
 
 
             }
@@ -823,10 +824,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:43:7: ( 'text' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:43:9: 'text'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:43:7: ( 'at' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:43:9: 'at'
             {
-            match("text"); 
+            match("at"); 
 
 
             }
@@ -844,10 +845,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:44:7: ( 'Label' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:44:9: 'Label'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:44:7: ( 'text' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:44:9: 'text'
             {
-            match("Label"); 
+            match("text"); 
 
 
             }
@@ -865,10 +866,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:45:7: ( 'Description' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:45:9: 'Description'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:45:7: ( 'Label' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:45:9: 'Label'
             {
-            match("Description"); 
+            match("Label"); 
 
 
             }
@@ -886,10 +887,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:46:7: ( 'Arrow' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:46:9: 'Arrow'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:46:7: ( 'Description' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:46:9: 'Description'
             {
-            match("Arrow"); 
+            match("Description"); 
 
 
             }
@@ -907,10 +908,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:47:7: ( 'Triangle' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:47:9: 'Triangle'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:47:7: ( 'Arrow' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:47:9: 'Arrow'
             {
-            match("Triangle"); 
+            match("Arrow"); 
 
 
             }
@@ -928,10 +929,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:48:7: ( 'Rhombus' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:48:9: 'Rhombus'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:48:7: ( 'Triangle' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:48:9: 'Triangle'
             {
-            match("Rhombus"); 
+            match("Triangle"); 
 
 
             }
@@ -949,10 +950,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:49:7: ( 'Polygon' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:49:9: 'Polygon'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:49:7: ( 'Rhombus' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:49:9: 'Rhombus'
             {
-            match("Polygon"); 
+            match("Rhombus"); 
 
 
             }
@@ -970,10 +971,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:50:7: ( 'Polyline' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:50:9: 'Polyline'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:50:7: ( 'Polygon' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:50:9: 'Polygon'
             {
-            match("Polyline"); 
+            match("Polygon"); 
 
 
             }
@@ -991,10 +992,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:51:7: ( 'anchor' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:51:9: 'anchor'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:51:7: ( 'Polyline' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:51:9: 'Polyline'
             {
-            match("anchor"); 
+            match("Polyline"); 
 
 
             }
@@ -1012,10 +1013,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:52:7: ( 'to' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:52:9: 'to'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:52:7: ( 'anchor' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:52:9: 'anchor'
             {
-            match("to"); 
+            match("anchor"); 
 
 
             }
@@ -1033,10 +1034,11 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:53:7: ( '-' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:53:9: '-'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:53:7: ( 'to' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:53:9: 'to'
             {
-            match('-'); 
+            match("to"); 
+
 
             }
 
@@ -1053,11 +1055,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:54:7: ( 'lf' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:54:9: 'lf'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:54:7: ( '-' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:54:9: '-'
             {
-            match("lf"); 
-
+            match('-'); 
 
             }
 
@@ -1074,10 +1075,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:55:7: ( 'rg' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:55:9: 'rg'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:55:7: ( 'lf' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:55:9: 'lf'
             {
-            match("rg"); 
+            match("lf"); 
 
 
             }
@@ -1095,10 +1096,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:56:7: ( 'up' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:56:9: 'up'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:56:7: ( 'rg' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:56:9: 'rg'
             {
-            match("up"); 
+            match("rg"); 
 
 
             }
@@ -1116,10 +1117,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:57:7: ( 'dw' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:57:9: 'dw'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:57:7: ( 'up' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:57:9: 'up'
             {
-            match("dw"); 
+            match("up"); 
 
 
             }
@@ -1137,10 +1138,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:58:7: ( 'as' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:58:9: 'as'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:58:7: ( 'dw' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:58:9: 'dw'
             {
-            match("as"); 
+            match("dw"); 
 
 
             }
@@ -1158,10 +1159,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:59:7: ( 'incoming' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:59:9: 'incoming'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:59:7: ( 'as' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:59:9: 'as'
             {
-            match("incoming"); 
+            match("as"); 
 
 
             }
@@ -1179,10 +1180,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:60:7: ( 'outgoing' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:60:9: 'outgoing'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:60:7: ( 'incoming' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:60:9: 'incoming'
             {
-            match("outgoing"); 
+            match("incoming"); 
 
 
             }
@@ -1200,10 +1201,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:61:7: ( 'both' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:61:9: 'both'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:61:7: ( 'outgoing' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:61:9: 'outgoing'
             {
-            match("both"); 
+            match("outgoing"); 
 
 
             }
@@ -1221,10 +1222,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:62:7: ( 'connection' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:62:9: 'connection'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:62:7: ( 'both' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:62:9: 'both'
             {
-            match("connection"); 
+            match("both"); 
 
 
             }
@@ -1242,10 +1243,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:63:7: ( 'using' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:63:9: 'using'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:63:7: ( 'connection' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:63:9: 'connection'
             {
-            match("using"); 
+            match("connection"); 
 
 
             }
@@ -1263,10 +1264,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:64:7: ( 'connections' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:64:9: 'connections'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:64:7: ( 'using' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:64:9: 'using'
             {
-            match("connections"); 
+            match("using"); 
 
 
             }
@@ -1284,10 +1285,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__65;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:65:7: ( 'attribute' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:65:9: 'attribute'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:65:7: ( 'connections' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:65:9: 'connections'
             {
-            match("attribute"); 
+            match("connections"); 
 
 
             }
@@ -2539,11 +2540,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__125;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:125:8: ( 'Square' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:125:10: 'Square'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:125:8: ( '/' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:125:10: '/'
             {
-            match("Square"); 
-
+            match('/'); 
 
             }
 
@@ -2560,10 +2560,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__126;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:126:8: ( 'Rectangle' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:126:10: 'Rectangle'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:126:8: ( 'Square' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:126:10: 'Square'
             {
-            match("Rectangle"); 
+            match("Square"); 
 
 
             }
@@ -2581,10 +2581,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__127;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:127:8: ( 'RoundedRectangle' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:127:10: 'RoundedRectangle'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:127:8: ( 'Rectangle' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:127:10: 'Rectangle'
             {
-            match("RoundedRectangle"); 
+            match("Rectangle"); 
 
 
             }
@@ -2602,10 +2602,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__128;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:128:8: ( 'Circle' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:128:10: 'Circle'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:128:8: ( 'RoundedRectangle' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:128:10: 'RoundedRectangle'
             {
-            match("Circle"); 
+            match("RoundedRectangle"); 
 
 
             }
@@ -2623,10 +2623,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__129;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:129:8: ( 'Ellipse' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:129:10: 'Ellipse'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:129:8: ( 'Circle' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:129:10: 'Circle'
             {
-            match("Ellipse"); 
+            match("Circle"); 
 
 
             }
@@ -2644,10 +2644,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = T__130;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:130:8: ( 'Image' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:130:10: 'Image'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:130:8: ( 'Ellipse' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:130:10: 'Ellipse'
             {
-            match("Image"); 
+            match("Ellipse"); 
 
 
             }
@@ -2660,15 +2660,36 @@ public class InternalXDiagramLexer extends Lexer {
     }
     // $ANTLR end "T__130"
 
+    // $ANTLR start "T__131"
+    public final void mT__131() throws RecognitionException {
+        try {
+            int _type = T__131;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:131:8: ( 'Image' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:131:10: 'Image'
+            {
+            match("Image"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__131"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4335:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4335:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4380:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4380:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4335:11: ( '^' )?
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4380:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -2677,7 +2698,7 @@ public class InternalXDiagramLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4335:11: '^'
+                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4380:11: '^'
                     {
                     match('^'); 
 
@@ -2695,7 +2716,7 @@ public class InternalXDiagramLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4335:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4380:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -2744,10 +2765,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4337:10: ( ( '0' .. '9' )+ )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4337:12: ( '0' .. '9' )+
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4382:10: ( ( '0' .. '9' )+ )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4382:12: ( '0' .. '9' )+
             {
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4337:12: ( '0' .. '9' )+
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4382:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -2761,7 +2782,7 @@ public class InternalXDiagramLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4337:13: '0' .. '9'
+            	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4382:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2793,10 +2814,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4384:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4384:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4384:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -2814,10 +2835,10 @@ public class InternalXDiagramLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4384:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4384:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -2833,7 +2854,7 @@ public class InternalXDiagramLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4384:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -2849,7 +2870,7 @@ public class InternalXDiagramLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4384:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2874,10 +2895,10 @@ public class InternalXDiagramLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4384:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4384:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -2893,7 +2914,7 @@ public class InternalXDiagramLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4384:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -2909,7 +2930,7 @@ public class InternalXDiagramLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4339:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4384:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2952,12 +2973,12 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4341:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4341:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4386:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4386:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4341:24: ( options {greedy=false; } : . )*
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4386:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -2982,7 +3003,7 @@ public class InternalXDiagramLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4341:52: .
+            	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4386:52: .
             	    {
             	    matchAny(); 
 
@@ -3012,12 +3033,12 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4388:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4388:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4388:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -3030,7 +3051,7 @@ public class InternalXDiagramLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4388:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -3050,7 +3071,7 @@ public class InternalXDiagramLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:40: ( ( '\\r' )? '\\n' )?
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4388:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -3059,9 +3080,9 @@ public class InternalXDiagramLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:41: ( '\\r' )? '\\n'
+                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4388:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:41: ( '\\r' )?
+                    // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4388:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -3070,7 +3091,7 @@ public class InternalXDiagramLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4343:41: '\\r'
+                            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4388:41: '\\r'
                             {
                             match('\r'); 
 
@@ -3102,10 +3123,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4345:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4345:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4390:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4390:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4345:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4390:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -3159,8 +3180,8 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4347:16: ( . )
-            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4347:18: .
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4392:16: ( . )
+            // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:4392:18: .
             {
             matchAny(); 
 
@@ -3175,8 +3196,8 @@ public class InternalXDiagramLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=127;
+        // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=128;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -4020,49 +4041,56 @@ public class InternalXDiagramLexer extends Lexer {
                 }
                 break;
             case 121 :
-                // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:1:761: RULE_ID
+                // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:1:761: T__131
+                {
+                mT__131(); 
+
+                }
+                break;
+            case 122 :
+                // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:1:768: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 122 :
-                // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:1:769: RULE_INT
+            case 123 :
+                // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:1:776: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 123 :
-                // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:1:778: RULE_STRING
+            case 124 :
+                // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:1:785: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 124 :
-                // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:1:790: RULE_ML_COMMENT
+            case 125 :
+                // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:1:797: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 125 :
-                // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:1:806: RULE_SL_COMMENT
+            case 126 :
+                // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:1:813: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 126 :
-                // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:1:822: RULE_WS
+            case 127 :
+                // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:1:829: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 127 :
-                // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:1:830: RULE_ANY_OTHER
+            case 128 :
+                // ../org.eclipselabs.xdiagram.xtext/src-gen/org/eclipselabs/xdiagram/xtext/parser/antlr/internal/InternalXDiagram.g:1:837: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -4077,189 +4105,189 @@ public class InternalXDiagramLexer extends Lexer {
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
         "\1\uffff\3\75\2\uffff\1\75\3\uffff\2\75\1\uffff\1\75\1\uffff\1\75"+
-        "\1\uffff\13\75\1\172\10\75\1\uffff\1\71\1\uffff\4\75\2\uffff\1\75"+
-        "\1\uffff\2\75\1\71\2\uffff\3\71\2\uffff\3\75\1\uffff\2\75\1\u00a2"+
-        "\5\75\2\uffff\4\75\3\uffff\2\75\1\u00b0\1\75\1\uffff\4\75\1\uffff"+
-        "\2\75\1\uffff\1\u00ba\3\75\1\u00bf\10\75\1\u00c9\1\75\1\u00cd\1"+
-        "\75\1\u00d0\13\75\2\uffff\1\u00dd\16\75\3\uffff\4\75\2\uffff\1\75"+
-        "\1\uffff\2\75\5\uffff\6\75\1\uffff\1\75\1\u00fc\5\75\1\u0102\5\75"+
-        "\1\uffff\3\75\1\u010c\5\75\1\uffff\4\75\1\uffff\10\75\1\u0120\1"+
-        "\uffff\3\75\1\uffff\2\75\1\uffff\7\75\1\u012d\1\u012e\3\75\1\uffff"+
-        "\30\75\1\u014a\4\75\1\u0150\1\uffff\1\75\1\u0152\3\75\1\uffff\2"+
-        "\75\1\u0158\1\u0159\3\75\1\u015d\1\75\1\uffff\11\75\1\u0168\2\75"+
-        "\1\u016b\3\75\1\u016f\1\75\1\u0172\1\uffff\1\75\1\u0174\12\75\2"+
-        "\uffff\4\75\1\u0184\10\75\1\u018d\1\75\1\u018f\13\75\1\uffff\5\75"+
-        "\1\uffff\1\75\1\uffff\1\75\1\u01a2\1\u01a3\1\75\1\u01a5\2\uffff"+
-        "\1\75\1\u01a7\1\75\1\uffff\1\75\1\uffff\1\u01ae\5\75\1\u01b4\1\75"+
-        "\2\uffff\1\75\1\uffff\3\75\1\uffff\1\75\2\uffff\1\75\1\uffff\2\75"+
-        "\1\u01c3\1\u01c4\3\75\1\u01c9\6\75\1\u01d0\1\uffff\7\75\1\u01d8"+
-        "\1\uffff\1\75\1\uffff\3\75\1\u01dd\1\u01de\2\75\1\u01e1\1\75\1\u01e3"+
-        "\2\75\1\u01e6\3\75\1\u01ea\1\75\2\uffff\1\u01ec\1\uffff\1\75\1\uffff"+
-        "\1\u01ee\1\75\5\uffff\2\75\1\u01f2\1\u01f3\1\75\1\uffff\1\75\2\uffff"+
-        "\1\u01f6\1\u01f7\1\u01f8\1\75\1\u01fa\3\uffff\2\75\1\u01fd\2\uffff"+
+        "\1\uffff\13\75\1\173\10\75\1\uffff\1\71\1\uffff\4\75\2\uffff\1\75"+
+        "\1\uffff\1\u0098\2\75\1\71\2\uffff\2\71\2\uffff\3\75\1\uffff\2\75"+
+        "\1\u00a4\5\75\2\uffff\4\75\3\uffff\3\75\1\u00b3\1\75\1\uffff\4\75"+
+        "\1\uffff\2\75\1\uffff\1\u00bd\3\75\1\u00c2\10\75\1\u00cc\1\75\1"+
+        "\u00cf\1\75\1\u00d2\13\75\2\uffff\1\u00df\16\75\3\uffff\4\75\2\uffff"+
+        "\1\75\4\uffff\2\75\3\uffff\6\75\1\uffff\1\75\1\u00fe\5\75\1\u0104"+
+        "\6\75\1\uffff\3\75\1\u010f\5\75\1\uffff\4\75\1\uffff\10\75\1\u0123"+
+        "\1\uffff\2\75\1\uffff\2\75\1\uffff\7\75\1\u012f\1\u0130\3\75\1\uffff"+
+        "\30\75\1\u014c\4\75\1\u0152\1\uffff\1\75\1\u0154\3\75\1\uffff\2"+
+        "\75\1\u015a\1\u015b\1\u015c\3\75\1\u0160\1\75\1\uffff\11\75\1\u016b"+
+        "\2\75\1\u016e\3\75\1\u0172\1\75\1\u0175\1\uffff\1\75\1\u0177\11"+
+        "\75\2\uffff\4\75\1\u0186\10\75\1\u018f\1\75\1\u0191\13\75\1\uffff"+
+        "\5\75\1\uffff\1\75\1\uffff\1\75\1\u01a4\1\u01a5\1\75\1\u01a7\3\uffff"+
+        "\1\75\1\u01a9\1\75\1\uffff\1\75\1\uffff\1\u01b0\5\75\1\u01b6\1\75"+
+        "\2\uffff\1\75\1\uffff\3\75\1\uffff\1\75\2\uffff\1\75\1\uffff\1\75"+
+        "\1\u01c4\1\u01c5\3\75\1\u01ca\6\75\1\u01d1\1\uffff\7\75\1\u01d9"+
+        "\1\uffff\1\75\1\uffff\3\75\1\u01de\1\u01df\2\75\1\u01e2\1\75\1\u01e4"+
+        "\2\75\1\u01e7\3\75\1\u01eb\1\75\2\uffff\1\u01ed\1\uffff\1\75\1\uffff"+
+        "\1\u01ef\1\75\5\uffff\2\75\1\u01f3\1\u01f4\1\75\1\uffff\1\75\2\uffff"+
+        "\1\u01f7\1\u01f8\1\u01f9\1\75\1\u01fb\3\uffff\1\75\1\u01fd\2\uffff"+
         "\4\75\1\uffff\6\75\1\uffff\1\u0208\2\75\1\u020b\3\75\1\uffff\1\75"+
         "\1\u0210\1\75\1\u0212\2\uffff\1\u0213\1\u0214\1\uffff\1\75\1\uffff"+
         "\2\75\1\uffff\1\u0218\1\u0219\1\u021a\1\uffff\1\75\1\uffff\1\75"+
-        "\1\uffff\3\75\2\uffff\1\u0220\1\75\3\uffff\1\75\1\uffff\2\75\1\uffff"+
-        "\5\75\1\u022a\2\75\1\u022d\1\75\1\uffff\2\75\1\uffff\4\75\1\uffff"+
-        "\1\75\3\uffff\1\u0236\2\75\3\uffff\1\u0239\4\75\1\uffff\1\u023e"+
-        "\1\u023f\6\75\1\u0246\1\uffff\2\75\1\uffff\1\u0249\2\75\1\u024c"+
-        "\1\u024d\3\75\1\uffff\1\u0251\1\u0252\1\uffff\1\u0253\1\75\1\u0255"+
-        "\1\75\2\uffff\1\75\1\u0258\1\u0259\1\75\1\u025b\1\75\1\uffff\1\u025d"+
-        "\1\75\1\uffff\2\75\2\uffff\1\u0262\2\75\3\uffff\1\u0265\1\uffff"+
-        "\1\u0267\1\75\2\uffff\1\75\1\uffff\1\75\1\uffff\1\75\1\u026c\1\u026d"+
-        "\1\75\1\uffff\2\75\1\uffff\1\u0271\1\uffff\1\75\1\u0273\1\u0274"+
-        "\1\75\2\uffff\3\75\1\uffff\1\u0279\2\uffff\4\75\1\uffff\5\75\1\u0283"+
-        "\3\75\1\uffff\2\75\1\u0289\1\u028a\1\u028b\3\uffff";
+        "\1\uffff\3\75\2\uffff\1\u0220\1\75\3\uffff\1\75\1\uffff\1\75\1\uffff"+
+        "\5\75\1\u0229\2\75\1\u022c\1\75\1\uffff\2\75\1\uffff\4\75\1\uffff"+
+        "\1\75\3\uffff\1\u0235\2\75\3\uffff\1\u0238\4\75\1\uffff\1\u023d"+
+        "\1\u023e\5\75\1\u0244\1\uffff\2\75\1\uffff\1\u0247\2\75\1\u024a"+
+        "\1\u024b\3\75\1\uffff\1\u024f\1\u0250\1\uffff\1\u0251\1\75\1\u0253"+
+        "\1\75\2\uffff\1\75\1\u0256\1\75\1\u0258\1\75\1\uffff\1\u025a\1\75"+
+        "\1\uffff\2\75\2\uffff\1\u025f\2\75\3\uffff\1\u0262\1\uffff\1\u0264"+
+        "\1\75\1\uffff\1\75\1\uffff\1\75\1\uffff\1\75\1\u0269\1\u026a\1\75"+
+        "\1\uffff\2\75\1\uffff\1\u026e\1\uffff\1\75\1\u0270\1\u0271\1\75"+
+        "\2\uffff\3\75\1\uffff\1\u0276\2\uffff\4\75\1\uffff\5\75\1\u0280"+
+        "\3\75\1\uffff\2\75\1\u0286\1\u0287\1\u0288\3\uffff";
     static final String DFA12_eofS =
-        "\u028c\uffff";
+        "\u0289\uffff";
     static final String DFA12_minS =
-        "\1\0\2\141\1\143\2\uffff\1\145\3\uffff\1\157\1\145\1\uffff\1\141"+
+        "\1\0\2\141\1\143\2\uffff\1\145\3\uffff\1\141\1\145\1\uffff\1\141"+
         "\1\uffff\1\145\1\uffff\1\154\1\141\1\142\1\141\1\156\1\141\1\145"+
         "\2\162\1\105\1\157\1\76\1\160\1\141\2\145\1\162\1\114\1\131\1\151"+
         "\1\uffff\1\76\1\uffff\1\110\1\122\1\105\1\122\2\uffff\1\151\1\uffff"+
-        "\1\154\1\155\1\101\2\uffff\2\0\1\52\2\uffff\1\164\1\151\1\144\1"+
+        "\1\52\1\154\1\155\1\101\2\uffff\2\0\2\uffff\1\164\1\151\1\144\1"+
         "\uffff\1\141\1\163\1\60\1\163\1\164\1\160\1\157\1\143\2\uffff\1"+
-        "\141\1\164\1\154\1\172\3\uffff\1\144\1\163\1\60\1\147\1\uffff\1"+
-        "\147\1\145\1\156\1\154\1\uffff\2\156\1\uffff\1\60\1\141\1\151\1"+
-        "\156\1\60\1\171\1\146\1\152\1\151\1\164\1\145\1\162\1\170\1\60\1"+
-        "\141\1\60\1\143\1\60\1\142\1\147\1\163\1\162\1\151\1\157\1\104\1"+
-        "\102\1\143\1\165\1\154\2\uffff\1\60\1\151\1\162\1\143\1\162\1\151"+
-        "\1\162\1\141\1\165\1\101\1\160\1\101\1\162\1\154\1\165\3\uffff\1"+
-        "\111\1\105\1\114\1\101\2\uffff\1\144\1\uffff\1\154\1\141\5\uffff"+
+        "\141\1\164\1\154\1\172\3\uffff\1\144\1\155\1\163\1\60\1\147\1\uffff"+
+        "\1\147\1\145\1\156\1\154\1\uffff\2\156\1\uffff\1\60\1\141\1\151"+
+        "\1\156\1\60\1\171\1\146\1\152\1\151\1\164\1\145\1\162\1\170\1\60"+
+        "\1\141\1\60\1\143\1\60\1\142\1\147\1\163\1\162\1\151\1\157\1\104"+
+        "\1\102\1\143\1\165\1\154\2\uffff\1\60\1\151\1\162\1\143\1\162\1"+
+        "\151\1\162\1\141\1\165\1\101\1\160\1\101\1\162\1\154\1\165\3\uffff"+
+        "\1\111\1\105\1\114\1\101\2\uffff\1\144\4\uffff\1\154\1\141\3\uffff"+
         "\1\141\1\156\1\150\1\144\1\147\1\164\1\uffff\1\150\1\60\1\157\1"+
-        "\156\1\157\1\154\1\143\1\60\1\162\1\151\2\145\1\151\1\uffff\1\150"+
+        "\156\1\157\1\154\1\143\1\60\1\162\1\151\3\145\1\151\1\uffff\1\150"+
         "\1\165\1\145\1\60\1\164\1\163\2\156\1\164\1\uffff\1\143\1\156\1"+
         "\151\1\145\1\uffff\1\157\1\164\1\145\2\147\1\162\1\147\1\164\1\60"+
-        "\1\uffff\1\156\1\145\1\162\1\uffff\1\150\1\154\1\uffff\1\145\1\150"+
-        "\1\145\1\143\1\157\1\141\1\155\2\60\1\164\1\156\1\171\1\uffff\1"+
-        "\156\1\150\1\144\1\153\1\151\1\147\1\164\1\144\1\145\1\103\1\105"+
-        "\1\160\1\116\1\143\1\166\1\141\1\124\1\105\1\114\1\116\1\164\1\151"+
-        "\1\147\1\155\1\60\1\141\1\154\1\162\1\151\1\60\1\uffff\1\162\1\60"+
-        "\1\155\1\145\1\153\1\uffff\1\143\1\144\2\60\1\172\1\164\1\162\1"+
-        "\60\1\147\1\uffff\1\55\1\145\1\141\3\145\1\151\2\164\1\60\1\55\1"+
-        "\165\1\60\1\143\1\151\1\157\1\60\1\145\1\55\1\uffff\1\163\1\60\1"+
-        "\151\1\157\1\145\1\154\1\164\1\127\1\162\1\167\1\156\1\142\2\uffff"+
-        "\1\141\1\144\2\147\1\60\1\145\1\147\1\172\1\150\2\151\1\127\1\113"+
-        "\1\60\1\145\1\60\1\154\1\145\1\162\1\105\1\116\1\117\1\107\1\150"+
-        "\1\160\1\145\1\157\1\uffff\1\164\1\145\1\141\1\156\1\157\1\uffff"+
-        "\1\164\1\uffff\1\151\2\60\1\145\1\60\2\uffff\1\141\1\60\1\145\1"+
-        "\uffff\1\162\1\142\1\60\1\151\1\143\2\162\1\156\1\60\1\151\1\uffff"+
-        "\1\163\1\164\1\uffff\1\164\1\156\1\151\1\uffff\1\164\1\141\1\uffff"+
-        "\1\160\1\uffff\1\142\1\162\2\60\1\107\1\150\1\151\1\60\1\147\1\165"+
-        "\1\156\1\145\1\157\1\151\1\60\1\uffff\2\162\1\157\1\164\1\143\1"+
-        "\145\1\150\1\60\1\uffff\1\162\1\uffff\1\145\1\162\1\145\2\60\1\127"+
-        "\1\105\1\60\1\163\1\60\1\144\1\164\1\60\1\155\1\171\1\164\1\60\1"+
-        "\156\2\uffff\1\60\1\uffff\1\142\1\uffff\1\60\1\157\5\uffff\1\156"+
-        "\1\164\2\60\1\147\1\uffff\1\157\2\uffff\3\60\1\156\1\60\3\uffff"+
-        "\1\141\1\165\1\60\2\uffff\1\162\1\145\1\151\1\160\1\uffff\1\154"+
-        "\1\163\1\147\1\144\2\156\1\uffff\1\60\1\157\1\156\1\60\1\141\1\156"+
-        "\1\151\1\uffff\1\127\1\60\1\127\1\60\2\uffff\2\60\1\uffff\1\145"+
-        "\1\uffff\1\145\1\141\1\uffff\3\60\1\uffff\1\147\1\uffff\1\154\1"+
-        "\uffff\1\165\1\145\1\151\2\uffff\1\60\1\156\3\uffff\1\147\1\uffff"+
-        "\1\162\1\164\1\uffff\1\141\1\154\2\164\1\145\1\60\1\154\1\122\1"+
-        "\60\1\145\1\uffff\1\165\1\164\1\uffff\1\154\2\164\1\150\1\uffff"+
-        "\1\150\3\uffff\1\60\1\154\1\156\3\uffff\1\60\1\145\1\156\1\162\1"+
-        "\157\1\uffff\2\60\2\145\1\171\1\154\1\145\1\151\1\60\1\uffff\2\145"+
-        "\1\uffff\1\60\1\156\1\141\2\60\1\145\2\151\1\uffff\2\60\1\uffff"+
-        "\1\60\1\144\1\60\1\156\2\uffff\1\156\2\60\1\157\1\60\1\157\1\uffff"+
-        "\1\60\1\143\1\uffff\1\144\1\154\2\uffff\1\60\2\164\3\uffff\1\60"+
-        "\1\uffff\1\60\1\143\2\uffff\1\167\1\uffff\1\156\1\uffff\1\164\2"+
-        "\60\1\154\1\uffff\2\145\1\uffff\1\60\1\uffff\1\171\2\60\1\141\2"+
-        "\uffff\1\157\2\107\1\uffff\1\60\2\uffff\1\156\1\163\2\154\1\uffff"+
-        "\1\147\1\163\2\157\1\154\1\60\2\163\1\145\1\uffff\2\163\3\60\3\uffff";
+        "\1\uffff\1\156\1\145\1\uffff\1\150\1\154\1\uffff\1\145\1\150\1\145"+
+        "\1\143\1\157\1\141\1\155\2\60\1\164\1\156\1\171\1\uffff\1\156\1"+
+        "\150\1\144\1\153\1\151\1\147\1\164\1\144\1\145\1\103\1\105\1\160"+
+        "\1\116\1\143\1\166\1\141\1\124\1\105\1\114\1\116\1\164\1\151\1\147"+
+        "\1\155\1\60\1\141\1\154\1\162\1\151\1\60\1\uffff\1\162\1\60\1\155"+
+        "\1\145\1\153\1\uffff\1\143\1\144\3\60\1\172\1\164\1\162\1\60\1\147"+
+        "\1\uffff\1\55\1\145\1\141\3\145\1\151\2\164\1\60\1\55\1\165\1\60"+
+        "\1\143\1\151\1\157\1\60\1\145\1\55\1\uffff\1\163\1\60\1\157\1\145"+
+        "\1\154\1\164\1\127\1\162\1\167\1\156\1\142\2\uffff\1\141\1\144\2"+
+        "\147\1\60\1\145\1\147\1\172\1\150\2\151\1\127\1\113\1\60\1\145\1"+
+        "\60\1\154\1\145\1\162\1\105\1\116\1\117\1\107\1\150\1\160\1\145"+
+        "\1\157\1\uffff\1\164\1\145\1\141\1\156\1\157\1\uffff\1\164\1\uffff"+
+        "\1\151\2\60\1\145\1\60\3\uffff\1\141\1\60\1\145\1\uffff\1\162\1"+
+        "\142\1\60\1\151\1\143\2\162\1\156\1\60\1\151\1\uffff\1\163\1\164"+
+        "\1\uffff\1\164\1\156\1\151\1\uffff\1\164\1\141\1\uffff\1\160\1\uffff"+
+        "\1\162\2\60\1\107\1\150\1\151\1\60\1\147\1\165\1\156\1\145\1\157"+
+        "\1\151\1\60\1\uffff\2\162\1\157\1\164\1\143\1\145\1\150\1\60\1\uffff"+
+        "\1\162\1\uffff\1\145\1\162\1\145\2\60\1\127\1\105\1\60\1\163\1\60"+
+        "\1\144\1\164\1\60\1\155\1\171\1\164\1\60\1\156\2\uffff\1\60\1\uffff"+
+        "\1\142\1\uffff\1\60\1\157\5\uffff\1\156\1\164\2\60\1\147\1\uffff"+
+        "\1\157\2\uffff\3\60\1\156\1\60\3\uffff\1\141\1\60\2\uffff\1\162"+
+        "\1\145\1\151\1\160\1\uffff\1\154\1\163\1\147\1\144\2\156\1\uffff"+
+        "\1\60\1\157\1\156\1\60\1\141\1\156\1\151\1\uffff\1\127\1\60\1\127"+
+        "\1\60\2\uffff\2\60\1\uffff\1\145\1\uffff\1\145\1\141\1\uffff\3\60"+
+        "\1\uffff\1\147\1\uffff\1\154\1\uffff\1\165\1\145\1\151\2\uffff\1"+
+        "\60\1\156\3\uffff\1\147\1\uffff\1\162\1\uffff\1\141\1\154\2\164"+
+        "\1\145\1\60\1\154\1\122\1\60\1\145\1\uffff\1\165\1\164\1\uffff\1"+
+        "\154\2\164\1\150\1\uffff\1\150\3\uffff\1\60\1\154\1\156\3\uffff"+
+        "\1\60\1\145\1\156\1\162\1\157\1\uffff\2\60\1\145\1\171\1\154\1\145"+
+        "\1\151\1\60\1\uffff\2\145\1\uffff\1\60\1\156\1\141\2\60\1\145\2"+
+        "\151\1\uffff\2\60\1\uffff\1\60\1\144\1\60\1\156\2\uffff\1\156\1"+
+        "\60\1\157\1\60\1\157\1\uffff\1\60\1\143\1\uffff\1\144\1\154\2\uffff"+
+        "\1\60\2\164\3\uffff\1\60\1\uffff\1\60\1\143\1\uffff\1\167\1\uffff"+
+        "\1\156\1\uffff\1\164\2\60\1\154\1\uffff\2\145\1\uffff\1\60\1\uffff"+
+        "\1\171\2\60\1\141\2\uffff\1\157\2\107\1\uffff\1\60\2\uffff\1\156"+
+        "\1\163\2\154\1\uffff\1\147\1\163\2\157\1\154\1\60\2\163\1\145\1"+
+        "\uffff\2\163\3\60\3\uffff";
     static final String DFA12_maxS =
         "\1\uffff\1\151\1\167\1\156\2\uffff\1\164\3\uffff\1\157\1\151\1\uffff"+
         "\1\162\1\uffff\1\157\1\uffff\1\170\1\151\1\166\1\162\1\164\1\151"+
         "\1\145\2\162\2\157\1\76\1\163\2\157\1\145\1\162\1\154\1\157\1\161"+
         "\1\uffff\1\76\1\uffff\1\110\1\122\1\105\1\122\2\uffff\1\151\1\uffff"+
-        "\1\154\1\155\1\172\2\uffff\2\uffff\1\57\2\uffff\1\164\1\156\1\144"+
+        "\1\57\1\154\1\155\1\172\2\uffff\2\uffff\2\uffff\1\164\1\156\1\144"+
         "\1\uffff\1\141\1\163\1\172\1\163\1\164\1\160\1\157\1\143\2\uffff"+
-        "\1\171\1\164\1\165\1\172\3\uffff\1\144\1\163\1\172\1\147\1\uffff"+
-        "\1\147\1\145\1\162\1\154\1\uffff\1\162\1\156\1\uffff\1\172\1\141"+
-        "\1\163\1\156\1\172\1\171\1\146\1\152\1\151\1\164\1\145\1\162\1\170"+
-        "\1\172\1\165\1\172\1\147\1\172\1\142\1\155\1\163\1\162\1\151\1\157"+
-        "\1\104\1\102\1\143\1\165\1\154\2\uffff\1\172\1\151\1\164\1\143\1"+
-        "\162\1\151\1\162\1\141\1\165\1\125\1\160\1\101\1\162\1\154\1\165"+
-        "\3\uffff\1\111\1\105\1\114\1\101\2\uffff\1\144\1\uffff\1\154\1\141"+
-        "\5\uffff\1\141\1\156\1\150\1\144\1\147\1\164\1\uffff\1\150\1\172"+
-        "\1\157\1\156\1\157\1\154\1\143\1\172\1\162\1\151\2\145\1\151\1\uffff"+
-        "\1\150\1\165\1\145\1\172\1\164\1\163\1\164\1\156\1\164\1\uffff\1"+
-        "\143\1\156\1\151\1\153\1\uffff\1\157\1\164\1\145\2\147\1\162\1\147"+
-        "\1\164\1\172\1\uffff\1\156\1\145\1\162\1\uffff\1\150\1\154\1\uffff"+
-        "\1\145\1\150\1\145\1\143\1\157\1\141\1\155\2\172\1\164\1\156\1\171"+
-        "\1\uffff\1\156\1\150\1\144\1\153\1\151\1\147\1\164\1\144\1\145\1"+
-        "\103\1\105\1\160\1\116\1\143\1\166\1\141\1\124\1\105\1\114\1\116"+
-        "\1\164\1\151\1\147\1\155\1\172\1\141\1\154\1\162\1\151\1\172\1\uffff"+
-        "\1\162\1\172\1\155\1\145\1\153\1\uffff\1\143\1\144\3\172\1\164\1"+
-        "\162\1\172\1\147\1\uffff\1\55\1\145\1\141\3\145\1\151\2\164\1\172"+
-        "\1\55\1\165\1\172\1\143\1\151\1\157\1\172\1\145\1\172\1\uffff\1"+
-        "\163\1\172\1\151\1\157\1\145\1\154\1\164\1\127\1\162\1\167\1\156"+
-        "\1\142\2\uffff\1\141\1\144\1\154\1\147\1\172\1\145\1\147\1\172\1"+
-        "\150\2\151\1\127\1\113\1\172\1\145\1\172\1\154\1\145\1\162\1\105"+
+        "\1\171\1\164\1\165\1\172\3\uffff\1\144\1\155\1\163\1\172\1\147\1"+
+        "\uffff\1\147\1\145\1\162\1\154\1\uffff\1\162\1\156\1\uffff\1\172"+
+        "\1\141\1\163\1\156\1\172\1\171\1\146\1\152\1\151\1\164\1\145\1\162"+
+        "\1\170\1\172\1\165\1\172\1\147\1\172\1\142\1\155\1\163\1\162\1\151"+
+        "\1\157\1\104\1\102\1\143\1\165\1\154\2\uffff\1\172\1\151\1\164\1"+
+        "\143\1\162\1\151\1\162\1\141\1\165\1\125\1\160\1\101\1\162\1\154"+
+        "\1\165\3\uffff\1\111\1\105\1\114\1\101\2\uffff\1\144\4\uffff\1\154"+
+        "\1\141\3\uffff\1\141\1\156\1\150\1\144\1\147\1\164\1\uffff\1\150"+
+        "\1\172\1\157\1\156\1\157\1\154\1\143\1\172\1\162\1\151\3\145\1\151"+
+        "\1\uffff\1\150\1\165\1\145\1\172\1\164\1\163\1\164\1\156\1\164\1"+
+        "\uffff\1\143\1\156\1\151\1\153\1\uffff\1\157\1\164\1\145\2\147\1"+
+        "\162\1\147\1\164\1\172\1\uffff\1\156\1\145\1\uffff\1\150\1\154\1"+
+        "\uffff\1\145\1\150\1\145\1\143\1\157\1\141\1\155\2\172\1\164\1\156"+
+        "\1\171\1\uffff\1\156\1\150\1\144\1\153\1\151\1\147\1\164\1\144\1"+
+        "\145\1\103\1\105\1\160\1\116\1\143\1\166\1\141\1\124\1\105\1\114"+
+        "\1\116\1\164\1\151\1\147\1\155\1\172\1\141\1\154\1\162\1\151\1\172"+
+        "\1\uffff\1\162\1\172\1\155\1\145\1\153\1\uffff\1\143\1\144\4\172"+
+        "\1\164\1\162\1\172\1\147\1\uffff\1\55\1\145\1\141\3\145\1\151\2"+
+        "\164\1\172\1\55\1\165\1\172\1\143\1\151\1\157\1\172\1\145\1\172"+
+        "\1\uffff\1\163\1\172\1\157\1\145\1\154\1\164\1\127\1\162\1\167\1"+
+        "\156\1\142\2\uffff\1\141\1\144\1\154\1\147\1\172\1\145\1\147\1\172"+
+        "\1\150\2\151\1\127\1\113\1\172\1\145\1\172\1\154\1\145\1\162\1\105"+
         "\1\116\1\117\1\107\1\150\1\160\1\145\1\157\1\uffff\1\164\1\145\1"+
-        "\141\1\156\1\157\1\uffff\1\164\1\uffff\1\151\2\172\1\145\1\172\2"+
+        "\141\1\156\1\157\1\uffff\1\164\1\uffff\1\151\2\172\1\145\1\172\3"+
         "\uffff\1\141\1\172\1\145\1\uffff\1\162\1\163\1\172\1\151\1\143\2"+
         "\162\1\156\1\172\1\151\1\uffff\1\167\1\164\1\uffff\1\164\1\156\1"+
-        "\151\1\uffff\1\164\1\166\1\uffff\1\160\1\uffff\1\142\1\162\2\172"+
-        "\1\131\1\150\1\151\1\172\1\147\1\165\1\156\1\145\1\157\1\151\1\172"+
-        "\1\uffff\2\162\1\157\1\164\1\143\1\145\1\150\1\172\1\uffff\1\162"+
-        "\1\uffff\1\145\1\162\1\145\2\172\1\127\1\105\1\172\1\163\1\172\1"+
-        "\144\1\164\1\172\1\155\1\171\1\164\1\172\1\156\2\uffff\1\172\1\uffff"+
-        "\1\142\1\uffff\1\172\1\157\5\uffff\1\156\1\164\2\172\1\147\1\uffff"+
-        "\1\157\2\uffff\3\172\1\156\1\172\3\uffff\1\141\1\165\1\172\2\uffff"+
-        "\1\162\1\145\1\151\1\160\1\uffff\1\154\1\163\1\147\1\144\2\156\1"+
-        "\uffff\1\172\1\157\1\156\1\172\1\141\1\156\1\151\1\uffff\1\127\1"+
-        "\172\1\127\1\172\2\uffff\2\172\1\uffff\1\145\1\uffff\1\145\1\141"+
-        "\1\uffff\3\172\1\uffff\1\147\1\uffff\1\154\1\uffff\1\165\1\145\1"+
-        "\151\2\uffff\1\172\1\156\3\uffff\1\147\1\uffff\1\162\1\164\1\uffff"+
-        "\1\141\1\154\2\164\1\145\1\172\1\154\1\122\1\172\1\145\1\uffff\1"+
-        "\165\1\164\1\uffff\1\154\2\164\1\150\1\uffff\1\150\3\uffff\1\172"+
-        "\1\154\1\156\3\uffff\1\172\1\145\1\156\1\162\1\157\1\uffff\2\172"+
-        "\2\145\1\171\1\154\1\145\1\151\1\172\1\uffff\2\145\1\uffff\1\172"+
-        "\1\156\1\141\2\172\1\145\2\151\1\uffff\2\172\1\uffff\1\172\1\144"+
-        "\1\172\1\156\2\uffff\1\156\2\172\1\157\1\172\1\157\1\uffff\1\172"+
-        "\1\143\1\uffff\1\144\1\154\2\uffff\1\172\2\164\3\uffff\1\172\1\uffff"+
-        "\1\172\1\143\2\uffff\1\167\1\uffff\1\156\1\uffff\1\164\2\172\1\154"+
-        "\1\uffff\2\145\1\uffff\1\172\1\uffff\1\171\2\172\1\141\2\uffff\1"+
-        "\157\2\107\1\uffff\1\172\2\uffff\1\156\1\163\2\154\1\uffff\1\147"+
-        "\1\163\2\157\1\154\1\172\2\163\1\145\1\uffff\2\163\3\172\3\uffff";
+        "\151\1\uffff\1\164\1\166\1\uffff\1\160\1\uffff\1\162\2\172\1\131"+
+        "\1\150\1\151\1\172\1\147\1\165\1\156\1\145\1\157\1\151\1\172\1\uffff"+
+        "\2\162\1\157\1\164\1\143\1\145\1\150\1\172\1\uffff\1\162\1\uffff"+
+        "\1\145\1\162\1\145\2\172\1\127\1\105\1\172\1\163\1\172\1\144\1\164"+
+        "\1\172\1\155\1\171\1\164\1\172\1\156\2\uffff\1\172\1\uffff\1\142"+
+        "\1\uffff\1\172\1\157\5\uffff\1\156\1\164\2\172\1\147\1\uffff\1\157"+
+        "\2\uffff\3\172\1\156\1\172\3\uffff\1\141\1\172\2\uffff\1\162\1\145"+
+        "\1\151\1\160\1\uffff\1\154\1\163\1\147\1\144\2\156\1\uffff\1\172"+
+        "\1\157\1\156\1\172\1\141\1\156\1\151\1\uffff\1\127\1\172\1\127\1"+
+        "\172\2\uffff\2\172\1\uffff\1\145\1\uffff\1\145\1\141\1\uffff\3\172"+
+        "\1\uffff\1\147\1\uffff\1\154\1\uffff\1\165\1\145\1\151\2\uffff\1"+
+        "\172\1\156\3\uffff\1\147\1\uffff\1\162\1\uffff\1\141\1\154\2\164"+
+        "\1\145\1\172\1\154\1\122\1\172\1\145\1\uffff\1\165\1\164\1\uffff"+
+        "\1\154\2\164\1\150\1\uffff\1\150\3\uffff\1\172\1\154\1\156\3\uffff"+
+        "\1\172\1\145\1\156\1\162\1\157\1\uffff\2\172\1\145\1\171\1\154\1"+
+        "\145\1\151\1\172\1\uffff\2\145\1\uffff\1\172\1\156\1\141\2\172\1"+
+        "\145\2\151\1\uffff\2\172\1\uffff\1\172\1\144\1\172\1\156\2\uffff"+
+        "\1\156\1\172\1\157\1\172\1\157\1\uffff\1\172\1\143\1\uffff\1\144"+
+        "\1\154\2\uffff\1\172\2\164\3\uffff\1\172\1\uffff\1\172\1\143\1\uffff"+
+        "\1\167\1\uffff\1\156\1\uffff\1\164\2\172\1\154\1\uffff\2\145\1\uffff"+
+        "\1\172\1\uffff\1\171\2\172\1\141\2\uffff\1\157\2\107\1\uffff\1\172"+
+        "\2\uffff\1\156\1\163\2\154\1\uffff\1\147\1\163\2\157\1\154\1\172"+
+        "\2\163\1\145\1\uffff\2\163\3\172\3\uffff";
     static final String DFA12_acceptS =
-        "\4\uffff\1\4\1\5\1\uffff\1\7\1\10\1\11\2\uffff\1\16\1\uffff\1\21"+
-        "\1\uffff\1\26\24\uffff\1\117\1\uffff\1\121\4\uffff\1\133\1\134\1"+
-        "\uffff\1\147\3\uffff\1\171\1\172\3\uffff\1\176\1\177\3\uffff\1\171"+
-        "\10\uffff\1\4\1\5\4\uffff\1\7\1\10\1\11\4\uffff\1\16\4\uffff\1\21"+
-        "\2\uffff\1\26\35\uffff\1\162\1\53\17\uffff\1\117\1\120\1\121\4\uffff"+
-        "\1\133\1\134\1\uffff\1\147\2\uffff\1\172\1\173\1\174\1\175\1\176"+
-        "\6\uffff\1\57\15\uffff\1\55\11\uffff\1\27\4\uffff\1\54\11\uffff"+
-        "\1\52\3\uffff\1\40\2\uffff\1\60\14\uffff\1\56\36\uffff\1\160\5\uffff"+
-        "\1\15\11\uffff\1\25\23\uffff\1\136\14\uffff\1\126\1\132\33\uffff"+
-        "\1\17\5\uffff\1\157\1\uffff\1\14\5\uffff\1\112\1\12\3\uffff\1\23"+
-        "\12\uffff\1\30\2\uffff\1\76\3\uffff\1\73\2\uffff\1\41\1\uffff\1"+
-        "\153\17\uffff\1\63\10\uffff\1\124\1\uffff\1\130\22\uffff\1\6\1\22"+
-        "\1\uffff\1\156\1\uffff\1\100\2\uffff\1\144\1\146\1\151\1\152\1\154"+
-        "\5\uffff\1\111\1\uffff\1\135\1\155\5\uffff\1\75\1\145\1\150\3\uffff"+
-        "\1\141\1\42\4\uffff\1\44\6\uffff\1\65\7\uffff\1\123\4\uffff\1\122"+
-        "\1\125\2\uffff\1\137\1\uffff\1\170\2\uffff\1\77\3\uffff\1\3\1\uffff"+
-        "\1\32\1\uffff\1\20\3\uffff\1\142\1\74\2\uffff\1\70\1\31\1\35\1\uffff"+
-        "\1\33\2\uffff\1\51\12\uffff\1\116\2\uffff\1\140\4\uffff\1\166\1"+
-        "\uffff\1\163\1\127\1\131\3\uffff\1\2\1\36\1\161\5\uffff\1\37\11"+
-        "\uffff\1\46\2\uffff\1\47\10\uffff\1\167\2\uffff\1\61\4\uffff\1\113"+
-        "\1\62\6\uffff\1\45\2\uffff\1\50\2\uffff\1\72\1\101\3\uffff\1\1\1"+
-        "\34\1\13\1\uffff\1\24\2\uffff\1\67\1\105\1\uffff\1\110\1\uffff\1"+
-        "\164\4\uffff\1\102\2\uffff\1\115\1\uffff\1\64\4\uffff\1\114\1\71"+
-        "\3\uffff\1\66\1\uffff\1\106\1\43\4\uffff\1\143\11\uffff\1\103\5"+
-        "\uffff\1\165\1\104\1\107";
+        "\4\uffff\1\4\1\5\1\uffff\1\7\1\10\1\11\2\uffff\1\17\1\uffff\1\22"+
+        "\1\uffff\1\27\24\uffff\1\117\1\uffff\1\121\4\uffff\1\133\1\134\1"+
+        "\uffff\1\147\4\uffff\1\172\1\173\2\uffff\1\177\1\u0080\3\uffff\1"+
+        "\172\10\uffff\1\4\1\5\4\uffff\1\7\1\10\1\11\5\uffff\1\17\4\uffff"+
+        "\1\22\2\uffff\1\27\35\uffff\1\162\1\54\17\uffff\1\117\1\120\1\121"+
+        "\4\uffff\1\133\1\134\1\uffff\1\147\1\175\1\176\1\163\2\uffff\1\173"+
+        "\1\174\1\177\6\uffff\1\60\16\uffff\1\56\11\uffff\1\30\4\uffff\1"+
+        "\55\11\uffff\1\53\2\uffff\1\41\2\uffff\1\61\14\uffff\1\57\36\uffff"+
+        "\1\160\5\uffff\1\16\12\uffff\1\26\23\uffff\1\136\13\uffff\1\126"+
+        "\1\132\33\uffff\1\20\5\uffff\1\157\1\uffff\1\14\5\uffff\1\112\1"+
+        "\12\1\15\3\uffff\1\24\12\uffff\1\31\2\uffff\1\76\3\uffff\1\73\2"+
+        "\uffff\1\42\1\uffff\1\153\16\uffff\1\64\10\uffff\1\124\1\uffff\1"+
+        "\130\22\uffff\1\6\1\23\1\uffff\1\156\1\uffff\1\100\2\uffff\1\144"+
+        "\1\146\1\151\1\152\1\154\5\uffff\1\111\1\uffff\1\135\1\155\5\uffff"+
+        "\1\75\1\145\1\150\2\uffff\1\141\1\43\4\uffff\1\45\6\uffff\1\66\7"+
+        "\uffff\1\123\4\uffff\1\122\1\125\2\uffff\1\137\1\uffff\1\171\2\uffff"+
+        "\1\77\3\uffff\1\3\1\uffff\1\33\1\uffff\1\21\3\uffff\1\142\1\74\2"+
+        "\uffff\1\70\1\32\1\36\1\uffff\1\34\1\uffff\1\52\12\uffff\1\116\2"+
+        "\uffff\1\140\4\uffff\1\167\1\uffff\1\164\1\127\1\131\3\uffff\1\2"+
+        "\1\37\1\161\5\uffff\1\40\10\uffff\1\47\2\uffff\1\50\10\uffff\1\170"+
+        "\2\uffff\1\62\4\uffff\1\113\1\63\5\uffff\1\46\2\uffff\1\51\2\uffff"+
+        "\1\72\1\101\3\uffff\1\1\1\35\1\13\1\uffff\1\25\2\uffff\1\105\1\uffff"+
+        "\1\110\1\uffff\1\165\4\uffff\1\102\2\uffff\1\115\1\uffff\1\65\4"+
+        "\uffff\1\114\1\71\3\uffff\1\67\1\uffff\1\106\1\44\4\uffff\1\143"+
+        "\11\uffff\1\103\5\uffff\1\166\1\104\1\107";
     static final String DFA12_specialS =
-        "\1\0\64\uffff\1\2\1\1\u0255\uffff}>";
+        "\1\2\65\uffff\1\0\1\1\u0251\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\71\2\70\2\71\1\70\22\71\1\70\1\71\1\65\2\71\1\20\1\71\1"+
-            "\66\1\54\1\55\1\5\1\57\1\16\1\34\1\4\1\67\12\64\1\7\1\71\1\46"+
-            "\1\14\3\71\1\30\1\42\1\43\1\27\1\60\1\63\1\51\1\63\1\61\2\63"+
-            "\1\26\2\63\1\53\1\33\1\63\1\32\1\44\1\31\2\63\1\50\1\63\1\52"+
-            "\1\63\1\45\1\71\1\47\1\62\1\63\1\71\1\25\1\36\1\17\1\2\1\63"+
-            "\1\15\1\41\1\37\1\3\2\63\1\22\1\1\1\12\1\23\1\21\1\63\1\13\1"+
-            "\6\1\24\1\35\1\40\1\56\3\63\1\10\1\71\1\11\uff82\71",
+            "\11\71\2\70\2\71\1\70\22\71\1\70\1\71\1\66\2\71\1\20\1\71\1"+
+            "\67\1\54\1\55\1\5\1\57\1\16\1\34\1\4\1\60\12\65\1\7\1\71\1\46"+
+            "\1\14\3\71\1\30\1\42\1\43\1\27\1\61\1\64\1\51\1\64\1\62\2\64"+
+            "\1\26\2\64\1\53\1\33\1\64\1\32\1\44\1\31\2\64\1\50\1\64\1\52"+
+            "\1\64\1\45\1\71\1\47\1\63\1\64\1\71\1\25\1\36\1\17\1\2\1\64"+
+            "\1\15\1\41\1\37\1\3\2\64\1\22\1\1\1\12\1\23\1\21\1\64\1\13\1"+
+            "\6\1\24\1\35\1\40\1\56\3\64\1\10\1\71\1\11\uff82\71",
             "\1\73\3\uffff\1\72\3\uffff\1\74",
             "\1\101\3\uffff\1\77\3\uffff\1\76\5\uffff\1\102\7\uffff\1\100",
             "\1\104\11\uffff\1\103\1\105",
@@ -4269,112 +4297,111 @@ public class InternalXDiagramLexer extends Lexer {
             "",
             "",
             "",
-            "\1\117",
-            "\1\120\1\uffff\1\121\1\uffff\1\122",
+            "\1\120\15\uffff\1\117",
+            "\1\121\1\uffff\1\122\1\uffff\1\123",
             "",
-            "\1\127\7\uffff\1\124\5\uffff\1\126\2\uffff\1\125",
+            "\1\130\7\uffff\1\125\5\uffff\1\127\2\uffff\1\126",
             "",
-            "\1\132\11\uffff\1\131",
+            "\1\133\11\uffff\1\132",
             "",
-            "\1\135\2\uffff\1\136\10\uffff\1\134",
-            "\1\141\3\uffff\1\142\1\140\2\uffff\1\137",
-            "\1\143\17\uffff\1\144\2\uffff\1\145\1\146",
-            "\1\147\3\uffff\1\150\11\uffff\1\151\2\uffff\1\152",
-            "\1\154\4\uffff\1\155\1\153",
-            "\1\156\7\uffff\1\157",
-            "\1\160",
+            "\1\136\2\uffff\1\137\10\uffff\1\135",
+            "\1\142\3\uffff\1\143\1\141\2\uffff\1\140",
+            "\1\144\17\uffff\1\145\2\uffff\1\146\1\147",
+            "\1\150\3\uffff\1\151\11\uffff\1\152\2\uffff\1\153",
+            "\1\155\4\uffff\1\156\1\154",
+            "\1\157\7\uffff\1\160",
             "\1\161",
             "\1\162",
-            "\1\164\1\uffff\1\165\35\uffff\1\166\2\uffff\1\163\6\uffff\1"+
-            "\167",
-            "\1\170",
+            "\1\163",
+            "\1\165\1\uffff\1\166\35\uffff\1\167\2\uffff\1\164\6\uffff\1"+
+            "\170",
             "\1\171",
-            "\1\173\2\uffff\1\174",
-            "\1\176\15\uffff\1\175",
-            "\1\u0080\11\uffff\1\177",
-            "\1\u0081",
+            "\1\172",
+            "\1\174\2\uffff\1\175",
+            "\1\177\15\uffff\1\176",
+            "\1\u0081\11\uffff\1\u0080",
             "\1\u0082",
-            "\1\u0084\37\uffff\1\u0083",
-            "\1\u0086\17\uffff\1\u0087\5\uffff\1\u0085",
-            "\1\u0088\7\uffff\1\u0089",
+            "\1\u0083",
+            "\1\u0085\37\uffff\1\u0084",
+            "\1\u0087\17\uffff\1\u0088\5\uffff\1\u0086",
+            "\1\u0089\7\uffff\1\u008a",
             "",
-            "\1\u008b",
+            "\1\u008c",
             "",
-            "\1\u008d",
             "\1\u008e",
             "\1\u008f",
             "\1\u0090",
+            "\1\u0091",
             "",
             "",
-            "\1\u0093",
+            "\1\u0094",
             "",
-            "\1\u0095",
-            "\1\u0096",
+            "\1\u0096\4\uffff\1\u0097",
+            "\1\u0099",
+            "\1\u009a",
             "\32\75\4\uffff\1\75\1\uffff\32\75",
             "",
             "",
-            "\0\u0098",
-            "\0\u0098",
-            "\1\u0099\4\uffff\1\u009a",
+            "\0\u009c",
+            "\0\u009c",
             "",
             "",
-            "\1\u009c",
-            "\1\u009d\4\uffff\1\u009e",
-            "\1\u009f",
-            "",
-            "\1\u00a0",
+            "\1\u009e",
+            "\1\u009f\4\uffff\1\u00a0",
             "\1\u00a1",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "",
+            "\1\u00a2",
             "\1\u00a3",
-            "\1\u00a4",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u00a5",
             "\1\u00a6",
             "\1\u00a7",
+            "\1\u00a8",
+            "\1\u00a9",
             "",
             "",
-            "\1\u00a9\27\uffff\1\u00a8",
-            "\1\u00aa",
-            "\1\u00ac\10\uffff\1\u00ab",
-            "\1\u00ad",
-            "",
-            "",
-            "",
-            "\1\u00ae",
+            "\1\u00ab\27\uffff\1\u00aa",
+            "\1\u00ac",
+            "\1\u00ae\10\uffff\1\u00ad",
             "\1\u00af",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "",
+            "",
+            "",
+            "\1\u00b0",
             "\1\u00b1",
-            "",
             "\1\u00b2",
-            "\1\u00b3",
-            "\1\u00b5\3\uffff\1\u00b4",
-            "\1\u00b6",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u00b4",
             "",
-            "\1\u00b7\3\uffff\1\u00b8",
+            "\1\u00b5",
+            "\1\u00b6",
+            "\1\u00b8\3\uffff\1\u00b7",
             "\1\u00b9",
             "",
+            "\1\u00ba\3\uffff\1\u00bb",
+            "\1\u00bc",
+            "",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u00bb",
-            "\1\u00bc\11\uffff\1\u00bd",
             "\1\u00be",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u00c0",
+            "\1\u00bf\11\uffff\1\u00c0",
             "\1\u00c1",
-            "\1\u00c2",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u00c3",
             "\1\u00c4",
             "\1\u00c5",
             "\1\u00c6",
             "\1\u00c7",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\17\75\1\u00c8\12"+
+            "\1\u00c8",
+            "\1\u00c9",
+            "\1\u00ca",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\17\75\1\u00cb\12"+
             "\75",
-            "\1\u00ca\23\uffff\1\u00cb",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\23\75\1\u00cc\6\75",
-            "\1\u00ce\3\uffff\1\u00cf",
+            "\1\u00cd\23\uffff\1\u00ce",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u00d1",
-            "\1\u00d2\5\uffff\1\u00d3",
-            "\1\u00d4",
-            "\1\u00d5",
+            "\1\u00d0\3\uffff\1\u00d1",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u00d3",
+            "\1\u00d4\5\uffff\1\u00d5",
             "\1\u00d6",
             "\1\u00d7",
             "\1\u00d8",
@@ -4382,109 +4409,110 @@ public class InternalXDiagramLexer extends Lexer {
             "\1\u00da",
             "\1\u00db",
             "\1\u00dc",
+            "\1\u00dd",
+            "\1\u00de",
             "",
             "",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u00de",
-            "\1\u00e0\1\uffff\1\u00df",
-            "\1\u00e1",
-            "\1\u00e2",
+            "\1\u00e0",
+            "\1\u00e2\1\uffff\1\u00e1",
             "\1\u00e3",
             "\1\u00e4",
             "\1\u00e5",
             "\1\u00e6",
-            "\1\u00e7\23\uffff\1\u00e8",
-            "\1\u00e9",
-            "\1\u00ea",
+            "\1\u00e7",
+            "\1\u00e8",
+            "\1\u00e9\23\uffff\1\u00ea",
             "\1\u00eb",
             "\1\u00ec",
             "\1\u00ed",
-            "",
-            "",
-            "",
             "\1\u00ee",
             "\1\u00ef",
+            "",
+            "",
+            "",
             "\1\u00f0",
             "\1\u00f1",
-            "",
-            "",
             "\1\u00f2",
-            "",
             "\1\u00f3",
-            "\1\u00f4",
             "",
+            "",
+            "\1\u00f4",
             "",
             "",
             "",
             "",
             "\1\u00f5",
             "\1\u00f6",
+            "",
+            "",
+            "",
             "\1\u00f7",
             "\1\u00f8",
             "\1\u00f9",
             "\1\u00fa",
-            "",
             "\1\u00fb",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u00fc",
+            "",
             "\1\u00fd",
-            "\1\u00fe",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u00ff",
             "\1\u0100",
             "\1\u0101",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u0102",
             "\1\u0103",
-            "\1\u0104",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u0105",
             "\1\u0106",
             "\1\u0107",
-            "",
             "\1\u0108",
             "\1\u0109",
             "\1\u010a",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\4\75\1\u010b\25\75",
-            "\1\u010d",
-            "\1\u010e",
-            "\1\u0110\5\uffff\1\u010f",
-            "\1\u0111",
-            "\1\u0112",
             "",
-            "\1\u0113",
+            "\1\u010b",
+            "\1\u010c",
+            "\1\u010d",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\4\75\1\u010e\25\75",
+            "\1\u0110",
+            "\1\u0111",
+            "\1\u0113\5\uffff\1\u0112",
             "\1\u0114",
             "\1\u0115",
-            "\1\u0117\5\uffff\1\u0116",
             "",
+            "\1\u0116",
+            "\1\u0117",
             "\1\u0118",
-            "\1\u0119",
-            "\1\u011a",
+            "\1\u011a\5\uffff\1\u0119",
+            "",
             "\1\u011b",
             "\1\u011c",
             "\1\u011d",
             "\1\u011e",
             "\1\u011f",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "",
+            "\1\u0120",
             "\1\u0121",
             "\1\u0122",
-            "\1\u0123",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "",
             "\1\u0124",
             "\1\u0125",
             "",
             "\1\u0126",
             "\1\u0127",
+            "",
             "\1\u0128",
             "\1\u0129",
             "\1\u012a",
             "\1\u012b",
             "\1\u012c",
+            "\1\u012d",
+            "\1\u012e",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u012f",
-            "\1\u0130",
             "\1\u0131",
-            "",
             "\1\u0132",
             "\1\u0133",
+            "",
             "\1\u0134",
             "\1\u0135",
             "\1\u0136",
@@ -4507,55 +4535,55 @@ public class InternalXDiagramLexer extends Lexer {
             "\1\u0147",
             "\1\u0148",
             "\1\u0149",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u014a",
             "\1\u014b",
-            "\1\u014c",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u014d",
             "\1\u014e",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\3\75\1\u014f\26\75",
+            "\1\u014f",
+            "\1\u0150",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\3\75\1\u0151\26\75",
             "",
-            "\1\u0151",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u0153",
-            "\1\u0154",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u0155",
-            "",
             "\1\u0156",
             "\1\u0157",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u015a",
-            "\1\u015b",
-            "\1\u015c",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u015e",
             "",
+            "\1\u0158",
+            "\1\u0159",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u015d",
+            "\1\u015e",
             "\1\u015f",
-            "\1\u0160",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u0161",
+            "",
             "\1\u0162",
             "\1\u0163",
             "\1\u0164",
             "\1\u0165",
             "\1\u0166",
             "\1\u0167",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u0168",
             "\1\u0169",
             "\1\u016a",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u016c",
             "\1\u016d",
-            "\1\u016e",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u016f",
             "\1\u0170",
-            "\1\u0171\2\uffff\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32"+
+            "\1\u0171",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u0173",
+            "\1\u0174\2\uffff\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32"+
             "\75",
             "",
-            "\1\u0173",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u0175",
             "\1\u0176",
-            "\1\u0177",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u0178",
             "\1\u0179",
             "\1\u017a",
@@ -4563,26 +4591,26 @@ public class InternalXDiagramLexer extends Lexer {
             "\1\u017c",
             "\1\u017d",
             "\1\u017e",
-            "",
-            "",
             "\1\u017f",
             "\1\u0180",
-            "\1\u0181\4\uffff\1\u0182",
-            "\1\u0183",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "",
+            "",
+            "\1\u0181",
+            "\1\u0182",
+            "\1\u0183\4\uffff\1\u0184",
             "\1\u0185",
-            "\1\u0186",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u0187",
             "\1\u0188",
             "\1\u0189",
             "\1\u018a",
             "\1\u018b",
             "\1\u018c",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u018d",
             "\1\u018e",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u0190",
-            "\1\u0191",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u0192",
             "\1\u0193",
             "\1\u0194",
@@ -4592,125 +4620,126 @@ public class InternalXDiagramLexer extends Lexer {
             "\1\u0198",
             "\1\u0199",
             "\1\u019a",
-            "",
             "\1\u019b",
             "\1\u019c",
+            "",
             "\1\u019d",
             "\1\u019e",
             "\1\u019f",
-            "",
             "\1\u01a0",
-            "",
             "\1\u01a1",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u01a4",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "",
+            "\1\u01a2",
             "",
+            "\1\u01a3",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u01a6",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u01a8",
             "",
-            "\1\u01a9",
-            "\1\u01ad\6\uffff\1\u01ac\4\uffff\1\u01ab\4\uffff\1\u01aa",
+            "",
+            "",
+            "\1\u01a8",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u01af",
-            "\1\u01b0",
+            "\1\u01aa",
+            "",
+            "\1\u01ab",
+            "\1\u01af\6\uffff\1\u01ae\4\uffff\1\u01ad\4\uffff\1\u01ac",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u01b1",
             "\1\u01b2",
             "\1\u01b3",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u01b4",
             "\1\u01b5",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u01b7",
             "",
-            "\1\u01b7\3\uffff\1\u01b6",
-            "\1\u01b8",
-            "",
-            "\1\u01b9",
+            "\1\u01b9\3\uffff\1\u01b8",
             "\1\u01ba",
+            "",
             "\1\u01bb",
-            "",
             "\1\u01bc",
-            "\1\u01bd\3\uffff\1\u01bf\20\uffff\1\u01be",
+            "\1\u01bd",
             "",
-            "\1\u01c0",
+            "\1\u01be",
+            "\1\u01bf\3\uffff\1\u01c1\20\uffff\1\u01c0",
             "",
-            "\1\u01c1",
             "\1\u01c2",
+            "",
+            "\1\u01c3",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u01c5\21\uffff\1\u01c6",
-            "\1\u01c7",
+            "\1\u01c6\21\uffff\1\u01c7",
             "\1\u01c8",
+            "\1\u01c9",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u01ca",
             "\1\u01cb",
             "\1\u01cc",
             "\1\u01cd",
             "\1\u01ce",
             "\1\u01cf",
+            "\1\u01d0",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "",
-            "\1\u01d1",
             "\1\u01d2",
             "\1\u01d3",
             "\1\u01d4",
             "\1\u01d5",
             "\1\u01d6",
             "\1\u01d7",
+            "\1\u01d8",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "",
-            "\1\u01d9",
             "",
             "\1\u01da",
+            "",
             "\1\u01db",
             "\1\u01dc",
+            "\1\u01dd",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u01df",
             "\1\u01e0",
+            "\1\u01e1",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u01e2",
+            "\1\u01e3",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u01e4",
             "\1\u01e5",
+            "\1\u01e6",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u01e7",
             "\1\u01e8",
             "\1\u01e9",
+            "\1\u01ea",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u01eb",
+            "\1\u01ec",
             "",
-            "",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "",
-            "\1\u01ed",
             "",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u01ef",
             "",
+            "\1\u01ee",
             "",
-            "",
-            "",
-            "",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u01f0",
-            "\1\u01f1",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u01f4",
             "",
+            "",
+            "",
+            "",
+            "",
+            "\1\u01f1",
+            "\1\u01f2",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u01f5",
             "",
+            "\1\u01f6",
+            "",
             "",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u01f9",
+            "\1\u01fa",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "",
             "",
             "",
-            "\1\u01fb",
             "\1\u01fc",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "",
@@ -4770,144 +4799,140 @@ public class InternalXDiagramLexer extends Lexer {
             "\1\u0222",
             "",
             "\1\u0223",
-            "\1\u0224",
             "",
+            "\1\u0224",
             "\1\u0225",
             "\1\u0226",
             "\1\u0227",
             "\1\u0228",
-            "\1\u0229",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u022a",
             "\1\u022b",
-            "\1\u022c",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u022d",
+            "",
             "\1\u022e",
-            "",
             "\1\u022f",
-            "\1\u0230",
             "",
+            "\1\u0230",
             "\1\u0231",
             "\1\u0232",
             "\1\u0233",
+            "",
             "\1\u0234",
             "",
-            "\1\u0235",
-            "",
             "",
             "",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u0236",
             "\1\u0237",
-            "\1\u0238",
             "",
             "",
             "",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u0239",
             "\1\u023a",
             "\1\u023b",
             "\1\u023c",
-            "\1\u023d",
             "",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u023f",
             "\1\u0240",
             "\1\u0241",
             "\1\u0242",
             "\1\u0243",
-            "\1\u0244",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "",
             "\1\u0245",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u0246",
             "",
-            "\1\u0247",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u0248",
-            "",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u024a",
-            "\1\u024b",
+            "\1\u0249",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u024c",
+            "\1\u024d",
             "\1\u024e",
-            "\1\u024f",
-            "\1\u0250",
             "",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u0252",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u0254",
+            "",
+            "",
+            "\1\u0255",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u0256",
-            "",
-            "",
             "\1\u0257",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u0259",
+            "",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u025a",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u025b",
+            "",
             "\1\u025c",
+            "\1\u025d",
             "",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u025e",
             "",
-            "\1\u025f",
+            "\12\75\7\uffff\6\75\1\u025e\23\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u0260",
-            "",
-            "",
-            "\12\75\7\uffff\6\75\1\u0261\23\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u0263",
-            "\1\u0264",
+            "\1\u0261",
             "",
             "",
             "",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\22\75\1\u0266\7\75",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\22\75\1\u0263\7\75",
+            "\1\u0265",
+            "",
+            "\1\u0266",
+            "",
+            "\1\u0267",
+            "",
             "\1\u0268",
-            "",
-            "",
-            "\1\u0269",
-            "",
-            "\1\u026a",
-            "",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u026b",
+            "",
+            "\1\u026c",
+            "\1\u026d",
+            "",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\1\u026e",
             "",
             "\1\u026f",
-            "\1\u0270",
-            "",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u0272",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "",
+            "",
+            "\1\u0273",
+            "\1\u0274",
             "\1\u0275",
             "",
-            "",
-            "\1\u0276",
-            "\1\u0277",
-            "\1\u0278",
-            "",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "",
             "",
+            "\1\u0277",
+            "\1\u0278",
+            "\1\u0279",
             "\1\u027a",
+            "",
             "\1\u027b",
             "\1\u027c",
             "\1\u027d",
-            "",
             "\1\u027e",
             "\1\u027f",
-            "\1\u0280",
+            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\1\u0281",
             "\1\u0282",
-            "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
+            "\1\u0283",
+            "",
             "\1\u0284",
             "\1\u0285",
-            "\1\u0286",
-            "",
-            "\1\u0287",
-            "\1\u0288",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
             "\12\75\7\uffff\32\75\4\uffff\1\75\1\uffff\32\75",
@@ -4946,13 +4971,33 @@ public class InternalXDiagramLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA12_54 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_54>='\u0000' && LA12_54<='\uFFFF')) ) {s = 156;}
+
+                        else s = 57;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA12_55 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_55>='\u0000' && LA12_55<='\uFFFF')) ) {s = 156;}
+
+                        else s = 57;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -5050,45 +5095,25 @@ public class InternalXDiagramLexer extends Lexer {
 
                         else if ( (LA12_0=='+') ) {s = 47;}
 
-                        else if ( (LA12_0=='E') ) {s = 48;}
+                        else if ( (LA12_0=='/') ) {s = 48;}
 
-                        else if ( (LA12_0=='I') ) {s = 49;}
+                        else if ( (LA12_0=='E') ) {s = 49;}
 
-                        else if ( (LA12_0=='^') ) {s = 50;}
+                        else if ( (LA12_0=='I') ) {s = 50;}
 
-                        else if ( (LA12_0=='F'||LA12_0=='H'||(LA12_0>='J' && LA12_0<='K')||(LA12_0>='M' && LA12_0<='N')||LA12_0=='Q'||(LA12_0>='U' && LA12_0<='V')||LA12_0=='X'||LA12_0=='Z'||LA12_0=='_'||LA12_0=='e'||(LA12_0>='j' && LA12_0<='k')||LA12_0=='q'||(LA12_0>='x' && LA12_0<='z')) ) {s = 51;}
+                        else if ( (LA12_0=='^') ) {s = 51;}
 
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 52;}
+                        else if ( (LA12_0=='F'||LA12_0=='H'||(LA12_0>='J' && LA12_0<='K')||(LA12_0>='M' && LA12_0<='N')||LA12_0=='Q'||(LA12_0>='U' && LA12_0<='V')||LA12_0=='X'||LA12_0=='Z'||LA12_0=='_'||LA12_0=='e'||(LA12_0>='j' && LA12_0<='k')||LA12_0=='q'||(LA12_0>='x' && LA12_0<='z')) ) {s = 52;}
 
-                        else if ( (LA12_0=='\"') ) {s = 53;}
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 53;}
 
-                        else if ( (LA12_0=='\'') ) {s = 54;}
+                        else if ( (LA12_0=='\"') ) {s = 54;}
 
-                        else if ( (LA12_0=='/') ) {s = 55;}
+                        else if ( (LA12_0=='\'') ) {s = 55;}
 
                         else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 56;}
 
                         else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='$')||LA12_0=='&'||LA12_0==';'||(LA12_0>='>' && LA12_0<='@')||LA12_0=='\\'||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 57;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA12_54 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_54>='\u0000' && LA12_54<='\uFFFF')) ) {s = 152;}
-
-                        else s = 57;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA12_53 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_53>='\u0000' && LA12_53<='\uFFFF')) ) {s = 152;}
-
-                        else s = 57;
 
                         if ( s>=0 ) return s;
                         break;

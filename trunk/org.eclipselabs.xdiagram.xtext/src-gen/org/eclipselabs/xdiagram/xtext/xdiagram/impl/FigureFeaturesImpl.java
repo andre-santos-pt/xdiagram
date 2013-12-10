@@ -20,7 +20,6 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.AlignFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.BooleanFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.CenterFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.CustomFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures;
 import org.eclipselabs.xdiagram.xtext.xdiagram.GradientFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature;
@@ -49,7 +48,6 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.FigureFeaturesImpl#getIntegerfeatures <em>Integerfeatures</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.FigureFeaturesImpl#getBooleanfeatures <em>Booleanfeatures</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.FigureFeaturesImpl#getStringfeatures <em>Stringfeatures</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.FigureFeaturesImpl#getCustomfeatures <em>Customfeatures</em>}</li>
  * </ul>
  * </p>
  *
@@ -166,16 +164,6 @@ public class FigureFeaturesImpl extends MinimalEObjectImpl.Container implements 
    * @ordered
    */
   protected EList<StringFeature> stringfeatures;
-
-  /**
-   * The cached value of the '{@link #getCustomfeatures() <em>Customfeatures</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getCustomfeatures()
-   * @generated
-   * @ordered
-   */
-  protected EList<CustomFeature> customfeatures;
 
   /**
    * <!-- begin-user-doc -->
@@ -357,20 +345,6 @@ public class FigureFeaturesImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<CustomFeature> getCustomfeatures()
-  {
-    if (customfeatures == null)
-    {
-      customfeatures = new EObjectContainmentEList<CustomFeature>(CustomFeature.class, this, XdiagramPackage.FIGURE_FEATURES__CUSTOMFEATURES);
-    }
-    return customfeatures;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -398,8 +372,6 @@ public class FigureFeaturesImpl extends MinimalEObjectImpl.Container implements 
         return ((InternalEList<?>)getBooleanfeatures()).basicRemove(otherEnd, msgs);
       case XdiagramPackage.FIGURE_FEATURES__STRINGFEATURES:
         return ((InternalEList<?>)getStringfeatures()).basicRemove(otherEnd, msgs);
-      case XdiagramPackage.FIGURE_FEATURES__CUSTOMFEATURES:
-        return ((InternalEList<?>)getCustomfeatures()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -436,8 +408,6 @@ public class FigureFeaturesImpl extends MinimalEObjectImpl.Container implements 
         return getBooleanfeatures();
       case XdiagramPackage.FIGURE_FEATURES__STRINGFEATURES:
         return getStringfeatures();
-      case XdiagramPackage.FIGURE_FEATURES__CUSTOMFEATURES:
-        return getCustomfeatures();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -497,10 +467,6 @@ public class FigureFeaturesImpl extends MinimalEObjectImpl.Container implements 
         getStringfeatures().clear();
         getStringfeatures().addAll((Collection<? extends StringFeature>)newValue);
         return;
-      case XdiagramPackage.FIGURE_FEATURES__CUSTOMFEATURES:
-        getCustomfeatures().clear();
-        getCustomfeatures().addAll((Collection<? extends CustomFeature>)newValue);
-        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -548,9 +514,6 @@ public class FigureFeaturesImpl extends MinimalEObjectImpl.Container implements 
       case XdiagramPackage.FIGURE_FEATURES__STRINGFEATURES:
         getStringfeatures().clear();
         return;
-      case XdiagramPackage.FIGURE_FEATURES__CUSTOMFEATURES:
-        getCustomfeatures().clear();
-        return;
     }
     super.eUnset(featureID);
   }
@@ -587,8 +550,6 @@ public class FigureFeaturesImpl extends MinimalEObjectImpl.Container implements 
         return booleanfeatures != null && !booleanfeatures.isEmpty();
       case XdiagramPackage.FIGURE_FEATURES__STRINGFEATURES:
         return stringfeatures != null && !stringfeatures.isEmpty();
-      case XdiagramPackage.FIGURE_FEATURES__CUSTOMFEATURES:
-        return customfeatures != null && !customfeatures.isEmpty();
     }
     return super.eIsSet(featureID);
   }

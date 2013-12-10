@@ -93,10 +93,18 @@ public class XdiagramSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case XdiagramPackage.DIAGRAM_ELEMENT:
+      {
+        DiagramElement diagramElement = (DiagramElement)theEObject;
+        T result = caseDiagramElement(diagramElement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case XdiagramPackage.NODE:
       {
         Node node = (Node)theEObject;
         T result = caseNode(node);
+        if (result == null) result = caseDiagramElement(node);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -125,6 +133,7 @@ public class XdiagramSwitch<T> extends Switch<T>
       {
         Link link = (Link)theEObject;
         T result = caseLink(link);
+        if (result == null) result = caseDiagramElement(link);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -167,13 +176,6 @@ public class XdiagramSwitch<T> extends Switch<T>
       {
         FigureFeatures figureFeatures = (FigureFeatures)theEObject;
         T result = caseFigureFeatures(figureFeatures);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case XdiagramPackage.CUSTOM_FEATURE:
-      {
-        CustomFeature customFeature = (CustomFeature)theEObject;
-        T result = caseCustomFeature(customFeature);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -298,6 +300,13 @@ public class XdiagramSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case XdiagramPackage.ATTRIBUTE_REFERENCE:
+      {
+        AttributeReference attributeReference = (AttributeReference)theEObject;
+        T result = caseAttributeReference(attributeReference);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -346,6 +355,22 @@ public class XdiagramSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseStyle(Style object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDiagramElement(DiagramElement object)
   {
     return null;
   }
@@ -522,22 +547,6 @@ public class XdiagramSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFigureFeatures(FigureFeatures object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Custom Feature</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Custom Feature</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseCustomFeature(CustomFeature object)
   {
     return null;
   }
@@ -810,6 +819,22 @@ public class XdiagramSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAtributeValue(AtributeValue object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Attribute Reference</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Attribute Reference</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAttributeReference(AttributeReference object)
   {
     return null;
   }

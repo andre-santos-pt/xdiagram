@@ -13,12 +13,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.eclipselabs.xdiagram.xtext.xdiagram.Attribute;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Node;
 import org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor;
 import org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer;
@@ -32,11 +30,7 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeImpl#getModelClass <em>Model Class</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeImpl#isResizable <em>Resizable</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeImpl#getStyle <em>Style</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeImpl#getIcon <em>Icon</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeImpl#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeImpl#getFigures <em>Figures</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeImpl#getContainers <em>Containers</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeImpl#getAnchors <em>Anchors</em>}</li>
@@ -45,18 +39,8 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
  *
  * @generated
  */
-public class NodeImpl extends MinimalEObjectImpl.Container implements Node
+public class NodeImpl extends DiagramElementImpl implements Node
 {
-  /**
-   * The cached value of the '{@link #getModelClass() <em>Model Class</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getModelClass()
-   * @generated
-   * @ordered
-   */
-  protected EClass modelClass;
-
   /**
    * The default value of the '{@link #isResizable() <em>Resizable</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -76,56 +60,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * @ordered
    */
   protected boolean resizable = RESIZABLE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getStyle() <em>Style</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getStyle()
-   * @generated
-   * @ordered
-   */
-  protected static final String STYLE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getStyle() <em>Style</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getStyle()
-   * @generated
-   * @ordered
-   */
-  protected String style = STYLE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getIcon() <em>Icon</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getIcon()
-   * @generated
-   * @ordered
-   */
-  protected static final String ICON_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getIcon() <em>Icon</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getIcon()
-   * @generated
-   * @ordered
-   */
-  protected String icon = ICON_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAttributes()
-   * @generated
-   * @ordered
-   */
-  protected EList<Attribute> attributes;
 
   /**
    * The cached value of the '{@link #getFigures() <em>Figures</em>}' containment reference list.
@@ -183,49 +117,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getModelClass()
-  {
-    if (modelClass != null && modelClass.eIsProxy())
-    {
-      InternalEObject oldModelClass = (InternalEObject)modelClass;
-      modelClass = (EClass)eResolveProxy(oldModelClass);
-      if (modelClass != oldModelClass)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, XdiagramPackage.NODE__MODEL_CLASS, oldModelClass, modelClass));
-      }
-    }
-    return modelClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass basicGetModelClass()
-  {
-    return modelClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setModelClass(EClass newModelClass)
-  {
-    EClass oldModelClass = modelClass;
-    modelClass = newModelClass;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.NODE__MODEL_CLASS, oldModelClass, modelClass));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public boolean isResizable()
   {
     return resizable;
@@ -242,66 +133,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     resizable = newResizable;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.NODE__RESIZABLE, oldResizable, resizable));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getStyle()
-  {
-    return style;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setStyle(String newStyle)
-  {
-    String oldStyle = style;
-    style = newStyle;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.NODE__STYLE, oldStyle, style));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getIcon()
-  {
-    return icon;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setIcon(String newIcon)
-  {
-    String oldIcon = icon;
-    icon = newIcon;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.NODE__ICON, oldIcon, icon));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Attribute> getAttributes()
-  {
-    if (attributes == null)
-    {
-      attributes = new EObjectContainmentEList<Attribute>(Attribute.class, this, XdiagramPackage.NODE__ATTRIBUTES);
-    }
-    return attributes;
   }
 
   /**
@@ -356,8 +187,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
   {
     switch (featureID)
     {
-      case XdiagramPackage.NODE__ATTRIBUTES:
-        return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
       case XdiagramPackage.NODE__FIGURES:
         return ((InternalEList<?>)getFigures()).basicRemove(otherEnd, msgs);
       case XdiagramPackage.NODE__CONTAINERS:
@@ -378,17 +207,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
   {
     switch (featureID)
     {
-      case XdiagramPackage.NODE__MODEL_CLASS:
-        if (resolve) return getModelClass();
-        return basicGetModelClass();
       case XdiagramPackage.NODE__RESIZABLE:
         return isResizable();
-      case XdiagramPackage.NODE__STYLE:
-        return getStyle();
-      case XdiagramPackage.NODE__ICON:
-        return getIcon();
-      case XdiagramPackage.NODE__ATTRIBUTES:
-        return getAttributes();
       case XdiagramPackage.NODE__FIGURES:
         return getFigures();
       case XdiagramPackage.NODE__CONTAINERS:
@@ -410,21 +230,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
   {
     switch (featureID)
     {
-      case XdiagramPackage.NODE__MODEL_CLASS:
-        setModelClass((EClass)newValue);
-        return;
       case XdiagramPackage.NODE__RESIZABLE:
         setResizable((Boolean)newValue);
-        return;
-      case XdiagramPackage.NODE__STYLE:
-        setStyle((String)newValue);
-        return;
-      case XdiagramPackage.NODE__ICON:
-        setIcon((String)newValue);
-        return;
-      case XdiagramPackage.NODE__ATTRIBUTES:
-        getAttributes().clear();
-        getAttributes().addAll((Collection<? extends Attribute>)newValue);
         return;
       case XdiagramPackage.NODE__FIGURES:
         getFigures().clear();
@@ -452,20 +259,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
   {
     switch (featureID)
     {
-      case XdiagramPackage.NODE__MODEL_CLASS:
-        setModelClass((EClass)null);
-        return;
       case XdiagramPackage.NODE__RESIZABLE:
         setResizable(RESIZABLE_EDEFAULT);
-        return;
-      case XdiagramPackage.NODE__STYLE:
-        setStyle(STYLE_EDEFAULT);
-        return;
-      case XdiagramPackage.NODE__ICON:
-        setIcon(ICON_EDEFAULT);
-        return;
-      case XdiagramPackage.NODE__ATTRIBUTES:
-        getAttributes().clear();
         return;
       case XdiagramPackage.NODE__FIGURES:
         getFigures().clear();
@@ -490,16 +285,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
   {
     switch (featureID)
     {
-      case XdiagramPackage.NODE__MODEL_CLASS:
-        return modelClass != null;
       case XdiagramPackage.NODE__RESIZABLE:
         return resizable != RESIZABLE_EDEFAULT;
-      case XdiagramPackage.NODE__STYLE:
-        return STYLE_EDEFAULT == null ? style != null : !STYLE_EDEFAULT.equals(style);
-      case XdiagramPackage.NODE__ICON:
-        return ICON_EDEFAULT == null ? icon != null : !ICON_EDEFAULT.equals(icon);
-      case XdiagramPackage.NODE__ATTRIBUTES:
-        return attributes != null && !attributes.isEmpty();
       case XdiagramPackage.NODE__FIGURES:
         return figures != null && !figures.isEmpty();
       case XdiagramPackage.NODE__CONTAINERS:
@@ -523,10 +310,6 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (resizable: ");
     result.append(resizable);
-    result.append(", style: ");
-    result.append(style);
-    result.append(", icon: ");
-    result.append(icon);
     result.append(')');
     return result.toString();
   }

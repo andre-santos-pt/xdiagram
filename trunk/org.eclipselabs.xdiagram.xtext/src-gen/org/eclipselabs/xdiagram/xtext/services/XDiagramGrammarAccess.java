@@ -37,20 +37,24 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNodesNodeParserRuleCall_6_0_0 = (RuleCall)cNodesAssignment_6_0.eContents().get(0);
 		private final Assignment cLinksAssignment_6_1 = (Assignment)cAlternatives_6.eContents().get(1);
 		private final RuleCall cLinksLinkParserRuleCall_6_1_0 = (RuleCall)cLinksAssignment_6_1.eContents().get(0);
+		private final Assignment cAttrAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cAttrAttributeReferenceParserRuleCall_7_0 = (RuleCall)cAttrAssignment_7.eContents().get(0);
 		
-		////	'}'
-		//
 		//XDiagram:
 		//	"metamodel" importURI=STRING imports+=ImportStatement styles+=Style* "diagram"
 		//	modelClass=[ecore::EClass|QualifiedName] (nodes+=Node //    '{'
 		//
-		//	| links+=Link)+;
+		//	| links+=Link)+ //	'}'
+		//
+		//	attr+=AttributeReference+;
 		public ParserRule getRule() { return rule; }
 
 		//"metamodel" importURI=STRING imports+=ImportStatement styles+=Style* "diagram" modelClass=[ecore::EClass|QualifiedName]
 		//(nodes+=Node //    '{'
 		//
-		//| links+=Link)+
+		//| links+=Link)+ //	'}'
+		//
+		//attr+=AttributeReference+
 		public Group getGroup() { return cGroup; }
 
 		//"metamodel"
@@ -102,6 +106,14 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Link
 		public RuleCall getLinksLinkParserRuleCall_6_1_0() { return cLinksLinkParserRuleCall_6_1_0; }
+
+		////	'}'
+		//
+		//attr+=AttributeReference+
+		public Assignment getAttrAssignment_7() { return cAttrAssignment_7; }
+
+		//AttributeReference
+		public RuleCall getAttrAttributeReferenceParserRuleCall_7_0() { return cAttrAttributeReferenceParserRuleCall_7_0; }
 	}
 
 	public class ImportStatementElements extends AbstractParserRuleElementFinder {
@@ -238,6 +250,28 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
+	public class DiagramElementElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DiagramElement");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cNodeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cLinkParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//// TODO: common: text / icon / tooltip
+		//
+		//DiagramElement:
+		//	Node | Link;
+		public ParserRule getRule() { return rule; }
+
+		//Node | Link
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//Node
+		public RuleCall getNodeParserRuleCall_0() { return cNodeParserRuleCall_0; }
+
+		//Link
+		public RuleCall getLinkParserRuleCall_1() { return cLinkParserRuleCall_1; }
+	}
+
 	public class NodeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Node");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -256,27 +290,35 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cIconKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
 		private final Assignment cIconAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
 		private final RuleCall cIconIDTerminalRuleCall_5_1_0 = (RuleCall)cIconAssignment_5_1.eContents().get(0);
-		private final Assignment cAttributesAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cAttributesAttributeParserRuleCall_6_0 = (RuleCall)cAttributesAssignment_6.eContents().get(0);
-		private final Assignment cFiguresAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cFiguresNodeFigureParserRuleCall_7_0 = (RuleCall)cFiguresAssignment_7.eContents().get(0);
-		private final Assignment cContainersAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cContainersNodeContainerParserRuleCall_8_0 = (RuleCall)cContainersAssignment_8.eContents().get(0);
-		private final Assignment cAnchorsAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cAnchorsNodeAnchorParserRuleCall_9_0 = (RuleCall)cAnchorsAssignment_9.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cNameKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cNameAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cNameSTRINGTerminalRuleCall_6_1_0 = (RuleCall)cNameAssignment_6_1.eContents().get(0);
+		private final Assignment cAttributesAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cAttributesAttributeParserRuleCall_7_0 = (RuleCall)cAttributesAssignment_7.eContents().get(0);
+		private final Assignment cFiguresAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cFiguresNodeFigureParserRuleCall_8_0 = (RuleCall)cFiguresAssignment_8.eContents().get(0);
+		private final Assignment cContainersAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cContainersNodeContainerParserRuleCall_9_0 = (RuleCall)cContainersAssignment_9.eContents().get(0);
+		private final Assignment cAnchorsAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cAnchorsNodeAnchorParserRuleCall_10_0 = (RuleCall)cAnchorsAssignment_10.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//// resizable default?
 		//
 		//// TODO text / icon
 		//
+		//// TODO validation: unique nodes
+		//
+		//// notation inheritance?
+		//
 		//Node:
 		//	"node" modelClass=[ecore::EClass|QualifiedName] "{" resizable?="resizable"? ("style" style=ID)? ("icon" icon=ID)?
-		//	attributes+=Attribute* figures+=NodeFigure* containers+=NodeContainer* anchors+=NodeAnchor* "}";
+		//	("name" name=STRING)? attributes+=Attribute* figures+=NodeFigure* containers+=NodeContainer* anchors+=NodeAnchor* "}";
 		public ParserRule getRule() { return rule; }
 
 		//"node" modelClass=[ecore::EClass|QualifiedName] "{" resizable?="resizable"? ("style" style=ID)? ("icon" icon=ID)?
-		//attributes+=Attribute* figures+=NodeFigure* containers+=NodeContainer* anchors+=NodeAnchor* "}"
+		//("name" name=STRING)? attributes+=Attribute* figures+=NodeFigure* containers+=NodeContainer* anchors+=NodeAnchor* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"node"
@@ -324,32 +366,44 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getIconIDTerminalRuleCall_5_1_0() { return cIconIDTerminalRuleCall_5_1_0; }
 
+		//("name" name=STRING)?
+		public Group getGroup_6() { return cGroup_6; }
+
+		//"name"
+		public Keyword getNameKeyword_6_0() { return cNameKeyword_6_0; }
+
+		//name=STRING
+		public Assignment getNameAssignment_6_1() { return cNameAssignment_6_1; }
+
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_6_1_0() { return cNameSTRINGTerminalRuleCall_6_1_0; }
+
 		//attributes+=Attribute*
-		public Assignment getAttributesAssignment_6() { return cAttributesAssignment_6; }
+		public Assignment getAttributesAssignment_7() { return cAttributesAssignment_7; }
 
 		//Attribute
-		public RuleCall getAttributesAttributeParserRuleCall_6_0() { return cAttributesAttributeParserRuleCall_6_0; }
+		public RuleCall getAttributesAttributeParserRuleCall_7_0() { return cAttributesAttributeParserRuleCall_7_0; }
 
 		//figures+=NodeFigure*
-		public Assignment getFiguresAssignment_7() { return cFiguresAssignment_7; }
+		public Assignment getFiguresAssignment_8() { return cFiguresAssignment_8; }
 
 		//NodeFigure
-		public RuleCall getFiguresNodeFigureParserRuleCall_7_0() { return cFiguresNodeFigureParserRuleCall_7_0; }
+		public RuleCall getFiguresNodeFigureParserRuleCall_8_0() { return cFiguresNodeFigureParserRuleCall_8_0; }
 
 		//containers+=NodeContainer*
-		public Assignment getContainersAssignment_8() { return cContainersAssignment_8; }
+		public Assignment getContainersAssignment_9() { return cContainersAssignment_9; }
 
 		//NodeContainer
-		public RuleCall getContainersNodeContainerParserRuleCall_8_0() { return cContainersNodeContainerParserRuleCall_8_0; }
+		public RuleCall getContainersNodeContainerParserRuleCall_9_0() { return cContainersNodeContainerParserRuleCall_9_0; }
 
 		//anchors+=NodeAnchor*
-		public Assignment getAnchorsAssignment_9() { return cAnchorsAssignment_9; }
+		public Assignment getAnchorsAssignment_10() { return cAnchorsAssignment_10; }
 
 		//NodeAnchor
-		public RuleCall getAnchorsNodeAnchorParserRuleCall_9_0() { return cAnchorsNodeAnchorParserRuleCall_9_0; }
+		public RuleCall getAnchorsNodeAnchorParserRuleCall_10_0() { return cAnchorsNodeAnchorParserRuleCall_10_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
+		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
 	}
 
 	public class AttributeElements extends AbstractParserRuleElementFinder {
@@ -478,9 +532,9 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cContainerKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cForKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cModelClassAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final CrossReference cModelClassEClassCrossReference_2_1_0 = (CrossReference)cModelClassAssignment_2_1.eContents().get(0);
-		private final RuleCall cModelClassEClassQualifiedNameParserRuleCall_2_1_0_1 = (RuleCall)cModelClassEClassCrossReference_2_1_0.eContents().get(1);
+		private final Assignment cModelReferenceAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final CrossReference cModelReferenceEReferenceCrossReference_2_1_0 = (CrossReference)cModelReferenceAssignment_2_1.eContents().get(0);
+		private final RuleCall cModelReferenceEReferenceQualifiedNameParserRuleCall_2_1_0_1 = (RuleCall)cModelReferenceEReferenceCrossReference_2_1_0.eContents().get(1);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cColonKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cValueAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
@@ -494,15 +548,19 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFiguresNodeFigureParserRuleCall_5_0 = (RuleCall)cFiguresAssignment_5.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		//// TODO hstack / vstack
+		//// TODO hstack / vstack (enum?)
+		//
+		//// TODO validation
+		//
+		//// TODO change modelClass to modelReference
 		//
 		//NodeContainer:
-		//	type=("stack" | "free")? "container" ("for" modelClass=[ecore::EClass|QualifiedName])? (":" value=INT format=("%" |
-		//	"px"))? "{" figures+=NodeFigure+ "}";
+		//	type=("stack" | "free")? "container" ("for" modelReference=[ecore::EReference|QualifiedName])? (":" value=INT
+		//	format=("%" | "px"))? "{" figures+=NodeFigure+ "}";
 		public ParserRule getRule() { return rule; }
 
-		//type=("stack" | "free")? "container" ("for" modelClass=[ecore::EClass|QualifiedName])? (":" value=INT format=("%" |
-		//"px"))? "{" figures+=NodeFigure+ "}"
+		//type=("stack" | "free")? "container" ("for" modelReference=[ecore::EReference|QualifiedName])? (":" value=INT
+		//format=("%" | "px"))? "{" figures+=NodeFigure+ "}"
 		public Group getGroup() { return cGroup; }
 
 		//type=("stack" | "free")?
@@ -520,20 +578,20 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		//"container"
 		public Keyword getContainerKeyword_1() { return cContainerKeyword_1; }
 
-		//("for" modelClass=[ecore::EClass|QualifiedName])?
+		//("for" modelReference=[ecore::EReference|QualifiedName])?
 		public Group getGroup_2() { return cGroup_2; }
 
 		//"for"
 		public Keyword getForKeyword_2_0() { return cForKeyword_2_0; }
 
-		//modelClass=[ecore::EClass|QualifiedName]
-		public Assignment getModelClassAssignment_2_1() { return cModelClassAssignment_2_1; }
+		//modelReference=[ecore::EReference|QualifiedName]
+		public Assignment getModelReferenceAssignment_2_1() { return cModelReferenceAssignment_2_1; }
 
-		//[ecore::EClass|QualifiedName]
-		public CrossReference getModelClassEClassCrossReference_2_1_0() { return cModelClassEClassCrossReference_2_1_0; }
+		//[ecore::EReference|QualifiedName]
+		public CrossReference getModelReferenceEReferenceCrossReference_2_1_0() { return cModelReferenceEReferenceCrossReference_2_1_0; }
 
 		//QualifiedName
-		public RuleCall getModelClassEClassQualifiedNameParserRuleCall_2_1_0_1() { return cModelClassEClassQualifiedNameParserRuleCall_2_1_0_1; }
+		public RuleCall getModelReferenceEReferenceQualifiedNameParserRuleCall_2_1_0_1() { return cModelReferenceEReferenceQualifiedNameParserRuleCall_2_1_0_1; }
 
 		//(":" value=INT format=("%" | "px"))?
 		public Group getGroup_3() { return cGroup_3; }
@@ -601,52 +659,68 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cStyleKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cStyleAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cStyleIDTerminalRuleCall_4_1_0 = (RuleCall)cStyleAssignment_4_1.eContents().get(0);
-		private final Alternatives cAlternatives_5 = (Alternatives)cGroup.eContents().get(5);
-		private final Assignment cAttributesAssignment_5_0 = (Assignment)cAlternatives_5.eContents().get(0);
-		private final RuleCall cAttributesAttributeParserRuleCall_5_0_0 = (RuleCall)cAttributesAssignment_5_0.eContents().get(0);
-		private final Assignment cLinefeaturesAssignment_5_1 = (Assignment)cAlternatives_5.eContents().get(1);
-		private final RuleCall cLinefeaturesLineFeatureParserRuleCall_5_1_0 = (RuleCall)cLinefeaturesAssignment_5_1.eContents().get(0);
-		private final Assignment cColorfeaturesAssignment_5_2 = (Assignment)cAlternatives_5.eContents().get(2);
-		private final RuleCall cColorfeaturesColorFeatureParserRuleCall_5_2_0 = (RuleCall)cColorfeaturesAssignment_5_2.eContents().get(0);
-		private final Assignment cIntegerfeaturesAssignment_5_3 = (Assignment)cAlternatives_5.eContents().get(3);
-		private final RuleCall cIntegerfeaturesIntegerFeatureParserRuleCall_5_3_0 = (RuleCall)cIntegerfeaturesAssignment_5_3.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cIconKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cIconAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cIconIDTerminalRuleCall_5_1_0 = (RuleCall)cIconAssignment_5_1.eContents().get(0);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cOriginKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
-		private final Assignment cSourceStaticAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
-		private final RuleCall cSourceStaticStaticFigureParserRuleCall_6_2_0 = (RuleCall)cSourceStaticAssignment_6_2.eContents().get(0);
-		private final Assignment cSourceDynamicAssignment_6_3 = (Assignment)cGroup_6.eContents().get(3);
-		private final RuleCall cSourceDynamicDynamicFigureParserRuleCall_6_3_0 = (RuleCall)cSourceDynamicAssignment_6_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6_4 = (Keyword)cGroup_6.eContents().get(4);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cDestinyKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
-		private final Assignment cTargetStaticAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
-		private final RuleCall cTargetStaticStaticFigureParserRuleCall_7_2_0 = (RuleCall)cTargetStaticAssignment_7_2.eContents().get(0);
-		private final Assignment cTargetDynamicAssignment_7_3 = (Assignment)cGroup_7.eContents().get(3);
-		private final RuleCall cTargetDynamicDynamicFigureParserRuleCall_7_3_0 = (RuleCall)cTargetDynamicAssignment_7_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7_4 = (Keyword)cGroup_7.eContents().get(4);
-		private final Assignment cPlacingsAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cPlacingsPlacingFigureParserRuleCall_8_0 = (RuleCall)cPlacingsAssignment_8.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Keyword cNameKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cNameAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cNameSTRINGTerminalRuleCall_6_1_0 = (RuleCall)cNameAssignment_6_1.eContents().get(0);
+		private final Alternatives cAlternatives_7 = (Alternatives)cGroup.eContents().get(7);
+		private final Assignment cAttributesAssignment_7_0 = (Assignment)cAlternatives_7.eContents().get(0);
+		private final RuleCall cAttributesAttributeParserRuleCall_7_0_0 = (RuleCall)cAttributesAssignment_7_0.eContents().get(0);
+		private final Assignment cLinefeaturesAssignment_7_1 = (Assignment)cAlternatives_7.eContents().get(1);
+		private final RuleCall cLinefeaturesLineFeatureParserRuleCall_7_1_0 = (RuleCall)cLinefeaturesAssignment_7_1.eContents().get(0);
+		private final Assignment cColorfeaturesAssignment_7_2 = (Assignment)cAlternatives_7.eContents().get(2);
+		private final RuleCall cColorfeaturesColorFeatureParserRuleCall_7_2_0 = (RuleCall)cColorfeaturesAssignment_7_2.eContents().get(0);
+		private final Assignment cIntegerfeaturesAssignment_7_3 = (Assignment)cAlternatives_7.eContents().get(3);
+		private final RuleCall cIntegerfeaturesIntegerFeatureParserRuleCall_7_3_0 = (RuleCall)cIntegerfeaturesAssignment_7_3.eContents().get(0);
+		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
+		private final Keyword cOriginKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_8_1 = (Keyword)cGroup_8.eContents().get(1);
+		private final Assignment cSourceStaticAssignment_8_2 = (Assignment)cGroup_8.eContents().get(2);
+		private final RuleCall cSourceStaticStaticFigureParserRuleCall_8_2_0 = (RuleCall)cSourceStaticAssignment_8_2.eContents().get(0);
+		private final Assignment cSourceDynamicAssignment_8_3 = (Assignment)cGroup_8.eContents().get(3);
+		private final RuleCall cSourceDynamicDynamicFigureParserRuleCall_8_3_0 = (RuleCall)cSourceDynamicAssignment_8_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8_4 = (Keyword)cGroup_8.eContents().get(4);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final Keyword cDestinyKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_9_1 = (Keyword)cGroup_9.eContents().get(1);
+		private final Assignment cTargetStaticAssignment_9_2 = (Assignment)cGroup_9.eContents().get(2);
+		private final RuleCall cTargetStaticStaticFigureParserRuleCall_9_2_0 = (RuleCall)cTargetStaticAssignment_9_2.eContents().get(0);
+		private final Assignment cTargetDynamicAssignment_9_3 = (Assignment)cGroup_9.eContents().get(3);
+		private final RuleCall cTargetDynamicDynamicFigureParserRuleCall_9_3_0 = (RuleCall)cTargetDynamicAssignment_9_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_9_4 = (Keyword)cGroup_9.eContents().get(4);
+		private final Assignment cPlacingsAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cPlacingsPlacingFigureParserRuleCall_10_0 = (RuleCall)cPlacingsAssignment_10.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//// TODO: validation - complex requires source e target, complex structure
+		//
+		//// TODO text / icon
 		//
 		//Link:
 		//	"link" (modelReference=[ecore::EReference|QualifiedName] | complex?="object" modelClass=[ecore::EClass|QualifiedName]
 		//	"source" sourceReference=[ecore::EReference|QualifiedName] "target" targetReference=[ecore::EReference|QualifiedName])
-		//	"{" manhattan?="manhattan"? ("style" style=ID)? (attributes+=Attribute | linefeatures+=LineFeature |
-		//	colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature)* ("origin" "{" sourceStatic=StaticFigure?
-		//	sourceDynamic+=DynamicFigure* "}")? ("destiny" "{" targetStatic=StaticFigure? targetDynamic+=DynamicFigure* "}")? //defenido no modelo? [ecore::EReference]
+		//	"{" manhattan?="manhattan"? ("style" style=ID)? ("icon" icon=ID)? ("name" name=STRING)? (attributes+=Attribute |
+		//	linefeatures+=LineFeature | colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature)* ("origin" "{"
+		//	sourceStatic=StaticFigure? sourceDynamic+=DynamicFigure* "}")? ("destiny" "{" targetStatic=StaticFigure?
+		//	targetDynamic+=DynamicFigure* "}")? // porque não apenas placings?
+		//
+		//	//defenido no modelo? [ecore::EReference]
 		//
 		//	placings+=PlacingFigure* "}";
 		public ParserRule getRule() { return rule; }
 
 		//"link" (modelReference=[ecore::EReference|QualifiedName] | complex?="object" modelClass=[ecore::EClass|QualifiedName]
 		//"source" sourceReference=[ecore::EReference|QualifiedName] "target" targetReference=[ecore::EReference|QualifiedName])
-		//"{" manhattan?="manhattan"? ("style" style=ID)? (attributes+=Attribute | linefeatures+=LineFeature |
-		//colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature)* ("origin" "{" sourceStatic=StaticFigure?
-		//sourceDynamic+=DynamicFigure* "}")? ("destiny" "{" targetStatic=StaticFigure? targetDynamic+=DynamicFigure* "}")? //defenido no modelo? [ecore::EReference]
+		//"{" manhattan?="manhattan"? ("style" style=ID)? ("icon" icon=ID)? ("name" name=STRING)? (attributes+=Attribute |
+		//linefeatures+=LineFeature | colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature)* ("origin" "{"
+		//sourceStatic=StaticFigure? sourceDynamic+=DynamicFigure* "}")? ("destiny" "{" targetStatic=StaticFigure?
+		//targetDynamic+=DynamicFigure* "}")? // porque não apenas placings?
+		//
+		////defenido no modelo? [ecore::EReference]
 		//
 		//placings+=PlacingFigure* "}"
 		public Group getGroup() { return cGroup; }
@@ -731,89 +805,113 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getStyleIDTerminalRuleCall_4_1_0() { return cStyleIDTerminalRuleCall_4_1_0; }
 
-		//(attributes+=Attribute | linefeatures+=LineFeature | colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature)*
-		public Alternatives getAlternatives_5() { return cAlternatives_5; }
+		//("icon" icon=ID)?
+		public Group getGroup_5() { return cGroup_5; }
 
-		//attributes+=Attribute
-		public Assignment getAttributesAssignment_5_0() { return cAttributesAssignment_5_0; }
+		//"icon"
+		public Keyword getIconKeyword_5_0() { return cIconKeyword_5_0; }
 
-		//Attribute
-		public RuleCall getAttributesAttributeParserRuleCall_5_0_0() { return cAttributesAttributeParserRuleCall_5_0_0; }
+		//icon=ID
+		public Assignment getIconAssignment_5_1() { return cIconAssignment_5_1; }
 
-		//linefeatures+=LineFeature
-		public Assignment getLinefeaturesAssignment_5_1() { return cLinefeaturesAssignment_5_1; }
+		//ID
+		public RuleCall getIconIDTerminalRuleCall_5_1_0() { return cIconIDTerminalRuleCall_5_1_0; }
 
-		//LineFeature
-		public RuleCall getLinefeaturesLineFeatureParserRuleCall_5_1_0() { return cLinefeaturesLineFeatureParserRuleCall_5_1_0; }
-
-		//colorfeatures+=ColorFeature
-		public Assignment getColorfeaturesAssignment_5_2() { return cColorfeaturesAssignment_5_2; }
-
-		//ColorFeature
-		public RuleCall getColorfeaturesColorFeatureParserRuleCall_5_2_0() { return cColorfeaturesColorFeatureParserRuleCall_5_2_0; }
-
-		//integerfeatures+=IntegerFeature
-		public Assignment getIntegerfeaturesAssignment_5_3() { return cIntegerfeaturesAssignment_5_3; }
-
-		//IntegerFeature
-		public RuleCall getIntegerfeaturesIntegerFeatureParserRuleCall_5_3_0() { return cIntegerfeaturesIntegerFeatureParserRuleCall_5_3_0; }
-
-		//("origin" "{" sourceStatic=StaticFigure? sourceDynamic+=DynamicFigure* "}")?
+		//("name" name=STRING)?
 		public Group getGroup_6() { return cGroup_6; }
 
+		//"name"
+		public Keyword getNameKeyword_6_0() { return cNameKeyword_6_0; }
+
+		//name=STRING
+		public Assignment getNameAssignment_6_1() { return cNameAssignment_6_1; }
+
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_6_1_0() { return cNameSTRINGTerminalRuleCall_6_1_0; }
+
+		//(attributes+=Attribute | linefeatures+=LineFeature | colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature)*
+		public Alternatives getAlternatives_7() { return cAlternatives_7; }
+
+		//attributes+=Attribute
+		public Assignment getAttributesAssignment_7_0() { return cAttributesAssignment_7_0; }
+
+		//Attribute
+		public RuleCall getAttributesAttributeParserRuleCall_7_0_0() { return cAttributesAttributeParserRuleCall_7_0_0; }
+
+		//linefeatures+=LineFeature
+		public Assignment getLinefeaturesAssignment_7_1() { return cLinefeaturesAssignment_7_1; }
+
+		//LineFeature
+		public RuleCall getLinefeaturesLineFeatureParserRuleCall_7_1_0() { return cLinefeaturesLineFeatureParserRuleCall_7_1_0; }
+
+		//colorfeatures+=ColorFeature
+		public Assignment getColorfeaturesAssignment_7_2() { return cColorfeaturesAssignment_7_2; }
+
+		//ColorFeature
+		public RuleCall getColorfeaturesColorFeatureParserRuleCall_7_2_0() { return cColorfeaturesColorFeatureParserRuleCall_7_2_0; }
+
+		//integerfeatures+=IntegerFeature
+		public Assignment getIntegerfeaturesAssignment_7_3() { return cIntegerfeaturesAssignment_7_3; }
+
+		//IntegerFeature
+		public RuleCall getIntegerfeaturesIntegerFeatureParserRuleCall_7_3_0() { return cIntegerfeaturesIntegerFeatureParserRuleCall_7_3_0; }
+
+		//("origin" "{" sourceStatic=StaticFigure? sourceDynamic+=DynamicFigure* "}")?
+		public Group getGroup_8() { return cGroup_8; }
+
 		//"origin"
-		public Keyword getOriginKeyword_6_0() { return cOriginKeyword_6_0; }
+		public Keyword getOriginKeyword_8_0() { return cOriginKeyword_8_0; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_6_1() { return cLeftCurlyBracketKeyword_6_1; }
+		public Keyword getLeftCurlyBracketKeyword_8_1() { return cLeftCurlyBracketKeyword_8_1; }
 
 		//sourceStatic=StaticFigure?
-		public Assignment getSourceStaticAssignment_6_2() { return cSourceStaticAssignment_6_2; }
+		public Assignment getSourceStaticAssignment_8_2() { return cSourceStaticAssignment_8_2; }
 
 		//StaticFigure
-		public RuleCall getSourceStaticStaticFigureParserRuleCall_6_2_0() { return cSourceStaticStaticFigureParserRuleCall_6_2_0; }
+		public RuleCall getSourceStaticStaticFigureParserRuleCall_8_2_0() { return cSourceStaticStaticFigureParserRuleCall_8_2_0; }
 
 		//sourceDynamic+=DynamicFigure*
-		public Assignment getSourceDynamicAssignment_6_3() { return cSourceDynamicAssignment_6_3; }
+		public Assignment getSourceDynamicAssignment_8_3() { return cSourceDynamicAssignment_8_3; }
 
 		//DynamicFigure
-		public RuleCall getSourceDynamicDynamicFigureParserRuleCall_6_3_0() { return cSourceDynamicDynamicFigureParserRuleCall_6_3_0; }
+		public RuleCall getSourceDynamicDynamicFigureParserRuleCall_8_3_0() { return cSourceDynamicDynamicFigureParserRuleCall_8_3_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_6_4() { return cRightCurlyBracketKeyword_6_4; }
+		public Keyword getRightCurlyBracketKeyword_8_4() { return cRightCurlyBracketKeyword_8_4; }
 
 		//("destiny" "{" targetStatic=StaticFigure? targetDynamic+=DynamicFigure* "}")?
-		public Group getGroup_7() { return cGroup_7; }
+		public Group getGroup_9() { return cGroup_9; }
 
 		//"destiny"
-		public Keyword getDestinyKeyword_7_0() { return cDestinyKeyword_7_0; }
+		public Keyword getDestinyKeyword_9_0() { return cDestinyKeyword_9_0; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_7_1() { return cLeftCurlyBracketKeyword_7_1; }
+		public Keyword getLeftCurlyBracketKeyword_9_1() { return cLeftCurlyBracketKeyword_9_1; }
 
 		//targetStatic=StaticFigure?
-		public Assignment getTargetStaticAssignment_7_2() { return cTargetStaticAssignment_7_2; }
+		public Assignment getTargetStaticAssignment_9_2() { return cTargetStaticAssignment_9_2; }
 
 		//StaticFigure
-		public RuleCall getTargetStaticStaticFigureParserRuleCall_7_2_0() { return cTargetStaticStaticFigureParserRuleCall_7_2_0; }
+		public RuleCall getTargetStaticStaticFigureParserRuleCall_9_2_0() { return cTargetStaticStaticFigureParserRuleCall_9_2_0; }
 
 		//targetDynamic+=DynamicFigure*
-		public Assignment getTargetDynamicAssignment_7_3() { return cTargetDynamicAssignment_7_3; }
+		public Assignment getTargetDynamicAssignment_9_3() { return cTargetDynamicAssignment_9_3; }
 
 		//DynamicFigure
-		public RuleCall getTargetDynamicDynamicFigureParserRuleCall_7_3_0() { return cTargetDynamicDynamicFigureParserRuleCall_7_3_0; }
+		public RuleCall getTargetDynamicDynamicFigureParserRuleCall_9_3_0() { return cTargetDynamicDynamicFigureParserRuleCall_9_3_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_7_4() { return cRightCurlyBracketKeyword_7_4; }
+		public Keyword getRightCurlyBracketKeyword_9_4() { return cRightCurlyBracketKeyword_9_4; }
 
 		//placings+=PlacingFigure*
-		public Assignment getPlacingsAssignment_8() { return cPlacingsAssignment_8; }
+		public Assignment getPlacingsAssignment_10() { return cPlacingsAssignment_10; }
 
 		//PlacingFigure
-		public RuleCall getPlacingsPlacingFigureParserRuleCall_8_0() { return cPlacingsPlacingFigureParserRuleCall_8_0; }
+		public RuleCall getPlacingsPlacingFigureParserRuleCall_10_0() { return cPlacingsPlacingFigureParserRuleCall_10_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
+		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
 	}
 
 	public class PlacingFigureElements extends AbstractParserRuleElementFinder {
@@ -831,6 +929,10 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPlacingDynamicDynamicFigureParserRuleCall_6_0 = (RuleCall)cPlacingDynamicAssignment_6.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
+		//// % opcional? ou considerar pixeis?
+		//
+		//// ter "constantes" para origem destino
+		//
 		//PlacingFigure:
 		//	"placing" "at" pos=INT "%" "{" placingStatic=StaticFigure? placingDynamic+=DynamicFigure* "}";
 		public ParserRule getRule() { return rule; }
@@ -883,6 +985,8 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFeaturesFigureFeaturesParserRuleCall_3_0 = (RuleCall)cFeaturesAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
+		//// este text é diferente do figure: Label .... é confuso para quem está a aprender a linguagem   
+		//
 		//DynamicFigure:
 		//	"text" figure=DynamicElement "{" features=FigureFeatures "}";
 		public ParserRule getRule() { return rule; }
@@ -1009,7 +1113,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cPolygonKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
 		private final Keyword cPolylineKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
 		
-		//// TODO enum
+		//// TODO enum - porque é que esta não é uma figura como as outras?
 		//
 		//StaticElement:
 		//	"Arrow" | "Triangle" | "Rhombus" | "Polygon" | "Polyline";
@@ -1069,7 +1173,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cArrowsArrowAnchorParserRuleCall_12_0 = (RuleCall)cArrowsAssignment_12.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
-		//// TODO: model ids
+		//// TODO: model ids / name Anchor
 		//
 		//NodeAnchor:
 		//	"anchor" ("to" object=ID)? ":" passX="-"? X=INT formatX=("%" | "lf" | "rg") "," passY="-"? Y=INT formatY=("%" | "up" |
@@ -1193,7 +1297,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNINTTerminalRuleCall_5_1_0 = (RuleCall)cNAssignment_5_1.eContents().get(0);
 		private final Keyword cConnectionsKeyword_5_2 = (Keyword)cGroup_5.eContents().get(2);
 		
-		//// TODO: model ids - change syntax
+		//// TODO: model ids - change syntax / name AnchorConstraint -- N connections?
 		//
 		//ArrowAnchor:
 		//	"set" reference=ID "as" type=("incoming" | "outgoing" | "both") "connection" ("using" N=INT "connections")?;
@@ -1275,29 +1379,33 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cBooleanfeaturesBooleanFeatureParserRuleCall_1_9_0 = (RuleCall)cBooleanfeaturesAssignment_1_9.eContents().get(0);
 		private final Assignment cStringfeaturesAssignment_1_10 = (Assignment)cAlternatives_1.eContents().get(10);
 		private final RuleCall cStringfeaturesStringFeatureParserRuleCall_1_10_0 = (RuleCall)cStringfeaturesAssignment_1_10.eContents().get(0);
-		private final Assignment cCustomfeaturesAssignment_1_11 = (Assignment)cAlternatives_1.eContents().get(11);
-		private final RuleCall cCustomfeaturesCustomFeatureParserRuleCall_1_11_0 = (RuleCall)cCustomfeaturesAssignment_1_11.eContents().get(0);
 		
 		//FigureFeatures:
-		//	{FigureFeatures} (linefeatures+=LineFeature | centerfeatures+=CenterFeature | alignfeatures+=AlignFeature |
-		//	gradientfeatures+=GradientFeature | pointfeatures+=PointFeature | sizefeatures+=SizeFeature |
-		//	positionfeatures+=PositionFeature | colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature |
-		//	booleanfeatures+=BooleanFeature | stringfeatures+=StringFeature | customfeatures+=CustomFeature)*;
+		//	{FigureFeatures} (linefeatures+=LineFeature //	        	(customfeatures += CustomFeature)
+		//
+		//	| centerfeatures+=CenterFeature | alignfeatures+=AlignFeature | gradientfeatures+=GradientFeature |
+		//	pointfeatures+=PointFeature | sizefeatures+=SizeFeature | positionfeatures+=PositionFeature |
+		//	colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature | booleanfeatures+=BooleanFeature |
+		//	stringfeatures+=StringFeature)*;
 		public ParserRule getRule() { return rule; }
 
-		//{FigureFeatures} (linefeatures+=LineFeature | centerfeatures+=CenterFeature | alignfeatures+=AlignFeature |
-		//gradientfeatures+=GradientFeature | pointfeatures+=PointFeature | sizefeatures+=SizeFeature |
-		//positionfeatures+=PositionFeature | colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature |
-		//booleanfeatures+=BooleanFeature | stringfeatures+=StringFeature | customfeatures+=CustomFeature)*
+		//{FigureFeatures} (linefeatures+=LineFeature //	        	(customfeatures += CustomFeature)
+		//
+		//| centerfeatures+=CenterFeature | alignfeatures+=AlignFeature | gradientfeatures+=GradientFeature |
+		//pointfeatures+=PointFeature | sizefeatures+=SizeFeature | positionfeatures+=PositionFeature |
+		//colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature | booleanfeatures+=BooleanFeature |
+		//stringfeatures+=StringFeature)*
 		public Group getGroup() { return cGroup; }
 
 		//{FigureFeatures}
 		public Action getFigureFeaturesAction_0() { return cFigureFeaturesAction_0; }
 
-		//(linefeatures+=LineFeature | centerfeatures+=CenterFeature | alignfeatures+=AlignFeature |
-		//gradientfeatures+=GradientFeature | pointfeatures+=PointFeature | sizefeatures+=SizeFeature |
-		//positionfeatures+=PositionFeature | colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature |
-		//booleanfeatures+=BooleanFeature | stringfeatures+=StringFeature | customfeatures+=CustomFeature)*
+		//(linefeatures+=LineFeature //	        	(customfeatures += CustomFeature)
+		//
+		//| centerfeatures+=CenterFeature | alignfeatures+=AlignFeature | gradientfeatures+=GradientFeature |
+		//pointfeatures+=PointFeature | sizefeatures+=SizeFeature | positionfeatures+=PositionFeature |
+		//colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature | booleanfeatures+=BooleanFeature |
+		//stringfeatures+=StringFeature)*
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//linefeatures+=LineFeature
@@ -1365,56 +1473,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 
 		//StringFeature
 		public RuleCall getStringfeaturesStringFeatureParserRuleCall_1_10_0() { return cStringfeaturesStringFeatureParserRuleCall_1_10_0; }
-
-		//customfeatures+=CustomFeature
-		public Assignment getCustomfeaturesAssignment_1_11() { return cCustomfeaturesAssignment_1_11; }
-
-		//CustomFeature
-		public RuleCall getCustomfeaturesCustomFeatureParserRuleCall_1_11_0() { return cCustomfeaturesCustomFeatureParserRuleCall_1_11_0; }
-	}
-
-	public class CustomFeatureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CustomFeature");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cKeyAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cKeyAttributeKeyword_0_0 = (Keyword)cKeyAssignment_0.eContents().get(0);
-		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cAttributeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cAttributeIDTerminalRuleCall_2_0 = (RuleCall)cAttributeAssignment_2.eContents().get(0);
-		private final Keyword cEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cValueAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cValueIDTerminalRuleCall_4_0 = (RuleCall)cValueAssignment_4.eContents().get(0);
-		
-		//CustomFeature:
-		//	key="attribute" ":" attribute=ID "=" value=ID;
-		public ParserRule getRule() { return rule; }
-
-		//key="attribute" ":" attribute=ID "=" value=ID
-		public Group getGroup() { return cGroup; }
-
-		//key="attribute"
-		public Assignment getKeyAssignment_0() { return cKeyAssignment_0; }
-
-		//"attribute"
-		public Keyword getKeyAttributeKeyword_0_0() { return cKeyAttributeKeyword_0_0; }
-
-		//":"
-		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
-
-		//attribute=ID
-		public Assignment getAttributeAssignment_2() { return cAttributeAssignment_2; }
-
-		//ID
-		public RuleCall getAttributeIDTerminalRuleCall_2_0() { return cAttributeIDTerminalRuleCall_2_0; }
-
-		//"="
-		public Keyword getEqualsSignKeyword_3() { return cEqualsSignKeyword_3; }
-
-		//value=ID
-		public Assignment getValueAssignment_4() { return cValueAssignment_4; }
-
-		//ID
-		public RuleCall getValueIDTerminalRuleCall_4_0() { return cValueIDTerminalRuleCall_4_0; }
 	}
 
 	public class StyleFeatureElements extends AbstractParserRuleElementFinder {
@@ -1423,6 +1481,14 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLayoutFeatureParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cCenterFeatureParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
+		//// TODO: remover?
+		//
+		////CustomFeature:
+		//
+		////	key=('attribute') ':' attribute=ID '=' value=ID
+		//
+		////;
+		//
 		//StyleFeature:
 		//	LayoutFeature | CenterFeature;
 		public ParserRule getRule() { return rule; }
@@ -1585,6 +1651,8 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cValueSilverWhiteGlossKeyword_2_0_5 = (Keyword)cValueAlternatives_2_0.eContents().get(5);
 		private final Keyword cValueLimeWhiteKeyword_2_0_6 = (Keyword)cValueAlternatives_2_0.eContents().get(6);
 		
+		//// TODO: enum
+		//
 		//// TODO: custom gradient
 		//
 		//GradientFeature:
@@ -1876,7 +1944,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCYANKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
 		private final Keyword cORANGEKeyword_7 = (Keyword)cAlternatives.eContents().get(7);
 		
-		//// TODO enum
+		//// TODO enum , já agora 16 standard
 		//
 		//Color:
 		//	"WHITE" | "BLACK" | "BLUE" | "GREEN" | "RED" | "YELLOW" | "CYAN" | "ORANGE";
@@ -2382,6 +2450,10 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValueAtributeValueParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
 		private final Keyword cHyphenMinusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
+		//// rename? ConditionalExpression?
+		//
+		//// TODO: key modelReference ecore::EAttribute
+		//
 		//AtributeExpression:
 		//	key=ID operator=("=" | "<>") value=AtributeValue "->";
 		public ParserRule getRule() { return rule; }
@@ -2530,6 +2602,46 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getValueYEARINTTerminalRuleCall_5_4_0() { return cValueYEARINTTerminalRuleCall_5_4_0; }
 	}
+
+	public class AttributeReferenceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AttributeReference");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cModelAttributeAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final CrossReference cModelAttributeEAttributeCrossReference_0_0 = (CrossReference)cModelAttributeAssignment_0.eContents().get(0);
+		private final RuleCall cModelAttributeEAttributeQualifiedNameParserRuleCall_0_0_1 = (RuleCall)cModelAttributeEAttributeCrossReference_0_0.eContents().get(1);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cSolidusKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cPathAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cPathAttributeReferenceParserRuleCall_1_1_0 = (RuleCall)cPathAssignment_1_1.eContents().get(0);
+		
+		//AttributeReference:
+		//	modelAttribute=[ecore::EAttribute|QualifiedName] ("/" path+=AttributeReference)*;
+		public ParserRule getRule() { return rule; }
+
+		//modelAttribute=[ecore::EAttribute|QualifiedName] ("/" path+=AttributeReference)*
+		public Group getGroup() { return cGroup; }
+
+		//modelAttribute=[ecore::EAttribute|QualifiedName]
+		public Assignment getModelAttributeAssignment_0() { return cModelAttributeAssignment_0; }
+
+		//[ecore::EAttribute|QualifiedName]
+		public CrossReference getModelAttributeEAttributeCrossReference_0_0() { return cModelAttributeEAttributeCrossReference_0_0; }
+
+		//QualifiedName
+		public RuleCall getModelAttributeEAttributeQualifiedNameParserRuleCall_0_0_1() { return cModelAttributeEAttributeQualifiedNameParserRuleCall_0_0_1; }
+
+		//("/" path+=AttributeReference)*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"/"
+		public Keyword getSolidusKeyword_1_0() { return cSolidusKeyword_1_0; }
+
+		//path+=AttributeReference
+		public Assignment getPathAssignment_1_1() { return cPathAssignment_1_1; }
+
+		//AttributeReference
+		public RuleCall getPathAttributeReferenceParserRuleCall_1_1_0() { return cPathAttributeReferenceParserRuleCall_1_1_0; }
+	}
 	
 	
 	public class FigureShapeElements extends AbstractEnumRuleElementFinder {
@@ -2558,6 +2670,8 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cIMAGEEnumLiteralDeclaration_10 = (EnumLiteralDeclaration)cAlternatives.eContents().get(10);
 		private final Keyword cIMAGEImageKeyword_10_0 = (Keyword)cIMAGEEnumLiteralDeclaration_10.eContents().get(0);
 		
+		//// TODO: lowercase
+		//
 		//enum FigureShape:
 		//	SQUARE="Square" | RECTANGLE="Rectangle" | ROUNDED_RECTANGLE="RoundedRectangle" | CIRCLE="Circle" | ELLIPSE="Ellipse" |
 		//	TRIANGLE="Triangle" | RHOMBUS="Rhombus" | POLYGON="Polygon" | POLYLINE="Polyline" | LABEL="Label" | IMAGE="Image";
@@ -2639,6 +2753,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	private QualifiedNameElements pQualifiedName;
 	private QualifiedNameWithWildCardElements pQualifiedNameWithWildCard;
 	private StyleElements pStyle;
+	private DiagramElementElements pDiagramElement;
 	private NodeElements pNode;
 	private AttributeElements pAttribute;
 	private NodeFigureElements pNodeFigure;
@@ -2653,7 +2768,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	private NodeAnchorElements pNodeAnchor;
 	private ArrowAnchorElements pArrowAnchor;
 	private FigureFeaturesElements pFigureFeatures;
-	private CustomFeatureElements pCustomFeature;
 	private StyleFeatureElements pStyleFeature;
 	private LayoutFeatureElements pLayoutFeature;
 	private CenterFeatureElements pCenterFeature;
@@ -2673,6 +2787,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	private LineStyleElements pLineStyle;
 	private AtributeExpressionElements pAtributeExpression;
 	private AtributeValueElements pAtributeValue;
+	private AttributeReferenceElements pAttributeReference;
 	
 	private final Grammar grammar;
 
@@ -2712,13 +2827,13 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	////	'}'
-	//
 	//XDiagram:
 	//	"metamodel" importURI=STRING imports+=ImportStatement styles+=Style* "diagram"
 	//	modelClass=[ecore::EClass|QualifiedName] (nodes+=Node //    '{'
 	//
-	//	| links+=Link)+;
+	//	| links+=Link)+ //	'}'
+	//
+	//	attr+=AttributeReference+;
 	public XDiagramElements getXDiagramAccess() {
 		return (pXDiagram != null) ? pXDiagram : (pXDiagram = new XDiagramElements());
 	}
@@ -2769,13 +2884,29 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getStyleAccess().getRule();
 	}
 
+	//// TODO: common: text / icon / tooltip
+	//
+	//DiagramElement:
+	//	Node | Link;
+	public DiagramElementElements getDiagramElementAccess() {
+		return (pDiagramElement != null) ? pDiagramElement : (pDiagramElement = new DiagramElementElements());
+	}
+	
+	public ParserRule getDiagramElementRule() {
+		return getDiagramElementAccess().getRule();
+	}
+
 	//// resizable default?
 	//
 	//// TODO text / icon
 	//
+	//// TODO validation: unique nodes
+	//
+	//// notation inheritance?
+	//
 	//Node:
 	//	"node" modelClass=[ecore::EClass|QualifiedName] "{" resizable?="resizable"? ("style" style=ID)? ("icon" icon=ID)?
-	//	attributes+=Attribute* figures+=NodeFigure* containers+=NodeContainer* anchors+=NodeAnchor* "}";
+	//	("name" name=STRING)? attributes+=Attribute* figures+=NodeFigure* containers+=NodeContainer* anchors+=NodeAnchor* "}";
 	public NodeElements getNodeAccess() {
 		return (pNode != null) ? pNode : (pNode = new NodeElements());
 	}
@@ -2808,11 +2939,15 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getNodeFigureAccess().getRule();
 	}
 
-	//// TODO hstack / vstack
+	//// TODO hstack / vstack (enum?)
+	//
+	//// TODO validation
+	//
+	//// TODO change modelClass to modelReference
 	//
 	//NodeContainer:
-	//	type=("stack" | "free")? "container" ("for" modelClass=[ecore::EClass|QualifiedName])? (":" value=INT format=("%" |
-	//	"px"))? "{" figures+=NodeFigure+ "}";
+	//	type=("stack" | "free")? "container" ("for" modelReference=[ecore::EReference|QualifiedName])? (":" value=INT
+	//	format=("%" | "px"))? "{" figures+=NodeFigure+ "}";
 	public NodeContainerElements getNodeContainerAccess() {
 		return (pNodeContainer != null) ? pNodeContainer : (pNodeContainer = new NodeContainerElements());
 	}
@@ -2823,12 +2958,17 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// TODO: validation - complex requires source e target, complex structure
 	//
+	//// TODO text / icon
+	//
 	//Link:
 	//	"link" (modelReference=[ecore::EReference|QualifiedName] | complex?="object" modelClass=[ecore::EClass|QualifiedName]
 	//	"source" sourceReference=[ecore::EReference|QualifiedName] "target" targetReference=[ecore::EReference|QualifiedName])
-	//	"{" manhattan?="manhattan"? ("style" style=ID)? (attributes+=Attribute | linefeatures+=LineFeature |
-	//	colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature)* ("origin" "{" sourceStatic=StaticFigure?
-	//	sourceDynamic+=DynamicFigure* "}")? ("destiny" "{" targetStatic=StaticFigure? targetDynamic+=DynamicFigure* "}")? //defenido no modelo? [ecore::EReference]
+	//	"{" manhattan?="manhattan"? ("style" style=ID)? ("icon" icon=ID)? ("name" name=STRING)? (attributes+=Attribute |
+	//	linefeatures+=LineFeature | colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature)* ("origin" "{"
+	//	sourceStatic=StaticFigure? sourceDynamic+=DynamicFigure* "}")? ("destiny" "{" targetStatic=StaticFigure?
+	//	targetDynamic+=DynamicFigure* "}")? // porque não apenas placings?
+	//
+	//	//defenido no modelo? [ecore::EReference]
 	//
 	//	placings+=PlacingFigure* "}";
 	public LinkElements getLinkAccess() {
@@ -2839,6 +2979,10 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getLinkAccess().getRule();
 	}
 
+	//// % opcional? ou considerar pixeis?
+	//
+	//// ter "constantes" para origem destino
+	//
 	//PlacingFigure:
 	//	"placing" "at" pos=INT "%" "{" placingStatic=StaticFigure? placingDynamic+=DynamicFigure* "}";
 	public PlacingFigureElements getPlacingFigureAccess() {
@@ -2849,6 +2993,8 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getPlacingFigureAccess().getRule();
 	}
 
+	//// este text é diferente do figure: Label .... é confuso para quem está a aprender a linguagem   
+	//
 	//DynamicFigure:
 	//	"text" figure=DynamicElement "{" features=FigureFeatures "}";
 	public DynamicFigureElements getDynamicFigureAccess() {
@@ -2879,7 +3025,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getStaticFigureAccess().getRule();
 	}
 
-	//// TODO enum
+	//// TODO enum - porque é que esta não é uma figura como as outras?
 	//
 	//StaticElement:
 	//	"Arrow" | "Triangle" | "Rhombus" | "Polygon" | "Polyline";
@@ -2891,6 +3037,8 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getStaticElementAccess().getRule();
 	}
 
+	//// TODO: lowercase
+	//
 	//enum FigureShape:
 	//	SQUARE="Square" | RECTANGLE="Rectangle" | ROUNDED_RECTANGLE="RoundedRectangle" | CIRCLE="Circle" | ELLIPSE="Ellipse" |
 	//	TRIANGLE="Triangle" | RHOMBUS="Rhombus" | POLYGON="Polygon" | POLYLINE="Polyline" | LABEL="Label" | IMAGE="Image";
@@ -2902,7 +3050,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getFigureShapeAccess().getRule();
 	}
 
-	//// TODO: model ids
+	//// TODO: model ids / name Anchor
 	//
 	//NodeAnchor:
 	//	"anchor" ("to" object=ID)? ":" passX="-"? X=INT formatX=("%" | "lf" | "rg") "," passY="-"? Y=INT formatY=("%" | "up" |
@@ -2915,7 +3063,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getNodeAnchorAccess().getRule();
 	}
 
-	//// TODO: model ids - change syntax
+	//// TODO: model ids - change syntax / name AnchorConstraint -- N connections?
 	//
 	//ArrowAnchor:
 	//	"set" reference=ID "as" type=("incoming" | "outgoing" | "both") "connection" ("using" N=INT "connections")?;
@@ -2928,10 +3076,12 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//FigureFeatures:
-	//	{FigureFeatures} (linefeatures+=LineFeature | centerfeatures+=CenterFeature | alignfeatures+=AlignFeature |
-	//	gradientfeatures+=GradientFeature | pointfeatures+=PointFeature | sizefeatures+=SizeFeature |
-	//	positionfeatures+=PositionFeature | colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature |
-	//	booleanfeatures+=BooleanFeature | stringfeatures+=StringFeature | customfeatures+=CustomFeature)*;
+	//	{FigureFeatures} (linefeatures+=LineFeature //	        	(customfeatures += CustomFeature)
+	//
+	//	| centerfeatures+=CenterFeature | alignfeatures+=AlignFeature | gradientfeatures+=GradientFeature |
+	//	pointfeatures+=PointFeature | sizefeatures+=SizeFeature | positionfeatures+=PositionFeature |
+	//	colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature | booleanfeatures+=BooleanFeature |
+	//	stringfeatures+=StringFeature)*;
 	public FigureFeaturesElements getFigureFeaturesAccess() {
 		return (pFigureFeatures != null) ? pFigureFeatures : (pFigureFeatures = new FigureFeaturesElements());
 	}
@@ -2940,16 +3090,14 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getFigureFeaturesAccess().getRule();
 	}
 
-	//CustomFeature:
-	//	key="attribute" ":" attribute=ID "=" value=ID;
-	public CustomFeatureElements getCustomFeatureAccess() {
-		return (pCustomFeature != null) ? pCustomFeature : (pCustomFeature = new CustomFeatureElements());
-	}
-	
-	public ParserRule getCustomFeatureRule() {
-		return getCustomFeatureAccess().getRule();
-	}
-
+	//// TODO: remover?
+	//
+	////CustomFeature:
+	//
+	////	key=('attribute') ':' attribute=ID '=' value=ID
+	//
+	////;
+	//
 	//StyleFeature:
 	//	LayoutFeature | CenterFeature;
 	public StyleFeatureElements getStyleFeatureAccess() {
@@ -2990,6 +3138,8 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getAlignFeatureAccess().getRule();
 	}
 
+	//// TODO: enum
+	//
 	//// TODO: custom gradient
 	//
 	//GradientFeature:
@@ -3044,7 +3194,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getColorFeatureAccess().getRule();
 	}
 
-	//// TODO enum
+	//// TODO enum , já agora 16 standard
 	//
 	//Color:
 	//	"WHITE" | "BLACK" | "BLUE" | "GREEN" | "RED" | "YELLOW" | "CYAN" | "ORANGE";
@@ -3130,6 +3280,10 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getLineStyleAccess().getRule();
 	}
 
+	//// rename? ConditionalExpression?
+	//
+	//// TODO: key modelReference ecore::EAttribute
+	//
 	//AtributeExpression:
 	//	key=ID operator=("=" | "<>") value=AtributeValue "->";
 	public AtributeExpressionElements getAtributeExpressionAccess() {
@@ -3149,6 +3303,16 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getAtributeValueRule() {
 		return getAtributeValueAccess().getRule();
+	}
+
+	//AttributeReference:
+	//	modelAttribute=[ecore::EAttribute|QualifiedName] ("/" path+=AttributeReference)*;
+	public AttributeReferenceElements getAttributeReferenceAccess() {
+		return (pAttributeReference != null) ? pAttributeReference : (pAttributeReference = new AttributeReferenceElements());
+	}
+	
+	public ParserRule getAttributeReferenceRule() {
+		return getAttributeReferenceAccess().getRule();
 	}
 
 	//terminal ID:
