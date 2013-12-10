@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -30,7 +31,7 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeContainerImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeContainerImpl#getModelClass <em>Model Class</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeContainerImpl#getModelReference <em>Model Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeContainerImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeContainerImpl#getFormat <em>Format</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeContainerImpl#getFigures <em>Figures</em>}</li>
@@ -62,14 +63,14 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
   protected String type = TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getModelClass() <em>Model Class</em>}' reference.
+   * The cached value of the '{@link #getModelReference() <em>Model Reference</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getModelClass()
+   * @see #getModelReference()
    * @generated
    * @ordered
    */
-  protected EClass modelClass;
+  protected EReference modelReference;
 
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -170,19 +171,19 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getModelClass()
+  public EReference getModelReference()
   {
-    if (modelClass != null && modelClass.eIsProxy())
+    if (modelReference != null && modelReference.eIsProxy())
     {
-      InternalEObject oldModelClass = (InternalEObject)modelClass;
-      modelClass = (EClass)eResolveProxy(oldModelClass);
-      if (modelClass != oldModelClass)
+      InternalEObject oldModelReference = (InternalEObject)modelReference;
+      modelReference = (EReference)eResolveProxy(oldModelReference);
+      if (modelReference != oldModelReference)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, XdiagramPackage.NODE_CONTAINER__MODEL_CLASS, oldModelClass, modelClass));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, XdiagramPackage.NODE_CONTAINER__MODEL_REFERENCE, oldModelReference, modelReference));
       }
     }
-    return modelClass;
+    return modelReference;
   }
 
   /**
@@ -190,9 +191,9 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass basicGetModelClass()
+  public EReference basicGetModelReference()
   {
-    return modelClass;
+    return modelReference;
   }
 
   /**
@@ -200,12 +201,12 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setModelClass(EClass newModelClass)
+  public void setModelReference(EReference newModelReference)
   {
-    EClass oldModelClass = modelClass;
-    modelClass = newModelClass;
+    EReference oldModelReference = modelReference;
+    modelReference = newModelReference;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.NODE_CONTAINER__MODEL_CLASS, oldModelClass, modelClass));
+      eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.NODE_CONTAINER__MODEL_REFERENCE, oldModelReference, modelReference));
   }
 
   /**
@@ -296,9 +297,9 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
     {
       case XdiagramPackage.NODE_CONTAINER__TYPE:
         return getType();
-      case XdiagramPackage.NODE_CONTAINER__MODEL_CLASS:
-        if (resolve) return getModelClass();
-        return basicGetModelClass();
+      case XdiagramPackage.NODE_CONTAINER__MODEL_REFERENCE:
+        if (resolve) return getModelReference();
+        return basicGetModelReference();
       case XdiagramPackage.NODE_CONTAINER__VALUE:
         return getValue();
       case XdiagramPackage.NODE_CONTAINER__FORMAT:
@@ -323,8 +324,8 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
       case XdiagramPackage.NODE_CONTAINER__TYPE:
         setType((String)newValue);
         return;
-      case XdiagramPackage.NODE_CONTAINER__MODEL_CLASS:
-        setModelClass((EClass)newValue);
+      case XdiagramPackage.NODE_CONTAINER__MODEL_REFERENCE:
+        setModelReference((EReference)newValue);
         return;
       case XdiagramPackage.NODE_CONTAINER__VALUE:
         setValue((Integer)newValue);
@@ -353,8 +354,8 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
       case XdiagramPackage.NODE_CONTAINER__TYPE:
         setType(TYPE_EDEFAULT);
         return;
-      case XdiagramPackage.NODE_CONTAINER__MODEL_CLASS:
-        setModelClass((EClass)null);
+      case XdiagramPackage.NODE_CONTAINER__MODEL_REFERENCE:
+        setModelReference((EReference)null);
         return;
       case XdiagramPackage.NODE_CONTAINER__VALUE:
         setValue(VALUE_EDEFAULT);
@@ -381,8 +382,8 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
     {
       case XdiagramPackage.NODE_CONTAINER__TYPE:
         return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-      case XdiagramPackage.NODE_CONTAINER__MODEL_CLASS:
-        return modelClass != null;
+      case XdiagramPackage.NODE_CONTAINER__MODEL_REFERENCE:
+        return modelReference != null;
       case XdiagramPackage.NODE_CONTAINER__VALUE:
         return value != VALUE_EDEFAULT;
       case XdiagramPackage.NODE_CONTAINER__FORMAT:

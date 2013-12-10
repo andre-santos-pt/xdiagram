@@ -14,12 +14,10 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.eclipselabs.xdiagram.xtext.xdiagram.Attribute;
 import org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure;
 import org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature;
@@ -38,12 +36,9 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getModelReference <em>Model Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#isComplex <em>Complex</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getModelClass <em>Model Class</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getSourceReference <em>Source Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getTargetReference <em>Target Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#isManhattan <em>Manhattan</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getStyle <em>Style</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getLinefeatures <em>Linefeatures</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getColorfeatures <em>Colorfeatures</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getIntegerfeatures <em>Integerfeatures</em>}</li>
@@ -57,7 +52,7 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
  *
  * @generated
  */
-public class LinkImpl extends MinimalEObjectImpl.Container implements Link
+public class LinkImpl extends DiagramElementImpl implements Link
 {
   /**
    * The cached value of the '{@link #getModelReference() <em>Model Reference</em>}' reference.
@@ -88,16 +83,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
    * @ordered
    */
   protected boolean complex = COMPLEX_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getModelClass() <em>Model Class</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getModelClass()
-   * @generated
-   * @ordered
-   */
-  protected EClass modelClass;
 
   /**
    * The cached value of the '{@link #getSourceReference() <em>Source Reference</em>}' reference.
@@ -138,36 +123,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
    * @ordered
    */
   protected boolean manhattan = MANHATTAN_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getStyle() <em>Style</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getStyle()
-   * @generated
-   * @ordered
-   */
-  protected static final String STYLE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getStyle() <em>Style</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getStyle()
-   * @generated
-   * @ordered
-   */
-  protected String style = STYLE_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAttributes()
-   * @generated
-   * @ordered
-   */
-  protected EList<Attribute> attributes;
 
   /**
    * The cached value of the '{@link #getLinefeatures() <em>Linefeatures</em>}' containment reference list.
@@ -341,49 +296,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getModelClass()
-  {
-    if (modelClass != null && modelClass.eIsProxy())
-    {
-      InternalEObject oldModelClass = (InternalEObject)modelClass;
-      modelClass = (EClass)eResolveProxy(oldModelClass);
-      if (modelClass != oldModelClass)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, XdiagramPackage.LINK__MODEL_CLASS, oldModelClass, modelClass));
-      }
-    }
-    return modelClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass basicGetModelClass()
-  {
-    return modelClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setModelClass(EClass newModelClass)
-  {
-    EClass oldModelClass = modelClass;
-    modelClass = newModelClass;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.LINK__MODEL_CLASS, oldModelClass, modelClass));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getSourceReference()
   {
     if (sourceReference != null && sourceReference.eIsProxy())
@@ -486,43 +398,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
     manhattan = newManhattan;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.LINK__MANHATTAN, oldManhattan, manhattan));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getStyle()
-  {
-    return style;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setStyle(String newStyle)
-  {
-    String oldStyle = style;
-    style = newStyle;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.LINK__STYLE, oldStyle, style));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Attribute> getAttributes()
-  {
-    if (attributes == null)
-    {
-      attributes = new EObjectContainmentEList<Attribute>(Attribute.class, this, XdiagramPackage.LINK__ATTRIBUTES);
-    }
-    return attributes;
   }
 
   /**
@@ -715,8 +590,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
   {
     switch (featureID)
     {
-      case XdiagramPackage.LINK__ATTRIBUTES:
-        return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
       case XdiagramPackage.LINK__LINEFEATURES:
         return ((InternalEList<?>)getLinefeatures()).basicRemove(otherEnd, msgs);
       case XdiagramPackage.LINK__COLORFEATURES:
@@ -752,9 +625,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
         return basicGetModelReference();
       case XdiagramPackage.LINK__COMPLEX:
         return isComplex();
-      case XdiagramPackage.LINK__MODEL_CLASS:
-        if (resolve) return getModelClass();
-        return basicGetModelClass();
       case XdiagramPackage.LINK__SOURCE_REFERENCE:
         if (resolve) return getSourceReference();
         return basicGetSourceReference();
@@ -763,10 +633,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
         return basicGetTargetReference();
       case XdiagramPackage.LINK__MANHATTAN:
         return isManhattan();
-      case XdiagramPackage.LINK__STYLE:
-        return getStyle();
-      case XdiagramPackage.LINK__ATTRIBUTES:
-        return getAttributes();
       case XdiagramPackage.LINK__LINEFEATURES:
         return getLinefeatures();
       case XdiagramPackage.LINK__COLORFEATURES:
@@ -804,9 +670,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
       case XdiagramPackage.LINK__COMPLEX:
         setComplex((Boolean)newValue);
         return;
-      case XdiagramPackage.LINK__MODEL_CLASS:
-        setModelClass((EClass)newValue);
-        return;
       case XdiagramPackage.LINK__SOURCE_REFERENCE:
         setSourceReference((EReference)newValue);
         return;
@@ -815,13 +678,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
         return;
       case XdiagramPackage.LINK__MANHATTAN:
         setManhattan((Boolean)newValue);
-        return;
-      case XdiagramPackage.LINK__STYLE:
-        setStyle((String)newValue);
-        return;
-      case XdiagramPackage.LINK__ATTRIBUTES:
-        getAttributes().clear();
-        getAttributes().addAll((Collection<? extends Attribute>)newValue);
         return;
       case XdiagramPackage.LINK__LINEFEATURES:
         getLinefeatures().clear();
@@ -873,9 +729,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
       case XdiagramPackage.LINK__COMPLEX:
         setComplex(COMPLEX_EDEFAULT);
         return;
-      case XdiagramPackage.LINK__MODEL_CLASS:
-        setModelClass((EClass)null);
-        return;
       case XdiagramPackage.LINK__SOURCE_REFERENCE:
         setSourceReference((EReference)null);
         return;
@@ -884,12 +737,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
         return;
       case XdiagramPackage.LINK__MANHATTAN:
         setManhattan(MANHATTAN_EDEFAULT);
-        return;
-      case XdiagramPackage.LINK__STYLE:
-        setStyle(STYLE_EDEFAULT);
-        return;
-      case XdiagramPackage.LINK__ATTRIBUTES:
-        getAttributes().clear();
         return;
       case XdiagramPackage.LINK__LINEFEATURES:
         getLinefeatures().clear();
@@ -933,18 +780,12 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
         return modelReference != null;
       case XdiagramPackage.LINK__COMPLEX:
         return complex != COMPLEX_EDEFAULT;
-      case XdiagramPackage.LINK__MODEL_CLASS:
-        return modelClass != null;
       case XdiagramPackage.LINK__SOURCE_REFERENCE:
         return sourceReference != null;
       case XdiagramPackage.LINK__TARGET_REFERENCE:
         return targetReference != null;
       case XdiagramPackage.LINK__MANHATTAN:
         return manhattan != MANHATTAN_EDEFAULT;
-      case XdiagramPackage.LINK__STYLE:
-        return STYLE_EDEFAULT == null ? style != null : !STYLE_EDEFAULT.equals(style);
-      case XdiagramPackage.LINK__ATTRIBUTES:
-        return attributes != null && !attributes.isEmpty();
       case XdiagramPackage.LINK__LINEFEATURES:
         return linefeatures != null && !linefeatures.isEmpty();
       case XdiagramPackage.LINK__COLORFEATURES:
@@ -980,8 +821,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link
     result.append(complex);
     result.append(", manhattan: ");
     result.append(manhattan);
-    result.append(", style: ");
-    result.append(style);
     result.append(')');
     return result.toString();
   }

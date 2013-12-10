@@ -4,8 +4,8 @@ package org.eclipselabs.xdiagram.xtext.xdiagram;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer#getType <em>Type</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer#getModelClass <em>Model Class</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer#getModelReference <em>Model Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer#getValue <em>Value</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer#getFormat <em>Format</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer#getFigures <em>Figures</em>}</li>
@@ -56,30 +56,30 @@ public interface NodeContainer extends EObject
   void setType(String value);
 
   /**
-   * Returns the value of the '<em><b>Model Class</b></em>' reference.
+   * Returns the value of the '<em><b>Model Reference</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Model Class</em>' reference isn't clear,
+   * If the meaning of the '<em>Model Reference</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Model Class</em>' reference.
-   * @see #setModelClass(EClass)
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getNodeContainer_ModelClass()
+   * @return the value of the '<em>Model Reference</em>' reference.
+   * @see #setModelReference(EReference)
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getNodeContainer_ModelReference()
    * @model
    * @generated
    */
-  EClass getModelClass();
+  EReference getModelReference();
 
   /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer#getModelClass <em>Model Class</em>}' reference.
+   * Sets the value of the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer#getModelReference <em>Model Reference</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Model Class</em>' reference.
-   * @see #getModelClass()
+   * @param value the new value of the '<em>Model Reference</em>' reference.
+   * @see #getModelReference()
    * @generated
    */
-  void setModelClass(EClass value);
+  void setModelReference(EReference value);
 
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.

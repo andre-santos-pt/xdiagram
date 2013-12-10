@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getModelClass <em>Model Class</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getNodes <em>Nodes</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getLinks <em>Links</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getAttr <em>Attr</em>}</li>
  * </ul>
  * </p>
  *
@@ -145,5 +146,21 @@ public interface XDiagram extends EObject
    * @generated
    */
   EList<Link> getLinks();
+
+  /**
+   * Returns the value of the '<em><b>Attr</b></em>' containment reference list.
+   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.AttributeReference}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Attr</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Attr</em>' containment reference list.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getXDiagram_Attr()
+   * @model containment="true"
+   * @generated
+   */
+  EList<AttributeReference> getAttr();
 
 } // XDiagram

@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipselabs.xdiagram.xtext.xdiagram.AttributeReference;
 import org.eclipselabs.xdiagram.xtext.xdiagram.ImportStatement;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Link;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Node;
@@ -38,6 +39,7 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.XDiagramImpl#getModelClass <em>Model Class</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.XDiagramImpl#getNodes <em>Nodes</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.XDiagramImpl#getLinks <em>Links</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.XDiagramImpl#getAttr <em>Attr</em>}</li>
  * </ul>
  * </p>
  *
@@ -114,6 +116,16 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * @ordered
    */
   protected EList<Link> links;
+
+  /**
+   * The cached value of the '{@link #getAttr() <em>Attr</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAttr()
+   * @generated
+   * @ordered
+   */
+  protected EList<AttributeReference> attr;
 
   /**
    * <!-- begin-user-doc -->
@@ -263,6 +275,20 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<AttributeReference> getAttr()
+  {
+    if (attr == null)
+    {
+      attr = new EObjectContainmentEList<AttributeReference>(AttributeReference.class, this, XdiagramPackage.XDIAGRAM__ATTR);
+    }
+    return attr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -276,6 +302,8 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         return ((InternalEList<?>)getNodes()).basicRemove(otherEnd, msgs);
       case XdiagramPackage.XDIAGRAM__LINKS:
         return ((InternalEList<?>)getLinks()).basicRemove(otherEnd, msgs);
+      case XdiagramPackage.XDIAGRAM__ATTR:
+        return ((InternalEList<?>)getAttr()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -303,6 +331,8 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         return getNodes();
       case XdiagramPackage.XDIAGRAM__LINKS:
         return getLinks();
+      case XdiagramPackage.XDIAGRAM__ATTR:
+        return getAttr();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -340,6 +370,10 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         getLinks().clear();
         getLinks().addAll((Collection<? extends Link>)newValue);
         return;
+      case XdiagramPackage.XDIAGRAM__ATTR:
+        getAttr().clear();
+        getAttr().addAll((Collection<? extends AttributeReference>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -372,6 +406,9 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
       case XdiagramPackage.XDIAGRAM__LINKS:
         getLinks().clear();
         return;
+      case XdiagramPackage.XDIAGRAM__ATTR:
+        getAttr().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -398,6 +435,8 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         return nodes != null && !nodes.isEmpty();
       case XdiagramPackage.XDIAGRAM__LINKS:
         return links != null && !links.isEmpty();
+      case XdiagramPackage.XDIAGRAM__ATTR:
+        return attr != null && !attr.isEmpty();
     }
     return super.eIsSet(featureID);
   }

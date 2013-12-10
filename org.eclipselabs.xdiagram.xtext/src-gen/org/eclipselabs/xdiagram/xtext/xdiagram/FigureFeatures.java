@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getIntegerfeatures <em>Integerfeatures</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getBooleanfeatures <em>Booleanfeatures</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getStringfeatures <em>Stringfeatures</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getCustomfeatures <em>Customfeatures</em>}</li>
  * </ul>
  * </p>
  *
@@ -210,21 +209,5 @@ public interface FigureFeatures extends EObject
    * @generated
    */
   EList<StringFeature> getStringfeatures();
-
-  /**
-   * Returns the value of the '<em><b>Customfeatures</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.CustomFeature}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Customfeatures</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Customfeatures</em>' containment reference list.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getFigureFeatures_Customfeatures()
-   * @model containment="true"
-   * @generated
-   */
-  EList<CustomFeature> getCustomfeatures();
 
 } // FigureFeatures

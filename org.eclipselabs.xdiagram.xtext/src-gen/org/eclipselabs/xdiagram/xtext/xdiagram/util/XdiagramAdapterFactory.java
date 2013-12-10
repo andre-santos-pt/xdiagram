@@ -90,6 +90,11 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
         return createStyleAdapter();
       }
       @Override
+      public Adapter caseDiagramElement(DiagramElement object)
+      {
+        return createDiagramElementAdapter();
+      }
+      @Override
       public Adapter caseNode(Node object)
       {
         return createNodeAdapter();
@@ -143,11 +148,6 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
       public Adapter caseFigureFeatures(FigureFeatures object)
       {
         return createFigureFeaturesAdapter();
-      }
-      @Override
-      public Adapter caseCustomFeature(CustomFeature object)
-      {
-        return createCustomFeatureAdapter();
       }
       @Override
       public Adapter caseStyleFeature(StyleFeature object)
@@ -235,6 +235,11 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
         return createAtributeValueAdapter();
       }
       @Override
+      public Adapter caseAttributeReference(AttributeReference object)
+      {
+        return createAttributeReferenceAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -297,6 +302,21 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createStyleAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.DiagramElement <em>Diagram Element</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.DiagramElement
+   * @generated
+   */
+  public Adapter createDiagramElementAdapter()
   {
     return null;
   }
@@ -462,21 +482,6 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFigureFeaturesAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.CustomFeature <em>Custom Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.CustomFeature
-   * @generated
-   */
-  public Adapter createCustomFeatureAdapter()
   {
     return null;
   }
@@ -732,6 +737,21 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAtributeValueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AttributeReference <em>Attribute Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AttributeReference
+   * @generated
+   */
+  public Adapter createAttributeReferenceAdapter()
   {
     return null;
   }

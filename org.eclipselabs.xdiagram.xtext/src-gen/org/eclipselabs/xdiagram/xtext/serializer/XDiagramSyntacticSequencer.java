@@ -19,15 +19,15 @@ public class XDiagramSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected XDiagramGrammarAccess grammarAccess;
 	protected AbstractElementAlias match_DoubleFeature___FullStopKeyword_3_0_INTTerminalRuleCall_3_1__q;
-	protected AbstractElementAlias match_Link___DestinyKeyword_7_0_LeftCurlyBracketKeyword_7_1_RightCurlyBracketKeyword_7_4__q;
-	protected AbstractElementAlias match_Link___OriginKeyword_6_0_LeftCurlyBracketKeyword_6_1_RightCurlyBracketKeyword_6_4__q;
+	protected AbstractElementAlias match_Link___DestinyKeyword_9_0_LeftCurlyBracketKeyword_9_1_RightCurlyBracketKeyword_9_4__q;
+	protected AbstractElementAlias match_Link___OriginKeyword_8_0_LeftCurlyBracketKeyword_8_1_RightCurlyBracketKeyword_8_4__q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (XDiagramGrammarAccess) access;
 		match_DoubleFeature___FullStopKeyword_3_0_INTTerminalRuleCall_3_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getDoubleFeatureAccess().getFullStopKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getDoubleFeatureAccess().getINTTerminalRuleCall_3_1()));
-		match_Link___DestinyKeyword_7_0_LeftCurlyBracketKeyword_7_1_RightCurlyBracketKeyword_7_4__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getLinkAccess().getDestinyKeyword_7_0()), new TokenAlias(false, false, grammarAccess.getLinkAccess().getLeftCurlyBracketKeyword_7_1()), new TokenAlias(false, false, grammarAccess.getLinkAccess().getRightCurlyBracketKeyword_7_4()));
-		match_Link___OriginKeyword_6_0_LeftCurlyBracketKeyword_6_1_RightCurlyBracketKeyword_6_4__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getLinkAccess().getOriginKeyword_6_0()), new TokenAlias(false, false, grammarAccess.getLinkAccess().getLeftCurlyBracketKeyword_6_1()), new TokenAlias(false, false, grammarAccess.getLinkAccess().getRightCurlyBracketKeyword_6_4()));
+		match_Link___DestinyKeyword_9_0_LeftCurlyBracketKeyword_9_1_RightCurlyBracketKeyword_9_4__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getLinkAccess().getDestinyKeyword_9_0()), new TokenAlias(false, false, grammarAccess.getLinkAccess().getLeftCurlyBracketKeyword_9_1()), new TokenAlias(false, false, grammarAccess.getLinkAccess().getRightCurlyBracketKeyword_9_4()));
+		match_Link___OriginKeyword_8_0_LeftCurlyBracketKeyword_8_1_RightCurlyBracketKeyword_8_4__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getLinkAccess().getOriginKeyword_8_0()), new TokenAlias(false, false, grammarAccess.getLinkAccess().getLeftCurlyBracketKeyword_8_1()), new TokenAlias(false, false, grammarAccess.getLinkAccess().getRightCurlyBracketKeyword_8_4()));
 	}
 	
 	@Override
@@ -54,10 +54,10 @@ public class XDiagramSyntacticSequencer extends AbstractSyntacticSequencer {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
 			if(match_DoubleFeature___FullStopKeyword_3_0_INTTerminalRuleCall_3_1__q.equals(syntax))
 				emit_DoubleFeature___FullStopKeyword_3_0_INTTerminalRuleCall_3_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Link___DestinyKeyword_7_0_LeftCurlyBracketKeyword_7_1_RightCurlyBracketKeyword_7_4__q.equals(syntax))
-				emit_Link___DestinyKeyword_7_0_LeftCurlyBracketKeyword_7_1_RightCurlyBracketKeyword_7_4__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Link___OriginKeyword_6_0_LeftCurlyBracketKeyword_6_1_RightCurlyBracketKeyword_6_4__q.equals(syntax))
-				emit_Link___OriginKeyword_6_0_LeftCurlyBracketKeyword_6_1_RightCurlyBracketKeyword_6_4__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Link___DestinyKeyword_9_0_LeftCurlyBracketKeyword_9_1_RightCurlyBracketKeyword_9_4__q.equals(syntax))
+				emit_Link___DestinyKeyword_9_0_LeftCurlyBracketKeyword_9_1_RightCurlyBracketKeyword_9_4__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Link___OriginKeyword_8_0_LeftCurlyBracketKeyword_8_1_RightCurlyBracketKeyword_8_4__q.equals(syntax))
+				emit_Link___OriginKeyword_8_0_LeftCurlyBracketKeyword_8_1_RightCurlyBracketKeyword_8_4__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -74,7 +74,7 @@ public class XDiagramSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     ('destiny' '{' '}')?
 	 */
-	protected void emit_Link___DestinyKeyword_7_0_LeftCurlyBracketKeyword_7_1_RightCurlyBracketKeyword_7_4__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Link___DestinyKeyword_9_0_LeftCurlyBracketKeyword_9_1_RightCurlyBracketKeyword_9_4__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -82,7 +82,7 @@ public class XDiagramSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     ('origin' '{' '}')?
 	 */
-	protected void emit_Link___OriginKeyword_6_0_LeftCurlyBracketKeyword_6_1_RightCurlyBracketKeyword_6_4__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Link___OriginKeyword_8_0_LeftCurlyBracketKeyword_8_1_RightCurlyBracketKeyword_8_4__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

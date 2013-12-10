@@ -68,6 +68,7 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
       case XdiagramPackage.XDIAGRAM: return createXDiagram();
       case XdiagramPackage.IMPORT_STATEMENT: return createImportStatement();
       case XdiagramPackage.STYLE: return createStyle();
+      case XdiagramPackage.DIAGRAM_ELEMENT: return createDiagramElement();
       case XdiagramPackage.NODE: return createNode();
       case XdiagramPackage.ATTRIBUTE: return createAttribute();
       case XdiagramPackage.NODE_FIGURE: return createNodeFigure();
@@ -79,7 +80,6 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
       case XdiagramPackage.NODE_ANCHOR: return createNodeAnchor();
       case XdiagramPackage.ARROW_ANCHOR: return createArrowAnchor();
       case XdiagramPackage.FIGURE_FEATURES: return createFigureFeatures();
-      case XdiagramPackage.CUSTOM_FEATURE: return createCustomFeature();
       case XdiagramPackage.STYLE_FEATURE: return createStyleFeature();
       case XdiagramPackage.LAYOUT_FEATURE: return createLayoutFeature();
       case XdiagramPackage.CENTER_FEATURE: return createCenterFeature();
@@ -97,6 +97,7 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
       case XdiagramPackage.LINE_FEATURE: return createLineFeature();
       case XdiagramPackage.ATRIBUTE_EXPRESSION: return createAtributeExpression();
       case XdiagramPackage.ATRIBUTE_VALUE: return createAtributeValue();
+      case XdiagramPackage.ATTRIBUTE_REFERENCE: return createAttributeReference();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -167,6 +168,17 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
   {
     StyleImpl style = new StyleImpl();
     return style;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DiagramElement createDiagramElement()
+  {
+    DiagramElementImpl diagramElement = new DiagramElementImpl();
+    return diagramElement;
   }
 
   /**
@@ -288,17 +300,6 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
   {
     FigureFeaturesImpl figureFeatures = new FigureFeaturesImpl();
     return figureFeatures;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public CustomFeature createCustomFeature()
-  {
-    CustomFeatureImpl customFeature = new CustomFeatureImpl();
-    return customFeature;
   }
 
   /**
@@ -486,6 +487,17 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
   {
     AtributeValueImpl atributeValue = new AtributeValueImpl();
     return atributeValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AttributeReference createAttributeReference()
+  {
+    AttributeReferenceImpl attributeReference = new AttributeReferenceImpl();
+    return attributeReference;
   }
 
   /**

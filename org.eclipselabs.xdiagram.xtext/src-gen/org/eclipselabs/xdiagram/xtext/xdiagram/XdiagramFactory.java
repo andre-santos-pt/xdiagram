@@ -50,6 +50,15 @@ public interface XdiagramFactory extends EFactory
   Style createStyle();
 
   /**
+   * Returns a new object of class '<em>Diagram Element</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Diagram Element</em>'.
+   * @generated
+   */
+  DiagramElement createDiagramElement();
+
+  /**
    * Returns a new object of class '<em>Node</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -147,15 +156,6 @@ public interface XdiagramFactory extends EFactory
    * @generated
    */
   FigureFeatures createFigureFeatures();
-
-  /**
-   * Returns a new object of class '<em>Custom Feature</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Custom Feature</em>'.
-   * @generated
-   */
-  CustomFeature createCustomFeature();
 
   /**
    * Returns a new object of class '<em>Style Feature</em>'.
@@ -309,6 +309,15 @@ public interface XdiagramFactory extends EFactory
    * @generated
    */
   AtributeValue createAtributeValue();
+
+  /**
+   * Returns a new object of class '<em>Attribute Reference</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Attribute Reference</em>'.
+   * @generated
+   */
+  AttributeReference createAttributeReference();
 
   /**
    * Returns the package supported by this factory.

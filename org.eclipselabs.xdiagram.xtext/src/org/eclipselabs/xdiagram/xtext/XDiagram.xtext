@@ -15,6 +15,7 @@ XDiagram:
 //    '{'
     	((nodes += Node)|(links += Link))+
 //	'}'
+	attr+=AttributeReference+
 	;
 
 // importedNamespace apparently cannot be on the root element
@@ -37,6 +38,10 @@ Style:
 	'}'
 ;
 
+// TODO: common: text / icon / tooltip
+DiagramElement:
+	Node | Link
+;
 
 // resizable default?
 // TODO text / icon
@@ -48,6 +53,8 @@ Node:
    		 (resizable?='resizable')?
     	 ('style' style=ID)? 
     	 ('icon' icon=ID)?
+    	 ('name' name=STRING)?
+    	 
     	(attributes += Attribute)*
     	(figures += NodeFigure)*
 		(containers += NodeContainer)*
@@ -69,8 +76,9 @@ NodeFigure:
 
 // TODO hstack / vstack (enum?)
 // TODO validation
+// TODO change modelClass to modelReference
 NodeContainer:
-	(type=('stack'|'free'))? 'container' ('for' modelClass=[ecore::EClass|QualifiedName])? (':' value=INT format=('%'|'px'))?
+	(type=('stack'|'free'))? 'container' ('for' modelReference=[ecore::EReference|QualifiedName])? (':' value=INT format=('%'|'px'))?
 	'{'
 		(figures += NodeFigure)+
 	'}'
@@ -80,6 +88,7 @@ NodeContainer:
 
 
 // TODO: validation - complex requires source e target, complex structure
+// TODO text / icon
 Link:
     'link' (
     	modelReference=[ecore::EReference|QualifiedName] | 
@@ -92,6 +101,9 @@ Link:
     '{'
     	(manhattan?=('manhattan'))?
     	('style' style=ID)?
+    	('icon' icon=ID)?
+    	('name' name=STRING)?
+    	
     	(
     			(attributes += Attribute) |
 	        	(linefeatures += LineFeature) |
@@ -109,6 +121,7 @@ Link:
 			(targetDynamic += DynamicFigure)*			
 		'}')?
 		
+		// porque não apenas placings?
 	    //defenido no modelo? [ecore::EReference]
 	    (placings += PlacingFigure)*		
     '}';
@@ -116,6 +129,8 @@ Link:
     
     
 
+// % opcional? ou considerar pixeis?
+// ter "constantes" para origem destino
 PlacingFigure:
 	'placing' 'at' pos=INT '%'
 	'{'			
@@ -123,7 +138,8 @@ PlacingFigure:
 		(placingDynamic += DynamicFigure)*			
 	'}'
 ;
-   
+
+// este text é diferente do figure: Label .... é confuso para quem está a aprender a linguagem   
 DynamicFigure:
 	'text' figure=DynamicElement '{'
     		features=FigureFeatures
@@ -140,12 +156,13 @@ StaticFigure:
 	'}'
 ;
 
-// TODO enum
+// TODO enum - porque é que esta não é uma figura como as outras?
 StaticElement:
   ('Arrow'|'Triangle'|'Rhombus'|'Polygon'|'Polyline')
 ;
 
 
+// TODO: lowercase
 enum FigureShape:
 	SQUARE = 'Square' |
 	RECTANGLE = 'Rectangle' |
@@ -162,7 +179,7 @@ enum FigureShape:
 
 
 
-// TODO: model ids
+// TODO: model ids / name Anchor
 NodeAnchor:
 	'anchor' ('to' object=ID)? ':' (passX=('-'))? X=INT formatX=('%'|'lf'|'rg') ',' (passY=('-'))? Y=INT formatY=('%'|'up'|'dw')
 	'{'
@@ -171,7 +188,7 @@ NodeAnchor:
 	'}'
 ;
 
-// TODO: model ids - change syntax
+// TODO: model ids - change syntax / name AnchorConstraint -- N connections?
 ArrowAnchor:
 	'set' reference=ID 'as' type=('incoming'|'outgoing'|'both') 'connection' ('using' N=INT 'connections')?
 ;
@@ -193,14 +210,15 @@ FigureFeatures:
 				(colorfeatures += ColorFeature) |
 	        	(integerfeatures += IntegerFeature) |
 	        	(booleanfeatures += BooleanFeature) |
-	        	(stringfeatures += StringFeature) |
-	        	(customfeatures += CustomFeature)
+	        	(stringfeatures += StringFeature)
+//	        	(customfeatures += CustomFeature)
 			)*
 ;
 
-CustomFeature:
-	key=('attribute') ':' attribute=ID '=' value=ID
-;
+// TODO: remover?
+//CustomFeature:
+//	key=('attribute') ':' attribute=ID '=' value=ID
+//;
 
 StyleFeature:
 	LayoutFeature | CenterFeature
@@ -275,6 +293,9 @@ LineStyle:
 	('solid'|'dash'|'dot'|'dashdot')
 ;
 
+
+// rename? ConditionalExpression?
+// TODO: key modelReference ecore::EAttribute
 AtributeExpression:
 	key=ID operator=('='|'<>') value=AtributeValue '->'
 ;
@@ -288,6 +309,11 @@ AtributeValue:
 	(valueDAY=INT '-' valueMONTH=INT '-' valueYEAR=INT)
 ;
 
+
+// future
+AttributeReference:
+	modelAttribute=[ecore::EAttribute|QualifiedName] ('/' path+=AttributeReference)*
+;
 
 
 
