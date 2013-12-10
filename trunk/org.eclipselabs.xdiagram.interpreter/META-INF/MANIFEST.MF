@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-SymbolicName: org.eclipselabs.xdiagram.interpreter;singleton:=true
 Require-Bundle: org.eclipse.graphiti;bundle-version="0.9.1",
  org.eclipse.graphiti.ui;bundle-version="0.9.1",

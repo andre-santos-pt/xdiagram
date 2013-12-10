@@ -78,6 +78,7 @@ public class GenericFeatureProvider extends DefaultFeatureProvider {
 			graphicsProvider.setup(getDiagramTypeProvider().getDiagram().getDiagramTypeId(), desc.properties, desc.bundle);
 		} catch (ProviderException e) {
 			System.err.println("Problem in graphics provider '" + graphicsProvider.getClass().getName() + "' :" + e.getMessage());
+			return null;
 		}
 
 		ePackage = EPackage.Registry.INSTANCE.getEPackage(desc.ecoreURI);
