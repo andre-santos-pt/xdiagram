@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.eclipselabs.xdiagram.xtext.xdiagram.AttributeReference;
 import org.eclipselabs.xdiagram.xtext.xdiagram.ImportStatement;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Link;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Node;
@@ -35,11 +34,10 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.XDiagramImpl#getImportURI <em>Import URI</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.XDiagramImpl#getImports <em>Imports</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.XDiagramImpl#getStyles <em>Styles</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.XDiagramImpl#getModelClass <em>Model Class</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.XDiagramImpl#getStyles <em>Styles</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.XDiagramImpl#getNodes <em>Nodes</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.XDiagramImpl#getLinks <em>Links</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.XDiagramImpl#getAttr <em>Attr</em>}</li>
  * </ul>
  * </p>
  *
@@ -78,16 +76,6 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
   protected EList<ImportStatement> imports;
 
   /**
-   * The cached value of the '{@link #getStyles() <em>Styles</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getStyles()
-   * @generated
-   * @ordered
-   */
-  protected EList<Style> styles;
-
-  /**
    * The cached value of the '{@link #getModelClass() <em>Model Class</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -96,6 +84,16 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * @ordered
    */
   protected EClass modelClass;
+
+  /**
+   * The cached value of the '{@link #getStyles() <em>Styles</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStyles()
+   * @generated
+   * @ordered
+   */
+  protected EList<Style> styles;
 
   /**
    * The cached value of the '{@link #getNodes() <em>Nodes</em>}' containment reference list.
@@ -116,16 +114,6 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * @ordered
    */
   protected EList<Link> links;
-
-  /**
-   * The cached value of the '{@link #getAttr() <em>Attr</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAttr()
-   * @generated
-   * @ordered
-   */
-  protected EList<AttributeReference> attr;
 
   /**
    * <!-- begin-user-doc -->
@@ -190,20 +178,6 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Style> getStyles()
-  {
-    if (styles == null)
-    {
-      styles = new EObjectContainmentEList<Style>(Style.class, this, XdiagramPackage.XDIAGRAM__STYLES);
-    }
-    return styles;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getModelClass()
   {
     if (modelClass != null && modelClass.eIsProxy())
@@ -247,6 +221,20 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Style> getStyles()
+  {
+    if (styles == null)
+    {
+      styles = new EObjectContainmentEList<Style>(Style.class, this, XdiagramPackage.XDIAGRAM__STYLES);
+    }
+    return styles;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<Node> getNodes()
   {
     if (nodes == null)
@@ -275,20 +263,6 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<AttributeReference> getAttr()
-  {
-    if (attr == null)
-    {
-      attr = new EObjectContainmentEList<AttributeReference>(AttributeReference.class, this, XdiagramPackage.XDIAGRAM__ATTR);
-    }
-    return attr;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -302,8 +276,6 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         return ((InternalEList<?>)getNodes()).basicRemove(otherEnd, msgs);
       case XdiagramPackage.XDIAGRAM__LINKS:
         return ((InternalEList<?>)getLinks()).basicRemove(otherEnd, msgs);
-      case XdiagramPackage.XDIAGRAM__ATTR:
-        return ((InternalEList<?>)getAttr()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -322,17 +294,15 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         return getImportURI();
       case XdiagramPackage.XDIAGRAM__IMPORTS:
         return getImports();
-      case XdiagramPackage.XDIAGRAM__STYLES:
-        return getStyles();
       case XdiagramPackage.XDIAGRAM__MODEL_CLASS:
         if (resolve) return getModelClass();
         return basicGetModelClass();
+      case XdiagramPackage.XDIAGRAM__STYLES:
+        return getStyles();
       case XdiagramPackage.XDIAGRAM__NODES:
         return getNodes();
       case XdiagramPackage.XDIAGRAM__LINKS:
         return getLinks();
-      case XdiagramPackage.XDIAGRAM__ATTR:
-        return getAttr();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -355,12 +325,12 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         getImports().clear();
         getImports().addAll((Collection<? extends ImportStatement>)newValue);
         return;
+      case XdiagramPackage.XDIAGRAM__MODEL_CLASS:
+        setModelClass((EClass)newValue);
+        return;
       case XdiagramPackage.XDIAGRAM__STYLES:
         getStyles().clear();
         getStyles().addAll((Collection<? extends Style>)newValue);
-        return;
-      case XdiagramPackage.XDIAGRAM__MODEL_CLASS:
-        setModelClass((EClass)newValue);
         return;
       case XdiagramPackage.XDIAGRAM__NODES:
         getNodes().clear();
@@ -369,10 +339,6 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
       case XdiagramPackage.XDIAGRAM__LINKS:
         getLinks().clear();
         getLinks().addAll((Collection<? extends Link>)newValue);
-        return;
-      case XdiagramPackage.XDIAGRAM__ATTR:
-        getAttr().clear();
-        getAttr().addAll((Collection<? extends AttributeReference>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -394,20 +360,17 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
       case XdiagramPackage.XDIAGRAM__IMPORTS:
         getImports().clear();
         return;
-      case XdiagramPackage.XDIAGRAM__STYLES:
-        getStyles().clear();
-        return;
       case XdiagramPackage.XDIAGRAM__MODEL_CLASS:
         setModelClass((EClass)null);
+        return;
+      case XdiagramPackage.XDIAGRAM__STYLES:
+        getStyles().clear();
         return;
       case XdiagramPackage.XDIAGRAM__NODES:
         getNodes().clear();
         return;
       case XdiagramPackage.XDIAGRAM__LINKS:
         getLinks().clear();
-        return;
-      case XdiagramPackage.XDIAGRAM__ATTR:
-        getAttr().clear();
         return;
     }
     super.eUnset(featureID);
@@ -427,16 +390,14 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         return IMPORT_URI_EDEFAULT == null ? importURI != null : !IMPORT_URI_EDEFAULT.equals(importURI);
       case XdiagramPackage.XDIAGRAM__IMPORTS:
         return imports != null && !imports.isEmpty();
-      case XdiagramPackage.XDIAGRAM__STYLES:
-        return styles != null && !styles.isEmpty();
       case XdiagramPackage.XDIAGRAM__MODEL_CLASS:
         return modelClass != null;
+      case XdiagramPackage.XDIAGRAM__STYLES:
+        return styles != null && !styles.isEmpty();
       case XdiagramPackage.XDIAGRAM__NODES:
         return nodes != null && !nodes.isEmpty();
       case XdiagramPackage.XDIAGRAM__LINKS:
         return links != null && !links.isEmpty();
-      case XdiagramPackage.XDIAGRAM__ATTR:
-        return attr != null && !attr.isEmpty();
     }
     return super.eIsSet(featureID);
   }

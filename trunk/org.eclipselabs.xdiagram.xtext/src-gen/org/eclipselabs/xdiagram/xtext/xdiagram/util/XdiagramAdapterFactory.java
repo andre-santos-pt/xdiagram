@@ -120,9 +120,9 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
         return createLinkAdapter();
       }
       @Override
-      public Adapter casePlacingFigure(PlacingFigure object)
+      public Adapter caseDecorator(Decorator object)
       {
-        return createPlacingFigureAdapter();
+        return createDecoratorAdapter();
       }
       @Override
       public Adapter caseDynamicFigure(DynamicFigure object)
@@ -205,11 +205,6 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
         return createIntegerFeatureAdapter();
       }
       @Override
-      public Adapter caseDoubleFeature(DoubleFeature object)
-      {
-        return createDoubleFeatureAdapter();
-      }
-      @Override
       public Adapter caseStringFeature(StringFeature object)
       {
         return createStringFeatureAdapter();
@@ -233,11 +228,6 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
       public Adapter caseAtributeValue(AtributeValue object)
       {
         return createAtributeValueAdapter();
-      }
-      @Override
-      public Adapter caseAttributeReference(AttributeReference object)
-      {
-        return createAttributeReferenceAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -397,16 +387,16 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.PlacingFigure <em>Placing Figure</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator <em>Decorator</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.PlacingFigure
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Decorator
    * @generated
    */
-  public Adapter createPlacingFigureAdapter()
+  public Adapter createDecoratorAdapter()
   {
     return null;
   }
@@ -652,21 +642,6 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.DoubleFeature <em>Double Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.DoubleFeature
-   * @generated
-   */
-  public Adapter createDoubleFeatureAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature <em>String Feature</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -737,21 +712,6 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAtributeValueAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AttributeReference <em>Attribute Reference</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AttributeReference
-   * @generated
-   */
-  public Adapter createAttributeReferenceAdapter()
   {
     return null;
   }

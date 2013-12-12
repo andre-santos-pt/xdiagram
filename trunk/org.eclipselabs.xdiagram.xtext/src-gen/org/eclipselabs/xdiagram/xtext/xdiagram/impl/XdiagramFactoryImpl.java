@@ -74,7 +74,7 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
       case XdiagramPackage.NODE_FIGURE: return createNodeFigure();
       case XdiagramPackage.NODE_CONTAINER: return createNodeContainer();
       case XdiagramPackage.LINK: return createLink();
-      case XdiagramPackage.PLACING_FIGURE: return createPlacingFigure();
+      case XdiagramPackage.DECORATOR: return createDecorator();
       case XdiagramPackage.DYNAMIC_FIGURE: return createDynamicFigure();
       case XdiagramPackage.STATIC_FIGURE: return createStaticFigure();
       case XdiagramPackage.NODE_ANCHOR: return createNodeAnchor();
@@ -91,13 +91,11 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
       case XdiagramPackage.COLOR_FEATURE: return createColorFeature();
       case XdiagramPackage.RGB: return createRGB();
       case XdiagramPackage.INTEGER_FEATURE: return createIntegerFeature();
-      case XdiagramPackage.DOUBLE_FEATURE: return createDoubleFeature();
       case XdiagramPackage.STRING_FEATURE: return createStringFeature();
       case XdiagramPackage.BOOLEAN_FEATURE: return createBooleanFeature();
       case XdiagramPackage.LINE_FEATURE: return createLineFeature();
       case XdiagramPackage.ATRIBUTE_EXPRESSION: return createAtributeExpression();
       case XdiagramPackage.ATRIBUTE_VALUE: return createAtributeValue();
-      case XdiagramPackage.ATTRIBUTE_REFERENCE: return createAttributeReference();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -113,6 +111,8 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
   {
     switch (eDataType.getClassifierID())
     {
+      case XdiagramPackage.CONTAINER_LAYOUT:
+        return createContainerLayoutFromString(eDataType, initialValue);
       case XdiagramPackage.FIGURE_SHAPE:
         return createFigureShapeFromString(eDataType, initialValue);
       default:
@@ -130,6 +130,8 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
   {
     switch (eDataType.getClassifierID())
     {
+      case XdiagramPackage.CONTAINER_LAYOUT:
+        return convertContainerLayoutToString(eDataType, instanceValue);
       case XdiagramPackage.FIGURE_SHAPE:
         return convertFigureShapeToString(eDataType, instanceValue);
       default:
@@ -241,10 +243,10 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public PlacingFigure createPlacingFigure()
+  public Decorator createDecorator()
   {
-    PlacingFigureImpl placingFigure = new PlacingFigureImpl();
-    return placingFigure;
+    DecoratorImpl decorator = new DecoratorImpl();
+    return decorator;
   }
 
   /**
@@ -428,17 +430,6 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public DoubleFeature createDoubleFeature()
-  {
-    DoubleFeatureImpl doubleFeature = new DoubleFeatureImpl();
-    return doubleFeature;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public StringFeature createStringFeature()
   {
     StringFeatureImpl stringFeature = new StringFeatureImpl();
@@ -494,10 +485,21 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public AttributeReference createAttributeReference()
+  public ContainerLayout createContainerLayoutFromString(EDataType eDataType, String initialValue)
   {
-    AttributeReferenceImpl attributeReference = new AttributeReferenceImpl();
-    return attributeReference;
+    ContainerLayout result = ContainerLayout.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertContainerLayoutToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**

@@ -22,11 +22,7 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getLinefeatures <em>Linefeatures</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getColorfeatures <em>Colorfeatures</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getIntegerfeatures <em>Integerfeatures</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getSourceStatic <em>Source Static</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getSourceDynamic <em>Source Dynamic</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getTargetStatic <em>Target Static</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getTargetDynamic <em>Target Dynamic</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getPlacings <em>Placings</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getDecorators <em>Decorators</em>}</li>
  * </ul>
  * </p>
  *
@@ -215,103 +211,19 @@ public interface Link extends DiagramElement
   EList<IntegerFeature> getIntegerfeatures();
 
   /**
-   * Returns the value of the '<em><b>Source Static</b></em>' containment reference.
+   * Returns the value of the '<em><b>Decorators</b></em>' containment reference list.
+   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Source Static</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Decorators</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Source Static</em>' containment reference.
-   * @see #setSourceStatic(StaticFigure)
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getLink_SourceStatic()
+   * @return the value of the '<em>Decorators</em>' containment reference list.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getLink_Decorators()
    * @model containment="true"
    * @generated
    */
-  StaticFigure getSourceStatic();
-
-  /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getSourceStatic <em>Source Static</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Source Static</em>' containment reference.
-   * @see #getSourceStatic()
-   * @generated
-   */
-  void setSourceStatic(StaticFigure value);
-
-  /**
-   * Returns the value of the '<em><b>Source Dynamic</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Source Dynamic</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Source Dynamic</em>' containment reference list.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getLink_SourceDynamic()
-   * @model containment="true"
-   * @generated
-   */
-  EList<DynamicFigure> getSourceDynamic();
-
-  /**
-   * Returns the value of the '<em><b>Target Static</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Target Static</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Target Static</em>' containment reference.
-   * @see #setTargetStatic(StaticFigure)
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getLink_TargetStatic()
-   * @model containment="true"
-   * @generated
-   */
-  StaticFigure getTargetStatic();
-
-  /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getTargetStatic <em>Target Static</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Target Static</em>' containment reference.
-   * @see #getTargetStatic()
-   * @generated
-   */
-  void setTargetStatic(StaticFigure value);
-
-  /**
-   * Returns the value of the '<em><b>Target Dynamic</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Target Dynamic</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Target Dynamic</em>' containment reference list.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getLink_TargetDynamic()
-   * @model containment="true"
-   * @generated
-   */
-  EList<DynamicFigure> getTargetDynamic();
-
-  /**
-   * Returns the value of the '<em><b>Placings</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.PlacingFigure}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Placings</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Placings</em>' containment reference list.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getLink_Placings()
-   * @model containment="true"
-   * @generated
-   */
-  EList<PlacingFigure> getPlacings();
+  EList<Decorator> getDecorators();
 
 } // Link

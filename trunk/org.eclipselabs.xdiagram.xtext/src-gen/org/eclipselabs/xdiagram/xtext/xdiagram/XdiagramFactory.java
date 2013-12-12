@@ -104,13 +104,13 @@ public interface XdiagramFactory extends EFactory
   Link createLink();
 
   /**
-   * Returns a new object of class '<em>Placing Figure</em>'.
+   * Returns a new object of class '<em>Decorator</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Placing Figure</em>'.
+   * @return a new object of class '<em>Decorator</em>'.
    * @generated
    */
-  PlacingFigure createPlacingFigure();
+  Decorator createDecorator();
 
   /**
    * Returns a new object of class '<em>Dynamic Figure</em>'.
@@ -257,15 +257,6 @@ public interface XdiagramFactory extends EFactory
   IntegerFeature createIntegerFeature();
 
   /**
-   * Returns a new object of class '<em>Double Feature</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Double Feature</em>'.
-   * @generated
-   */
-  DoubleFeature createDoubleFeature();
-
-  /**
    * Returns a new object of class '<em>String Feature</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -309,15 +300,6 @@ public interface XdiagramFactory extends EFactory
    * @generated
    */
   AtributeValue createAtributeValue();
-
-  /**
-   * Returns a new object of class '<em>Attribute Reference</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Attribute Reference</em>'.
-   * @generated
-   */
-  AttributeReference createAttributeReference();
 
   /**
    * Returns the package supported by this factory.

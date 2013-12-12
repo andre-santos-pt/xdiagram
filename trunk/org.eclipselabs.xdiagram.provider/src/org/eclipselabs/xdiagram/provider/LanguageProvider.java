@@ -48,12 +48,12 @@ import org.eclipselabs.xdiagram.provider.internal.LinkProvider;
 import org.eclipselabs.xdiagram.provider.internal.NodeProvider;
 import org.eclipselabs.xdiagram.xtext.XDiagramStandaloneSetup;
 import org.eclipselabs.xdiagram.xtext.xdiagram.ArrowAnchor;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Decorator;
 import org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Link;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Node;
 import org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor;
 import org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer;
-import org.eclipselabs.xdiagram.xtext.xdiagram.PlacingFigure;
 import org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram;
 import org.osgi.framework.Bundle;
 
@@ -176,7 +176,7 @@ public class LanguageProvider implements GraphicsProvider {
 //			FigureProperty.setProperties(nodeContainer, obj== null ? this.model.getModelClass().getName() : obj );
 			FigureProperty.setProperties(nodeContainer, childClass== null ? this.model.getModelClass().getName() : childClass.getName());
 
-			FigureProperty.TYPE.set(nodeContainer, nodecontainer.getType());
+			FigureProperty.TYPE.set(nodeContainer, nodecontainer.getLayout());
 
 			if (nodecontainer.getFormat()==null){
 				FigureProperty.VERTICAL.set(nodeContainer, vertical);
@@ -419,35 +419,35 @@ public class LanguageProvider implements GraphicsProvider {
 				linkConnector.setLineStyle(getLineSyle(linkConnector, eObject, link.getLinefeatures()));
 
 				
-				if (link.getSourceStatic()!=null){
-					ConnectionDecorator cd = Graphiti.getPeCreateService().createConnectionDecorator(connection, false, 0.0, true);
-					LinkProvider.createLinkFigure(diagram, cd, eObject, link.getSourceStatic());
-				}
+//				if (link.getSourceStatic()!=null){
+//					ConnectionDecorator cd = Graphiti.getPeCreateService().createConnectionDecorator(connection, false, 0.0, true);
+//					LinkProvider.createLinkFigure(diagram, cd, eObject, link.getSourceStatic());
+//				}
+//
+//				for (DynamicFigure text: link.getSourceDynamic()){
+//					ConnectionDecorator cd = Graphiti.getPeCreateService().createConnectionDecorator(connection, true, 0.1, true);
+//					LinkProvider.createDynamicFigure(diagram, cd, eObject, text);
+//				}
+//
+//				if (link.getTargetStatic()!=null){
+//					ConnectionDecorator cd = Graphiti.getPeCreateService().createConnectionDecorator(connection, false, 1.0, true);
+//					LinkProvider.createLinkFigure(diagram, cd, eObject, link.getTargetStatic());
+//				}
+//
+//				for (DynamicFigure text: link.getTargetDynamic()){
+//					ConnectionDecorator cd = Graphiti.getPeCreateService().createConnectionDecorator(connection, true, 0.8, true);
+//					LinkProvider.createDynamicFigure(diagram, cd, eObject, text);
+//				}
 
-				for (DynamicFigure text: link.getSourceDynamic()){
-					ConnectionDecorator cd = Graphiti.getPeCreateService().createConnectionDecorator(connection, true, 0.1, true);
-					LinkProvider.createDynamicFigure(diagram, cd, eObject, text);
-				}
-
-				if (link.getTargetStatic()!=null){
-					ConnectionDecorator cd = Graphiti.getPeCreateService().createConnectionDecorator(connection, false, 1.0, true);
-					LinkProvider.createLinkFigure(diagram, cd, eObject, link.getTargetStatic());
-				}
-
-				for (DynamicFigure text: link.getTargetDynamic()){
-					ConnectionDecorator cd = Graphiti.getPeCreateService().createConnectionDecorator(connection, true, 0.8, true);
-					LinkProvider.createDynamicFigure(diagram, cd, eObject, text);
-				}
-
-				for (PlacingFigure placing: link.getPlacings()){
-					if (placing.getPlacingStatic()!=null){
+				for (Decorator decorator: link.getDecorators()){
+					if (decorator.getPlacingStatic()!=null){
 						ConnectionDecorator cd = Graphiti.getPeCreateService().createConnectionDecorator(connection, 
-								false, (double)placing.getPos()/100.0, true);
-						LinkProvider.createLinkFigure(diagram, cd, eObject, placing.getPlacingStatic());
+								false, (double)decorator.getPos()/100.0, true);
+						LinkProvider.createLinkFigure(diagram, cd, eObject, decorator.getPlacingStatic());
 					}
-					for (DynamicFigure text: placing.getPlacingDynamic()){
+					for (DynamicFigure text: decorator.getPlacingDynamic()){
 						ConnectionDecorator cd = Graphiti.getPeCreateService().createConnectionDecorator(connection, 
-								true, (double)placing.getPos()/100.0, true);
+								true, (double)decorator.getPos()/100.0, true);
 						LinkProvider.createDynamicFigure(diagram, cd, eObject, text);
 					}
 				}

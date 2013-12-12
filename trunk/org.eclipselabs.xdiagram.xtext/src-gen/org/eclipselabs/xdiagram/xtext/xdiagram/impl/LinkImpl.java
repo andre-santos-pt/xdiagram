@@ -19,12 +19,10 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Decorator;
 import org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.LineFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Link;
-import org.eclipselabs.xdiagram.xtext.xdiagram.PlacingFigure;
-import org.eclipselabs.xdiagram.xtext.xdiagram.StaticFigure;
 import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
 
 /**
@@ -42,11 +40,7 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getLinefeatures <em>Linefeatures</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getColorfeatures <em>Colorfeatures</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getIntegerfeatures <em>Integerfeatures</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getSourceStatic <em>Source Static</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getSourceDynamic <em>Source Dynamic</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getTargetStatic <em>Target Static</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getTargetDynamic <em>Target Dynamic</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getPlacings <em>Placings</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getDecorators <em>Decorators</em>}</li>
  * </ul>
  * </p>
  *
@@ -155,54 +149,14 @@ public class LinkImpl extends DiagramElementImpl implements Link
   protected EList<IntegerFeature> integerfeatures;
 
   /**
-   * The cached value of the '{@link #getSourceStatic() <em>Source Static</em>}' containment reference.
+   * The cached value of the '{@link #getDecorators() <em>Decorators</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSourceStatic()
+   * @see #getDecorators()
    * @generated
    * @ordered
    */
-  protected StaticFigure sourceStatic;
-
-  /**
-   * The cached value of the '{@link #getSourceDynamic() <em>Source Dynamic</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSourceDynamic()
-   * @generated
-   * @ordered
-   */
-  protected EList<DynamicFigure> sourceDynamic;
-
-  /**
-   * The cached value of the '{@link #getTargetStatic() <em>Target Static</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTargetStatic()
-   * @generated
-   * @ordered
-   */
-  protected StaticFigure targetStatic;
-
-  /**
-   * The cached value of the '{@link #getTargetDynamic() <em>Target Dynamic</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTargetDynamic()
-   * @generated
-   * @ordered
-   */
-  protected EList<DynamicFigure> targetDynamic;
-
-  /**
-   * The cached value of the '{@link #getPlacings() <em>Placings</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPlacings()
-   * @generated
-   * @ordered
-   */
-  protected EList<PlacingFigure> placings;
+  protected EList<Decorator> decorators;
 
   /**
    * <!-- begin-user-doc -->
@@ -447,137 +401,13 @@ public class LinkImpl extends DiagramElementImpl implements Link
    * <!-- end-user-doc -->
    * @generated
    */
-  public StaticFigure getSourceStatic()
+  public EList<Decorator> getDecorators()
   {
-    return sourceStatic;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetSourceStatic(StaticFigure newSourceStatic, NotificationChain msgs)
-  {
-    StaticFigure oldSourceStatic = sourceStatic;
-    sourceStatic = newSourceStatic;
-    if (eNotificationRequired())
+    if (decorators == null)
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XdiagramPackage.LINK__SOURCE_STATIC, oldSourceStatic, newSourceStatic);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      decorators = new EObjectContainmentEList<Decorator>(Decorator.class, this, XdiagramPackage.LINK__DECORATORS);
     }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSourceStatic(StaticFigure newSourceStatic)
-  {
-    if (newSourceStatic != sourceStatic)
-    {
-      NotificationChain msgs = null;
-      if (sourceStatic != null)
-        msgs = ((InternalEObject)sourceStatic).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XdiagramPackage.LINK__SOURCE_STATIC, null, msgs);
-      if (newSourceStatic != null)
-        msgs = ((InternalEObject)newSourceStatic).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XdiagramPackage.LINK__SOURCE_STATIC, null, msgs);
-      msgs = basicSetSourceStatic(newSourceStatic, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.LINK__SOURCE_STATIC, newSourceStatic, newSourceStatic));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<DynamicFigure> getSourceDynamic()
-  {
-    if (sourceDynamic == null)
-    {
-      sourceDynamic = new EObjectContainmentEList<DynamicFigure>(DynamicFigure.class, this, XdiagramPackage.LINK__SOURCE_DYNAMIC);
-    }
-    return sourceDynamic;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public StaticFigure getTargetStatic()
-  {
-    return targetStatic;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetTargetStatic(StaticFigure newTargetStatic, NotificationChain msgs)
-  {
-    StaticFigure oldTargetStatic = targetStatic;
-    targetStatic = newTargetStatic;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XdiagramPackage.LINK__TARGET_STATIC, oldTargetStatic, newTargetStatic);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTargetStatic(StaticFigure newTargetStatic)
-  {
-    if (newTargetStatic != targetStatic)
-    {
-      NotificationChain msgs = null;
-      if (targetStatic != null)
-        msgs = ((InternalEObject)targetStatic).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XdiagramPackage.LINK__TARGET_STATIC, null, msgs);
-      if (newTargetStatic != null)
-        msgs = ((InternalEObject)newTargetStatic).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XdiagramPackage.LINK__TARGET_STATIC, null, msgs);
-      msgs = basicSetTargetStatic(newTargetStatic, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.LINK__TARGET_STATIC, newTargetStatic, newTargetStatic));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<DynamicFigure> getTargetDynamic()
-  {
-    if (targetDynamic == null)
-    {
-      targetDynamic = new EObjectContainmentEList<DynamicFigure>(DynamicFigure.class, this, XdiagramPackage.LINK__TARGET_DYNAMIC);
-    }
-    return targetDynamic;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<PlacingFigure> getPlacings()
-  {
-    if (placings == null)
-    {
-      placings = new EObjectContainmentEList<PlacingFigure>(PlacingFigure.class, this, XdiagramPackage.LINK__PLACINGS);
-    }
-    return placings;
+    return decorators;
   }
 
   /**
@@ -596,16 +426,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
         return ((InternalEList<?>)getColorfeatures()).basicRemove(otherEnd, msgs);
       case XdiagramPackage.LINK__INTEGERFEATURES:
         return ((InternalEList<?>)getIntegerfeatures()).basicRemove(otherEnd, msgs);
-      case XdiagramPackage.LINK__SOURCE_STATIC:
-        return basicSetSourceStatic(null, msgs);
-      case XdiagramPackage.LINK__SOURCE_DYNAMIC:
-        return ((InternalEList<?>)getSourceDynamic()).basicRemove(otherEnd, msgs);
-      case XdiagramPackage.LINK__TARGET_STATIC:
-        return basicSetTargetStatic(null, msgs);
-      case XdiagramPackage.LINK__TARGET_DYNAMIC:
-        return ((InternalEList<?>)getTargetDynamic()).basicRemove(otherEnd, msgs);
-      case XdiagramPackage.LINK__PLACINGS:
-        return ((InternalEList<?>)getPlacings()).basicRemove(otherEnd, msgs);
+      case XdiagramPackage.LINK__DECORATORS:
+        return ((InternalEList<?>)getDecorators()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -639,16 +461,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
         return getColorfeatures();
       case XdiagramPackage.LINK__INTEGERFEATURES:
         return getIntegerfeatures();
-      case XdiagramPackage.LINK__SOURCE_STATIC:
-        return getSourceStatic();
-      case XdiagramPackage.LINK__SOURCE_DYNAMIC:
-        return getSourceDynamic();
-      case XdiagramPackage.LINK__TARGET_STATIC:
-        return getTargetStatic();
-      case XdiagramPackage.LINK__TARGET_DYNAMIC:
-        return getTargetDynamic();
-      case XdiagramPackage.LINK__PLACINGS:
-        return getPlacings();
+      case XdiagramPackage.LINK__DECORATORS:
+        return getDecorators();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -691,23 +505,9 @@ public class LinkImpl extends DiagramElementImpl implements Link
         getIntegerfeatures().clear();
         getIntegerfeatures().addAll((Collection<? extends IntegerFeature>)newValue);
         return;
-      case XdiagramPackage.LINK__SOURCE_STATIC:
-        setSourceStatic((StaticFigure)newValue);
-        return;
-      case XdiagramPackage.LINK__SOURCE_DYNAMIC:
-        getSourceDynamic().clear();
-        getSourceDynamic().addAll((Collection<? extends DynamicFigure>)newValue);
-        return;
-      case XdiagramPackage.LINK__TARGET_STATIC:
-        setTargetStatic((StaticFigure)newValue);
-        return;
-      case XdiagramPackage.LINK__TARGET_DYNAMIC:
-        getTargetDynamic().clear();
-        getTargetDynamic().addAll((Collection<? extends DynamicFigure>)newValue);
-        return;
-      case XdiagramPackage.LINK__PLACINGS:
-        getPlacings().clear();
-        getPlacings().addAll((Collection<? extends PlacingFigure>)newValue);
+      case XdiagramPackage.LINK__DECORATORS:
+        getDecorators().clear();
+        getDecorators().addAll((Collection<? extends Decorator>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -747,20 +547,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
       case XdiagramPackage.LINK__INTEGERFEATURES:
         getIntegerfeatures().clear();
         return;
-      case XdiagramPackage.LINK__SOURCE_STATIC:
-        setSourceStatic((StaticFigure)null);
-        return;
-      case XdiagramPackage.LINK__SOURCE_DYNAMIC:
-        getSourceDynamic().clear();
-        return;
-      case XdiagramPackage.LINK__TARGET_STATIC:
-        setTargetStatic((StaticFigure)null);
-        return;
-      case XdiagramPackage.LINK__TARGET_DYNAMIC:
-        getTargetDynamic().clear();
-        return;
-      case XdiagramPackage.LINK__PLACINGS:
-        getPlacings().clear();
+      case XdiagramPackage.LINK__DECORATORS:
+        getDecorators().clear();
         return;
     }
     super.eUnset(featureID);
@@ -792,16 +580,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
         return colorfeatures != null && !colorfeatures.isEmpty();
       case XdiagramPackage.LINK__INTEGERFEATURES:
         return integerfeatures != null && !integerfeatures.isEmpty();
-      case XdiagramPackage.LINK__SOURCE_STATIC:
-        return sourceStatic != null;
-      case XdiagramPackage.LINK__SOURCE_DYNAMIC:
-        return sourceDynamic != null && !sourceDynamic.isEmpty();
-      case XdiagramPackage.LINK__TARGET_STATIC:
-        return targetStatic != null;
-      case XdiagramPackage.LINK__TARGET_DYNAMIC:
-        return targetDynamic != null && !targetDynamic.isEmpty();
-      case XdiagramPackage.LINK__PLACINGS:
-        return placings != null && !placings.isEmpty();
+      case XdiagramPackage.LINK__DECORATORS:
+        return decorators != null && !decorators.isEmpty();
     }
     return super.eIsSet(featureID);
   }
