@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EReference;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer#getLayout <em>Layout</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer#getModelReference <em>Model Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer#getValue <em>Value</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer#getFormat <em>Format</em>}</li>
@@ -30,30 +30,33 @@ import org.eclipse.emf.ecore.EReference;
 public interface NodeContainer extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Type</b></em>' attribute.
+   * Returns the value of the '<em><b>Layout</b></em>' attribute.
+   * The literals are from the enumeration {@link org.eclipselabs.xdiagram.xtext.xdiagram.ContainerLayout}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Type</em>' attribute isn't clear,
+   * If the meaning of the '<em>Layout</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Type</em>' attribute.
-   * @see #setType(String)
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getNodeContainer_Type()
+   * @return the value of the '<em>Layout</em>' attribute.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ContainerLayout
+   * @see #setLayout(ContainerLayout)
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getNodeContainer_Layout()
    * @model
    * @generated
    */
-  String getType();
+  ContainerLayout getLayout();
 
   /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer#getType <em>Type</em>}' attribute.
+   * Sets the value of the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer#getLayout <em>Layout</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' attribute.
-   * @see #getType()
+   * @param value the new value of the '<em>Layout</em>' attribute.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ContainerLayout
+   * @see #getLayout()
    * @generated
    */
-  void setType(String value);
+  void setLayout(ContainerLayout value);
 
   /**
    * Returns the value of the '<em><b>Model Reference</b></em>' reference.

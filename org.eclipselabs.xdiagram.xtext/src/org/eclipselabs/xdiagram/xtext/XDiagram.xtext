@@ -7,16 +7,12 @@ generate xdiagram "http://www.eclipselabs.org/xdiagram/xtext/XDiagram"
 
 XDiagram:
     'metamodel' importURI=STRING
-    imports+=ImportStatement
- 	
-    (styles += Style)*
-    
+    imports+=ImportStatement    
     'diagram' modelClass=[ecore::EClass|QualifiedName]
-//    '{'
-    	((nodes += Node)|(links += Link))+
-//	'}'
-	attr+=AttributeReference+
-	;
+    
+    (styles += Style)*
+    ((nodes += Node)|(links += Link))*
+;
 
 // importedNamespace apparently cannot be on the root element
 ImportStatement:
@@ -44,7 +40,6 @@ DiagramElement:
 ;
 
 // resizable default?
-// TODO text / icon
 // TODO validation: unique nodes
 // notation inheritance?
 Node:
@@ -67,7 +62,7 @@ Attribute:
 ;
 
 
-// main?
+// main? só Figure?
 NodeFigure:
 	(option=('main'))? 'figure' ':' figure=FigureShape (',' 'style' ':' style=ID)? '{'
 	        features=FigureFeatures
@@ -76,15 +71,17 @@ NodeFigure:
 
 // TODO hstack / vstack (enum?)
 // TODO validation
-// TODO change modelClass to modelReference
 NodeContainer:
-	(type=('stack'|'free'))? 'container' ('for' modelReference=[ecore::EReference|QualifiedName])? (':' value=INT format=('%'|'px'))?
+	(layout=ContainerLayout)? 'container' ('for' modelReference=[ecore::EReference|QualifiedName])? (':' value=INT format=('%'|'px'))?
 	'{'
 		(figures += NodeFigure)+
 	'}'
 ;
 
-
+enum ContainerLayout:
+	STACK='stack' |
+	FREE='free'
+;
 
 
 // TODO: validation - complex requires source e target, complex structure
@@ -111,19 +108,18 @@ Link:
 	        	(integerfeatures += IntegerFeature)
 		)*
 		
-    	('origin' '{'			
-			(sourceStatic = StaticFigure)?
-			(sourceDynamic += DynamicFigure)*			
-		'}')?
-		
-		('destiny' '{'			
-			(targetStatic = StaticFigure)?
-			(targetDynamic += DynamicFigure)*			
-		'}')?
-		
-		// porque não apenas placings?
-	    //defenido no modelo? [ecore::EReference]
-	    (placings += PlacingFigure)*		
+		//defenido no modelo? [ecore::EReference]
+	    (decorators += Decorator)*	
+	    
+//    	('origin' '{'			
+//			(sourceStatic = StaticFigure)?
+//			(sourceDynamic += DynamicFigure)*			
+//		'}')?
+//		
+//		('destiny' '{'			
+//			(targetStatic = StaticFigure)?
+//			(targetDynamic += DynamicFigure)*			
+//		'}')?
     '}';
     
     
@@ -131,8 +127,8 @@ Link:
 
 // % opcional? ou considerar pixeis?
 // ter "constantes" para origem destino
-PlacingFigure:
-	'placing' 'at' pos=INT '%'
+Decorator:
+	'decorator' ('at' pos=INT '%')|(source?='source')|(target?='target')|(middle?='middle')
 	'{'			
 		(placingStatic = StaticFigure)?
 		(placingDynamic += DynamicFigure)*			
@@ -160,6 +156,8 @@ StaticFigure:
 StaticElement:
   ('Arrow'|'Triangle'|'Rhombus'|'Polygon'|'Polyline')
 ;
+
+
 
 
 // TODO: lowercase
@@ -215,10 +213,7 @@ FigureFeatures:
 			)*
 ;
 
-// TODO: remover?
-//CustomFeature:
-//	key=('attribute') ':' attribute=ID '=' value=ID
-//;
+
 
 StyleFeature:
 	LayoutFeature | CenterFeature
@@ -258,6 +253,8 @@ ColorFeature:
 	(expression=AtributeExpression)? key=('background'|'foreground'|'border') ':' (value=Color|rgb=RGB) ('[' atribute=ID operator=('='|'<>') option=ID ']')?
 ;
 
+
+
 // TODO enum , já agora 16 standard
 Color:
 	('WHITE'|'BLACK'|'BLUE'|'GREEN'|'RED'|'YELLOW'|'CYAN'|'ORANGE')
@@ -271,9 +268,7 @@ IntegerFeature:
 	(expression=AtributeExpression)? key=('line-width'|'top'|'left'|'width'|'height'|'angle'|'corner'|'transparency'|'font-size') ':' value=INT
 ;
 
-DoubleFeature:
-	key=('transparency') ':' value= INT ('.' INT)?
-;
+
 
 StringFeature:
 	(expression=AtributeExpression)? key=('text-value'|'font-name'|'icon') ':' ((value=STRING) | (valueL=STRING '+' attribute=ID) | (attribute=ID '+'valueR=STRING)
@@ -310,10 +305,15 @@ AtributeValue:
 ;
 
 
+
+
+
+
 // future
-AttributeReference:
-	modelAttribute=[ecore::EAttribute|QualifiedName] ('/' path+=AttributeReference)*
-;
+//AttributeReference:
+//	modelAttribute=[ecore::EAttribute|QualifiedName] ('/' path+=AttributeReference)*
+//;
+
 
 
 

@@ -19,11 +19,10 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.ArrowAnchor;
 import org.eclipselabs.xdiagram.xtext.xdiagram.AtributeExpression;
 import org.eclipselabs.xdiagram.xtext.xdiagram.AtributeValue;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Attribute;
-import org.eclipselabs.xdiagram.xtext.xdiagram.AttributeReference;
 import org.eclipselabs.xdiagram.xtext.xdiagram.BooleanFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.CenterFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.DoubleFeature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Decorator;
 import org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure;
 import org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures;
 import org.eclipselabs.xdiagram.xtext.xdiagram.GradientFeature;
@@ -36,7 +35,6 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.Node;
 import org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor;
 import org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer;
 import org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure;
-import org.eclipselabs.xdiagram.xtext.xdiagram.PlacingFigure;
 import org.eclipselabs.xdiagram.xtext.xdiagram.PointFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.PositionFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.RGB;
@@ -85,12 +83,6 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 					return; 
 				}
 				else break;
-			case XdiagramPackage.ATTRIBUTE_REFERENCE:
-				if(context == grammarAccess.getAttributeReferenceRule()) {
-					sequence_AttributeReference(context, (AttributeReference) semanticObject); 
-					return; 
-				}
-				else break;
 			case XdiagramPackage.BOOLEAN_FEATURE:
 				if(context == grammarAccess.getBooleanFeatureRule()) {
 					sequence_BooleanFeature(context, (BooleanFeature) semanticObject); 
@@ -110,9 +102,9 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 					return; 
 				}
 				else break;
-			case XdiagramPackage.DOUBLE_FEATURE:
-				if(context == grammarAccess.getDoubleFeatureRule()) {
-					sequence_DoubleFeature(context, (DoubleFeature) semanticObject); 
+			case XdiagramPackage.DECORATOR:
+				if(context == grammarAccess.getDecoratorRule()) {
+					sequence_Decorator(context, (Decorator) semanticObject); 
 					return; 
 				}
 				else break;
@@ -188,12 +180,6 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case XdiagramPackage.NODE_FIGURE:
 				if(context == grammarAccess.getNodeFigureRule()) {
 					sequence_NodeFigure(context, (NodeFigure) semanticObject); 
-					return; 
-				}
-				else break;
-			case XdiagramPackage.PLACING_FIGURE:
-				if(context == grammarAccess.getPlacingFigureRule()) {
-					sequence_PlacingFigure(context, (PlacingFigure) semanticObject); 
 					return; 
 				}
 				else break;
@@ -295,15 +281,6 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (modelAttribute=[EAttribute|QualifiedName] path+=AttributeReference*)
-	 */
-	protected void sequence_AttributeReference(EObject context, AttributeReference semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     (key=ID value=AtributeValue)
 	 */
 	protected void sequence_Attribute(EObject context, Attribute semanticObject) {
@@ -355,20 +332,10 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (key='transparency' value=INT)
+	 *     (pos=INT | source?='source' | target?='target' | (middle?='middle' placingStatic=StaticFigure? placingDynamic+=DynamicFigure*))
 	 */
-	protected void sequence_DoubleFeature(EObject context, DoubleFeature semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.DOUBLE_FEATURE__KEY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.DOUBLE_FEATURE__KEY));
-			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.DOUBLE_FEATURE__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.DOUBLE_FEATURE__VALUE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getDoubleFeatureAccess().getKeyTransparencyKeyword_0_0(), semanticObject.getKey());
-		feeder.accept(grammarAccess.getDoubleFeatureAccess().getValueINTTerminalRuleCall_2_0(), semanticObject.getValue());
-		feeder.finish();
+	protected void sequence_Decorator(EObject context, Decorator semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -496,9 +463,7 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *         icon=ID? 
 	 *         name=STRING? 
 	 *         (attributes+=Attribute | linefeatures+=LineFeature | colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature)* 
-	 *         (sourceStatic=StaticFigure? sourceDynamic+=DynamicFigure*)? 
-	 *         (targetStatic=StaticFigure? targetDynamic+=DynamicFigure*)? 
-	 *         placings+=PlacingFigure*
+	 *         decorators+=Decorator*
 	 *     )
 	 */
 	protected void sequence_Link(EObject context, Link semanticObject) {
@@ -527,7 +492,7 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     ((type='stack' | type='free')? modelReference=[EReference|QualifiedName]? (value=INT (format='%' | format='px'))? figures+=NodeFigure+)
+	 *     (layout=ContainerLayout? modelReference=[EReference|QualifiedName]? (value=INT (format='%' | format='px'))? figures+=NodeFigure+)
 	 */
 	protected void sequence_NodeContainer(EObject context, NodeContainer semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -558,15 +523,6 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     )
 	 */
 	protected void sequence_Node(EObject context, Node semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (pos=INT placingStatic=StaticFigure? placingDynamic+=DynamicFigure*)
-	 */
-	protected void sequence_PlacingFigure(EObject context, PlacingFigure semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -693,14 +649,7 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         importURI=STRING 
-	 *         imports+=ImportStatement 
-	 *         styles+=Style* 
-	 *         modelClass=[EClass|QualifiedName] 
-	 *         (nodes+=Node | links+=Link)+ 
-	 *         attr+=AttributeReference+
-	 *     )
+	 *     (importURI=STRING imports+=ImportStatement modelClass=[EClass|QualifiedName] styles+=Style* (nodes+=Node | links+=Link)*)
 	 */
 	protected void sequence_XDiagram(EObject context, XDiagram semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

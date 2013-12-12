@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipselabs.xdiagram.xtext.xdiagram.ContainerLayout;
 import org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer;
 import org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure;
 import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
@@ -30,7 +31,7 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeContainerImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeContainerImpl#getLayout <em>Layout</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeContainerImpl#getModelReference <em>Model Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeContainerImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeContainerImpl#getFormat <em>Format</em>}</li>
@@ -43,24 +44,24 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
 public class NodeContainerImpl extends MinimalEObjectImpl.Container implements NodeContainer
 {
   /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The default value of the '{@link #getLayout() <em>Layout</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getLayout()
    * @generated
    * @ordered
    */
-  protected static final String TYPE_EDEFAULT = null;
+  protected static final ContainerLayout LAYOUT_EDEFAULT = ContainerLayout.STACK;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The cached value of the '{@link #getLayout() <em>Layout</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getLayout()
    * @generated
    * @ordered
    */
-  protected String type = TYPE_EDEFAULT;
+  protected ContainerLayout layout = LAYOUT_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getModelReference() <em>Model Reference</em>}' reference.
@@ -148,9 +149,9 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getType()
+  public ContainerLayout getLayout()
   {
-    return type;
+    return layout;
   }
 
   /**
@@ -158,12 +159,12 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(String newType)
+  public void setLayout(ContainerLayout newLayout)
   {
-    String oldType = type;
-    type = newType;
+    ContainerLayout oldLayout = layout;
+    layout = newLayout == null ? LAYOUT_EDEFAULT : newLayout;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.NODE_CONTAINER__TYPE, oldType, type));
+      eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.NODE_CONTAINER__LAYOUT, oldLayout, layout));
   }
 
   /**
@@ -295,8 +296,8 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
   {
     switch (featureID)
     {
-      case XdiagramPackage.NODE_CONTAINER__TYPE:
-        return getType();
+      case XdiagramPackage.NODE_CONTAINER__LAYOUT:
+        return getLayout();
       case XdiagramPackage.NODE_CONTAINER__MODEL_REFERENCE:
         if (resolve) return getModelReference();
         return basicGetModelReference();
@@ -321,8 +322,8 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
   {
     switch (featureID)
     {
-      case XdiagramPackage.NODE_CONTAINER__TYPE:
-        setType((String)newValue);
+      case XdiagramPackage.NODE_CONTAINER__LAYOUT:
+        setLayout((ContainerLayout)newValue);
         return;
       case XdiagramPackage.NODE_CONTAINER__MODEL_REFERENCE:
         setModelReference((EReference)newValue);
@@ -351,8 +352,8 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
   {
     switch (featureID)
     {
-      case XdiagramPackage.NODE_CONTAINER__TYPE:
-        setType(TYPE_EDEFAULT);
+      case XdiagramPackage.NODE_CONTAINER__LAYOUT:
+        setLayout(LAYOUT_EDEFAULT);
         return;
       case XdiagramPackage.NODE_CONTAINER__MODEL_REFERENCE:
         setModelReference((EReference)null);
@@ -380,8 +381,8 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
   {
     switch (featureID)
     {
-      case XdiagramPackage.NODE_CONTAINER__TYPE:
-        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+      case XdiagramPackage.NODE_CONTAINER__LAYOUT:
+        return layout != LAYOUT_EDEFAULT;
       case XdiagramPackage.NODE_CONTAINER__MODEL_REFERENCE:
         return modelReference != null;
       case XdiagramPackage.NODE_CONTAINER__VALUE:
@@ -405,8 +406,8 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (type: ");
-    result.append(type);
+    result.append(" (layout: ");
+    result.append(layout);
     result.append(", value: ");
     result.append(value);
     result.append(", format: ");

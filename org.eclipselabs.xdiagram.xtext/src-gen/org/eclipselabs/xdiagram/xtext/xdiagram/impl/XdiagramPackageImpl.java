@@ -15,12 +15,12 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.ArrowAnchor;
 import org.eclipselabs.xdiagram.xtext.xdiagram.AtributeExpression;
 import org.eclipselabs.xdiagram.xtext.xdiagram.AtributeValue;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Attribute;
-import org.eclipselabs.xdiagram.xtext.xdiagram.AttributeReference;
 import org.eclipselabs.xdiagram.xtext.xdiagram.BooleanFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.CenterFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.ContainerLayout;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Decorator;
 import org.eclipselabs.xdiagram.xtext.xdiagram.DiagramElement;
-import org.eclipselabs.xdiagram.xtext.xdiagram.DoubleFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure;
 import org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures;
 import org.eclipselabs.xdiagram.xtext.xdiagram.FigureShape;
@@ -34,7 +34,6 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.Node;
 import org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor;
 import org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer;
 import org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure;
-import org.eclipselabs.xdiagram.xtext.xdiagram.PlacingFigure;
 import org.eclipselabs.xdiagram.xtext.xdiagram.PointFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.PositionFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.SizeFeature;
@@ -122,7 +121,7 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass placingFigureEClass = null;
+  private EClass decoratorEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -241,13 +240,6 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass doubleFeatureEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass stringFeatureEClass = null;
 
   /**
@@ -283,7 +275,7 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass attributeReferenceEClass = null;
+  private EEnum containerLayoutEEnum = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -390,7 +382,7 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Styles()
+  public EReference getXDiagram_ModelClass()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(2);
   }
@@ -400,7 +392,7 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_ModelClass()
+  public EReference getXDiagram_Styles()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(3);
   }
@@ -423,16 +415,6 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
   public EReference getXDiagram_Links()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getXDiagram_Attr()
-  {
-    return (EReference)xDiagramEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -690,7 +672,7 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getNodeContainer_Type()
+  public EAttribute getNodeContainer_Layout()
   {
     return (EAttribute)nodeContainerEClass.getEStructuralFeatures().get(0);
   }
@@ -830,7 +812,7 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getLink_SourceStatic()
+  public EReference getLink_Decorators()
   {
     return (EReference)linkEClass.getEStructuralFeatures().get(8);
   }
@@ -840,9 +822,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getLink_SourceDynamic()
+  public EClass getDecorator()
   {
-    return (EReference)linkEClass.getEStructuralFeatures().get(9);
+    return decoratorEClass;
   }
 
   /**
@@ -850,9 +832,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getLink_TargetStatic()
+  public EAttribute getDecorator_Pos()
   {
-    return (EReference)linkEClass.getEStructuralFeatures().get(10);
+    return (EAttribute)decoratorEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -860,9 +842,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getLink_TargetDynamic()
+  public EAttribute getDecorator_Source()
   {
-    return (EReference)linkEClass.getEStructuralFeatures().get(11);
+    return (EAttribute)decoratorEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -870,9 +852,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getLink_Placings()
+  public EAttribute getDecorator_Target()
   {
-    return (EReference)linkEClass.getEStructuralFeatures().get(12);
+    return (EAttribute)decoratorEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -880,9 +862,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getPlacingFigure()
+  public EAttribute getDecorator_Middle()
   {
-    return placingFigureEClass;
+    return (EAttribute)decoratorEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -890,9 +872,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getPlacingFigure_Pos()
+  public EReference getDecorator_PlacingStatic()
   {
-    return (EAttribute)placingFigureEClass.getEStructuralFeatures().get(0);
+    return (EReference)decoratorEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -900,19 +882,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPlacingFigure_PlacingStatic()
+  public EReference getDecorator_PlacingDynamic()
   {
-    return (EReference)placingFigureEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPlacingFigure_PlacingDynamic()
-  {
-    return (EReference)placingFigureEClass.getEStructuralFeatures().get(2);
+    return (EReference)decoratorEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1610,36 +1582,6 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getDoubleFeature()
-  {
-    return doubleFeatureEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getDoubleFeature_Key()
-  {
-    return (EAttribute)doubleFeatureEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getDoubleFeature_Value()
-  {
-    return (EAttribute)doubleFeatureEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getStringFeature()
   {
     return stringFeatureEClass;
@@ -1920,29 +1862,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getAttributeReference()
+  public EEnum getContainerLayout()
   {
-    return attributeReferenceEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAttributeReference_ModelAttribute()
-  {
-    return (EReference)attributeReferenceEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAttributeReference_Path()
-  {
-    return (EReference)attributeReferenceEClass.getEStructuralFeatures().get(1);
+    return containerLayoutEEnum;
   }
 
   /**
@@ -1988,11 +1910,10 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
     xDiagramEClass = createEClass(XDIAGRAM);
     createEAttribute(xDiagramEClass, XDIAGRAM__IMPORT_URI);
     createEReference(xDiagramEClass, XDIAGRAM__IMPORTS);
-    createEReference(xDiagramEClass, XDIAGRAM__STYLES);
     createEReference(xDiagramEClass, XDIAGRAM__MODEL_CLASS);
+    createEReference(xDiagramEClass, XDIAGRAM__STYLES);
     createEReference(xDiagramEClass, XDIAGRAM__NODES);
     createEReference(xDiagramEClass, XDIAGRAM__LINKS);
-    createEReference(xDiagramEClass, XDIAGRAM__ATTR);
 
     importStatementEClass = createEClass(IMPORT_STATEMENT);
     createEAttribute(importStatementEClass, IMPORT_STATEMENT__IMPORTED_NAMESPACE);
@@ -2025,7 +1946,7 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
     createEReference(nodeFigureEClass, NODE_FIGURE__FEATURES);
 
     nodeContainerEClass = createEClass(NODE_CONTAINER);
-    createEAttribute(nodeContainerEClass, NODE_CONTAINER__TYPE);
+    createEAttribute(nodeContainerEClass, NODE_CONTAINER__LAYOUT);
     createEReference(nodeContainerEClass, NODE_CONTAINER__MODEL_REFERENCE);
     createEAttribute(nodeContainerEClass, NODE_CONTAINER__VALUE);
     createEAttribute(nodeContainerEClass, NODE_CONTAINER__FORMAT);
@@ -2040,16 +1961,15 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
     createEReference(linkEClass, LINK__LINEFEATURES);
     createEReference(linkEClass, LINK__COLORFEATURES);
     createEReference(linkEClass, LINK__INTEGERFEATURES);
-    createEReference(linkEClass, LINK__SOURCE_STATIC);
-    createEReference(linkEClass, LINK__SOURCE_DYNAMIC);
-    createEReference(linkEClass, LINK__TARGET_STATIC);
-    createEReference(linkEClass, LINK__TARGET_DYNAMIC);
-    createEReference(linkEClass, LINK__PLACINGS);
+    createEReference(linkEClass, LINK__DECORATORS);
 
-    placingFigureEClass = createEClass(PLACING_FIGURE);
-    createEAttribute(placingFigureEClass, PLACING_FIGURE__POS);
-    createEReference(placingFigureEClass, PLACING_FIGURE__PLACING_STATIC);
-    createEReference(placingFigureEClass, PLACING_FIGURE__PLACING_DYNAMIC);
+    decoratorEClass = createEClass(DECORATOR);
+    createEAttribute(decoratorEClass, DECORATOR__POS);
+    createEAttribute(decoratorEClass, DECORATOR__SOURCE);
+    createEAttribute(decoratorEClass, DECORATOR__TARGET);
+    createEAttribute(decoratorEClass, DECORATOR__MIDDLE);
+    createEReference(decoratorEClass, DECORATOR__PLACING_STATIC);
+    createEReference(decoratorEClass, DECORATOR__PLACING_DYNAMIC);
 
     dynamicFigureEClass = createEClass(DYNAMIC_FIGURE);
     createEAttribute(dynamicFigureEClass, DYNAMIC_FIGURE__FIGURE);
@@ -2136,10 +2056,6 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
     createEAttribute(integerFeatureEClass, INTEGER_FEATURE__KEY);
     createEAttribute(integerFeatureEClass, INTEGER_FEATURE__VALUE);
 
-    doubleFeatureEClass = createEClass(DOUBLE_FEATURE);
-    createEAttribute(doubleFeatureEClass, DOUBLE_FEATURE__KEY);
-    createEAttribute(doubleFeatureEClass, DOUBLE_FEATURE__VALUE);
-
     stringFeatureEClass = createEClass(STRING_FEATURE);
     createEReference(stringFeatureEClass, STRING_FEATURE__EXPRESSION);
     createEAttribute(stringFeatureEClass, STRING_FEATURE__KEY);
@@ -2173,11 +2089,8 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
     createEAttribute(atributeValueEClass, ATRIBUTE_VALUE__VALUE_MONTH);
     createEAttribute(atributeValueEClass, ATRIBUTE_VALUE__VALUE_YEAR);
 
-    attributeReferenceEClass = createEClass(ATTRIBUTE_REFERENCE);
-    createEReference(attributeReferenceEClass, ATTRIBUTE_REFERENCE__MODEL_ATTRIBUTE);
-    createEReference(attributeReferenceEClass, ATTRIBUTE_REFERENCE__PATH);
-
     // Create enums
+    containerLayoutEEnum = createEEnum(CONTAINER_LAYOUT);
     figureShapeEEnum = createEEnum(FIGURE_SHAPE);
   }
 
@@ -2219,11 +2132,10 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
     initEClass(xDiagramEClass, XDiagram.class, "XDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getXDiagram_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Imports(), this.getImportStatement(), null, "imports", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getXDiagram_Styles(), this.getStyle(), null, "styles", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_ModelClass(), ecorePackage.getEClass(), null, "modelClass", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getXDiagram_Styles(), this.getStyle(), null, "styles", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Nodes(), this.getNode(), null, "nodes", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Links(), this.getLink(), null, "links", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getXDiagram_Attr(), this.getAttributeReference(), null, "attr", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(importStatementEClass, ImportStatement.class, "ImportStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getImportStatement_ImportedNamespace(), ecorePackage.getEString(), "importedNamespace", null, 0, 1, ImportStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2256,7 +2168,7 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
     initEReference(getNodeFigure_Features(), this.getFigureFeatures(), null, "features", null, 0, 1, NodeFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(nodeContainerEClass, NodeContainer.class, "NodeContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getNodeContainer_Type(), ecorePackage.getEString(), "type", null, 0, 1, NodeContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNodeContainer_Layout(), this.getContainerLayout(), "layout", null, 0, 1, NodeContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getNodeContainer_ModelReference(), ecorePackage.getEReference(), null, "modelReference", null, 0, 1, NodeContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getNodeContainer_Value(), ecorePackage.getEInt(), "value", null, 0, 1, NodeContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getNodeContainer_Format(), ecorePackage.getEString(), "format", null, 0, 1, NodeContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2271,16 +2183,15 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
     initEReference(getLink_Linefeatures(), this.getLineFeature(), null, "linefeatures", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getLink_Colorfeatures(), this.getColorFeature(), null, "colorfeatures", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getLink_Integerfeatures(), this.getIntegerFeature(), null, "integerfeatures", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLink_SourceStatic(), this.getStaticFigure(), null, "sourceStatic", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLink_SourceDynamic(), this.getDynamicFigure(), null, "sourceDynamic", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLink_TargetStatic(), this.getStaticFigure(), null, "targetStatic", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLink_TargetDynamic(), this.getDynamicFigure(), null, "targetDynamic", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLink_Placings(), this.getPlacingFigure(), null, "placings", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLink_Decorators(), this.getDecorator(), null, "decorators", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(placingFigureEClass, PlacingFigure.class, "PlacingFigure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPlacingFigure_Pos(), ecorePackage.getEInt(), "pos", null, 0, 1, PlacingFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPlacingFigure_PlacingStatic(), this.getStaticFigure(), null, "placingStatic", null, 0, 1, PlacingFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPlacingFigure_PlacingDynamic(), this.getDynamicFigure(), null, "placingDynamic", null, 0, -1, PlacingFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(decoratorEClass, Decorator.class, "Decorator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDecorator_Pos(), ecorePackage.getEInt(), "pos", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDecorator_Source(), ecorePackage.getEBoolean(), "source", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDecorator_Target(), ecorePackage.getEBoolean(), "target", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDecorator_Middle(), ecorePackage.getEBoolean(), "middle", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDecorator_PlacingStatic(), this.getStaticFigure(), null, "placingStatic", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDecorator_PlacingDynamic(), this.getDynamicFigure(), null, "placingDynamic", null, 0, -1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(dynamicFigureEClass, DynamicFigure.class, "DynamicFigure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDynamicFigure_Figure(), ecorePackage.getEString(), "figure", null, 0, 1, DynamicFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2367,10 +2278,6 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
     initEAttribute(getIntegerFeature_Key(), ecorePackage.getEString(), "key", null, 0, 1, IntegerFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getIntegerFeature_Value(), ecorePackage.getEInt(), "value", null, 0, 1, IntegerFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(doubleFeatureEClass, DoubleFeature.class, "DoubleFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDoubleFeature_Key(), ecorePackage.getEString(), "key", null, 0, 1, DoubleFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDoubleFeature_Value(), ecorePackage.getEInt(), "value", null, 0, 1, DoubleFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(stringFeatureEClass, StringFeature.class, "StringFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getStringFeature_Expression(), this.getAtributeExpression(), null, "expression", null, 0, 1, StringFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getStringFeature_Key(), ecorePackage.getEString(), "key", null, 0, 1, StringFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2404,11 +2311,11 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
     initEAttribute(getAtributeValue_ValueMONTH(), ecorePackage.getEInt(), "valueMONTH", null, 0, 1, AtributeValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAtributeValue_ValueYEAR(), ecorePackage.getEInt(), "valueYEAR", null, 0, 1, AtributeValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(attributeReferenceEClass, AttributeReference.class, "AttributeReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAttributeReference_ModelAttribute(), ecorePackage.getEAttribute(), null, "modelAttribute", null, 0, 1, AttributeReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAttributeReference_Path(), this.getAttributeReference(), null, "path", null, 0, -1, AttributeReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     // Initialize enums and add enum literals
+    initEEnum(containerLayoutEEnum, ContainerLayout.class, "ContainerLayout");
+    addEEnumLiteral(containerLayoutEEnum, ContainerLayout.STACK);
+    addEEnumLiteral(containerLayoutEEnum, ContainerLayout.FREE);
+
     initEEnum(figureShapeEEnum, FigureShape.class, "FigureShape");
     addEEnumLiteral(figureShapeEEnum, FigureShape.SQUARE);
     addEEnumLiteral(figureShapeEEnum, FigureShape.RECTANGLE);

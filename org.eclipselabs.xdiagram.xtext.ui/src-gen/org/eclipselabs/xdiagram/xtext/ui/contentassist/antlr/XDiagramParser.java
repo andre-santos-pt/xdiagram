@@ -39,10 +39,10 @@ public class XDiagramParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getXDiagramAccess().getAlternatives_6(), "rule__XDiagram__Alternatives_6");
 					put(grammarAccess.getDiagramElementAccess().getAlternatives(), "rule__DiagramElement__Alternatives");
-					put(grammarAccess.getNodeContainerAccess().getTypeAlternatives_0_0(), "rule__NodeContainer__TypeAlternatives_0_0");
 					put(grammarAccess.getNodeContainerAccess().getFormatAlternatives_3_2_0(), "rule__NodeContainer__FormatAlternatives_3_2_0");
 					put(grammarAccess.getLinkAccess().getAlternatives_1(), "rule__Link__Alternatives_1");
 					put(grammarAccess.getLinkAccess().getAlternatives_7(), "rule__Link__Alternatives_7");
+					put(grammarAccess.getDecoratorAccess().getAlternatives(), "rule__Decorator__Alternatives");
 					put(grammarAccess.getDynamicElementAccess().getAlternatives(), "rule__DynamicElement__Alternatives");
 					put(grammarAccess.getStaticElementAccess().getAlternatives(), "rule__StaticElement__Alternatives");
 					put(grammarAccess.getNodeAnchorAccess().getFormatXAlternatives_5_0(), "rule__NodeAnchor__FormatXAlternatives_5_0");
@@ -67,6 +67,7 @@ public class XDiagramParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAtributeExpressionAccess().getOperatorAlternatives_1_0(), "rule__AtributeExpression__OperatorAlternatives_1_0");
 					put(grammarAccess.getAtributeValueAccess().getAlternatives(), "rule__AtributeValue__Alternatives");
 					put(grammarAccess.getAtributeValueAccess().getValueBOOLAlternatives_3_0(), "rule__AtributeValue__ValueBOOLAlternatives_3_0");
+					put(grammarAccess.getContainerLayoutAccess().getAlternatives(), "rule__ContainerLayout__Alternatives");
 					put(grammarAccess.getFigureShapeAccess().getAlternatives(), "rule__FigureShape__Alternatives");
 					put(grammarAccess.getXDiagramAccess().getGroup(), "rule__XDiagram__Group__0");
 					put(grammarAccess.getImportStatementAccess().getGroup(), "rule__ImportStatement__Group__0");
@@ -91,9 +92,9 @@ public class XDiagramParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLinkAccess().getGroup_4(), "rule__Link__Group_4__0");
 					put(grammarAccess.getLinkAccess().getGroup_5(), "rule__Link__Group_5__0");
 					put(grammarAccess.getLinkAccess().getGroup_6(), "rule__Link__Group_6__0");
-					put(grammarAccess.getLinkAccess().getGroup_8(), "rule__Link__Group_8__0");
-					put(grammarAccess.getLinkAccess().getGroup_9(), "rule__Link__Group_9__0");
-					put(grammarAccess.getPlacingFigureAccess().getGroup(), "rule__PlacingFigure__Group__0");
+					put(grammarAccess.getDecoratorAccess().getGroup_0(), "rule__Decorator__Group_0__0");
+					put(grammarAccess.getDecoratorAccess().getGroup_0_1(), "rule__Decorator__Group_0_1__0");
+					put(grammarAccess.getDecoratorAccess().getGroup_3(), "rule__Decorator__Group_3__0");
 					put(grammarAccess.getDynamicFigureAccess().getGroup(), "rule__DynamicFigure__Group__0");
 					put(grammarAccess.getStaticFigureAccess().getGroup(), "rule__StaticFigure__Group__0");
 					put(grammarAccess.getStaticFigureAccess().getGroup_3(), "rule__StaticFigure__Group_3__0");
@@ -113,8 +114,6 @@ public class XDiagramParser extends AbstractContentAssistParser {
 					put(grammarAccess.getColorFeatureAccess().getGroup_4(), "rule__ColorFeature__Group_4__0");
 					put(grammarAccess.getRGBAccess().getGroup(), "rule__RGB__Group__0");
 					put(grammarAccess.getIntegerFeatureAccess().getGroup(), "rule__IntegerFeature__Group__0");
-					put(grammarAccess.getDoubleFeatureAccess().getGroup(), "rule__DoubleFeature__Group__0");
-					put(grammarAccess.getDoubleFeatureAccess().getGroup_3(), "rule__DoubleFeature__Group_3__0");
 					put(grammarAccess.getStringFeatureAccess().getGroup(), "rule__StringFeature__Group__0");
 					put(grammarAccess.getStringFeatureAccess().getGroup_3_1(), "rule__StringFeature__Group_3_1__0");
 					put(grammarAccess.getStringFeatureAccess().getGroup_3_2(), "rule__StringFeature__Group_3_2__0");
@@ -124,15 +123,12 @@ public class XDiagramParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAtributeExpressionAccess().getGroup(), "rule__AtributeExpression__Group__0");
 					put(grammarAccess.getAtributeValueAccess().getGroup_1(), "rule__AtributeValue__Group_1__0");
 					put(grammarAccess.getAtributeValueAccess().getGroup_5(), "rule__AtributeValue__Group_5__0");
-					put(grammarAccess.getAttributeReferenceAccess().getGroup(), "rule__AttributeReference__Group__0");
-					put(grammarAccess.getAttributeReferenceAccess().getGroup_1(), "rule__AttributeReference__Group_1__0");
 					put(grammarAccess.getXDiagramAccess().getImportURIAssignment_1(), "rule__XDiagram__ImportURIAssignment_1");
 					put(grammarAccess.getXDiagramAccess().getImportsAssignment_2(), "rule__XDiagram__ImportsAssignment_2");
-					put(grammarAccess.getXDiagramAccess().getStylesAssignment_3(), "rule__XDiagram__StylesAssignment_3");
-					put(grammarAccess.getXDiagramAccess().getModelClassAssignment_5(), "rule__XDiagram__ModelClassAssignment_5");
+					put(grammarAccess.getXDiagramAccess().getModelClassAssignment_4(), "rule__XDiagram__ModelClassAssignment_4");
+					put(grammarAccess.getXDiagramAccess().getStylesAssignment_5(), "rule__XDiagram__StylesAssignment_5");
 					put(grammarAccess.getXDiagramAccess().getNodesAssignment_6_0(), "rule__XDiagram__NodesAssignment_6_0");
 					put(grammarAccess.getXDiagramAccess().getLinksAssignment_6_1(), "rule__XDiagram__LinksAssignment_6_1");
-					put(grammarAccess.getXDiagramAccess().getAttrAssignment_7(), "rule__XDiagram__AttrAssignment_7");
 					put(grammarAccess.getImportStatementAccess().getImportedNamespaceAssignment_1_1(), "rule__ImportStatement__ImportedNamespaceAssignment_1_1");
 					put(grammarAccess.getStyleAccess().getNameAssignment_2(), "rule__Style__NameAssignment_2");
 					put(grammarAccess.getStyleAccess().getFeaturesAssignment_4(), "rule__Style__FeaturesAssignment_4");
@@ -151,7 +147,7 @@ public class XDiagramParser extends AbstractContentAssistParser {
 					put(grammarAccess.getNodeFigureAccess().getFigureAssignment_3(), "rule__NodeFigure__FigureAssignment_3");
 					put(grammarAccess.getNodeFigureAccess().getStyleAssignment_4_3(), "rule__NodeFigure__StyleAssignment_4_3");
 					put(grammarAccess.getNodeFigureAccess().getFeaturesAssignment_6(), "rule__NodeFigure__FeaturesAssignment_6");
-					put(grammarAccess.getNodeContainerAccess().getTypeAssignment_0(), "rule__NodeContainer__TypeAssignment_0");
+					put(grammarAccess.getNodeContainerAccess().getLayoutAssignment_0(), "rule__NodeContainer__LayoutAssignment_0");
 					put(grammarAccess.getNodeContainerAccess().getModelReferenceAssignment_2_1(), "rule__NodeContainer__ModelReferenceAssignment_2_1");
 					put(grammarAccess.getNodeContainerAccess().getValueAssignment_3_1(), "rule__NodeContainer__ValueAssignment_3_1");
 					put(grammarAccess.getNodeContainerAccess().getFormatAssignment_3_2(), "rule__NodeContainer__FormatAssignment_3_2");
@@ -169,14 +165,13 @@ public class XDiagramParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLinkAccess().getLinefeaturesAssignment_7_1(), "rule__Link__LinefeaturesAssignment_7_1");
 					put(grammarAccess.getLinkAccess().getColorfeaturesAssignment_7_2(), "rule__Link__ColorfeaturesAssignment_7_2");
 					put(grammarAccess.getLinkAccess().getIntegerfeaturesAssignment_7_3(), "rule__Link__IntegerfeaturesAssignment_7_3");
-					put(grammarAccess.getLinkAccess().getSourceStaticAssignment_8_2(), "rule__Link__SourceStaticAssignment_8_2");
-					put(grammarAccess.getLinkAccess().getSourceDynamicAssignment_8_3(), "rule__Link__SourceDynamicAssignment_8_3");
-					put(grammarAccess.getLinkAccess().getTargetStaticAssignment_9_2(), "rule__Link__TargetStaticAssignment_9_2");
-					put(grammarAccess.getLinkAccess().getTargetDynamicAssignment_9_3(), "rule__Link__TargetDynamicAssignment_9_3");
-					put(grammarAccess.getLinkAccess().getPlacingsAssignment_10(), "rule__Link__PlacingsAssignment_10");
-					put(grammarAccess.getPlacingFigureAccess().getPosAssignment_2(), "rule__PlacingFigure__PosAssignment_2");
-					put(grammarAccess.getPlacingFigureAccess().getPlacingStaticAssignment_5(), "rule__PlacingFigure__PlacingStaticAssignment_5");
-					put(grammarAccess.getPlacingFigureAccess().getPlacingDynamicAssignment_6(), "rule__PlacingFigure__PlacingDynamicAssignment_6");
+					put(grammarAccess.getLinkAccess().getDecoratorsAssignment_8(), "rule__Link__DecoratorsAssignment_8");
+					put(grammarAccess.getDecoratorAccess().getPosAssignment_0_1_1(), "rule__Decorator__PosAssignment_0_1_1");
+					put(grammarAccess.getDecoratorAccess().getSourceAssignment_1(), "rule__Decorator__SourceAssignment_1");
+					put(grammarAccess.getDecoratorAccess().getTargetAssignment_2(), "rule__Decorator__TargetAssignment_2");
+					put(grammarAccess.getDecoratorAccess().getMiddleAssignment_3_0(), "rule__Decorator__MiddleAssignment_3_0");
+					put(grammarAccess.getDecoratorAccess().getPlacingStaticAssignment_3_2(), "rule__Decorator__PlacingStaticAssignment_3_2");
+					put(grammarAccess.getDecoratorAccess().getPlacingDynamicAssignment_3_3(), "rule__Decorator__PlacingDynamicAssignment_3_3");
 					put(grammarAccess.getDynamicFigureAccess().getFigureAssignment_1(), "rule__DynamicFigure__FigureAssignment_1");
 					put(grammarAccess.getDynamicFigureAccess().getFeaturesAssignment_3(), "rule__DynamicFigure__FeaturesAssignment_3");
 					put(grammarAccess.getStaticFigureAccess().getFigureAssignment_2(), "rule__StaticFigure__FigureAssignment_2");
@@ -232,8 +227,6 @@ public class XDiagramParser extends AbstractContentAssistParser {
 					put(grammarAccess.getIntegerFeatureAccess().getExpressionAssignment_0(), "rule__IntegerFeature__ExpressionAssignment_0");
 					put(grammarAccess.getIntegerFeatureAccess().getKeyAssignment_1(), "rule__IntegerFeature__KeyAssignment_1");
 					put(grammarAccess.getIntegerFeatureAccess().getValueAssignment_3(), "rule__IntegerFeature__ValueAssignment_3");
-					put(grammarAccess.getDoubleFeatureAccess().getKeyAssignment_0(), "rule__DoubleFeature__KeyAssignment_0");
-					put(grammarAccess.getDoubleFeatureAccess().getValueAssignment_2(), "rule__DoubleFeature__ValueAssignment_2");
 					put(grammarAccess.getStringFeatureAccess().getExpressionAssignment_0(), "rule__StringFeature__ExpressionAssignment_0");
 					put(grammarAccess.getStringFeatureAccess().getKeyAssignment_1(), "rule__StringFeature__KeyAssignment_1");
 					put(grammarAccess.getStringFeatureAccess().getValueAssignment_3_0(), "rule__StringFeature__ValueAssignment_3_0");
@@ -263,8 +256,6 @@ public class XDiagramParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAtributeValueAccess().getValueDAYAssignment_5_0(), "rule__AtributeValue__ValueDAYAssignment_5_0");
 					put(grammarAccess.getAtributeValueAccess().getValueMONTHAssignment_5_2(), "rule__AtributeValue__ValueMONTHAssignment_5_2");
 					put(grammarAccess.getAtributeValueAccess().getValueYEARAssignment_5_4(), "rule__AtributeValue__ValueYEARAssignment_5_4");
-					put(grammarAccess.getAttributeReferenceAccess().getModelAttributeAssignment_0(), "rule__AttributeReference__ModelAttributeAssignment_0");
-					put(grammarAccess.getAttributeReferenceAccess().getPathAssignment_1_1(), "rule__AttributeReference__PathAssignment_1_1");
 				}
 			};
 		}

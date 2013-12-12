@@ -7,6 +7,10 @@
     editorPluginID="org.eclipselabs.xdiagram.xtext.editor" runtimeVersion="2.9">
   <genPackages prefix="Xdiagram" basePackage="org.eclipselabs.xdiagram.xtext" disposableProviderFactory="true"
       ecorePackage="XDiagram.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="XDiagram.ecore#//ContainerLayout">
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//ContainerLayout/STACK"/>
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//ContainerLayout/FREE"/>
+    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="XDiagram.ecore#//FigureShape">
       <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FigureShape/SQUARE"/>
       <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FigureShape/RECTANGLE"/>
@@ -23,11 +27,10 @@
     <genClasses ecoreClass="XDiagram.ecore#//XDiagram">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//XDiagram/importURI"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//XDiagram/imports"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//XDiagram/styles"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XDiagram.ecore#//XDiagram/modelClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//XDiagram/styles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//XDiagram/nodes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//XDiagram/links"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//XDiagram/attr"/>
     </genClasses>
     <genClasses ecoreClass="XDiagram.ecore#//ImportStatement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//ImportStatement/importedNamespace"/>
@@ -60,7 +63,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//NodeFigure/features"/>
     </genClasses>
     <genClasses ecoreClass="XDiagram.ecore#//NodeContainer">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//NodeContainer/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//NodeContainer/layout"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XDiagram.ecore#//NodeContainer/modelReference"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//NodeContainer/value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//NodeContainer/format"/>
@@ -75,16 +78,15 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Link/linefeatures"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Link/colorfeatures"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Link/integerfeatures"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Link/sourceStatic"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Link/sourceDynamic"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Link/targetStatic"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Link/targetDynamic"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Link/placings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Link/decorators"/>
     </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//PlacingFigure">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//PlacingFigure/pos"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//PlacingFigure/placingStatic"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//PlacingFigure/placingDynamic"/>
+    <genClasses ecoreClass="XDiagram.ecore#//Decorator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Decorator/pos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Decorator/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Decorator/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Decorator/middle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Decorator/placingStatic"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Decorator/placingDynamic"/>
     </genClasses>
     <genClasses ecoreClass="XDiagram.ecore#//DynamicFigure">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//DynamicFigure/figure"/>
@@ -169,10 +171,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//IntegerFeature/key"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//IntegerFeature/value"/>
     </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//DoubleFeature">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//DoubleFeature/key"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//DoubleFeature/value"/>
-    </genClasses>
     <genClasses ecoreClass="XDiagram.ecore#//StringFeature">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//StringFeature/expression"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//StringFeature/key"/>
@@ -205,10 +203,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//AtributeValue/valueDAY"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//AtributeValue/valueMONTH"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//AtributeValue/valueYEAR"/>
-    </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//AttributeReference">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XDiagram.ecore#//AttributeReference/modelAttribute"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//AttributeReference/path"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

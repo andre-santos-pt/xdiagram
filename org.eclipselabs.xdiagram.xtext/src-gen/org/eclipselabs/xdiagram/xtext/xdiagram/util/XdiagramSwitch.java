@@ -137,10 +137,10 @@ public class XdiagramSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XdiagramPackage.PLACING_FIGURE:
+      case XdiagramPackage.DECORATOR:
       {
-        PlacingFigure placingFigure = (PlacingFigure)theEObject;
-        T result = casePlacingFigure(placingFigure);
+        Decorator decorator = (Decorator)theEObject;
+        T result = caseDecorator(decorator);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -258,13 +258,6 @@ public class XdiagramSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XdiagramPackage.DOUBLE_FEATURE:
-      {
-        DoubleFeature doubleFeature = (DoubleFeature)theEObject;
-        T result = caseDoubleFeature(doubleFeature);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case XdiagramPackage.STRING_FEATURE:
       {
         StringFeature stringFeature = (StringFeature)theEObject;
@@ -297,13 +290,6 @@ public class XdiagramSwitch<T> extends Switch<T>
       {
         AtributeValue atributeValue = (AtributeValue)theEObject;
         T result = caseAtributeValue(atributeValue);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case XdiagramPackage.ATTRIBUTE_REFERENCE:
-      {
-        AttributeReference attributeReference = (AttributeReference)theEObject;
-        T result = caseAttributeReference(attributeReference);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -456,17 +442,17 @@ public class XdiagramSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Placing Figure</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Decorator</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Placing Figure</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Decorator</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casePlacingFigure(PlacingFigure object)
+  public T caseDecorator(Decorator object)
   {
     return null;
   }
@@ -728,22 +714,6 @@ public class XdiagramSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Double Feature</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Double Feature</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseDoubleFeature(DoubleFeature object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>String Feature</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -819,22 +789,6 @@ public class XdiagramSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAtributeValue(AtributeValue object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Attribute Reference</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Attribute Reference</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAttributeReference(AttributeReference object)
   {
     return null;
   }

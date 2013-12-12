@@ -70,7 +70,7 @@ public class FigureProvider {
 	public final static String diferentSeperator = "<>";
 	public final static String rgbSeperator = ",";
 	
-	public static final int minValue = 4;
+	public static final int minValue = 50;
 
 	public static EList<org.eclipselabs.xdiagram.xtext.xdiagram.Style> styles;
 	public static final HashMap<String, Dimension> imageSizes = new HashMap<String, Dimension>();
