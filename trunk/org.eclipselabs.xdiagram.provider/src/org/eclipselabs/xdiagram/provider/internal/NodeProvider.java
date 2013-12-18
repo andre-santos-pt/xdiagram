@@ -168,6 +168,8 @@ public class NodeProvider extends FigureProvider {
 					Integer.MIN_VALUE, Integer.MIN_VALUE);		
 				
 		ArrayList<GraphicsAlgorithm> shapes = new ArrayList<GraphicsAlgorithm>();
+		ArrayList<GraphicsAlgorithm> labels = new ArrayList<GraphicsAlgorithm>();
+		ArrayList<FigureFeatures> styles = new ArrayList<FigureFeatures>();
 
 		for (int i=0; i<figures.size(); i++){
 			
@@ -218,8 +220,11 @@ public class NodeProvider extends FigureProvider {
 			shapes.add(figure);			
 			Point limit = new Point(limits.x+limits.width, limits.y+limits.height);
 
-			if (shape == FigureShape.LABEL)
+			if (shape == FigureShape.LABEL){
+				labels.add(figure);
+				styles.add(features);
 				FigureProperty.CAN_RESIZE.set(parentFigure, "1");
+			}
 			if (main)
 				FigureProperty.MAIN.set(figure, "1");
 			
@@ -597,11 +602,23 @@ public class NodeProvider extends FigureProvider {
 					
 					String value = FigureProperty.TEXT.get(figure);
 					String canresize = FigureProperty.CAN_RESIZE.get(figure);
-					if ( figure instanceof MultiText && value!=null && canresize==null )
+					String label = FigureProperty.LABEL.get(figure);
+					boolean set = false;
+					if ( figure instanceof MultiText && value!=null && canresize==null ){
 						Graphiti.getGaService().setLocationAndSize(figure, 
 								location.x+0, location.y+(int)(y*fy), 
 								size.width, (int)(height*zy));
-					else
+						set = true;
+					}else if ( label!=null && label.length()>0 )
+						for (GraphicsAlgorithm text : figures)
+							if (FigureProperty.HASHCODE.get(text).equals(label)){
+								Graphiti.getGaService().setLocationAndSize(figure, 
+										text.getX(), text.getY()+text.getHeight(), 
+										text.getX()+text.getWidth(), text.getY()+text.getHeight());
+								set = true;
+								break;
+							}						
+					if (!set)
 						Graphiti.getGaService().setLocationAndSize(figure, 
 								location.x+(int)(x*fx), location.y+(int)(y*fy), 
 								(int)(width*zx), (int)(height*zy));

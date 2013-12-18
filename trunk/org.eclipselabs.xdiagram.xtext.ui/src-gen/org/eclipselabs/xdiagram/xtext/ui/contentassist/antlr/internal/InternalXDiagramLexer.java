@@ -2621,10 +2621,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11703:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11703:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11673:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11673:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11703:11: ( '^' )?
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11673:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -2633,7 +2633,7 @@ public class InternalXDiagramLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11703:11: '^'
+                    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11673:11: '^'
                     {
                     match('^'); 
 
@@ -2651,7 +2651,7 @@ public class InternalXDiagramLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11703:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11673:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -2700,10 +2700,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11705:10: ( ( '0' .. '9' )+ )
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11705:12: ( '0' .. '9' )+
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11675:10: ( ( '0' .. '9' )+ )
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11675:12: ( '0' .. '9' )+
             {
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11705:12: ( '0' .. '9' )+
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11675:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -2717,7 +2717,7 @@ public class InternalXDiagramLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11705:13: '0' .. '9'
+            	    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11675:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2749,10 +2749,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11707:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11707:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11677:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11677:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11707:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11677:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -2770,10 +2770,10 @@ public class InternalXDiagramLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11707:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11677:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11707:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11677:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -2789,7 +2789,7 @@ public class InternalXDiagramLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11707:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11677:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -2805,7 +2805,7 @@ public class InternalXDiagramLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11707:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11677:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2830,10 +2830,10 @@ public class InternalXDiagramLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11707:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11677:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11707:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11677:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -2849,7 +2849,7 @@ public class InternalXDiagramLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11707:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11677:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -2865,7 +2865,7 @@ public class InternalXDiagramLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11707:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11677:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2908,12 +2908,12 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11709:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11709:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11679:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11679:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11709:24: ( options {greedy=false; } : . )*
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11679:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -2938,7 +2938,7 @@ public class InternalXDiagramLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11709:52: .
+            	    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11679:52: .
             	    {
             	    matchAny(); 
 
@@ -2968,12 +2968,12 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11711:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11711:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11681:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11681:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11711:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11681:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -2986,7 +2986,7 @@ public class InternalXDiagramLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11711:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11681:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -3006,7 +3006,7 @@ public class InternalXDiagramLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11711:40: ( ( '\\r' )? '\\n' )?
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11681:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -3015,9 +3015,9 @@ public class InternalXDiagramLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11711:41: ( '\\r' )? '\\n'
+                    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11681:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11711:41: ( '\\r' )?
+                    // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11681:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -3026,7 +3026,7 @@ public class InternalXDiagramLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11711:41: '\\r'
+                            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11681:41: '\\r'
                             {
                             match('\r'); 
 
@@ -3058,10 +3058,10 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11713:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11713:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11683:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11683:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11713:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11683:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -3115,8 +3115,8 @@ public class InternalXDiagramLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11715:16: ( . )
-            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11715:18: .
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11685:16: ( . )
+            // ../org.eclipselabs.xdiagram.xtext.ui/src-gen/org/eclipselabs/xdiagram/xtext/ui/contentassist/antlr/internal/InternalXDiagram.g:11685:18: .
             {
             matchAny(); 
 

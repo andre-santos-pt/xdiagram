@@ -3,6 +3,7 @@ package org.eclipselabs.xdiagram.provider.internal;
 import java.awt.Dimension;
 import java.awt.Point;
 import java.awt.Rectangle;
+import java.lang.reflect.Constructor;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
@@ -15,7 +16,10 @@ import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure;
 import org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures;
+import org.eclipselabs.xdiagram.xtext.xdiagram.PositionFeature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.SizeFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.StaticFigure;
+import org.eclipselabs.xdiagram.xtext.xdiagram.impl.FigureFeaturesImpl;
 
 public class LinkProvider extends FigureProvider {
 
@@ -91,9 +95,39 @@ public class LinkProvider extends FigureProvider {
 		
 	}
 
-	public static void createLinkFigure(Diagram diagram, ConnectionDecorator cd, EObject eObject, StaticFigure figure){
+	public static void createLinkFigure(Diagram diagram, ConnectionDecorator cd, 
+			EObject eObject, StaticFigure figure, String style){
 
 		FigureFeatures features = figure.getFeatures();
+		if (features==null){
+			for (Constructor<?> constructor : FigureFeaturesImpl.class.getDeclaredConstructors()){
+				if (constructor.getParameterTypes().length==0){
+					constructor.setAccessible(true);
+					try {
+						features = (FigureFeaturesImpl) constructor.newInstance(new Object[0]);
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+				}
+			}	
+		}
+		
+		FigureProvider.setStyle(figure.getStyle()!=null && figure.getStyle().length()>0 ?
+				figure.getStyle() : style, features);
+		if (features!=null && features.getSizefeatures()!=null)
+			for (SizeFeature sf : features.getSizefeatures()){
+				IntegerProperty.WIDTH.addNewValue(features.getIntegerfeatures(), sf.getWidth(), true);
+				IntegerProperty.HEIGHT.addNewValue(features.getIntegerfeatures(), sf.getHeight(), true);
+			}
+		if (features!=null && features.getPositionfeatures()!=null)
+			for (PositionFeature pf : features.getPositionfeatures()){
+				IntegerProperty.TOP.addNewValue(features.getIntegerfeatures(), pf.getY(), true);
+				IntegerProperty.LEFT.addNewValue(features.getIntegerfeatures(), pf.getX(), true);
+			}
+		
+		
 		Rectangle limits = new Rectangle(0, 0, 
 				IntegerProperty.WIDTH.getValue(features), 
 				IntegerProperty.HEIGHT.getValue(features));
@@ -110,14 +144,43 @@ public class LinkProvider extends FigureProvider {
 	
 	
 	public static void createDynamicFigure(Diagram diagram, ConnectionDecorator cd, 
-			EObject eObject, DynamicFigure figure){
+			EObject eObject, DynamicFigure figure, String style){
+		
+		FigureFeatures features = figure.getFeatures();
+		if (features==null){
+			for (Constructor<?> constructor : FigureFeaturesImpl.class.getDeclaredConstructors()){
+				if (constructor.getParameterTypes().length==0){
+					constructor.setAccessible(true);
+					try {
+						features = (FigureFeaturesImpl) constructor.newInstance(new Object[0]);
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+				}
+			}	
+		}
+		
+		//FigureProvider.setStyle(figure.getStyle()!=null && figure.getStyle().length()>0 ?
+		//		figure.getStyle() : style, features);
+		if (features!=null && features.getSizefeatures()!=null)
+			for (SizeFeature sf : features.getSizefeatures()){
+				IntegerProperty.WIDTH.addNewValue(features.getIntegerfeatures(), sf.getWidth(), true);
+				IntegerProperty.HEIGHT.addNewValue(features.getIntegerfeatures(), sf.getHeight(), true);
+			}
+		if (features!=null && features.getPositionfeatures()!=null)
+			for (PositionFeature pf : features.getPositionfeatures()){
+				IntegerProperty.TOP.addNewValue(features.getIntegerfeatures(), pf.getY(), true);
+				IntegerProperty.LEFT.addNewValue(features.getIntegerfeatures(), pf.getX(), true);
+			}
 
 		Point Location = new Point(
-				IntegerProperty.LEFT.getValue(figure.getFeatures()), 
-				IntegerProperty.TOP.getValue(figure.getFeatures()));			
+				IntegerProperty.LEFT.getValue(features), 
+				IntegerProperty.TOP.getValue(features));			
 
 		MultiText text = Graphiti.getGaService().createMultiText(cd);
-		Dimension size = setLabelFigure(diagram, null, text, figure.getFeatures(), false);
+		Dimension size = setLabelFigure(diagram, null, text, features, false);
 		if (Location.x==0 && Location.y==0)
 			Location.setLocation(size.height, -minValue);
 		Graphiti.getGaService().setLocationAndSize(text, Location.x, Location.y, size.width, size.height);

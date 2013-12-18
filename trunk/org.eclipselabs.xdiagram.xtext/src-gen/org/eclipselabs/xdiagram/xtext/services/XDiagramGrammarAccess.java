@@ -866,100 +866,96 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class DecoratorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Decorator");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Keyword cDecoratorKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final Group cGroup_0_1 = (Group)cGroup_0.eContents().get(1);
-		private final Keyword cAtKeyword_0_1_0 = (Keyword)cGroup_0_1.eContents().get(0);
-		private final Assignment cPosAssignment_0_1_1 = (Assignment)cGroup_0_1.eContents().get(1);
-		private final RuleCall cPosINTTerminalRuleCall_0_1_1_0 = (RuleCall)cPosAssignment_0_1_1.eContents().get(0);
-		private final Keyword cPercentSignKeyword_0_1_2 = (Keyword)cGroup_0_1.eContents().get(2);
-		private final Assignment cSourceAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final Keyword cSourceSourceKeyword_1_0 = (Keyword)cSourceAssignment_1.eContents().get(0);
-		private final Assignment cTargetAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final Keyword cTargetTargetKeyword_2_0 = (Keyword)cTargetAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
-		private final Assignment cMiddleAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final Keyword cMiddleMiddleKeyword_3_0_0 = (Keyword)cMiddleAssignment_3_0.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
-		private final Assignment cPlacingStaticAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
-		private final RuleCall cPlacingStaticStaticFigureParserRuleCall_3_2_0 = (RuleCall)cPlacingStaticAssignment_3_2.eContents().get(0);
-		private final Assignment cPlacingDynamicAssignment_3_3 = (Assignment)cGroup_3.eContents().get(3);
-		private final RuleCall cPlacingDynamicDynamicFigureParserRuleCall_3_3_0 = (RuleCall)cPlacingDynamicAssignment_3_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_3_4 = (Keyword)cGroup_3.eContents().get(4);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cDecoratorKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Group cGroup_1_0 = (Group)cAlternatives_1.eContents().get(0);
+		private final Keyword cAtKeyword_1_0_0 = (Keyword)cGroup_1_0.eContents().get(0);
+		private final Assignment cPosAssignment_1_0_1 = (Assignment)cGroup_1_0.eContents().get(1);
+		private final RuleCall cPosINTTerminalRuleCall_1_0_1_0 = (RuleCall)cPosAssignment_1_0_1.eContents().get(0);
+		private final Keyword cPercentSignKeyword_1_0_2 = (Keyword)cGroup_1_0.eContents().get(2);
+		private final Assignment cSourceAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
+		private final Keyword cSourceSourceKeyword_1_1_0 = (Keyword)cSourceAssignment_1_1.eContents().get(0);
+		private final Assignment cTargetAssignment_1_2 = (Assignment)cAlternatives_1.eContents().get(2);
+		private final Keyword cTargetTargetKeyword_1_2_0 = (Keyword)cTargetAssignment_1_2.eContents().get(0);
+		private final Assignment cMiddleAssignment_1_3 = (Assignment)cAlternatives_1.eContents().get(3);
+		private final Keyword cMiddleMiddleKeyword_1_3_0 = (Keyword)cMiddleAssignment_1_3.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cPlacingStaticAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPlacingStaticStaticFigureParserRuleCall_3_0 = (RuleCall)cPlacingStaticAssignment_3.eContents().get(0);
+		private final Assignment cPlacingDynamicAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cPlacingDynamicDynamicFigureParserRuleCall_4_0 = (RuleCall)cPlacingDynamicAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//// % opcional? ou considerar pixeis?
 		//
 		//// ter "constantes" para origem destino
 		//
 		//Decorator:
-		//	"decorator" ("at" pos=INT "%") | source?="source" | target?="target" | middle?="middle" "{"
+		//	"decorator" ("at" pos=INT "%" | source?="source" | target?="target" | middle?="middle") "{"
 		//	placingStatic=StaticFigure? placingDynamic+=DynamicFigure* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"decorator" ("at" pos=INT "%") | source?="source" | target?="target" | middle?="middle" "{" placingStatic=StaticFigure?
+		//"decorator" ("at" pos=INT "%" | source?="source" | target?="target" | middle?="middle") "{" placingStatic=StaticFigure?
 		//placingDynamic+=DynamicFigure* "}"
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//"decorator" ("at" pos=INT "%")
-		public Group getGroup_0() { return cGroup_0; }
+		public Group getGroup() { return cGroup; }
 
 		//"decorator"
-		public Keyword getDecoratorKeyword_0_0() { return cDecoratorKeyword_0_0; }
+		public Keyword getDecoratorKeyword_0() { return cDecoratorKeyword_0; }
+
+		//"at" pos=INT "%" | source?="source" | target?="target" | middle?="middle"
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//"at" pos=INT "%"
-		public Group getGroup_0_1() { return cGroup_0_1; }
+		public Group getGroup_1_0() { return cGroup_1_0; }
 
 		//"at"
-		public Keyword getAtKeyword_0_1_0() { return cAtKeyword_0_1_0; }
+		public Keyword getAtKeyword_1_0_0() { return cAtKeyword_1_0_0; }
 
 		//pos=INT
-		public Assignment getPosAssignment_0_1_1() { return cPosAssignment_0_1_1; }
+		public Assignment getPosAssignment_1_0_1() { return cPosAssignment_1_0_1; }
 
 		//INT
-		public RuleCall getPosINTTerminalRuleCall_0_1_1_0() { return cPosINTTerminalRuleCall_0_1_1_0; }
+		public RuleCall getPosINTTerminalRuleCall_1_0_1_0() { return cPosINTTerminalRuleCall_1_0_1_0; }
 
 		//"%"
-		public Keyword getPercentSignKeyword_0_1_2() { return cPercentSignKeyword_0_1_2; }
+		public Keyword getPercentSignKeyword_1_0_2() { return cPercentSignKeyword_1_0_2; }
 
 		//source?="source"
-		public Assignment getSourceAssignment_1() { return cSourceAssignment_1; }
+		public Assignment getSourceAssignment_1_1() { return cSourceAssignment_1_1; }
 
 		//"source"
-		public Keyword getSourceSourceKeyword_1_0() { return cSourceSourceKeyword_1_0; }
+		public Keyword getSourceSourceKeyword_1_1_0() { return cSourceSourceKeyword_1_1_0; }
 
 		//target?="target"
-		public Assignment getTargetAssignment_2() { return cTargetAssignment_2; }
+		public Assignment getTargetAssignment_1_2() { return cTargetAssignment_1_2; }
 
 		//"target"
-		public Keyword getTargetTargetKeyword_2_0() { return cTargetTargetKeyword_2_0; }
-
-		//middle?="middle" "{" placingStatic=StaticFigure? placingDynamic+=DynamicFigure* "}"
-		public Group getGroup_3() { return cGroup_3; }
+		public Keyword getTargetTargetKeyword_1_2_0() { return cTargetTargetKeyword_1_2_0; }
 
 		//middle?="middle"
-		public Assignment getMiddleAssignment_3_0() { return cMiddleAssignment_3_0; }
+		public Assignment getMiddleAssignment_1_3() { return cMiddleAssignment_1_3; }
 
 		//"middle"
-		public Keyword getMiddleMiddleKeyword_3_0_0() { return cMiddleMiddleKeyword_3_0_0; }
+		public Keyword getMiddleMiddleKeyword_1_3_0() { return cMiddleMiddleKeyword_1_3_0; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
 		//placingStatic=StaticFigure?
-		public Assignment getPlacingStaticAssignment_3_2() { return cPlacingStaticAssignment_3_2; }
+		public Assignment getPlacingStaticAssignment_3() { return cPlacingStaticAssignment_3; }
 
 		//StaticFigure
-		public RuleCall getPlacingStaticStaticFigureParserRuleCall_3_2_0() { return cPlacingStaticStaticFigureParserRuleCall_3_2_0; }
+		public RuleCall getPlacingStaticStaticFigureParserRuleCall_3_0() { return cPlacingStaticStaticFigureParserRuleCall_3_0; }
 
 		//placingDynamic+=DynamicFigure*
-		public Assignment getPlacingDynamicAssignment_3_3() { return cPlacingDynamicAssignment_3_3; }
+		public Assignment getPlacingDynamicAssignment_4() { return cPlacingDynamicAssignment_4; }
 
 		//DynamicFigure
-		public RuleCall getPlacingDynamicDynamicFigureParserRuleCall_3_3_0() { return cPlacingDynamicDynamicFigureParserRuleCall_3_3_0; }
+		public RuleCall getPlacingDynamicDynamicFigureParserRuleCall_4_0() { return cPlacingDynamicDynamicFigureParserRuleCall_4_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_3_4() { return cRightCurlyBracketKeyword_3_4; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class DynamicFigureElements extends AbstractParserRuleElementFinder {
@@ -1469,14 +1465,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLayoutFeatureParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cCenterFeatureParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//// TODO: remover?
-		//
-		////CustomFeature:
-		//
-		////	key=('attribute') ':' attribute=ID '=' value=ID
-		//
-		////;
-		//
 		//StyleFeature:
 		//	LayoutFeature | CenterFeature;
 		public ParserRule getRule() { return rule; }
@@ -2138,12 +2126,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValueRAssignment_3_4_4 = (Assignment)cGroup_3_4.eContents().get(4);
 		private final RuleCall cValueRSTRINGTerminalRuleCall_3_4_4_0 = (RuleCall)cValueRAssignment_3_4_4.eContents().get(0);
 		
-		////DoubleFeature:
-		//
-		////	key=('transparency') ':' value= INT ('.' INT)?
-		//
-		////;
-		//
 		//StringFeature:
 		//	expression=AtributeExpression? key=("text-value" | "font-name" | "icon") ":" (value=STRING | valueL=STRING "+"
 		//	attribute=ID | attribute=ID "+" valueR=STRING | attribute=ID | valueL=STRING "+" attribute=ID "+" valueR=STRING)?;
@@ -2945,7 +2927,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	//// ter "constantes" para origem destino
 	//
 	//Decorator:
-	//	"decorator" ("at" pos=INT "%") | source?="source" | target?="target" | middle?="middle" "{"
+	//	"decorator" ("at" pos=INT "%" | source?="source" | target?="target" | middle?="middle") "{"
 	//	placingStatic=StaticFigure? placingDynamic+=DynamicFigure* "}";
 	public DecoratorElements getDecoratorAccess() {
 		return (pDecorator != null) ? pDecorator : (pDecorator = new DecoratorElements());
@@ -3052,14 +3034,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getFigureFeaturesAccess().getRule();
 	}
 
-	//// TODO: remover?
-	//
-	////CustomFeature:
-	//
-	////	key=('attribute') ':' attribute=ID '=' value=ID
-	//
-	////;
-	//
 	//StyleFeature:
 	//	LayoutFeature | CenterFeature;
 	public StyleFeatureElements getStyleFeatureAccess() {
@@ -3189,12 +3163,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getIntegerFeatureAccess().getRule();
 	}
 
-	////DoubleFeature:
-	//
-	////	key=('transparency') ':' value= INT ('.' INT)?
-	//
-	////;
-	//
 	//StringFeature:
 	//	expression=AtributeExpression? key=("text-value" | "font-name" | "icon") ":" (value=STRING | valueL=STRING "+"
 	//	attribute=ID | attribute=ID "+" valueR=STRING | attribute=ID | valueL=STRING "+" attribute=ID "+" valueR=STRING)?;
