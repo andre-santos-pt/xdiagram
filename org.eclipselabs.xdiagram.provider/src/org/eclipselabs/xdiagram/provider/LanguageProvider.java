@@ -443,12 +443,12 @@ public class LanguageProvider implements GraphicsProvider {
 					if (decorator.getPlacingStatic()!=null){
 						ConnectionDecorator cd = Graphiti.getPeCreateService().createConnectionDecorator(connection, 
 								false, (double)decorator.getPos()/100.0, true);
-						LinkProvider.createLinkFigure(diagram, cd, eObject, decorator.getPlacingStatic());
+						LinkProvider.createLinkFigure(diagram, cd, eObject, decorator.getPlacingStatic(), link.getStyle());
 					}
 					for (DynamicFigure text: decorator.getPlacingDynamic()){
 						ConnectionDecorator cd = Graphiti.getPeCreateService().createConnectionDecorator(connection, 
 								true, (double)decorator.getPos()/100.0, true);
-						LinkProvider.createDynamicFigure(diagram, cd, eObject, text);
+						LinkProvider.createDynamicFigure(diagram, cd, eObject, text, link.getStyle());
 					}
 				}
 				break;

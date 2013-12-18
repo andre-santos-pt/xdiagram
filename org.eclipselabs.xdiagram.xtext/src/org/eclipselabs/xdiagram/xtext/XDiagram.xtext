@@ -128,12 +128,15 @@ Link:
 // % opcional? ou considerar pixeis?
 // ter "constantes" para origem destino
 Decorator:
-	'decorator' ('at' pos=INT '%')|(source?='source')|(target?='target')|(middle?='middle')
+	'decorator' (
+		('at' pos=INT '%')|(source?='source')|(target?='target')|(middle?='middle')
+	)
 	'{'			
 		(placingStatic = StaticFigure)?
 		(placingDynamic += DynamicFigure)*			
 	'}'
 ;
+
 
 // este text é diferente do figure: Label .... é confuso para quem está a aprender a linguagem   
 DynamicFigure:

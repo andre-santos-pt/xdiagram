@@ -332,7 +332,7 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (pos=INT | source?='source' | target?='target' | (middle?='middle' placingStatic=StaticFigure? placingDynamic+=DynamicFigure*))
+	 *     ((pos=INT | source?='source' | target?='target' | middle?='middle') placingStatic=StaticFigure? placingDynamic+=DynamicFigure*)
 	 */
 	protected void sequence_Decorator(EObject context, Decorator semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
