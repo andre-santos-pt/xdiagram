@@ -1,6 +1,7 @@
 #summary Dependencies
 
 = Eclipse Kepler =
+GMF components of the release are not strictly necessary, but useful for visualizing EMF models.
 
 = Xtext =
 Update site:
