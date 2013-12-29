@@ -223,7 +223,7 @@ public class ToolBehaviorProvider extends DefaultToolBehaviorProvider {
 	}
 
 	@Override
-	public String getToolTip(GraphicsAlgorithm ga) {
+	public Object getToolTip(GraphicsAlgorithm ga) {
 		PictogramElement pe = ga.getPictogramElement();
 		Object bo = getFeatureProvider().getBusinessObjectForPictogramElement(pe);
 		if (bo instanceof EObject) {

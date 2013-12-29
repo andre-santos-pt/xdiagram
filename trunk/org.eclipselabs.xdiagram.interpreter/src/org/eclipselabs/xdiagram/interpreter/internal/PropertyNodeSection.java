@@ -16,29 +16,18 @@
 package org.eclipselabs.xdiagram.interpreter.internal;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.EnumSet;
-import java.util.Enumeration;
 import java.util.List;
 
-import org.eclipse.emf.common.command.AbstractCommand;
-import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.transaction.RecordingCommand;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.graphiti.features.IUpdateFeature;
-import org.eclipse.graphiti.features.context.impl.MoveShapeContext;
 import org.eclipse.graphiti.features.context.impl.UpdateContext;
-import org.eclipse.graphiti.features.impl.AbstractUpdateFeature;
-import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
-import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
-import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipse.graphiti.ui.platform.GFPropertySection;
 import org.eclipse.swt.SWT;
@@ -48,17 +37,12 @@ import org.eclipse.swt.events.KeyAdapter;
 import org.eclipse.swt.events.KeyEvent;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.layout.FormAttachment;
-import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
-import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.views.properties.tabbed.ITabbedPropertyConstants;
-import org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetWidgetFactory;
 import org.eclipselabs.xdiagram.interpreter.GraphicsProvider;
@@ -216,8 +200,8 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 					PictogramElement pe = getSelectedPictogramElement();
 					for (UpdateNodeFeature feature :  UpdateNodeFeature.getInstances()){
 						//feature.update(pe);
-						//feature.update(new UpdateContext(pe));
-						getDiagramEditor().executeFeature(feature, new UpdateContext(pe));
+						feature.update(new UpdateContext(pe));
+//						getDiagramEditor().executeFeature(feature, new UpdateContext(pe));
 					}
 					
 					//new MoveShapeContext((Shape) pe);
@@ -227,8 +211,8 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 						//provider.getGraphicsProvider().updateNodeFigure(getDiagram(), (ContainerShape) pe);
 					}
 					
+//					getDiagramEditor().refresh();
 					
-					getDiagramEditor().refresh();
 					//updatePictogramElement(pe);
 //					ContainerShape container0 = ((Shape) pe).getContainer(); //(ContainerShape) pe;
 //					ContainerShape container = (ContainerShape) pe;
