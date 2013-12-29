@@ -106,7 +106,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cImportedNamespaceQualifiedNameWithWildCardParserRuleCall_1_1_0 = (RuleCall)cImportedNamespaceAssignment_1_1.eContents().get(0);
 		
 		//// importedNamespace apparently cannot be on the root element
-		//
 		//ImportStatement:
 		//	{ImportStatement} ("import" importedNamespace=QualifiedNameWithWildCard)?;
 		public ParserRule getRule() { return rule; }
@@ -237,7 +236,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLinkParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//// TODO: common: text / icon / tooltip
-		//
 		//DiagramElement:
 		//	Node | Link;
 		public ParserRule getRule() { return rule; }
@@ -285,11 +283,8 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//// resizable default?
-		//
 		//// TODO validation: unique nodes
-		//
 		//// notation inheritance?
-		//
 		//Node:
 		//	"node" modelClass=[ecore::EClass|QualifiedName] "{" resizable?="resizable"? ("style" style=ID)? ("icon" icon=ID)?
 		//	("name" name=STRING)? attributes+=Attribute* figures+=NodeFigure* containers+=NodeContainer* anchors+=NodeAnchor* "}";
@@ -395,7 +390,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValueAtributeValueParserRuleCall_3_0 = (RuleCall)cValueAssignment_3.eContents().get(0);
 		
 		//// TODO : EMF default value
-		//
 		//Attribute:
 		//	"set" key=ID "=" value=AtributeValue;
 		public ParserRule getRule() { return rule; }
@@ -442,8 +436,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFeaturesFigureFeaturesParserRuleCall_6_0 = (RuleCall)cFeaturesAssignment_6.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//// main? só Figure?
-		//
+		//// main? s?? Figure?
 		//NodeFigure:
 		//	option="main"? "figure" ":" figure=FigureShape ("," "style" ":" style=ID)? "{" features=FigureFeatures "}";
 		public ParserRule getRule() { return rule; }
@@ -525,9 +518,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//// TODO hstack / vstack (enum?)
-		//
 		//// TODO validation
-		//
 		//NodeContainer:
 		//	layout=ContainerLayout? "container" ("for" modelReference=[ecore::EReference|QualifiedName])? (":" value=INT
 		//	format=("%" | "px"))? "{" figures+=NodeFigure+ "}";
@@ -649,33 +640,21 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//// TODO: validation - complex requires source e target, complex structure
-		//
 		//// TODO text / icon
-		//
 		//Link:
 		//	"link" (modelReference=[ecore::EReference|QualifiedName] | complex?="object" modelClass=[ecore::EClass|QualifiedName]
 		//	"source" sourceReference=[ecore::EReference|QualifiedName] "target" targetReference=[ecore::EReference|QualifiedName])
 		//	"{" manhattan?="manhattan"? ("style" style=ID)? ("icon" icon=ID)? ("name" name=STRING)? (attributes+=Attribute |
 		//	linefeatures+=LineFeature | colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature)* //defenido no modelo? [ecore::EReference]
-		//
 		//	decorators+=Decorator* //    	('origin' '{'			
-		//
 		//	//			(sourceStatic = StaticFigure)?
-		//
 		//	//			(sourceDynamic += DynamicFigure)*			
-		//
 		//	//		'}')?
-		//
 		//	//		
-		//
 		//	//		('destiny' '{'			
-		//
 		//	//			(targetStatic = StaticFigure)?
-		//
 		//	//			(targetDynamic += DynamicFigure)*			
-		//
 		//	//		'}')?
-		//
 		//	"}";
 		public ParserRule getRule() { return rule; }
 
@@ -683,25 +662,15 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		//"source" sourceReference=[ecore::EReference|QualifiedName] "target" targetReference=[ecore::EReference|QualifiedName])
 		//"{" manhattan?="manhattan"? ("style" style=ID)? ("icon" icon=ID)? ("name" name=STRING)? (attributes+=Attribute |
 		//linefeatures+=LineFeature | colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature)* //defenido no modelo? [ecore::EReference]
-		//
 		//decorators+=Decorator* //    	('origin' '{'			
-		//
 		////			(sourceStatic = StaticFigure)?
-		//
 		////			(sourceDynamic += DynamicFigure)*			
-		//
 		////		'}')?
-		//
 		////		
-		//
 		////		('destiny' '{'			
-		//
 		////			(targetStatic = StaticFigure)?
-		//
 		////			(targetDynamic += DynamicFigure)*			
-		//
 		////		'}')?
-		//
 		//"}"
 		public Group getGroup() { return cGroup; }
 
@@ -843,23 +812,14 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getDecoratorsDecoratorParserRuleCall_8_0() { return cDecoratorsDecoratorParserRuleCall_8_0; }
 
 		////    	('origin' '{'			
-		//
 		////			(sourceStatic = StaticFigure)?
-		//
 		////			(sourceDynamic += DynamicFigure)*			
-		//
 		////		'}')?
-		//
 		////		
-		//
 		////		('destiny' '{'			
-		//
 		////			(targetStatic = StaticFigure)?
-		//
 		////			(targetDynamic += DynamicFigure)*			
-		//
 		////		'}')?
-		//
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
@@ -888,9 +848,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//// % opcional? ou considerar pixeis?
-		//
 		//// ter "constantes" para origem destino
-		//
 		//Decorator:
 		//	"decorator" ("at" pos=INT "%" | source?="source" | target?="target" | middle?="middle") "{"
 		//	placingStatic=StaticFigure? placingDynamic+=DynamicFigure* "}";
@@ -969,8 +927,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFeaturesFigureFeaturesParserRuleCall_3_0 = (RuleCall)cFeaturesAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//// este text é diferente do figure: Label .... é confuso para quem está a aprender a linguagem   
-		//
+		//// este text ?? diferente do figure: Label .... ?? confuso para quem est?? a aprender a linguagem   
 		//DynamicFigure:
 		//	"text" figure=DynamicElement "{" features=FigureFeatures "}";
 		public ParserRule getRule() { return rule; }
@@ -1097,8 +1054,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cPolygonKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
 		private final Keyword cPolylineKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
 		
-		//// TODO enum - porque é que esta não é uma figura como as outras?
-		//
+		//// TODO enum - porque ?? que esta n??o ?? uma figura como as outras?
 		//StaticElement:
 		//	"Arrow" | "Triangle" | "Rhombus" | "Polygon" | "Polyline";
 		public ParserRule getRule() { return rule; }
@@ -1158,7 +1114,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
 		//// TODO: model ids / name Anchor
-		//
 		//NodeAnchor:
 		//	"anchor" ("to" object=ID)? ":" passX="-"? X=INT formatX=("%" | "lf" | "rg") "," passY="-"? Y=INT formatY=("%" | "up" |
 		//	"dw") "{" figures+=NodeFigure* arrows+=ArrowAnchor* "}";
@@ -1282,7 +1237,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cConnectionsKeyword_5_2 = (Keyword)cGroup_5.eContents().get(2);
 		
 		//// TODO: model ids - change syntax / name AnchorConstraint -- N connections?
-		//
 		//ArrowAnchor:
 		//	"set" reference=ID "as" type=("incoming" | "outgoing" | "both") "connection" ("using" N=INT "connections")?;
 		public ParserRule getRule() { return rule; }
@@ -1366,7 +1320,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//FigureFeatures:
 		//	{FigureFeatures} (linefeatures+=LineFeature //	        	(customfeatures += CustomFeature)
-		//
 		//	| centerfeatures+=CenterFeature | alignfeatures+=AlignFeature | gradientfeatures+=GradientFeature |
 		//	pointfeatures+=PointFeature | sizefeatures+=SizeFeature | positionfeatures+=PositionFeature |
 		//	colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature | booleanfeatures+=BooleanFeature |
@@ -1374,7 +1327,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		public ParserRule getRule() { return rule; }
 
 		//{FigureFeatures} (linefeatures+=LineFeature //	        	(customfeatures += CustomFeature)
-		//
 		//| centerfeatures+=CenterFeature | alignfeatures+=AlignFeature | gradientfeatures+=GradientFeature |
 		//pointfeatures+=PointFeature | sizefeatures+=SizeFeature | positionfeatures+=PositionFeature |
 		//colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature | booleanfeatures+=BooleanFeature |
@@ -1385,7 +1337,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		public Action getFigureFeaturesAction_0() { return cFigureFeaturesAction_0; }
 
 		//(linefeatures+=LineFeature //	        	(customfeatures += CustomFeature)
-		//
 		//| centerfeatures+=CenterFeature | alignfeatures+=AlignFeature | gradientfeatures+=GradientFeature |
 		//pointfeatures+=PointFeature | sizefeatures+=SizeFeature | positionfeatures+=PositionFeature |
 		//colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature | booleanfeatures+=BooleanFeature |
@@ -1628,9 +1579,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cValueLimeWhiteKeyword_2_0_6 = (Keyword)cValueAlternatives_2_0.eContents().get(6);
 		
 		//// TODO: enum
-		//
 		//// TODO: custom gradient
-		//
 		//GradientFeature:
 		//	key="gradient" ":" value=("BlueWhite" | "BlueWhiteGloss" | "CopperWhiteGloss" | "LightGray" | "LightYellow" |
 		//	"SilverWhiteGloss" | "LimeWhite");
@@ -1920,8 +1869,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCYANKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
 		private final Keyword cORANGEKeyword_7 = (Keyword)cAlternatives.eContents().get(7);
 		
-		//// TODO enum , já agora 16 standard
-		//
+		//// TODO enum , j?? agora 16 standard
 		//Color:
 		//	"WHITE" | "BLACK" | "BLUE" | "GREEN" | "RED" | "YELLOW" | "CYAN" | "ORANGE";
 		public ParserRule getRule() { return rule; }
@@ -2348,7 +2296,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDashdotKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
 		
 		//// TODO enum  - aspeto do dash/dot/...
-		//
 		//LineStyle:
 		//	"solid" | "dash" | "dot" | "dashdot";
 		public ParserRule getRule() { return rule; }
@@ -2383,9 +2330,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cHyphenMinusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//// rename? ConditionalExpression?
-		//
 		//// TODO: key modelReference ecore::EAttribute
-		//
 		//AtributeExpression:
 		//	key=ID operator=("=" | "<>") value=AtributeValue "->";
 		public ParserRule getRule() { return rule; }
@@ -2451,13 +2396,9 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValueYEARINTTerminalRuleCall_5_4_0 = (RuleCall)cValueYEARAssignment_5_4.eContents().get(0);
 		
 		//// future
-		//
 		////AttributeReference:
-		//
 		////	modelAttribute=[ecore::EAttribute|QualifiedName] ('/' path+=AttributeReference)*
-		//
 		////;
-		//
 		//AtributeValue:
 		//	valueINT=INT | valueINT=INT "." valueDEC=INT | valueID=ID | valueBOOL=("true" | "false") | valueSTRING=STRING |
 		//	valueDAY=INT "-" valueMONTH=INT "-" valueYEAR=INT;
@@ -2599,7 +2540,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cIMAGEImageKeyword_10_0 = (Keyword)cIMAGEEnumLiteralDeclaration_10.eContents().get(0);
 		
 		//// TODO: lowercase
-		//
 		//enum FigureShape:
 		//	SQUARE="Square" | RECTANGLE="Rectangle" | ROUNDED_RECTANGLE="RoundedRectangle" | CIRCLE="Circle" | ELLIPSE="Ellipse" |
 		//	TRIANGLE="Triangle" | RHOMBUS="Rhombus" | POLYGON="Polygon" | POLYLINE="Polyline" | LABEL="Label" | IMAGE="Image";
@@ -2766,7 +2706,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// importedNamespace apparently cannot be on the root element
-	//
 	//ImportStatement:
 	//	{ImportStatement} ("import" importedNamespace=QualifiedNameWithWildCard)?;
 	public ImportStatementElements getImportStatementAccess() {
@@ -2808,7 +2747,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// TODO: common: text / icon / tooltip
-	//
 	//DiagramElement:
 	//	Node | Link;
 	public DiagramElementElements getDiagramElementAccess() {
@@ -2820,11 +2758,8 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// resizable default?
-	//
 	//// TODO validation: unique nodes
-	//
 	//// notation inheritance?
-	//
 	//Node:
 	//	"node" modelClass=[ecore::EClass|QualifiedName] "{" resizable?="resizable"? ("style" style=ID)? ("icon" icon=ID)?
 	//	("name" name=STRING)? attributes+=Attribute* figures+=NodeFigure* containers+=NodeContainer* anchors+=NodeAnchor* "}";
@@ -2837,7 +2772,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// TODO : EMF default value
-	//
 	//Attribute:
 	//	"set" key=ID "=" value=AtributeValue;
 	public AttributeElements getAttributeAccess() {
@@ -2848,8 +2782,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getAttributeAccess().getRule();
 	}
 
-	//// main? só Figure?
-	//
+	//// main? s?? Figure?
 	//NodeFigure:
 	//	option="main"? "figure" ":" figure=FigureShape ("," "style" ":" style=ID)? "{" features=FigureFeatures "}";
 	public NodeFigureElements getNodeFigureAccess() {
@@ -2861,9 +2794,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// TODO hstack / vstack (enum?)
-	//
 	//// TODO validation
-	//
 	//NodeContainer:
 	//	layout=ContainerLayout? "container" ("for" modelReference=[ecore::EReference|QualifiedName])? (":" value=INT
 	//	format=("%" | "px"))? "{" figures+=NodeFigure+ "}";
@@ -2886,33 +2817,21 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// TODO: validation - complex requires source e target, complex structure
-	//
 	//// TODO text / icon
-	//
 	//Link:
 	//	"link" (modelReference=[ecore::EReference|QualifiedName] | complex?="object" modelClass=[ecore::EClass|QualifiedName]
 	//	"source" sourceReference=[ecore::EReference|QualifiedName] "target" targetReference=[ecore::EReference|QualifiedName])
 	//	"{" manhattan?="manhattan"? ("style" style=ID)? ("icon" icon=ID)? ("name" name=STRING)? (attributes+=Attribute |
 	//	linefeatures+=LineFeature | colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature)* //defenido no modelo? [ecore::EReference]
-	//
 	//	decorators+=Decorator* //    	('origin' '{'			
-	//
 	//	//			(sourceStatic = StaticFigure)?
-	//
 	//	//			(sourceDynamic += DynamicFigure)*			
-	//
 	//	//		'}')?
-	//
 	//	//		
-	//
 	//	//		('destiny' '{'			
-	//
 	//	//			(targetStatic = StaticFigure)?
-	//
 	//	//			(targetDynamic += DynamicFigure)*			
-	//
 	//	//		'}')?
-	//
 	//	"}";
 	public LinkElements getLinkAccess() {
 		return (pLink != null) ? pLink : (pLink = new LinkElements());
@@ -2923,9 +2842,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// % opcional? ou considerar pixeis?
-	//
 	//// ter "constantes" para origem destino
-	//
 	//Decorator:
 	//	"decorator" ("at" pos=INT "%" | source?="source" | target?="target" | middle?="middle") "{"
 	//	placingStatic=StaticFigure? placingDynamic+=DynamicFigure* "}";
@@ -2937,8 +2854,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getDecoratorAccess().getRule();
 	}
 
-	//// este text é diferente do figure: Label .... é confuso para quem está a aprender a linguagem   
-	//
+	//// este text ?? diferente do figure: Label .... ?? confuso para quem est?? a aprender a linguagem   
 	//DynamicFigure:
 	//	"text" figure=DynamicElement "{" features=FigureFeatures "}";
 	public DynamicFigureElements getDynamicFigureAccess() {
@@ -2969,8 +2885,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getStaticFigureAccess().getRule();
 	}
 
-	//// TODO enum - porque é que esta não é uma figura como as outras?
-	//
+	//// TODO enum - porque ?? que esta n??o ?? uma figura como as outras?
 	//StaticElement:
 	//	"Arrow" | "Triangle" | "Rhombus" | "Polygon" | "Polyline";
 	public StaticElementElements getStaticElementAccess() {
@@ -2982,7 +2897,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// TODO: lowercase
-	//
 	//enum FigureShape:
 	//	SQUARE="Square" | RECTANGLE="Rectangle" | ROUNDED_RECTANGLE="RoundedRectangle" | CIRCLE="Circle" | ELLIPSE="Ellipse" |
 	//	TRIANGLE="Triangle" | RHOMBUS="Rhombus" | POLYGON="Polygon" | POLYLINE="Polyline" | LABEL="Label" | IMAGE="Image";
@@ -2995,7 +2909,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// TODO: model ids / name Anchor
-	//
 	//NodeAnchor:
 	//	"anchor" ("to" object=ID)? ":" passX="-"? X=INT formatX=("%" | "lf" | "rg") "," passY="-"? Y=INT formatY=("%" | "up" |
 	//	"dw") "{" figures+=NodeFigure* arrows+=ArrowAnchor* "}";
@@ -3008,7 +2921,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// TODO: model ids - change syntax / name AnchorConstraint -- N connections?
-	//
 	//ArrowAnchor:
 	//	"set" reference=ID "as" type=("incoming" | "outgoing" | "both") "connection" ("using" N=INT "connections")?;
 	public ArrowAnchorElements getArrowAnchorAccess() {
@@ -3021,7 +2933,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 
 	//FigureFeatures:
 	//	{FigureFeatures} (linefeatures+=LineFeature //	        	(customfeatures += CustomFeature)
-	//
 	//	| centerfeatures+=CenterFeature | alignfeatures+=AlignFeature | gradientfeatures+=GradientFeature |
 	//	pointfeatures+=PointFeature | sizefeatures+=SizeFeature | positionfeatures+=PositionFeature |
 	//	colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature | booleanfeatures+=BooleanFeature |
@@ -3075,9 +2986,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// TODO: enum
-	//
 	//// TODO: custom gradient
-	//
 	//GradientFeature:
 	//	key="gradient" ":" value=("BlueWhite" | "BlueWhiteGloss" | "CopperWhiteGloss" | "LightGray" | "LightYellow" |
 	//	"SilverWhiteGloss" | "LimeWhite");
@@ -3130,8 +3039,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 		return getColorFeatureAccess().getRule();
 	}
 
-	//// TODO enum , já agora 16 standard
-	//
+	//// TODO enum , j?? agora 16 standard
 	//Color:
 	//	"WHITE" | "BLACK" | "BLUE" | "GREEN" | "RED" | "YELLOW" | "CYAN" | "ORANGE";
 	public ColorElements getColorAccess() {
@@ -3195,7 +3103,6 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// TODO enum  - aspeto do dash/dot/...
-	//
 	//LineStyle:
 	//	"solid" | "dash" | "dot" | "dashdot";
 	public LineStyleElements getLineStyleAccess() {
@@ -3207,9 +3114,7 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// rename? ConditionalExpression?
-	//
 	//// TODO: key modelReference ecore::EAttribute
-	//
 	//AtributeExpression:
 	//	key=ID operator=("=" | "<>") value=AtributeValue "->";
 	public AtributeExpressionElements getAtributeExpressionAccess() {
@@ -3221,13 +3126,9 @@ public class XDiagramGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// future
-	//
 	////AttributeReference:
-	//
 	////	modelAttribute=[ecore::EAttribute|QualifiedName] ('/' path+=AttributeReference)*
-	//
 	////;
-	//
 	//AtributeValue:
 	//	valueINT=INT | valueINT=INT "." valueDEC=INT | valueID=ID | valueBOOL=("true" | "false") | valueSTRING=STRING |
 	//	valueDAY=INT "-" valueMONTH=INT "-" valueYEAR=INT;
