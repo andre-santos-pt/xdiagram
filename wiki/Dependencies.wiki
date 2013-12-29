@@ -1,0 +1,11 @@
+#summary Dependencies
+
+= Eclipse Kepler =
+
+= Xtext =
+Update site:
+http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
+
+= Graphiti =
+Update site:
+http://download.eclipse.org/graphiti/updates/0.10.1
