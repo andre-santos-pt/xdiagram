@@ -51,7 +51,6 @@ import org.eclipselabs.xdiagram.interpreter.internal.features.DirectEditingFeatu
 import org.eclipselabs.xdiagram.interpreter.internal.features.MoveNodeFeature;
 import org.eclipselabs.xdiagram.interpreter.internal.features.RemoveNodeFeature;
 import org.eclipselabs.xdiagram.interpreter.internal.features.ResizeNodeFeature;
-import org.eclipselabs.xdiagram.interpreter.internal.features.UpdateFeature;
 import org.eclipselabs.xdiagram.interpreter.internal.features.UpdateNodeFeature;
 
 
@@ -179,7 +178,7 @@ public class GenericFeatureProvider extends DefaultFeatureProvider {
 
 	@Override
 	public IUpdateFeature getUpdateFeature(IUpdateContext context) {
-		return new UpdateFeature(this, graphicsProvider);
+		return new UpdateNodeFeature(this, graphicsProvider);
 	}
 
 	@Override

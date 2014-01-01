@@ -4,9 +4,6 @@
 <plugin>
    <extension-point id="providers" name="Providers" schema="schema/providers.exsd"/>
 
-   
-   
- 
 	<extension
 	    point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
 	    <propertyContributor contributorId="xdiagram.PropertyContributor">
