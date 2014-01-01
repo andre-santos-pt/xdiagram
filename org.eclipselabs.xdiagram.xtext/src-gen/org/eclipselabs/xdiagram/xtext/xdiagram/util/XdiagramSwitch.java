@@ -115,13 +115,6 @@ public class XdiagramSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XdiagramPackage.NODE_FIGURE:
-      {
-        NodeFigure nodeFigure = (NodeFigure)theEObject;
-        T result = caseNodeFigure(nodeFigure);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case XdiagramPackage.NODE_CONTAINER:
       {
         NodeContainer nodeContainer = (NodeContainer)theEObject;
@@ -134,6 +127,7 @@ public class XdiagramSwitch<T> extends Switch<T>
         Link link = (Link)theEObject;
         T result = caseLink(link);
         if (result == null) result = caseDiagramElement(link);
+        if (result == null) result = caseElement(link);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -144,103 +138,32 @@ public class XdiagramSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XdiagramPackage.DYNAMIC_FIGURE:
+      case XdiagramPackage.CONNECTABLE_ELEMENT:
       {
-        DynamicFigure dynamicFigure = (DynamicFigure)theEObject;
-        T result = caseDynamicFigure(dynamicFigure);
+        ConnectableElement connectableElement = (ConnectableElement)theEObject;
+        T result = caseConnectableElement(connectableElement);
+        if (result == null) result = caseElement(connectableElement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XdiagramPackage.STATIC_FIGURE:
+      case XdiagramPackage.ANCHOR:
       {
-        StaticFigure staticFigure = (StaticFigure)theEObject;
-        T result = caseStaticFigure(staticFigure);
+        Anchor anchor = (Anchor)theEObject;
+        T result = caseAnchor(anchor);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XdiagramPackage.NODE_ANCHOR:
+      case XdiagramPackage.ANCHOR_CONSTRAINT:
       {
-        NodeAnchor nodeAnchor = (NodeAnchor)theEObject;
-        T result = caseNodeAnchor(nodeAnchor);
+        AnchorConstraint anchorConstraint = (AnchorConstraint)theEObject;
+        T result = caseAnchorConstraint(anchorConstraint);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XdiagramPackage.ARROW_ANCHOR:
+      case XdiagramPackage.ELEMENT:
       {
-        ArrowAnchor arrowAnchor = (ArrowAnchor)theEObject;
-        T result = caseArrowAnchor(arrowAnchor);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case XdiagramPackage.FIGURE_FEATURES:
-      {
-        FigureFeatures figureFeatures = (FigureFeatures)theEObject;
-        T result = caseFigureFeatures(figureFeatures);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case XdiagramPackage.STYLE_FEATURE:
-      {
-        StyleFeature styleFeature = (StyleFeature)theEObject;
-        T result = caseStyleFeature(styleFeature);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case XdiagramPackage.LAYOUT_FEATURE:
-      {
-        LayoutFeature layoutFeature = (LayoutFeature)theEObject;
-        T result = caseLayoutFeature(layoutFeature);
-        if (result == null) result = caseStyleFeature(layoutFeature);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case XdiagramPackage.CENTER_FEATURE:
-      {
-        CenterFeature centerFeature = (CenterFeature)theEObject;
-        T result = caseCenterFeature(centerFeature);
-        if (result == null) result = caseStyleFeature(centerFeature);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case XdiagramPackage.ALIGN_FEATURE:
-      {
-        AlignFeature alignFeature = (AlignFeature)theEObject;
-        T result = caseAlignFeature(alignFeature);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case XdiagramPackage.GRADIENT_FEATURE:
-      {
-        GradientFeature gradientFeature = (GradientFeature)theEObject;
-        T result = caseGradientFeature(gradientFeature);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case XdiagramPackage.POINT_FEATURE:
-      {
-        PointFeature pointFeature = (PointFeature)theEObject;
-        T result = casePointFeature(pointFeature);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case XdiagramPackage.SIZE_FEATURE:
-      {
-        SizeFeature sizeFeature = (SizeFeature)theEObject;
-        T result = caseSizeFeature(sizeFeature);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case XdiagramPackage.POSITION_FEATURE:
-      {
-        PositionFeature positionFeature = (PositionFeature)theEObject;
-        T result = casePositionFeature(positionFeature);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case XdiagramPackage.COLOR_FEATURE:
-      {
-        ColorFeature colorFeature = (ColorFeature)theEObject;
-        T result = caseColorFeature(colorFeature);
+        Element element = (Element)theEObject;
+        T result = caseElement(element);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -251,38 +174,129 @@ public class XdiagramSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XdiagramPackage.INTEGER_FEATURE:
+      case XdiagramPackage.IMAGE_FILE:
       {
-        IntegerFeature integerFeature = (IntegerFeature)theEObject;
-        T result = caseIntegerFeature(integerFeature);
+        ImageFile imageFile = (ImageFile)theEObject;
+        T result = caseImageFile(imageFile);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XdiagramPackage.STRING_FEATURE:
+      case XdiagramPackage.COLOR:
       {
-        StringFeature stringFeature = (StringFeature)theEObject;
-        T result = caseStringFeature(stringFeature);
+        Color color = (Color)theEObject;
+        T result = caseColor(color);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XdiagramPackage.BOOLEAN_FEATURE:
+      case XdiagramPackage.CUSTOM_COLOR:
       {
-        BooleanFeature booleanFeature = (BooleanFeature)theEObject;
-        T result = caseBooleanFeature(booleanFeature);
+        CustomColor customColor = (CustomColor)theEObject;
+        T result = caseCustomColor(customColor);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XdiagramPackage.LINE_FEATURE:
+      case XdiagramPackage.RECTANGLE:
       {
-        LineFeature lineFeature = (LineFeature)theEObject;
-        T result = caseLineFeature(lineFeature);
+        Rectangle rectangle = (Rectangle)theEObject;
+        T result = caseRectangle(rectangle);
+        if (result == null) result = caseConnectableElement(rectangle);
+        if (result == null) result = caseElement(rectangle);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case XdiagramPackage.ATRIBUTE_EXPRESSION:
+      case XdiagramPackage.FEATURE:
       {
-        AtributeExpression atributeExpression = (AtributeExpression)theEObject;
-        T result = caseAtributeExpression(atributeExpression);
+        Feature feature = (Feature)theEObject;
+        T result = caseFeature(feature);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.RHOMBUS:
+      {
+        Rhombus rhombus = (Rhombus)theEObject;
+        T result = caseRhombus(rhombus);
+        if (result == null) result = caseConnectableElement(rhombus);
+        if (result == null) result = caseElement(rhombus);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.ELLIPSE:
+      {
+        Ellipse ellipse = (Ellipse)theEObject;
+        T result = caseEllipse(ellipse);
+        if (result == null) result = caseConnectableElement(ellipse);
+        if (result == null) result = caseElement(ellipse);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.POLYLINE:
+      {
+        Polyline polyline = (Polyline)theEObject;
+        T result = casePolyline(polyline);
+        if (result == null) result = caseConnectableElement(polyline);
+        if (result == null) result = caseElement(polyline);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.FEATURE_CONDITIONAL:
+      {
+        FeatureConditional featureConditional = (FeatureConditional)theEObject;
+        T result = caseFeatureConditional(featureConditional);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.CONTAINS:
+      {
+        Contains contains = (Contains)theEObject;
+        T result = caseContains(contains);
+        if (result == null) result = caseFeature(contains);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.VALUE:
+      {
+        Value value = (Value)theEObject;
+        T result = caseValue(value);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.INT_VALUE:
+      {
+        IntValue intValue = (IntValue)theEObject;
+        T result = caseIntValue(intValue);
+        if (result == null) result = caseValue(intValue);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.DOUBLE_VALUE:
+      {
+        DoubleValue doubleValue = (DoubleValue)theEObject;
+        T result = caseDoubleValue(doubleValue);
+        if (result == null) result = caseValue(doubleValue);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.STRING_VALUE:
+      {
+        StringValue stringValue = (StringValue)theEObject;
+        T result = caseStringValue(stringValue);
+        if (result == null) result = caseValue(stringValue);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.BOOLEAN_VALUE:
+      {
+        BooleanValue booleanValue = (BooleanValue)theEObject;
+        T result = caseBooleanValue(booleanValue);
+        if (result == null) result = caseValue(booleanValue);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.ENUM_VALUE:
+      {
+        EnumValue enumValue = (EnumValue)theEObject;
+        T result = caseEnumValue(enumValue);
+        if (result == null) result = caseValue(enumValue);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -290,6 +304,138 @@ public class XdiagramSwitch<T> extends Switch<T>
       {
         AtributeValue atributeValue = (AtributeValue)theEObject;
         T result = caseAtributeValue(atributeValue);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.LABEL:
+      {
+        Label label = (Label)theEObject;
+        T result = caseLabel(label);
+        if (result == null) result = caseConnectableElement(label);
+        if (result == null) result = caseElement(label);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.IMAGE:
+      {
+        Image image = (Image)theEObject;
+        T result = caseImage(image);
+        if (result == null) result = caseConnectableElement(image);
+        if (result == null) result = caseElement(image);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.COLOR_FEATURE:
+      {
+        ColorFeature colorFeature = (ColorFeature)theEObject;
+        T result = caseColorFeature(colorFeature);
+        if (result == null) result = caseFeature(colorFeature);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.FOREGROUND:
+      {
+        Foreground foreground = (Foreground)theEObject;
+        T result = caseForeground(foreground);
+        if (result == null) result = caseColorFeature(foreground);
+        if (result == null) result = caseFeature(foreground);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.BACKGROUND:
+      {
+        Background background = (Background)theEObject;
+        T result = caseBackground(background);
+        if (result == null) result = caseColorFeature(background);
+        if (result == null) result = caseFeature(background);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.TRANSPARENCY:
+      {
+        Transparency transparency = (Transparency)theEObject;
+        T result = caseTransparency(transparency);
+        if (result == null) result = caseFeature(transparency);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.SIZE:
+      {
+        Size size = (Size)theEObject;
+        T result = caseSize(size);
+        if (result == null) result = caseFeature(size);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.POINT:
+      {
+        Point point = (Point)theEObject;
+        T result = casePoint(point);
+        if (result == null) result = caseFeature(point);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.POSITION:
+      {
+        Position position = (Position)theEObject;
+        T result = casePosition(position);
+        if (result == null) result = caseFeature(position);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.CORNER:
+      {
+        Corner corner = (Corner)theEObject;
+        T result = caseCorner(corner);
+        if (result == null) result = caseFeature(corner);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.TEXT_VALUE:
+      {
+        TextValue textValue = (TextValue)theEObject;
+        T result = caseTextValue(textValue);
+        if (result == null) result = caseFeature(textValue);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.FONT_FACE:
+      {
+        FontFace fontFace = (FontFace)theEObject;
+        T result = caseFontFace(fontFace);
+        if (result == null) result = caseFeature(fontFace);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.FONT_SIZE:
+      {
+        FontSize fontSize = (FontSize)theEObject;
+        T result = caseFontSize(fontSize);
+        if (result == null) result = caseFeature(fontSize);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.FONT_STYLE:
+      {
+        FontStyle fontStyle = (FontStyle)theEObject;
+        T result = caseFontStyle(fontStyle);
+        if (result == null) result = caseFeature(fontStyle);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.LINE_STYLE:
+      {
+        LineStyle lineStyle = (LineStyle)theEObject;
+        T result = caseLineStyle(lineStyle);
+        if (result == null) result = caseFeature(lineStyle);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case XdiagramPackage.LINE_WIDTH:
+      {
+        LineWidth lineWidth = (LineWidth)theEObject;
+        T result = caseLineWidth(lineWidth);
+        if (result == null) result = caseFeature(lineWidth);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -394,22 +540,6 @@ public class XdiagramSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Node Figure</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Node Figure</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseNodeFigure(NodeFigure object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Node Container</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -458,225 +588,65 @@ public class XdiagramSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Dynamic Figure</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Connectable Element</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Dynamic Figure</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Connectable Element</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseDynamicFigure(DynamicFigure object)
+  public T caseConnectableElement(ConnectableElement object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Static Figure</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Anchor</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Static Figure</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Anchor</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseStaticFigure(StaticFigure object)
+  public T caseAnchor(Anchor object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Node Anchor</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Anchor Constraint</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Node Anchor</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Anchor Constraint</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseNodeAnchor(NodeAnchor object)
+  public T caseAnchorConstraint(AnchorConstraint object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Arrow Anchor</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Element</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Arrow Anchor</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Element</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseArrowAnchor(ArrowAnchor object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Figure Features</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Figure Features</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseFigureFeatures(FigureFeatures object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Style Feature</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Style Feature</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseStyleFeature(StyleFeature object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Layout Feature</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Layout Feature</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseLayoutFeature(LayoutFeature object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Center Feature</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Center Feature</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseCenterFeature(CenterFeature object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Align Feature</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Align Feature</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAlignFeature(AlignFeature object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Gradient Feature</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Gradient Feature</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseGradientFeature(GradientFeature object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Point Feature</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Point Feature</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePointFeature(PointFeature object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Size Feature</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Size Feature</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseSizeFeature(SizeFeature object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Position Feature</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Position Feature</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePositionFeature(PositionFeature object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Color Feature</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Color Feature</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseColorFeature(ColorFeature object)
+  public T caseElement(Element object)
   {
     return null;
   }
@@ -698,81 +668,257 @@ public class XdiagramSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Integer Feature</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Image File</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Integer Feature</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Image File</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseIntegerFeature(IntegerFeature object)
+  public T caseImageFile(ImageFile object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>String Feature</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Color</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>String Feature</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Color</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseStringFeature(StringFeature object)
+  public T caseColor(Color object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Boolean Feature</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Custom Color</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Boolean Feature</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Custom Color</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseBooleanFeature(BooleanFeature object)
+  public T caseCustomColor(CustomColor object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Line Feature</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Rectangle</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Line Feature</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Rectangle</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseLineFeature(LineFeature object)
+  public T caseRectangle(Rectangle object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Atribute Expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Feature</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Atribute Expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Feature</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseAtributeExpression(AtributeExpression object)
+  public T caseFeature(Feature object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Rhombus</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Rhombus</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRhombus(Rhombus object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ellipse</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ellipse</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEllipse(Ellipse object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Polyline</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Polyline</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePolyline(Polyline object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Feature Conditional</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Feature Conditional</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFeatureConditional(FeatureConditional object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Contains</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Contains</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseContains(Contains object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseValue(Value object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Int Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Int Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIntValue(IntValue object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Double Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Double Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDoubleValue(DoubleValue object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>String Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>String Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStringValue(StringValue object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Boolean Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Boolean Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBooleanValue(BooleanValue object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Enum Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Enum Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEnumValue(EnumValue object)
   {
     return null;
   }
@@ -789,6 +935,262 @@ public class XdiagramSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAtributeValue(AtributeValue object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Label</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Label</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLabel(Label object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Image</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Image</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImage(Image object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Color Feature</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Color Feature</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseColorFeature(ColorFeature object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Foreground</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Foreground</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseForeground(Foreground object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Background</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Background</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBackground(Background object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Transparency</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Transparency</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTransparency(Transparency object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Size</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Size</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSize(Size object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Point</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Point</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePoint(Point object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Position</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Position</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePosition(Position object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Corner</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Corner</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCorner(Corner object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Text Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Text Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTextValue(TextValue object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Font Face</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Font Face</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFontFace(FontFace object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Font Size</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Font Size</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFontSize(FontSize object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Font Style</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Font Style</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFontStyle(FontStyle object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Line Style</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Line Style</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLineStyle(LineStyle object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Line Width</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Line Width</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLineWidth(LineWidth object)
   {
     return null;
   }

@@ -95,22 +95,13 @@ public interface XdiagramPackage extends EPackage
   int XDIAGRAM__MODEL_CLASS = 2;
 
   /**
-   * The feature id for the '<em><b>Styles</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int XDIAGRAM__STYLES = 3;
-
-  /**
    * The feature id for the '<em><b>Nodes</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int XDIAGRAM__NODES = 4;
+  int XDIAGRAM__NODES = 3;
 
   /**
    * The feature id for the '<em><b>Links</b></em>' containment reference list.
@@ -119,7 +110,34 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int XDIAGRAM__LINKS = 5;
+  int XDIAGRAM__LINKS = 4;
+
+  /**
+   * The feature id for the '<em><b>Styles</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDIAGRAM__STYLES = 5;
+
+  /**
+   * The feature id for the '<em><b>Colors</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDIAGRAM__COLORS = 6;
+
+  /**
+   * The feature id for the '<em><b>Images</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDIAGRAM__IMAGES = 7;
 
   /**
    * The number of structural features of the '<em>XDiagram</em>' class.
@@ -128,7 +146,7 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int XDIAGRAM_FEATURE_COUNT = 6;
+  int XDIAGRAM_FEATURE_COUNT = 8;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ImportStatementImpl <em>Import Statement</em>}' class.
@@ -178,7 +196,7 @@ public interface XdiagramPackage extends EPackage
   int STYLE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Features</b></em>' containment reference.
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -324,22 +342,13 @@ public interface XdiagramPackage extends EPackage
   int NODE__RESIZABLE = DIAGRAM_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Figures</b></em>' containment reference list.
+   * The feature id for the '<em><b>Main Figure</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NODE__FIGURES = DIAGRAM_ELEMENT_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Containers</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NODE__CONTAINERS = DIAGRAM_ELEMENT_FEATURE_COUNT + 2;
+  int NODE__MAIN_FIGURE = DIAGRAM_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Anchors</b></em>' containment reference list.
@@ -348,7 +357,7 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE__ANCHORS = DIAGRAM_ELEMENT_FEATURE_COUNT + 3;
+  int NODE__ANCHORS = DIAGRAM_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Node</em>' class.
@@ -357,7 +366,7 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE_FEATURE_COUNT = DIAGRAM_ELEMENT_FEATURE_COUNT + 4;
+  int NODE_FEATURE_COUNT = DIAGRAM_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.AttributeImpl <em>Attribute</em>}' class.
@@ -397,61 +406,6 @@ public interface XdiagramPackage extends EPackage
   int ATTRIBUTE_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeFigureImpl <em>Node Figure</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeFigureImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getNodeFigure()
-   * @generated
-   */
-  int NODE_FIGURE = 6;
-
-  /**
-   * The feature id for the '<em><b>Option</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NODE_FIGURE__OPTION = 0;
-
-  /**
-   * The feature id for the '<em><b>Figure</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NODE_FIGURE__FIGURE = 1;
-
-  /**
-   * The feature id for the '<em><b>Style</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NODE_FIGURE__STYLE = 2;
-
-  /**
-   * The feature id for the '<em><b>Features</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NODE_FIGURE__FEATURES = 3;
-
-  /**
-   * The number of structural features of the '<em>Node Figure</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NODE_FIGURE_FEATURE_COUNT = 4;
-
-  /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeContainerImpl <em>Node Container</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -459,7 +413,7 @@ public interface XdiagramPackage extends EPackage
    * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getNodeContainer()
    * @generated
    */
-  int NODE_CONTAINER = 7;
+  int NODE_CONTAINER = 6;
 
   /**
    * The feature id for the '<em><b>Layout</b></em>' attribute.
@@ -523,7 +477,7 @@ public interface XdiagramPackage extends EPackage
    * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getLink()
    * @generated
    */
-  int LINK = 8;
+  int LINK = 7;
 
   /**
    * The feature id for the '<em><b>Model Class</b></em>' reference.
@@ -571,13 +525,22 @@ public interface XdiagramPackage extends EPackage
   int LINK__ATTRIBUTES = DIAGRAM_ELEMENT__ATTRIBUTES;
 
   /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LINK__FEATURES = DIAGRAM_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>Model Reference</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LINK__MODEL_REFERENCE = DIAGRAM_ELEMENT_FEATURE_COUNT + 0;
+  int LINK__MODEL_REFERENCE = DIAGRAM_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Complex</b></em>' attribute.
@@ -586,7 +549,7 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINK__COMPLEX = DIAGRAM_ELEMENT_FEATURE_COUNT + 1;
+  int LINK__COMPLEX = DIAGRAM_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Source Reference</b></em>' reference.
@@ -595,7 +558,7 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINK__SOURCE_REFERENCE = DIAGRAM_ELEMENT_FEATURE_COUNT + 2;
+  int LINK__SOURCE_REFERENCE = DIAGRAM_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Target Reference</b></em>' reference.
@@ -604,7 +567,7 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINK__TARGET_REFERENCE = DIAGRAM_ELEMENT_FEATURE_COUNT + 3;
+  int LINK__TARGET_REFERENCE = DIAGRAM_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Manhattan</b></em>' attribute.
@@ -613,34 +576,7 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINK__MANHATTAN = DIAGRAM_ELEMENT_FEATURE_COUNT + 4;
-
-  /**
-   * The feature id for the '<em><b>Linefeatures</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LINK__LINEFEATURES = DIAGRAM_ELEMENT_FEATURE_COUNT + 5;
-
-  /**
-   * The feature id for the '<em><b>Colorfeatures</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LINK__COLORFEATURES = DIAGRAM_ELEMENT_FEATURE_COUNT + 6;
-
-  /**
-   * The feature id for the '<em><b>Integerfeatures</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LINK__INTEGERFEATURES = DIAGRAM_ELEMENT_FEATURE_COUNT + 7;
+  int LINK__MANHATTAN = DIAGRAM_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Decorators</b></em>' containment reference list.
@@ -649,7 +585,7 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINK__DECORATORS = DIAGRAM_ELEMENT_FEATURE_COUNT + 8;
+  int LINK__DECORATORS = DIAGRAM_ELEMENT_FEATURE_COUNT + 6;
 
   /**
    * The number of structural features of the '<em>Link</em>' class.
@@ -658,7 +594,7 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINK_FEATURE_COUNT = DIAGRAM_ELEMENT_FEATURE_COUNT + 9;
+  int LINK_FEATURE_COUNT = DIAGRAM_ELEMENT_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.DecoratorImpl <em>Decorator</em>}' class.
@@ -668,16 +604,16 @@ public interface XdiagramPackage extends EPackage
    * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getDecorator()
    * @generated
    */
-  int DECORATOR = 9;
+  int DECORATOR = 8;
 
   /**
-   * The feature id for the '<em><b>Pos</b></em>' attribute.
+   * The feature id for the '<em><b>Position</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DECORATOR__POS = 0;
+  int DECORATOR__POSITION = 0;
 
   /**
    * The feature id for the '<em><b>Source</b></em>' attribute.
@@ -707,22 +643,22 @@ public interface XdiagramPackage extends EPackage
   int DECORATOR__MIDDLE = 3;
 
   /**
-   * The feature id for the '<em><b>Placing Static</b></em>' containment reference.
+   * The feature id for the '<em><b>Static Element</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DECORATOR__PLACING_STATIC = 4;
+  int DECORATOR__STATIC_ELEMENT = 4;
 
   /**
-   * The feature id for the '<em><b>Placing Dynamic</b></em>' containment reference list.
+   * The feature id for the '<em><b>Label</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DECORATOR__PLACING_DYNAMIC = 5;
+  int DECORATOR__LABEL = 5;
 
   /**
    * The number of structural features of the '<em>Decorator</em>' class.
@@ -734,97 +670,79 @@ public interface XdiagramPackage extends EPackage
   int DECORATOR_FEATURE_COUNT = 6;
 
   /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.DynamicFigureImpl <em>Dynamic Figure</em>}' class.
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ElementImpl <em>Element</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.DynamicFigureImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getDynamicFigure()
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ElementImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getElement()
    * @generated
    */
-  int DYNAMIC_FIGURE = 10;
+  int ELEMENT = 12;
 
   /**
-   * The feature id for the '<em><b>Figure</b></em>' attribute.
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DYNAMIC_FIGURE__FIGURE = 0;
+  int ELEMENT__FEATURES = 0;
 
   /**
-   * The feature id for the '<em><b>Features</b></em>' containment reference.
+   * The number of structural features of the '<em>Element</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DYNAMIC_FIGURE__FEATURES = 1;
+  int ELEMENT_FEATURE_COUNT = 1;
 
   /**
-   * The number of structural features of the '<em>Dynamic Figure</em>' class.
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ConnectableElementImpl <em>Connectable Element</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ConnectableElementImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getConnectableElement()
+   * @generated
+   */
+  int CONNECTABLE_ELEMENT = 9;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DYNAMIC_FIGURE_FEATURE_COUNT = 2;
+  int CONNECTABLE_ELEMENT__FEATURES = ELEMENT__FEATURES;
 
   /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.StaticFigureImpl <em>Static Figure</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.StaticFigureImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getStaticFigure()
-   * @generated
-   */
-  int STATIC_FIGURE = 11;
-
-  /**
-   * The feature id for the '<em><b>Figure</b></em>' attribute.
+   * The feature id for the '<em><b>Children</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATIC_FIGURE__FIGURE = 0;
+  int CONNECTABLE_ELEMENT__CHILDREN = ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Style</b></em>' attribute.
+   * The number of structural features of the '<em>Connectable Element</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATIC_FIGURE__STYLE = 1;
+  int CONNECTABLE_ELEMENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Features</b></em>' containment reference.
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.AnchorImpl <em>Anchor</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATIC_FIGURE__FEATURES = 2;
-
-  /**
-   * The number of structural features of the '<em>Static Figure</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATIC_FIGURE_FEATURE_COUNT = 3;
-
-  /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeAnchorImpl <em>Node Anchor</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeAnchorImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getNodeAnchor()
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.AnchorImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getAnchor()
    * @generated
    */
-  int NODE_ANCHOR = 12;
+  int ANCHOR = 10;
 
   /**
    * The feature id for the '<em><b>Object</b></em>' attribute.
@@ -833,7 +751,7 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE_ANCHOR__OBJECT = 0;
+  int ANCHOR__OBJECT = 0;
 
   /**
    * The feature id for the '<em><b>Pass X</b></em>' attribute.
@@ -842,7 +760,7 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE_ANCHOR__PASS_X = 1;
+  int ANCHOR__PASS_X = 1;
 
   /**
    * The feature id for the '<em><b>X</b></em>' attribute.
@@ -851,7 +769,7 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE_ANCHOR__X = 2;
+  int ANCHOR__X = 2;
 
   /**
    * The feature id for the '<em><b>Format X</b></em>' attribute.
@@ -860,7 +778,7 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE_ANCHOR__FORMAT_X = 3;
+  int ANCHOR__FORMAT_X = 3;
 
   /**
    * The feature id for the '<em><b>Pass Y</b></em>' attribute.
@@ -869,7 +787,7 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE_ANCHOR__PASS_Y = 4;
+  int ANCHOR__PASS_Y = 4;
 
   /**
    * The feature id for the '<em><b>Y</b></em>' attribute.
@@ -878,7 +796,7 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE_ANCHOR__Y = 5;
+  int ANCHOR__Y = 5;
 
   /**
    * The feature id for the '<em><b>Format Y</b></em>' attribute.
@@ -887,7 +805,7 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE_ANCHOR__FORMAT_Y = 6;
+  int ANCHOR__FORMAT_Y = 6;
 
   /**
    * The feature id for the '<em><b>Figures</b></em>' containment reference list.
@@ -896,44 +814,35 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NODE_ANCHOR__FIGURES = 7;
+  int ANCHOR__FIGURES = 7;
 
   /**
-   * The feature id for the '<em><b>Arrows</b></em>' containment reference list.
+   * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NODE_ANCHOR__ARROWS = 8;
+  int ANCHOR__CONSTRAINTS = 8;
 
   /**
-   * The number of structural features of the '<em>Node Anchor</em>' class.
+   * The number of structural features of the '<em>Anchor</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NODE_ANCHOR_FEATURE_COUNT = 9;
+  int ANCHOR_FEATURE_COUNT = 9;
 
   /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ArrowAnchorImpl <em>Arrow Anchor</em>}' class.
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.AnchorConstraintImpl <em>Anchor Constraint</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ArrowAnchorImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getArrowAnchor()
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.AnchorConstraintImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getAnchorConstraint()
    * @generated
    */
-  int ARROW_ANCHOR = 13;
-
-  /**
-   * The feature id for the '<em><b>Reference</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ARROW_ANCHOR__REFERENCE = 0;
+  int ANCHOR_CONSTRAINT = 11;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -942,521 +851,34 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARROW_ANCHOR__TYPE = 1;
+  int ANCHOR_CONSTRAINT__TYPE = 0;
 
   /**
-   * The feature id for the '<em><b>N</b></em>' attribute.
+   * The feature id for the '<em><b>Reference</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ARROW_ANCHOR__N = 2;
+  int ANCHOR_CONSTRAINT__REFERENCE = 1;
 
   /**
-   * The number of structural features of the '<em>Arrow Anchor</em>' class.
+   * The feature id for the '<em><b>Max</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ARROW_ANCHOR_FEATURE_COUNT = 3;
+  int ANCHOR_CONSTRAINT__MAX = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.FigureFeaturesImpl <em>Figure Features</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.FigureFeaturesImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFigureFeatures()
-   * @generated
-   */
-  int FIGURE_FEATURES = 14;
-
-  /**
-   * The feature id for the '<em><b>Linefeatures</b></em>' containment reference list.
+   * The number of structural features of the '<em>Anchor Constraint</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FIGURE_FEATURES__LINEFEATURES = 0;
-
-  /**
-   * The feature id for the '<em><b>Centerfeatures</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FIGURE_FEATURES__CENTERFEATURES = 1;
-
-  /**
-   * The feature id for the '<em><b>Alignfeatures</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FIGURE_FEATURES__ALIGNFEATURES = 2;
-
-  /**
-   * The feature id for the '<em><b>Gradientfeatures</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FIGURE_FEATURES__GRADIENTFEATURES = 3;
-
-  /**
-   * The feature id for the '<em><b>Pointfeatures</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FIGURE_FEATURES__POINTFEATURES = 4;
-
-  /**
-   * The feature id for the '<em><b>Sizefeatures</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FIGURE_FEATURES__SIZEFEATURES = 5;
-
-  /**
-   * The feature id for the '<em><b>Positionfeatures</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FIGURE_FEATURES__POSITIONFEATURES = 6;
-
-  /**
-   * The feature id for the '<em><b>Colorfeatures</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FIGURE_FEATURES__COLORFEATURES = 7;
-
-  /**
-   * The feature id for the '<em><b>Integerfeatures</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FIGURE_FEATURES__INTEGERFEATURES = 8;
-
-  /**
-   * The feature id for the '<em><b>Booleanfeatures</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FIGURE_FEATURES__BOOLEANFEATURES = 9;
-
-  /**
-   * The feature id for the '<em><b>Stringfeatures</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FIGURE_FEATURES__STRINGFEATURES = 10;
-
-  /**
-   * The number of structural features of the '<em>Figure Features</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FIGURE_FEATURES_FEATURE_COUNT = 11;
-
-  /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.StyleFeatureImpl <em>Style Feature</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.StyleFeatureImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getStyleFeature()
-   * @generated
-   */
-  int STYLE_FEATURE = 15;
-
-  /**
-   * The feature id for the '<em><b>Key</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STYLE_FEATURE__KEY = 0;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STYLE_FEATURE__VALUE = 1;
-
-  /**
-   * The number of structural features of the '<em>Style Feature</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STYLE_FEATURE_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LayoutFeatureImpl <em>Layout Feature</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.LayoutFeatureImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getLayoutFeature()
-   * @generated
-   */
-  int LAYOUT_FEATURE = 16;
-
-  /**
-   * The feature id for the '<em><b>Key</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LAYOUT_FEATURE__KEY = STYLE_FEATURE__KEY;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LAYOUT_FEATURE__VALUE = STYLE_FEATURE__VALUE;
-
-  /**
-   * The number of structural features of the '<em>Layout Feature</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LAYOUT_FEATURE_FEATURE_COUNT = STYLE_FEATURE_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.CenterFeatureImpl <em>Center Feature</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.CenterFeatureImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getCenterFeature()
-   * @generated
-   */
-  int CENTER_FEATURE = 17;
-
-  /**
-   * The feature id for the '<em><b>Key</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CENTER_FEATURE__KEY = STYLE_FEATURE__KEY;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CENTER_FEATURE__VALUE = STYLE_FEATURE__VALUE;
-
-  /**
-   * The number of structural features of the '<em>Center Feature</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CENTER_FEATURE_FEATURE_COUNT = STYLE_FEATURE_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.AlignFeatureImpl <em>Align Feature</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.AlignFeatureImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getAlignFeature()
-   * @generated
-   */
-  int ALIGN_FEATURE = 18;
-
-  /**
-   * The feature id for the '<em><b>Key</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ALIGN_FEATURE__KEY = 0;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ALIGN_FEATURE__VALUE = 1;
-
-  /**
-   * The number of structural features of the '<em>Align Feature</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ALIGN_FEATURE_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.GradientFeatureImpl <em>Gradient Feature</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.GradientFeatureImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getGradientFeature()
-   * @generated
-   */
-  int GRADIENT_FEATURE = 19;
-
-  /**
-   * The feature id for the '<em><b>Key</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GRADIENT_FEATURE__KEY = 0;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GRADIENT_FEATURE__VALUE = 1;
-
-  /**
-   * The number of structural features of the '<em>Gradient Feature</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GRADIENT_FEATURE_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.PointFeatureImpl <em>Point Feature</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.PointFeatureImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getPointFeature()
-   * @generated
-   */
-  int POINT_FEATURE = 20;
-
-  /**
-   * The feature id for the '<em><b>X</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POINT_FEATURE__X = 0;
-
-  /**
-   * The feature id for the '<em><b>Y</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POINT_FEATURE__Y = 1;
-
-  /**
-   * The number of structural features of the '<em>Point Feature</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POINT_FEATURE_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.SizeFeatureImpl <em>Size Feature</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.SizeFeatureImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getSizeFeature()
-   * @generated
-   */
-  int SIZE_FEATURE = 21;
-
-  /**
-   * The feature id for the '<em><b>Width</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIZE_FEATURE__WIDTH = 0;
-
-  /**
-   * The feature id for the '<em><b>Height</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIZE_FEATURE__HEIGHT = 1;
-
-  /**
-   * The number of structural features of the '<em>Size Feature</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIZE_FEATURE_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.PositionFeatureImpl <em>Position Feature</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.PositionFeatureImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getPositionFeature()
-   * @generated
-   */
-  int POSITION_FEATURE = 22;
-
-  /**
-   * The feature id for the '<em><b>X</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POSITION_FEATURE__X = 0;
-
-  /**
-   * The feature id for the '<em><b>Y</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POSITION_FEATURE__Y = 1;
-
-  /**
-   * The number of structural features of the '<em>Position Feature</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POSITION_FEATURE_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ColorFeatureImpl <em>Color Feature</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ColorFeatureImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getColorFeature()
-   * @generated
-   */
-  int COLOR_FEATURE = 23;
-
-  /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COLOR_FEATURE__EXPRESSION = 0;
-
-  /**
-   * The feature id for the '<em><b>Key</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COLOR_FEATURE__KEY = 1;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COLOR_FEATURE__VALUE = 2;
-
-  /**
-   * The feature id for the '<em><b>Rgb</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COLOR_FEATURE__RGB = 3;
-
-  /**
-   * The feature id for the '<em><b>Atribute</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COLOR_FEATURE__ATRIBUTE = 4;
-
-  /**
-   * The feature id for the '<em><b>Operator</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COLOR_FEATURE__OPERATOR = 5;
-
-  /**
-   * The feature id for the '<em><b>Option</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COLOR_FEATURE__OPTION = 6;
-
-  /**
-   * The number of structural features of the '<em>Color Feature</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COLOR_FEATURE_FEATURE_COUNT = 7;
+  int ANCHOR_CONSTRAINT_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.RGBImpl <em>RGB</em>}' class.
@@ -1466,7 +888,7 @@ public interface XdiagramPackage extends EPackage
    * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getRGB()
    * @generated
    */
-  int RGB = 24;
+  int RGB = 13;
 
   /**
    * The feature id for the '<em><b>R</b></em>' attribute.
@@ -1505,234 +927,364 @@ public interface XdiagramPackage extends EPackage
   int RGB_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.IntegerFeatureImpl <em>Integer Feature</em>}' class.
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ImageFileImpl <em>Image File</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.IntegerFeatureImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getIntegerFeature()
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ImageFileImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getImageFile()
    * @generated
    */
-  int INTEGER_FEATURE = 25;
+  int IMAGE_FILE = 14;
 
   /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INTEGER_FEATURE__EXPRESSION = 0;
+  int IMAGE_FILE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * The feature id for the '<em><b>Src</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INTEGER_FEATURE__KEY = 1;
+  int IMAGE_FILE__SRC = 1;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * The number of structural features of the '<em>Image File</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INTEGER_FEATURE__VALUE = 2;
+  int IMAGE_FILE_FEATURE_COUNT = 2;
 
   /**
-   * The number of structural features of the '<em>Integer Feature</em>' class.
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ColorImpl <em>Color</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ColorImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getColor()
+   * @generated
+   */
+  int COLOR = 15;
+
+  /**
+   * The feature id for the '<em><b>Default</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INTEGER_FEATURE_FEATURE_COUNT = 3;
+  int COLOR__DEFAULT = 0;
 
   /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.StringFeatureImpl <em>String Feature</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.StringFeatureImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getStringFeature()
-   * @generated
-   */
-  int STRING_FEATURE = 26;
-
-  /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * The feature id for the '<em><b>Custom</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STRING_FEATURE__EXPRESSION = 0;
+  int COLOR__CUSTOM = 1;
 
   /**
-   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * The number of structural features of the '<em>Color</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STRING_FEATURE__KEY = 1;
+  int COLOR_FEATURE_COUNT = 2;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.CustomColorImpl <em>Custom Color</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.CustomColorImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getCustomColor()
+   * @generated
+   */
+  int CUSTOM_COLOR = 16;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STRING_FEATURE__VALUE = 2;
+  int CUSTOM_COLOR__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Value L</b></em>' attribute.
+   * The feature id for the '<em><b>Rgb</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STRING_FEATURE__VALUE_L = 3;
+  int CUSTOM_COLOR__RGB = 1;
 
   /**
-   * The feature id for the '<em><b>Attribute</b></em>' attribute.
+   * The number of structural features of the '<em>Custom Color</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STRING_FEATURE__ATTRIBUTE = 4;
+  int CUSTOM_COLOR_FEATURE_COUNT = 2;
 
   /**
-   * The feature id for the '<em><b>Value R</b></em>' attribute.
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.RectangleImpl <em>Rectangle</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.RectangleImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getRectangle()
+   * @generated
+   */
+  int RECTANGLE = 17;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STRING_FEATURE__VALUE_R = 5;
+  int RECTANGLE__FEATURES = CONNECTABLE_ELEMENT__FEATURES;
 
   /**
-   * The number of structural features of the '<em>String Feature</em>' class.
+   * The feature id for the '<em><b>Children</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STRING_FEATURE_FEATURE_COUNT = 6;
+  int RECTANGLE__CHILDREN = CONNECTABLE_ELEMENT__CHILDREN;
 
   /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.BooleanFeatureImpl <em>Boolean Feature</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.BooleanFeatureImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getBooleanFeature()
-   * @generated
-   */
-  int BOOLEAN_FEATURE = 27;
-
-  /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * The feature id for the '<em><b>Rectangle</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BOOLEAN_FEATURE__EXPRESSION = 0;
+  int RECTANGLE__RECTANGLE = CONNECTABLE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * The feature id for the '<em><b>Square</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BOOLEAN_FEATURE__KEY = 1;
+  int RECTANGLE__SQUARE = CONNECTABLE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * The number of structural features of the '<em>Rectangle</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BOOLEAN_FEATURE__VALUE = 2;
+  int RECTANGLE_FEATURE_COUNT = CONNECTABLE_ELEMENT_FEATURE_COUNT + 2;
 
   /**
-   * The number of structural features of the '<em>Boolean Feature</em>' class.
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.FeatureImpl <em>Feature</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.FeatureImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFeature()
+   * @generated
+   */
+  int FEATURE = 18;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BOOLEAN_FEATURE_FEATURE_COUNT = 3;
+  int FEATURE__CONDITIONAL = 0;
 
   /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LineFeatureImpl <em>Line Feature</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.LineFeatureImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getLineFeature()
-   * @generated
-   */
-  int LINE_FEATURE = 28;
-
-  /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * The number of structural features of the '<em>Feature</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LINE_FEATURE__EXPRESSION = 0;
+  int FEATURE_FEATURE_COUNT = 1;
 
   /**
-   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.RhombusImpl <em>Rhombus</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.RhombusImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getRhombus()
+   * @generated
+   */
+  int RHOMBUS = 19;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LINE_FEATURE__KEY = 1;
+  int RHOMBUS__FEATURES = CONNECTABLE_ELEMENT__FEATURES;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * The feature id for the '<em><b>Children</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LINE_FEATURE__VALUE = 2;
+  int RHOMBUS__CHILDREN = CONNECTABLE_ELEMENT__CHILDREN;
 
   /**
-   * The number of structural features of the '<em>Line Feature</em>' class.
+   * The number of structural features of the '<em>Rhombus</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LINE_FEATURE_FEATURE_COUNT = 3;
+  int RHOMBUS_FEATURE_COUNT = CONNECTABLE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.AtributeExpressionImpl <em>Atribute Expression</em>}' class.
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.EllipseImpl <em>Ellipse</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.AtributeExpressionImpl
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getAtributeExpression()
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.EllipseImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getEllipse()
    * @generated
    */
-  int ATRIBUTE_EXPRESSION = 29;
+  int ELLIPSE = 20;
 
   /**
-   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATRIBUTE_EXPRESSION__KEY = 0;
+  int ELLIPSE__FEATURES = CONNECTABLE_ELEMENT__FEATURES;
+
+  /**
+   * The feature id for the '<em><b>Children</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELLIPSE__CHILDREN = CONNECTABLE_ELEMENT__CHILDREN;
+
+  /**
+   * The feature id for the '<em><b>Ellipse</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELLIPSE__ELLIPSE = CONNECTABLE_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Circle</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELLIPSE__CIRCLE = CONNECTABLE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Ellipse</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELLIPSE_FEATURE_COUNT = CONNECTABLE_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.PolylineImpl <em>Polyline</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.PolylineImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getPolyline()
+   * @generated
+   */
+  int POLYLINE = 21;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POLYLINE__FEATURES = CONNECTABLE_ELEMENT__FEATURES;
+
+  /**
+   * The feature id for the '<em><b>Children</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POLYLINE__CHILDREN = CONNECTABLE_ELEMENT__CHILDREN;
+
+  /**
+   * The feature id for the '<em><b>Polygon</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POLYLINE__POLYGON = CONNECTABLE_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Polyline</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POLYLINE__POLYLINE = CONNECTABLE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Polyline</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POLYLINE_FEATURE_COUNT = CONNECTABLE_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.FeatureConditionalImpl <em>Feature Conditional</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.FeatureConditionalImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFeatureConditional()
+   * @generated
+   */
+  int FEATURE_CONDITIONAL = 22;
+
+  /**
+   * The feature id for the '<em><b>Model Attribute</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FEATURE_CONDITIONAL__MODEL_ATTRIBUTE = 0;
 
   /**
    * The feature id for the '<em><b>Operator</b></em>' attribute.
@@ -1741,7 +1293,7 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATRIBUTE_EXPRESSION__OPERATOR = 1;
+  int FEATURE_CONDITIONAL__OPERATOR = 1;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -1750,16 +1302,230 @@ public interface XdiagramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATRIBUTE_EXPRESSION__VALUE = 2;
+  int FEATURE_CONDITIONAL__VALUE = 2;
 
   /**
-   * The number of structural features of the '<em>Atribute Expression</em>' class.
+   * The number of structural features of the '<em>Feature Conditional</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATRIBUTE_EXPRESSION_FEATURE_COUNT = 3;
+  int FEATURE_CONDITIONAL_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ContainsImpl <em>Contains</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ContainsImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getContains()
+   * @generated
+   */
+  int CONTAINS = 23;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTAINS__CONDITIONAL = FEATURE__CONDITIONAL;
+
+  /**
+   * The feature id for the '<em><b>Model Reference</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTAINS__MODEL_REFERENCE = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Contains</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTAINS_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ValueImpl <em>Value</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ValueImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getValue()
+   * @generated
+   */
+  int VALUE = 24;
+
+  /**
+   * The number of structural features of the '<em>Value</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.IntValueImpl <em>Int Value</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.IntValueImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getIntValue()
+   * @generated
+   */
+  int INT_VALUE = 25;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_VALUE__VALUE = VALUE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Int Value</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.DoubleValueImpl <em>Double Value</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.DoubleValueImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getDoubleValue()
+   * @generated
+   */
+  int DOUBLE_VALUE = 26;
+
+  /**
+   * The feature id for the '<em><b>Value Int</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOUBLE_VALUE__VALUE_INT = VALUE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Value Decimal</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOUBLE_VALUE__VALUE_DECIMAL = VALUE_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Double Value</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOUBLE_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.StringValueImpl <em>String Value</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.StringValueImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getStringValue()
+   * @generated
+   */
+  int STRING_VALUE = 27;
+
+  /**
+   * The feature id for the '<em><b>Null</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_VALUE__NULL = VALUE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_VALUE__VALUE = VALUE_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>String Value</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.BooleanValueImpl <em>Boolean Value</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.BooleanValueImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getBooleanValue()
+   * @generated
+   */
+  int BOOLEAN_VALUE = 28;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_VALUE__VALUE = VALUE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Boolean Value</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.EnumValueImpl <em>Enum Value</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.EnumValueImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getEnumValue()
+   * @generated
+   */
+  int ENUM_VALUE = 29;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUM_VALUE__NAME = VALUE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Enum Value</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUM_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.AtributeValueImpl <em>Atribute Value</em>}' class.
@@ -1853,6 +1619,652 @@ public interface XdiagramPackage extends EPackage
   int ATRIBUTE_VALUE_FEATURE_COUNT = 8;
 
   /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LabelImpl <em>Label</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.LabelImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getLabel()
+   * @generated
+   */
+  int LABEL = 31;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LABEL__FEATURES = CONNECTABLE_ELEMENT__FEATURES;
+
+  /**
+   * The feature id for the '<em><b>Children</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LABEL__CHILDREN = CONNECTABLE_ELEMENT__CHILDREN;
+
+  /**
+   * The feature id for the '<em><b>Editable</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LABEL__EDITABLE = CONNECTABLE_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Label</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LABEL_FEATURE_COUNT = CONNECTABLE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ImageImpl <em>Image</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ImageImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getImage()
+   * @generated
+   */
+  int IMAGE = 32;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE__FEATURES = CONNECTABLE_ELEMENT__FEATURES;
+
+  /**
+   * The feature id for the '<em><b>Children</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE__CHILDREN = CONNECTABLE_ELEMENT__CHILDREN;
+
+  /**
+   * The feature id for the '<em><b>Image</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE__IMAGE = CONNECTABLE_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Image</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_FEATURE_COUNT = CONNECTABLE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ColorFeatureImpl <em>Color Feature</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ColorFeatureImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getColorFeature()
+   * @generated
+   */
+  int COLOR_FEATURE = 33;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLOR_FEATURE__CONDITIONAL = FEATURE__CONDITIONAL;
+
+  /**
+   * The feature id for the '<em><b>Color</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLOR_FEATURE__COLOR = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Color Feature</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLOR_FEATURE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ForegroundImpl <em>Foreground</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ForegroundImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getForeground()
+   * @generated
+   */
+  int FOREGROUND = 34;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOREGROUND__CONDITIONAL = FEATURE__CONDITIONAL;
+
+  /**
+   * The feature id for the '<em><b>Color</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOREGROUND__COLOR = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Foreground</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOREGROUND_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.BackgroundImpl <em>Background</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.BackgroundImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getBackground()
+   * @generated
+   */
+  int BACKGROUND = 35;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BACKGROUND__CONDITIONAL = FEATURE__CONDITIONAL;
+
+  /**
+   * The feature id for the '<em><b>Color</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BACKGROUND__COLOR = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Background</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BACKGROUND_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.TransparencyImpl <em>Transparency</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.TransparencyImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getTransparency()
+   * @generated
+   */
+  int TRANSPARENCY = 36;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANSPARENCY__CONDITIONAL = FEATURE__CONDITIONAL;
+
+  /**
+   * The feature id for the '<em><b>Percent</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANSPARENCY__PERCENT = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Transparency</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRANSPARENCY_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.SizeImpl <em>Size</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.SizeImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getSize()
+   * @generated
+   */
+  int SIZE = 37;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIZE__CONDITIONAL = FEATURE__CONDITIONAL;
+
+  /**
+   * The feature id for the '<em><b>Width</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIZE__WIDTH = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Height</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIZE__HEIGHT = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Size</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIZE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.PointImpl <em>Point</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.PointImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getPoint()
+   * @generated
+   */
+  int POINT = 38;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POINT__CONDITIONAL = FEATURE__CONDITIONAL;
+
+  /**
+   * The feature id for the '<em><b>X</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POINT__X = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Y</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POINT__Y = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Point</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POINT_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.PositionImpl <em>Position</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.PositionImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getPosition()
+   * @generated
+   */
+  int POSITION = 39;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSITION__CONDITIONAL = FEATURE__CONDITIONAL;
+
+  /**
+   * The feature id for the '<em><b>X</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSITION__X = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Y</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSITION__Y = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Position</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POSITION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.CornerImpl <em>Corner</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.CornerImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getCorner()
+   * @generated
+   */
+  int CORNER = 40;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CORNER__CONDITIONAL = FEATURE__CONDITIONAL;
+
+  /**
+   * The feature id for the '<em><b>Angle</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CORNER__ANGLE = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Corner</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CORNER_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.TextValueImpl <em>Text Value</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.TextValueImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getTextValue()
+   * @generated
+   */
+  int TEXT_VALUE = 41;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_VALUE__CONDITIONAL = FEATURE__CONDITIONAL;
+
+  /**
+   * The feature id for the '<em><b>Text</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_VALUE__TEXT = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Model Attribute</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_VALUE__MODEL_ATTRIBUTE = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Text Value</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_VALUE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.FontFaceImpl <em>Font Face</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.FontFaceImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFontFace()
+   * @generated
+   */
+  int FONT_FACE = 42;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONT_FACE__CONDITIONAL = FEATURE__CONDITIONAL;
+
+  /**
+   * The feature id for the '<em><b>Face</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONT_FACE__FACE = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Font Face</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONT_FACE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.FontSizeImpl <em>Font Size</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.FontSizeImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFontSize()
+   * @generated
+   */
+  int FONT_SIZE = 43;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONT_SIZE__CONDITIONAL = FEATURE__CONDITIONAL;
+
+  /**
+   * The feature id for the '<em><b>Size</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONT_SIZE__SIZE = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Font Size</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONT_SIZE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.FontStyleImpl <em>Font Style</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.FontStyleImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFontStyle()
+   * @generated
+   */
+  int FONT_STYLE = 44;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONT_STYLE__CONDITIONAL = FEATURE__CONDITIONAL;
+
+  /**
+   * The feature id for the '<em><b>Styles</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONT_STYLE__STYLES = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Font Style</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FONT_STYLE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LineStyleImpl <em>Line Style</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.LineStyleImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getLineStyle()
+   * @generated
+   */
+  int LINE_STYLE = 45;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LINE_STYLE__CONDITIONAL = FEATURE__CONDITIONAL;
+
+  /**
+   * The feature id for the '<em><b>Style</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LINE_STYLE__STYLE = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Line Style</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LINE_STYLE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LineWidthImpl <em>Line Width</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.LineWidthImpl
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getLineWidth()
+   * @generated
+   */
+  int LINE_WIDTH = 46;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LINE_WIDTH__CONDITIONAL = FEATURE__CONDITIONAL;
+
+  /**
+   * The feature id for the '<em><b>Width</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LINE_WIDTH__WIDTH = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Line Width</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LINE_WIDTH_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ContainerLayout <em>Container Layout</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1860,17 +2272,77 @@ public interface XdiagramPackage extends EPackage
    * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getContainerLayout()
    * @generated
    */
-  int CONTAINER_LAYOUT = 31;
+  int CONTAINER_LAYOUT = 47;
 
   /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureShape <em>Figure Shape</em>}' enum.
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraintType <em>Anchor Constraint Type</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FigureShape
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFigureShape()
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraintType
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getAnchorConstraintType()
    * @generated
    */
-  int FIGURE_SHAPE = 32;
+  int ANCHOR_CONSTRAINT_TYPE = 48;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.DefaultColor <em>Default Color</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.DefaultColor
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getDefaultColor()
+   * @generated
+   */
+  int DEFAULT_COLOR = 49;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Operator <em>Operator</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Operator
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getOperator()
+   * @generated
+   */
+  int OPERATOR = 50;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.BooleanLiteral <em>Boolean Literal</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.BooleanLiteral
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getBooleanLiteral()
+   * @generated
+   */
+  int BOOLEAN_LITERAL = 51;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FontFaceType <em>Font Face Type</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FontFaceType
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFontFaceType()
+   * @generated
+   */
+  int FONT_FACE_TYPE = 52;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FontStyleType <em>Font Style Type</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FontStyleType
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFontStyleType()
+   * @generated
+   */
+  int FONT_STYLE_TYPE = 53;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.LineType <em>Line Type</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.LineType
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getLineType()
+   * @generated
+   */
+  int LINE_TYPE = 54;
 
 
   /**
@@ -1917,17 +2389,6 @@ public interface XdiagramPackage extends EPackage
   EReference getXDiagram_ModelClass();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getStyles <em>Styles</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Styles</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getStyles()
-   * @see #getXDiagram()
-   * @generated
-   */
-  EReference getXDiagram_Styles();
-
-  /**
    * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getNodes <em>Nodes</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1948,6 +2409,39 @@ public interface XdiagramPackage extends EPackage
    * @generated
    */
   EReference getXDiagram_Links();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getStyles <em>Styles</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Styles</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getStyles()
+   * @see #getXDiagram()
+   * @generated
+   */
+  EReference getXDiagram_Styles();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getColors <em>Colors</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Colors</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getColors()
+   * @see #getXDiagram()
+   * @generated
+   */
+  EReference getXDiagram_Colors();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getImages <em>Images</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Images</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getImages()
+   * @see #getXDiagram()
+   * @generated
+   */
+  EReference getXDiagram_Images();
 
   /**
    * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ImportStatement <em>Import Statement</em>}'.
@@ -1992,10 +2486,10 @@ public interface XdiagramPackage extends EPackage
   EAttribute getStyle_Name();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Style#getFeatures <em>Features</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Style#getFeatures <em>Features</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Features</em>'.
+   * @return the meta object for the containment reference list '<em>Features</em>'.
    * @see org.eclipselabs.xdiagram.xtext.xdiagram.Style#getFeatures()
    * @see #getStyle()
    * @generated
@@ -2089,26 +2583,15 @@ public interface XdiagramPackage extends EPackage
   EAttribute getNode_Resizable();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Node#getFigures <em>Figures</em>}'.
+   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Node#getMainFigure <em>Main Figure</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Figures</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Node#getFigures()
+   * @return the meta object for the containment reference '<em>Main Figure</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Node#getMainFigure()
    * @see #getNode()
    * @generated
    */
-  EReference getNode_Figures();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Node#getContainers <em>Containers</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Containers</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Node#getContainers()
-   * @see #getNode()
-   * @generated
-   */
-  EReference getNode_Containers();
+  EReference getNode_MainFigure();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Node#getAnchors <em>Anchors</em>}'.
@@ -2152,60 +2635,6 @@ public interface XdiagramPackage extends EPackage
    * @generated
    */
   EReference getAttribute_Value();
-
-  /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure <em>Node Figure</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Node Figure</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure
-   * @generated
-   */
-  EClass getNodeFigure();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure#getOption <em>Option</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Option</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure#getOption()
-   * @see #getNodeFigure()
-   * @generated
-   */
-  EAttribute getNodeFigure_Option();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure#getFigure <em>Figure</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Figure</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure#getFigure()
-   * @see #getNodeFigure()
-   * @generated
-   */
-  EAttribute getNodeFigure_Figure();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure#getStyle <em>Style</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Style</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure#getStyle()
-   * @see #getNodeFigure()
-   * @generated
-   */
-  EAttribute getNodeFigure_Style();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure#getFeatures <em>Features</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Features</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure#getFeatures()
-   * @see #getNodeFigure()
-   * @generated
-   */
-  EReference getNodeFigure_Features();
 
   /**
    * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer <em>Node Container</em>}'.
@@ -2338,39 +2767,6 @@ public interface XdiagramPackage extends EPackage
   EAttribute getLink_Manhattan();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getLinefeatures <em>Linefeatures</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Linefeatures</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Link#getLinefeatures()
-   * @see #getLink()
-   * @generated
-   */
-  EReference getLink_Linefeatures();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getColorfeatures <em>Colorfeatures</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Colorfeatures</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Link#getColorfeatures()
-   * @see #getLink()
-   * @generated
-   */
-  EReference getLink_Colorfeatures();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getIntegerfeatures <em>Integerfeatures</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Integerfeatures</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Link#getIntegerfeatures()
-   * @see #getLink()
-   * @generated
-   */
-  EReference getLink_Integerfeatures();
-
-  /**
    * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getDecorators <em>Decorators</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2392,15 +2788,15 @@ public interface XdiagramPackage extends EPackage
   EClass getDecorator();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getPos <em>Pos</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getPosition <em>Position</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Pos</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getPos()
+   * @return the meta object for the attribute '<em>Position</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getPosition()
    * @see #getDecorator()
    * @generated
    */
-  EAttribute getDecorator_Pos();
+  EAttribute getDecorator_Position();
 
   /**
    * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#isSource <em>Source</em>}'.
@@ -2436,683 +2832,220 @@ public interface XdiagramPackage extends EPackage
   EAttribute getDecorator_Middle();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getPlacingStatic <em>Placing Static</em>}'.
+   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getStaticElement <em>Static Element</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Placing Static</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getPlacingStatic()
+   * @return the meta object for the containment reference '<em>Static Element</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getStaticElement()
    * @see #getDecorator()
    * @generated
    */
-  EReference getDecorator_PlacingStatic();
+  EReference getDecorator_StaticElement();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getPlacingDynamic <em>Placing Dynamic</em>}'.
+   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getLabel <em>Label</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Placing Dynamic</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getPlacingDynamic()
+   * @return the meta object for the containment reference '<em>Label</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getLabel()
    * @see #getDecorator()
    * @generated
    */
-  EReference getDecorator_PlacingDynamic();
+  EReference getDecorator_Label();
 
   /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure <em>Dynamic Figure</em>}'.
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ConnectableElement <em>Connectable Element</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Dynamic Figure</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure
+   * @return the meta object for class '<em>Connectable Element</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ConnectableElement
    * @generated
    */
-  EClass getDynamicFigure();
+  EClass getConnectableElement();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure#getFigure <em>Figure</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ConnectableElement#getChildren <em>Children</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Figure</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure#getFigure()
-   * @see #getDynamicFigure()
+   * @return the meta object for the containment reference list '<em>Children</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ConnectableElement#getChildren()
+   * @see #getConnectableElement()
    * @generated
    */
-  EAttribute getDynamicFigure_Figure();
+  EReference getConnectableElement_Children();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure#getFeatures <em>Features</em>}'.
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Anchor <em>Anchor</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Features</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure#getFeatures()
-   * @see #getDynamicFigure()
+   * @return the meta object for class '<em>Anchor</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Anchor
    * @generated
    */
-  EReference getDynamicFigure_Features();
+  EClass getAnchor();
 
   /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StaticFigure <em>Static Figure</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Static Figure</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StaticFigure
-   * @generated
-   */
-  EClass getStaticFigure();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StaticFigure#getFigure <em>Figure</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Figure</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StaticFigure#getFigure()
-   * @see #getStaticFigure()
-   * @generated
-   */
-  EAttribute getStaticFigure_Figure();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StaticFigure#getStyle <em>Style</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Style</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StaticFigure#getStyle()
-   * @see #getStaticFigure()
-   * @generated
-   */
-  EAttribute getStaticFigure_Style();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StaticFigure#getFeatures <em>Features</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Features</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StaticFigure#getFeatures()
-   * @see #getStaticFigure()
-   * @generated
-   */
-  EReference getStaticFigure_Features();
-
-  /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor <em>Node Anchor</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Node Anchor</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor
-   * @generated
-   */
-  EClass getNodeAnchor();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getObject <em>Object</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getObject <em>Object</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Object</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getObject()
-   * @see #getNodeAnchor()
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getObject()
+   * @see #getAnchor()
    * @generated
    */
-  EAttribute getNodeAnchor_Object();
+  EAttribute getAnchor_Object();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getPassX <em>Pass X</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getPassX <em>Pass X</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Pass X</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getPassX()
-   * @see #getNodeAnchor()
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getPassX()
+   * @see #getAnchor()
    * @generated
    */
-  EAttribute getNodeAnchor_PassX();
+  EAttribute getAnchor_PassX();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getX <em>X</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getX <em>X</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>X</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getX()
-   * @see #getNodeAnchor()
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getX()
+   * @see #getAnchor()
    * @generated
    */
-  EAttribute getNodeAnchor_X();
+  EAttribute getAnchor_X();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getFormatX <em>Format X</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getFormatX <em>Format X</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Format X</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getFormatX()
-   * @see #getNodeAnchor()
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getFormatX()
+   * @see #getAnchor()
    * @generated
    */
-  EAttribute getNodeAnchor_FormatX();
+  EAttribute getAnchor_FormatX();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getPassY <em>Pass Y</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getPassY <em>Pass Y</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Pass Y</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getPassY()
-   * @see #getNodeAnchor()
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getPassY()
+   * @see #getAnchor()
    * @generated
    */
-  EAttribute getNodeAnchor_PassY();
+  EAttribute getAnchor_PassY();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getY <em>Y</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getY <em>Y</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Y</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getY()
-   * @see #getNodeAnchor()
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getY()
+   * @see #getAnchor()
    * @generated
    */
-  EAttribute getNodeAnchor_Y();
+  EAttribute getAnchor_Y();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getFormatY <em>Format Y</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getFormatY <em>Format Y</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Format Y</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getFormatY()
-   * @see #getNodeAnchor()
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getFormatY()
+   * @see #getAnchor()
    * @generated
    */
-  EAttribute getNodeAnchor_FormatY();
+  EAttribute getAnchor_FormatY();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getFigures <em>Figures</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getFigures <em>Figures</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Figures</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getFigures()
-   * @see #getNodeAnchor()
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getFigures()
+   * @see #getAnchor()
    * @generated
    */
-  EReference getNodeAnchor_Figures();
+  EReference getAnchor_Figures();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getArrows <em>Arrows</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getConstraints <em>Constraints</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Arrows</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor#getArrows()
-   * @see #getNodeAnchor()
+   * @return the meta object for the containment reference list '<em>Constraints</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Anchor#getConstraints()
+   * @see #getAnchor()
    * @generated
    */
-  EReference getNodeAnchor_Arrows();
+  EReference getAnchor_Constraints();
 
   /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ArrowAnchor <em>Arrow Anchor</em>}'.
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraint <em>Anchor Constraint</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Arrow Anchor</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ArrowAnchor
+   * @return the meta object for class '<em>Anchor Constraint</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraint
    * @generated
    */
-  EClass getArrowAnchor();
+  EClass getAnchorConstraint();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ArrowAnchor#getReference <em>Reference</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Reference</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ArrowAnchor#getReference()
-   * @see #getArrowAnchor()
-   * @generated
-   */
-  EAttribute getArrowAnchor_Reference();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ArrowAnchor#getType <em>Type</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraint#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Type</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ArrowAnchor#getType()
-   * @see #getArrowAnchor()
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraint#getType()
+   * @see #getAnchorConstraint()
    * @generated
    */
-  EAttribute getArrowAnchor_Type();
+  EAttribute getAnchorConstraint_Type();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ArrowAnchor#getN <em>N</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraint#getReference <em>Reference</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>N</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ArrowAnchor#getN()
-   * @see #getArrowAnchor()
+   * @return the meta object for the attribute '<em>Reference</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraint#getReference()
+   * @see #getAnchorConstraint()
    * @generated
    */
-  EAttribute getArrowAnchor_N();
+  EAttribute getAnchorConstraint_Reference();
 
   /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures <em>Figure Features</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraint#getMax <em>Max</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Figure Features</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures
+   * @return the meta object for the attribute '<em>Max</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraint#getMax()
+   * @see #getAnchorConstraint()
    * @generated
    */
-  EClass getFigureFeatures();
+  EAttribute getAnchorConstraint_Max();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getLinefeatures <em>Linefeatures</em>}'.
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Element <em>Element</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Linefeatures</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getLinefeatures()
-   * @see #getFigureFeatures()
+   * @return the meta object for class '<em>Element</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Element
    * @generated
    */
-  EReference getFigureFeatures_Linefeatures();
+  EClass getElement();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getCenterfeatures <em>Centerfeatures</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Element#getFeatures <em>Features</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Centerfeatures</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getCenterfeatures()
-   * @see #getFigureFeatures()
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Element#getFeatures()
+   * @see #getElement()
    * @generated
    */
-  EReference getFigureFeatures_Centerfeatures();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getAlignfeatures <em>Alignfeatures</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Alignfeatures</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getAlignfeatures()
-   * @see #getFigureFeatures()
-   * @generated
-   */
-  EReference getFigureFeatures_Alignfeatures();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getGradientfeatures <em>Gradientfeatures</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Gradientfeatures</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getGradientfeatures()
-   * @see #getFigureFeatures()
-   * @generated
-   */
-  EReference getFigureFeatures_Gradientfeatures();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getPointfeatures <em>Pointfeatures</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Pointfeatures</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getPointfeatures()
-   * @see #getFigureFeatures()
-   * @generated
-   */
-  EReference getFigureFeatures_Pointfeatures();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getSizefeatures <em>Sizefeatures</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Sizefeatures</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getSizefeatures()
-   * @see #getFigureFeatures()
-   * @generated
-   */
-  EReference getFigureFeatures_Sizefeatures();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getPositionfeatures <em>Positionfeatures</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Positionfeatures</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getPositionfeatures()
-   * @see #getFigureFeatures()
-   * @generated
-   */
-  EReference getFigureFeatures_Positionfeatures();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getColorfeatures <em>Colorfeatures</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Colorfeatures</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getColorfeatures()
-   * @see #getFigureFeatures()
-   * @generated
-   */
-  EReference getFigureFeatures_Colorfeatures();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getIntegerfeatures <em>Integerfeatures</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Integerfeatures</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getIntegerfeatures()
-   * @see #getFigureFeatures()
-   * @generated
-   */
-  EReference getFigureFeatures_Integerfeatures();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getBooleanfeatures <em>Booleanfeatures</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Booleanfeatures</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getBooleanfeatures()
-   * @see #getFigureFeatures()
-   * @generated
-   */
-  EReference getFigureFeatures_Booleanfeatures();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getStringfeatures <em>Stringfeatures</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Stringfeatures</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures#getStringfeatures()
-   * @see #getFigureFeatures()
-   * @generated
-   */
-  EReference getFigureFeatures_Stringfeatures();
-
-  /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StyleFeature <em>Style Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Style Feature</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StyleFeature
-   * @generated
-   */
-  EClass getStyleFeature();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StyleFeature#getKey <em>Key</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StyleFeature#getKey()
-   * @see #getStyleFeature()
-   * @generated
-   */
-  EAttribute getStyleFeature_Key();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StyleFeature#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StyleFeature#getValue()
-   * @see #getStyleFeature()
-   * @generated
-   */
-  EAttribute getStyleFeature_Value();
-
-  /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.LayoutFeature <em>Layout Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Layout Feature</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.LayoutFeature
-   * @generated
-   */
-  EClass getLayoutFeature();
-
-  /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.CenterFeature <em>Center Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Center Feature</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.CenterFeature
-   * @generated
-   */
-  EClass getCenterFeature();
-
-  /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AlignFeature <em>Align Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Align Feature</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AlignFeature
-   * @generated
-   */
-  EClass getAlignFeature();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AlignFeature#getKey <em>Key</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AlignFeature#getKey()
-   * @see #getAlignFeature()
-   * @generated
-   */
-  EAttribute getAlignFeature_Key();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AlignFeature#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AlignFeature#getValue()
-   * @see #getAlignFeature()
-   * @generated
-   */
-  EAttribute getAlignFeature_Value();
-
-  /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.GradientFeature <em>Gradient Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Gradient Feature</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.GradientFeature
-   * @generated
-   */
-  EClass getGradientFeature();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.GradientFeature#getKey <em>Key</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.GradientFeature#getKey()
-   * @see #getGradientFeature()
-   * @generated
-   */
-  EAttribute getGradientFeature_Key();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.GradientFeature#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.GradientFeature#getValue()
-   * @see #getGradientFeature()
-   * @generated
-   */
-  EAttribute getGradientFeature_Value();
-
-  /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.PointFeature <em>Point Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Point Feature</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.PointFeature
-   * @generated
-   */
-  EClass getPointFeature();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.PointFeature#getX <em>X</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>X</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.PointFeature#getX()
-   * @see #getPointFeature()
-   * @generated
-   */
-  EAttribute getPointFeature_X();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.PointFeature#getY <em>Y</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Y</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.PointFeature#getY()
-   * @see #getPointFeature()
-   * @generated
-   */
-  EAttribute getPointFeature_Y();
-
-  /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.SizeFeature <em>Size Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Size Feature</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.SizeFeature
-   * @generated
-   */
-  EClass getSizeFeature();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.SizeFeature#getWidth <em>Width</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Width</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.SizeFeature#getWidth()
-   * @see #getSizeFeature()
-   * @generated
-   */
-  EAttribute getSizeFeature_Width();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.SizeFeature#getHeight <em>Height</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Height</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.SizeFeature#getHeight()
-   * @see #getSizeFeature()
-   * @generated
-   */
-  EAttribute getSizeFeature_Height();
-
-  /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.PositionFeature <em>Position Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Position Feature</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.PositionFeature
-   * @generated
-   */
-  EClass getPositionFeature();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.PositionFeature#getX <em>X</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>X</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.PositionFeature#getX()
-   * @see #getPositionFeature()
-   * @generated
-   */
-  EAttribute getPositionFeature_X();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.PositionFeature#getY <em>Y</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Y</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.PositionFeature#getY()
-   * @see #getPositionFeature()
-   * @generated
-   */
-  EAttribute getPositionFeature_Y();
-
-  /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature <em>Color Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Color Feature</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature
-   * @generated
-   */
-  EClass getColorFeature();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature#getExpression <em>Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expression</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature#getExpression()
-   * @see #getColorFeature()
-   * @generated
-   */
-  EReference getColorFeature_Expression();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature#getKey <em>Key</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature#getKey()
-   * @see #getColorFeature()
-   * @generated
-   */
-  EAttribute getColorFeature_Key();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature#getValue()
-   * @see #getColorFeature()
-   * @generated
-   */
-  EAttribute getColorFeature_Value();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature#getRgb <em>Rgb</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rgb</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature#getRgb()
-   * @see #getColorFeature()
-   * @generated
-   */
-  EReference getColorFeature_Rgb();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature#getAtribute <em>Atribute</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Atribute</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature#getAtribute()
-   * @see #getColorFeature()
-   * @generated
-   */
-  EAttribute getColorFeature_Atribute();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature#getOperator <em>Operator</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Operator</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature#getOperator()
-   * @see #getColorFeature()
-   * @generated
-   */
-  EAttribute getColorFeature_Operator();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature#getOption <em>Option</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Option</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature#getOption()
-   * @see #getColorFeature()
-   * @generated
-   */
-  EAttribute getColorFeature_Option();
+  EReference getElement_Features();
 
   /**
    * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.RGB <em>RGB</em>}'.
@@ -3158,252 +3091,428 @@ public interface XdiagramPackage extends EPackage
   EAttribute getRGB_B();
 
   /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature <em>Integer Feature</em>}'.
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ImageFile <em>Image File</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Integer Feature</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature
+   * @return the meta object for class '<em>Image File</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ImageFile
    * @generated
    */
-  EClass getIntegerFeature();
+  EClass getImageFile();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature#getExpression <em>Expression</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ImageFile#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expression</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature#getExpression()
-   * @see #getIntegerFeature()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ImageFile#getName()
+   * @see #getImageFile()
    * @generated
    */
-  EReference getIntegerFeature_Expression();
+  EAttribute getImageFile_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature#getKey <em>Key</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ImageFile#getSrc <em>Src</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature#getKey()
-   * @see #getIntegerFeature()
+   * @return the meta object for the attribute '<em>Src</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ImageFile#getSrc()
+   * @see #getImageFile()
    * @generated
    */
-  EAttribute getIntegerFeature_Key();
+  EAttribute getImageFile_Src();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature#getValue <em>Value</em>}'.
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Color <em>Color</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature#getValue()
-   * @see #getIntegerFeature()
+   * @return the meta object for class '<em>Color</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Color
    * @generated
    */
-  EAttribute getIntegerFeature_Value();
+  EClass getColor();
 
   /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature <em>String Feature</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Color#getDefault <em>Default</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>String Feature</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature
+   * @return the meta object for the attribute '<em>Default</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Color#getDefault()
+   * @see #getColor()
    * @generated
    */
-  EClass getStringFeature();
+  EAttribute getColor_Default();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature#getExpression <em>Expression</em>}'.
+   * Returns the meta object for the reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Color#getCustom <em>Custom</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expression</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature#getExpression()
-   * @see #getStringFeature()
+   * @return the meta object for the reference '<em>Custom</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Color#getCustom()
+   * @see #getColor()
    * @generated
    */
-  EReference getStringFeature_Expression();
+  EReference getColor_Custom();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature#getKey <em>Key</em>}'.
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.CustomColor <em>Custom Color</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature#getKey()
-   * @see #getStringFeature()
+   * @return the meta object for class '<em>Custom Color</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.CustomColor
    * @generated
    */
-  EAttribute getStringFeature_Key();
+  EClass getCustomColor();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature#getValue <em>Value</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.CustomColor#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature#getValue()
-   * @see #getStringFeature()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.CustomColor#getName()
+   * @see #getCustomColor()
    * @generated
    */
-  EAttribute getStringFeature_Value();
+  EAttribute getCustomColor_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature#getValueL <em>Value L</em>}'.
+   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.CustomColor#getRgb <em>Rgb</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value L</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature#getValueL()
-   * @see #getStringFeature()
+   * @return the meta object for the containment reference '<em>Rgb</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.CustomColor#getRgb()
+   * @see #getCustomColor()
    * @generated
    */
-  EAttribute getStringFeature_ValueL();
+  EReference getCustomColor_Rgb();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature#getAttribute <em>Attribute</em>}'.
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Rectangle <em>Rectangle</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Attribute</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature#getAttribute()
-   * @see #getStringFeature()
+   * @return the meta object for class '<em>Rectangle</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Rectangle
    * @generated
    */
-  EAttribute getStringFeature_Attribute();
+  EClass getRectangle();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature#getValueR <em>Value R</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Rectangle#isRectangle <em>Rectangle</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value R</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature#getValueR()
-   * @see #getStringFeature()
+   * @return the meta object for the attribute '<em>Rectangle</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Rectangle#isRectangle()
+   * @see #getRectangle()
    * @generated
    */
-  EAttribute getStringFeature_ValueR();
+  EAttribute getRectangle_Rectangle();
 
   /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.BooleanFeature <em>Boolean Feature</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Rectangle#isSquare <em>Square</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Boolean Feature</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.BooleanFeature
+   * @return the meta object for the attribute '<em>Square</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Rectangle#isSquare()
+   * @see #getRectangle()
    * @generated
    */
-  EClass getBooleanFeature();
+  EAttribute getRectangle_Square();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.BooleanFeature#getExpression <em>Expression</em>}'.
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Feature <em>Feature</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expression</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.BooleanFeature#getExpression()
-   * @see #getBooleanFeature()
+   * @return the meta object for class '<em>Feature</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Feature
    * @generated
    */
-  EReference getBooleanFeature_Expression();
+  EClass getFeature();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.BooleanFeature#getKey <em>Key</em>}'.
+   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Feature#getConditional <em>Conditional</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.BooleanFeature#getKey()
-   * @see #getBooleanFeature()
+   * @return the meta object for the containment reference '<em>Conditional</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Feature#getConditional()
+   * @see #getFeature()
    * @generated
    */
-  EAttribute getBooleanFeature_Key();
+  EReference getFeature_Conditional();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.BooleanFeature#getValue <em>Value</em>}'.
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Rhombus <em>Rhombus</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.BooleanFeature#getValue()
-   * @see #getBooleanFeature()
+   * @return the meta object for class '<em>Rhombus</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Rhombus
    * @generated
    */
-  EAttribute getBooleanFeature_Value();
+  EClass getRhombus();
 
   /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.LineFeature <em>Line Feature</em>}'.
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Ellipse <em>Ellipse</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Line Feature</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.LineFeature
+   * @return the meta object for class '<em>Ellipse</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Ellipse
    * @generated
    */
-  EClass getLineFeature();
+  EClass getEllipse();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.LineFeature#getExpression <em>Expression</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Ellipse#isEllipse <em>Ellipse</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expression</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.LineFeature#getExpression()
-   * @see #getLineFeature()
+   * @return the meta object for the attribute '<em>Ellipse</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Ellipse#isEllipse()
+   * @see #getEllipse()
    * @generated
    */
-  EReference getLineFeature_Expression();
+  EAttribute getEllipse_Ellipse();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.LineFeature#getKey <em>Key</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Ellipse#isCircle <em>Circle</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.LineFeature#getKey()
-   * @see #getLineFeature()
+   * @return the meta object for the attribute '<em>Circle</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Ellipse#isCircle()
+   * @see #getEllipse()
    * @generated
    */
-  EAttribute getLineFeature_Key();
+  EAttribute getEllipse_Circle();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.LineFeature#getValue <em>Value</em>}'.
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Polyline <em>Polyline</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.LineFeature#getValue()
-   * @see #getLineFeature()
+   * @return the meta object for class '<em>Polyline</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Polyline
    * @generated
    */
-  EAttribute getLineFeature_Value();
+  EClass getPolyline();
 
   /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AtributeExpression <em>Atribute Expression</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Polyline#isPolygon <em>Polygon</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Atribute Expression</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AtributeExpression
+   * @return the meta object for the attribute '<em>Polygon</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Polyline#isPolygon()
+   * @see #getPolyline()
    * @generated
    */
-  EClass getAtributeExpression();
+  EAttribute getPolyline_Polygon();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AtributeExpression#getKey <em>Key</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Polyline#isPolyline <em>Polyline</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AtributeExpression#getKey()
-   * @see #getAtributeExpression()
+   * @return the meta object for the attribute '<em>Polyline</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Polyline#isPolyline()
+   * @see #getPolyline()
    * @generated
    */
-  EAttribute getAtributeExpression_Key();
+  EAttribute getPolyline_Polyline();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AtributeExpression#getOperator <em>Operator</em>}'.
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FeatureConditional <em>Feature Conditional</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Feature Conditional</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FeatureConditional
+   * @generated
+   */
+  EClass getFeatureConditional();
+
+  /**
+   * Returns the meta object for the reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FeatureConditional#getModelAttribute <em>Model Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Model Attribute</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FeatureConditional#getModelAttribute()
+   * @see #getFeatureConditional()
+   * @generated
+   */
+  EReference getFeatureConditional_ModelAttribute();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FeatureConditional#getOperator <em>Operator</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Operator</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AtributeExpression#getOperator()
-   * @see #getAtributeExpression()
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FeatureConditional#getOperator()
+   * @see #getFeatureConditional()
    * @generated
    */
-  EAttribute getAtributeExpression_Operator();
+  EAttribute getFeatureConditional_Operator();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AtributeExpression#getValue <em>Value</em>}'.
+   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FeatureConditional#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Value</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AtributeExpression#getValue()
-   * @see #getAtributeExpression()
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FeatureConditional#getValue()
+   * @see #getFeatureConditional()
    * @generated
    */
-  EReference getAtributeExpression_Value();
+  EReference getFeatureConditional_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Contains <em>Contains</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Contains</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Contains
+   * @generated
+   */
+  EClass getContains();
+
+  /**
+   * Returns the meta object for the reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Contains#getModelReference <em>Model Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Model Reference</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Contains#getModelReference()
+   * @see #getContains()
+   * @generated
+   */
+  EReference getContains_ModelReference();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Value <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Value</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Value
+   * @generated
+   */
+  EClass getValue();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.IntValue <em>Int Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Int Value</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.IntValue
+   * @generated
+   */
+  EClass getIntValue();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.IntValue#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.IntValue#getValue()
+   * @see #getIntValue()
+   * @generated
+   */
+  EAttribute getIntValue_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.DoubleValue <em>Double Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Double Value</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.DoubleValue
+   * @generated
+   */
+  EClass getDoubleValue();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.DoubleValue#getValueInt <em>Value Int</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value Int</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.DoubleValue#getValueInt()
+   * @see #getDoubleValue()
+   * @generated
+   */
+  EAttribute getDoubleValue_ValueInt();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.DoubleValue#getValueDecimal <em>Value Decimal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value Decimal</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.DoubleValue#getValueDecimal()
+   * @see #getDoubleValue()
+   * @generated
+   */
+  EAttribute getDoubleValue_ValueDecimal();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StringValue <em>String Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>String Value</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StringValue
+   * @generated
+   */
+  EClass getStringValue();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StringValue#isNull <em>Null</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Null</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StringValue#isNull()
+   * @see #getStringValue()
+   * @generated
+   */
+  EAttribute getStringValue_Null();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StringValue#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StringValue#getValue()
+   * @see #getStringValue()
+   * @generated
+   */
+  EAttribute getStringValue_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.BooleanValue <em>Boolean Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Boolean Value</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.BooleanValue
+   * @generated
+   */
+  EClass getBooleanValue();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.BooleanValue#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.BooleanValue#getValue()
+   * @see #getBooleanValue()
+   * @generated
+   */
+  EAttribute getBooleanValue_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.EnumValue <em>Enum Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Enum Value</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.EnumValue
+   * @generated
+   */
+  EClass getEnumValue();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.EnumValue#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.EnumValue#getName()
+   * @see #getEnumValue()
+   * @generated
+   */
+  EAttribute getEnumValue_Name();
 
   /**
    * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AtributeValue <em>Atribute Value</em>}'.
@@ -3504,6 +3613,364 @@ public interface XdiagramPackage extends EPackage
   EAttribute getAtributeValue_ValueYEAR();
 
   /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Label <em>Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Label</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Label
+   * @generated
+   */
+  EClass getLabel();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Label#isEditable <em>Editable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Editable</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Label#isEditable()
+   * @see #getLabel()
+   * @generated
+   */
+  EAttribute getLabel_Editable();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Image <em>Image</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Image</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Image
+   * @generated
+   */
+  EClass getImage();
+
+  /**
+   * Returns the meta object for the reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Image#getImage <em>Image</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Image</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Image#getImage()
+   * @see #getImage()
+   * @generated
+   */
+  EReference getImage_Image();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature <em>Color Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Color Feature</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature
+   * @generated
+   */
+  EClass getColorFeature();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature#getColor <em>Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Color</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature#getColor()
+   * @see #getColorFeature()
+   * @generated
+   */
+  EReference getColorFeature_Color();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Foreground <em>Foreground</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Foreground</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Foreground
+   * @generated
+   */
+  EClass getForeground();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Background <em>Background</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Background</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Background
+   * @generated
+   */
+  EClass getBackground();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Transparency <em>Transparency</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Transparency</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Transparency
+   * @generated
+   */
+  EClass getTransparency();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Transparency#getPercent <em>Percent</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Percent</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Transparency#getPercent()
+   * @see #getTransparency()
+   * @generated
+   */
+  EAttribute getTransparency_Percent();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Size <em>Size</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Size</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Size
+   * @generated
+   */
+  EClass getSize();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Size#getWidth <em>Width</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Width</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Size#getWidth()
+   * @see #getSize()
+   * @generated
+   */
+  EAttribute getSize_Width();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Size#getHeight <em>Height</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Height</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Size#getHeight()
+   * @see #getSize()
+   * @generated
+   */
+  EAttribute getSize_Height();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Point <em>Point</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Point</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Point
+   * @generated
+   */
+  EClass getPoint();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Point#getX <em>X</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>X</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Point#getX()
+   * @see #getPoint()
+   * @generated
+   */
+  EAttribute getPoint_X();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Point#getY <em>Y</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Y</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Point#getY()
+   * @see #getPoint()
+   * @generated
+   */
+  EAttribute getPoint_Y();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Position <em>Position</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Position</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Position
+   * @generated
+   */
+  EClass getPosition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Position#getX <em>X</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>X</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Position#getX()
+   * @see #getPosition()
+   * @generated
+   */
+  EAttribute getPosition_X();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Position#getY <em>Y</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Y</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Position#getY()
+   * @see #getPosition()
+   * @generated
+   */
+  EAttribute getPosition_Y();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Corner <em>Corner</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Corner</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Corner
+   * @generated
+   */
+  EClass getCorner();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Corner#getAngle <em>Angle</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Angle</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Corner#getAngle()
+   * @see #getCorner()
+   * @generated
+   */
+  EAttribute getCorner_Angle();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.TextValue <em>Text Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Text Value</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.TextValue
+   * @generated
+   */
+  EClass getTextValue();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.TextValue#getText <em>Text</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Text</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.TextValue#getText()
+   * @see #getTextValue()
+   * @generated
+   */
+  EAttribute getTextValue_Text();
+
+  /**
+   * Returns the meta object for the reference '{@link org.eclipselabs.xdiagram.xtext.xdiagram.TextValue#getModelAttribute <em>Model Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Model Attribute</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.TextValue#getModelAttribute()
+   * @see #getTextValue()
+   * @generated
+   */
+  EReference getTextValue_ModelAttribute();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FontFace <em>Font Face</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Font Face</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FontFace
+   * @generated
+   */
+  EClass getFontFace();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FontFace#getFace <em>Face</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Face</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FontFace#getFace()
+   * @see #getFontFace()
+   * @generated
+   */
+  EAttribute getFontFace_Face();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FontSize <em>Font Size</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Font Size</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FontSize
+   * @generated
+   */
+  EClass getFontSize();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FontSize#getSize <em>Size</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Size</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FontSize#getSize()
+   * @see #getFontSize()
+   * @generated
+   */
+  EAttribute getFontSize_Size();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FontStyle <em>Font Style</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Font Style</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FontStyle
+   * @generated
+   */
+  EClass getFontStyle();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FontStyle#getStyles <em>Styles</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Styles</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FontStyle#getStyles()
+   * @see #getFontStyle()
+   * @generated
+   */
+  EAttribute getFontStyle_Styles();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.LineStyle <em>Line Style</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Line Style</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.LineStyle
+   * @generated
+   */
+  EClass getLineStyle();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.LineStyle#getStyle <em>Style</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Style</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.LineStyle#getStyle()
+   * @see #getLineStyle()
+   * @generated
+   */
+  EAttribute getLineStyle_Style();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.LineWidth <em>Line Width</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Line Width</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.LineWidth
+   * @generated
+   */
+  EClass getLineWidth();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.xtext.xdiagram.LineWidth#getWidth <em>Width</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Width</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.LineWidth#getWidth()
+   * @see #getLineWidth()
+   * @generated
+   */
+  EAttribute getLineWidth_Width();
+
+  /**
    * Returns the meta object for enum '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ContainerLayout <em>Container Layout</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3514,14 +3981,74 @@ public interface XdiagramPackage extends EPackage
   EEnum getContainerLayout();
 
   /**
-   * Returns the meta object for enum '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureShape <em>Figure Shape</em>}'.
+   * Returns the meta object for enum '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraintType <em>Anchor Constraint Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Figure Shape</em>'.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FigureShape
+   * @return the meta object for enum '<em>Anchor Constraint Type</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraintType
    * @generated
    */
-  EEnum getFigureShape();
+  EEnum getAnchorConstraintType();
+
+  /**
+   * Returns the meta object for enum '{@link org.eclipselabs.xdiagram.xtext.xdiagram.DefaultColor <em>Default Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Default Color</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.DefaultColor
+   * @generated
+   */
+  EEnum getDefaultColor();
+
+  /**
+   * Returns the meta object for enum '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Operator <em>Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Operator</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Operator
+   * @generated
+   */
+  EEnum getOperator();
+
+  /**
+   * Returns the meta object for enum '{@link org.eclipselabs.xdiagram.xtext.xdiagram.BooleanLiteral <em>Boolean Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Boolean Literal</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.BooleanLiteral
+   * @generated
+   */
+  EEnum getBooleanLiteral();
+
+  /**
+   * Returns the meta object for enum '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FontFaceType <em>Font Face Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Font Face Type</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FontFaceType
+   * @generated
+   */
+  EEnum getFontFaceType();
+
+  /**
+   * Returns the meta object for enum '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FontStyleType <em>Font Style Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Font Style Type</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FontStyleType
+   * @generated
+   */
+  EEnum getFontStyleType();
+
+  /**
+   * Returns the meta object for enum '{@link org.eclipselabs.xdiagram.xtext.xdiagram.LineType <em>Line Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Line Type</em>'.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.LineType
+   * @generated
+   */
+  EEnum getLineType();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -3581,14 +4108,6 @@ public interface XdiagramPackage extends EPackage
     EReference XDIAGRAM__MODEL_CLASS = eINSTANCE.getXDiagram_ModelClass();
 
     /**
-     * The meta object literal for the '<em><b>Styles</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference XDIAGRAM__STYLES = eINSTANCE.getXDiagram_Styles();
-
-    /**
      * The meta object literal for the '<em><b>Nodes</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3603,6 +4122,30 @@ public interface XdiagramPackage extends EPackage
      * @generated
      */
     EReference XDIAGRAM__LINKS = eINSTANCE.getXDiagram_Links();
+
+    /**
+     * The meta object literal for the '<em><b>Styles</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference XDIAGRAM__STYLES = eINSTANCE.getXDiagram_Styles();
+
+    /**
+     * The meta object literal for the '<em><b>Colors</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference XDIAGRAM__COLORS = eINSTANCE.getXDiagram_Colors();
+
+    /**
+     * The meta object literal for the '<em><b>Images</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference XDIAGRAM__IMAGES = eINSTANCE.getXDiagram_Images();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ImportStatementImpl <em>Import Statement</em>}' class.
@@ -3641,7 +4184,7 @@ public interface XdiagramPackage extends EPackage
     EAttribute STYLE__NAME = eINSTANCE.getStyle_Name();
 
     /**
-     * The meta object literal for the '<em><b>Features</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -3717,20 +4260,12 @@ public interface XdiagramPackage extends EPackage
     EAttribute NODE__RESIZABLE = eINSTANCE.getNode_Resizable();
 
     /**
-     * The meta object literal for the '<em><b>Figures</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Main Figure</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference NODE__FIGURES = eINSTANCE.getNode_Figures();
-
-    /**
-     * The meta object literal for the '<em><b>Containers</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference NODE__CONTAINERS = eINSTANCE.getNode_Containers();
+    EReference NODE__MAIN_FIGURE = eINSTANCE.getNode_MainFigure();
 
     /**
      * The meta object literal for the '<em><b>Anchors</b></em>' containment reference list feature.
@@ -3765,48 +4300,6 @@ public interface XdiagramPackage extends EPackage
      * @generated
      */
     EReference ATTRIBUTE__VALUE = eINSTANCE.getAttribute_Value();
-
-    /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeFigureImpl <em>Node Figure</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeFigureImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getNodeFigure()
-     * @generated
-     */
-    EClass NODE_FIGURE = eINSTANCE.getNodeFigure();
-
-    /**
-     * The meta object literal for the '<em><b>Option</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute NODE_FIGURE__OPTION = eINSTANCE.getNodeFigure_Option();
-
-    /**
-     * The meta object literal for the '<em><b>Figure</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute NODE_FIGURE__FIGURE = eINSTANCE.getNodeFigure_Figure();
-
-    /**
-     * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute NODE_FIGURE__STYLE = eINSTANCE.getNodeFigure_Style();
-
-    /**
-     * The meta object literal for the '<em><b>Features</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference NODE_FIGURE__FEATURES = eINSTANCE.getNodeFigure_Features();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeContainerImpl <em>Node Container</em>}' class.
@@ -3909,30 +4402,6 @@ public interface XdiagramPackage extends EPackage
     EAttribute LINK__MANHATTAN = eINSTANCE.getLink_Manhattan();
 
     /**
-     * The meta object literal for the '<em><b>Linefeatures</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference LINK__LINEFEATURES = eINSTANCE.getLink_Linefeatures();
-
-    /**
-     * The meta object literal for the '<em><b>Colorfeatures</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference LINK__COLORFEATURES = eINSTANCE.getLink_Colorfeatures();
-
-    /**
-     * The meta object literal for the '<em><b>Integerfeatures</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference LINK__INTEGERFEATURES = eINSTANCE.getLink_Integerfeatures();
-
-    /**
      * The meta object literal for the '<em><b>Decorators</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3951,12 +4420,12 @@ public interface XdiagramPackage extends EPackage
     EClass DECORATOR = eINSTANCE.getDecorator();
 
     /**
-     * The meta object literal for the '<em><b>Pos</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DECORATOR__POS = eINSTANCE.getDecorator_Pos();
+    EAttribute DECORATOR__POSITION = eINSTANCE.getDecorator_Position();
 
     /**
      * The meta object literal for the '<em><b>Source</b></em>' attribute feature.
@@ -3983,90 +4452,48 @@ public interface XdiagramPackage extends EPackage
     EAttribute DECORATOR__MIDDLE = eINSTANCE.getDecorator_Middle();
 
     /**
-     * The meta object literal for the '<em><b>Placing Static</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Static Element</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DECORATOR__PLACING_STATIC = eINSTANCE.getDecorator_PlacingStatic();
+    EReference DECORATOR__STATIC_ELEMENT = eINSTANCE.getDecorator_StaticElement();
 
     /**
-     * The meta object literal for the '<em><b>Placing Dynamic</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Label</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DECORATOR__PLACING_DYNAMIC = eINSTANCE.getDecorator_PlacingDynamic();
+    EReference DECORATOR__LABEL = eINSTANCE.getDecorator_Label();
 
     /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.DynamicFigureImpl <em>Dynamic Figure</em>}' class.
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ConnectableElementImpl <em>Connectable Element</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.DynamicFigureImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getDynamicFigure()
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ConnectableElementImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getConnectableElement()
      * @generated
      */
-    EClass DYNAMIC_FIGURE = eINSTANCE.getDynamicFigure();
+    EClass CONNECTABLE_ELEMENT = eINSTANCE.getConnectableElement();
 
     /**
-     * The meta object literal for the '<em><b>Figure</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DYNAMIC_FIGURE__FIGURE = eINSTANCE.getDynamicFigure_Figure();
+    EReference CONNECTABLE_ELEMENT__CHILDREN = eINSTANCE.getConnectableElement_Children();
 
     /**
-     * The meta object literal for the '<em><b>Features</b></em>' containment reference feature.
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.AnchorImpl <em>Anchor</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.AnchorImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getAnchor()
      * @generated
      */
-    EReference DYNAMIC_FIGURE__FEATURES = eINSTANCE.getDynamicFigure_Features();
-
-    /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.StaticFigureImpl <em>Static Figure</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.StaticFigureImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getStaticFigure()
-     * @generated
-     */
-    EClass STATIC_FIGURE = eINSTANCE.getStaticFigure();
-
-    /**
-     * The meta object literal for the '<em><b>Figure</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STATIC_FIGURE__FIGURE = eINSTANCE.getStaticFigure_Figure();
-
-    /**
-     * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STATIC_FIGURE__STYLE = eINSTANCE.getStaticFigure_Style();
-
-    /**
-     * The meta object literal for the '<em><b>Features</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference STATIC_FIGURE__FEATURES = eINSTANCE.getStaticFigure_Features();
-
-    /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeAnchorImpl <em>Node Anchor</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeAnchorImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getNodeAnchor()
-     * @generated
-     */
-    EClass NODE_ANCHOR = eINSTANCE.getNodeAnchor();
+    EClass ANCHOR = eINSTANCE.getAnchor();
 
     /**
      * The meta object literal for the '<em><b>Object</b></em>' attribute feature.
@@ -4074,7 +4501,7 @@ public interface XdiagramPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute NODE_ANCHOR__OBJECT = eINSTANCE.getNodeAnchor_Object();
+    EAttribute ANCHOR__OBJECT = eINSTANCE.getAnchor_Object();
 
     /**
      * The meta object literal for the '<em><b>Pass X</b></em>' attribute feature.
@@ -4082,7 +4509,7 @@ public interface XdiagramPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute NODE_ANCHOR__PASS_X = eINSTANCE.getNodeAnchor_PassX();
+    EAttribute ANCHOR__PASS_X = eINSTANCE.getAnchor_PassX();
 
     /**
      * The meta object literal for the '<em><b>X</b></em>' attribute feature.
@@ -4090,7 +4517,7 @@ public interface XdiagramPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute NODE_ANCHOR__X = eINSTANCE.getNodeAnchor_X();
+    EAttribute ANCHOR__X = eINSTANCE.getAnchor_X();
 
     /**
      * The meta object literal for the '<em><b>Format X</b></em>' attribute feature.
@@ -4098,7 +4525,7 @@ public interface XdiagramPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute NODE_ANCHOR__FORMAT_X = eINSTANCE.getNodeAnchor_FormatX();
+    EAttribute ANCHOR__FORMAT_X = eINSTANCE.getAnchor_FormatX();
 
     /**
      * The meta object literal for the '<em><b>Pass Y</b></em>' attribute feature.
@@ -4106,7 +4533,7 @@ public interface XdiagramPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute NODE_ANCHOR__PASS_Y = eINSTANCE.getNodeAnchor_PassY();
+    EAttribute ANCHOR__PASS_Y = eINSTANCE.getAnchor_PassY();
 
     /**
      * The meta object literal for the '<em><b>Y</b></em>' attribute feature.
@@ -4114,7 +4541,7 @@ public interface XdiagramPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute NODE_ANCHOR__Y = eINSTANCE.getNodeAnchor_Y();
+    EAttribute ANCHOR__Y = eINSTANCE.getAnchor_Y();
 
     /**
      * The meta object literal for the '<em><b>Format Y</b></em>' attribute feature.
@@ -4122,7 +4549,7 @@ public interface XdiagramPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute NODE_ANCHOR__FORMAT_Y = eINSTANCE.getNodeAnchor_FormatY();
+    EAttribute ANCHOR__FORMAT_Y = eINSTANCE.getAnchor_FormatY();
 
     /**
      * The meta object literal for the '<em><b>Figures</b></em>' containment reference list feature.
@@ -4130,33 +4557,25 @@ public interface XdiagramPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference NODE_ANCHOR__FIGURES = eINSTANCE.getNodeAnchor_Figures();
+    EReference ANCHOR__FIGURES = eINSTANCE.getAnchor_Figures();
 
     /**
-     * The meta object literal for the '<em><b>Arrows</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Constraints</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference NODE_ANCHOR__ARROWS = eINSTANCE.getNodeAnchor_Arrows();
+    EReference ANCHOR__CONSTRAINTS = eINSTANCE.getAnchor_Constraints();
 
     /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ArrowAnchorImpl <em>Arrow Anchor</em>}' class.
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.AnchorConstraintImpl <em>Anchor Constraint</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ArrowAnchorImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getArrowAnchor()
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.AnchorConstraintImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getAnchorConstraint()
      * @generated
      */
-    EClass ARROW_ANCHOR = eINSTANCE.getArrowAnchor();
-
-    /**
-     * The meta object literal for the '<em><b>Reference</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ARROW_ANCHOR__REFERENCE = eINSTANCE.getArrowAnchor_Reference();
+    EClass ANCHOR_CONSTRAINT = eINSTANCE.getAnchorConstraint();
 
     /**
      * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -4164,355 +4583,41 @@ public interface XdiagramPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ARROW_ANCHOR__TYPE = eINSTANCE.getArrowAnchor_Type();
+    EAttribute ANCHOR_CONSTRAINT__TYPE = eINSTANCE.getAnchorConstraint_Type();
 
     /**
-     * The meta object literal for the '<em><b>N</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Reference</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ARROW_ANCHOR__N = eINSTANCE.getArrowAnchor_N();
+    EAttribute ANCHOR_CONSTRAINT__REFERENCE = eINSTANCE.getAnchorConstraint_Reference();
 
     /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.FigureFeaturesImpl <em>Figure Features</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.FigureFeaturesImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFigureFeatures()
-     * @generated
-     */
-    EClass FIGURE_FEATURES = eINSTANCE.getFigureFeatures();
-
-    /**
-     * The meta object literal for the '<em><b>Linefeatures</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Max</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FIGURE_FEATURES__LINEFEATURES = eINSTANCE.getFigureFeatures_Linefeatures();
+    EAttribute ANCHOR_CONSTRAINT__MAX = eINSTANCE.getAnchorConstraint_Max();
 
     /**
-     * The meta object literal for the '<em><b>Centerfeatures</b></em>' containment reference list feature.
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ElementImpl <em>Element</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ElementImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getElement()
+     * @generated
+     */
+    EClass ELEMENT = eINSTANCE.getElement();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FIGURE_FEATURES__CENTERFEATURES = eINSTANCE.getFigureFeatures_Centerfeatures();
-
-    /**
-     * The meta object literal for the '<em><b>Alignfeatures</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FIGURE_FEATURES__ALIGNFEATURES = eINSTANCE.getFigureFeatures_Alignfeatures();
-
-    /**
-     * The meta object literal for the '<em><b>Gradientfeatures</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FIGURE_FEATURES__GRADIENTFEATURES = eINSTANCE.getFigureFeatures_Gradientfeatures();
-
-    /**
-     * The meta object literal for the '<em><b>Pointfeatures</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FIGURE_FEATURES__POINTFEATURES = eINSTANCE.getFigureFeatures_Pointfeatures();
-
-    /**
-     * The meta object literal for the '<em><b>Sizefeatures</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FIGURE_FEATURES__SIZEFEATURES = eINSTANCE.getFigureFeatures_Sizefeatures();
-
-    /**
-     * The meta object literal for the '<em><b>Positionfeatures</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FIGURE_FEATURES__POSITIONFEATURES = eINSTANCE.getFigureFeatures_Positionfeatures();
-
-    /**
-     * The meta object literal for the '<em><b>Colorfeatures</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FIGURE_FEATURES__COLORFEATURES = eINSTANCE.getFigureFeatures_Colorfeatures();
-
-    /**
-     * The meta object literal for the '<em><b>Integerfeatures</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FIGURE_FEATURES__INTEGERFEATURES = eINSTANCE.getFigureFeatures_Integerfeatures();
-
-    /**
-     * The meta object literal for the '<em><b>Booleanfeatures</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FIGURE_FEATURES__BOOLEANFEATURES = eINSTANCE.getFigureFeatures_Booleanfeatures();
-
-    /**
-     * The meta object literal for the '<em><b>Stringfeatures</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FIGURE_FEATURES__STRINGFEATURES = eINSTANCE.getFigureFeatures_Stringfeatures();
-
-    /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.StyleFeatureImpl <em>Style Feature</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.StyleFeatureImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getStyleFeature()
-     * @generated
-     */
-    EClass STYLE_FEATURE = eINSTANCE.getStyleFeature();
-
-    /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STYLE_FEATURE__KEY = eINSTANCE.getStyleFeature_Key();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STYLE_FEATURE__VALUE = eINSTANCE.getStyleFeature_Value();
-
-    /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LayoutFeatureImpl <em>Layout Feature</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.LayoutFeatureImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getLayoutFeature()
-     * @generated
-     */
-    EClass LAYOUT_FEATURE = eINSTANCE.getLayoutFeature();
-
-    /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.CenterFeatureImpl <em>Center Feature</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.CenterFeatureImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getCenterFeature()
-     * @generated
-     */
-    EClass CENTER_FEATURE = eINSTANCE.getCenterFeature();
-
-    /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.AlignFeatureImpl <em>Align Feature</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.AlignFeatureImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getAlignFeature()
-     * @generated
-     */
-    EClass ALIGN_FEATURE = eINSTANCE.getAlignFeature();
-
-    /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ALIGN_FEATURE__KEY = eINSTANCE.getAlignFeature_Key();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ALIGN_FEATURE__VALUE = eINSTANCE.getAlignFeature_Value();
-
-    /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.GradientFeatureImpl <em>Gradient Feature</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.GradientFeatureImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getGradientFeature()
-     * @generated
-     */
-    EClass GRADIENT_FEATURE = eINSTANCE.getGradientFeature();
-
-    /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute GRADIENT_FEATURE__KEY = eINSTANCE.getGradientFeature_Key();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute GRADIENT_FEATURE__VALUE = eINSTANCE.getGradientFeature_Value();
-
-    /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.PointFeatureImpl <em>Point Feature</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.PointFeatureImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getPointFeature()
-     * @generated
-     */
-    EClass POINT_FEATURE = eINSTANCE.getPointFeature();
-
-    /**
-     * The meta object literal for the '<em><b>X</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute POINT_FEATURE__X = eINSTANCE.getPointFeature_X();
-
-    /**
-     * The meta object literal for the '<em><b>Y</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute POINT_FEATURE__Y = eINSTANCE.getPointFeature_Y();
-
-    /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.SizeFeatureImpl <em>Size Feature</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.SizeFeatureImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getSizeFeature()
-     * @generated
-     */
-    EClass SIZE_FEATURE = eINSTANCE.getSizeFeature();
-
-    /**
-     * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SIZE_FEATURE__WIDTH = eINSTANCE.getSizeFeature_Width();
-
-    /**
-     * The meta object literal for the '<em><b>Height</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SIZE_FEATURE__HEIGHT = eINSTANCE.getSizeFeature_Height();
-
-    /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.PositionFeatureImpl <em>Position Feature</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.PositionFeatureImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getPositionFeature()
-     * @generated
-     */
-    EClass POSITION_FEATURE = eINSTANCE.getPositionFeature();
-
-    /**
-     * The meta object literal for the '<em><b>X</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute POSITION_FEATURE__X = eINSTANCE.getPositionFeature_X();
-
-    /**
-     * The meta object literal for the '<em><b>Y</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute POSITION_FEATURE__Y = eINSTANCE.getPositionFeature_Y();
-
-    /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ColorFeatureImpl <em>Color Feature</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ColorFeatureImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getColorFeature()
-     * @generated
-     */
-    EClass COLOR_FEATURE = eINSTANCE.getColorFeature();
-
-    /**
-     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference COLOR_FEATURE__EXPRESSION = eINSTANCE.getColorFeature_Expression();
-
-    /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute COLOR_FEATURE__KEY = eINSTANCE.getColorFeature_Key();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute COLOR_FEATURE__VALUE = eINSTANCE.getColorFeature_Value();
-
-    /**
-     * The meta object literal for the '<em><b>Rgb</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference COLOR_FEATURE__RGB = eINSTANCE.getColorFeature_Rgb();
-
-    /**
-     * The meta object literal for the '<em><b>Atribute</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute COLOR_FEATURE__ATRIBUTE = eINSTANCE.getColorFeature_Atribute();
-
-    /**
-     * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute COLOR_FEATURE__OPERATOR = eINSTANCE.getColorFeature_Operator();
-
-    /**
-     * The meta object literal for the '<em><b>Option</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute COLOR_FEATURE__OPTION = eINSTANCE.getColorFeature_Option();
+    EReference ELEMENT__FEATURES = eINSTANCE.getElement_Features();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.RGBImpl <em>RGB</em>}' class.
@@ -4549,182 +4654,206 @@ public interface XdiagramPackage extends EPackage
     EAttribute RGB__B = eINSTANCE.getRGB_B();
 
     /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.IntegerFeatureImpl <em>Integer Feature</em>}' class.
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ImageFileImpl <em>Image File</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.IntegerFeatureImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getIntegerFeature()
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ImageFileImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getImageFile()
      * @generated
      */
-    EClass INTEGER_FEATURE = eINSTANCE.getIntegerFeature();
+    EClass IMAGE_FILE = eINSTANCE.getImageFile();
 
     /**
-     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference INTEGER_FEATURE__EXPRESSION = eINSTANCE.getIntegerFeature_Expression();
+    EAttribute IMAGE_FILE__NAME = eINSTANCE.getImageFile_Name();
 
     /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Src</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute INTEGER_FEATURE__KEY = eINSTANCE.getIntegerFeature_Key();
+    EAttribute IMAGE_FILE__SRC = eINSTANCE.getImageFile_Src();
 
     /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ColorImpl <em>Color</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ColorImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getColor()
      * @generated
      */
-    EAttribute INTEGER_FEATURE__VALUE = eINSTANCE.getIntegerFeature_Value();
+    EClass COLOR = eINSTANCE.getColor();
 
     /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.StringFeatureImpl <em>String Feature</em>}' class.
+     * The meta object literal for the '<em><b>Default</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.StringFeatureImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getStringFeature()
      * @generated
      */
-    EClass STRING_FEATURE = eINSTANCE.getStringFeature();
+    EAttribute COLOR__DEFAULT = eINSTANCE.getColor_Default();
 
     /**
-     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Custom</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference STRING_FEATURE__EXPRESSION = eINSTANCE.getStringFeature_Expression();
+    EReference COLOR__CUSTOM = eINSTANCE.getColor_Custom();
 
     /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.CustomColorImpl <em>Custom Color</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.CustomColorImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getCustomColor()
      * @generated
      */
-    EAttribute STRING_FEATURE__KEY = eINSTANCE.getStringFeature_Key();
+    EClass CUSTOM_COLOR = eINSTANCE.getCustomColor();
 
     /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute STRING_FEATURE__VALUE = eINSTANCE.getStringFeature_Value();
+    EAttribute CUSTOM_COLOR__NAME = eINSTANCE.getCustomColor_Name();
 
     /**
-     * The meta object literal for the '<em><b>Value L</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Rgb</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute STRING_FEATURE__VALUE_L = eINSTANCE.getStringFeature_ValueL();
+    EReference CUSTOM_COLOR__RGB = eINSTANCE.getCustomColor_Rgb();
 
     /**
-     * The meta object literal for the '<em><b>Attribute</b></em>' attribute feature.
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.RectangleImpl <em>Rectangle</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.RectangleImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getRectangle()
      * @generated
      */
-    EAttribute STRING_FEATURE__ATTRIBUTE = eINSTANCE.getStringFeature_Attribute();
+    EClass RECTANGLE = eINSTANCE.getRectangle();
 
     /**
-     * The meta object literal for the '<em><b>Value R</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Rectangle</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute STRING_FEATURE__VALUE_R = eINSTANCE.getStringFeature_ValueR();
+    EAttribute RECTANGLE__RECTANGLE = eINSTANCE.getRectangle_Rectangle();
 
     /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.BooleanFeatureImpl <em>Boolean Feature</em>}' class.
+     * The meta object literal for the '<em><b>Square</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.BooleanFeatureImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getBooleanFeature()
      * @generated
      */
-    EClass BOOLEAN_FEATURE = eINSTANCE.getBooleanFeature();
+    EAttribute RECTANGLE__SQUARE = eINSTANCE.getRectangle_Square();
 
     /**
-     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.FeatureImpl <em>Feature</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.FeatureImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFeature()
      * @generated
      */
-    EReference BOOLEAN_FEATURE__EXPRESSION = eINSTANCE.getBooleanFeature_Expression();
+    EClass FEATURE = eINSTANCE.getFeature();
 
     /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Conditional</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute BOOLEAN_FEATURE__KEY = eINSTANCE.getBooleanFeature_Key();
+    EReference FEATURE__CONDITIONAL = eINSTANCE.getFeature_Conditional();
 
     /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.RhombusImpl <em>Rhombus</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.RhombusImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getRhombus()
      * @generated
      */
-    EAttribute BOOLEAN_FEATURE__VALUE = eINSTANCE.getBooleanFeature_Value();
+    EClass RHOMBUS = eINSTANCE.getRhombus();
 
     /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LineFeatureImpl <em>Line Feature</em>}' class.
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.EllipseImpl <em>Ellipse</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.LineFeatureImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getLineFeature()
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.EllipseImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getEllipse()
      * @generated
      */
-    EClass LINE_FEATURE = eINSTANCE.getLineFeature();
+    EClass ELLIPSE = eINSTANCE.getEllipse();
 
     /**
-     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Ellipse</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference LINE_FEATURE__EXPRESSION = eINSTANCE.getLineFeature_Expression();
+    EAttribute ELLIPSE__ELLIPSE = eINSTANCE.getEllipse_Ellipse();
 
     /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Circle</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute LINE_FEATURE__KEY = eINSTANCE.getLineFeature_Key();
+    EAttribute ELLIPSE__CIRCLE = eINSTANCE.getEllipse_Circle();
 
     /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.PolylineImpl <em>Polyline</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.PolylineImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getPolyline()
      * @generated
      */
-    EAttribute LINE_FEATURE__VALUE = eINSTANCE.getLineFeature_Value();
+    EClass POLYLINE = eINSTANCE.getPolyline();
 
     /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.AtributeExpressionImpl <em>Atribute Expression</em>}' class.
+     * The meta object literal for the '<em><b>Polygon</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.AtributeExpressionImpl
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getAtributeExpression()
      * @generated
      */
-    EClass ATRIBUTE_EXPRESSION = eINSTANCE.getAtributeExpression();
+    EAttribute POLYLINE__POLYGON = eINSTANCE.getPolyline_Polygon();
 
     /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Polyline</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ATRIBUTE_EXPRESSION__KEY = eINSTANCE.getAtributeExpression_Key();
+    EAttribute POLYLINE__POLYLINE = eINSTANCE.getPolyline_Polyline();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.FeatureConditionalImpl <em>Feature Conditional</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.FeatureConditionalImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFeatureConditional()
+     * @generated
+     */
+    EClass FEATURE_CONDITIONAL = eINSTANCE.getFeatureConditional();
+
+    /**
+     * The meta object literal for the '<em><b>Model Attribute</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FEATURE_CONDITIONAL__MODEL_ATTRIBUTE = eINSTANCE.getFeatureConditional_ModelAttribute();
 
     /**
      * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
@@ -4732,7 +4861,7 @@ public interface XdiagramPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ATRIBUTE_EXPRESSION__OPERATOR = eINSTANCE.getAtributeExpression_Operator();
+    EAttribute FEATURE_CONDITIONAL__OPERATOR = eINSTANCE.getFeatureConditional_Operator();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
@@ -4740,7 +4869,141 @@ public interface XdiagramPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ATRIBUTE_EXPRESSION__VALUE = eINSTANCE.getAtributeExpression_Value();
+    EReference FEATURE_CONDITIONAL__VALUE = eINSTANCE.getFeatureConditional_Value();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ContainsImpl <em>Contains</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ContainsImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getContains()
+     * @generated
+     */
+    EClass CONTAINS = eINSTANCE.getContains();
+
+    /**
+     * The meta object literal for the '<em><b>Model Reference</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONTAINS__MODEL_REFERENCE = eINSTANCE.getContains_ModelReference();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ValueImpl <em>Value</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ValueImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getValue()
+     * @generated
+     */
+    EClass VALUE = eINSTANCE.getValue();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.IntValueImpl <em>Int Value</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.IntValueImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getIntValue()
+     * @generated
+     */
+    EClass INT_VALUE = eINSTANCE.getIntValue();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INT_VALUE__VALUE = eINSTANCE.getIntValue_Value();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.DoubleValueImpl <em>Double Value</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.DoubleValueImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getDoubleValue()
+     * @generated
+     */
+    EClass DOUBLE_VALUE = eINSTANCE.getDoubleValue();
+
+    /**
+     * The meta object literal for the '<em><b>Value Int</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DOUBLE_VALUE__VALUE_INT = eINSTANCE.getDoubleValue_ValueInt();
+
+    /**
+     * The meta object literal for the '<em><b>Value Decimal</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DOUBLE_VALUE__VALUE_DECIMAL = eINSTANCE.getDoubleValue_ValueDecimal();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.StringValueImpl <em>String Value</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.StringValueImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getStringValue()
+     * @generated
+     */
+    EClass STRING_VALUE = eINSTANCE.getStringValue();
+
+    /**
+     * The meta object literal for the '<em><b>Null</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STRING_VALUE__NULL = eINSTANCE.getStringValue_Null();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STRING_VALUE__VALUE = eINSTANCE.getStringValue_Value();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.BooleanValueImpl <em>Boolean Value</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.BooleanValueImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getBooleanValue()
+     * @generated
+     */
+    EClass BOOLEAN_VALUE = eINSTANCE.getBooleanValue();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BOOLEAN_VALUE__VALUE = eINSTANCE.getBooleanValue_Value();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.EnumValueImpl <em>Enum Value</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.EnumValueImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getEnumValue()
+     * @generated
+     */
+    EClass ENUM_VALUE = eINSTANCE.getEnumValue();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ENUM_VALUE__NAME = eINSTANCE.getEnumValue_Name();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.AtributeValueImpl <em>Atribute Value</em>}' class.
@@ -4817,6 +5080,310 @@ public interface XdiagramPackage extends EPackage
     EAttribute ATRIBUTE_VALUE__VALUE_YEAR = eINSTANCE.getAtributeValue_ValueYEAR();
 
     /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LabelImpl <em>Label</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.LabelImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getLabel()
+     * @generated
+     */
+    EClass LABEL = eINSTANCE.getLabel();
+
+    /**
+     * The meta object literal for the '<em><b>Editable</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LABEL__EDITABLE = eINSTANCE.getLabel_Editable();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ImageImpl <em>Image</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ImageImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getImage()
+     * @generated
+     */
+    EClass IMAGE = eINSTANCE.getImage();
+
+    /**
+     * The meta object literal for the '<em><b>Image</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference IMAGE__IMAGE = eINSTANCE.getImage_Image();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ColorFeatureImpl <em>Color Feature</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ColorFeatureImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getColorFeature()
+     * @generated
+     */
+    EClass COLOR_FEATURE = eINSTANCE.getColorFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Color</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COLOR_FEATURE__COLOR = eINSTANCE.getColorFeature_Color();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.ForegroundImpl <em>Foreground</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.ForegroundImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getForeground()
+     * @generated
+     */
+    EClass FOREGROUND = eINSTANCE.getForeground();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.BackgroundImpl <em>Background</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.BackgroundImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getBackground()
+     * @generated
+     */
+    EClass BACKGROUND = eINSTANCE.getBackground();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.TransparencyImpl <em>Transparency</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.TransparencyImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getTransparency()
+     * @generated
+     */
+    EClass TRANSPARENCY = eINSTANCE.getTransparency();
+
+    /**
+     * The meta object literal for the '<em><b>Percent</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TRANSPARENCY__PERCENT = eINSTANCE.getTransparency_Percent();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.SizeImpl <em>Size</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.SizeImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getSize()
+     * @generated
+     */
+    EClass SIZE = eINSTANCE.getSize();
+
+    /**
+     * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SIZE__WIDTH = eINSTANCE.getSize_Width();
+
+    /**
+     * The meta object literal for the '<em><b>Height</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SIZE__HEIGHT = eINSTANCE.getSize_Height();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.PointImpl <em>Point</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.PointImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getPoint()
+     * @generated
+     */
+    EClass POINT = eINSTANCE.getPoint();
+
+    /**
+     * The meta object literal for the '<em><b>X</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute POINT__X = eINSTANCE.getPoint_X();
+
+    /**
+     * The meta object literal for the '<em><b>Y</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute POINT__Y = eINSTANCE.getPoint_Y();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.PositionImpl <em>Position</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.PositionImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getPosition()
+     * @generated
+     */
+    EClass POSITION = eINSTANCE.getPosition();
+
+    /**
+     * The meta object literal for the '<em><b>X</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute POSITION__X = eINSTANCE.getPosition_X();
+
+    /**
+     * The meta object literal for the '<em><b>Y</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute POSITION__Y = eINSTANCE.getPosition_Y();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.CornerImpl <em>Corner</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.CornerImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getCorner()
+     * @generated
+     */
+    EClass CORNER = eINSTANCE.getCorner();
+
+    /**
+     * The meta object literal for the '<em><b>Angle</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CORNER__ANGLE = eINSTANCE.getCorner_Angle();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.TextValueImpl <em>Text Value</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.TextValueImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getTextValue()
+     * @generated
+     */
+    EClass TEXT_VALUE = eINSTANCE.getTextValue();
+
+    /**
+     * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXT_VALUE__TEXT = eINSTANCE.getTextValue_Text();
+
+    /**
+     * The meta object literal for the '<em><b>Model Attribute</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TEXT_VALUE__MODEL_ATTRIBUTE = eINSTANCE.getTextValue_ModelAttribute();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.FontFaceImpl <em>Font Face</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.FontFaceImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFontFace()
+     * @generated
+     */
+    EClass FONT_FACE = eINSTANCE.getFontFace();
+
+    /**
+     * The meta object literal for the '<em><b>Face</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FONT_FACE__FACE = eINSTANCE.getFontFace_Face();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.FontSizeImpl <em>Font Size</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.FontSizeImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFontSize()
+     * @generated
+     */
+    EClass FONT_SIZE = eINSTANCE.getFontSize();
+
+    /**
+     * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FONT_SIZE__SIZE = eINSTANCE.getFontSize_Size();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.FontStyleImpl <em>Font Style</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.FontStyleImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFontStyle()
+     * @generated
+     */
+    EClass FONT_STYLE = eINSTANCE.getFontStyle();
+
+    /**
+     * The meta object literal for the '<em><b>Styles</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FONT_STYLE__STYLES = eINSTANCE.getFontStyle_Styles();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LineStyleImpl <em>Line Style</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.LineStyleImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getLineStyle()
+     * @generated
+     */
+    EClass LINE_STYLE = eINSTANCE.getLineStyle();
+
+    /**
+     * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LINE_STYLE__STYLE = eINSTANCE.getLineStyle_Style();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LineWidthImpl <em>Line Width</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.LineWidthImpl
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getLineWidth()
+     * @generated
+     */
+    EClass LINE_WIDTH = eINSTANCE.getLineWidth();
+
+    /**
+     * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LINE_WIDTH__WIDTH = eINSTANCE.getLineWidth_Width();
+
+    /**
      * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ContainerLayout <em>Container Layout</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4827,14 +5394,74 @@ public interface XdiagramPackage extends EPackage
     EEnum CONTAINER_LAYOUT = eINSTANCE.getContainerLayout();
 
     /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureShape <em>Figure Shape</em>}' enum.
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraintType <em>Anchor Constraint Type</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.FigureShape
-     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFigureShape()
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraintType
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getAnchorConstraintType()
      * @generated
      */
-    EEnum FIGURE_SHAPE = eINSTANCE.getFigureShape();
+    EEnum ANCHOR_CONSTRAINT_TYPE = eINSTANCE.getAnchorConstraintType();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.DefaultColor <em>Default Color</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.DefaultColor
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getDefaultColor()
+     * @generated
+     */
+    EEnum DEFAULT_COLOR = eINSTANCE.getDefaultColor();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Operator <em>Operator</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.Operator
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getOperator()
+     * @generated
+     */
+    EEnum OPERATOR = eINSTANCE.getOperator();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.BooleanLiteral <em>Boolean Literal</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.BooleanLiteral
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getBooleanLiteral()
+     * @generated
+     */
+    EEnum BOOLEAN_LITERAL = eINSTANCE.getBooleanLiteral();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FontFaceType <em>Font Face Type</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.FontFaceType
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFontFaceType()
+     * @generated
+     */
+    EEnum FONT_FACE_TYPE = eINSTANCE.getFontFaceType();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FontStyleType <em>Font Style Type</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.FontStyleType
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getFontStyleType()
+     * @generated
+     */
+    EEnum FONT_STYLE_TYPE = eINSTANCE.getFontStyleType();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.LineType <em>Line Type</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.LineType
+     * @see org.eclipselabs.xdiagram.xtext.xdiagram.impl.XdiagramPackageImpl#getLineType()
+     * @generated
+     */
+    EEnum LINE_TYPE = eINSTANCE.getLineType();
 
   }
 

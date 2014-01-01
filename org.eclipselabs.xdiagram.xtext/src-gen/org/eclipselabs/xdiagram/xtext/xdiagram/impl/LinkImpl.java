@@ -18,10 +18,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Decorator;
-import org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.LineFeature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Element;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Feature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Link;
 import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
 
@@ -32,14 +31,12 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getFeatures <em>Features</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getModelReference <em>Model Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#isComplex <em>Complex</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getSourceReference <em>Source Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getTargetReference <em>Target Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#isManhattan <em>Manhattan</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getLinefeatures <em>Linefeatures</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getColorfeatures <em>Colorfeatures</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getIntegerfeatures <em>Integerfeatures</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.LinkImpl#getDecorators <em>Decorators</em>}</li>
  * </ul>
  * </p>
@@ -48,6 +45,16 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
  */
 public class LinkImpl extends DiagramElementImpl implements Link
 {
+  /**
+   * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFeatures()
+   * @generated
+   * @ordered
+   */
+  protected EList<Feature> features;
+
   /**
    * The cached value of the '{@link #getModelReference() <em>Model Reference</em>}' reference.
    * <!-- begin-user-doc -->
@@ -119,36 +126,6 @@ public class LinkImpl extends DiagramElementImpl implements Link
   protected boolean manhattan = MANHATTAN_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getLinefeatures() <em>Linefeatures</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLinefeatures()
-   * @generated
-   * @ordered
-   */
-  protected EList<LineFeature> linefeatures;
-
-  /**
-   * The cached value of the '{@link #getColorfeatures() <em>Colorfeatures</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getColorfeatures()
-   * @generated
-   * @ordered
-   */
-  protected EList<ColorFeature> colorfeatures;
-
-  /**
-   * The cached value of the '{@link #getIntegerfeatures() <em>Integerfeatures</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getIntegerfeatures()
-   * @generated
-   * @ordered
-   */
-  protected EList<IntegerFeature> integerfeatures;
-
-  /**
    * The cached value of the '{@link #getDecorators() <em>Decorators</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -177,6 +154,20 @@ public class LinkImpl extends DiagramElementImpl implements Link
   protected EClass eStaticClass()
   {
     return XdiagramPackage.Literals.LINK;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Feature> getFeatures()
+  {
+    if (features == null)
+    {
+      features = new EObjectContainmentEList<Feature>(Feature.class, this, XdiagramPackage.LINK__FEATURES);
+    }
+    return features;
   }
 
   /**
@@ -359,48 +350,6 @@ public class LinkImpl extends DiagramElementImpl implements Link
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<LineFeature> getLinefeatures()
-  {
-    if (linefeatures == null)
-    {
-      linefeatures = new EObjectContainmentEList<LineFeature>(LineFeature.class, this, XdiagramPackage.LINK__LINEFEATURES);
-    }
-    return linefeatures;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<ColorFeature> getColorfeatures()
-  {
-    if (colorfeatures == null)
-    {
-      colorfeatures = new EObjectContainmentEList<ColorFeature>(ColorFeature.class, this, XdiagramPackage.LINK__COLORFEATURES);
-    }
-    return colorfeatures;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<IntegerFeature> getIntegerfeatures()
-  {
-    if (integerfeatures == null)
-    {
-      integerfeatures = new EObjectContainmentEList<IntegerFeature>(IntegerFeature.class, this, XdiagramPackage.LINK__INTEGERFEATURES);
-    }
-    return integerfeatures;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EList<Decorator> getDecorators()
   {
     if (decorators == null)
@@ -420,12 +369,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
   {
     switch (featureID)
     {
-      case XdiagramPackage.LINK__LINEFEATURES:
-        return ((InternalEList<?>)getLinefeatures()).basicRemove(otherEnd, msgs);
-      case XdiagramPackage.LINK__COLORFEATURES:
-        return ((InternalEList<?>)getColorfeatures()).basicRemove(otherEnd, msgs);
-      case XdiagramPackage.LINK__INTEGERFEATURES:
-        return ((InternalEList<?>)getIntegerfeatures()).basicRemove(otherEnd, msgs);
+      case XdiagramPackage.LINK__FEATURES:
+        return ((InternalEList<?>)getFeatures()).basicRemove(otherEnd, msgs);
       case XdiagramPackage.LINK__DECORATORS:
         return ((InternalEList<?>)getDecorators()).basicRemove(otherEnd, msgs);
     }
@@ -442,6 +387,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
   {
     switch (featureID)
     {
+      case XdiagramPackage.LINK__FEATURES:
+        return getFeatures();
       case XdiagramPackage.LINK__MODEL_REFERENCE:
         if (resolve) return getModelReference();
         return basicGetModelReference();
@@ -455,12 +402,6 @@ public class LinkImpl extends DiagramElementImpl implements Link
         return basicGetTargetReference();
       case XdiagramPackage.LINK__MANHATTAN:
         return isManhattan();
-      case XdiagramPackage.LINK__LINEFEATURES:
-        return getLinefeatures();
-      case XdiagramPackage.LINK__COLORFEATURES:
-        return getColorfeatures();
-      case XdiagramPackage.LINK__INTEGERFEATURES:
-        return getIntegerfeatures();
       case XdiagramPackage.LINK__DECORATORS:
         return getDecorators();
     }
@@ -478,6 +419,10 @@ public class LinkImpl extends DiagramElementImpl implements Link
   {
     switch (featureID)
     {
+      case XdiagramPackage.LINK__FEATURES:
+        getFeatures().clear();
+        getFeatures().addAll((Collection<? extends Feature>)newValue);
+        return;
       case XdiagramPackage.LINK__MODEL_REFERENCE:
         setModelReference((EReference)newValue);
         return;
@@ -492,18 +437,6 @@ public class LinkImpl extends DiagramElementImpl implements Link
         return;
       case XdiagramPackage.LINK__MANHATTAN:
         setManhattan((Boolean)newValue);
-        return;
-      case XdiagramPackage.LINK__LINEFEATURES:
-        getLinefeatures().clear();
-        getLinefeatures().addAll((Collection<? extends LineFeature>)newValue);
-        return;
-      case XdiagramPackage.LINK__COLORFEATURES:
-        getColorfeatures().clear();
-        getColorfeatures().addAll((Collection<? extends ColorFeature>)newValue);
-        return;
-      case XdiagramPackage.LINK__INTEGERFEATURES:
-        getIntegerfeatures().clear();
-        getIntegerfeatures().addAll((Collection<? extends IntegerFeature>)newValue);
         return;
       case XdiagramPackage.LINK__DECORATORS:
         getDecorators().clear();
@@ -523,6 +456,9 @@ public class LinkImpl extends DiagramElementImpl implements Link
   {
     switch (featureID)
     {
+      case XdiagramPackage.LINK__FEATURES:
+        getFeatures().clear();
+        return;
       case XdiagramPackage.LINK__MODEL_REFERENCE:
         setModelReference((EReference)null);
         return;
@@ -537,15 +473,6 @@ public class LinkImpl extends DiagramElementImpl implements Link
         return;
       case XdiagramPackage.LINK__MANHATTAN:
         setManhattan(MANHATTAN_EDEFAULT);
-        return;
-      case XdiagramPackage.LINK__LINEFEATURES:
-        getLinefeatures().clear();
-        return;
-      case XdiagramPackage.LINK__COLORFEATURES:
-        getColorfeatures().clear();
-        return;
-      case XdiagramPackage.LINK__INTEGERFEATURES:
-        getIntegerfeatures().clear();
         return;
       case XdiagramPackage.LINK__DECORATORS:
         getDecorators().clear();
@@ -564,6 +491,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
   {
     switch (featureID)
     {
+      case XdiagramPackage.LINK__FEATURES:
+        return features != null && !features.isEmpty();
       case XdiagramPackage.LINK__MODEL_REFERENCE:
         return modelReference != null;
       case XdiagramPackage.LINK__COMPLEX:
@@ -574,16 +503,48 @@ public class LinkImpl extends DiagramElementImpl implements Link
         return targetReference != null;
       case XdiagramPackage.LINK__MANHATTAN:
         return manhattan != MANHATTAN_EDEFAULT;
-      case XdiagramPackage.LINK__LINEFEATURES:
-        return linefeatures != null && !linefeatures.isEmpty();
-      case XdiagramPackage.LINK__COLORFEATURES:
-        return colorfeatures != null && !colorfeatures.isEmpty();
-      case XdiagramPackage.LINK__INTEGERFEATURES:
-        return integerfeatures != null && !integerfeatures.isEmpty();
       case XdiagramPackage.LINK__DECORATORS:
         return decorators != null && !decorators.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == Element.class)
+    {
+      switch (derivedFeatureID)
+      {
+        case XdiagramPackage.LINK__FEATURES: return XdiagramPackage.ELEMENT__FEATURES;
+        default: return -1;
+      }
+    }
+    return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == Element.class)
+    {
+      switch (baseFeatureID)
+      {
+        case XdiagramPackage.ELEMENT__FEATURES: return XdiagramPackage.LINK__FEATURES;
+        default: return -1;
+      }
+    }
+    return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
   }
 
   /**

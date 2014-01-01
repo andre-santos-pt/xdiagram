@@ -13,8 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Node#isResizable <em>Resizable</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Node#getFigures <em>Figures</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Node#getContainers <em>Containers</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Node#getMainFigure <em>Main Figure</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Node#getAnchors <em>Anchors</em>}</li>
  * </ul>
  * </p>
@@ -52,40 +51,34 @@ public interface Node extends DiagramElement
   void setResizable(boolean value);
 
   /**
-   * Returns the value of the '<em><b>Figures</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure}.
+   * Returns the value of the '<em><b>Main Figure</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Figures</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Main Figure</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Figures</em>' containment reference list.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getNode_Figures()
+   * @return the value of the '<em>Main Figure</em>' containment reference.
+   * @see #setMainFigure(ConnectableElement)
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getNode_MainFigure()
    * @model containment="true"
    * @generated
    */
-  EList<NodeFigure> getFigures();
+  ConnectableElement getMainFigure();
 
   /**
-   * Returns the value of the '<em><b>Containers</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer}.
+   * Sets the value of the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Node#getMainFigure <em>Main Figure</em>}' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Containers</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Containers</em>' containment reference list.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getNode_Containers()
-   * @model containment="true"
+   * @param value the new value of the '<em>Main Figure</em>' containment reference.
+   * @see #getMainFigure()
    * @generated
    */
-  EList<NodeContainer> getContainers();
+  void setMainFigure(ConnectableElement value);
 
   /**
    * Returns the value of the '<em><b>Anchors</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor}.
+   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.Anchor}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Anchors</em>' containment reference list isn't clear,
@@ -97,6 +90,6 @@ public interface Node extends DiagramElement
    * @model containment="true"
    * @generated
    */
-  EList<NodeAnchor> getAnchors();
+  EList<Anchor> getAnchors();
 
 } // Node

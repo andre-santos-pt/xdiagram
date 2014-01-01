@@ -138,7 +138,7 @@ public interface NodeContainer extends EObject
 
   /**
    * Returns the value of the '<em><b>Figures</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure}.
+   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.ConnectableElement}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Figures</em>' containment reference list isn't clear,
@@ -150,6 +150,6 @@ public interface NodeContainer extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<NodeFigure> getFigures();
+  EList<ConnectableElement> getFigures();
 
 } // NodeContainer

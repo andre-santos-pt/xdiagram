@@ -10,8 +10,13 @@ XDiagram:
     imports+=ImportStatement    
     'diagram' modelClass=[ecore::EClass|QualifiedName]
     
-    (styles += Style)*
-    ((nodes += Node)|(links += Link))*
+    (
+    	(nodes += Node) |
+    	(links += Link) |
+    	(styles += Style) |
+    	(colors += CustomColor) |
+    	(images += ImageFile)
+    )*
 ;
 
 // importedNamespace apparently cannot be on the root element
@@ -30,7 +35,7 @@ QualifiedNameWithWildCard returns ecore::EString :
 
 Style:
 	'style' ':' name=ID '{'
-	      features=FigureFeatures
+	      features+=Feature*
 	'}'
 ;
 
@@ -45,16 +50,23 @@ DiagramElement:
 Node:
     'node' modelClass=[ecore::EClass|QualifiedName] 
     '{'
-   		 (resizable?='resizable')?
-    	 ('style' style=ID)? 
+    	 ('set' ':' (resizable?='resizable')?)?
+    	 ('style' style=ID)?
     	 ('icon' icon=ID)?
     	 ('name' name=STRING)?
-    	 
+    
+    	mainFigure = ConnectableElement
+    
     	(attributes += Attribute)*
-    	(figures += NodeFigure)*
-		(containers += NodeContainer)*
-		(anchors += NodeAnchor)*
+    	(
+//    	(figures += NodeFigure2) |
+    	
+    //	(containers += NodeContainer) |
+		(anchors += Anchor)
+		)*
     '}';
+    
+    
     
 // TODO : EMF default value
 Attribute:
@@ -63,21 +75,25 @@ Attribute:
 
 
 // main? só Figure?
-NodeFigure:
-	(option=('main'))? 'figure' ':' figure=FigureShape (',' 'style' ':' style=ID)? '{'
-	        features=FigureFeatures
-	'}'
-;
+//NodeFigure:
+//	'figure' (option=('main'))? ':' element=ConnectableElement (',' 'style' ':' style=ID)?
+//;
 
-// TODO hstack / vstack (enum?)
+//NodeFigure:
+//	'figure' ':' element=ConnectableElement
+//;
+
 // TODO validation
+// for passar para figura? so uma figura?
 NodeContainer:
-	(layout=ContainerLayout)? 'container' ('for' modelReference=[ecore::EReference|QualifiedName])? (':' value=INT format=('%'|'px'))?
+	'container'  (layout=ContainerLayout)? ('for' modelReference=[ecore::EReference|QualifiedName])? (':' value=INT format=('%'|'px'))?
 	'{'
-		(figures += NodeFigure)+
+		(figures += ConnectableElement)+
 	'}'
 ;
 
+
+// TODO vstack / hstack
 enum ContainerLayout:
 	STACK='stack' |
 	FREE='free'
@@ -101,25 +117,9 @@ Link:
     	('icon' icon=ID)?
     	('name' name=STRING)?
     	
-    	(
-    			(attributes += Attribute) |
-	        	(linefeatures += LineFeature) |
-				(colorfeatures += ColorFeature) |
-	        	(integerfeatures += IntegerFeature)
-		)*
-		
-		//defenido no modelo? [ecore::EReference]
-	    (decorators += Decorator)*	
-	    
-//    	('origin' '{'			
-//			(sourceStatic = StaticFigure)?
-//			(sourceDynamic += DynamicFigure)*			
-//		'}')?
-//		
-//		('destiny' '{'			
-//			(targetStatic = StaticFigure)?
-//			(targetDynamic += DynamicFigure)*			
-//		'}')?
+    	attributes += Attribute*
+    	features += LinkFeature*
+	    decorators += Decorator*		    
     '}';
     
     
@@ -128,176 +128,189 @@ Link:
 // % opcional? ou considerar pixeis?
 // ter "constantes" para origem destino
 Decorator:
-	'decorator' (
-		('at' pos=INT '%')|(source?='source')|(target?='target')|(middle?='middle')
-	)
-	'{'			
-		(placingStatic = StaticFigure)?
-		(placingDynamic += DynamicFigure)*			
-	'}'
+	'decorator' (('at' position=INT '%')|(source?='source')|(target?='target')|(middle?='middle'))
+//	'{'			
+		((staticElement = StaticElement) | (label = Label))?			
+//	'}'
+;
+
+StaticElement returns ConnectableElement:
+	 Rhombus | Polyline //| Arrow | Triangle
 ;
 
 
-// este text é diferente do figure: Label .... é confuso para quem está a aprender a linguagem   
-DynamicFigure:
-	'text' figure=DynamicElement '{'
-    		features=FigureFeatures
-	'}'
-;
-
-DynamicElement:
-  ('Label'|'Description')
-;
-    
-StaticFigure:
-	'figure' ':' figure=StaticElement (',' 'style' ':' style=ID)? '{'
-    		features=FigureFeatures
-	'}'
-;
-
-// TODO enum - porque é que esta não é uma figura como as outras?
-StaticElement:
-  ('Arrow'|'Triangle'|'Rhombus'|'Polygon'|'Polyline')
-;
-
-
-
-
-// TODO: lowercase
-enum FigureShape:
-	SQUARE = 'Square' |
-	RECTANGLE = 'Rectangle' |
-	ROUNDED_RECTANGLE = 'RoundedRectangle' |
-	CIRCLE = 'Circle' |
-	ELLIPSE = 'Ellipse' |
-	TRIANGLE = 'Triangle' |
-	RHOMBUS = 'Rhombus' |
-	POLYGON = 'Polygon' |
-	POLYLINE = 'Polyline' |
-	LABEL = 'Label' |
-	IMAGE = 'Image'
-;
 
 
 
 // TODO: model ids / name Anchor
-NodeAnchor:
+// anchor to?
+Anchor:
 	'anchor' ('to' object=ID)? ':' (passX=('-'))? X=INT formatX=('%'|'lf'|'rg') ',' (passY=('-'))? Y=INT formatY=('%'|'up'|'dw')
 	'{'
-		(figures += NodeFigure)*
-		(arrows += ArrowAnchor)*
+		(figures += ConnectableElement)*
+		(constraints += AnchorConstraint)*
 	'}'
 ;
 
 // TODO: model ids - change syntax / name AnchorConstraint -- N connections?
-ArrowAnchor:
-	'set' reference=ID 'as' type=('incoming'|'outgoing'|'both') 'connection' ('using' N=INT 'connections')?
+AnchorConstraint:
+	'for' (type=AnchorConstraintType)? reference=ID ('max' ':' max=INT)?
+;
+
+enum AnchorConstraintType:
+	INCOMING='<-' |
+	OUTGOING='->'
 ;
 
 
 
 
 
-FigureFeatures:
-	{FigureFeatures}
-    		(
-    			(linefeatures += LineFeature) |
-	        	(centerfeatures += CenterFeature) |
-	        	(alignfeatures += AlignFeature) |
-	        	(gradientfeatures += GradientFeature) |	        	
-	        	(pointfeatures += PointFeature) |
-	        	(sizefeatures += SizeFeature) |
-	        	(positionfeatures += PositionFeature) |
-				(colorfeatures += ColorFeature) |
-	        	(integerfeatures += IntegerFeature) |
-	        	(booleanfeatures += BooleanFeature) |
-	        	(stringfeatures += StringFeature)
-//	        	(customfeatures += CustomFeature)
-			)*
+
+
+Element:
+	ConnectableElement | Link
 ;
 
 
-
-StyleFeature:
-	LayoutFeature | CenterFeature
-;
-
-LayoutFeature:
-	key=('layout') ':' value=('horizontal'|'vertical'|'over')
-;
-
-CenterFeature:
-	key=('center') ':' value=('horizontal'|'vertical'|'both')
-;
-
-AlignFeature:
-	key=('text-align') ':' value=('left'|'middle'|'right')
-;
-
-// TODO: enum
-// TODO: custom gradient
-GradientFeature:
-	key=('gradient') ':' value=('BlueWhite'|'BlueWhiteGloss'|'CopperWhiteGloss'|'LightGray'|'LightYellow'|'SilverWhiteGloss'|'LimeWhite')
-;
-
-PointFeature:
-	('point' ':' X=INT ',' Y=INT)
-;
-
-SizeFeature:
-	('size' ':' Width=INT ',' Height=INT)
-;
-
-PositionFeature:
-	('position' ':' X=INT ',' Y=INT)
-;
-
-ColorFeature:
-	(expression=AtributeExpression)? key=('background'|'foreground'|'border') ':' (value=Color|rgb=RGB) ('[' atribute=ID operator=('='|'<>') option=ID ']')?
+// TODO: invisible figure?
+ConnectableElement:
+	Rectangle | Rhombus | Ellipse | Polyline | Label | Image 
 ;
 
 
-
-// TODO enum , já agora 16 standard
-Color:
-	('WHITE'|'BLACK'|'BLUE'|'GREEN'|'RED'|'YELLOW'|'CYAN'|'ORANGE')
-;
 
 RGB:
-	'RGB' '(' R=INT ',' G=INT ',' B=INT ')'
+	R=INT ',' G=INT ',' B=INT
 ;
 
-IntegerFeature:
-	(expression=AtributeExpression)? key=('line-width'|'top'|'left'|'width'|'height'|'angle'|'corner'|'transparency'|'font-size') ':' value=INT
+ImageFile:
+	'image' name=ID src=STRING
 ;
 
-
-
-StringFeature:
-	(expression=AtributeExpression)? key=('text-value'|'font-name'|'icon') ':' ((value=STRING) | (valueL=STRING '+' attribute=ID) | (attribute=ID '+'valueR=STRING)
-		 | (attribute=ID) | (valueL=STRING '+' attribute=ID '+'valueR=STRING) )?
+Color:
+	(default=DefaultColor) | (custom=[CustomColor])
 ;
 
-BooleanFeature:
-	(expression=AtributeExpression)? key=('text-editable'|'font-italic'|'font-bold') ':' value=('true'|'false')
-;
-
-LineFeature:
-	 (expression=AtributeExpression)? key=('line-style') ':' value=LineStyle
-;
-
-// TODO enum  - aspeto do dash/dot/...
-LineStyle:
-	('solid'|'dash'|'dot'|'dashdot')
+CustomColor:
+	('color' name=ID rgb=RGB)
 ;
 
 
-// rename? ConditionalExpression?
-// TODO: key modelReference ecore::EAttribute
-AtributeExpression:
-	key=ID operator=('='|'<>') value=AtributeValue '->'
+// TODO : 16 standard
+enum DefaultColor:
+	RED='red' |
+	BLUE='blue' |
+	YELLOW='yellow'
 ;
 
+
+Rectangle:
+	(rectangle?='rectangle' | square?='square') '{'
+		features+=RectangleFeature*
+		children+=ConnectableElement*
+	'}'
+;
+
+RectangleFeature returns Feature:
+	ConnectableElementFeature | Corner
+;
+
+Rhombus:
+	{Rhombus}
+	'rhombus' '{'
+		features+=ConnectableElementFeature*
+		children+=ConnectableElement*
+	'}'
+;
+
+Ellipse:
+	(ellipse?='ellipse' | circle?='circle') '{'
+		features+=ConnectableElementFeature*
+		children+=ConnectableElement*
+	'}'
+;
+
+
+Polyline: 
+	(polygon?='polygon' | polyline?='polyline') '{'
+		features+=Point
+		features+=Point
+		features+=Point*
+		features+=ConnectableElementFeature*
+		children+=ConnectableElement*
+	'}'
+;
+
+
+ConnectableElementFeature returns Feature:
+	Position | Size | ColorFeature | LineStyle | LineWidth | Contains
+;
+
+
+
+
+
+
+
+/**
+ * Every feature has to be added here, and have:
+ * (conditional=FeatureConditional)?
+ */
+Feature:
+		Size | Position | Point | 
+		Background | Foreground |
+		TextValue | FontFace | FontSize | FontStyle | 
+		LineStyle | LineWidth | Transparency | Corner 
+		| Contains
+;
+
+// validate ATT / Value
+FeatureConditional:
+	'(' modelAttribute=[ecore::EAttribute|QualifiedName] operator=Operator value=Value ')'
+;
+
+Contains:
+'contains' ':' modelReference=[ecore::EReference|QualifiedName] (conditional=FeatureConditional)?
+;
+
+enum Operator:
+	EQUAL='=' |
+	DIFFERENT='<>'
+;
+
+// TODO include object type
+Value:
+	IntValue | DoubleValue | StringValue | BooleanValue | EnumValue
+;
+
+IntValue:
+	value=INT
+;
+
+DoubleValue:
+	valueInt=INT '.' valueDecimal=INT
+;
+
+StringValue:
+	(null?='null' | value=STRING)
+;
+
+BooleanValue:
+	value=BooleanLiteral
+;
+
+enum BooleanLiteral:
+	TRUE='true' |
+	FALSE='false'
+;
+
+// TODO validation
+EnumValue:
+	name=ID
+;
+
+// enum?
 AtributeValue:
 	(valueINT=INT) |
 	(valueINT=INT '.' valueDEC=INT) |
@@ -312,11 +325,162 @@ AtributeValue:
 
 
 
-// future
-//AttributeReference:
-//	modelAttribute=[ecore::EAttribute|QualifiedName] ('/' path+=AttributeReference)*
+
+FigureFeature returns Feature:
+	ColorFeature | Size | Position | Point | LineStyle
+;
+
+
+// TODO: validation  at most one editable
+Label:
+	{Label}
+	'label' (editable?='editable')? '{'
+	features+=LabelFeature*
+	children+=ConnectableElement*
+	'}'
+;
+
+LabelFeature returns Feature:
+	TextValue | Foreground | Background | FontFace | FontSize | FontStyle
+;
+
+
+
+Image:
+	'image' image=[ImageFile] '{'
+	features+=ImageFeature*
+	children+=ConnectableElement*
+	'}'
+;
+
+ImageFeature returns Feature:
+	Size | Position | Transparency
+;
+
+
+
+
+
+
+
+
+
+//LinkElement:
+//	'line' lineType=LineType '{'
+//	features+=LinkFeature*
+//	'}'
 //;
 
+LinkFeature returns Feature:
+	Foreground | LineStyle | LineWidth
+;
+
+
+ColorFeature:
+	Foreground | Background //| Border
+;
+
+Foreground:
+	'foreground' ':' color=Color 
+	(conditional=FeatureConditional)?
+;
+
+Background:
+	'background' ':' color=Color
+	(conditional=FeatureConditional)?
+;
+
+//Border:
+//	'border' ':' color=Color
+//;
+
+// validation
+Transparency:
+	'transparency' ':' percent=PERCENT
+	(conditional=FeatureConditional)?
+;
+
+
+//Width:
+//	'width' ':' width=INT
+//;
+
+Size:
+	'size' ':' width=INT 'x' height=INT
+	(conditional=FeatureConditional)?
+;
+
+Point:
+	'point' ':' x=INT ',' y=INT
+	(conditional=FeatureConditional)?
+;
+
+Position:
+	'position' ':' x=INT ',' y=INT
+	(conditional=FeatureConditional)?
+;
+
+Corner:
+	'corner' ':' angle=INT
+	(conditional=FeatureConditional)?
+;
+
+
+// TODO: validation of owned attribute
+TextValue:
+	'text' ':' (text=STRING | modelAttribute=[ecore::EAttribute|QualifiedName])
+	(conditional=FeatureConditional)?
+;
+
+FontFace:
+	'font-face' ':' face=FontFaceType
+	(conditional=FeatureConditional)?
+;
+
+FontSize:
+	'font-size' ':' size=INT
+	(conditional=FeatureConditional)?
+;
+
+FontStyle:
+	'font-style' ':' styles+=FontStyleType (',' styles+=FontStyleType)*
+	(conditional=FeatureConditional)?
+;
+
+
+
+enum FontFaceType:
+	ARIAL='arial' |
+	VERDANA='verdana' |
+	TIMES='times' |
+	COURIER='courier'
+;
+
+enum FontStyleType:
+	ITALICS='italics' |
+	BOLD='bold' |
+	UNDERLINE='underline'
+;
+
+
+
+LineStyle:
+	'line-style' ':' style=LineType
+	(conditional=FeatureConditional)?
+;
+
+enum LineType:
+	SOLID='solid' |
+	DASH='dash' 
+;
+
+LineWidth:
+	'line-width' ':' width=INT
+	(conditional=FeatureConditional)?
+;
+
+
+terminal PERCENT: ('0'|('1'..'9')(('0'..'9'))?|'100') '%';
 
 
 

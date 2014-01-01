@@ -19,9 +19,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipselabs.xdiagram.xtext.xdiagram.ConnectableElement;
 import org.eclipselabs.xdiagram.xtext.xdiagram.ContainerLayout;
 import org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer;
-import org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure;
 import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
 
 /**
@@ -121,7 +121,7 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
    * @generated
    * @ordered
    */
-  protected EList<NodeFigure> figures;
+  protected EList<ConnectableElement> figures;
 
   /**
    * <!-- begin-user-doc -->
@@ -261,11 +261,11 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<NodeFigure> getFigures()
+  public EList<ConnectableElement> getFigures()
   {
     if (figures == null)
     {
-      figures = new EObjectContainmentEList<NodeFigure>(NodeFigure.class, this, XdiagramPackage.NODE_CONTAINER__FIGURES);
+      figures = new EObjectContainmentEList<ConnectableElement>(ConnectableElement.class, this, XdiagramPackage.NODE_CONTAINER__FIGURES);
     }
     return figures;
   }
@@ -336,7 +336,7 @@ public class NodeContainerImpl extends MinimalEObjectImpl.Container implements N
         return;
       case XdiagramPackage.NODE_CONTAINER__FIGURES:
         getFigures().clear();
-        getFigures().addAll((Collection<? extends NodeFigure>)newValue);
+        getFigures().addAll((Collection<? extends ConnectableElement>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

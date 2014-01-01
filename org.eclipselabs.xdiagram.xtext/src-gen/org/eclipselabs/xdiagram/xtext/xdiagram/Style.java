@@ -2,6 +2,8 @@
  */
 package org.eclipselabs.xdiagram.xtext.xdiagram;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -50,29 +52,19 @@ public interface Style extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Features</b></em>' containment reference.
+   * Returns the value of the '<em><b>Features</b></em>' containment reference list.
+   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.Feature}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Features</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Features</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Features</em>' containment reference.
-   * @see #setFeatures(FigureFeatures)
+   * @return the value of the '<em>Features</em>' containment reference list.
    * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getStyle_Features()
    * @model containment="true"
    * @generated
    */
-  FigureFeatures getFeatures();
-
-  /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Style#getFeatures <em>Features</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Features</em>' containment reference.
-   * @see #getFeatures()
-   * @generated
-   */
-  void setFeatures(FigureFeatures value);
+  EList<Feature> getFeatures();
 
 } // Style

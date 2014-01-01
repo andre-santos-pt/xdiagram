@@ -2,8 +2,6 @@
  */
 package org.eclipselabs.xdiagram.xtext.xdiagram;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,12 +12,12 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getPos <em>Pos</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getPosition <em>Position</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#isSource <em>Source</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#isTarget <em>Target</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#isMiddle <em>Middle</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getPlacingStatic <em>Placing Static</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getPlacingDynamic <em>Placing Dynamic</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getStaticElement <em>Static Element</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getLabel <em>Label</em>}</li>
  * </ul>
  * </p>
  *
@@ -30,30 +28,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface Decorator extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Pos</b></em>' attribute.
+   * Returns the value of the '<em><b>Position</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Pos</em>' attribute isn't clear,
+   * If the meaning of the '<em>Position</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Pos</em>' attribute.
-   * @see #setPos(int)
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getDecorator_Pos()
+   * @return the value of the '<em>Position</em>' attribute.
+   * @see #setPosition(int)
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getDecorator_Position()
    * @model
    * @generated
    */
-  int getPos();
+  int getPosition();
 
   /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getPos <em>Pos</em>}' attribute.
+   * Sets the value of the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getPosition <em>Position</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Pos</em>' attribute.
-   * @see #getPos()
+   * @param value the new value of the '<em>Position</em>' attribute.
+   * @see #getPosition()
    * @generated
    */
-  void setPos(int value);
+  void setPosition(int value);
 
   /**
    * Returns the value of the '<em><b>Source</b></em>' attribute.
@@ -134,45 +132,55 @@ public interface Decorator extends EObject
   void setMiddle(boolean value);
 
   /**
-   * Returns the value of the '<em><b>Placing Static</b></em>' containment reference.
+   * Returns the value of the '<em><b>Static Element</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Placing Static</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Static Element</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Placing Static</em>' containment reference.
-   * @see #setPlacingStatic(StaticFigure)
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getDecorator_PlacingStatic()
+   * @return the value of the '<em>Static Element</em>' containment reference.
+   * @see #setStaticElement(ConnectableElement)
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getDecorator_StaticElement()
    * @model containment="true"
    * @generated
    */
-  StaticFigure getPlacingStatic();
+  ConnectableElement getStaticElement();
 
   /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getPlacingStatic <em>Placing Static</em>}' containment reference.
+   * Sets the value of the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getStaticElement <em>Static Element</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Placing Static</em>' containment reference.
-   * @see #getPlacingStatic()
+   * @param value the new value of the '<em>Static Element</em>' containment reference.
+   * @see #getStaticElement()
    * @generated
    */
-  void setPlacingStatic(StaticFigure value);
+  void setStaticElement(ConnectableElement value);
 
   /**
-   * Returns the value of the '<em><b>Placing Dynamic</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure}.
+   * Returns the value of the '<em><b>Label</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Placing Dynamic</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Label</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Placing Dynamic</em>' containment reference list.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getDecorator_PlacingDynamic()
+   * @return the value of the '<em>Label</em>' containment reference.
+   * @see #setLabel(Label)
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getDecorator_Label()
    * @model containment="true"
    * @generated
    */
-  EList<DynamicFigure> getPlacingDynamic();
+  Label getLabel();
+
+  /**
+   * Sets the value of the '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Decorator#getLabel <em>Label</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Label</em>' containment reference.
+   * @see #getLabel()
+   * @generated
+   */
+  void setLabel(Label value);
 
 } // Decorator

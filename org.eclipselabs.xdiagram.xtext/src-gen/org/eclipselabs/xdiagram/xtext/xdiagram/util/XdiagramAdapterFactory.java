@@ -105,11 +105,6 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
         return createAttributeAdapter();
       }
       @Override
-      public Adapter caseNodeFigure(NodeFigure object)
-      {
-        return createNodeFigureAdapter();
-      }
-      @Override
       public Adapter caseNodeContainer(NodeContainer object)
       {
         return createNodeContainerAdapter();
@@ -125,74 +120,24 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
         return createDecoratorAdapter();
       }
       @Override
-      public Adapter caseDynamicFigure(DynamicFigure object)
+      public Adapter caseConnectableElement(ConnectableElement object)
       {
-        return createDynamicFigureAdapter();
+        return createConnectableElementAdapter();
       }
       @Override
-      public Adapter caseStaticFigure(StaticFigure object)
+      public Adapter caseAnchor(Anchor object)
       {
-        return createStaticFigureAdapter();
+        return createAnchorAdapter();
       }
       @Override
-      public Adapter caseNodeAnchor(NodeAnchor object)
+      public Adapter caseAnchorConstraint(AnchorConstraint object)
       {
-        return createNodeAnchorAdapter();
+        return createAnchorConstraintAdapter();
       }
       @Override
-      public Adapter caseArrowAnchor(ArrowAnchor object)
+      public Adapter caseElement(Element object)
       {
-        return createArrowAnchorAdapter();
-      }
-      @Override
-      public Adapter caseFigureFeatures(FigureFeatures object)
-      {
-        return createFigureFeaturesAdapter();
-      }
-      @Override
-      public Adapter caseStyleFeature(StyleFeature object)
-      {
-        return createStyleFeatureAdapter();
-      }
-      @Override
-      public Adapter caseLayoutFeature(LayoutFeature object)
-      {
-        return createLayoutFeatureAdapter();
-      }
-      @Override
-      public Adapter caseCenterFeature(CenterFeature object)
-      {
-        return createCenterFeatureAdapter();
-      }
-      @Override
-      public Adapter caseAlignFeature(AlignFeature object)
-      {
-        return createAlignFeatureAdapter();
-      }
-      @Override
-      public Adapter caseGradientFeature(GradientFeature object)
-      {
-        return createGradientFeatureAdapter();
-      }
-      @Override
-      public Adapter casePointFeature(PointFeature object)
-      {
-        return createPointFeatureAdapter();
-      }
-      @Override
-      public Adapter caseSizeFeature(SizeFeature object)
-      {
-        return createSizeFeatureAdapter();
-      }
-      @Override
-      public Adapter casePositionFeature(PositionFeature object)
-      {
-        return createPositionFeatureAdapter();
-      }
-      @Override
-      public Adapter caseColorFeature(ColorFeature object)
-      {
-        return createColorFeatureAdapter();
+        return createElementAdapter();
       }
       @Override
       public Adapter caseRGB(RGB object)
@@ -200,34 +145,169 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
         return createRGBAdapter();
       }
       @Override
-      public Adapter caseIntegerFeature(IntegerFeature object)
+      public Adapter caseImageFile(ImageFile object)
       {
-        return createIntegerFeatureAdapter();
+        return createImageFileAdapter();
       }
       @Override
-      public Adapter caseStringFeature(StringFeature object)
+      public Adapter caseColor(Color object)
       {
-        return createStringFeatureAdapter();
+        return createColorAdapter();
       }
       @Override
-      public Adapter caseBooleanFeature(BooleanFeature object)
+      public Adapter caseCustomColor(CustomColor object)
       {
-        return createBooleanFeatureAdapter();
+        return createCustomColorAdapter();
       }
       @Override
-      public Adapter caseLineFeature(LineFeature object)
+      public Adapter caseRectangle(Rectangle object)
       {
-        return createLineFeatureAdapter();
+        return createRectangleAdapter();
       }
       @Override
-      public Adapter caseAtributeExpression(AtributeExpression object)
+      public Adapter caseFeature(Feature object)
       {
-        return createAtributeExpressionAdapter();
+        return createFeatureAdapter();
+      }
+      @Override
+      public Adapter caseRhombus(Rhombus object)
+      {
+        return createRhombusAdapter();
+      }
+      @Override
+      public Adapter caseEllipse(Ellipse object)
+      {
+        return createEllipseAdapter();
+      }
+      @Override
+      public Adapter casePolyline(Polyline object)
+      {
+        return createPolylineAdapter();
+      }
+      @Override
+      public Adapter caseFeatureConditional(FeatureConditional object)
+      {
+        return createFeatureConditionalAdapter();
+      }
+      @Override
+      public Adapter caseContains(Contains object)
+      {
+        return createContainsAdapter();
+      }
+      @Override
+      public Adapter caseValue(Value object)
+      {
+        return createValueAdapter();
+      }
+      @Override
+      public Adapter caseIntValue(IntValue object)
+      {
+        return createIntValueAdapter();
+      }
+      @Override
+      public Adapter caseDoubleValue(DoubleValue object)
+      {
+        return createDoubleValueAdapter();
+      }
+      @Override
+      public Adapter caseStringValue(StringValue object)
+      {
+        return createStringValueAdapter();
+      }
+      @Override
+      public Adapter caseBooleanValue(BooleanValue object)
+      {
+        return createBooleanValueAdapter();
+      }
+      @Override
+      public Adapter caseEnumValue(EnumValue object)
+      {
+        return createEnumValueAdapter();
       }
       @Override
       public Adapter caseAtributeValue(AtributeValue object)
       {
         return createAtributeValueAdapter();
+      }
+      @Override
+      public Adapter caseLabel(Label object)
+      {
+        return createLabelAdapter();
+      }
+      @Override
+      public Adapter caseImage(Image object)
+      {
+        return createImageAdapter();
+      }
+      @Override
+      public Adapter caseColorFeature(ColorFeature object)
+      {
+        return createColorFeatureAdapter();
+      }
+      @Override
+      public Adapter caseForeground(Foreground object)
+      {
+        return createForegroundAdapter();
+      }
+      @Override
+      public Adapter caseBackground(Background object)
+      {
+        return createBackgroundAdapter();
+      }
+      @Override
+      public Adapter caseTransparency(Transparency object)
+      {
+        return createTransparencyAdapter();
+      }
+      @Override
+      public Adapter caseSize(Size object)
+      {
+        return createSizeAdapter();
+      }
+      @Override
+      public Adapter casePoint(Point object)
+      {
+        return createPointAdapter();
+      }
+      @Override
+      public Adapter casePosition(Position object)
+      {
+        return createPositionAdapter();
+      }
+      @Override
+      public Adapter caseCorner(Corner object)
+      {
+        return createCornerAdapter();
+      }
+      @Override
+      public Adapter caseTextValue(TextValue object)
+      {
+        return createTextValueAdapter();
+      }
+      @Override
+      public Adapter caseFontFace(FontFace object)
+      {
+        return createFontFaceAdapter();
+      }
+      @Override
+      public Adapter caseFontSize(FontSize object)
+      {
+        return createFontSizeAdapter();
+      }
+      @Override
+      public Adapter caseFontStyle(FontStyle object)
+      {
+        return createFontStyleAdapter();
+      }
+      @Override
+      public Adapter caseLineStyle(LineStyle object)
+      {
+        return createLineStyleAdapter();
+      }
+      @Override
+      public Adapter caseLineWidth(LineWidth object)
+      {
+        return createLineWidthAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -342,21 +422,6 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure <em>Node Figure</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure
-   * @generated
-   */
-  public Adapter createNodeFigureAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer <em>Node Container</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -402,211 +467,61 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure <em>Dynamic Figure</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ConnectableElement <em>Connectable Element</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ConnectableElement
    * @generated
    */
-  public Adapter createDynamicFigureAdapter()
+  public Adapter createConnectableElementAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StaticFigure <em>Static Figure</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Anchor <em>Anchor</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StaticFigure
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Anchor
    * @generated
    */
-  public Adapter createStaticFigureAdapter()
+  public Adapter createAnchorAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor <em>Node Anchor</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraint <em>Anchor Constraint</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraint
    * @generated
    */
-  public Adapter createNodeAnchorAdapter()
+  public Adapter createAnchorConstraintAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ArrowAnchor <em>Arrow Anchor</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Element <em>Element</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ArrowAnchor
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Element
    * @generated
    */
-  public Adapter createArrowAnchorAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures <em>Figure Features</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures
-   * @generated
-   */
-  public Adapter createFigureFeaturesAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StyleFeature <em>Style Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StyleFeature
-   * @generated
-   */
-  public Adapter createStyleFeatureAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.LayoutFeature <em>Layout Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.LayoutFeature
-   * @generated
-   */
-  public Adapter createLayoutFeatureAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.CenterFeature <em>Center Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.CenterFeature
-   * @generated
-   */
-  public Adapter createCenterFeatureAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AlignFeature <em>Align Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AlignFeature
-   * @generated
-   */
-  public Adapter createAlignFeatureAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.GradientFeature <em>Gradient Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.GradientFeature
-   * @generated
-   */
-  public Adapter createGradientFeatureAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.PointFeature <em>Point Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.PointFeature
-   * @generated
-   */
-  public Adapter createPointFeatureAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.SizeFeature <em>Size Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.SizeFeature
-   * @generated
-   */
-  public Adapter createSizeFeatureAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.PositionFeature <em>Position Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.PositionFeature
-   * @generated
-   */
-  public Adapter createPositionFeatureAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature <em>Color Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature
-   * @generated
-   */
-  public Adapter createColorFeatureAdapter()
+  public Adapter createElementAdapter()
   {
     return null;
   }
@@ -627,76 +542,241 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature <em>Integer Feature</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ImageFile <em>Image File</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ImageFile
    * @generated
    */
-  public Adapter createIntegerFeatureAdapter()
+  public Adapter createImageFileAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature <em>String Feature</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Color <em>Color</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Color
    * @generated
    */
-  public Adapter createStringFeatureAdapter()
+  public Adapter createColorAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.BooleanFeature <em>Boolean Feature</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.CustomColor <em>Custom Color</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.BooleanFeature
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.CustomColor
    * @generated
    */
-  public Adapter createBooleanFeatureAdapter()
+  public Adapter createCustomColorAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.LineFeature <em>Line Feature</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Rectangle <em>Rectangle</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.LineFeature
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Rectangle
    * @generated
    */
-  public Adapter createLineFeatureAdapter()
+  public Adapter createRectangleAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.AtributeExpression <em>Atribute Expression</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Feature <em>Feature</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.AtributeExpression
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Feature
    * @generated
    */
-  public Adapter createAtributeExpressionAdapter()
+  public Adapter createFeatureAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Rhombus <em>Rhombus</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Rhombus
+   * @generated
+   */
+  public Adapter createRhombusAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Ellipse <em>Ellipse</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Ellipse
+   * @generated
+   */
+  public Adapter createEllipseAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Polyline <em>Polyline</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Polyline
+   * @generated
+   */
+  public Adapter createPolylineAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FeatureConditional <em>Feature Conditional</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FeatureConditional
+   * @generated
+   */
+  public Adapter createFeatureConditionalAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Contains <em>Contains</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Contains
+   * @generated
+   */
+  public Adapter createContainsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Value <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Value
+   * @generated
+   */
+  public Adapter createValueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.IntValue <em>Int Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.IntValue
+   * @generated
+   */
+  public Adapter createIntValueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.DoubleValue <em>Double Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.DoubleValue
+   * @generated
+   */
+  public Adapter createDoubleValueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.StringValue <em>String Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.StringValue
+   * @generated
+   */
+  public Adapter createStringValueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.BooleanValue <em>Boolean Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.BooleanValue
+   * @generated
+   */
+  public Adapter createBooleanValueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.EnumValue <em>Enum Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.EnumValue
+   * @generated
+   */
+  public Adapter createEnumValueAdapter()
   {
     return null;
   }
@@ -712,6 +792,246 @@ public class XdiagramAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAtributeValueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Label <em>Label</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Label
+   * @generated
+   */
+  public Adapter createLabelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Image <em>Image</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Image
+   * @generated
+   */
+  public Adapter createImageAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature <em>Color Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature
+   * @generated
+   */
+  public Adapter createColorFeatureAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Foreground <em>Foreground</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Foreground
+   * @generated
+   */
+  public Adapter createForegroundAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Background <em>Background</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Background
+   * @generated
+   */
+  public Adapter createBackgroundAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Transparency <em>Transparency</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Transparency
+   * @generated
+   */
+  public Adapter createTransparencyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Size <em>Size</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Size
+   * @generated
+   */
+  public Adapter createSizeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Point <em>Point</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Point
+   * @generated
+   */
+  public Adapter createPointAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Position <em>Position</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Position
+   * @generated
+   */
+  public Adapter createPositionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.Corner <em>Corner</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.Corner
+   * @generated
+   */
+  public Adapter createCornerAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.TextValue <em>Text Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.TextValue
+   * @generated
+   */
+  public Adapter createTextValueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FontFace <em>Font Face</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FontFace
+   * @generated
+   */
+  public Adapter createFontFaceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FontSize <em>Font Size</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FontSize
+   * @generated
+   */
+  public Adapter createFontSizeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.FontStyle <em>Font Style</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.FontStyle
+   * @generated
+   */
+  public Adapter createFontStyleAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.LineStyle <em>Line Style</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.LineStyle
+   * @generated
+   */
+  public Adapter createLineStyleAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.xtext.xdiagram.LineWidth <em>Line Width</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.LineWidth
+   * @generated
+   */
+  public Adapter createLineWidthAdapter()
   {
     return null;
   }

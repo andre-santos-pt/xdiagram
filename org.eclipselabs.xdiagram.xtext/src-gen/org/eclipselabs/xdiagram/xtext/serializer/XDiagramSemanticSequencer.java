@@ -14,34 +14,46 @@ import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.eclipselabs.xdiagram.xtext.services.XDiagramGrammarAccess;
-import org.eclipselabs.xdiagram.xtext.xdiagram.AlignFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.ArrowAnchor;
-import org.eclipselabs.xdiagram.xtext.xdiagram.AtributeExpression;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Anchor;
+import org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraint;
 import org.eclipselabs.xdiagram.xtext.xdiagram.AtributeValue;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Attribute;
-import org.eclipselabs.xdiagram.xtext.xdiagram.BooleanFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.CenterFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Background;
+import org.eclipselabs.xdiagram.xtext.xdiagram.BooleanValue;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Color;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Contains;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Corner;
+import org.eclipselabs.xdiagram.xtext.xdiagram.CustomColor;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Decorator;
-import org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure;
-import org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures;
-import org.eclipselabs.xdiagram.xtext.xdiagram.GradientFeature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.DoubleValue;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Ellipse;
+import org.eclipselabs.xdiagram.xtext.xdiagram.EnumValue;
+import org.eclipselabs.xdiagram.xtext.xdiagram.FeatureConditional;
+import org.eclipselabs.xdiagram.xtext.xdiagram.FontFace;
+import org.eclipselabs.xdiagram.xtext.xdiagram.FontSize;
+import org.eclipselabs.xdiagram.xtext.xdiagram.FontStyle;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Foreground;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Image;
+import org.eclipselabs.xdiagram.xtext.xdiagram.ImageFile;
 import org.eclipselabs.xdiagram.xtext.xdiagram.ImportStatement;
-import org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.LayoutFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.LineFeature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.IntValue;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Label;
+import org.eclipselabs.xdiagram.xtext.xdiagram.LineStyle;
+import org.eclipselabs.xdiagram.xtext.xdiagram.LineWidth;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Link;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Node;
-import org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor;
 import org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer;
-import org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure;
-import org.eclipselabs.xdiagram.xtext.xdiagram.PointFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.PositionFeature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Point;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Polyline;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Position;
 import org.eclipselabs.xdiagram.xtext.xdiagram.RGB;
-import org.eclipselabs.xdiagram.xtext.xdiagram.SizeFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.StaticFigure;
-import org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Rectangle;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Rhombus;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Size;
+import org.eclipselabs.xdiagram.xtext.xdiagram.StringValue;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Style;
+import org.eclipselabs.xdiagram.xtext.xdiagram.TextValue;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Transparency;
 import org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram;
 import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
 
@@ -53,21 +65,15 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == XdiagramPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
-			case XdiagramPackage.ALIGN_FEATURE:
-				if(context == grammarAccess.getAlignFeatureRule()) {
-					sequence_AlignFeature(context, (AlignFeature) semanticObject); 
+			case XdiagramPackage.ANCHOR:
+				if(context == grammarAccess.getAnchorRule()) {
+					sequence_Anchor(context, (Anchor) semanticObject); 
 					return; 
 				}
 				else break;
-			case XdiagramPackage.ARROW_ANCHOR:
-				if(context == grammarAccess.getArrowAnchorRule()) {
-					sequence_ArrowAnchor(context, (ArrowAnchor) semanticObject); 
-					return; 
-				}
-				else break;
-			case XdiagramPackage.ATRIBUTE_EXPRESSION:
-				if(context == grammarAccess.getAtributeExpressionRule()) {
-					sequence_AtributeExpression(context, (AtributeExpression) semanticObject); 
+			case XdiagramPackage.ANCHOR_CONSTRAINT:
+				if(context == grammarAccess.getAnchorConstraintRule()) {
+					sequence_AnchorConstraint(context, (AnchorConstraint) semanticObject); 
 					return; 
 				}
 				else break;
@@ -83,22 +89,51 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 					return; 
 				}
 				else break;
-			case XdiagramPackage.BOOLEAN_FEATURE:
-				if(context == grammarAccess.getBooleanFeatureRule()) {
-					sequence_BooleanFeature(context, (BooleanFeature) semanticObject); 
+			case XdiagramPackage.BACKGROUND:
+				if(context == grammarAccess.getBackgroundRule() ||
+				   context == grammarAccess.getColorFeatureRule() ||
+				   context == grammarAccess.getConnectableElementFeatureRule() ||
+				   context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getFigureFeatureRule() ||
+				   context == grammarAccess.getLabelFeatureRule() ||
+				   context == grammarAccess.getRectangleFeatureRule()) {
+					sequence_Background(context, (Background) semanticObject); 
 					return; 
 				}
 				else break;
-			case XdiagramPackage.CENTER_FEATURE:
-				if(context == grammarAccess.getCenterFeatureRule() ||
-				   context == grammarAccess.getStyleFeatureRule()) {
-					sequence_CenterFeature(context, (CenterFeature) semanticObject); 
+			case XdiagramPackage.BOOLEAN_VALUE:
+				if(context == grammarAccess.getBooleanValueRule() ||
+				   context == grammarAccess.getValueRule()) {
+					sequence_BooleanValue(context, (BooleanValue) semanticObject); 
 					return; 
 				}
 				else break;
-			case XdiagramPackage.COLOR_FEATURE:
-				if(context == grammarAccess.getColorFeatureRule()) {
-					sequence_ColorFeature(context, (ColorFeature) semanticObject); 
+			case XdiagramPackage.COLOR:
+				if(context == grammarAccess.getColorRule()) {
+					sequence_Color(context, (Color) semanticObject); 
+					return; 
+				}
+				else break;
+			case XdiagramPackage.CONTAINS:
+				if(context == grammarAccess.getConnectableElementFeatureRule() ||
+				   context == grammarAccess.getContainsRule() ||
+				   context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getRectangleFeatureRule()) {
+					sequence_Contains(context, (Contains) semanticObject); 
+					return; 
+				}
+				else break;
+			case XdiagramPackage.CORNER:
+				if(context == grammarAccess.getCornerRule() ||
+				   context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getRectangleFeatureRule()) {
+					sequence_Corner(context, (Corner) semanticObject); 
+					return; 
+				}
+				else break;
+			case XdiagramPackage.CUSTOM_COLOR:
+				if(context == grammarAccess.getCustomColorRule()) {
+					sequence_CustomColor(context, (CustomColor) semanticObject); 
 					return; 
 				}
 				else break;
@@ -108,21 +143,82 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 					return; 
 				}
 				else break;
-			case XdiagramPackage.DYNAMIC_FIGURE:
-				if(context == grammarAccess.getDynamicFigureRule()) {
-					sequence_DynamicFigure(context, (DynamicFigure) semanticObject); 
+			case XdiagramPackage.DOUBLE_VALUE:
+				if(context == grammarAccess.getDoubleValueRule() ||
+				   context == grammarAccess.getValueRule()) {
+					sequence_DoubleValue(context, (DoubleValue) semanticObject); 
 					return; 
 				}
 				else break;
-			case XdiagramPackage.FIGURE_FEATURES:
-				if(context == grammarAccess.getFigureFeaturesRule()) {
-					sequence_FigureFeatures(context, (FigureFeatures) semanticObject); 
+			case XdiagramPackage.ELLIPSE:
+				if(context == grammarAccess.getConnectableElementRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getEllipseRule()) {
+					sequence_Ellipse(context, (Ellipse) semanticObject); 
 					return; 
 				}
 				else break;
-			case XdiagramPackage.GRADIENT_FEATURE:
-				if(context == grammarAccess.getGradientFeatureRule()) {
-					sequence_GradientFeature(context, (GradientFeature) semanticObject); 
+			case XdiagramPackage.ENUM_VALUE:
+				if(context == grammarAccess.getEnumValueRule() ||
+				   context == grammarAccess.getValueRule()) {
+					sequence_EnumValue(context, (EnumValue) semanticObject); 
+					return; 
+				}
+				else break;
+			case XdiagramPackage.FEATURE_CONDITIONAL:
+				if(context == grammarAccess.getFeatureConditionalRule()) {
+					sequence_FeatureConditional(context, (FeatureConditional) semanticObject); 
+					return; 
+				}
+				else break;
+			case XdiagramPackage.FONT_FACE:
+				if(context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getFontFaceRule() ||
+				   context == grammarAccess.getLabelFeatureRule()) {
+					sequence_FontFace(context, (FontFace) semanticObject); 
+					return; 
+				}
+				else break;
+			case XdiagramPackage.FONT_SIZE:
+				if(context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getFontSizeRule() ||
+				   context == grammarAccess.getLabelFeatureRule()) {
+					sequence_FontSize(context, (FontSize) semanticObject); 
+					return; 
+				}
+				else break;
+			case XdiagramPackage.FONT_STYLE:
+				if(context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getFontStyleRule() ||
+				   context == grammarAccess.getLabelFeatureRule()) {
+					sequence_FontStyle(context, (FontStyle) semanticObject); 
+					return; 
+				}
+				else break;
+			case XdiagramPackage.FOREGROUND:
+				if(context == grammarAccess.getColorFeatureRule() ||
+				   context == grammarAccess.getConnectableElementFeatureRule() ||
+				   context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getFigureFeatureRule() ||
+				   context == grammarAccess.getForegroundRule() ||
+				   context == grammarAccess.getLabelFeatureRule() ||
+				   context == grammarAccess.getLinkFeatureRule() ||
+				   context == grammarAccess.getRectangleFeatureRule()) {
+					sequence_Foreground(context, (Foreground) semanticObject); 
+					return; 
+				}
+				else break;
+			case XdiagramPackage.IMAGE:
+				if(context == grammarAccess.getConnectableElementRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getImageRule()) {
+					sequence_Image(context, (Image) semanticObject); 
+					return; 
+				}
+				else break;
+			case XdiagramPackage.IMAGE_FILE:
+				if(context == grammarAccess.getImageFileRule()) {
+					sequence_ImageFile(context, (ImageFile) semanticObject); 
 					return; 
 				}
 				else break;
@@ -132,27 +228,45 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 					return; 
 				}
 				else break;
-			case XdiagramPackage.INTEGER_FEATURE:
-				if(context == grammarAccess.getIntegerFeatureRule()) {
-					sequence_IntegerFeature(context, (IntegerFeature) semanticObject); 
+			case XdiagramPackage.INT_VALUE:
+				if(context == grammarAccess.getIntValueRule() ||
+				   context == grammarAccess.getValueRule()) {
+					sequence_IntValue(context, (IntValue) semanticObject); 
 					return; 
 				}
 				else break;
-			case XdiagramPackage.LAYOUT_FEATURE:
-				if(context == grammarAccess.getLayoutFeatureRule() ||
-				   context == grammarAccess.getStyleFeatureRule()) {
-					sequence_LayoutFeature(context, (LayoutFeature) semanticObject); 
+			case XdiagramPackage.LABEL:
+				if(context == grammarAccess.getConnectableElementRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getLabelRule()) {
+					sequence_Label(context, (Label) semanticObject); 
 					return; 
 				}
 				else break;
-			case XdiagramPackage.LINE_FEATURE:
-				if(context == grammarAccess.getLineFeatureRule()) {
-					sequence_LineFeature(context, (LineFeature) semanticObject); 
+			case XdiagramPackage.LINE_STYLE:
+				if(context == grammarAccess.getConnectableElementFeatureRule() ||
+				   context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getFigureFeatureRule() ||
+				   context == grammarAccess.getLineStyleRule() ||
+				   context == grammarAccess.getLinkFeatureRule() ||
+				   context == grammarAccess.getRectangleFeatureRule()) {
+					sequence_LineStyle(context, (LineStyle) semanticObject); 
+					return; 
+				}
+				else break;
+			case XdiagramPackage.LINE_WIDTH:
+				if(context == grammarAccess.getConnectableElementFeatureRule() ||
+				   context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getLineWidthRule() ||
+				   context == grammarAccess.getLinkFeatureRule() ||
+				   context == grammarAccess.getRectangleFeatureRule()) {
+					sequence_LineWidth(context, (LineWidth) semanticObject); 
 					return; 
 				}
 				else break;
 			case XdiagramPackage.LINK:
 				if(context == grammarAccess.getDiagramElementRule() ||
+				   context == grammarAccess.getElementRule() ||
 				   context == grammarAccess.getLinkRule()) {
 					sequence_Link(context, (Link) semanticObject); 
 					return; 
@@ -165,33 +279,37 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 					return; 
 				}
 				else break;
-			case XdiagramPackage.NODE_ANCHOR:
-				if(context == grammarAccess.getNodeAnchorRule()) {
-					sequence_NodeAnchor(context, (NodeAnchor) semanticObject); 
-					return; 
-				}
-				else break;
 			case XdiagramPackage.NODE_CONTAINER:
 				if(context == grammarAccess.getNodeContainerRule()) {
 					sequence_NodeContainer(context, (NodeContainer) semanticObject); 
 					return; 
 				}
 				else break;
-			case XdiagramPackage.NODE_FIGURE:
-				if(context == grammarAccess.getNodeFigureRule()) {
-					sequence_NodeFigure(context, (NodeFigure) semanticObject); 
+			case XdiagramPackage.POINT:
+				if(context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getFigureFeatureRule() ||
+				   context == grammarAccess.getPointRule()) {
+					sequence_Point(context, (Point) semanticObject); 
 					return; 
 				}
 				else break;
-			case XdiagramPackage.POINT_FEATURE:
-				if(context == grammarAccess.getPointFeatureRule()) {
-					sequence_PointFeature(context, (PointFeature) semanticObject); 
+			case XdiagramPackage.POLYLINE:
+				if(context == grammarAccess.getConnectableElementRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getPolylineRule() ||
+				   context == grammarAccess.getStaticElementRule()) {
+					sequence_Polyline(context, (Polyline) semanticObject); 
 					return; 
 				}
 				else break;
-			case XdiagramPackage.POSITION_FEATURE:
-				if(context == grammarAccess.getPositionFeatureRule()) {
-					sequence_PositionFeature(context, (PositionFeature) semanticObject); 
+			case XdiagramPackage.POSITION:
+				if(context == grammarAccess.getConnectableElementFeatureRule() ||
+				   context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getFigureFeatureRule() ||
+				   context == grammarAccess.getImageFeatureRule() ||
+				   context == grammarAccess.getPositionRule() ||
+				   context == grammarAccess.getRectangleFeatureRule()) {
+					sequence_Position(context, (Position) semanticObject); 
 					return; 
 				}
 				else break;
@@ -201,27 +319,60 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 					return; 
 				}
 				else break;
-			case XdiagramPackage.SIZE_FEATURE:
-				if(context == grammarAccess.getSizeFeatureRule()) {
-					sequence_SizeFeature(context, (SizeFeature) semanticObject); 
+			case XdiagramPackage.RECTANGLE:
+				if(context == grammarAccess.getConnectableElementRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getRectangleRule()) {
+					sequence_Rectangle(context, (Rectangle) semanticObject); 
 					return; 
 				}
 				else break;
-			case XdiagramPackage.STATIC_FIGURE:
-				if(context == grammarAccess.getStaticFigureRule()) {
-					sequence_StaticFigure(context, (StaticFigure) semanticObject); 
+			case XdiagramPackage.RHOMBUS:
+				if(context == grammarAccess.getConnectableElementRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getRhombusRule() ||
+				   context == grammarAccess.getStaticElementRule()) {
+					sequence_Rhombus(context, (Rhombus) semanticObject); 
 					return; 
 				}
 				else break;
-			case XdiagramPackage.STRING_FEATURE:
-				if(context == grammarAccess.getStringFeatureRule()) {
-					sequence_StringFeature(context, (StringFeature) semanticObject); 
+			case XdiagramPackage.SIZE:
+				if(context == grammarAccess.getConnectableElementFeatureRule() ||
+				   context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getFigureFeatureRule() ||
+				   context == grammarAccess.getImageFeatureRule() ||
+				   context == grammarAccess.getRectangleFeatureRule() ||
+				   context == grammarAccess.getSizeRule()) {
+					sequence_Size(context, (Size) semanticObject); 
+					return; 
+				}
+				else break;
+			case XdiagramPackage.STRING_VALUE:
+				if(context == grammarAccess.getStringValueRule() ||
+				   context == grammarAccess.getValueRule()) {
+					sequence_StringValue(context, (StringValue) semanticObject); 
 					return; 
 				}
 				else break;
 			case XdiagramPackage.STYLE:
 				if(context == grammarAccess.getStyleRule()) {
 					sequence_Style(context, (Style) semanticObject); 
+					return; 
+				}
+				else break;
+			case XdiagramPackage.TEXT_VALUE:
+				if(context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getLabelFeatureRule() ||
+				   context == grammarAccess.getTextValueRule()) {
+					sequence_TextValue(context, (TextValue) semanticObject); 
+					return; 
+				}
+				else break;
+			case XdiagramPackage.TRANSPARENCY:
+				if(context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getImageFeatureRule() ||
+				   context == grammarAccess.getTransparencyRule()) {
+					sequence_Transparency(context, (Transparency) semanticObject); 
 					return; 
 				}
 				else break;
@@ -237,27 +388,28 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (key='text-align' (value='left' | value='middle' | value='right'))
+	 *     (type=AnchorConstraintType? reference=ID max=INT?)
 	 */
-	protected void sequence_AlignFeature(EObject context, AlignFeature semanticObject) {
+	protected void sequence_AnchorConstraint(EObject context, AnchorConstraint semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (reference=ID (type='incoming' | type='outgoing' | type='both') N=INT?)
+	 *     (
+	 *         object=ID? 
+	 *         passX='-'? 
+	 *         X=INT 
+	 *         (formatX='%' | formatX='lf' | formatX='rg') 
+	 *         passY='-'? 
+	 *         Y=INT 
+	 *         (formatY='%' | formatY='up' | formatY='dw') 
+	 *         figures+=ConnectableElement* 
+	 *         constraints+=AnchorConstraint*
+	 *     )
 	 */
-	protected void sequence_ArrowAnchor(EObject context, ArrowAnchor semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (key=ID (operator='=' | operator='<>') value=AtributeValue)
-	 */
-	protected void sequence_AtributeExpression(EObject context, AtributeExpression semanticObject) {
+	protected void sequence_Anchor(EObject context, Anchor semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -300,39 +452,78 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (expression=AtributeExpression? (key='text-editable' | key='font-italic' | key='font-bold') (value='true' | value='false'))
+	 *     (color=Color conditional=FeatureConditional?)
 	 */
-	protected void sequence_BooleanFeature(EObject context, BooleanFeature semanticObject) {
+	protected void sequence_Background(EObject context, Background semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (key='center' (value='horizontal' | value='vertical' | value='both'))
+	 *     value=BooleanLiteral
 	 */
-	protected void sequence_CenterFeature(EObject context, CenterFeature semanticObject) {
+	protected void sequence_BooleanValue(EObject context, BooleanValue semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.BOOLEAN_VALUE__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.BOOLEAN_VALUE__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getBooleanValueAccess().getValueBooleanLiteralEnumRuleCall_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (default=DefaultColor | custom=[CustomColor|ID])
+	 */
+	protected void sequence_Color(EObject context, Color semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         expression=AtributeExpression? 
-	 *         (key='background' | key='foreground' | key='border') 
-	 *         (value=Color | rgb=RGB) 
-	 *         (atribute=ID (operator='=' | operator='<>') option=ID)?
-	 *     )
+	 *     (modelReference=[EReference|QualifiedName] conditional=FeatureConditional?)
 	 */
-	protected void sequence_ColorFeature(EObject context, ColorFeature semanticObject) {
+	protected void sequence_Contains(EObject context, Contains semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     ((pos=INT | source?='source' | target?='target' | middle?='middle') placingStatic=StaticFigure? placingDynamic+=DynamicFigure*)
+	 *     (angle=INT conditional=FeatureConditional?)
+	 */
+	protected void sequence_Corner(EObject context, Corner semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID rgb=RGB)
+	 */
+	protected void sequence_CustomColor(EObject context, CustomColor semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.CUSTOM_COLOR__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.CUSTOM_COLOR__NAME));
+			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.CUSTOM_COLOR__RGB) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.CUSTOM_COLOR__RGB));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getCustomColorAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getCustomColorAccess().getRgbRGBParserRuleCall_2_0(), semanticObject.getRgb());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     ((position=INT | source?='source' | target?='target' | middle?='middle') (staticElement=StaticElement | label=Label)?)
 	 */
 	protected void sequence_Decorator(EObject context, Decorator semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -341,62 +532,130 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (figure=DynamicElement features=FigureFeatures)
+	 *     (valueInt=INT valueDecimal=INT)
 	 */
-	protected void sequence_DynamicFigure(EObject context, DynamicFigure semanticObject) {
+	protected void sequence_DoubleValue(EObject context, DoubleValue semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.DYNAMIC_FIGURE__FIGURE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.DYNAMIC_FIGURE__FIGURE));
-			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.DYNAMIC_FIGURE__FEATURES) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.DYNAMIC_FIGURE__FEATURES));
+			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.DOUBLE_VALUE__VALUE_INT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.DOUBLE_VALUE__VALUE_INT));
+			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.DOUBLE_VALUE__VALUE_DECIMAL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.DOUBLE_VALUE__VALUE_DECIMAL));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getDynamicFigureAccess().getFigureDynamicElementParserRuleCall_1_0(), semanticObject.getFigure());
-		feeder.accept(grammarAccess.getDynamicFigureAccess().getFeaturesFigureFeaturesParserRuleCall_3_0(), semanticObject.getFeatures());
+		feeder.accept(grammarAccess.getDoubleValueAccess().getValueIntINTTerminalRuleCall_0_0(), semanticObject.getValueInt());
+		feeder.accept(grammarAccess.getDoubleValueAccess().getValueDecimalINTTerminalRuleCall_2_0(), semanticObject.getValueDecimal());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         (
-	 *             linefeatures+=LineFeature | 
-	 *             centerfeatures+=CenterFeature | 
-	 *             alignfeatures+=AlignFeature | 
-	 *             gradientfeatures+=GradientFeature | 
-	 *             pointfeatures+=PointFeature | 
-	 *             sizefeatures+=SizeFeature | 
-	 *             positionfeatures+=PositionFeature | 
-	 *             colorfeatures+=ColorFeature | 
-	 *             integerfeatures+=IntegerFeature | 
-	 *             booleanfeatures+=BooleanFeature | 
-	 *             stringfeatures+=StringFeature
-	 *         )*
-	 *     )
+	 *     ((ellipse?='ellipse' | circle?='circle') features+=ConnectableElementFeature* children+=ConnectableElement*)
 	 */
-	protected void sequence_FigureFeatures(EObject context, FigureFeatures semanticObject) {
+	protected void sequence_Ellipse(EObject context, Ellipse semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         key='gradient' 
-	 *         (
-	 *             value='BlueWhite' | 
-	 *             value='BlueWhiteGloss' | 
-	 *             value='CopperWhiteGloss' | 
-	 *             value='LightGray' | 
-	 *             value='LightYellow' | 
-	 *             value='SilverWhiteGloss' | 
-	 *             value='LimeWhite'
-	 *         )
-	 *     )
+	 *     name=ID
 	 */
-	protected void sequence_GradientFeature(EObject context, GradientFeature semanticObject) {
+	protected void sequence_EnumValue(EObject context, EnumValue semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.ENUM_VALUE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.ENUM_VALUE__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getEnumValueAccess().getNameIDTerminalRuleCall_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (modelAttribute=[EAttribute|QualifiedName] operator=Operator value=Value)
+	 */
+	protected void sequence_FeatureConditional(EObject context, FeatureConditional semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.FEATURE_CONDITIONAL__MODEL_ATTRIBUTE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.FEATURE_CONDITIONAL__MODEL_ATTRIBUTE));
+			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.FEATURE_CONDITIONAL__OPERATOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.FEATURE_CONDITIONAL__OPERATOR));
+			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.FEATURE_CONDITIONAL__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.FEATURE_CONDITIONAL__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getFeatureConditionalAccess().getModelAttributeEAttributeQualifiedNameParserRuleCall_1_0_1(), semanticObject.getModelAttribute());
+		feeder.accept(grammarAccess.getFeatureConditionalAccess().getOperatorOperatorEnumRuleCall_2_0(), semanticObject.getOperator());
+		feeder.accept(grammarAccess.getFeatureConditionalAccess().getValueValueParserRuleCall_3_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (face=FontFaceType conditional=FeatureConditional?)
+	 */
+	protected void sequence_FontFace(EObject context, FontFace semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (size=INT conditional=FeatureConditional?)
+	 */
+	protected void sequence_FontSize(EObject context, FontSize semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (styles+=FontStyleType styles+=FontStyleType* conditional=FeatureConditional?)
+	 */
+	protected void sequence_FontStyle(EObject context, FontStyle semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (color=Color conditional=FeatureConditional?)
+	 */
+	protected void sequence_Foreground(EObject context, Foreground semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID src=STRING)
+	 */
+	protected void sequence_ImageFile(EObject context, ImageFile semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.IMAGE_FILE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.IMAGE_FILE__NAME));
+			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.IMAGE_FILE__SRC) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.IMAGE_FILE__SRC));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getImageFileAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getImageFileAccess().getSrcSTRINGTerminalRuleCall_2_0(), semanticObject.getSrc());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (image=[ImageFile|ID] features+=ImageFeature* children+=ConnectableElement*)
+	 */
+	protected void sequence_Image(EObject context, Image semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -412,41 +671,43 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         expression=AtributeExpression? 
-	 *         (
-	 *             key='line-width' | 
-	 *             key='top' | 
-	 *             key='left' | 
-	 *             key='width' | 
-	 *             key='height' | 
-	 *             key='angle' | 
-	 *             key='corner' | 
-	 *             key='transparency' | 
-	 *             key='font-size'
-	 *         ) 
-	 *         value=INT
-	 *     )
+	 *     value=INT
 	 */
-	protected void sequence_IntegerFeature(EObject context, IntegerFeature semanticObject) {
+	protected void sequence_IntValue(EObject context, IntValue semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.INT_VALUE__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.INT_VALUE__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getIntValueAccess().getValueINTTerminalRuleCall_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (editable?='editable'? features+=LabelFeature* children+=ConnectableElement*)
+	 */
+	protected void sequence_Label(EObject context, Label semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (key='layout' (value='horizontal' | value='vertical' | value='over'))
+	 *     (style=LineType conditional=FeatureConditional?)
 	 */
-	protected void sequence_LayoutFeature(EObject context, LayoutFeature semanticObject) {
+	protected void sequence_LineStyle(EObject context, LineStyle semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (expression=AtributeExpression? key='line-style' value=LineStyle)
+	 *     (width=INT conditional=FeatureConditional?)
 	 */
-	protected void sequence_LineFeature(EObject context, LineFeature semanticObject) {
+	protected void sequence_LineWidth(EObject context, LineWidth semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -462,7 +723,8 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *         style=ID? 
 	 *         icon=ID? 
 	 *         name=STRING? 
-	 *         (attributes+=Attribute | linefeatures+=LineFeature | colorfeatures+=ColorFeature | integerfeatures+=IntegerFeature)* 
+	 *         attributes+=Attribute* 
+	 *         features+=LinkFeature* 
 	 *         decorators+=Decorator*
 	 *     )
 	 */
@@ -473,37 +735,9 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         object=ID? 
-	 *         passX='-'? 
-	 *         X=INT 
-	 *         (formatX='%' | formatX='lf' | formatX='rg') 
-	 *         passY='-'? 
-	 *         Y=INT 
-	 *         (formatY='%' | formatY='up' | formatY='dw') 
-	 *         figures+=NodeFigure* 
-	 *         arrows+=ArrowAnchor*
-	 *     )
-	 */
-	protected void sequence_NodeAnchor(EObject context, NodeAnchor semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (layout=ContainerLayout? modelReference=[EReference|QualifiedName]? (value=INT (format='%' | format='px'))? figures+=NodeFigure+)
+	 *     (layout=ContainerLayout? modelReference=[EReference|QualifiedName]? (value=INT (format='%' | format='px'))? figures+=ConnectableElement+)
 	 */
 	protected void sequence_NodeContainer(EObject context, NodeContainer semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (option='main'? figure=FigureShape style=ID? features=FigureFeatures)
-	 */
-	protected void sequence_NodeFigure(EObject context, NodeFigure semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -516,10 +750,9 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *         style=ID? 
 	 *         icon=ID? 
 	 *         name=STRING? 
+	 *         mainFigure=ConnectableElement 
 	 *         attributes+=Attribute* 
-	 *         figures+=NodeFigure* 
-	 *         containers+=NodeContainer* 
-	 *         anchors+=NodeAnchor*
+	 *         anchors+=Anchor*
 	 *     )
 	 */
 	protected void sequence_Node(EObject context, Node semanticObject) {
@@ -529,39 +762,35 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (X=INT Y=INT)
+	 *     (x=INT y=INT conditional=FeatureConditional?)
 	 */
-	protected void sequence_PointFeature(EObject context, PointFeature semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.POINT_FEATURE__X) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.POINT_FEATURE__X));
-			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.POINT_FEATURE__Y) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.POINT_FEATURE__Y));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getPointFeatureAccess().getXINTTerminalRuleCall_2_0(), semanticObject.getX());
-		feeder.accept(grammarAccess.getPointFeatureAccess().getYINTTerminalRuleCall_4_0(), semanticObject.getY());
-		feeder.finish();
+	protected void sequence_Point(EObject context, Point semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (X=INT Y=INT)
+	 *     (
+	 *         (polygon?='polygon' | polyline?='polyline') 
+	 *         features+=Point 
+	 *         features+=Point 
+	 *         features+=Point* 
+	 *         features+=ConnectableElementFeature* 
+	 *         children+=ConnectableElement*
+	 *     )
 	 */
-	protected void sequence_PositionFeature(EObject context, PositionFeature semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.POSITION_FEATURE__X) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.POSITION_FEATURE__X));
-			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.POSITION_FEATURE__Y) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.POSITION_FEATURE__Y));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getPositionFeatureAccess().getXINTTerminalRuleCall_2_0(), semanticObject.getX());
-		feeder.accept(grammarAccess.getPositionFeatureAccess().getYINTTerminalRuleCall_4_0(), semanticObject.getY());
-		feeder.finish();
+	protected void sequence_Polyline(EObject context, Polyline semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (x=INT y=INT conditional=FeatureConditional?)
+	 */
+	protected void sequence_Position(EObject context, Position semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -580,37 +809,72 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getRGBAccess().getRINTTerminalRuleCall_2_0(), semanticObject.getR());
-		feeder.accept(grammarAccess.getRGBAccess().getGINTTerminalRuleCall_4_0(), semanticObject.getG());
-		feeder.accept(grammarAccess.getRGBAccess().getBINTTerminalRuleCall_6_0(), semanticObject.getB());
+		feeder.accept(grammarAccess.getRGBAccess().getRINTTerminalRuleCall_0_0(), semanticObject.getR());
+		feeder.accept(grammarAccess.getRGBAccess().getGINTTerminalRuleCall_2_0(), semanticObject.getG());
+		feeder.accept(grammarAccess.getRGBAccess().getBINTTerminalRuleCall_4_0(), semanticObject.getB());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (Width=INT Height=INT)
+	 *     ((rectangle?='rectangle' | square?='square') features+=RectangleFeature* children+=ConnectableElement*)
 	 */
-	protected void sequence_SizeFeature(EObject context, SizeFeature semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.SIZE_FEATURE__WIDTH) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.SIZE_FEATURE__WIDTH));
-			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.SIZE_FEATURE__HEIGHT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.SIZE_FEATURE__HEIGHT));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getSizeFeatureAccess().getWidthINTTerminalRuleCall_2_0(), semanticObject.getWidth());
-		feeder.accept(grammarAccess.getSizeFeatureAccess().getHeightINTTerminalRuleCall_4_0(), semanticObject.getHeight());
-		feeder.finish();
+	protected void sequence_Rectangle(EObject context, Rectangle semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (figure=StaticElement style=ID? features=FigureFeatures)
+	 *     (features+=ConnectableElementFeature* children+=ConnectableElement*)
 	 */
-	protected void sequence_StaticFigure(EObject context, StaticFigure semanticObject) {
+	protected void sequence_Rhombus(EObject context, Rhombus semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (width=INT height=INT conditional=FeatureConditional?)
+	 */
+	protected void sequence_Size(EObject context, Size semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (null?='null' | value=STRING)
+	 */
+	protected void sequence_StringValue(EObject context, StringValue semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID features+=Feature*)
+	 */
+	protected void sequence_Style(EObject context, Style semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     ((text=STRING | modelAttribute=[EAttribute|QualifiedName]) conditional=FeatureConditional?)
+	 */
+	protected void sequence_TextValue(EObject context, TextValue semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (percent=PERCENT conditional=FeatureConditional?)
+	 */
+	protected void sequence_Transparency(EObject context, Transparency semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -618,38 +882,11 @@ public class XDiagramSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Constraint:
 	 *     (
-	 *         expression=AtributeExpression? 
-	 *         (key='text-value' | key='font-name' | key='icon') 
-	 *         (value=STRING | (valueL=STRING attribute=ID) | (attribute=ID valueR=STRING) | attribute=ID | (valueL=STRING attribute=ID valueR=STRING))?
+	 *         importURI=STRING 
+	 *         imports+=ImportStatement 
+	 *         modelClass=[EClass|QualifiedName] 
+	 *         (nodes+=Node | links+=Link | styles+=Style | colors+=CustomColor | images+=ImageFile)*
 	 *     )
-	 */
-	protected void sequence_StringFeature(EObject context, StringFeature semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name=ID features=FigureFeatures)
-	 */
-	protected void sequence_Style(EObject context, Style semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.STYLE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.STYLE__NAME));
-			if(transientValues.isValueTransient(semanticObject, XdiagramPackage.Literals.STYLE__FEATURES) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XdiagramPackage.Literals.STYLE__FEATURES));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getStyleAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getStyleAccess().getFeaturesFigureFeaturesParserRuleCall_4_0(), semanticObject.getFeatures());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (importURI=STRING imports+=ImportStatement modelClass=[EClass|QualifiedName] styles+=Style* (nodes+=Node | links+=Link)*)
 	 */
 	protected void sequence_XDiagram(EObject context, XDiagram semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
