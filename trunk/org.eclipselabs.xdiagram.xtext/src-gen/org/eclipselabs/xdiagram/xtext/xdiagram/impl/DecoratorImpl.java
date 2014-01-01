@@ -2,12 +2,8 @@
  */
 package org.eclipselabs.xdiagram.xtext.xdiagram.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -15,12 +11,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
+import org.eclipselabs.xdiagram.xtext.xdiagram.ConnectableElement;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Decorator;
-import org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure;
-import org.eclipselabs.xdiagram.xtext.xdiagram.StaticFigure;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Label;
 import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
 
 /**
@@ -30,12 +23,12 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.DecoratorImpl#getPos <em>Pos</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.DecoratorImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.DecoratorImpl#isSource <em>Source</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.DecoratorImpl#isTarget <em>Target</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.DecoratorImpl#isMiddle <em>Middle</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.DecoratorImpl#getPlacingStatic <em>Placing Static</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.DecoratorImpl#getPlacingDynamic <em>Placing Dynamic</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.DecoratorImpl#getStaticElement <em>Static Element</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.DecoratorImpl#getLabel <em>Label</em>}</li>
  * </ul>
  * </p>
  *
@@ -44,24 +37,24 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
 public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decorator
 {
   /**
-   * The default value of the '{@link #getPos() <em>Pos</em>}' attribute.
+   * The default value of the '{@link #getPosition() <em>Position</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPos()
+   * @see #getPosition()
    * @generated
    * @ordered
    */
-  protected static final int POS_EDEFAULT = 0;
+  protected static final int POSITION_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getPos() <em>Pos</em>}' attribute.
+   * The cached value of the '{@link #getPosition() <em>Position</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPos()
+   * @see #getPosition()
    * @generated
    * @ordered
    */
-  protected int pos = POS_EDEFAULT;
+  protected int position = POSITION_EDEFAULT;
 
   /**
    * The default value of the '{@link #isSource() <em>Source</em>}' attribute.
@@ -124,24 +117,24 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
   protected boolean middle = MIDDLE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getPlacingStatic() <em>Placing Static</em>}' containment reference.
+   * The cached value of the '{@link #getStaticElement() <em>Static Element</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPlacingStatic()
+   * @see #getStaticElement()
    * @generated
    * @ordered
    */
-  protected StaticFigure placingStatic;
+  protected ConnectableElement staticElement;
 
   /**
-   * The cached value of the '{@link #getPlacingDynamic() <em>Placing Dynamic</em>}' containment reference list.
+   * The cached value of the '{@link #getLabel() <em>Label</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPlacingDynamic()
+   * @see #getLabel()
    * @generated
    * @ordered
    */
-  protected EList<DynamicFigure> placingDynamic;
+  protected Label label;
 
   /**
    * <!-- begin-user-doc -->
@@ -169,9 +162,9 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getPos()
+  public int getPosition()
   {
-    return pos;
+    return position;
   }
 
   /**
@@ -179,12 +172,12 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPos(int newPos)
+  public void setPosition(int newPosition)
   {
-    int oldPos = pos;
-    pos = newPos;
+    int oldPosition = position;
+    position = newPosition;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.DECORATOR__POS, oldPos, pos));
+      eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.DECORATOR__POSITION, oldPosition, position));
   }
 
   /**
@@ -261,9 +254,9 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
    * <!-- end-user-doc -->
    * @generated
    */
-  public StaticFigure getPlacingStatic()
+  public ConnectableElement getStaticElement()
   {
-    return placingStatic;
+    return staticElement;
   }
 
   /**
@@ -271,13 +264,13 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetPlacingStatic(StaticFigure newPlacingStatic, NotificationChain msgs)
+  public NotificationChain basicSetStaticElement(ConnectableElement newStaticElement, NotificationChain msgs)
   {
-    StaticFigure oldPlacingStatic = placingStatic;
-    placingStatic = newPlacingStatic;
+    ConnectableElement oldStaticElement = staticElement;
+    staticElement = newStaticElement;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XdiagramPackage.DECORATOR__PLACING_STATIC, oldPlacingStatic, newPlacingStatic);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XdiagramPackage.DECORATOR__STATIC_ELEMENT, oldStaticElement, newStaticElement);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -288,20 +281,20 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPlacingStatic(StaticFigure newPlacingStatic)
+  public void setStaticElement(ConnectableElement newStaticElement)
   {
-    if (newPlacingStatic != placingStatic)
+    if (newStaticElement != staticElement)
     {
       NotificationChain msgs = null;
-      if (placingStatic != null)
-        msgs = ((InternalEObject)placingStatic).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XdiagramPackage.DECORATOR__PLACING_STATIC, null, msgs);
-      if (newPlacingStatic != null)
-        msgs = ((InternalEObject)newPlacingStatic).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XdiagramPackage.DECORATOR__PLACING_STATIC, null, msgs);
-      msgs = basicSetPlacingStatic(newPlacingStatic, msgs);
+      if (staticElement != null)
+        msgs = ((InternalEObject)staticElement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XdiagramPackage.DECORATOR__STATIC_ELEMENT, null, msgs);
+      if (newStaticElement != null)
+        msgs = ((InternalEObject)newStaticElement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XdiagramPackage.DECORATOR__STATIC_ELEMENT, null, msgs);
+      msgs = basicSetStaticElement(newStaticElement, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.DECORATOR__PLACING_STATIC, newPlacingStatic, newPlacingStatic));
+      eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.DECORATOR__STATIC_ELEMENT, newStaticElement, newStaticElement));
   }
 
   /**
@@ -309,13 +302,47 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<DynamicFigure> getPlacingDynamic()
+  public Label getLabel()
   {
-    if (placingDynamic == null)
+    return label;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetLabel(Label newLabel, NotificationChain msgs)
+  {
+    Label oldLabel = label;
+    label = newLabel;
+    if (eNotificationRequired())
     {
-      placingDynamic = new EObjectContainmentEList<DynamicFigure>(DynamicFigure.class, this, XdiagramPackage.DECORATOR__PLACING_DYNAMIC);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XdiagramPackage.DECORATOR__LABEL, oldLabel, newLabel);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return placingDynamic;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLabel(Label newLabel)
+  {
+    if (newLabel != label)
+    {
+      NotificationChain msgs = null;
+      if (label != null)
+        msgs = ((InternalEObject)label).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XdiagramPackage.DECORATOR__LABEL, null, msgs);
+      if (newLabel != null)
+        msgs = ((InternalEObject)newLabel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XdiagramPackage.DECORATOR__LABEL, null, msgs);
+      msgs = basicSetLabel(newLabel, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.DECORATOR__LABEL, newLabel, newLabel));
   }
 
   /**
@@ -328,10 +355,10 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
   {
     switch (featureID)
     {
-      case XdiagramPackage.DECORATOR__PLACING_STATIC:
-        return basicSetPlacingStatic(null, msgs);
-      case XdiagramPackage.DECORATOR__PLACING_DYNAMIC:
-        return ((InternalEList<?>)getPlacingDynamic()).basicRemove(otherEnd, msgs);
+      case XdiagramPackage.DECORATOR__STATIC_ELEMENT:
+        return basicSetStaticElement(null, msgs);
+      case XdiagramPackage.DECORATOR__LABEL:
+        return basicSetLabel(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -346,18 +373,18 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
   {
     switch (featureID)
     {
-      case XdiagramPackage.DECORATOR__POS:
-        return getPos();
+      case XdiagramPackage.DECORATOR__POSITION:
+        return getPosition();
       case XdiagramPackage.DECORATOR__SOURCE:
         return isSource();
       case XdiagramPackage.DECORATOR__TARGET:
         return isTarget();
       case XdiagramPackage.DECORATOR__MIDDLE:
         return isMiddle();
-      case XdiagramPackage.DECORATOR__PLACING_STATIC:
-        return getPlacingStatic();
-      case XdiagramPackage.DECORATOR__PLACING_DYNAMIC:
-        return getPlacingDynamic();
+      case XdiagramPackage.DECORATOR__STATIC_ELEMENT:
+        return getStaticElement();
+      case XdiagramPackage.DECORATOR__LABEL:
+        return getLabel();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -367,14 +394,13 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case XdiagramPackage.DECORATOR__POS:
-        setPos((Integer)newValue);
+      case XdiagramPackage.DECORATOR__POSITION:
+        setPosition((Integer)newValue);
         return;
       case XdiagramPackage.DECORATOR__SOURCE:
         setSource((Boolean)newValue);
@@ -385,12 +411,11 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
       case XdiagramPackage.DECORATOR__MIDDLE:
         setMiddle((Boolean)newValue);
         return;
-      case XdiagramPackage.DECORATOR__PLACING_STATIC:
-        setPlacingStatic((StaticFigure)newValue);
+      case XdiagramPackage.DECORATOR__STATIC_ELEMENT:
+        setStaticElement((ConnectableElement)newValue);
         return;
-      case XdiagramPackage.DECORATOR__PLACING_DYNAMIC:
-        getPlacingDynamic().clear();
-        getPlacingDynamic().addAll((Collection<? extends DynamicFigure>)newValue);
+      case XdiagramPackage.DECORATOR__LABEL:
+        setLabel((Label)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -406,8 +431,8 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
   {
     switch (featureID)
     {
-      case XdiagramPackage.DECORATOR__POS:
-        setPos(POS_EDEFAULT);
+      case XdiagramPackage.DECORATOR__POSITION:
+        setPosition(POSITION_EDEFAULT);
         return;
       case XdiagramPackage.DECORATOR__SOURCE:
         setSource(SOURCE_EDEFAULT);
@@ -418,11 +443,11 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
       case XdiagramPackage.DECORATOR__MIDDLE:
         setMiddle(MIDDLE_EDEFAULT);
         return;
-      case XdiagramPackage.DECORATOR__PLACING_STATIC:
-        setPlacingStatic((StaticFigure)null);
+      case XdiagramPackage.DECORATOR__STATIC_ELEMENT:
+        setStaticElement((ConnectableElement)null);
         return;
-      case XdiagramPackage.DECORATOR__PLACING_DYNAMIC:
-        getPlacingDynamic().clear();
+      case XdiagramPackage.DECORATOR__LABEL:
+        setLabel((Label)null);
         return;
     }
     super.eUnset(featureID);
@@ -438,18 +463,18 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
   {
     switch (featureID)
     {
-      case XdiagramPackage.DECORATOR__POS:
-        return pos != POS_EDEFAULT;
+      case XdiagramPackage.DECORATOR__POSITION:
+        return position != POSITION_EDEFAULT;
       case XdiagramPackage.DECORATOR__SOURCE:
         return source != SOURCE_EDEFAULT;
       case XdiagramPackage.DECORATOR__TARGET:
         return target != TARGET_EDEFAULT;
       case XdiagramPackage.DECORATOR__MIDDLE:
         return middle != MIDDLE_EDEFAULT;
-      case XdiagramPackage.DECORATOR__PLACING_STATIC:
-        return placingStatic != null;
-      case XdiagramPackage.DECORATOR__PLACING_DYNAMIC:
-        return placingDynamic != null && !placingDynamic.isEmpty();
+      case XdiagramPackage.DECORATOR__STATIC_ELEMENT:
+        return staticElement != null;
+      case XdiagramPackage.DECORATOR__LABEL:
+        return label != null;
     }
     return super.eIsSet(featureID);
   }
@@ -465,8 +490,8 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (pos: ");
-    result.append(pos);
+    result.append(" (position: ");
+    result.append(position);
     result.append(", source: ");
     result.append(source);
     result.append(", target: ");

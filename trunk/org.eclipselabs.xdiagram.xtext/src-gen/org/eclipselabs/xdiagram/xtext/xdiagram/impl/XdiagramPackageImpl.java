@@ -10,37 +10,59 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipselabs.xdiagram.xtext.xdiagram.AlignFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.ArrowAnchor;
-import org.eclipselabs.xdiagram.xtext.xdiagram.AtributeExpression;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Anchor;
+import org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraint;
+import org.eclipselabs.xdiagram.xtext.xdiagram.AnchorConstraintType;
 import org.eclipselabs.xdiagram.xtext.xdiagram.AtributeValue;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Attribute;
-import org.eclipselabs.xdiagram.xtext.xdiagram.BooleanFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.CenterFeature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Background;
+import org.eclipselabs.xdiagram.xtext.xdiagram.BooleanLiteral;
+import org.eclipselabs.xdiagram.xtext.xdiagram.BooleanValue;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Color;
 import org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.ConnectableElement;
 import org.eclipselabs.xdiagram.xtext.xdiagram.ContainerLayout;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Contains;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Corner;
+import org.eclipselabs.xdiagram.xtext.xdiagram.CustomColor;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Decorator;
+import org.eclipselabs.xdiagram.xtext.xdiagram.DefaultColor;
 import org.eclipselabs.xdiagram.xtext.xdiagram.DiagramElement;
-import org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure;
-import org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures;
-import org.eclipselabs.xdiagram.xtext.xdiagram.FigureShape;
-import org.eclipselabs.xdiagram.xtext.xdiagram.GradientFeature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.DoubleValue;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Element;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Ellipse;
+import org.eclipselabs.xdiagram.xtext.xdiagram.EnumValue;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Feature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.FeatureConditional;
+import org.eclipselabs.xdiagram.xtext.xdiagram.FontFace;
+import org.eclipselabs.xdiagram.xtext.xdiagram.FontFaceType;
+import org.eclipselabs.xdiagram.xtext.xdiagram.FontSize;
+import org.eclipselabs.xdiagram.xtext.xdiagram.FontStyle;
+import org.eclipselabs.xdiagram.xtext.xdiagram.FontStyleType;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Foreground;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Image;
+import org.eclipselabs.xdiagram.xtext.xdiagram.ImageFile;
 import org.eclipselabs.xdiagram.xtext.xdiagram.ImportStatement;
-import org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.LayoutFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.LineFeature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.IntValue;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Label;
+import org.eclipselabs.xdiagram.xtext.xdiagram.LineStyle;
+import org.eclipselabs.xdiagram.xtext.xdiagram.LineType;
+import org.eclipselabs.xdiagram.xtext.xdiagram.LineWidth;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Link;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Node;
-import org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor;
 import org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer;
-import org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure;
-import org.eclipselabs.xdiagram.xtext.xdiagram.PointFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.PositionFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.SizeFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.StaticFigure;
-import org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Operator;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Point;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Polyline;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Position;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Rectangle;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Rhombus;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Size;
+import org.eclipselabs.xdiagram.xtext.xdiagram.StringValue;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Style;
-import org.eclipselabs.xdiagram.xtext.xdiagram.StyleFeature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.TextValue;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Transparency;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Value;
 import org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram;
 import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramFactory;
 import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
@@ -100,13 +122,6 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass nodeFigureEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass nodeContainerEClass = null;
 
   /**
@@ -128,98 +143,28 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass dynamicFigureEClass = null;
+  private EClass connectableElementEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass staticFigureEClass = null;
+  private EClass anchorEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass nodeAnchorEClass = null;
+  private EClass anchorConstraintEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass arrowAnchorEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass figureFeaturesEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass styleFeatureEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass layoutFeatureEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass centerFeatureEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass alignFeatureEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass gradientFeatureEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass pointFeatureEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass sizeFeatureEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass positionFeatureEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass colorFeatureEClass = null;
+  private EClass elementEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -233,35 +178,112 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass integerFeatureEClass = null;
+  private EClass imageFileEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass stringFeatureEClass = null;
+  private EClass colorEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass booleanFeatureEClass = null;
+  private EClass customColorEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass lineFeatureEClass = null;
+  private EClass rectangleEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass atributeExpressionEClass = null;
+  private EClass featureEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rhombusEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ellipseEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass polylineEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass featureConditionalEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass containsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass valueEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass intValueEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass doubleValueEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass stringValueEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass booleanValueEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass enumValueEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -275,6 +297,118 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass labelEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass imageEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass colorFeatureEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass foregroundEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass backgroundEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass transparencyEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sizeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pointEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass positionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cornerEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass textValueEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fontFaceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fontSizeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fontStyleEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass lineStyleEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass lineWidthEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EEnum containerLayoutEEnum = null;
 
   /**
@@ -282,7 +416,49 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EEnum figureShapeEEnum = null;
+  private EEnum anchorConstraintTypeEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum defaultColorEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum operatorEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum booleanLiteralEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum fontFaceTypeEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum fontStyleTypeEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum lineTypeEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -392,7 +568,7 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Styles()
+  public EReference getXDiagram_Nodes()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(3);
   }
@@ -402,7 +578,7 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Nodes()
+  public EReference getXDiagram_Links()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(4);
   }
@@ -412,9 +588,29 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Links()
+  public EReference getXDiagram_Styles()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getXDiagram_Colors()
+  {
+    return (EReference)xDiagramEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getXDiagram_Images()
+  {
+    return (EReference)xDiagramEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -552,7 +748,7 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getNode_Figures()
+  public EReference getNode_MainFigure()
   {
     return (EReference)nodeEClass.getEStructuralFeatures().get(1);
   }
@@ -562,19 +758,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getNode_Containers()
-  {
-    return (EReference)nodeEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getNode_Anchors()
   {
-    return (EReference)nodeEClass.getEStructuralFeatures().get(3);
+    return (EReference)nodeEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -605,56 +791,6 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
   public EReference getAttribute_Value()
   {
     return (EReference)attributeEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getNodeFigure()
-  {
-    return nodeFigureEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getNodeFigure_Option()
-  {
-    return (EAttribute)nodeFigureEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getNodeFigure_Figure()
-  {
-    return (EAttribute)nodeFigureEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getNodeFigure_Style()
-  {
-    return (EAttribute)nodeFigureEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getNodeFigure_Features()
-  {
-    return (EReference)nodeFigureEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -782,39 +918,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getLink_Linefeatures()
-  {
-    return (EReference)linkEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLink_Colorfeatures()
-  {
-    return (EReference)linkEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLink_Integerfeatures()
-  {
-    return (EReference)linkEClass.getEStructuralFeatures().get(7);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getLink_Decorators()
   {
-    return (EReference)linkEClass.getEStructuralFeatures().get(8);
+    return (EReference)linkEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -832,7 +938,7 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDecorator_Pos()
+  public EAttribute getDecorator_Position()
   {
     return (EAttribute)decoratorEClass.getEStructuralFeatures().get(0);
   }
@@ -872,7 +978,7 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDecorator_PlacingStatic()
+  public EReference getDecorator_StaticElement()
   {
     return (EReference)decoratorEClass.getEStructuralFeatures().get(4);
   }
@@ -882,7 +988,7 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDecorator_PlacingDynamic()
+  public EReference getDecorator_Label()
   {
     return (EReference)decoratorEClass.getEStructuralFeatures().get(5);
   }
@@ -892,9 +998,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getDynamicFigure()
+  public EClass getConnectableElement()
   {
-    return dynamicFigureEClass;
+    return connectableElementEClass;
   }
 
   /**
@@ -902,9 +1008,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDynamicFigure_Figure()
+  public EReference getConnectableElement_Children()
   {
-    return (EAttribute)dynamicFigureEClass.getEStructuralFeatures().get(0);
+    return (EReference)connectableElementEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -912,9 +1018,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDynamicFigure_Features()
+  public EClass getAnchor()
   {
-    return (EReference)dynamicFigureEClass.getEStructuralFeatures().get(1);
+    return anchorEClass;
   }
 
   /**
@@ -922,9 +1028,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getStaticFigure()
+  public EAttribute getAnchor_Object()
   {
-    return staticFigureEClass;
+    return (EAttribute)anchorEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -932,9 +1038,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStaticFigure_Figure()
+  public EAttribute getAnchor_PassX()
   {
-    return (EAttribute)staticFigureEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)anchorEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -942,9 +1048,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStaticFigure_Style()
+  public EAttribute getAnchor_X()
   {
-    return (EAttribute)staticFigureEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)anchorEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -952,9 +1058,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getStaticFigure_Features()
+  public EAttribute getAnchor_FormatX()
   {
-    return (EReference)staticFigureEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)anchorEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -962,9 +1068,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getNodeAnchor()
+  public EAttribute getAnchor_PassY()
   {
-    return nodeAnchorEClass;
+    return (EAttribute)anchorEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -972,9 +1078,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getNodeAnchor_Object()
+  public EAttribute getAnchor_Y()
   {
-    return (EAttribute)nodeAnchorEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)anchorEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -982,9 +1088,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getNodeAnchor_PassX()
+  public EAttribute getAnchor_FormatY()
   {
-    return (EAttribute)nodeAnchorEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)anchorEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -992,9 +1098,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getNodeAnchor_X()
+  public EReference getAnchor_Figures()
   {
-    return (EAttribute)nodeAnchorEClass.getEStructuralFeatures().get(2);
+    return (EReference)anchorEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -1002,9 +1108,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getNodeAnchor_FormatX()
+  public EReference getAnchor_Constraints()
   {
-    return (EAttribute)nodeAnchorEClass.getEStructuralFeatures().get(3);
+    return (EReference)anchorEClass.getEStructuralFeatures().get(8);
   }
 
   /**
@@ -1012,9 +1118,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getNodeAnchor_PassY()
+  public EClass getAnchorConstraint()
   {
-    return (EAttribute)nodeAnchorEClass.getEStructuralFeatures().get(4);
+    return anchorConstraintEClass;
   }
 
   /**
@@ -1022,9 +1128,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getNodeAnchor_Y()
+  public EAttribute getAnchorConstraint_Type()
   {
-    return (EAttribute)nodeAnchorEClass.getEStructuralFeatures().get(5);
+    return (EAttribute)anchorConstraintEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1032,9 +1138,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getNodeAnchor_FormatY()
+  public EAttribute getAnchorConstraint_Reference()
   {
-    return (EAttribute)nodeAnchorEClass.getEStructuralFeatures().get(6);
+    return (EAttribute)anchorConstraintEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1042,9 +1148,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getNodeAnchor_Figures()
+  public EAttribute getAnchorConstraint_Max()
   {
-    return (EReference)nodeAnchorEClass.getEStructuralFeatures().get(7);
+    return (EAttribute)anchorConstraintEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1052,9 +1158,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getNodeAnchor_Arrows()
+  public EClass getElement()
   {
-    return (EReference)nodeAnchorEClass.getEStructuralFeatures().get(8);
+    return elementEClass;
   }
 
   /**
@@ -1062,439 +1168,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getArrowAnchor()
+  public EReference getElement_Features()
   {
-    return arrowAnchorEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getArrowAnchor_Reference()
-  {
-    return (EAttribute)arrowAnchorEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getArrowAnchor_Type()
-  {
-    return (EAttribute)arrowAnchorEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getArrowAnchor_N()
-  {
-    return (EAttribute)arrowAnchorEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getFigureFeatures()
-  {
-    return figureFeaturesEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFigureFeatures_Linefeatures()
-  {
-    return (EReference)figureFeaturesEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFigureFeatures_Centerfeatures()
-  {
-    return (EReference)figureFeaturesEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFigureFeatures_Alignfeatures()
-  {
-    return (EReference)figureFeaturesEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFigureFeatures_Gradientfeatures()
-  {
-    return (EReference)figureFeaturesEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFigureFeatures_Pointfeatures()
-  {
-    return (EReference)figureFeaturesEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFigureFeatures_Sizefeatures()
-  {
-    return (EReference)figureFeaturesEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFigureFeatures_Positionfeatures()
-  {
-    return (EReference)figureFeaturesEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFigureFeatures_Colorfeatures()
-  {
-    return (EReference)figureFeaturesEClass.getEStructuralFeatures().get(7);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFigureFeatures_Integerfeatures()
-  {
-    return (EReference)figureFeaturesEClass.getEStructuralFeatures().get(8);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFigureFeatures_Booleanfeatures()
-  {
-    return (EReference)figureFeaturesEClass.getEStructuralFeatures().get(9);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFigureFeatures_Stringfeatures()
-  {
-    return (EReference)figureFeaturesEClass.getEStructuralFeatures().get(10);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getStyleFeature()
-  {
-    return styleFeatureEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getStyleFeature_Key()
-  {
-    return (EAttribute)styleFeatureEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getStyleFeature_Value()
-  {
-    return (EAttribute)styleFeatureEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getLayoutFeature()
-  {
-    return layoutFeatureEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getCenterFeature()
-  {
-    return centerFeatureEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getAlignFeature()
-  {
-    return alignFeatureEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getAlignFeature_Key()
-  {
-    return (EAttribute)alignFeatureEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getAlignFeature_Value()
-  {
-    return (EAttribute)alignFeatureEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getGradientFeature()
-  {
-    return gradientFeatureEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getGradientFeature_Key()
-  {
-    return (EAttribute)gradientFeatureEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getGradientFeature_Value()
-  {
-    return (EAttribute)gradientFeatureEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPointFeature()
-  {
-    return pointFeatureEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPointFeature_X()
-  {
-    return (EAttribute)pointFeatureEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPointFeature_Y()
-  {
-    return (EAttribute)pointFeatureEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getSizeFeature()
-  {
-    return sizeFeatureEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getSizeFeature_Width()
-  {
-    return (EAttribute)sizeFeatureEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getSizeFeature_Height()
-  {
-    return (EAttribute)sizeFeatureEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPositionFeature()
-  {
-    return positionFeatureEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPositionFeature_X()
-  {
-    return (EAttribute)positionFeatureEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPositionFeature_Y()
-  {
-    return (EAttribute)positionFeatureEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getColorFeature()
-  {
-    return colorFeatureEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getColorFeature_Expression()
-  {
-    return (EReference)colorFeatureEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getColorFeature_Key()
-  {
-    return (EAttribute)colorFeatureEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getColorFeature_Value()
-  {
-    return (EAttribute)colorFeatureEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getColorFeature_Rgb()
-  {
-    return (EReference)colorFeatureEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getColorFeature_Atribute()
-  {
-    return (EAttribute)colorFeatureEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getColorFeature_Operator()
-  {
-    return (EAttribute)colorFeatureEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getColorFeature_Option()
-  {
-    return (EAttribute)colorFeatureEClass.getEStructuralFeatures().get(6);
+    return (EReference)elementEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1542,9 +1218,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getIntegerFeature()
+  public EClass getImageFile()
   {
-    return integerFeatureEClass;
+    return imageFileEClass;
   }
 
   /**
@@ -1552,9 +1228,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getIntegerFeature_Expression()
+  public EAttribute getImageFile_Name()
   {
-    return (EReference)integerFeatureEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)imageFileEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1562,9 +1238,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getIntegerFeature_Key()
+  public EAttribute getImageFile_Src()
   {
-    return (EAttribute)integerFeatureEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)imageFileEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1572,9 +1248,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getIntegerFeature_Value()
+  public EClass getColor()
   {
-    return (EAttribute)integerFeatureEClass.getEStructuralFeatures().get(2);
+    return colorEClass;
   }
 
   /**
@@ -1582,9 +1258,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getStringFeature()
+  public EAttribute getColor_Default()
   {
-    return stringFeatureEClass;
+    return (EAttribute)colorEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1592,9 +1268,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getStringFeature_Expression()
+  public EReference getColor_Custom()
   {
-    return (EReference)stringFeatureEClass.getEStructuralFeatures().get(0);
+    return (EReference)colorEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1602,9 +1278,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStringFeature_Key()
+  public EClass getCustomColor()
   {
-    return (EAttribute)stringFeatureEClass.getEStructuralFeatures().get(1);
+    return customColorEClass;
   }
 
   /**
@@ -1612,9 +1288,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStringFeature_Value()
+  public EAttribute getCustomColor_Name()
   {
-    return (EAttribute)stringFeatureEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)customColorEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1622,9 +1298,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStringFeature_ValueL()
+  public EReference getCustomColor_Rgb()
   {
-    return (EAttribute)stringFeatureEClass.getEStructuralFeatures().get(3);
+    return (EReference)customColorEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1632,9 +1308,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStringFeature_Attribute()
+  public EClass getRectangle()
   {
-    return (EAttribute)stringFeatureEClass.getEStructuralFeatures().get(4);
+    return rectangleEClass;
   }
 
   /**
@@ -1642,9 +1318,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStringFeature_ValueR()
+  public EAttribute getRectangle_Rectangle()
   {
-    return (EAttribute)stringFeatureEClass.getEStructuralFeatures().get(5);
+    return (EAttribute)rectangleEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1652,9 +1328,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getBooleanFeature()
+  public EAttribute getRectangle_Square()
   {
-    return booleanFeatureEClass;
+    return (EAttribute)rectangleEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1662,9 +1338,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getBooleanFeature_Expression()
+  public EClass getFeature()
   {
-    return (EReference)booleanFeatureEClass.getEStructuralFeatures().get(0);
+    return featureEClass;
   }
 
   /**
@@ -1672,9 +1348,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getBooleanFeature_Key()
+  public EReference getFeature_Conditional()
   {
-    return (EAttribute)booleanFeatureEClass.getEStructuralFeatures().get(1);
+    return (EReference)featureEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1682,9 +1358,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getBooleanFeature_Value()
+  public EClass getRhombus()
   {
-    return (EAttribute)booleanFeatureEClass.getEStructuralFeatures().get(2);
+    return rhombusEClass;
   }
 
   /**
@@ -1692,9 +1368,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getLineFeature()
+  public EClass getEllipse()
   {
-    return lineFeatureEClass;
+    return ellipseEClass;
   }
 
   /**
@@ -1702,9 +1378,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getLineFeature_Expression()
+  public EAttribute getEllipse_Ellipse()
   {
-    return (EReference)lineFeatureEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)ellipseEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1712,9 +1388,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getLineFeature_Key()
+  public EAttribute getEllipse_Circle()
   {
-    return (EAttribute)lineFeatureEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)ellipseEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1722,9 +1398,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getLineFeature_Value()
+  public EClass getPolyline()
   {
-    return (EAttribute)lineFeatureEClass.getEStructuralFeatures().get(2);
+    return polylineEClass;
   }
 
   /**
@@ -1732,9 +1408,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getAtributeExpression()
+  public EAttribute getPolyline_Polygon()
   {
-    return atributeExpressionEClass;
+    return (EAttribute)polylineEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1742,9 +1418,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getAtributeExpression_Key()
+  public EAttribute getPolyline_Polyline()
   {
-    return (EAttribute)atributeExpressionEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)polylineEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1752,9 +1428,9 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getAtributeExpression_Operator()
+  public EClass getFeatureConditional()
   {
-    return (EAttribute)atributeExpressionEClass.getEStructuralFeatures().get(1);
+    return featureConditionalEClass;
   }
 
   /**
@@ -1762,9 +1438,179 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAtributeExpression_Value()
+  public EReference getFeatureConditional_ModelAttribute()
   {
-    return (EReference)atributeExpressionEClass.getEStructuralFeatures().get(2);
+    return (EReference)featureConditionalEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFeatureConditional_Operator()
+  {
+    return (EAttribute)featureConditionalEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFeatureConditional_Value()
+  {
+    return (EReference)featureConditionalEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getContains()
+  {
+    return containsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getContains_ModelReference()
+  {
+    return (EReference)containsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getValue()
+  {
+    return valueEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIntValue()
+  {
+    return intValueEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getIntValue_Value()
+  {
+    return (EAttribute)intValueEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDoubleValue()
+  {
+    return doubleValueEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDoubleValue_ValueInt()
+  {
+    return (EAttribute)doubleValueEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDoubleValue_ValueDecimal()
+  {
+    return (EAttribute)doubleValueEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getStringValue()
+  {
+    return stringValueEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getStringValue_Null()
+  {
+    return (EAttribute)stringValueEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getStringValue_Value()
+  {
+    return (EAttribute)stringValueEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBooleanValue()
+  {
+    return booleanValueEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBooleanValue_Value()
+  {
+    return (EAttribute)booleanValueEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getEnumValue()
+  {
+    return enumValueEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEnumValue_Name()
+  {
+    return (EAttribute)enumValueEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1862,6 +1708,346 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getLabel()
+  {
+    return labelEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLabel_Editable()
+  {
+    return (EAttribute)labelEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getImage()
+  {
+    return imageEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getImage_Image()
+  {
+    return (EReference)imageEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getColorFeature()
+  {
+    return colorFeatureEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getColorFeature_Color()
+  {
+    return (EReference)colorFeatureEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getForeground()
+  {
+    return foregroundEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBackground()
+  {
+    return backgroundEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTransparency()
+  {
+    return transparencyEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTransparency_Percent()
+  {
+    return (EAttribute)transparencyEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSize()
+  {
+    return sizeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSize_Width()
+  {
+    return (EAttribute)sizeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSize_Height()
+  {
+    return (EAttribute)sizeEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPoint()
+  {
+    return pointEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPoint_X()
+  {
+    return (EAttribute)pointEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPoint_Y()
+  {
+    return (EAttribute)pointEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPosition()
+  {
+    return positionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPosition_X()
+  {
+    return (EAttribute)positionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPosition_Y()
+  {
+    return (EAttribute)positionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCorner()
+  {
+    return cornerEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCorner_Angle()
+  {
+    return (EAttribute)cornerEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTextValue()
+  {
+    return textValueEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTextValue_Text()
+  {
+    return (EAttribute)textValueEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTextValue_ModelAttribute()
+  {
+    return (EReference)textValueEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFontFace()
+  {
+    return fontFaceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFontFace_Face()
+  {
+    return (EAttribute)fontFaceEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFontSize()
+  {
+    return fontSizeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFontSize_Size()
+  {
+    return (EAttribute)fontSizeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFontStyle()
+  {
+    return fontStyleEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFontStyle_Styles()
+  {
+    return (EAttribute)fontStyleEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLineStyle()
+  {
+    return lineStyleEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLineStyle_Style()
+  {
+    return (EAttribute)lineStyleEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLineWidth()
+  {
+    return lineWidthEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLineWidth_Width()
+  {
+    return (EAttribute)lineWidthEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getContainerLayout()
   {
     return containerLayoutEEnum;
@@ -1872,9 +2058,69 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EEnum getFigureShape()
+  public EEnum getAnchorConstraintType()
   {
-    return figureShapeEEnum;
+    return anchorConstraintTypeEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getDefaultColor()
+  {
+    return defaultColorEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getOperator()
+  {
+    return operatorEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getBooleanLiteral()
+  {
+    return booleanLiteralEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getFontFaceType()
+  {
+    return fontFaceTypeEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getFontStyleType()
+  {
+    return fontStyleTypeEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getLineType()
+  {
+    return lineTypeEEnum;
   }
 
   /**
@@ -1911,9 +2157,11 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
     createEAttribute(xDiagramEClass, XDIAGRAM__IMPORT_URI);
     createEReference(xDiagramEClass, XDIAGRAM__IMPORTS);
     createEReference(xDiagramEClass, XDIAGRAM__MODEL_CLASS);
-    createEReference(xDiagramEClass, XDIAGRAM__STYLES);
     createEReference(xDiagramEClass, XDIAGRAM__NODES);
     createEReference(xDiagramEClass, XDIAGRAM__LINKS);
+    createEReference(xDiagramEClass, XDIAGRAM__STYLES);
+    createEReference(xDiagramEClass, XDIAGRAM__COLORS);
+    createEReference(xDiagramEClass, XDIAGRAM__IMAGES);
 
     importStatementEClass = createEClass(IMPORT_STATEMENT);
     createEAttribute(importStatementEClass, IMPORT_STATEMENT__IMPORTED_NAMESPACE);
@@ -1931,19 +2179,12 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
 
     nodeEClass = createEClass(NODE);
     createEAttribute(nodeEClass, NODE__RESIZABLE);
-    createEReference(nodeEClass, NODE__FIGURES);
-    createEReference(nodeEClass, NODE__CONTAINERS);
+    createEReference(nodeEClass, NODE__MAIN_FIGURE);
     createEReference(nodeEClass, NODE__ANCHORS);
 
     attributeEClass = createEClass(ATTRIBUTE);
     createEAttribute(attributeEClass, ATTRIBUTE__KEY);
     createEReference(attributeEClass, ATTRIBUTE__VALUE);
-
-    nodeFigureEClass = createEClass(NODE_FIGURE);
-    createEAttribute(nodeFigureEClass, NODE_FIGURE__OPTION);
-    createEAttribute(nodeFigureEClass, NODE_FIGURE__FIGURE);
-    createEAttribute(nodeFigureEClass, NODE_FIGURE__STYLE);
-    createEReference(nodeFigureEClass, NODE_FIGURE__FEATURES);
 
     nodeContainerEClass = createEClass(NODE_CONTAINER);
     createEAttribute(nodeContainerEClass, NODE_CONTAINER__LAYOUT);
@@ -1958,126 +2199,98 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
     createEReference(linkEClass, LINK__SOURCE_REFERENCE);
     createEReference(linkEClass, LINK__TARGET_REFERENCE);
     createEAttribute(linkEClass, LINK__MANHATTAN);
-    createEReference(linkEClass, LINK__LINEFEATURES);
-    createEReference(linkEClass, LINK__COLORFEATURES);
-    createEReference(linkEClass, LINK__INTEGERFEATURES);
     createEReference(linkEClass, LINK__DECORATORS);
 
     decoratorEClass = createEClass(DECORATOR);
-    createEAttribute(decoratorEClass, DECORATOR__POS);
+    createEAttribute(decoratorEClass, DECORATOR__POSITION);
     createEAttribute(decoratorEClass, DECORATOR__SOURCE);
     createEAttribute(decoratorEClass, DECORATOR__TARGET);
     createEAttribute(decoratorEClass, DECORATOR__MIDDLE);
-    createEReference(decoratorEClass, DECORATOR__PLACING_STATIC);
-    createEReference(decoratorEClass, DECORATOR__PLACING_DYNAMIC);
+    createEReference(decoratorEClass, DECORATOR__STATIC_ELEMENT);
+    createEReference(decoratorEClass, DECORATOR__LABEL);
 
-    dynamicFigureEClass = createEClass(DYNAMIC_FIGURE);
-    createEAttribute(dynamicFigureEClass, DYNAMIC_FIGURE__FIGURE);
-    createEReference(dynamicFigureEClass, DYNAMIC_FIGURE__FEATURES);
+    connectableElementEClass = createEClass(CONNECTABLE_ELEMENT);
+    createEReference(connectableElementEClass, CONNECTABLE_ELEMENT__CHILDREN);
 
-    staticFigureEClass = createEClass(STATIC_FIGURE);
-    createEAttribute(staticFigureEClass, STATIC_FIGURE__FIGURE);
-    createEAttribute(staticFigureEClass, STATIC_FIGURE__STYLE);
-    createEReference(staticFigureEClass, STATIC_FIGURE__FEATURES);
+    anchorEClass = createEClass(ANCHOR);
+    createEAttribute(anchorEClass, ANCHOR__OBJECT);
+    createEAttribute(anchorEClass, ANCHOR__PASS_X);
+    createEAttribute(anchorEClass, ANCHOR__X);
+    createEAttribute(anchorEClass, ANCHOR__FORMAT_X);
+    createEAttribute(anchorEClass, ANCHOR__PASS_Y);
+    createEAttribute(anchorEClass, ANCHOR__Y);
+    createEAttribute(anchorEClass, ANCHOR__FORMAT_Y);
+    createEReference(anchorEClass, ANCHOR__FIGURES);
+    createEReference(anchorEClass, ANCHOR__CONSTRAINTS);
 
-    nodeAnchorEClass = createEClass(NODE_ANCHOR);
-    createEAttribute(nodeAnchorEClass, NODE_ANCHOR__OBJECT);
-    createEAttribute(nodeAnchorEClass, NODE_ANCHOR__PASS_X);
-    createEAttribute(nodeAnchorEClass, NODE_ANCHOR__X);
-    createEAttribute(nodeAnchorEClass, NODE_ANCHOR__FORMAT_X);
-    createEAttribute(nodeAnchorEClass, NODE_ANCHOR__PASS_Y);
-    createEAttribute(nodeAnchorEClass, NODE_ANCHOR__Y);
-    createEAttribute(nodeAnchorEClass, NODE_ANCHOR__FORMAT_Y);
-    createEReference(nodeAnchorEClass, NODE_ANCHOR__FIGURES);
-    createEReference(nodeAnchorEClass, NODE_ANCHOR__ARROWS);
+    anchorConstraintEClass = createEClass(ANCHOR_CONSTRAINT);
+    createEAttribute(anchorConstraintEClass, ANCHOR_CONSTRAINT__TYPE);
+    createEAttribute(anchorConstraintEClass, ANCHOR_CONSTRAINT__REFERENCE);
+    createEAttribute(anchorConstraintEClass, ANCHOR_CONSTRAINT__MAX);
 
-    arrowAnchorEClass = createEClass(ARROW_ANCHOR);
-    createEAttribute(arrowAnchorEClass, ARROW_ANCHOR__REFERENCE);
-    createEAttribute(arrowAnchorEClass, ARROW_ANCHOR__TYPE);
-    createEAttribute(arrowAnchorEClass, ARROW_ANCHOR__N);
-
-    figureFeaturesEClass = createEClass(FIGURE_FEATURES);
-    createEReference(figureFeaturesEClass, FIGURE_FEATURES__LINEFEATURES);
-    createEReference(figureFeaturesEClass, FIGURE_FEATURES__CENTERFEATURES);
-    createEReference(figureFeaturesEClass, FIGURE_FEATURES__ALIGNFEATURES);
-    createEReference(figureFeaturesEClass, FIGURE_FEATURES__GRADIENTFEATURES);
-    createEReference(figureFeaturesEClass, FIGURE_FEATURES__POINTFEATURES);
-    createEReference(figureFeaturesEClass, FIGURE_FEATURES__SIZEFEATURES);
-    createEReference(figureFeaturesEClass, FIGURE_FEATURES__POSITIONFEATURES);
-    createEReference(figureFeaturesEClass, FIGURE_FEATURES__COLORFEATURES);
-    createEReference(figureFeaturesEClass, FIGURE_FEATURES__INTEGERFEATURES);
-    createEReference(figureFeaturesEClass, FIGURE_FEATURES__BOOLEANFEATURES);
-    createEReference(figureFeaturesEClass, FIGURE_FEATURES__STRINGFEATURES);
-
-    styleFeatureEClass = createEClass(STYLE_FEATURE);
-    createEAttribute(styleFeatureEClass, STYLE_FEATURE__KEY);
-    createEAttribute(styleFeatureEClass, STYLE_FEATURE__VALUE);
-
-    layoutFeatureEClass = createEClass(LAYOUT_FEATURE);
-
-    centerFeatureEClass = createEClass(CENTER_FEATURE);
-
-    alignFeatureEClass = createEClass(ALIGN_FEATURE);
-    createEAttribute(alignFeatureEClass, ALIGN_FEATURE__KEY);
-    createEAttribute(alignFeatureEClass, ALIGN_FEATURE__VALUE);
-
-    gradientFeatureEClass = createEClass(GRADIENT_FEATURE);
-    createEAttribute(gradientFeatureEClass, GRADIENT_FEATURE__KEY);
-    createEAttribute(gradientFeatureEClass, GRADIENT_FEATURE__VALUE);
-
-    pointFeatureEClass = createEClass(POINT_FEATURE);
-    createEAttribute(pointFeatureEClass, POINT_FEATURE__X);
-    createEAttribute(pointFeatureEClass, POINT_FEATURE__Y);
-
-    sizeFeatureEClass = createEClass(SIZE_FEATURE);
-    createEAttribute(sizeFeatureEClass, SIZE_FEATURE__WIDTH);
-    createEAttribute(sizeFeatureEClass, SIZE_FEATURE__HEIGHT);
-
-    positionFeatureEClass = createEClass(POSITION_FEATURE);
-    createEAttribute(positionFeatureEClass, POSITION_FEATURE__X);
-    createEAttribute(positionFeatureEClass, POSITION_FEATURE__Y);
-
-    colorFeatureEClass = createEClass(COLOR_FEATURE);
-    createEReference(colorFeatureEClass, COLOR_FEATURE__EXPRESSION);
-    createEAttribute(colorFeatureEClass, COLOR_FEATURE__KEY);
-    createEAttribute(colorFeatureEClass, COLOR_FEATURE__VALUE);
-    createEReference(colorFeatureEClass, COLOR_FEATURE__RGB);
-    createEAttribute(colorFeatureEClass, COLOR_FEATURE__ATRIBUTE);
-    createEAttribute(colorFeatureEClass, COLOR_FEATURE__OPERATOR);
-    createEAttribute(colorFeatureEClass, COLOR_FEATURE__OPTION);
+    elementEClass = createEClass(ELEMENT);
+    createEReference(elementEClass, ELEMENT__FEATURES);
 
     rgbEClass = createEClass(RGB);
     createEAttribute(rgbEClass, RGB__R);
     createEAttribute(rgbEClass, RGB__G);
     createEAttribute(rgbEClass, RGB__B);
 
-    integerFeatureEClass = createEClass(INTEGER_FEATURE);
-    createEReference(integerFeatureEClass, INTEGER_FEATURE__EXPRESSION);
-    createEAttribute(integerFeatureEClass, INTEGER_FEATURE__KEY);
-    createEAttribute(integerFeatureEClass, INTEGER_FEATURE__VALUE);
+    imageFileEClass = createEClass(IMAGE_FILE);
+    createEAttribute(imageFileEClass, IMAGE_FILE__NAME);
+    createEAttribute(imageFileEClass, IMAGE_FILE__SRC);
 
-    stringFeatureEClass = createEClass(STRING_FEATURE);
-    createEReference(stringFeatureEClass, STRING_FEATURE__EXPRESSION);
-    createEAttribute(stringFeatureEClass, STRING_FEATURE__KEY);
-    createEAttribute(stringFeatureEClass, STRING_FEATURE__VALUE);
-    createEAttribute(stringFeatureEClass, STRING_FEATURE__VALUE_L);
-    createEAttribute(stringFeatureEClass, STRING_FEATURE__ATTRIBUTE);
-    createEAttribute(stringFeatureEClass, STRING_FEATURE__VALUE_R);
+    colorEClass = createEClass(COLOR);
+    createEAttribute(colorEClass, COLOR__DEFAULT);
+    createEReference(colorEClass, COLOR__CUSTOM);
 
-    booleanFeatureEClass = createEClass(BOOLEAN_FEATURE);
-    createEReference(booleanFeatureEClass, BOOLEAN_FEATURE__EXPRESSION);
-    createEAttribute(booleanFeatureEClass, BOOLEAN_FEATURE__KEY);
-    createEAttribute(booleanFeatureEClass, BOOLEAN_FEATURE__VALUE);
+    customColorEClass = createEClass(CUSTOM_COLOR);
+    createEAttribute(customColorEClass, CUSTOM_COLOR__NAME);
+    createEReference(customColorEClass, CUSTOM_COLOR__RGB);
 
-    lineFeatureEClass = createEClass(LINE_FEATURE);
-    createEReference(lineFeatureEClass, LINE_FEATURE__EXPRESSION);
-    createEAttribute(lineFeatureEClass, LINE_FEATURE__KEY);
-    createEAttribute(lineFeatureEClass, LINE_FEATURE__VALUE);
+    rectangleEClass = createEClass(RECTANGLE);
+    createEAttribute(rectangleEClass, RECTANGLE__RECTANGLE);
+    createEAttribute(rectangleEClass, RECTANGLE__SQUARE);
 
-    atributeExpressionEClass = createEClass(ATRIBUTE_EXPRESSION);
-    createEAttribute(atributeExpressionEClass, ATRIBUTE_EXPRESSION__KEY);
-    createEAttribute(atributeExpressionEClass, ATRIBUTE_EXPRESSION__OPERATOR);
-    createEReference(atributeExpressionEClass, ATRIBUTE_EXPRESSION__VALUE);
+    featureEClass = createEClass(FEATURE);
+    createEReference(featureEClass, FEATURE__CONDITIONAL);
+
+    rhombusEClass = createEClass(RHOMBUS);
+
+    ellipseEClass = createEClass(ELLIPSE);
+    createEAttribute(ellipseEClass, ELLIPSE__ELLIPSE);
+    createEAttribute(ellipseEClass, ELLIPSE__CIRCLE);
+
+    polylineEClass = createEClass(POLYLINE);
+    createEAttribute(polylineEClass, POLYLINE__POLYGON);
+    createEAttribute(polylineEClass, POLYLINE__POLYLINE);
+
+    featureConditionalEClass = createEClass(FEATURE_CONDITIONAL);
+    createEReference(featureConditionalEClass, FEATURE_CONDITIONAL__MODEL_ATTRIBUTE);
+    createEAttribute(featureConditionalEClass, FEATURE_CONDITIONAL__OPERATOR);
+    createEReference(featureConditionalEClass, FEATURE_CONDITIONAL__VALUE);
+
+    containsEClass = createEClass(CONTAINS);
+    createEReference(containsEClass, CONTAINS__MODEL_REFERENCE);
+
+    valueEClass = createEClass(VALUE);
+
+    intValueEClass = createEClass(INT_VALUE);
+    createEAttribute(intValueEClass, INT_VALUE__VALUE);
+
+    doubleValueEClass = createEClass(DOUBLE_VALUE);
+    createEAttribute(doubleValueEClass, DOUBLE_VALUE__VALUE_INT);
+    createEAttribute(doubleValueEClass, DOUBLE_VALUE__VALUE_DECIMAL);
+
+    stringValueEClass = createEClass(STRING_VALUE);
+    createEAttribute(stringValueEClass, STRING_VALUE__NULL);
+    createEAttribute(stringValueEClass, STRING_VALUE__VALUE);
+
+    booleanValueEClass = createEClass(BOOLEAN_VALUE);
+    createEAttribute(booleanValueEClass, BOOLEAN_VALUE__VALUE);
+
+    enumValueEClass = createEClass(ENUM_VALUE);
+    createEAttribute(enumValueEClass, ENUM_VALUE__NAME);
 
     atributeValueEClass = createEClass(ATRIBUTE_VALUE);
     createEAttribute(atributeValueEClass, ATRIBUTE_VALUE__VALUE_INT);
@@ -2089,9 +2302,65 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
     createEAttribute(atributeValueEClass, ATRIBUTE_VALUE__VALUE_MONTH);
     createEAttribute(atributeValueEClass, ATRIBUTE_VALUE__VALUE_YEAR);
 
+    labelEClass = createEClass(LABEL);
+    createEAttribute(labelEClass, LABEL__EDITABLE);
+
+    imageEClass = createEClass(IMAGE);
+    createEReference(imageEClass, IMAGE__IMAGE);
+
+    colorFeatureEClass = createEClass(COLOR_FEATURE);
+    createEReference(colorFeatureEClass, COLOR_FEATURE__COLOR);
+
+    foregroundEClass = createEClass(FOREGROUND);
+
+    backgroundEClass = createEClass(BACKGROUND);
+
+    transparencyEClass = createEClass(TRANSPARENCY);
+    createEAttribute(transparencyEClass, TRANSPARENCY__PERCENT);
+
+    sizeEClass = createEClass(SIZE);
+    createEAttribute(sizeEClass, SIZE__WIDTH);
+    createEAttribute(sizeEClass, SIZE__HEIGHT);
+
+    pointEClass = createEClass(POINT);
+    createEAttribute(pointEClass, POINT__X);
+    createEAttribute(pointEClass, POINT__Y);
+
+    positionEClass = createEClass(POSITION);
+    createEAttribute(positionEClass, POSITION__X);
+    createEAttribute(positionEClass, POSITION__Y);
+
+    cornerEClass = createEClass(CORNER);
+    createEAttribute(cornerEClass, CORNER__ANGLE);
+
+    textValueEClass = createEClass(TEXT_VALUE);
+    createEAttribute(textValueEClass, TEXT_VALUE__TEXT);
+    createEReference(textValueEClass, TEXT_VALUE__MODEL_ATTRIBUTE);
+
+    fontFaceEClass = createEClass(FONT_FACE);
+    createEAttribute(fontFaceEClass, FONT_FACE__FACE);
+
+    fontSizeEClass = createEClass(FONT_SIZE);
+    createEAttribute(fontSizeEClass, FONT_SIZE__SIZE);
+
+    fontStyleEClass = createEClass(FONT_STYLE);
+    createEAttribute(fontStyleEClass, FONT_STYLE__STYLES);
+
+    lineStyleEClass = createEClass(LINE_STYLE);
+    createEAttribute(lineStyleEClass, LINE_STYLE__STYLE);
+
+    lineWidthEClass = createEClass(LINE_WIDTH);
+    createEAttribute(lineWidthEClass, LINE_WIDTH__WIDTH);
+
     // Create enums
     containerLayoutEEnum = createEEnum(CONTAINER_LAYOUT);
-    figureShapeEEnum = createEEnum(FIGURE_SHAPE);
+    anchorConstraintTypeEEnum = createEEnum(ANCHOR_CONSTRAINT_TYPE);
+    defaultColorEEnum = createEEnum(DEFAULT_COLOR);
+    operatorEEnum = createEEnum(OPERATOR);
+    booleanLiteralEEnum = createEEnum(BOOLEAN_LITERAL);
+    fontFaceTypeEEnum = createEEnum(FONT_FACE_TYPE);
+    fontStyleTypeEEnum = createEEnum(FONT_STYLE_TYPE);
+    lineTypeEEnum = createEEnum(LINE_TYPE);
   }
 
   /**
@@ -2125,24 +2394,54 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
     // Add supertypes to classes
     nodeEClass.getESuperTypes().add(this.getDiagramElement());
     linkEClass.getESuperTypes().add(this.getDiagramElement());
-    layoutFeatureEClass.getESuperTypes().add(this.getStyleFeature());
-    centerFeatureEClass.getESuperTypes().add(this.getStyleFeature());
+    linkEClass.getESuperTypes().add(this.getElement());
+    connectableElementEClass.getESuperTypes().add(this.getElement());
+    rectangleEClass.getESuperTypes().add(this.getConnectableElement());
+    rhombusEClass.getESuperTypes().add(this.getConnectableElement());
+    ellipseEClass.getESuperTypes().add(this.getConnectableElement());
+    polylineEClass.getESuperTypes().add(this.getConnectableElement());
+    containsEClass.getESuperTypes().add(this.getFeature());
+    intValueEClass.getESuperTypes().add(this.getValue());
+    doubleValueEClass.getESuperTypes().add(this.getValue());
+    stringValueEClass.getESuperTypes().add(this.getValue());
+    booleanValueEClass.getESuperTypes().add(this.getValue());
+    enumValueEClass.getESuperTypes().add(this.getValue());
+    labelEClass.getESuperTypes().add(this.getConnectableElement());
+    imageEClass.getESuperTypes().add(this.getConnectableElement());
+    colorFeatureEClass.getESuperTypes().add(this.getFeature());
+    foregroundEClass.getESuperTypes().add(this.getFeature());
+    foregroundEClass.getESuperTypes().add(this.getColorFeature());
+    backgroundEClass.getESuperTypes().add(this.getFeature());
+    backgroundEClass.getESuperTypes().add(this.getColorFeature());
+    transparencyEClass.getESuperTypes().add(this.getFeature());
+    sizeEClass.getESuperTypes().add(this.getFeature());
+    pointEClass.getESuperTypes().add(this.getFeature());
+    positionEClass.getESuperTypes().add(this.getFeature());
+    cornerEClass.getESuperTypes().add(this.getFeature());
+    textValueEClass.getESuperTypes().add(this.getFeature());
+    fontFaceEClass.getESuperTypes().add(this.getFeature());
+    fontSizeEClass.getESuperTypes().add(this.getFeature());
+    fontStyleEClass.getESuperTypes().add(this.getFeature());
+    lineStyleEClass.getESuperTypes().add(this.getFeature());
+    lineWidthEClass.getESuperTypes().add(this.getFeature());
 
     // Initialize classes and features; add operations and parameters
     initEClass(xDiagramEClass, XDiagram.class, "XDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getXDiagram_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Imports(), this.getImportStatement(), null, "imports", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_ModelClass(), ecorePackage.getEClass(), null, "modelClass", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getXDiagram_Styles(), this.getStyle(), null, "styles", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Nodes(), this.getNode(), null, "nodes", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Links(), this.getLink(), null, "links", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getXDiagram_Styles(), this.getStyle(), null, "styles", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getXDiagram_Colors(), this.getCustomColor(), null, "colors", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getXDiagram_Images(), this.getImageFile(), null, "images", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(importStatementEClass, ImportStatement.class, "ImportStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getImportStatement_ImportedNamespace(), ecorePackage.getEString(), "importedNamespace", null, 0, 1, ImportStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(styleEClass, Style.class, "Style", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getStyle_Name(), ecorePackage.getEString(), "name", null, 0, 1, Style.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getStyle_Features(), this.getFigureFeatures(), null, "features", null, 0, 1, Style.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getStyle_Features(), this.getFeature(), null, "features", null, 0, -1, Style.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(diagramElementEClass, DiagramElement.class, "DiagramElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDiagramElement_ModelClass(), ecorePackage.getEClass(), null, "modelClass", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2153,26 +2452,19 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
 
     initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getNode_Resizable(), ecorePackage.getEBoolean(), "resizable", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNode_Figures(), this.getNodeFigure(), null, "figures", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNode_Containers(), this.getNodeContainer(), null, "containers", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNode_Anchors(), this.getNodeAnchor(), null, "anchors", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNode_MainFigure(), this.getConnectableElement(), null, "mainFigure", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNode_Anchors(), this.getAnchor(), null, "anchors", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAttribute_Key(), ecorePackage.getEString(), "key", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAttribute_Value(), this.getAtributeValue(), null, "value", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(nodeFigureEClass, NodeFigure.class, "NodeFigure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getNodeFigure_Option(), ecorePackage.getEString(), "option", null, 0, 1, NodeFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNodeFigure_Figure(), this.getFigureShape(), "figure", null, 0, 1, NodeFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNodeFigure_Style(), ecorePackage.getEString(), "style", null, 0, 1, NodeFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNodeFigure_Features(), this.getFigureFeatures(), null, "features", null, 0, 1, NodeFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(nodeContainerEClass, NodeContainer.class, "NodeContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getNodeContainer_Layout(), this.getContainerLayout(), "layout", null, 0, 1, NodeContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getNodeContainer_ModelReference(), ecorePackage.getEReference(), null, "modelReference", null, 0, 1, NodeContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getNodeContainer_Value(), ecorePackage.getEInt(), "value", null, 0, 1, NodeContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getNodeContainer_Format(), ecorePackage.getEString(), "format", null, 0, 1, NodeContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNodeContainer_Figures(), this.getNodeFigure(), null, "figures", null, 0, -1, NodeContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNodeContainer_Figures(), this.getConnectableElement(), null, "figures", null, 0, -1, NodeContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getLink_ModelReference(), ecorePackage.getEReference(), null, "modelReference", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2180,126 +2472,98 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
     initEReference(getLink_SourceReference(), ecorePackage.getEReference(), null, "sourceReference", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getLink_TargetReference(), ecorePackage.getEReference(), null, "targetReference", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getLink_Manhattan(), ecorePackage.getEBoolean(), "manhattan", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLink_Linefeatures(), this.getLineFeature(), null, "linefeatures", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLink_Colorfeatures(), this.getColorFeature(), null, "colorfeatures", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLink_Integerfeatures(), this.getIntegerFeature(), null, "integerfeatures", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getLink_Decorators(), this.getDecorator(), null, "decorators", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(decoratorEClass, Decorator.class, "Decorator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDecorator_Pos(), ecorePackage.getEInt(), "pos", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDecorator_Position(), ecorePackage.getEInt(), "position", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDecorator_Source(), ecorePackage.getEBoolean(), "source", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDecorator_Target(), ecorePackage.getEBoolean(), "target", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDecorator_Middle(), ecorePackage.getEBoolean(), "middle", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDecorator_PlacingStatic(), this.getStaticFigure(), null, "placingStatic", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDecorator_PlacingDynamic(), this.getDynamicFigure(), null, "placingDynamic", null, 0, -1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDecorator_StaticElement(), this.getConnectableElement(), null, "staticElement", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDecorator_Label(), this.getLabel(), null, "label", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(dynamicFigureEClass, DynamicFigure.class, "DynamicFigure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDynamicFigure_Figure(), ecorePackage.getEString(), "figure", null, 0, 1, DynamicFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDynamicFigure_Features(), this.getFigureFeatures(), null, "features", null, 0, 1, DynamicFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(connectableElementEClass, ConnectableElement.class, "ConnectableElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getConnectableElement_Children(), this.getConnectableElement(), null, "children", null, 0, -1, ConnectableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(staticFigureEClass, StaticFigure.class, "StaticFigure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getStaticFigure_Figure(), ecorePackage.getEString(), "figure", null, 0, 1, StaticFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStaticFigure_Style(), ecorePackage.getEString(), "style", null, 0, 1, StaticFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getStaticFigure_Features(), this.getFigureFeatures(), null, "features", null, 0, 1, StaticFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(anchorEClass, Anchor.class, "Anchor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAnchor_Object(), ecorePackage.getEString(), "object", null, 0, 1, Anchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAnchor_PassX(), ecorePackage.getEString(), "passX", null, 0, 1, Anchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAnchor_X(), ecorePackage.getEInt(), "X", null, 0, 1, Anchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAnchor_FormatX(), ecorePackage.getEString(), "formatX", null, 0, 1, Anchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAnchor_PassY(), ecorePackage.getEString(), "passY", null, 0, 1, Anchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAnchor_Y(), ecorePackage.getEInt(), "Y", null, 0, 1, Anchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAnchor_FormatY(), ecorePackage.getEString(), "formatY", null, 0, 1, Anchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAnchor_Figures(), this.getConnectableElement(), null, "figures", null, 0, -1, Anchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAnchor_Constraints(), this.getAnchorConstraint(), null, "constraints", null, 0, -1, Anchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(nodeAnchorEClass, NodeAnchor.class, "NodeAnchor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getNodeAnchor_Object(), ecorePackage.getEString(), "object", null, 0, 1, NodeAnchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNodeAnchor_PassX(), ecorePackage.getEString(), "passX", null, 0, 1, NodeAnchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNodeAnchor_X(), ecorePackage.getEInt(), "X", null, 0, 1, NodeAnchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNodeAnchor_FormatX(), ecorePackage.getEString(), "formatX", null, 0, 1, NodeAnchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNodeAnchor_PassY(), ecorePackage.getEString(), "passY", null, 0, 1, NodeAnchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNodeAnchor_Y(), ecorePackage.getEInt(), "Y", null, 0, 1, NodeAnchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNodeAnchor_FormatY(), ecorePackage.getEString(), "formatY", null, 0, 1, NodeAnchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNodeAnchor_Figures(), this.getNodeFigure(), null, "figures", null, 0, -1, NodeAnchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNodeAnchor_Arrows(), this.getArrowAnchor(), null, "arrows", null, 0, -1, NodeAnchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(anchorConstraintEClass, AnchorConstraint.class, "AnchorConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAnchorConstraint_Type(), this.getAnchorConstraintType(), "type", null, 0, 1, AnchorConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAnchorConstraint_Reference(), ecorePackage.getEString(), "reference", null, 0, 1, AnchorConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAnchorConstraint_Max(), ecorePackage.getEInt(), "max", null, 0, 1, AnchorConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(arrowAnchorEClass, ArrowAnchor.class, "ArrowAnchor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getArrowAnchor_Reference(), ecorePackage.getEString(), "reference", null, 0, 1, ArrowAnchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getArrowAnchor_Type(), ecorePackage.getEString(), "type", null, 0, 1, ArrowAnchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getArrowAnchor_N(), ecorePackage.getEInt(), "N", null, 0, 1, ArrowAnchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(figureFeaturesEClass, FigureFeatures.class, "FigureFeatures", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getFigureFeatures_Linefeatures(), this.getLineFeature(), null, "linefeatures", null, 0, -1, FigureFeatures.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFigureFeatures_Centerfeatures(), this.getCenterFeature(), null, "centerfeatures", null, 0, -1, FigureFeatures.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFigureFeatures_Alignfeatures(), this.getAlignFeature(), null, "alignfeatures", null, 0, -1, FigureFeatures.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFigureFeatures_Gradientfeatures(), this.getGradientFeature(), null, "gradientfeatures", null, 0, -1, FigureFeatures.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFigureFeatures_Pointfeatures(), this.getPointFeature(), null, "pointfeatures", null, 0, -1, FigureFeatures.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFigureFeatures_Sizefeatures(), this.getSizeFeature(), null, "sizefeatures", null, 0, -1, FigureFeatures.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFigureFeatures_Positionfeatures(), this.getPositionFeature(), null, "positionfeatures", null, 0, -1, FigureFeatures.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFigureFeatures_Colorfeatures(), this.getColorFeature(), null, "colorfeatures", null, 0, -1, FigureFeatures.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFigureFeatures_Integerfeatures(), this.getIntegerFeature(), null, "integerfeatures", null, 0, -1, FigureFeatures.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFigureFeatures_Booleanfeatures(), this.getBooleanFeature(), null, "booleanfeatures", null, 0, -1, FigureFeatures.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFigureFeatures_Stringfeatures(), this.getStringFeature(), null, "stringfeatures", null, 0, -1, FigureFeatures.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(styleFeatureEClass, StyleFeature.class, "StyleFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getStyleFeature_Key(), ecorePackage.getEString(), "key", null, 0, 1, StyleFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStyleFeature_Value(), ecorePackage.getEString(), "value", null, 0, 1, StyleFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(layoutFeatureEClass, LayoutFeature.class, "LayoutFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(centerFeatureEClass, CenterFeature.class, "CenterFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(alignFeatureEClass, AlignFeature.class, "AlignFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAlignFeature_Key(), ecorePackage.getEString(), "key", null, 0, 1, AlignFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAlignFeature_Value(), ecorePackage.getEString(), "value", null, 0, 1, AlignFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(gradientFeatureEClass, GradientFeature.class, "GradientFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGradientFeature_Key(), ecorePackage.getEString(), "key", null, 0, 1, GradientFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGradientFeature_Value(), ecorePackage.getEString(), "value", null, 0, 1, GradientFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(pointFeatureEClass, PointFeature.class, "PointFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPointFeature_X(), ecorePackage.getEInt(), "X", null, 0, 1, PointFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPointFeature_Y(), ecorePackage.getEInt(), "Y", null, 0, 1, PointFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(sizeFeatureEClass, SizeFeature.class, "SizeFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getSizeFeature_Width(), ecorePackage.getEInt(), "Width", null, 0, 1, SizeFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getSizeFeature_Height(), ecorePackage.getEInt(), "Height", null, 0, 1, SizeFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(positionFeatureEClass, PositionFeature.class, "PositionFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPositionFeature_X(), ecorePackage.getEInt(), "X", null, 0, 1, PositionFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPositionFeature_Y(), ecorePackage.getEInt(), "Y", null, 0, 1, PositionFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(colorFeatureEClass, ColorFeature.class, "ColorFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getColorFeature_Expression(), this.getAtributeExpression(), null, "expression", null, 0, 1, ColorFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getColorFeature_Key(), ecorePackage.getEString(), "key", null, 0, 1, ColorFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getColorFeature_Value(), ecorePackage.getEString(), "value", null, 0, 1, ColorFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getColorFeature_Rgb(), this.getRGB(), null, "rgb", null, 0, 1, ColorFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getColorFeature_Atribute(), ecorePackage.getEString(), "atribute", null, 0, 1, ColorFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getColorFeature_Operator(), ecorePackage.getEString(), "operator", null, 0, 1, ColorFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getColorFeature_Option(), ecorePackage.getEString(), "option", null, 0, 1, ColorFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getElement_Features(), this.getFeature(), null, "features", null, 0, -1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rgbEClass, org.eclipselabs.xdiagram.xtext.xdiagram.RGB.class, "RGB", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getRGB_R(), ecorePackage.getEInt(), "R", null, 0, 1, org.eclipselabs.xdiagram.xtext.xdiagram.RGB.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRGB_G(), ecorePackage.getEInt(), "G", null, 0, 1, org.eclipselabs.xdiagram.xtext.xdiagram.RGB.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRGB_B(), ecorePackage.getEInt(), "B", null, 0, 1, org.eclipselabs.xdiagram.xtext.xdiagram.RGB.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(integerFeatureEClass, IntegerFeature.class, "IntegerFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getIntegerFeature_Expression(), this.getAtributeExpression(), null, "expression", null, 0, 1, IntegerFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getIntegerFeature_Key(), ecorePackage.getEString(), "key", null, 0, 1, IntegerFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getIntegerFeature_Value(), ecorePackage.getEInt(), "value", null, 0, 1, IntegerFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(imageFileEClass, ImageFile.class, "ImageFile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getImageFile_Name(), ecorePackage.getEString(), "name", null, 0, 1, ImageFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getImageFile_Src(), ecorePackage.getEString(), "src", null, 0, 1, ImageFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(stringFeatureEClass, StringFeature.class, "StringFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getStringFeature_Expression(), this.getAtributeExpression(), null, "expression", null, 0, 1, StringFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStringFeature_Key(), ecorePackage.getEString(), "key", null, 0, 1, StringFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStringFeature_Value(), ecorePackage.getEString(), "value", null, 0, 1, StringFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStringFeature_ValueL(), ecorePackage.getEString(), "valueL", null, 0, 1, StringFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStringFeature_Attribute(), ecorePackage.getEString(), "attribute", null, 0, 1, StringFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStringFeature_ValueR(), ecorePackage.getEString(), "valueR", null, 0, 1, StringFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(colorEClass, Color.class, "Color", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getColor_Default(), this.getDefaultColor(), "default", null, 0, 1, Color.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getColor_Custom(), this.getCustomColor(), null, "custom", null, 0, 1, Color.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(booleanFeatureEClass, BooleanFeature.class, "BooleanFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getBooleanFeature_Expression(), this.getAtributeExpression(), null, "expression", null, 0, 1, BooleanFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getBooleanFeature_Key(), ecorePackage.getEString(), "key", null, 0, 1, BooleanFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getBooleanFeature_Value(), ecorePackage.getEString(), "value", null, 0, 1, BooleanFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(customColorEClass, CustomColor.class, "CustomColor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCustomColor_Name(), ecorePackage.getEString(), "name", null, 0, 1, CustomColor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCustomColor_Rgb(), this.getRGB(), null, "rgb", null, 0, 1, CustomColor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(lineFeatureEClass, LineFeature.class, "LineFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getLineFeature_Expression(), this.getAtributeExpression(), null, "expression", null, 0, 1, LineFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getLineFeature_Key(), ecorePackage.getEString(), "key", null, 0, 1, LineFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getLineFeature_Value(), ecorePackage.getEString(), "value", null, 0, 1, LineFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(rectangleEClass, Rectangle.class, "Rectangle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getRectangle_Rectangle(), ecorePackage.getEBoolean(), "rectangle", null, 0, 1, Rectangle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRectangle_Square(), ecorePackage.getEBoolean(), "square", null, 0, 1, Rectangle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(atributeExpressionEClass, AtributeExpression.class, "AtributeExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAtributeExpression_Key(), ecorePackage.getEString(), "key", null, 0, 1, AtributeExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAtributeExpression_Operator(), ecorePackage.getEString(), "operator", null, 0, 1, AtributeExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAtributeExpression_Value(), this.getAtributeValue(), null, "value", null, 0, 1, AtributeExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(featureEClass, Feature.class, "Feature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFeature_Conditional(), this.getFeatureConditional(), null, "conditional", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(rhombusEClass, Rhombus.class, "Rhombus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(ellipseEClass, Ellipse.class, "Ellipse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEllipse_Ellipse(), ecorePackage.getEBoolean(), "ellipse", null, 0, 1, Ellipse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEllipse_Circle(), ecorePackage.getEBoolean(), "circle", null, 0, 1, Ellipse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(polylineEClass, Polyline.class, "Polyline", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPolyline_Polygon(), ecorePackage.getEBoolean(), "polygon", null, 0, 1, Polyline.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPolyline_Polyline(), ecorePackage.getEBoolean(), "polyline", null, 0, 1, Polyline.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(featureConditionalEClass, FeatureConditional.class, "FeatureConditional", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFeatureConditional_ModelAttribute(), ecorePackage.getEAttribute(), null, "modelAttribute", null, 0, 1, FeatureConditional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFeatureConditional_Operator(), this.getOperator(), "operator", null, 0, 1, FeatureConditional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFeatureConditional_Value(), this.getValue(), null, "value", null, 0, 1, FeatureConditional.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(containsEClass, Contains.class, "Contains", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getContains_ModelReference(), ecorePackage.getEReference(), null, "modelReference", null, 0, 1, Contains.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(valueEClass, Value.class, "Value", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(intValueEClass, IntValue.class, "IntValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIntValue_Value(), ecorePackage.getEInt(), "value", null, 0, 1, IntValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(doubleValueEClass, DoubleValue.class, "DoubleValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDoubleValue_ValueInt(), ecorePackage.getEInt(), "valueInt", null, 0, 1, DoubleValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDoubleValue_ValueDecimal(), ecorePackage.getEInt(), "valueDecimal", null, 0, 1, DoubleValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(stringValueEClass, StringValue.class, "StringValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getStringValue_Null(), ecorePackage.getEBoolean(), "null", null, 0, 1, StringValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getStringValue_Value(), ecorePackage.getEString(), "value", null, 0, 1, StringValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(booleanValueEClass, BooleanValue.class, "BooleanValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBooleanValue_Value(), this.getBooleanLiteral(), "value", null, 0, 1, BooleanValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(enumValueEClass, EnumValue.class, "EnumValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEnumValue_Name(), ecorePackage.getEString(), "name", null, 0, 1, EnumValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atributeValueEClass, AtributeValue.class, "AtributeValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAtributeValue_ValueINT(), ecorePackage.getEInt(), "valueINT", null, 0, 1, AtributeValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2311,23 +2575,92 @@ public class XdiagramPackageImpl extends EPackageImpl implements XdiagramPackage
     initEAttribute(getAtributeValue_ValueMONTH(), ecorePackage.getEInt(), "valueMONTH", null, 0, 1, AtributeValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAtributeValue_ValueYEAR(), ecorePackage.getEInt(), "valueYEAR", null, 0, 1, AtributeValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(labelEClass, Label.class, "Label", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLabel_Editable(), ecorePackage.getEBoolean(), "editable", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(imageEClass, Image.class, "Image", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getImage_Image(), this.getImageFile(), null, "image", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(colorFeatureEClass, ColorFeature.class, "ColorFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getColorFeature_Color(), this.getColor(), null, "color", null, 0, 1, ColorFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(foregroundEClass, Foreground.class, "Foreground", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(backgroundEClass, Background.class, "Background", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(transparencyEClass, Transparency.class, "Transparency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTransparency_Percent(), ecorePackage.getEString(), "percent", null, 0, 1, Transparency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(sizeEClass, Size.class, "Size", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSize_Width(), ecorePackage.getEInt(), "width", null, 0, 1, Size.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSize_Height(), ecorePackage.getEInt(), "height", null, 0, 1, Size.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(pointEClass, Point.class, "Point", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPoint_X(), ecorePackage.getEInt(), "x", null, 0, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPoint_Y(), ecorePackage.getEInt(), "y", null, 0, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(positionEClass, Position.class, "Position", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPosition_X(), ecorePackage.getEInt(), "x", null, 0, 1, Position.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPosition_Y(), ecorePackage.getEInt(), "y", null, 0, 1, Position.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(cornerEClass, Corner.class, "Corner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCorner_Angle(), ecorePackage.getEInt(), "angle", null, 0, 1, Corner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(textValueEClass, TextValue.class, "TextValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTextValue_Text(), ecorePackage.getEString(), "text", null, 0, 1, TextValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTextValue_ModelAttribute(), ecorePackage.getEAttribute(), null, "modelAttribute", null, 0, 1, TextValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(fontFaceEClass, FontFace.class, "FontFace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFontFace_Face(), this.getFontFaceType(), "face", null, 0, 1, FontFace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(fontSizeEClass, FontSize.class, "FontSize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFontSize_Size(), ecorePackage.getEInt(), "size", null, 0, 1, FontSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(fontStyleEClass, FontStyle.class, "FontStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFontStyle_Styles(), this.getFontStyleType(), "styles", null, 0, -1, FontStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(lineStyleEClass, LineStyle.class, "LineStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLineStyle_Style(), this.getLineType(), "style", null, 0, 1, LineStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(lineWidthEClass, LineWidth.class, "LineWidth", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLineWidth_Width(), ecorePackage.getEInt(), "width", null, 0, 1, LineWidth.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     // Initialize enums and add enum literals
     initEEnum(containerLayoutEEnum, ContainerLayout.class, "ContainerLayout");
     addEEnumLiteral(containerLayoutEEnum, ContainerLayout.STACK);
     addEEnumLiteral(containerLayoutEEnum, ContainerLayout.FREE);
 
-    initEEnum(figureShapeEEnum, FigureShape.class, "FigureShape");
-    addEEnumLiteral(figureShapeEEnum, FigureShape.SQUARE);
-    addEEnumLiteral(figureShapeEEnum, FigureShape.RECTANGLE);
-    addEEnumLiteral(figureShapeEEnum, FigureShape.ROUNDED_RECTANGLE);
-    addEEnumLiteral(figureShapeEEnum, FigureShape.CIRCLE);
-    addEEnumLiteral(figureShapeEEnum, FigureShape.ELLIPSE);
-    addEEnumLiteral(figureShapeEEnum, FigureShape.TRIANGLE);
-    addEEnumLiteral(figureShapeEEnum, FigureShape.RHOMBUS);
-    addEEnumLiteral(figureShapeEEnum, FigureShape.POLYGON);
-    addEEnumLiteral(figureShapeEEnum, FigureShape.POLYLINE);
-    addEEnumLiteral(figureShapeEEnum, FigureShape.LABEL);
-    addEEnumLiteral(figureShapeEEnum, FigureShape.IMAGE);
+    initEEnum(anchorConstraintTypeEEnum, AnchorConstraintType.class, "AnchorConstraintType");
+    addEEnumLiteral(anchorConstraintTypeEEnum, AnchorConstraintType.INCOMING);
+    addEEnumLiteral(anchorConstraintTypeEEnum, AnchorConstraintType.OUTGOING);
+
+    initEEnum(defaultColorEEnum, DefaultColor.class, "DefaultColor");
+    addEEnumLiteral(defaultColorEEnum, DefaultColor.RED);
+    addEEnumLiteral(defaultColorEEnum, DefaultColor.BLUE);
+    addEEnumLiteral(defaultColorEEnum, DefaultColor.YELLOW);
+
+    initEEnum(operatorEEnum, Operator.class, "Operator");
+    addEEnumLiteral(operatorEEnum, Operator.EQUAL);
+    addEEnumLiteral(operatorEEnum, Operator.DIFFERENT);
+
+    initEEnum(booleanLiteralEEnum, BooleanLiteral.class, "BooleanLiteral");
+    addEEnumLiteral(booleanLiteralEEnum, BooleanLiteral.TRUE);
+    addEEnumLiteral(booleanLiteralEEnum, BooleanLiteral.FALSE);
+
+    initEEnum(fontFaceTypeEEnum, FontFaceType.class, "FontFaceType");
+    addEEnumLiteral(fontFaceTypeEEnum, FontFaceType.ARIAL);
+    addEEnumLiteral(fontFaceTypeEEnum, FontFaceType.VERDANA);
+    addEEnumLiteral(fontFaceTypeEEnum, FontFaceType.TIMES);
+    addEEnumLiteral(fontFaceTypeEEnum, FontFaceType.COURIER);
+
+    initEEnum(fontStyleTypeEEnum, FontStyleType.class, "FontStyleType");
+    addEEnumLiteral(fontStyleTypeEEnum, FontStyleType.ITALICS);
+    addEEnumLiteral(fontStyleTypeEEnum, FontStyleType.BOLD);
+    addEEnumLiteral(fontStyleTypeEEnum, FontStyleType.UNDERLINE);
+
+    initEEnum(lineTypeEEnum, LineType.class, "LineType");
+    addEEnumLiteral(lineTypeEEnum, LineType.SOLID);
+    addEEnumLiteral(lineTypeEEnum, LineType.DASH);
 
     // Create resource
     createResource(eNS_URI);

@@ -17,10 +17,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipselabs.xdiagram.xtext.xdiagram.Anchor;
+import org.eclipselabs.xdiagram.xtext.xdiagram.ConnectableElement;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Node;
-import org.eclipselabs.xdiagram.xtext.xdiagram.NodeAnchor;
-import org.eclipselabs.xdiagram.xtext.xdiagram.NodeContainer;
-import org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure;
 import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
 
 /**
@@ -31,8 +30,7 @@ import org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeImpl#isResizable <em>Resizable</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeImpl#getFigures <em>Figures</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeImpl#getContainers <em>Containers</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeImpl#getMainFigure <em>Main Figure</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.impl.NodeImpl#getAnchors <em>Anchors</em>}</li>
  * </ul>
  * </p>
@@ -62,24 +60,14 @@ public class NodeImpl extends DiagramElementImpl implements Node
   protected boolean resizable = RESIZABLE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getFigures() <em>Figures</em>}' containment reference list.
+   * The cached value of the '{@link #getMainFigure() <em>Main Figure</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFigures()
+   * @see #getMainFigure()
    * @generated
    * @ordered
    */
-  protected EList<NodeFigure> figures;
-
-  /**
-   * The cached value of the '{@link #getContainers() <em>Containers</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getContainers()
-   * @generated
-   * @ordered
-   */
-  protected EList<NodeContainer> containers;
+  protected ConnectableElement mainFigure;
 
   /**
    * The cached value of the '{@link #getAnchors() <em>Anchors</em>}' containment reference list.
@@ -89,7 +77,7 @@ public class NodeImpl extends DiagramElementImpl implements Node
    * @generated
    * @ordered
    */
-  protected EList<NodeAnchor> anchors;
+  protected EList<Anchor> anchors;
 
   /**
    * <!-- begin-user-doc -->
@@ -140,13 +128,9 @@ public class NodeImpl extends DiagramElementImpl implements Node
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<NodeFigure> getFigures()
+  public ConnectableElement getMainFigure()
   {
-    if (figures == null)
-    {
-      figures = new EObjectContainmentEList<NodeFigure>(NodeFigure.class, this, XdiagramPackage.NODE__FIGURES);
-    }
-    return figures;
+    return mainFigure;
   }
 
   /**
@@ -154,13 +138,16 @@ public class NodeImpl extends DiagramElementImpl implements Node
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<NodeContainer> getContainers()
+  public NotificationChain basicSetMainFigure(ConnectableElement newMainFigure, NotificationChain msgs)
   {
-    if (containers == null)
+    ConnectableElement oldMainFigure = mainFigure;
+    mainFigure = newMainFigure;
+    if (eNotificationRequired())
     {
-      containers = new EObjectContainmentEList<NodeContainer>(NodeContainer.class, this, XdiagramPackage.NODE__CONTAINERS);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XdiagramPackage.NODE__MAIN_FIGURE, oldMainFigure, newMainFigure);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return containers;
+    return msgs;
   }
 
   /**
@@ -168,11 +155,32 @@ public class NodeImpl extends DiagramElementImpl implements Node
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<NodeAnchor> getAnchors()
+  public void setMainFigure(ConnectableElement newMainFigure)
+  {
+    if (newMainFigure != mainFigure)
+    {
+      NotificationChain msgs = null;
+      if (mainFigure != null)
+        msgs = ((InternalEObject)mainFigure).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XdiagramPackage.NODE__MAIN_FIGURE, null, msgs);
+      if (newMainFigure != null)
+        msgs = ((InternalEObject)newMainFigure).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XdiagramPackage.NODE__MAIN_FIGURE, null, msgs);
+      msgs = basicSetMainFigure(newMainFigure, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, XdiagramPackage.NODE__MAIN_FIGURE, newMainFigure, newMainFigure));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Anchor> getAnchors()
   {
     if (anchors == null)
     {
-      anchors = new EObjectContainmentEList<NodeAnchor>(NodeAnchor.class, this, XdiagramPackage.NODE__ANCHORS);
+      anchors = new EObjectContainmentEList<Anchor>(Anchor.class, this, XdiagramPackage.NODE__ANCHORS);
     }
     return anchors;
   }
@@ -187,10 +195,8 @@ public class NodeImpl extends DiagramElementImpl implements Node
   {
     switch (featureID)
     {
-      case XdiagramPackage.NODE__FIGURES:
-        return ((InternalEList<?>)getFigures()).basicRemove(otherEnd, msgs);
-      case XdiagramPackage.NODE__CONTAINERS:
-        return ((InternalEList<?>)getContainers()).basicRemove(otherEnd, msgs);
+      case XdiagramPackage.NODE__MAIN_FIGURE:
+        return basicSetMainFigure(null, msgs);
       case XdiagramPackage.NODE__ANCHORS:
         return ((InternalEList<?>)getAnchors()).basicRemove(otherEnd, msgs);
     }
@@ -209,10 +215,8 @@ public class NodeImpl extends DiagramElementImpl implements Node
     {
       case XdiagramPackage.NODE__RESIZABLE:
         return isResizable();
-      case XdiagramPackage.NODE__FIGURES:
-        return getFigures();
-      case XdiagramPackage.NODE__CONTAINERS:
-        return getContainers();
+      case XdiagramPackage.NODE__MAIN_FIGURE:
+        return getMainFigure();
       case XdiagramPackage.NODE__ANCHORS:
         return getAnchors();
     }
@@ -233,17 +237,12 @@ public class NodeImpl extends DiagramElementImpl implements Node
       case XdiagramPackage.NODE__RESIZABLE:
         setResizable((Boolean)newValue);
         return;
-      case XdiagramPackage.NODE__FIGURES:
-        getFigures().clear();
-        getFigures().addAll((Collection<? extends NodeFigure>)newValue);
-        return;
-      case XdiagramPackage.NODE__CONTAINERS:
-        getContainers().clear();
-        getContainers().addAll((Collection<? extends NodeContainer>)newValue);
+      case XdiagramPackage.NODE__MAIN_FIGURE:
+        setMainFigure((ConnectableElement)newValue);
         return;
       case XdiagramPackage.NODE__ANCHORS:
         getAnchors().clear();
-        getAnchors().addAll((Collection<? extends NodeAnchor>)newValue);
+        getAnchors().addAll((Collection<? extends Anchor>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -262,11 +261,8 @@ public class NodeImpl extends DiagramElementImpl implements Node
       case XdiagramPackage.NODE__RESIZABLE:
         setResizable(RESIZABLE_EDEFAULT);
         return;
-      case XdiagramPackage.NODE__FIGURES:
-        getFigures().clear();
-        return;
-      case XdiagramPackage.NODE__CONTAINERS:
-        getContainers().clear();
+      case XdiagramPackage.NODE__MAIN_FIGURE:
+        setMainFigure((ConnectableElement)null);
         return;
       case XdiagramPackage.NODE__ANCHORS:
         getAnchors().clear();
@@ -287,10 +283,8 @@ public class NodeImpl extends DiagramElementImpl implements Node
     {
       case XdiagramPackage.NODE__RESIZABLE:
         return resizable != RESIZABLE_EDEFAULT;
-      case XdiagramPackage.NODE__FIGURES:
-        return figures != null && !figures.isEmpty();
-      case XdiagramPackage.NODE__CONTAINERS:
-        return containers != null && !containers.isEmpty();
+      case XdiagramPackage.NODE__MAIN_FIGURE:
+        return mainFigure != null;
       case XdiagramPackage.NODE__ANCHORS:
         return anchors != null && !anchors.isEmpty();
     }

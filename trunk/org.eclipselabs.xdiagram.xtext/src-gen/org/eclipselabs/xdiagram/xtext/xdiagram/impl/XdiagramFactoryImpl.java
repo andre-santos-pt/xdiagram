@@ -71,31 +71,47 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
       case XdiagramPackage.DIAGRAM_ELEMENT: return createDiagramElement();
       case XdiagramPackage.NODE: return createNode();
       case XdiagramPackage.ATTRIBUTE: return createAttribute();
-      case XdiagramPackage.NODE_FIGURE: return createNodeFigure();
       case XdiagramPackage.NODE_CONTAINER: return createNodeContainer();
       case XdiagramPackage.LINK: return createLink();
       case XdiagramPackage.DECORATOR: return createDecorator();
-      case XdiagramPackage.DYNAMIC_FIGURE: return createDynamicFigure();
-      case XdiagramPackage.STATIC_FIGURE: return createStaticFigure();
-      case XdiagramPackage.NODE_ANCHOR: return createNodeAnchor();
-      case XdiagramPackage.ARROW_ANCHOR: return createArrowAnchor();
-      case XdiagramPackage.FIGURE_FEATURES: return createFigureFeatures();
-      case XdiagramPackage.STYLE_FEATURE: return createStyleFeature();
-      case XdiagramPackage.LAYOUT_FEATURE: return createLayoutFeature();
-      case XdiagramPackage.CENTER_FEATURE: return createCenterFeature();
-      case XdiagramPackage.ALIGN_FEATURE: return createAlignFeature();
-      case XdiagramPackage.GRADIENT_FEATURE: return createGradientFeature();
-      case XdiagramPackage.POINT_FEATURE: return createPointFeature();
-      case XdiagramPackage.SIZE_FEATURE: return createSizeFeature();
-      case XdiagramPackage.POSITION_FEATURE: return createPositionFeature();
-      case XdiagramPackage.COLOR_FEATURE: return createColorFeature();
+      case XdiagramPackage.CONNECTABLE_ELEMENT: return createConnectableElement();
+      case XdiagramPackage.ANCHOR: return createAnchor();
+      case XdiagramPackage.ANCHOR_CONSTRAINT: return createAnchorConstraint();
+      case XdiagramPackage.ELEMENT: return createElement();
       case XdiagramPackage.RGB: return createRGB();
-      case XdiagramPackage.INTEGER_FEATURE: return createIntegerFeature();
-      case XdiagramPackage.STRING_FEATURE: return createStringFeature();
-      case XdiagramPackage.BOOLEAN_FEATURE: return createBooleanFeature();
-      case XdiagramPackage.LINE_FEATURE: return createLineFeature();
-      case XdiagramPackage.ATRIBUTE_EXPRESSION: return createAtributeExpression();
+      case XdiagramPackage.IMAGE_FILE: return createImageFile();
+      case XdiagramPackage.COLOR: return createColor();
+      case XdiagramPackage.CUSTOM_COLOR: return createCustomColor();
+      case XdiagramPackage.RECTANGLE: return createRectangle();
+      case XdiagramPackage.FEATURE: return createFeature();
+      case XdiagramPackage.RHOMBUS: return createRhombus();
+      case XdiagramPackage.ELLIPSE: return createEllipse();
+      case XdiagramPackage.POLYLINE: return createPolyline();
+      case XdiagramPackage.FEATURE_CONDITIONAL: return createFeatureConditional();
+      case XdiagramPackage.CONTAINS: return createContains();
+      case XdiagramPackage.VALUE: return createValue();
+      case XdiagramPackage.INT_VALUE: return createIntValue();
+      case XdiagramPackage.DOUBLE_VALUE: return createDoubleValue();
+      case XdiagramPackage.STRING_VALUE: return createStringValue();
+      case XdiagramPackage.BOOLEAN_VALUE: return createBooleanValue();
+      case XdiagramPackage.ENUM_VALUE: return createEnumValue();
       case XdiagramPackage.ATRIBUTE_VALUE: return createAtributeValue();
+      case XdiagramPackage.LABEL: return createLabel();
+      case XdiagramPackage.IMAGE: return createImage();
+      case XdiagramPackage.COLOR_FEATURE: return createColorFeature();
+      case XdiagramPackage.FOREGROUND: return createForeground();
+      case XdiagramPackage.BACKGROUND: return createBackground();
+      case XdiagramPackage.TRANSPARENCY: return createTransparency();
+      case XdiagramPackage.SIZE: return createSize();
+      case XdiagramPackage.POINT: return createPoint();
+      case XdiagramPackage.POSITION: return createPosition();
+      case XdiagramPackage.CORNER: return createCorner();
+      case XdiagramPackage.TEXT_VALUE: return createTextValue();
+      case XdiagramPackage.FONT_FACE: return createFontFace();
+      case XdiagramPackage.FONT_SIZE: return createFontSize();
+      case XdiagramPackage.FONT_STYLE: return createFontStyle();
+      case XdiagramPackage.LINE_STYLE: return createLineStyle();
+      case XdiagramPackage.LINE_WIDTH: return createLineWidth();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -113,8 +129,20 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
     {
       case XdiagramPackage.CONTAINER_LAYOUT:
         return createContainerLayoutFromString(eDataType, initialValue);
-      case XdiagramPackage.FIGURE_SHAPE:
-        return createFigureShapeFromString(eDataType, initialValue);
+      case XdiagramPackage.ANCHOR_CONSTRAINT_TYPE:
+        return createAnchorConstraintTypeFromString(eDataType, initialValue);
+      case XdiagramPackage.DEFAULT_COLOR:
+        return createDefaultColorFromString(eDataType, initialValue);
+      case XdiagramPackage.OPERATOR:
+        return createOperatorFromString(eDataType, initialValue);
+      case XdiagramPackage.BOOLEAN_LITERAL:
+        return createBooleanLiteralFromString(eDataType, initialValue);
+      case XdiagramPackage.FONT_FACE_TYPE:
+        return createFontFaceTypeFromString(eDataType, initialValue);
+      case XdiagramPackage.FONT_STYLE_TYPE:
+        return createFontStyleTypeFromString(eDataType, initialValue);
+      case XdiagramPackage.LINE_TYPE:
+        return createLineTypeFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -132,8 +160,20 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
     {
       case XdiagramPackage.CONTAINER_LAYOUT:
         return convertContainerLayoutToString(eDataType, instanceValue);
-      case XdiagramPackage.FIGURE_SHAPE:
-        return convertFigureShapeToString(eDataType, instanceValue);
+      case XdiagramPackage.ANCHOR_CONSTRAINT_TYPE:
+        return convertAnchorConstraintTypeToString(eDataType, instanceValue);
+      case XdiagramPackage.DEFAULT_COLOR:
+        return convertDefaultColorToString(eDataType, instanceValue);
+      case XdiagramPackage.OPERATOR:
+        return convertOperatorToString(eDataType, instanceValue);
+      case XdiagramPackage.BOOLEAN_LITERAL:
+        return convertBooleanLiteralToString(eDataType, instanceValue);
+      case XdiagramPackage.FONT_FACE_TYPE:
+        return convertFontFaceTypeToString(eDataType, instanceValue);
+      case XdiagramPackage.FONT_STYLE_TYPE:
+        return convertFontStyleTypeToString(eDataType, instanceValue);
+      case XdiagramPackage.LINE_TYPE:
+        return convertLineTypeToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -210,17 +250,6 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public NodeFigure createNodeFigure()
-  {
-    NodeFigureImpl nodeFigure = new NodeFigureImpl();
-    return nodeFigure;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public NodeContainer createNodeContainer()
   {
     NodeContainerImpl nodeContainer = new NodeContainerImpl();
@@ -254,10 +283,10 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public DynamicFigure createDynamicFigure()
+  public ConnectableElement createConnectableElement()
   {
-    DynamicFigureImpl dynamicFigure = new DynamicFigureImpl();
-    return dynamicFigure;
+    ConnectableElementImpl connectableElement = new ConnectableElementImpl();
+    return connectableElement;
   }
 
   /**
@@ -265,10 +294,10 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public StaticFigure createStaticFigure()
+  public Anchor createAnchor()
   {
-    StaticFigureImpl staticFigure = new StaticFigureImpl();
-    return staticFigure;
+    AnchorImpl anchor = new AnchorImpl();
+    return anchor;
   }
 
   /**
@@ -276,10 +305,10 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public NodeAnchor createNodeAnchor()
+  public AnchorConstraint createAnchorConstraint()
   {
-    NodeAnchorImpl nodeAnchor = new NodeAnchorImpl();
-    return nodeAnchor;
+    AnchorConstraintImpl anchorConstraint = new AnchorConstraintImpl();
+    return anchorConstraint;
   }
 
   /**
@@ -287,120 +316,10 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ArrowAnchor createArrowAnchor()
+  public Element createElement()
   {
-    ArrowAnchorImpl arrowAnchor = new ArrowAnchorImpl();
-    return arrowAnchor;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FigureFeatures createFigureFeatures()
-  {
-    FigureFeaturesImpl figureFeatures = new FigureFeaturesImpl();
-    return figureFeatures;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public StyleFeature createStyleFeature()
-  {
-    StyleFeatureImpl styleFeature = new StyleFeatureImpl();
-    return styleFeature;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LayoutFeature createLayoutFeature()
-  {
-    LayoutFeatureImpl layoutFeature = new LayoutFeatureImpl();
-    return layoutFeature;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public CenterFeature createCenterFeature()
-  {
-    CenterFeatureImpl centerFeature = new CenterFeatureImpl();
-    return centerFeature;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public AlignFeature createAlignFeature()
-  {
-    AlignFeatureImpl alignFeature = new AlignFeatureImpl();
-    return alignFeature;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public GradientFeature createGradientFeature()
-  {
-    GradientFeatureImpl gradientFeature = new GradientFeatureImpl();
-    return gradientFeature;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PointFeature createPointFeature()
-  {
-    PointFeatureImpl pointFeature = new PointFeatureImpl();
-    return pointFeature;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SizeFeature createSizeFeature()
-  {
-    SizeFeatureImpl sizeFeature = new SizeFeatureImpl();
-    return sizeFeature;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PositionFeature createPositionFeature()
-  {
-    PositionFeatureImpl positionFeature = new PositionFeatureImpl();
-    return positionFeature;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ColorFeature createColorFeature()
-  {
-    ColorFeatureImpl colorFeature = new ColorFeatureImpl();
-    return colorFeature;
+    ElementImpl element = new ElementImpl();
+    return element;
   }
 
   /**
@@ -419,10 +338,10 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntegerFeature createIntegerFeature()
+  public ImageFile createImageFile()
   {
-    IntegerFeatureImpl integerFeature = new IntegerFeatureImpl();
-    return integerFeature;
+    ImageFileImpl imageFile = new ImageFileImpl();
+    return imageFile;
   }
 
   /**
@@ -430,10 +349,10 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public StringFeature createStringFeature()
+  public Color createColor()
   {
-    StringFeatureImpl stringFeature = new StringFeatureImpl();
-    return stringFeature;
+    ColorImpl color = new ColorImpl();
+    return color;
   }
 
   /**
@@ -441,10 +360,10 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public BooleanFeature createBooleanFeature()
+  public CustomColor createCustomColor()
   {
-    BooleanFeatureImpl booleanFeature = new BooleanFeatureImpl();
-    return booleanFeature;
+    CustomColorImpl customColor = new CustomColorImpl();
+    return customColor;
   }
 
   /**
@@ -452,10 +371,10 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public LineFeature createLineFeature()
+  public Rectangle createRectangle()
   {
-    LineFeatureImpl lineFeature = new LineFeatureImpl();
-    return lineFeature;
+    RectangleImpl rectangle = new RectangleImpl();
+    return rectangle;
   }
 
   /**
@@ -463,10 +382,131 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public AtributeExpression createAtributeExpression()
+  public Feature createFeature()
   {
-    AtributeExpressionImpl atributeExpression = new AtributeExpressionImpl();
-    return atributeExpression;
+    FeatureImpl feature = new FeatureImpl();
+    return feature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Rhombus createRhombus()
+  {
+    RhombusImpl rhombus = new RhombusImpl();
+    return rhombus;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Ellipse createEllipse()
+  {
+    EllipseImpl ellipse = new EllipseImpl();
+    return ellipse;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Polyline createPolyline()
+  {
+    PolylineImpl polyline = new PolylineImpl();
+    return polyline;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FeatureConditional createFeatureConditional()
+  {
+    FeatureConditionalImpl featureConditional = new FeatureConditionalImpl();
+    return featureConditional;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Contains createContains()
+  {
+    ContainsImpl contains = new ContainsImpl();
+    return contains;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Value createValue()
+  {
+    ValueImpl value = new ValueImpl();
+    return value;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IntValue createIntValue()
+  {
+    IntValueImpl intValue = new IntValueImpl();
+    return intValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DoubleValue createDoubleValue()
+  {
+    DoubleValueImpl doubleValue = new DoubleValueImpl();
+    return doubleValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StringValue createStringValue()
+  {
+    StringValueImpl stringValue = new StringValueImpl();
+    return stringValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BooleanValue createBooleanValue()
+  {
+    BooleanValueImpl booleanValue = new BooleanValueImpl();
+    return booleanValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EnumValue createEnumValue()
+  {
+    EnumValueImpl enumValue = new EnumValueImpl();
+    return enumValue;
   }
 
   /**
@@ -478,6 +518,182 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
   {
     AtributeValueImpl atributeValue = new AtributeValueImpl();
     return atributeValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Label createLabel()
+  {
+    LabelImpl label = new LabelImpl();
+    return label;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Image createImage()
+  {
+    ImageImpl image = new ImageImpl();
+    return image;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ColorFeature createColorFeature()
+  {
+    ColorFeatureImpl colorFeature = new ColorFeatureImpl();
+    return colorFeature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Foreground createForeground()
+  {
+    ForegroundImpl foreground = new ForegroundImpl();
+    return foreground;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Background createBackground()
+  {
+    BackgroundImpl background = new BackgroundImpl();
+    return background;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Transparency createTransparency()
+  {
+    TransparencyImpl transparency = new TransparencyImpl();
+    return transparency;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Size createSize()
+  {
+    SizeImpl size = new SizeImpl();
+    return size;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Point createPoint()
+  {
+    PointImpl point = new PointImpl();
+    return point;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Position createPosition()
+  {
+    PositionImpl position = new PositionImpl();
+    return position;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Corner createCorner()
+  {
+    CornerImpl corner = new CornerImpl();
+    return corner;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TextValue createTextValue()
+  {
+    TextValueImpl textValue = new TextValueImpl();
+    return textValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FontFace createFontFace()
+  {
+    FontFaceImpl fontFace = new FontFaceImpl();
+    return fontFace;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FontSize createFontSize()
+  {
+    FontSizeImpl fontSize = new FontSizeImpl();
+    return fontSize;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FontStyle createFontStyle()
+  {
+    FontStyleImpl fontStyle = new FontStyleImpl();
+    return fontStyle;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LineStyle createLineStyle()
+  {
+    LineStyleImpl lineStyle = new LineStyleImpl();
+    return lineStyle;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LineWidth createLineWidth()
+  {
+    LineWidthImpl lineWidth = new LineWidthImpl();
+    return lineWidth;
   }
 
   /**
@@ -507,9 +723,9 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public FigureShape createFigureShapeFromString(EDataType eDataType, String initialValue)
+  public AnchorConstraintType createAnchorConstraintTypeFromString(EDataType eDataType, String initialValue)
   {
-    FigureShape result = FigureShape.get(initialValue);
+    AnchorConstraintType result = AnchorConstraintType.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -519,7 +735,139 @@ public class XdiagramFactoryImpl extends EFactoryImpl implements XdiagramFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertFigureShapeToString(EDataType eDataType, Object instanceValue)
+  public String convertAnchorConstraintTypeToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DefaultColor createDefaultColorFromString(EDataType eDataType, String initialValue)
+  {
+    DefaultColor result = DefaultColor.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertDefaultColorToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Operator createOperatorFromString(EDataType eDataType, String initialValue)
+  {
+    Operator result = Operator.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertOperatorToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BooleanLiteral createBooleanLiteralFromString(EDataType eDataType, String initialValue)
+  {
+    BooleanLiteral result = BooleanLiteral.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertBooleanLiteralToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FontFaceType createFontFaceTypeFromString(EDataType eDataType, String initialValue)
+  {
+    FontFaceType result = FontFaceType.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertFontFaceTypeToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FontStyleType createFontStyleTypeFromString(EDataType eDataType, String initialValue)
+  {
+    FontStyleType result = FontStyleType.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertFontStyleTypeToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LineType createLineTypeFromString(EDataType eDataType, String initialValue)
+  {
+    LineType result = LineType.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertLineTypeToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

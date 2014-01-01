@@ -77,15 +77,6 @@ public interface XdiagramFactory extends EFactory
   Attribute createAttribute();
 
   /**
-   * Returns a new object of class '<em>Node Figure</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Node Figure</em>'.
-   * @generated
-   */
-  NodeFigure createNodeFigure();
-
-  /**
    * Returns a new object of class '<em>Node Container</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -113,130 +104,40 @@ public interface XdiagramFactory extends EFactory
   Decorator createDecorator();
 
   /**
-   * Returns a new object of class '<em>Dynamic Figure</em>'.
+   * Returns a new object of class '<em>Connectable Element</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Dynamic Figure</em>'.
+   * @return a new object of class '<em>Connectable Element</em>'.
    * @generated
    */
-  DynamicFigure createDynamicFigure();
+  ConnectableElement createConnectableElement();
 
   /**
-   * Returns a new object of class '<em>Static Figure</em>'.
+   * Returns a new object of class '<em>Anchor</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Static Figure</em>'.
+   * @return a new object of class '<em>Anchor</em>'.
    * @generated
    */
-  StaticFigure createStaticFigure();
+  Anchor createAnchor();
 
   /**
-   * Returns a new object of class '<em>Node Anchor</em>'.
+   * Returns a new object of class '<em>Anchor Constraint</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Node Anchor</em>'.
+   * @return a new object of class '<em>Anchor Constraint</em>'.
    * @generated
    */
-  NodeAnchor createNodeAnchor();
+  AnchorConstraint createAnchorConstraint();
 
   /**
-   * Returns a new object of class '<em>Arrow Anchor</em>'.
+   * Returns a new object of class '<em>Element</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Arrow Anchor</em>'.
+   * @return a new object of class '<em>Element</em>'.
    * @generated
    */
-  ArrowAnchor createArrowAnchor();
-
-  /**
-   * Returns a new object of class '<em>Figure Features</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Figure Features</em>'.
-   * @generated
-   */
-  FigureFeatures createFigureFeatures();
-
-  /**
-   * Returns a new object of class '<em>Style Feature</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Style Feature</em>'.
-   * @generated
-   */
-  StyleFeature createStyleFeature();
-
-  /**
-   * Returns a new object of class '<em>Layout Feature</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Layout Feature</em>'.
-   * @generated
-   */
-  LayoutFeature createLayoutFeature();
-
-  /**
-   * Returns a new object of class '<em>Center Feature</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Center Feature</em>'.
-   * @generated
-   */
-  CenterFeature createCenterFeature();
-
-  /**
-   * Returns a new object of class '<em>Align Feature</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Align Feature</em>'.
-   * @generated
-   */
-  AlignFeature createAlignFeature();
-
-  /**
-   * Returns a new object of class '<em>Gradient Feature</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Gradient Feature</em>'.
-   * @generated
-   */
-  GradientFeature createGradientFeature();
-
-  /**
-   * Returns a new object of class '<em>Point Feature</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Point Feature</em>'.
-   * @generated
-   */
-  PointFeature createPointFeature();
-
-  /**
-   * Returns a new object of class '<em>Size Feature</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Size Feature</em>'.
-   * @generated
-   */
-  SizeFeature createSizeFeature();
-
-  /**
-   * Returns a new object of class '<em>Position Feature</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Position Feature</em>'.
-   * @generated
-   */
-  PositionFeature createPositionFeature();
-
-  /**
-   * Returns a new object of class '<em>Color Feature</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Color Feature</em>'.
-   * @generated
-   */
-  ColorFeature createColorFeature();
+  Element createElement();
 
   /**
    * Returns a new object of class '<em>RGB</em>'.
@@ -248,49 +149,148 @@ public interface XdiagramFactory extends EFactory
   RGB createRGB();
 
   /**
-   * Returns a new object of class '<em>Integer Feature</em>'.
+   * Returns a new object of class '<em>Image File</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Integer Feature</em>'.
+   * @return a new object of class '<em>Image File</em>'.
    * @generated
    */
-  IntegerFeature createIntegerFeature();
+  ImageFile createImageFile();
 
   /**
-   * Returns a new object of class '<em>String Feature</em>'.
+   * Returns a new object of class '<em>Color</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>String Feature</em>'.
+   * @return a new object of class '<em>Color</em>'.
    * @generated
    */
-  StringFeature createStringFeature();
+  Color createColor();
 
   /**
-   * Returns a new object of class '<em>Boolean Feature</em>'.
+   * Returns a new object of class '<em>Custom Color</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Boolean Feature</em>'.
+   * @return a new object of class '<em>Custom Color</em>'.
    * @generated
    */
-  BooleanFeature createBooleanFeature();
+  CustomColor createCustomColor();
 
   /**
-   * Returns a new object of class '<em>Line Feature</em>'.
+   * Returns a new object of class '<em>Rectangle</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Line Feature</em>'.
+   * @return a new object of class '<em>Rectangle</em>'.
    * @generated
    */
-  LineFeature createLineFeature();
+  Rectangle createRectangle();
 
   /**
-   * Returns a new object of class '<em>Atribute Expression</em>'.
+   * Returns a new object of class '<em>Feature</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Atribute Expression</em>'.
+   * @return a new object of class '<em>Feature</em>'.
    * @generated
    */
-  AtributeExpression createAtributeExpression();
+  Feature createFeature();
+
+  /**
+   * Returns a new object of class '<em>Rhombus</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Rhombus</em>'.
+   * @generated
+   */
+  Rhombus createRhombus();
+
+  /**
+   * Returns a new object of class '<em>Ellipse</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ellipse</em>'.
+   * @generated
+   */
+  Ellipse createEllipse();
+
+  /**
+   * Returns a new object of class '<em>Polyline</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Polyline</em>'.
+   * @generated
+   */
+  Polyline createPolyline();
+
+  /**
+   * Returns a new object of class '<em>Feature Conditional</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Feature Conditional</em>'.
+   * @generated
+   */
+  FeatureConditional createFeatureConditional();
+
+  /**
+   * Returns a new object of class '<em>Contains</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Contains</em>'.
+   * @generated
+   */
+  Contains createContains();
+
+  /**
+   * Returns a new object of class '<em>Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Value</em>'.
+   * @generated
+   */
+  Value createValue();
+
+  /**
+   * Returns a new object of class '<em>Int Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Int Value</em>'.
+   * @generated
+   */
+  IntValue createIntValue();
+
+  /**
+   * Returns a new object of class '<em>Double Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Double Value</em>'.
+   * @generated
+   */
+  DoubleValue createDoubleValue();
+
+  /**
+   * Returns a new object of class '<em>String Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>String Value</em>'.
+   * @generated
+   */
+  StringValue createStringValue();
+
+  /**
+   * Returns a new object of class '<em>Boolean Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Boolean Value</em>'.
+   * @generated
+   */
+  BooleanValue createBooleanValue();
+
+  /**
+   * Returns a new object of class '<em>Enum Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Enum Value</em>'.
+   * @generated
+   */
+  EnumValue createEnumValue();
 
   /**
    * Returns a new object of class '<em>Atribute Value</em>'.
@@ -300,6 +300,150 @@ public interface XdiagramFactory extends EFactory
    * @generated
    */
   AtributeValue createAtributeValue();
+
+  /**
+   * Returns a new object of class '<em>Label</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Label</em>'.
+   * @generated
+   */
+  Label createLabel();
+
+  /**
+   * Returns a new object of class '<em>Image</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Image</em>'.
+   * @generated
+   */
+  Image createImage();
+
+  /**
+   * Returns a new object of class '<em>Color Feature</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Color Feature</em>'.
+   * @generated
+   */
+  ColorFeature createColorFeature();
+
+  /**
+   * Returns a new object of class '<em>Foreground</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Foreground</em>'.
+   * @generated
+   */
+  Foreground createForeground();
+
+  /**
+   * Returns a new object of class '<em>Background</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Background</em>'.
+   * @generated
+   */
+  Background createBackground();
+
+  /**
+   * Returns a new object of class '<em>Transparency</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Transparency</em>'.
+   * @generated
+   */
+  Transparency createTransparency();
+
+  /**
+   * Returns a new object of class '<em>Size</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Size</em>'.
+   * @generated
+   */
+  Size createSize();
+
+  /**
+   * Returns a new object of class '<em>Point</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Point</em>'.
+   * @generated
+   */
+  Point createPoint();
+
+  /**
+   * Returns a new object of class '<em>Position</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Position</em>'.
+   * @generated
+   */
+  Position createPosition();
+
+  /**
+   * Returns a new object of class '<em>Corner</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Corner</em>'.
+   * @generated
+   */
+  Corner createCorner();
+
+  /**
+   * Returns a new object of class '<em>Text Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Text Value</em>'.
+   * @generated
+   */
+  TextValue createTextValue();
+
+  /**
+   * Returns a new object of class '<em>Font Face</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Font Face</em>'.
+   * @generated
+   */
+  FontFace createFontFace();
+
+  /**
+   * Returns a new object of class '<em>Font Size</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Font Size</em>'.
+   * @generated
+   */
+  FontSize createFontSize();
+
+  /**
+   * Returns a new object of class '<em>Font Style</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Font Style</em>'.
+   * @generated
+   */
+  FontStyle createFontStyle();
+
+  /**
+   * Returns a new object of class '<em>Line Style</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Line Style</em>'.
+   * @generated
+   */
+  LineStyle createLineStyle();
+
+  /**
+   * Returns a new object of class '<em>Line Width</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Line Width</em>'.
+   * @generated
+   */
+  LineWidth createLineWidth();
 
   /**
    * Returns the package supported by this factory.

@@ -18,9 +18,11 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getImportURI <em>Import URI</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getImports <em>Imports</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getModelClass <em>Model Class</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getStyles <em>Styles</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getNodes <em>Nodes</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getLinks <em>Links</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getStyles <em>Styles</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getColors <em>Colors</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram#getImages <em>Images</em>}</li>
  * </ul>
  * </p>
  *
@@ -99,22 +101,6 @@ public interface XDiagram extends EObject
   void setModelClass(EClass value);
 
   /**
-   * Returns the value of the '<em><b>Styles</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.Style}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Styles</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Styles</em>' containment reference list.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getXDiagram_Styles()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Style> getStyles();
-
-  /**
    * Returns the value of the '<em><b>Nodes</b></em>' containment reference list.
    * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.Node}.
    * <!-- begin-user-doc -->
@@ -145,5 +131,53 @@ public interface XDiagram extends EObject
    * @generated
    */
   EList<Link> getLinks();
+
+  /**
+   * Returns the value of the '<em><b>Styles</b></em>' containment reference list.
+   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.Style}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Styles</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Styles</em>' containment reference list.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getXDiagram_Styles()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Style> getStyles();
+
+  /**
+   * Returns the value of the '<em><b>Colors</b></em>' containment reference list.
+   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.CustomColor}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Colors</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Colors</em>' containment reference list.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getXDiagram_Colors()
+   * @model containment="true"
+   * @generated
+   */
+  EList<CustomColor> getColors();
+
+  /**
+   * Returns the value of the '<em><b>Images</b></em>' containment reference list.
+   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.ImageFile}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Images</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Images</em>' containment reference list.
+   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getXDiagram_Images()
+   * @model containment="true"
+   * @generated
+   */
+  EList<ImageFile> getImages();
 
 } // XDiagram

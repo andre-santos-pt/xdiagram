@@ -11,26 +11,47 @@
       <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//ContainerLayout/STACK"/>
       <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//ContainerLayout/FREE"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="XDiagram.ecore#//FigureShape">
-      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FigureShape/SQUARE"/>
-      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FigureShape/RECTANGLE"/>
-      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FigureShape/ROUNDED_RECTANGLE"/>
-      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FigureShape/CIRCLE"/>
-      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FigureShape/ELLIPSE"/>
-      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FigureShape/TRIANGLE"/>
-      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FigureShape/RHOMBUS"/>
-      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FigureShape/POLYGON"/>
-      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FigureShape/POLYLINE"/>
-      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FigureShape/LABEL"/>
-      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FigureShape/IMAGE"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="XDiagram.ecore#//AnchorConstraintType">
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//AnchorConstraintType/INCOMING"/>
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//AnchorConstraintType/OUTGOING"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="XDiagram.ecore#//DefaultColor">
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//DefaultColor/RED"/>
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//DefaultColor/BLUE"/>
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//DefaultColor/YELLOW"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="XDiagram.ecore#//Operator">
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//Operator/EQUAL"/>
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//Operator/DIFFERENT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="XDiagram.ecore#//BooleanLiteral">
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//BooleanLiteral/TRUE"/>
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//BooleanLiteral/FALSE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="XDiagram.ecore#//FontFaceType">
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FontFaceType/ARIAL"/>
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FontFaceType/VERDANA"/>
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FontFaceType/TIMES"/>
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FontFaceType/COURIER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="XDiagram.ecore#//FontStyleType">
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FontStyleType/ITALICS"/>
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FontStyleType/BOLD"/>
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//FontStyleType/UNDERLINE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="XDiagram.ecore#//LineType">
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//LineType/SOLID"/>
+      <genEnumLiterals ecoreEnumLiteral="XDiagram.ecore#//LineType/DASH"/>
     </genEnums>
     <genClasses ecoreClass="XDiagram.ecore#//XDiagram">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//XDiagram/importURI"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//XDiagram/imports"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XDiagram.ecore#//XDiagram/modelClass"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//XDiagram/styles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//XDiagram/nodes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//XDiagram/links"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//XDiagram/styles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//XDiagram/colors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//XDiagram/images"/>
     </genClasses>
     <genClasses ecoreClass="XDiagram.ecore#//ImportStatement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//ImportStatement/importedNamespace"/>
@@ -48,19 +69,12 @@
     </genClasses>
     <genClasses ecoreClass="XDiagram.ecore#//Node">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Node/resizable"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Node/figures"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Node/containers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Node/mainFigure"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Node/anchors"/>
     </genClasses>
     <genClasses ecoreClass="XDiagram.ecore#//Attribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Attribute/key"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Attribute/value"/>
-    </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//NodeFigure">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//NodeFigure/option"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//NodeFigure/figure"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//NodeFigure/style"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//NodeFigure/features"/>
     </genClasses>
     <genClasses ecoreClass="XDiagram.ecore#//NodeContainer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//NodeContainer/layout"/>
@@ -75,124 +89,96 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Link/sourceReference"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Link/targetReference"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Link/manhattan"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Link/linefeatures"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Link/colorfeatures"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Link/integerfeatures"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Link/decorators"/>
     </genClasses>
     <genClasses ecoreClass="XDiagram.ecore#//Decorator">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Decorator/pos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Decorator/position"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Decorator/source"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Decorator/target"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Decorator/middle"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Decorator/placingStatic"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Decorator/placingDynamic"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Decorator/staticElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Decorator/label"/>
     </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//DynamicFigure">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//DynamicFigure/figure"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//DynamicFigure/features"/>
+    <genClasses ecoreClass="XDiagram.ecore#//ConnectableElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//ConnectableElement/children"/>
     </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//StaticFigure">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//StaticFigure/figure"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//StaticFigure/style"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//StaticFigure/features"/>
+    <genClasses ecoreClass="XDiagram.ecore#//Anchor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Anchor/object"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Anchor/passX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Anchor/X"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Anchor/formatX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Anchor/passY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Anchor/Y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Anchor/formatY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Anchor/figures"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Anchor/constraints"/>
     </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//NodeAnchor">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//NodeAnchor/object"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//NodeAnchor/passX"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//NodeAnchor/X"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//NodeAnchor/formatX"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//NodeAnchor/passY"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//NodeAnchor/Y"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//NodeAnchor/formatY"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//NodeAnchor/figures"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//NodeAnchor/arrows"/>
+    <genClasses ecoreClass="XDiagram.ecore#//AnchorConstraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//AnchorConstraint/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//AnchorConstraint/reference"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//AnchorConstraint/max"/>
     </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//ArrowAnchor">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//ArrowAnchor/reference"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//ArrowAnchor/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//ArrowAnchor/N"/>
-    </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//FigureFeatures">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//FigureFeatures/linefeatures"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//FigureFeatures/centerfeatures"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//FigureFeatures/alignfeatures"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//FigureFeatures/gradientfeatures"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//FigureFeatures/pointfeatures"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//FigureFeatures/sizefeatures"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//FigureFeatures/positionfeatures"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//FigureFeatures/colorfeatures"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//FigureFeatures/integerfeatures"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//FigureFeatures/booleanfeatures"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//FigureFeatures/stringfeatures"/>
-    </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//StyleFeature">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//StyleFeature/key"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//StyleFeature/value"/>
-    </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//LayoutFeature"/>
-    <genClasses ecoreClass="XDiagram.ecore#//CenterFeature"/>
-    <genClasses ecoreClass="XDiagram.ecore#//AlignFeature">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//AlignFeature/key"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//AlignFeature/value"/>
-    </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//GradientFeature">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//GradientFeature/key"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//GradientFeature/value"/>
-    </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//PointFeature">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//PointFeature/X"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//PointFeature/Y"/>
-    </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//SizeFeature">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//SizeFeature/Width"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//SizeFeature/Height"/>
-    </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//PositionFeature">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//PositionFeature/X"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//PositionFeature/Y"/>
-    </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//ColorFeature">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//ColorFeature/expression"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//ColorFeature/key"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//ColorFeature/value"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//ColorFeature/rgb"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//ColorFeature/atribute"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//ColorFeature/operator"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//ColorFeature/option"/>
+    <genClasses ecoreClass="XDiagram.ecore#//Element">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Element/features"/>
     </genClasses>
     <genClasses ecoreClass="XDiagram.ecore#//RGB">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//RGB/R"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//RGB/G"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//RGB/B"/>
     </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//IntegerFeature">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//IntegerFeature/expression"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//IntegerFeature/key"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//IntegerFeature/value"/>
+    <genClasses ecoreClass="XDiagram.ecore#//ImageFile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//ImageFile/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//ImageFile/src"/>
     </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//StringFeature">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//StringFeature/expression"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//StringFeature/key"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//StringFeature/value"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//StringFeature/valueL"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//StringFeature/attribute"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//StringFeature/valueR"/>
+    <genClasses ecoreClass="XDiagram.ecore#//Color">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Color/default"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Color/custom"/>
     </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//BooleanFeature">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//BooleanFeature/expression"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//BooleanFeature/key"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//BooleanFeature/value"/>
+    <genClasses ecoreClass="XDiagram.ecore#//CustomColor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//CustomColor/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//CustomColor/rgb"/>
     </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//LineFeature">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//LineFeature/expression"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//LineFeature/key"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//LineFeature/value"/>
+    <genClasses ecoreClass="XDiagram.ecore#//Rectangle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Rectangle/rectangle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Rectangle/square"/>
     </genClasses>
-    <genClasses ecoreClass="XDiagram.ecore#//AtributeExpression">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//AtributeExpression/key"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//AtributeExpression/operator"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//AtributeExpression/value"/>
+    <genClasses ecoreClass="XDiagram.ecore#//Feature">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Feature/conditional"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//Rhombus"/>
+    <genClasses ecoreClass="XDiagram.ecore#//Ellipse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Ellipse/ellipse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Ellipse/circle"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//Polyline">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Polyline/polygon"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Polyline/polyline"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//FeatureConditional">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XDiagram.ecore#//FeatureConditional/modelAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//FeatureConditional/operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//FeatureConditional/value"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//Contains">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Contains/modelReference"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//Value"/>
+    <genClasses ecoreClass="XDiagram.ecore#//IntValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//IntValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//DoubleValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//DoubleValue/valueInt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//DoubleValue/valueDecimal"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//StringValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//StringValue/null"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//StringValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//BooleanValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//BooleanValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//EnumValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//EnumValue/name"/>
     </genClasses>
     <genClasses ecoreClass="XDiagram.ecore#//AtributeValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//AtributeValue/valueINT"/>
@@ -203,6 +189,54 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//AtributeValue/valueDAY"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//AtributeValue/valueMONTH"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//AtributeValue/valueYEAR"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//Label">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Label/editable"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//Image">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XDiagram.ecore#//Image/image"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//ColorFeature">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XDiagram.ecore#//ColorFeature/color"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//Foreground"/>
+    <genClasses ecoreClass="XDiagram.ecore#//Background"/>
+    <genClasses ecoreClass="XDiagram.ecore#//Transparency">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Transparency/percent"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//Size">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Size/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Size/height"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//Point">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Point/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Point/y"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//Position">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Position/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Position/y"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//Corner">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//Corner/angle"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//TextValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//TextValue/text"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XDiagram.ecore#//TextValue/modelAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//FontFace">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//FontFace/face"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//FontSize">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//FontSize/size"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//FontStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//FontStyle/styles"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//LineStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//LineStyle/style"/>
+    </genClasses>
+    <genClasses ecoreClass="XDiagram.ecore#//LineWidth">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XDiagram.ecore#//LineWidth/width"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -19,9 +19,6 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getSourceReference <em>Source Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getTargetReference <em>Target Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#isManhattan <em>Manhattan</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getLinefeatures <em>Linefeatures</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getColorfeatures <em>Colorfeatures</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getIntegerfeatures <em>Integerfeatures</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.xtext.xdiagram.Link#getDecorators <em>Decorators</em>}</li>
  * </ul>
  * </p>
@@ -30,7 +27,7 @@ import org.eclipse.emf.ecore.EReference;
  * @model
  * @generated
  */
-public interface Link extends DiagramElement
+public interface Link extends DiagramElement, Element
 {
   /**
    * Returns the value of the '<em><b>Model Reference</b></em>' reference.
@@ -161,54 +158,6 @@ public interface Link extends DiagramElement
    * @generated
    */
   void setManhattan(boolean value);
-
-  /**
-   * Returns the value of the '<em><b>Linefeatures</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.LineFeature}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Linefeatures</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Linefeatures</em>' containment reference list.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getLink_Linefeatures()
-   * @model containment="true"
-   * @generated
-   */
-  EList<LineFeature> getLinefeatures();
-
-  /**
-   * Returns the value of the '<em><b>Colorfeatures</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Colorfeatures</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Colorfeatures</em>' containment reference list.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getLink_Colorfeatures()
-   * @model containment="true"
-   * @generated
-   */
-  EList<ColorFeature> getColorfeatures();
-
-  /**
-   * Returns the value of the '<em><b>Integerfeatures</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Integerfeatures</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Integerfeatures</em>' containment reference list.
-   * @see org.eclipselabs.xdiagram.xtext.xdiagram.XdiagramPackage#getLink_Integerfeatures()
-   * @model containment="true"
-   * @generated
-   */
-  EList<IntegerFeature> getIntegerfeatures();
 
   /**
    * Returns the value of the '<em><b>Decorators</b></em>' containment reference list.
