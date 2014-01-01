@@ -9,6 +9,7 @@ import java.awt.Point;
 import java.awt.Rectangle;
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.EList;
@@ -29,32 +30,39 @@ import org.eclipse.graphiti.mm.pictograms.PictogramLink;
 import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipselabs.xdiagram.provider.ImageProvider;
-import org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures;
-import org.eclipselabs.xdiagram.xtext.xdiagram.FigureShape;
+import org.eclipselabs.xdiagram.xtext.services.XDiagramGrammarAccess.FigureFeatureElements;
+import org.eclipselabs.xdiagram.xtext.xdiagram.ConnectableElement;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Feature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Node;
 import org.eclipselabs.xdiagram.xtext.xdiagram.NodeFigure;
-import org.eclipselabs.xdiagram.xtext.xdiagram.PositionFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.SizeFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.impl.FigureFeaturesImpl;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Polygon;
 import org.osgi.framework.Bundle;
+
+
+
 
 public class NodeProvider extends FigureProvider {
 	
+	private enum FigureShape {
+		LABEL, IMAGE, CIRCLE, ELLIPSE, SQUARE, ROUNDEDRECTANGLE, RECTANGLE, TRIANGLE, RHOMBUS, POLYGON, POLYLINE;
+		
+		public static FigureShape get(ConnectableElement e) {
+			return valueOf(e.getClass().getSimpleName().toUpperCase());
+		}
+	}
 	
-//	public static enum NodeShape {
-//		SQUARE, RECTANGLE, ROUNDEDRECTANGLE, CIRCLE, ELLIPSE, TRIANGLE, RHOMBUS, POLYGON, POLYLINE, LABEL, IMAGE;
-//	}	
 
 	public static GraphicsAlgorithm createNodeShape(Diagram diagram, GraphicsAlgorithmContainer container, EObject eObject,
-			FigureShape shape, FigureFeatures features, Rectangle limits){
+			ConnectableElement e, Rectangle limits){
+		
+		List<Feature> features = e.getFeatures();
+		FigureShape shape = FigureShape.get(e);
 		
 		int angle = IntegerProperty.ANGLE.getValue(features); 
 		int arc = IntegerProperty.CORNER.getValue(features);
 
-		// TODO: validation
-		if (shape==FigureShape.POLYGON && !(features.getPointfeatures().size()>1))
-			shape = FigureShape.RECTANGLE;
+//		if (shape==FigureShape.POLYGON && !(features.getPointfeatures().size()>1))
+//			shape = FigureShape.RECTANGLE;
 
 		GraphicsAlgorithm figure = null;
 		
@@ -70,11 +78,11 @@ public class NodeProvider extends FigureProvider {
 			limits.width = size.width;
 			limits.height = size.height;
 			break;
-		case IMAGE:
-			String icon = StringProperty.ICON.getValue(features);
-			figure = createImageFigure(container, icon, limits);
-			StringProperty.ICON.getValue(figure, eObject, features);
-			break;
+//		case IMAGE:
+//			String icon = StringProperty.ICON.getValue(features);
+//			figure = createImageFigure(container, icon, limits);
+//			StringProperty.ICON.getValue(figure, eObject, features);
+//			break;
 		case CIRCLE:
 			limits.height = limits.width;
 		case ELLIPSE:
@@ -83,7 +91,7 @@ public class NodeProvider extends FigureProvider {
 		case SQUARE:
 			limits.height = limits.width;
 			center = new Point(center.x, center.x);
-		case ROUNDED_RECTANGLE:
+		case ROUNDEDRECTANGLE:
 			arc = arc<=0 ? 20 : arc;
 			if (angle<=0){
 				figure = Graphiti.getGaService().createPlainRoundedRectangle(container, arc, arc);
@@ -103,24 +111,24 @@ public class NodeProvider extends FigureProvider {
 		case RHOMBUS:
 			xy = new int[] { limits.width/2, 0, limits.width, limits.height/2, limits.width/2, limits.height, 0, limits.height/2 };
 			break;
-		case POLYGON:
-			if (features.getPointfeatures().size()<3)
-				return null;
-		case POLYLINE:
-			if (features.getPointfeatures().size()<2)
-				return null;
-			xy = new int [features.getPointfeatures().size()*2];
-			for (int p=0; p<features.getPointfeatures().size(); p++){
-				int x = features.getPointfeatures().get(p).getX();
-				int y = features.getPointfeatures().get(p).getY();
-				xy[p*2] = x;
-				xy[p*2+1] = y;
-			}
-			Rectangle bounds = CalculateBounds(xy);
-			TranslateFigure(xy, new Point(-bounds.x, -bounds.y));
-			limits.width = bounds.width;
-			limits.height = bounds.height;
-			break;
+//		case POLYGON:
+//			if (features.getPointfeatures().size()<3)
+//				return null;
+//		case POLYLINE:
+//			if (features.getPointfeatures().size()<2)
+//				return null;
+//			xy = new int [features.getPointfeatures().size()*2];
+//			for (int p=0; p<features.getPointfeatures().size(); p++){
+//				int x = features.getPointfeatures().get(p).getX();
+//				int y = features.getPointfeatures().get(p).getY();
+//				xy[p*2] = x;
+//				xy[p*2+1] = y;
+//			}
+//			Rectangle bounds = CalculateBounds(xy);
+//			TranslateFigure(xy, new Point(-bounds.x, -bounds.y));
+//			limits.width = bounds.width;
+//			limits.height = bounds.height;
+//			break;
 		default:
 			figure = Graphiti.getGaService().createPlainRectangle(container);
 			break;
@@ -157,6 +165,7 @@ public class NodeProvider extends FigureProvider {
 
 	public static Rectangle createNodeFigure(Diagram diagram, GraphicsAlgorithmContainer container, 
 			EObject eObject, GraphicsAlgorithm parentFigure, EList<NodeFigure> figures, String style){
+		
 		return createNodeFigure(diagram, container, eObject, parentFigure, figures, null, style);
 	}
 
@@ -169,41 +178,41 @@ public class NodeProvider extends FigureProvider {
 				
 		ArrayList<GraphicsAlgorithm> shapes = new ArrayList<GraphicsAlgorithm>();
 		ArrayList<GraphicsAlgorithm> labels = new ArrayList<GraphicsAlgorithm>();
-		ArrayList<FigureFeatures> styles = new ArrayList<FigureFeatures>();
+//		ArrayList<FigureFeatures> styles = new ArrayList<FigureFeatures>();
 
 		for (int i=0; i<figures.size(); i++){
-			
-			FigureShape shape = figures.get(i).getFigure();
-//			shape = NodeShape.valueOf(figures.get(i).getFigure().name());
+			ConnectableElement connectableElement = figures.get(i).getFigure();
+			FigureShape shape = FigureShape.get(connectableElement);
 			boolean main = figures.get(i).getOption()!=null;
-			FigureFeatures features = figures.get(i).getFeatures();		
-			if (features==null){
-				for (Constructor<?> constructor : FigureFeaturesImpl.class.getDeclaredConstructors()){
-					if (constructor.getParameterTypes().length==0){
-						constructor.setAccessible(true);
-						try {
-							features = (FigureFeaturesImpl) constructor.newInstance(new Object[0]);
-						} catch (Exception e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						
-					}
-				}	
-			}
+			List<Feature> features = figures.get(i).getFeatures();	
 			
-			FigureProvider.setStyle(figures.get(i).getStyle()!=null && figures.get(i).getStyle().length()>0 ?
-					figures.get(i).getStyle() : style, features);
-			if (features!=null && features.getSizefeatures()!=null)
-				for (SizeFeature sf : features.getSizefeatures()){
-					IntegerProperty.WIDTH.addNewValue(features.getIntegerfeatures(), sf.getWidth(), true);
-					IntegerProperty.HEIGHT.addNewValue(features.getIntegerfeatures(), sf.getHeight(), true);
-				}
-			if (features!=null && features.getPositionfeatures()!=null)
-				for (PositionFeature pf : features.getPositionfeatures()){
-					IntegerProperty.TOP.addNewValue(features.getIntegerfeatures(), pf.getY(), true);
-					IntegerProperty.LEFT.addNewValue(features.getIntegerfeatures(), pf.getX(), true);
-				}
+//			if (features==null){
+//				for (Constructor<?> constructor : FigureFeaturesImpl.class.getDeclaredConstructors()){
+//					if (constructor.getParameterTypes().length==0){
+//						constructor.setAccessible(true);
+//						try {
+//							features = (FigureFeaturesImpl) constructor.newInstance(new Object[0]);
+//						} catch (Exception e) {
+//							// TODO Auto-generated catch block
+//							e.printStackTrace();
+//						}
+//						
+//					}
+//				}	
+//			}
+			
+//			FigureProvider.setStyle(figures.get(i).getStyle()!=null && figures.get(i).getStyle().length()>0 ?
+//					figures.get(i).getStyle() : style, features);
+//			if (features!=null && features.getSizefeatures()!=null)
+//				for (SizeFeature sf : features.getSizefeatures()){
+//					IntegerProperty.WIDTH.addNewValue(features.getIntegerfeatures(), sf.getWidth(), true);
+//					IntegerProperty.HEIGHT.addNewValue(features.getIntegerfeatures(), sf.getHeight(), true);
+//				}
+//			if (features!=null && features.getPositionfeatures()!=null)
+//				for (PositionFeature pf : features.getPositionfeatures()){
+//					IntegerProperty.TOP.addNewValue(features.getIntegerfeatures(), pf.getY(), true);
+//					IntegerProperty.LEFT.addNewValue(features.getIntegerfeatures(), pf.getX(), true);
+//				}
 			
 
 			Rectangle limits = new Rectangle(
@@ -213,31 +222,35 @@ public class NodeProvider extends FigureProvider {
 					IntegerProperty.HEIGHT.getValue(features));
 
 			
-			GraphicsAlgorithmContainer object = container;
+			GraphicsAlgorithmContainer container2 = container;
 			if (container instanceof ContainerShape)
-				object = Graphiti.getPeCreateService().createShape((ContainerShape) container, false);
-			GraphicsAlgorithm figure = createNodeShape(diagram, object, eObject, shape, features, limits);
+				container2 = Graphiti.getPeCreateService().createShape((ContainerShape) container, false);
+			
+			GraphicsAlgorithm figure = createNodeShape(diagram, container2, eObject, connectableElement, limits);
 			shapes.add(figure);			
 			Point limit = new Point(limits.x+limits.width, limits.y+limits.height);
 
 			if (shape == FigureShape.LABEL){
 				labels.add(figure);
-				styles.add(features);
+				
+//				styles.add(features);
+				
 				FigureProperty.CAN_RESIZE.set(parentFigure, "1");
 			}
 			if (main)
 				FigureProperty.MAIN.set(figure, "1");
-			
-			if ( features==null || features.getCenterfeatures().size()==0 || 
-					features.getCenterfeatures().get(0).getValue().equalsIgnoreCase("VERTICAL") ){
-				bounds.x = limits.x<bounds.x ? limits.x : bounds.x;
-				bounds.width = limit.x>bounds.width ? limit.x : bounds.width;
-			}
-			if ( features==null || features.getCenterfeatures().size()==0 || 
-					features.getCenterfeatures().get(0).getValue().equalsIgnoreCase("HORIZONTAL") ){
-				bounds.y = limits.y<bounds.y ? limits.y : bounds.y;
-				bounds.height = limit.y>bounds.height ? limit.y : bounds.height;
-			}
+
+			//TODO: Eduardo
+//			if ( features==null || features.getCenterfeatures().size()==0 || 
+//					features.getCenterfeatures().get(0).getValue().equalsIgnoreCase("VERTICAL") ){
+//				bounds.x = limits.x<bounds.x ? limits.x : bounds.x;
+//				bounds.width = limit.x>bounds.width ? limit.x : bounds.width;
+//			}
+//			if ( features==null || features.getCenterfeatures().size()==0 || 
+//					features.getCenterfeatures().get(0).getValue().equalsIgnoreCase("HORIZONTAL") ){
+//				bounds.y = limits.y<bounds.y ? limits.y : bounds.y;
+//				bounds.height = limit.y>bounds.height ? limit.y : bounds.height;
+//			}
 
 
 			//-----------------------------------
@@ -271,32 +284,33 @@ public class NodeProvider extends FigureProvider {
 		if (bounds.height < minValue)
 			bounds.height = minValue;
 
-
-		for (int p=0, i=0, j=0; p<figures.size(); p++, i+=2){
-			j=i+1;
-			if ( figures.get(p).getFeatures()!=null && figures.get(p).getFeatures().getCenterfeatures().size()>0 && 
-					!figures.get(p).getFeatures().getCenterfeatures().get(0).getValue().equalsIgnoreCase("VERTICAL") ){
-				int locX = (int)(bounds.width/2.0-shapes.get(i).getWidth()/2.0);
-				shapes.get(i).setX(locX);
-				shapes.get(j).setX(locX);
-				if (shapes.get(i).getX()<bounds.x)					
-					bounds.x = shapes.get(i).getX();
-				int limit = shapes.get(i).getX()+shapes.get(i).getWidth();
-				if (limit>bounds.width)					
-					bounds.width = limit;
-			}
-			if ( figures.get(p).getFeatures()!=null && figures.get(p).getFeatures().getCenterfeatures().size()>0 && 
-					!figures.get(p).getFeatures().getCenterfeatures().get(0).getValue().equalsIgnoreCase("HORIZONTAL") ){
-				int locY = (int)(bounds.height/2.0-shapes.get(i).getHeight()/2.0);
-				shapes.get(i).setY(locY);
-				shapes.get(j).setY(locY);
-				if (shapes.get(i).getY()<bounds.y)					
-					bounds.y = shapes.get(i).getY();
-				int limit = shapes.get(i).getY()+shapes.get(i).getHeight();
-				if (limit>bounds.height)					
-					bounds.height = limit;
-			}
-		}
+		
+// TODO: Eduardo
+//		for (int p=0, i=0, j=0; p<figures.size(); p++, i+=2){
+//			j=i+1;
+//			if ( figures.get(p).getFeatures()!=null && figures.get(p).getFeatures().getCenterfeatures().size()>0 && 
+//					!figures.get(p).getFeatures().getCenterfeatures().get(0).getValue().equalsIgnoreCase("VERTICAL") ){
+//				int locX = (int)(bounds.width/2.0-shapes.get(i).getWidth()/2.0);
+//				shapes.get(i).setX(locX);
+//				shapes.get(j).setX(locX);
+//				if (shapes.get(i).getX()<bounds.x)					
+//					bounds.x = shapes.get(i).getX();
+//				int limit = shapes.get(i).getX()+shapes.get(i).getWidth();
+//				if (limit>bounds.width)					
+//					bounds.width = limit;
+//			}
+//			if ( figures.get(p).getFeatures()!=null && figures.get(p).getFeatures().getCenterfeatures().size()>0 && 
+//					!figures.get(p).getFeatures().getCenterfeatures().get(0).getValue().equalsIgnoreCase("HORIZONTAL") ){
+//				int locY = (int)(bounds.height/2.0-shapes.get(i).getHeight()/2.0);
+//				shapes.get(i).setY(locY);
+//				shapes.get(j).setY(locY);
+//				if (shapes.get(i).getY()<bounds.y)					
+//					bounds.y = shapes.get(i).getY();
+//				int limit = shapes.get(i).getY()+shapes.get(i).getHeight();
+//				if (limit>bounds.height)					
+//					bounds.height = limit;
+//			}
+//		}
 		
 		for (GraphicsAlgorithm shape : shapes){
 			shape.setX(shape.getX()-bounds.x);
@@ -690,40 +704,41 @@ public class NodeProvider extends FigureProvider {
 	}
 	
 	
-	public static void registerNodeImages(Map<String, String> properties, Bundle bundle, EList<Node> nodes){
-		for (Node node : nodes){
-			if (node.getIcon()!=null){
-				try{
-					String icon = properties.get(node.getIcon());
-					Dimension size = null;
-					if (icon!=null)
-						size = ImageProvider.addImageFile(node.getIcon(), icon, bundle);
-					if (size!=null && !imageSizes.containsKey(node.getIcon()))
-						imageSizes.put(node.getIcon(), size);
-				}catch (Exception ex){
-					System.err.println(ex.getMessage());
-				}
-			}
-			for (NodeFigure figure : node.getFigures()){
-				if ( figure.getFeatures()!=null && figure.getFeatures().getStringfeatures()!=null ){
-					for (StringFeature key : figure.getFeatures().getStringfeatures()){
-						if (isSameFeature (key.getKey(), StringProperty.ICON.name())){
-							try{
-								String icon = properties.get(key.getValue());
-								Dimension size = null;
-								if (icon!=null)
-									size = ImageProvider.addImageFile(key.getValue(), icon, bundle);
-								if (size!=null && !imageSizes.containsKey(key.getValue()))
-									imageSizes.put(key.getValue(), size);
-							}catch (Exception ex){
-								System.err.println(ex.getMessage());
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+	// TODO: Eduardo
+//	public static void registerNodeImages(Map<String, String> properties, Bundle bundle, EList<Node> nodes){
+//		for (Node node : nodes){
+//			if (node.getIcon()!=null){
+//				try{
+//					String icon = properties.get(node.getIcon());
+//					Dimension size = null;
+//					if (icon!=null)
+//						size = ImageProvider.addImageFile(node.getIcon(), icon, bundle);
+//					if (size!=null && !imageSizes.containsKey(node.getIcon()))
+//						imageSizes.put(node.getIcon(), size);
+//				}catch (Exception ex){
+//					System.err.println(ex.getMessage());
+//				}
+//			}
+//			for (NodeFigure figure : node.getFigures()){
+//				if ( figure.getFeatures()!=null && figure.getFeatures().getStringfeatures()!=null ){
+//					for (StringFeature key : figure.getFeatures().getStringfeatures()){
+//						if (isSameFeature (key.getKey(), StringProperty.ICON.name())){
+//							try{
+//								String icon = properties.get(key.getValue());
+//								Dimension size = null;
+//								if (icon!=null)
+//									size = ImageProvider.addImageFile(key.getValue(), icon, bundle);
+//								if (size!=null && !imageSizes.containsKey(key.getValue()))
+//									imageSizes.put(key.getValue(), size);
+//							}catch (Exception ex){
+//								System.err.println(ex.getMessage());
+//							}
+//						}
+//					}
+//				}
+//			}
+//		}
+//	}
 	
 
 }
