@@ -1,4 +1,4 @@
-package org.eclipselabs.xdiagram.provider.internal;
+package org.eclipselabs.xdiagram.provider;
 
 //Revised from objectweb jac
 import java.lang.ref.Reference;

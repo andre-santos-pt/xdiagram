@@ -4,6 +4,7 @@ import java.awt.Dimension;
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.lang.reflect.Constructor;
+import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
@@ -15,20 +16,14 @@ import org.eclipse.graphiti.mm.pictograms.ConnectionDecorator;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipselabs.xdiagram.xtext.xdiagram.DynamicFigure;
-import org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures;
-import org.eclipselabs.xdiagram.xtext.xdiagram.PositionFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.SizeFeature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Feature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.StaticFigure;
-import org.eclipselabs.xdiagram.xtext.xdiagram.impl.FigureFeaturesImpl;
 
 public class LinkProvider extends FigureProvider {
 
-	public static enum LinkShape {
-		ARROW, TRIANGLE, RHOMBUS, POLYGON, POLYLINE;
-	}
 	
 	public static GraphicsAlgorithm createLinkArrow(Diagram diagram, GraphicsAlgorithmContainer container, EObject eObject,
-			LinkShape shape, FigureFeatures features, Rectangle limits){
+			LinkShape shape, List<Feature> features, Rectangle limits){
 		
 		int angle = IntegerProperty.ANGLE.getValue(features); 
 		int arc = IntegerProperty.CORNER.getValue(features);

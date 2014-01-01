@@ -9,7 +9,6 @@ import javax.imageio.ImageReader;
 import javax.imageio.stream.ImageInputStream;
 
 import org.eclipse.graphiti.ui.platform.AbstractImageProvider;
-import org.eclipselabs.xdiagram.provider.internal.WeakList;
 import org.osgi.framework.Bundle;
 	 
 	public class ImageProvider extends AbstractImageProvider {

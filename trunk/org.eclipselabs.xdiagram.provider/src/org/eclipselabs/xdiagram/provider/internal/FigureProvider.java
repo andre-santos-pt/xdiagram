@@ -9,6 +9,7 @@ import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
@@ -45,21 +46,11 @@ import org.eclipse.graphiti.util.PredefinedColoredAreas;
 import org.eclipselabs.xdiagram.xtext.xdiagram.AtributeExpression;
 import org.eclipselabs.xdiagram.xtext.xdiagram.AtributeValue;
 import org.eclipselabs.xdiagram.xtext.xdiagram.Attribute;
-import org.eclipselabs.xdiagram.xtext.xdiagram.BooleanFeature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.ColorFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.FigureFeatures;
-import org.eclipselabs.xdiagram.xtext.xdiagram.GradientFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.LineFeature;
+import org.eclipselabs.xdiagram.xtext.xdiagram.Feature;
 import org.eclipselabs.xdiagram.xtext.xdiagram.RGB;
-import org.eclipselabs.xdiagram.xtext.xdiagram.StringFeature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.impl.BooleanFeatureImpl;
 import org.eclipselabs.xdiagram.xtext.xdiagram.impl.ColorFeatureImpl;
-import org.eclipselabs.xdiagram.xtext.xdiagram.impl.GradientFeatureImpl;
-import org.eclipselabs.xdiagram.xtext.xdiagram.impl.IntegerFeatureImpl;
-import org.eclipselabs.xdiagram.xtext.xdiagram.impl.LineFeatureImpl;
 import org.eclipselabs.xdiagram.xtext.xdiagram.impl.RGBImpl;
-import org.eclipselabs.xdiagram.xtext.xdiagram.impl.StringFeatureImpl;
 
 public class FigureProvider {
 	
@@ -79,7 +70,7 @@ public class FigureProvider {
 		FigureProvider.styles = styles;
 	}
 	
-	public static void setStyle(String name, FigureFeatures features){
+	public static void setStyle(String name, List<Feature> features){
 		
 		org.eclipselabs.xdiagram.xtext.xdiagram.Style style = null;
 		for (org.eclipselabs.xdiagram.xtext.xdiagram.Style obj : styles)
@@ -90,17 +81,22 @@ public class FigureProvider {
 		
 		for ( IntegerProperty feature :  IntegerProperty.values() )
 			feature.addNewValue(features.getIntegerfeatures(), feature.getValue(style.getFeatures()), false);
+		
 		for ( ColorProperty feature :  ColorProperty.values() )
 			feature.addNewValue(features.getColorfeatures(), feature.getValue(style.getFeatures()), false);
+		
 		for ( BooleanProperty feature :  BooleanProperty.values() )
 			feature.addNewValue(features.getBooleanfeatures(), feature.getValue(style.getFeatures()), false);
+		
 		for ( StringProperty feature :  StringProperty.values() )
 			feature.addNewValue(features.getStringfeatures(), feature.getValue(style.getFeatures()), false);
 		
 		if (style.getFeatures().getLinefeatures().size()>0)
 			addLineStyle(features.getLinefeatures(), style.getFeatures().getLinefeatures().get(0).getValue(), false);
-		if (style.getFeatures().getGradientfeatures().size()>0)
-			addGradientStyle(features.getGradientfeatures(), style.getFeatures().getGradientfeatures().get(0).getValue(), false);		
+	
+		// TODO: Eduardo
+//		if (style.getFeatures().getGradientfeatures().size()>0)
+//			addGradientStyle(features.getGradientfeatures(), style.getFeatures().getGradientfeatures().get(0).getValue(), false);		
 		
 	}
 	
@@ -140,6 +136,9 @@ public class FigureProvider {
 		}		
 		
 	}
+	
+	
+	
 	
 	
 	public static enum ColorProperty {
@@ -208,11 +207,13 @@ public class FigureProvider {
 				return getDefault();
 			return getValue(null, null, features.getColorfeatures());
 		}
+		
 		public IColorConstant getValue(GraphicsAlgorithm figure, EObject eObject, FigureFeatures features){
 			if (features==null)
 				return getDefault();
 			return getValue(figure, eObject, features.getColorfeatures());
 		}
+		
 		public IColorConstant getValue(GraphicsAlgorithm figure, EObject eObject, EList<ColorFeature> features){		
 			IColorConstant color = getDefault();
 			if (features==null)
@@ -270,6 +271,10 @@ public class FigureProvider {
 	}
 
 
+	
+	
+	
+	
 	public static enum IntegerProperty {
 		WIDTH, HEIGHT, TOP, LEFT, ANGLE, CORNER, TRANSPARENCY, LINE_WIDTH, FONT_SIZE;
 		
@@ -291,17 +296,21 @@ public class FigureProvider {
 			}
 		}
 		
-		public void addNewValue(EList<IntegerFeature> features, int value, boolean overwrite){
+		public boolean isSameFeature (Feature f){
+			return f.getClass().getSimpleName().equalsIgnoreCase(name());
+		}
+		
+		public void addNewValue(List<Feature> features, int value, boolean overwrite){
 			boolean featureSet = false;
-			for (IntegerFeature key : features){
-				if (isSameFeature (key.getKey(), name())){
+			for (Feature f : features){
+				if (isSameFeature (f)){
 					if (overwrite)
-						key.setValue(value);
+						f.setValue(value);
 					featureSet = true;
 				}
 			}
 			if (!featureSet){
-				IntegerFeatureImpl feature;
+				Feature feature; // REPLACE with ecore reflect
 				try {
 					for (Constructor<?> constructor : IntegerFeatureImpl.class.getDeclaredConstructors()){
 						if (constructor.getParameterTypes().length==0){
@@ -312,29 +321,31 @@ public class FigureProvider {
 							features.add(feature);
 							return;
 						}
-					}					
+					}				
 				} catch (Exception e) {
 					e.printStackTrace();
 				}				
 			}
 		}
 
-		public int getValue(FigureFeatures features){
+		public int getValue(List<Feature> features){
 			if (features==null)
 				return getDefault();
 			return getValue(null, null, features.getIntegerfeatures());
 		}
-		public int getValue(GraphicsAlgorithm figure, EObject eObject, FigureFeatures features){
+		
+		public int getValue(GraphicsAlgorithm figure, EObject eObject, List<Feature> features){
 			if (features==null)
 				return getDefault();
 			return getValue(figure, eObject, features.getIntegerfeatures());
 		}
-		public int getValue(GraphicsAlgorithm figure, EObject eObject, EList<IntegerFeature> features){
+		
+		public int getValue(GraphicsAlgorithm figure, EObject eObject, List<Feature> features){
 			int value = getDefault();
 			if (features==null)
 				return value;
-			for (org.eclipselabs.xdiagram.xtext.xdiagram.IntegerFeature key : features)
-				if (isSameFeature (key.getKey(), name())){
+			for (Feature key : features)
+				if (isSameFeature (key)){
 					value = getDefault();
 					try{
 						value = key.getValue();
@@ -346,7 +357,7 @@ public class FigureProvider {
 			return value;
 		}
 
-		public static void update(Diagram diagram, GraphicsAlgorithm figure, ArrayList<Property> properties, 
+		public static void update(Diagram diagram, GraphicsAlgorithm figure, List<Property> properties, 
 				EStructuralFeature eStructuralFeature, String value){
 			for ( IntegerProperty feature :  values() ){
 				String result = getExpressionResult(figure, properties,
@@ -387,6 +398,14 @@ public class FigureProvider {
 		}
 		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	public static enum BooleanProperty {
@@ -677,85 +696,88 @@ public class FigureProvider {
 	}
 	
 	
-	public static void addGradientStyle(EList<GradientFeature> features, String value, boolean overwrite){
-		boolean featureSet = false;
-		for (GradientFeature key : features){
-				if (overwrite)
-					key.setValue(value);
-				featureSet = true;
-		}
-		if (!featureSet){
-			GradientFeatureImpl feature;
-			try {
-				for (Constructor<?> constructor : GradientFeatureImpl.class.getDeclaredConstructors()){
-					if (constructor.getParameterTypes().length==0){
-						constructor.setAccessible(true);
-						feature = (GradientFeatureImpl) constructor.newInstance(new Object[0]);
-						feature.setKey("gradient");
-						feature.setValue(value);
-						features.add(feature);
-						return;
-					}
-				}					
-			} catch (Exception e) {
-				e.printStackTrace();
-			}				
-		}
-	}
+//	public static void addGradientStyle(EList<GradientFeature> features, String value, boolean overwrite){
+//		boolean featureSet = false;
+//		for (GradientFeature key : features){
+//				if (overwrite)
+//					key.setValue(value);
+//				featureSet = true;
+//		}
+//		if (!featureSet){
+//			GradientFeature feature;
+//			try {
+//				for (Constructor<?> constructor : GradientFeatureImpl.class.getDeclaredConstructors()){
+//					if (constructor.getParameterTypes().length==0){
+//						constructor.setAccessible(true);
+//						feature = (GradientFeatureImpl) constructor.newInstance(new Object[0]);
+//						feature.setKey("gradient");
+//						feature.setValue(value);
+//						features.add(feature);
+//						return;
+//					}
+//				}					
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}				
+//		}
+//	}
+//	
+//	
+//	
+//	
+//	public static Style getGradientStyle(Diagram diagram, List<GradientFeature> features){
+//		if (features.size()==0)
+//			return null;
+//		String name = features.get(0).getValue();
+//		return getGradientStyle(diagram, name);
+//	}
+//
+//	public static Style getGradientStyle(Diagram diagram, String name){
+//		Style style = Graphiti.getGaService().findStyle(diagram, name);			
+//		if (style==null){
+//			style = Graphiti.getGaService().createPlainStyle(diagram, name);
+//			style.setBackground(Graphiti.getGaService().manageColor(diagram, ColorConstant.WHITE));
+//			switch (name){
+//				case "BlueWhite":
+//					Graphiti.getGaService().setRenderingStyle(style,
+//							PredefinedColoredAreas.getBlueWhiteAdaptions());
+//					break;
+//				case "BlueWhiteGloss":
+//					Graphiti.getGaService().setRenderingStyle(style,
+//							PredefinedColoredAreas.getBlueWhiteGlossAdaptions());
+//					break;
+//				case "CopperWhiteGloss":
+//					Graphiti.getGaService().setRenderingStyle(style,
+//							PredefinedColoredAreas.getCopperWhiteGlossAdaptions());
+//					break;
+//				case "LightGray":
+//					Graphiti.getGaService().setRenderingStyle(style,
+//							PredefinedColoredAreas.getLightGrayAdaptions());
+//					break;
+//				case "LightYellow":
+//					Graphiti.getGaService().setRenderingStyle(style,
+//							PredefinedColoredAreas.getLightYellowAdaptions());
+//					break;
+//				case "SilverWhiteGloss":
+//					Graphiti.getGaService().setRenderingStyle(style,
+//							PredefinedColoredAreas.getSilverWhiteGlossAdaptions());
+//					break;
+//				case "LimeWhite":
+//					Graphiti.getGaService().setRenderingStyle(style,
+//							CustomRenderingStyle.getLimeWhiteAdaptions());
+//					break;
+//				default:
+//					break;
+//			}
+//		}
+//		return style;
+//	}
 	
-	public static Style getGradientStyle(Diagram diagram, EList<GradientFeature> features){
-		if (features.size()==0)
-			return null;
-		String name = features.get(0).getValue();
-		return getGradientStyle(diagram, name);
-	}
-
-	public static Style getGradientStyle(Diagram diagram, String name){
-		Style style = Graphiti.getGaService().findStyle(diagram, name);			
-		if (style==null){
-			style = Graphiti.getGaService().createPlainStyle(diagram, name);
-			style.setBackground(Graphiti.getGaService().manageColor(diagram, ColorConstant.WHITE));
-			switch (name){
-				case "BlueWhite":
-					Graphiti.getGaService().setRenderingStyle(style,
-							PredefinedColoredAreas.getBlueWhiteAdaptions());
-					break;
-				case "BlueWhiteGloss":
-					Graphiti.getGaService().setRenderingStyle(style,
-							PredefinedColoredAreas.getBlueWhiteGlossAdaptions());
-					break;
-				case "CopperWhiteGloss":
-					Graphiti.getGaService().setRenderingStyle(style,
-							PredefinedColoredAreas.getCopperWhiteGlossAdaptions());
-					break;
-				case "LightGray":
-					Graphiti.getGaService().setRenderingStyle(style,
-							PredefinedColoredAreas.getLightGrayAdaptions());
-					break;
-				case "LightYellow":
-					Graphiti.getGaService().setRenderingStyle(style,
-							PredefinedColoredAreas.getLightYellowAdaptions());
-					break;
-				case "SilverWhiteGloss":
-					Graphiti.getGaService().setRenderingStyle(style,
-							PredefinedColoredAreas.getSilverWhiteGlossAdaptions());
-					break;
-				case "LimeWhite":
-					Graphiti.getGaService().setRenderingStyle(style,
-							CustomRenderingStyle.getLimeWhiteAdaptions());
-					break;
-				default:
-					break;
-			}
-		}
-		return style;
-	}
-	
 
 
 
 
-	public static void setStyleFeatures(Diagram diagram, EObject eObject, GraphicsAlgorithm figure, FigureFeatures features){
+	public static void setStyleFeatures(Diagram diagram, EObject eObject, GraphicsAlgorithm figure, List<Feature> features){
 
 		figure.setForeground(Graphiti.getGaService().manageColor(diagram, 
 				ColorProperty.FOREGROUND.getValue(figure, eObject, features)));
@@ -825,6 +847,9 @@ public class FigureProvider {
 	public static IColorConstant getRGBColor(RGB rgb){
 		return new ColorConstant(rgb.getR(), rgb.getG(), rgb.getB());
 	}
+	
+	
+
 	
 	public static boolean isSameFeature (String key, String name){
 		return key.equalsIgnoreCase(name) || key.equalsIgnoreCase(name.replace("_", "-"));
@@ -992,7 +1017,7 @@ public class FigureProvider {
 		}
 	}
 
-	public static String getExpressionResult(GraphicsAlgorithm figure, ArrayList<Property> properties,
+	public static String getExpressionResult(GraphicsAlgorithm figure, List<Property> properties,
 			String type, String feature, String attribute, String value){
 		String condition = type + typeSeperator + feature + expressionSeperator;
 		String result = Graphiti.getPeService().getPropertyValue(figure, 
@@ -1033,7 +1058,7 @@ public class FigureProvider {
 	}
 	
 	
-	public static Dimension setLabelFigure(Diagram diagram, EObject eObject, GraphicsAlgorithm figure, FigureFeatures features, boolean labelin){
+	public static Dimension setLabelFigure(Diagram diagram, EObject eObject, GraphicsAlgorithm figure, List<Feature> features, boolean labelin){
 
 		AbstractText text = (AbstractText)figure;
 		
