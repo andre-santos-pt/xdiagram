@@ -2,6 +2,7 @@ package org.eclipselabs.xdiagram.interpreter;
 
 import java.util.Map;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -13,6 +14,7 @@ import org.eclipse.graphiti.mm.pictograms.Anchor;
 import org.eclipse.graphiti.mm.pictograms.Connection;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
+import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.osgi.framework.Bundle;
 
 public interface GraphicsProvider {
@@ -78,21 +80,23 @@ public interface GraphicsProvider {
 	
 	void resizeNodeFigure(Diagram diagram, ContainerShape container, int width, int height);
 	
-	void updateNodeFigure(Diagram diagram, ContainerShape container);
+//	void updateNodeFigure(Diagram diagram, ContainerShape container, GraphicsAlgorithm figure, EObject eObject);
 	
 	void removeNodeFigure(Diagram diagram, GraphicsAlgorithm figure);
 	
-	boolean canResizeNodeFigure(GraphicsAlgorithm figure);
+	boolean canResizeNodeFigure(EObject object);
 	
 	boolean canMoveNodeFigure(GraphicsAlgorithm figure);
 	
-	boolean canEditFigureLabel(GraphicsAlgorithm figure);
+	boolean canEditFigureLabel(GraphicsAlgorithm figure, EObject eObject);
 	
-	String getFigureLabelValue(GraphicsAlgorithm figure);
 	
-	GraphicsAlgorithm getFigureLabel(Diagram diagram, ContainerShape container);
 	
-	void updateFigureLabel(Diagram diagram, GraphicsAlgorithm figure, String value);
+//	String getFigureLabelValue(GraphicsAlgorithm figure);
+	
+//	GraphicsAlgorithm getFigureLabel(Diagram diagram, ContainerShape container);
+	
+//	void updateFigureLabel(Diagram diagram, GraphicsAlgorithm figure, String value);
 	
 	
 	/**
@@ -111,7 +115,7 @@ public interface GraphicsProvider {
 	 */
 	Connection getConnectionFigure(Diagram diagram, Anchor source, Anchor target, EObject eObject);
 	
-	void updateLinkFigure(Diagram diagram, Connection connection);
+//	void updateLinkFigure(Diagram diagram, Connection connection);
 
 	
 	/**
@@ -133,11 +137,24 @@ public interface GraphicsProvider {
 	boolean isValidIncomingConnection(Anchor anchor, EReference eReference);
 	
 	
+	EAttribute getTextEditableAttribute(EClass eClass);
+	
+	
+	boolean canAddChild(ContainerShape container, EClass eClass, int x, int y);
+	
+	EReference getContainerReference(ContainerShape targetContainer);
+
 	
 	// FUTURE:
-
 	/**
 	 * Returns true if the given feature (EReference or EAttribute) should be treated as a property (Properties view).
 	 */
 	boolean isProperty(EStructuralFeature feature);
+
+	EObject getContainerObject(ContainerShape container);
+
+	void update(PictogramElement e, EObject eObject, Diagram diagram);
+
+	
+	
 }

@@ -12,7 +12,6 @@ import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.Platform;
 import org.eclipselabs.xdiagram.interpreter.ExtensionPointIds;
 import org.eclipselabs.xdiagram.interpreter.GraphicsProvider;
-import org.eclipselabs.xdiagram.interpreter.StandardGraphicsProvider;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
@@ -71,7 +70,7 @@ public class Activator implements BundleActivator {
 				provider = (GraphicsProvider) conf.createExecutableExtension(PROVIDERS_PROVIDER);
 			} catch (CoreException e) {
 				e.printStackTrace();
-				provider = new StandardGraphicsProvider();
+//				provider = new StandardGraphicsProvider();
 			}
 			Map<String, String> properties = new HashMap<String, String>();
 			IConfigurationElement[] props = conf.getChildren("property");

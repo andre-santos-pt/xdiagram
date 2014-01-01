@@ -1,5 +1,7 @@
 package org.eclipselabs.xdiagram.interpreter.internal.features;
 
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.graphiti.features.context.IDirectEditingContext;
 import org.eclipse.graphiti.features.impl.AbstractDirectEditingFeature;
 import org.eclipse.graphiti.mm.algorithms.AbstractText;
@@ -23,6 +25,7 @@ public class DirectEditingFeature extends AbstractDirectEditingFeature {
 	public int getEditingType() {
 	    // there are several possible editor-types supported:
 	    // text-field, checkbox, color-chooser, combobox, ...
+		// TODO: interessante
 	    return org.eclipse.graphiti.func.IDirectEditing.TYPE_TEXT;
 	}
 	
@@ -30,20 +33,26 @@ public class DirectEditingFeature extends AbstractDirectEditingFeature {
 	public boolean canDirectEdit(IDirectEditingContext context) {
 	    PictogramElement pe = context.getPictogramElement();
 	    GraphicsAlgorithm ga = context.getGraphicsAlgorithm();
-
+	    EObject eObject = pe.getLink().getBusinessObjects().get(0);
+	    		
 	    if (ga instanceof AbstractText){
-	    	figureLabel = provider.getGraphicsProvider().canEditFigureLabel(ga) ? ga : null;	    	
+	    	figureLabel = provider.getGraphicsProvider().canEditFigureLabel(ga, eObject) ? ga : null;	    	
 	    }else{
+	    	// TODO:Eduardo
 		    ContainerShape container = ((Shape) pe).getContainer();
-		    figureLabel = provider.getGraphicsProvider().getFigureLabel(getDiagram(), container);
+//		    figureLabel = provider.getGraphicsProvider().getFigureLabel(getDiagram(), container);
 	    }
 	    return figureLabel != null;	    
 	}
 	
 
-	
+	@Override	
 	public String getInitialValue(IDirectEditingContext context) {
-	    return provider.getGraphicsProvider().getFigureLabelValue(figureLabel);
+		PictogramElement pe = context.getPictogramElement();
+		EObject eObject = pe.getLink().getBusinessObjects().get(0);
+		EAttribute att = provider.getGraphicsProvider().getTextEditableAttribute(eObject.eClass());
+		return "" + eObject.eGet(att); 
+//		return provider.getGraphicsProvider().getFigureLabelValue(figureLabel);
 	}
 	
 	@Override
@@ -57,8 +66,16 @@ public class DirectEditingFeature extends AbstractDirectEditingFeature {
 	    return null;
 	}
 	
+	@Override
 	public void setValue(String value, IDirectEditingContext context) {
-	    provider.getGraphicsProvider().updateFigureLabel(getDiagram(), figureLabel, value);
+		PictogramElement pe = context.getPictogramElement();
+		EObject eObject = pe.getLink().getBusinessObjects().get(0);
+		
+		EAttribute att = provider.getGraphicsProvider().getTextEditableAttribute(eObject.eClass());
+		
+		eObject.eSet(att, value);
+		
+//	    provider.getGraphicsProvider().updateFigureLabel(getDiagram(), figureLabel, value);
 	}
 	
 }

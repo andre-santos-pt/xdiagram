@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.0"?><!--
-    <copyright>
-   
-    Copyright (c) 2005, 2010 SAP AG.
-    All rights reserved. This program and the accompanying materials
-    are made available under the terms of the Eclipse Public License v1.0
-    which accompanies this distribution, and is available at
-    http://www.eclipse.org/legal/epl-v10.html
-   
-    Contributors:
-       SAP AG - initial API, implementation and documentation
-       mwenz - Bug 341898 - Support for AdvancedPropertySheet
-   
-    </copyright>
-   
- -->
+<?eclipse version="3.0"?>
 
 <plugin>
    <extension-point id="providers" name="Providers" schema="schema/providers.exsd"/>
@@ -33,7 +18,7 @@
 	<extension
 	    point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
 	    <propertyTabs contributorId="xdiagram.PropertyContributor">
-	        <propertyTab label="Main" category="xdiagram" id="xdiagram.main.tab">
+	        <propertyTab label="XDiagram" category="xdiagram" id="xdiagram.main.tab">
 	        </propertyTab>
 	        
 	        <!--
@@ -74,16 +59,6 @@
 
 
 
-	<extension point="org.eclipse.core.expressions.definitions">
-		<definition id="org.eclipse.graphiti.examples.tutorial.definitions.OneEClassesNodeSelected">
-			<and>
-				<count value="1" /> 
-				<iterate ifEmpty="false" operator="and">
-					<instanceof value="org.eclipse.graphiti.examples.common.navigator.nodes.EClassesNode" /> 
-				</iterate>
-			</and>
-		</definition>
-	</extension>
 
 	<!--
 	Registers an Eclipse adapter factory to provide IPropertySource objects for the GraphitiConnectionEditPart
@@ -101,12 +76,5 @@
 		</factory>
 	</extension>
 	-->
- <extension
-       point="org.eclipse.emf.transaction.editingDomains">
-    <editingDomain
-          factory="org.eclipselabs.xdiagram.interpreter.internal.EMFEditingDomainFactory"
-          id="org.eclipselabs.xdiagram.editingDomain1">
-    </editingDomain>
- </extension>
 </plugin>
  

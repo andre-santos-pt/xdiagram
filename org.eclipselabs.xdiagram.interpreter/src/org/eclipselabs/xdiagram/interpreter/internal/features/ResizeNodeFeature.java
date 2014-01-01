@@ -1,9 +1,11 @@
 package org.eclipselabs.xdiagram.interpreter.internal.features;
 
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.graphiti.features.context.IResizeShapeContext;
 import org.eclipse.graphiti.features.impl.DefaultResizeShapeFeature;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
+import org.eclipse.graphiti.services.Graphiti;
 import org.eclipselabs.xdiagram.interpreter.internal.GenericFeatureProvider;
 
 public class ResizeNodeFeature extends DefaultResizeShapeFeature {
@@ -18,8 +20,11 @@ public class ResizeNodeFeature extends DefaultResizeShapeFeature {
     @Override
     public boolean canResizeShape(IResizeShapeContext context) {
         boolean canResize = super.canResizeShape(context);
-        GraphicsAlgorithm figure = context.getPictogramElement().getGraphicsAlgorithm();
-        return canResize && provider.getGraphicsProvider().canResizeNodeFigure(figure);
+        
+       EObject obj = context.getPictogramElement().getLink().getBusinessObjects().get(0);
+     
+//        GraphicsAlgorithm figure = context.getPictogramElement().getGraphicsAlgorithm();
+        return canResize && provider.getGraphicsProvider().canResizeNodeFigure(obj);
     }
     
   @Override
@@ -29,6 +34,8 @@ public class ResizeNodeFeature extends DefaultResizeShapeFeature {
 	  
 	  figure.setX(context.getX());
       figure.setY(context.getY());
+      
+      // TODO
       provider.getGraphicsProvider().resizeNodeFigure(getDiagram(), 
     		  container, context.getWidth(), context.getHeight());
       

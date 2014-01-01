@@ -34,4 +34,6 @@ public class GenericDiagramTypeProvider extends AbstractDiagramTypeProvider {
         
         return providers;
     }
+    
+    
 }

@@ -1,9 +1,11 @@
 package org.eclipselabs.xdiagram.interpreter.internal.features;
 
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.graphiti.features.context.IMoveShapeContext;
 import org.eclipse.graphiti.features.impl.DefaultMoveShapeFeature;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
+import org.eclipse.graphiti.services.Graphiti;
 import org.eclipselabs.xdiagram.interpreter.internal.GenericFeatureProvider;
 
 public class MoveNodeFeature extends DefaultMoveShapeFeature {
@@ -29,7 +31,9 @@ public class MoveNodeFeature extends DefaultMoveShapeFeature {
     	figure.setX(context.getX());
         figure.setY(context.getY());
     	ContainerShape container = (ContainerShape) context.getPictogramElement();
-    	provider.getGraphicsProvider().updateNodeFigure(getDiagram(), container);
+//    	EObject eObject = context.getPictogramElement().getLink().getBusinessObjects().get(0);
+    	Graphiti.getGaLayoutService().setLocation(figure, context.getX(), context.getY());
+//    	provider.getGraphicsProvider().updateNodeFigure(getDiagram(), container, context.getPictogramElement().getGraphicsAlgorithm(), eObject);
     }
     
 }

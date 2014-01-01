@@ -27,6 +27,9 @@ import org.eclipse.graphiti.features.impl.AbstractCreateFeature;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.mm.pictograms.PictogramLink;
+import org.eclipse.graphiti.mm.pictograms.Shape;
+import org.eclipse.graphiti.services.Graphiti;
+import org.eclipse.graphiti.util.ILocationInfo;
 
 public class CreateEObjectFeature extends AbstractCreateFeature {
 
@@ -59,8 +62,31 @@ public class CreateEObjectFeature extends AbstractCreateFeature {
 	}
 
 	public boolean canCreate(ICreateContext context) {
-		return ECoreUtil.matchContainment(context.getTargetContainer(),
-				provider.getRootClass(), eClass);
+
+
+		ContainerShape container = context.getTargetContainer();
+
+		// TODO: enough upper bound
+		if(container instanceof Diagram)
+			return ECoreUtil.matchContainment(context.getTargetContainer(), provider.getRootClass(), eClass);
+
+
+		ILocationInfo loc = Graphiti.getPeLayoutService().getLocationInfo(container, context.getX(), context.getY());
+		Shape child = loc.getShape();
+		if(child instanceof ContainerShape)
+			container = (ContainerShape) child;
+
+//		System.out.println((loc.getShape() instanceof ContainerShape) + "\t" + container);
+		
+		EReference ref = provider.getGraphicsProvider().getContainerReference(container);
+
+		if(ref == null)
+			return false;
+
+		EObject owner = provider.getGraphicsProvider().getContainerObject(container);
+
+		// TODO: enough upper bound
+		return provider.getGraphicsProvider().canAddChild(container, eClass, context.getX(), context.getY());
 	}
 
 	public Object[] create(ICreateContext context) {
@@ -72,18 +98,15 @@ public class CreateEObjectFeature extends AbstractCreateFeature {
 		if (containerShape != null && !(containerShape instanceof Diagram)) {
 			PictogramLink link = containerShape.getLink();
 			eObjectParent = link.getBusinessObjects().get(0);
+
+
+			//EReference ref = provider.getGraphicsProvider().getContainerReference(context.getTargetContainer())
+
+			//TODO: rever
 			for (EReference r : eObjectParent.eClass().getEAllContainments()) {
 				if (((EClass) r.getEType()).isSuperTypeOf(eObject.eClass())) {
 					containingRef = r;
 					ECoreUtil.setReference(eObjectParent, r, eObject);
-					// if(r.isMany()) {
-					// List<EObject> list = (List<EObject>)
-					// eObjectParent.eGet(r);
-					// list.add(eObject);
-					// }
-					// else {
-					// eObjectParent.eSet(r, eObject);
-					// }
 					break;
 				}
 			}
@@ -97,8 +120,7 @@ public class CreateEObjectFeature extends AbstractCreateFeature {
 
 		try {
 			try {
-				FileUtil.saveToModelFile(eObject, eObjectParent, containingRef,
-						getDiagram());
+				FileUtil.saveToModelFile(eObject, eObjectParent, containingRef, getDiagram());
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

@@ -161,9 +161,8 @@ public class StandardGraphicsProvider implements GraphicsProvider {
 		return true;
 	}
 
-	public boolean canResizeNodeFigure(GraphicsAlgorithm figure) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean canResizeNodeFigure(EObject eObject) {
+		return true;
 	}
 
 	public boolean canMoveNodeFigure(GraphicsAlgorithm figure) {
@@ -177,10 +176,7 @@ public class StandardGraphicsProvider implements GraphicsProvider {
 		return null;
 	}
 
-	public void updateNodeFigureLabel(GraphicsAlgorithm figure, String value) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	public GraphicsAlgorithm getFigureLabel(Diagram diagram,
 			ContainerShape container) {
@@ -194,7 +190,7 @@ public class StandardGraphicsProvider implements GraphicsProvider {
 		
 	}
 
-	public boolean canEditFigureLabel(GraphicsAlgorithm figure) {
+	public boolean canEditFigureLabel(GraphicsAlgorithm figure, EObject eObject) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -219,6 +215,25 @@ public class StandardGraphicsProvider implements GraphicsProvider {
 			Anchor target, EObject eObject, EReference eReference) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+//	@Override
+//	public void updateNodeFigure(Diagram diagram, ContainerShape container, GraphicsAlgorithm fig,
+//			EObject eObject) {
+//		// TODO Auto-generated method stub
+//		
+//	}
+
+	@Override
+	public EAttribute getTextEditableAttribute(EClass eClass) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean canAddChild(ContainerShape container, EClass eClass, int x, int y) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	

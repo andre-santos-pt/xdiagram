@@ -102,7 +102,7 @@ public class ECoreUtil {
 			return hasChild(root, child);
 		
 		EList<EObject> objs = shape.getLink().getBusinessObjects();
-		return !objs.isEmpty() &&  contains(objs.get(0).eClass(), child);
+		return !objs.isEmpty() && contains(objs.get(0).eClass(), child);
 	}
 	
 	public static boolean contains(EClass parent, EClass child) {

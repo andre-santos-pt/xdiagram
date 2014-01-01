@@ -2,6 +2,7 @@ package org.eclipselabs.xdiagram.interpreter.internal.features;
 
 import java.util.ArrayList;
 
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.graphiti.features.IReason;
 import org.eclipse.graphiti.features.context.IUpdateContext;
 import org.eclipse.graphiti.features.impl.AbstractUpdateFeature;
@@ -80,13 +81,14 @@ public class UpdateNodeFeature extends AbstractUpdateFeature {
     
     
     public boolean update(PictogramElement pe) {
-  	
-	  	System.out.println("UPDATED!!!!!!!!");
+//    	EObject eObject = pe.getLink().getBusinessObjects().get(0);
+    
+//	  	System.out.println("UPDATED!!!!!!!!" + eObject);
 	  	
-	  	if ( pe instanceof Connection )
-	  		provider.getGraphicsProvider().updateLinkFigure(getDiagram(), (Connection)pe);
-	  	else
-	  		provider.getGraphicsProvider().updateNodeFigure(getDiagram(), (ContainerShape)pe);  
+//	  	if ( pe instanceof Connection )
+//	  		provider.getGraphicsProvider().updateLinkFigure(getDiagram(), (Connection)pe);
+//	  	else
+//	  		provider.getGraphicsProvider().updateNodeFigure(getDiagram(), (ContainerShape)pe, pe.getGraphicsAlgorithm(), eObject);  
 	  	//this.updatePictogramElement(pe);
 	  	
 	  	return true;
