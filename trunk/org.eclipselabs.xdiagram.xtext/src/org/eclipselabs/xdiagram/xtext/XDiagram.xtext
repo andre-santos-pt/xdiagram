@@ -175,7 +175,7 @@ Element:
 
 // TODO: invisible figure?
 ConnectableElement:
-	Rectangle | Rhombus | Ellipse | Polyline | Label | Image 
+	Rectangle | Rhombus | Ellipse | Polyline | Label | Image | Invisible
 ;
 
 
@@ -358,7 +358,17 @@ ImageFeature returns Feature:
 ;
 
 
+Invisible:
+	{Invisible}
+	'invisible' '{'
+	features+=InvisibleFeature*
+	children+=ConnectableElement*
+	'}'
+;
 
+InvisibleFeature returns Feature:
+	Size | Position
+;
 
 
 
