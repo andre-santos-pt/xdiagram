@@ -234,9 +234,10 @@ public class ToolBehaviorProvider extends DefaultToolBehaviorProvider {
 		if (bo instanceof EObject) {
 			return ((EObject) bo).eClass().getName();
 		}
-		else if(pe.isActive()) {
+		else if(pe.isActive() && pe instanceof ContainerShape) {
 			EReference ref = provider.getContainerReference((ContainerShape) pe);
-			return "Container for " + ref.getEType().getName();
+			if(ref != null)
+				return "Container for " + ref.getEType().getName();
 		}
 		return super.getToolTip(ga);
 	}
