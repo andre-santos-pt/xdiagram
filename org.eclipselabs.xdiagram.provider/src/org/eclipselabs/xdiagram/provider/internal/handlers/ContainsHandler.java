@@ -11,9 +11,9 @@ import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 import org.eclipselabs.xdiagram.provider.internal.Util;
-import org.eclipselabs.xdiagram.xtext.xdiagram.Contains;
-import org.eclipselabs.xdiagram.xtext.xdiagram.Element;
-import org.eclipselabs.xdiagram.xtext.xdiagram.Feature;
+import org.eclipselabs.xdiagram.dsl.Contains;
+import org.eclipselabs.xdiagram.dsl.Element;
+import org.eclipselabs.xdiagram.dsl.Feature;
 
 public class ContainsHandler implements FeatureHandler {
 
@@ -46,13 +46,13 @@ public class ContainsHandler implements FeatureHandler {
 	}
 	
 	@Override
-	public boolean accept(Element element, Feature feature, ContainerShape container) {
+	public boolean accept(Element element, Feature feature, GraphicsAlgorithmContainer container) {
 		return feature instanceof Contains;
 	}
 
 	@Override
 	public void handle(Element element, Feature feature,
-			EObject eObject, Diagram diagram, ContainerShape container,
+			EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container,
 			GraphicsAlgorithm figure) {
 		
 		Contains cont = (Contains) feature;
@@ -67,7 +67,7 @@ public class ContainsHandler implements FeatureHandler {
 	}
 
 	@Override
-	public boolean acceptDefaults(Element element, GraphicsAlgorithm figure, ContainerShape container) {
+	public boolean acceptDefaults(Element element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
 		return false;
 	}
 
