@@ -39,7 +39,7 @@ public class ColorImpl extends MinimalEObjectImpl.Container implements Color
    * @generated
    * @ordered
    */
-  protected static final DefaultColor DEFAULT_EDEFAULT = DefaultColor.RED;
+  protected static final DefaultColor DEFAULT_EDEFAULT = DefaultColor.WHITE;
 
   /**
    * The cached value of the '{@link #getDefault() <em>Default</em>}' attribute.

@@ -99,9 +99,22 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="custom" eType="#//CustomColor"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DefaultColor">
-    <eLiterals name="RED" literal="red"/>
-    <eLiterals name="BLUE" value="1" literal="blue"/>
-    <eLiterals name="YELLOW" value="2" literal="yellow"/>
+    <eLiterals name="WHITE" literal="white"/>
+    <eLiterals name="SILVER" value="1" literal="silver"/>
+    <eLiterals name="GRAY" value="2" literal="gray"/>
+    <eLiterals name="BLACK" value="3" literal="black"/>
+    <eLiterals name="RED" value="4" literal="red"/>
+    <eLiterals name="MAROON" value="5" literal="maroon"/>
+    <eLiterals name="YELLOW" value="6" literal="yellow"/>
+    <eLiterals name="OLIVE" value="7" literal="olive"/>
+    <eLiterals name="LIME" value="8" literal="lime"/>
+    <eLiterals name="GREEN" value="9" literal="green"/>
+    <eLiterals name="AQUA" value="10" literal="aqua"/>
+    <eLiterals name="TEAL" value="11" literal="teal"/>
+    <eLiterals name="BLUE" value="12" literal="blue"/>
+    <eLiterals name="NAVY" value="13" literal="navy"/>
+    <eLiterals name="FUCHSIA" value="14" literal="fuchsia"/>
+    <eLiterals name="PURPLE" value="15" literal="purple"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Rectangle" eSuperTypes="#//ConnectableElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rectangle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>

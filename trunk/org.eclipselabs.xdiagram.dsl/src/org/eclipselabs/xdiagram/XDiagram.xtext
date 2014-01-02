@@ -137,10 +137,11 @@ StaticElement returns ConnectableElement:
 ;
 
 
-
+// TODO validation
 Anchor:
 	'anchor' direction=AnchorDirection modelReference=[ecore::EReference|QualifiedName] 
 	(conditional=FeatureConditional)?
+	';'
 ;
 
 
@@ -176,13 +177,24 @@ Color:
 ;
 
 
-// TODO : 16 standard
 enum DefaultColor:
+	WHITE='white' |
+	SILVER='silver' |
+	GRAY='gray' |
+	BLACK='black' |
 	RED='red' |
+	MAROON='maroon' |
+	YELLOW='yellow' |
+	OLIVE='olive' |
+	LIME='lime' |
+	GREEN='green' |
+	AQUA='aqua' |
+	TEAL='teal' |
 	BLUE='blue' |
-	YELLOW='yellow'
+	NAVY='navy' |
+	FUCHSIA='fuchsia' |
+	PURPLE='purple'
 ;
-
 
 
 
@@ -321,7 +333,7 @@ Label:
 ;
 
 LabelFeature returns Feature:
-	TextValue | Foreground | Background | FontFace | FontSize | FontStyle
+	TextValue | Foreground | Background | FontFace | FontSize | FontStyle | Size
 ;
 
 

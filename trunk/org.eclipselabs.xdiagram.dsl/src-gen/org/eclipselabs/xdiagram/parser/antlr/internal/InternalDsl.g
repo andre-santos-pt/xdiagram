@@ -3141,7 +3141,7 @@ ruleForeground returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='foreground' 
+(	otherlv_0='foreground ' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getForegroundAccess().getForegroundKeyword_0());
     }
@@ -3206,7 +3206,7 @@ ruleBackground returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='background' 
+(	otherlv_0='background ' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getBackgroundAccess().getBackgroundKeyword_0());
     }
@@ -4118,22 +4118,100 @@ ruleAnchorDirection returns [Enumerator current=null]
 ruleDefaultColor returns [Enumerator current=null] 
     @init { enterRule(); }
     @after { leaveRule(); }:
-((	enumLiteral_0='red' 
+((	enumLiteral_0='white' 
 	{
-        $current = grammarAccess.getDefaultColorAccess().getREDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_0, grammarAccess.getDefaultColorAccess().getREDEnumLiteralDeclaration_0()); 
+        $current = grammarAccess.getDefaultColorAccess().getWHITEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getDefaultColorAccess().getWHITEEnumLiteralDeclaration_0()); 
     }
 )
-    |(	enumLiteral_1='blue' 
+    |(	enumLiteral_1='silver' 
 	{
-        $current = grammarAccess.getDefaultColorAccess().getBLUEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_1, grammarAccess.getDefaultColorAccess().getBLUEEnumLiteralDeclaration_1()); 
+        $current = grammarAccess.getDefaultColorAccess().getSILVEREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getDefaultColorAccess().getSILVEREnumLiteralDeclaration_1()); 
     }
 )
-    |(	enumLiteral_2='yellow' 
+    |(	enumLiteral_2='gray' 
 	{
-        $current = grammarAccess.getDefaultColorAccess().getYELLOWEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_2, grammarAccess.getDefaultColorAccess().getYELLOWEnumLiteralDeclaration_2()); 
+        $current = grammarAccess.getDefaultColorAccess().getGRAYEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getDefaultColorAccess().getGRAYEnumLiteralDeclaration_2()); 
+    }
+)
+    |(	enumLiteral_3='black' 
+	{
+        $current = grammarAccess.getDefaultColorAccess().getBLACKEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_3, grammarAccess.getDefaultColorAccess().getBLACKEnumLiteralDeclaration_3()); 
+    }
+)
+    |(	enumLiteral_4='red' 
+	{
+        $current = grammarAccess.getDefaultColorAccess().getREDEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_4, grammarAccess.getDefaultColorAccess().getREDEnumLiteralDeclaration_4()); 
+    }
+)
+    |(	enumLiteral_5='maroon' 
+	{
+        $current = grammarAccess.getDefaultColorAccess().getMAROONEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_5, grammarAccess.getDefaultColorAccess().getMAROONEnumLiteralDeclaration_5()); 
+    }
+)
+    |(	enumLiteral_6='yellow' 
+	{
+        $current = grammarAccess.getDefaultColorAccess().getYELLOWEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_6, grammarAccess.getDefaultColorAccess().getYELLOWEnumLiteralDeclaration_6()); 
+    }
+)
+    |(	enumLiteral_7='olive' 
+	{
+        $current = grammarAccess.getDefaultColorAccess().getOLIVEEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_7, grammarAccess.getDefaultColorAccess().getOLIVEEnumLiteralDeclaration_7()); 
+    }
+)
+    |(	enumLiteral_8='lime' 
+	{
+        $current = grammarAccess.getDefaultColorAccess().getLIMEEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_8, grammarAccess.getDefaultColorAccess().getLIMEEnumLiteralDeclaration_8()); 
+    }
+)
+    |(	enumLiteral_9='green' 
+	{
+        $current = grammarAccess.getDefaultColorAccess().getGREENEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_9, grammarAccess.getDefaultColorAccess().getGREENEnumLiteralDeclaration_9()); 
+    }
+)
+    |(	enumLiteral_10='aqua' 
+	{
+        $current = grammarAccess.getDefaultColorAccess().getAQUAEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_10, grammarAccess.getDefaultColorAccess().getAQUAEnumLiteralDeclaration_10()); 
+    }
+)
+    |(	enumLiteral_11='teal' 
+	{
+        $current = grammarAccess.getDefaultColorAccess().getTEALEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_11, grammarAccess.getDefaultColorAccess().getTEALEnumLiteralDeclaration_11()); 
+    }
+)
+    |(	enumLiteral_12='blue' 
+	{
+        $current = grammarAccess.getDefaultColorAccess().getBLUEEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_12, grammarAccess.getDefaultColorAccess().getBLUEEnumLiteralDeclaration_12()); 
+    }
+)
+    |(	enumLiteral_13='navy' 
+	{
+        $current = grammarAccess.getDefaultColorAccess().getNAVYEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_13, grammarAccess.getDefaultColorAccess().getNAVYEnumLiteralDeclaration_13()); 
+    }
+)
+    |(	enumLiteral_14='fuchsia' 
+	{
+        $current = grammarAccess.getDefaultColorAccess().getFUCHSIAEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_14, grammarAccess.getDefaultColorAccess().getFUCHSIAEnumLiteralDeclaration_14()); 
+    }
+)
+    |(	enumLiteral_15='purple' 
+	{
+        $current = grammarAccess.getDefaultColorAccess().getPURPLEEnumLiteralDeclaration_15().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_15, grammarAccess.getDefaultColorAccess().getPURPLEEnumLiteralDeclaration_15()); 
     }
 ));
 

@@ -22,20 +22,12 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalDslParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_PERCENT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'metamodel'", "'diagram'", "'import'", "'.'", "'*'", "'style'", "':'", "'{'", "'}'", "'image'", "'if'", "'node'", "'icon'", "'link'", "'object'", "'source'", "'target'", "'connection'", "'decorators:'", "'at'", "'%'", "'middle'", "'anchor'", "'color'", "','", "'figure'", "'rectangle'", "'square'", "'children:'", "'rhombus'", "'ellipse'", "'circle'", "'polygon'", "'polyline'", "'contains'", "';'", "'null'", "'label'", "'editable'", "'invisible'", "'foreground'", "'background'", "'transparency'", "'size'", "'x'", "'point'", "'position'", "'corner'", "'text'", "'font-face'", "'font-size'", "'font-style'", "'line-style'", "'line-width'", "'free'", "'manhattan'", "'incoming'", "'outgoing'", "'red'", "'blue'", "'yellow'", "'stack'", "'='", "'<>'", "'true'", "'false'", "'arial'", "'verdana'", "'times'", "'courier'", "'italics'", "'bold'", "'underline'", "'solid'", "'dash'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_PERCENT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'metamodel'", "'diagram'", "'import'", "'.'", "'*'", "'style'", "':'", "'{'", "'}'", "'image'", "'if'", "'node'", "'icon'", "'link'", "'object'", "'source'", "'target'", "'connection'", "'decorators:'", "'at'", "'%'", "'middle'", "'anchor'", "'color'", "','", "'figure'", "'rectangle'", "'square'", "'children:'", "'rhombus'", "'ellipse'", "'circle'", "'polygon'", "'polyline'", "'contains'", "';'", "'null'", "'label'", "'editable'", "'invisible'", "'foreground '", "'background '", "'transparency'", "'size'", "'x'", "'point'", "'position'", "'corner'", "'text'", "'font-face'", "'font-size'", "'font-style'", "'line-style'", "'line-width'", "'free'", "'manhattan'", "'incoming'", "'outgoing'", "'white'", "'silver'", "'gray'", "'black'", "'red'", "'maroon'", "'yellow'", "'olive'", "'lime'", "'green'", "'aqua'", "'teal'", "'blue'", "'navy'", "'fuchsia'", "'purple'", "'stack'", "'='", "'<>'", "'true'", "'false'", "'arial'", "'verdana'", "'times'", "'courier'", "'italics'", "'bold'", "'underline'", "'solid'", "'dash'"
     };
-    public static final int T__68=68;
-    public static final int T__69=69;
     public static final int RULE_ID=5;
-    public static final int T__66=66;
-    public static final int T__67=67;
-    public static final int T__64=64;
     public static final int T__29=29;
-    public static final int T__65=65;
     public static final int T__28=28;
-    public static final int T__62=62;
     public static final int T__27=27;
-    public static final int T__63=63;
     public static final int T__26=26;
     public static final int T__25=25;
     public static final int T__24=24;
@@ -45,62 +37,40 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
     public static final int T__21=21;
     public static final int T__20=20;
     public static final int RULE_PERCENT=7;
-    public static final int T__61=61;
-    public static final int T__60=60;
     public static final int EOF=-1;
-    public static final int T__55=55;
-    public static final int T__56=56;
+    public static final int T__93=93;
     public static final int T__19=19;
-    public static final int T__57=57;
-    public static final int T__58=58;
-    public static final int T__51=51;
+    public static final int T__94=94;
+    public static final int T__91=91;
+    public static final int T__92=92;
     public static final int T__16=16;
-    public static final int T__52=52;
     public static final int T__15=15;
-    public static final int T__53=53;
+    public static final int T__90=90;
     public static final int T__18=18;
-    public static final int T__54=54;
     public static final int T__17=17;
     public static final int T__12=12;
     public static final int T__14=14;
     public static final int T__13=13;
-    public static final int T__59=59;
-    public static final int RULE_INT=6;
-    public static final int T__50=50;
-    public static final int T__42=42;
-    public static final int T__43=43;
-    public static final int T__40=40;
-    public static final int T__41=41;
+    public static final int T__99=99;
+    public static final int T__98=98;
+    public static final int T__97=97;
+    public static final int T__96=96;
+    public static final int T__95=95;
     public static final int T__80=80;
-    public static final int T__46=46;
     public static final int T__81=81;
-    public static final int T__47=47;
     public static final int T__82=82;
-    public static final int T__44=44;
     public static final int T__83=83;
-    public static final int T__45=45;
-    public static final int T__48=48;
-    public static final int T__49=49;
     public static final int T__85=85;
-    public static final int RULE_SL_COMMENT=9;
     public static final int T__84=84;
+    public static final int T__87=87;
     public static final int T__86=86;
+    public static final int T__89=89;
+    public static final int T__88=88;
     public static final int RULE_ML_COMMENT=8;
-    public static final int T__30=30;
-    public static final int T__31=31;
     public static final int RULE_STRING=4;
-    public static final int T__32=32;
     public static final int T__71=71;
-    public static final int T__33=33;
     public static final int T__72=72;
-    public static final int T__34=34;
-    public static final int T__35=35;
     public static final int T__70=70;
-    public static final int T__36=36;
-    public static final int T__37=37;
-    public static final int T__38=38;
-    public static final int T__39=39;
-    public static final int RULE_WS=10;
     public static final int T__76=76;
     public static final int T__75=75;
     public static final int T__74=74;
@@ -108,6 +78,49 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
     public static final int T__79=79;
     public static final int T__78=78;
     public static final int T__77=77;
+    public static final int T__68=68;
+    public static final int T__69=69;
+    public static final int T__66=66;
+    public static final int T__67=67;
+    public static final int T__64=64;
+    public static final int T__65=65;
+    public static final int T__62=62;
+    public static final int T__63=63;
+    public static final int T__61=61;
+    public static final int T__60=60;
+    public static final int T__55=55;
+    public static final int T__56=56;
+    public static final int T__57=57;
+    public static final int T__58=58;
+    public static final int T__51=51;
+    public static final int T__52=52;
+    public static final int T__53=53;
+    public static final int T__54=54;
+    public static final int T__59=59;
+    public static final int RULE_INT=6;
+    public static final int T__50=50;
+    public static final int T__42=42;
+    public static final int T__43=43;
+    public static final int T__40=40;
+    public static final int T__41=41;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__44=44;
+    public static final int T__45=45;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int RULE_SL_COMMENT=9;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
+    public static final int T__33=33;
+    public static final int T__34=34;
+    public static final int T__35=35;
+    public static final int T__36=36;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
+    public static final int RULE_WS=10;
 
     // delegates
     // delegators
@@ -3648,7 +3661,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             int alt20=2;
             int LA20_0 = input.LA(1);
 
-            if ( ((LA20_0>=70 && LA20_0<=72)) ) {
+            if ( ((LA20_0>=70 && LA20_0<=85)) ) {
                 alt20=1;
             }
             else if ( (LA20_0==RULE_ID) ) {
@@ -5828,7 +5841,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             int alt41=2;
             int LA41_0 = input.LA(1);
 
-            if ( (LA41_0==66||LA41_0==73) ) {
+            if ( (LA41_0==66||LA41_0==86) ) {
                 alt41=1;
             }
             switch (alt41) {
@@ -5958,7 +5971,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                 if ( (LA42_1==15) ) {
                     alt42=2;
                 }
-                else if ( (LA42_1==EOF||LA42_1==20||LA42_1==34||LA42_1==40||(LA42_1>=46 && LA42_1<=47)||(LA42_1>=52 && LA42_1<=55)||(LA42_1>=57 && LA42_1<=66)||LA42_1==73) ) {
+                else if ( (LA42_1==EOF||LA42_1==20||LA42_1==34||LA42_1==40||(LA42_1>=46 && LA42_1<=47)||(LA42_1>=52 && LA42_1<=55)||(LA42_1>=57 && LA42_1<=66)||LA42_1==86) ) {
                     alt42=1;
                 }
                 else {
@@ -5975,8 +5988,8 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                 alt42=3;
                 }
                 break;
-            case 76:
-            case 77:
+            case 89:
+            case 90:
                 {
                 alt42=4;
                 }
@@ -8110,7 +8123,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleForeground"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3140:1: ruleForeground returns [EObject current=null] : (otherlv_0= 'foreground' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3140:1: ruleForeground returns [EObject current=null] : (otherlv_0= 'foreground ' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
     public final EObject ruleForeground() throws RecognitionException {
         EObject current = null;
 
@@ -8124,11 +8137,11 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3143:28: ( (otherlv_0= 'foreground' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3144:1: (otherlv_0= 'foreground' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3143:28: ( (otherlv_0= 'foreground ' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3144:1: (otherlv_0= 'foreground ' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3144:1: (otherlv_0= 'foreground' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3144:3: otherlv_0= 'foreground' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3144:1: (otherlv_0= 'foreground ' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3144:3: otherlv_0= 'foreground ' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
             {
             otherlv_0=(Token)match(input,52,FOLLOW_52_in_ruleForeground7133); 
 
@@ -8268,7 +8281,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBackground"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3205:1: ruleBackground returns [EObject current=null] : (otherlv_0= 'background' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3205:1: ruleBackground returns [EObject current=null] : (otherlv_0= 'background ' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
     public final EObject ruleBackground() throws RecognitionException {
         EObject current = null;
 
@@ -8282,11 +8295,11 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3208:28: ( (otherlv_0= 'background' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3209:1: (otherlv_0= 'background' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3208:28: ( (otherlv_0= 'background ' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3209:1: (otherlv_0= 'background ' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3209:1: (otherlv_0= 'background' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3209:3: otherlv_0= 'background' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3209:1: (otherlv_0= 'background ' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3209:3: otherlv_0= 'background ' ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
             {
             otherlv_0=(Token)match(input,53,FOLLOW_53_in_ruleBackground7271); 
 
@@ -10466,21 +10479,34 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDefaultColor"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4118:1: ruleDefaultColor returns [Enumerator current=null] : ( (enumLiteral_0= 'red' ) | (enumLiteral_1= 'blue' ) | (enumLiteral_2= 'yellow' ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4118:1: ruleDefaultColor returns [Enumerator current=null] : ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) ) ;
     public final Enumerator ruleDefaultColor() throws RecognitionException {
         Enumerator current = null;
 
         Token enumLiteral_0=null;
         Token enumLiteral_1=null;
         Token enumLiteral_2=null;
+        Token enumLiteral_3=null;
+        Token enumLiteral_4=null;
+        Token enumLiteral_5=null;
+        Token enumLiteral_6=null;
+        Token enumLiteral_7=null;
+        Token enumLiteral_8=null;
+        Token enumLiteral_9=null;
+        Token enumLiteral_10=null;
+        Token enumLiteral_11=null;
+        Token enumLiteral_12=null;
+        Token enumLiteral_13=null;
+        Token enumLiteral_14=null;
+        Token enumLiteral_15=null;
 
          enterRule(); 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4120:28: ( ( (enumLiteral_0= 'red' ) | (enumLiteral_1= 'blue' ) | (enumLiteral_2= 'yellow' ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4121:1: ( (enumLiteral_0= 'red' ) | (enumLiteral_1= 'blue' ) | (enumLiteral_2= 'yellow' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4120:28: ( ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4121:1: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4121:1: ( (enumLiteral_0= 'red' ) | (enumLiteral_1= 'blue' ) | (enumLiteral_2= 'yellow' ) )
-            int alt75=3;
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4121:1: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) )
+            int alt75=16;
             switch ( input.LA(1) ) {
             case 70:
                 {
@@ -10497,6 +10523,71 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                 alt75=3;
                 }
                 break;
+            case 73:
+                {
+                alt75=4;
+                }
+                break;
+            case 74:
+                {
+                alt75=5;
+                }
+                break;
+            case 75:
+                {
+                alt75=6;
+                }
+                break;
+            case 76:
+                {
+                alt75=7;
+                }
+                break;
+            case 77:
+                {
+                alt75=8;
+                }
+                break;
+            case 78:
+                {
+                alt75=9;
+                }
+                break;
+            case 79:
+                {
+                alt75=10;
+                }
+                break;
+            case 80:
+                {
+                alt75=11;
+                }
+                break;
+            case 81:
+                {
+                alt75=12;
+                }
+                break;
+            case 82:
+                {
+                alt75=13;
+                }
+                break;
+            case 83:
+                {
+                alt75=14;
+                }
+                break;
+            case 84:
+                {
+                alt75=15;
+                }
+                break;
+            case 85:
+                {
+                alt75=16;
+                }
+                break;
             default:
                 NoViableAltException nvae =
                     new NoViableAltException("", 75, 0, input);
@@ -10506,15 +10597,15 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             switch (alt75) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4121:2: (enumLiteral_0= 'red' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4121:2: (enumLiteral_0= 'white' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4121:2: (enumLiteral_0= 'red' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4121:4: enumLiteral_0= 'red'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4121:2: (enumLiteral_0= 'white' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4121:4: enumLiteral_0= 'white'
                     {
                     enumLiteral_0=(Token)match(input,70,FOLLOW_70_in_ruleDefaultColor9195); 
 
-                            current = grammarAccess.getDefaultColorAccess().getREDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_0, grammarAccess.getDefaultColorAccess().getREDEnumLiteralDeclaration_0()); 
+                            current = grammarAccess.getDefaultColorAccess().getWHITEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_0, grammarAccess.getDefaultColorAccess().getWHITEEnumLiteralDeclaration_0()); 
                         
 
                     }
@@ -10523,15 +10614,15 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4127:6: (enumLiteral_1= 'blue' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4127:6: (enumLiteral_1= 'silver' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4127:6: (enumLiteral_1= 'blue' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4127:8: enumLiteral_1= 'blue'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4127:6: (enumLiteral_1= 'silver' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4127:8: enumLiteral_1= 'silver'
                     {
                     enumLiteral_1=(Token)match(input,71,FOLLOW_71_in_ruleDefaultColor9212); 
 
-                            current = grammarAccess.getDefaultColorAccess().getBLUEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_1, grammarAccess.getDefaultColorAccess().getBLUEEnumLiteralDeclaration_1()); 
+                            current = grammarAccess.getDefaultColorAccess().getSILVEREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_1, grammarAccess.getDefaultColorAccess().getSILVEREnumLiteralDeclaration_1()); 
                         
 
                     }
@@ -10540,15 +10631,236 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4133:6: (enumLiteral_2= 'yellow' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4133:6: (enumLiteral_2= 'gray' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4133:6: (enumLiteral_2= 'yellow' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4133:8: enumLiteral_2= 'yellow'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4133:6: (enumLiteral_2= 'gray' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4133:8: enumLiteral_2= 'gray'
                     {
                     enumLiteral_2=(Token)match(input,72,FOLLOW_72_in_ruleDefaultColor9229); 
 
-                            current = grammarAccess.getDefaultColorAccess().getYELLOWEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_2, grammarAccess.getDefaultColorAccess().getYELLOWEnumLiteralDeclaration_2()); 
+                            current = grammarAccess.getDefaultColorAccess().getGRAYEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_2, grammarAccess.getDefaultColorAccess().getGRAYEnumLiteralDeclaration_2()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 4 :
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4139:6: (enumLiteral_3= 'black' )
+                    {
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4139:6: (enumLiteral_3= 'black' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4139:8: enumLiteral_3= 'black'
+                    {
+                    enumLiteral_3=(Token)match(input,73,FOLLOW_73_in_ruleDefaultColor9246); 
+
+                            current = grammarAccess.getDefaultColorAccess().getBLACKEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_3, grammarAccess.getDefaultColorAccess().getBLACKEnumLiteralDeclaration_3()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 5 :
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4145:6: (enumLiteral_4= 'red' )
+                    {
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4145:6: (enumLiteral_4= 'red' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4145:8: enumLiteral_4= 'red'
+                    {
+                    enumLiteral_4=(Token)match(input,74,FOLLOW_74_in_ruleDefaultColor9263); 
+
+                            current = grammarAccess.getDefaultColorAccess().getREDEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_4, grammarAccess.getDefaultColorAccess().getREDEnumLiteralDeclaration_4()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 6 :
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4151:6: (enumLiteral_5= 'maroon' )
+                    {
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4151:6: (enumLiteral_5= 'maroon' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4151:8: enumLiteral_5= 'maroon'
+                    {
+                    enumLiteral_5=(Token)match(input,75,FOLLOW_75_in_ruleDefaultColor9280); 
+
+                            current = grammarAccess.getDefaultColorAccess().getMAROONEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_5, grammarAccess.getDefaultColorAccess().getMAROONEnumLiteralDeclaration_5()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 7 :
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4157:6: (enumLiteral_6= 'yellow' )
+                    {
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4157:6: (enumLiteral_6= 'yellow' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4157:8: enumLiteral_6= 'yellow'
+                    {
+                    enumLiteral_6=(Token)match(input,76,FOLLOW_76_in_ruleDefaultColor9297); 
+
+                            current = grammarAccess.getDefaultColorAccess().getYELLOWEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_6, grammarAccess.getDefaultColorAccess().getYELLOWEnumLiteralDeclaration_6()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 8 :
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4163:6: (enumLiteral_7= 'olive' )
+                    {
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4163:6: (enumLiteral_7= 'olive' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4163:8: enumLiteral_7= 'olive'
+                    {
+                    enumLiteral_7=(Token)match(input,77,FOLLOW_77_in_ruleDefaultColor9314); 
+
+                            current = grammarAccess.getDefaultColorAccess().getOLIVEEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_7, grammarAccess.getDefaultColorAccess().getOLIVEEnumLiteralDeclaration_7()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 9 :
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4169:6: (enumLiteral_8= 'lime' )
+                    {
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4169:6: (enumLiteral_8= 'lime' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4169:8: enumLiteral_8= 'lime'
+                    {
+                    enumLiteral_8=(Token)match(input,78,FOLLOW_78_in_ruleDefaultColor9331); 
+
+                            current = grammarAccess.getDefaultColorAccess().getLIMEEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_8, grammarAccess.getDefaultColorAccess().getLIMEEnumLiteralDeclaration_8()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 10 :
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4175:6: (enumLiteral_9= 'green' )
+                    {
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4175:6: (enumLiteral_9= 'green' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4175:8: enumLiteral_9= 'green'
+                    {
+                    enumLiteral_9=(Token)match(input,79,FOLLOW_79_in_ruleDefaultColor9348); 
+
+                            current = grammarAccess.getDefaultColorAccess().getGREENEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_9, grammarAccess.getDefaultColorAccess().getGREENEnumLiteralDeclaration_9()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 11 :
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4181:6: (enumLiteral_10= 'aqua' )
+                    {
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4181:6: (enumLiteral_10= 'aqua' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4181:8: enumLiteral_10= 'aqua'
+                    {
+                    enumLiteral_10=(Token)match(input,80,FOLLOW_80_in_ruleDefaultColor9365); 
+
+                            current = grammarAccess.getDefaultColorAccess().getAQUAEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_10, grammarAccess.getDefaultColorAccess().getAQUAEnumLiteralDeclaration_10()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 12 :
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4187:6: (enumLiteral_11= 'teal' )
+                    {
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4187:6: (enumLiteral_11= 'teal' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4187:8: enumLiteral_11= 'teal'
+                    {
+                    enumLiteral_11=(Token)match(input,81,FOLLOW_81_in_ruleDefaultColor9382); 
+
+                            current = grammarAccess.getDefaultColorAccess().getTEALEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_11, grammarAccess.getDefaultColorAccess().getTEALEnumLiteralDeclaration_11()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 13 :
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4193:6: (enumLiteral_12= 'blue' )
+                    {
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4193:6: (enumLiteral_12= 'blue' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4193:8: enumLiteral_12= 'blue'
+                    {
+                    enumLiteral_12=(Token)match(input,82,FOLLOW_82_in_ruleDefaultColor9399); 
+
+                            current = grammarAccess.getDefaultColorAccess().getBLUEEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_12, grammarAccess.getDefaultColorAccess().getBLUEEnumLiteralDeclaration_12()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 14 :
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4199:6: (enumLiteral_13= 'navy' )
+                    {
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4199:6: (enumLiteral_13= 'navy' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4199:8: enumLiteral_13= 'navy'
+                    {
+                    enumLiteral_13=(Token)match(input,83,FOLLOW_83_in_ruleDefaultColor9416); 
+
+                            current = grammarAccess.getDefaultColorAccess().getNAVYEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_13, grammarAccess.getDefaultColorAccess().getNAVYEnumLiteralDeclaration_13()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 15 :
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4205:6: (enumLiteral_14= 'fuchsia' )
+                    {
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4205:6: (enumLiteral_14= 'fuchsia' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4205:8: enumLiteral_14= 'fuchsia'
+                    {
+                    enumLiteral_14=(Token)match(input,84,FOLLOW_84_in_ruleDefaultColor9433); 
+
+                            current = grammarAccess.getDefaultColorAccess().getFUCHSIAEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_14, grammarAccess.getDefaultColorAccess().getFUCHSIAEnumLiteralDeclaration_14()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 16 :
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4211:6: (enumLiteral_15= 'purple' )
+                    {
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4211:6: (enumLiteral_15= 'purple' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4211:8: enumLiteral_15= 'purple'
+                    {
+                    enumLiteral_15=(Token)match(input,85,FOLLOW_85_in_ruleDefaultColor9450); 
+
+                            current = grammarAccess.getDefaultColorAccess().getPURPLEEnumLiteralDeclaration_15().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_15, grammarAccess.getDefaultColorAccess().getPURPLEEnumLiteralDeclaration_15()); 
                         
 
                     }
@@ -10577,7 +10889,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContainerLayout"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4143:1: ruleContainerLayout returns [Enumerator current=null] : ( (enumLiteral_0= 'stack' ) | (enumLiteral_1= 'free' ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4221:1: ruleContainerLayout returns [Enumerator current=null] : ( (enumLiteral_0= 'stack' ) | (enumLiteral_1= 'free' ) ) ;
     public final Enumerator ruleContainerLayout() throws RecognitionException {
         Enumerator current = null;
 
@@ -10586,14 +10898,14 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4145:28: ( ( (enumLiteral_0= 'stack' ) | (enumLiteral_1= 'free' ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4146:1: ( (enumLiteral_0= 'stack' ) | (enumLiteral_1= 'free' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4223:28: ( ( (enumLiteral_0= 'stack' ) | (enumLiteral_1= 'free' ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4224:1: ( (enumLiteral_0= 'stack' ) | (enumLiteral_1= 'free' ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4146:1: ( (enumLiteral_0= 'stack' ) | (enumLiteral_1= 'free' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4224:1: ( (enumLiteral_0= 'stack' ) | (enumLiteral_1= 'free' ) )
             int alt76=2;
             int LA76_0 = input.LA(1);
 
-            if ( (LA76_0==73) ) {
+            if ( (LA76_0==86) ) {
                 alt76=1;
             }
             else if ( (LA76_0==66) ) {
@@ -10607,12 +10919,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             }
             switch (alt76) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4146:2: (enumLiteral_0= 'stack' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4224:2: (enumLiteral_0= 'stack' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4146:2: (enumLiteral_0= 'stack' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4146:4: enumLiteral_0= 'stack'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4224:2: (enumLiteral_0= 'stack' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4224:4: enumLiteral_0= 'stack'
                     {
-                    enumLiteral_0=(Token)match(input,73,FOLLOW_73_in_ruleContainerLayout9274); 
+                    enumLiteral_0=(Token)match(input,86,FOLLOW_86_in_ruleContainerLayout9495); 
 
                             current = grammarAccess.getContainerLayoutAccess().getSTACKEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getContainerLayoutAccess().getSTACKEnumLiteralDeclaration_0()); 
@@ -10624,12 +10936,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4152:6: (enumLiteral_1= 'free' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4230:6: (enumLiteral_1= 'free' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4152:6: (enumLiteral_1= 'free' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4152:8: enumLiteral_1= 'free'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4230:6: (enumLiteral_1= 'free' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4230:8: enumLiteral_1= 'free'
                     {
-                    enumLiteral_1=(Token)match(input,66,FOLLOW_66_in_ruleContainerLayout9291); 
+                    enumLiteral_1=(Token)match(input,66,FOLLOW_66_in_ruleContainerLayout9512); 
 
                             current = grammarAccess.getContainerLayoutAccess().getFREEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getContainerLayoutAccess().getFREEEnumLiteralDeclaration_1()); 
@@ -10661,7 +10973,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperator"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4162:1: ruleOperator returns [Enumerator current=null] : ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4240:1: ruleOperator returns [Enumerator current=null] : ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) ) ;
     public final Enumerator ruleOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -10670,17 +10982,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4164:28: ( ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4165:1: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4242:28: ( ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4243:1: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4165:1: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4243:1: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) )
             int alt77=2;
             int LA77_0 = input.LA(1);
 
-            if ( (LA77_0==74) ) {
+            if ( (LA77_0==87) ) {
                 alt77=1;
             }
-            else if ( (LA77_0==75) ) {
+            else if ( (LA77_0==88) ) {
                 alt77=2;
             }
             else {
@@ -10691,12 +11003,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             }
             switch (alt77) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4165:2: (enumLiteral_0= '=' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4243:2: (enumLiteral_0= '=' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4165:2: (enumLiteral_0= '=' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4165:4: enumLiteral_0= '='
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4243:2: (enumLiteral_0= '=' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4243:4: enumLiteral_0= '='
                     {
-                    enumLiteral_0=(Token)match(input,74,FOLLOW_74_in_ruleOperator9336); 
+                    enumLiteral_0=(Token)match(input,87,FOLLOW_87_in_ruleOperator9557); 
 
                             current = grammarAccess.getOperatorAccess().getEQUALEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getOperatorAccess().getEQUALEnumLiteralDeclaration_0()); 
@@ -10708,12 +11020,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4171:6: (enumLiteral_1= '<>' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4249:6: (enumLiteral_1= '<>' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4171:6: (enumLiteral_1= '<>' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4171:8: enumLiteral_1= '<>'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4249:6: (enumLiteral_1= '<>' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4249:8: enumLiteral_1= '<>'
                     {
-                    enumLiteral_1=(Token)match(input,75,FOLLOW_75_in_ruleOperator9353); 
+                    enumLiteral_1=(Token)match(input,88,FOLLOW_88_in_ruleOperator9574); 
 
                             current = grammarAccess.getOperatorAccess().getDIFFERENTEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getOperatorAccess().getDIFFERENTEnumLiteralDeclaration_1()); 
@@ -10745,7 +11057,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBooleanLiteral"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4181:1: ruleBooleanLiteral returns [Enumerator current=null] : ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4259:1: ruleBooleanLiteral returns [Enumerator current=null] : ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) ;
     public final Enumerator ruleBooleanLiteral() throws RecognitionException {
         Enumerator current = null;
 
@@ -10754,17 +11066,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4183:28: ( ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4184:1: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4261:28: ( ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4262:1: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4184:1: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4262:1: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
             int alt78=2;
             int LA78_0 = input.LA(1);
 
-            if ( (LA78_0==76) ) {
+            if ( (LA78_0==89) ) {
                 alt78=1;
             }
-            else if ( (LA78_0==77) ) {
+            else if ( (LA78_0==90) ) {
                 alt78=2;
             }
             else {
@@ -10775,12 +11087,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             }
             switch (alt78) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4184:2: (enumLiteral_0= 'true' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4262:2: (enumLiteral_0= 'true' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4184:2: (enumLiteral_0= 'true' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4184:4: enumLiteral_0= 'true'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4262:2: (enumLiteral_0= 'true' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4262:4: enumLiteral_0= 'true'
                     {
-                    enumLiteral_0=(Token)match(input,76,FOLLOW_76_in_ruleBooleanLiteral9398); 
+                    enumLiteral_0=(Token)match(input,89,FOLLOW_89_in_ruleBooleanLiteral9619); 
 
                             current = grammarAccess.getBooleanLiteralAccess().getTRUEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getBooleanLiteralAccess().getTRUEEnumLiteralDeclaration_0()); 
@@ -10792,12 +11104,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4190:6: (enumLiteral_1= 'false' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4268:6: (enumLiteral_1= 'false' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4190:6: (enumLiteral_1= 'false' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4190:8: enumLiteral_1= 'false'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4268:6: (enumLiteral_1= 'false' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4268:8: enumLiteral_1= 'false'
                     {
-                    enumLiteral_1=(Token)match(input,77,FOLLOW_77_in_ruleBooleanLiteral9415); 
+                    enumLiteral_1=(Token)match(input,90,FOLLOW_90_in_ruleBooleanLiteral9636); 
 
                             current = grammarAccess.getBooleanLiteralAccess().getFALSEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getBooleanLiteralAccess().getFALSEEnumLiteralDeclaration_1()); 
@@ -10829,7 +11141,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFontFaceType"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4200:1: ruleFontFaceType returns [Enumerator current=null] : ( (enumLiteral_0= 'arial' ) | (enumLiteral_1= 'verdana' ) | (enumLiteral_2= 'times' ) | (enumLiteral_3= 'courier' ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4278:1: ruleFontFaceType returns [Enumerator current=null] : ( (enumLiteral_0= 'arial' ) | (enumLiteral_1= 'verdana' ) | (enumLiteral_2= 'times' ) | (enumLiteral_3= 'courier' ) ) ;
     public final Enumerator ruleFontFaceType() throws RecognitionException {
         Enumerator current = null;
 
@@ -10840,28 +11152,28 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4202:28: ( ( (enumLiteral_0= 'arial' ) | (enumLiteral_1= 'verdana' ) | (enumLiteral_2= 'times' ) | (enumLiteral_3= 'courier' ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4203:1: ( (enumLiteral_0= 'arial' ) | (enumLiteral_1= 'verdana' ) | (enumLiteral_2= 'times' ) | (enumLiteral_3= 'courier' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4280:28: ( ( (enumLiteral_0= 'arial' ) | (enumLiteral_1= 'verdana' ) | (enumLiteral_2= 'times' ) | (enumLiteral_3= 'courier' ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4281:1: ( (enumLiteral_0= 'arial' ) | (enumLiteral_1= 'verdana' ) | (enumLiteral_2= 'times' ) | (enumLiteral_3= 'courier' ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4203:1: ( (enumLiteral_0= 'arial' ) | (enumLiteral_1= 'verdana' ) | (enumLiteral_2= 'times' ) | (enumLiteral_3= 'courier' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4281:1: ( (enumLiteral_0= 'arial' ) | (enumLiteral_1= 'verdana' ) | (enumLiteral_2= 'times' ) | (enumLiteral_3= 'courier' ) )
             int alt79=4;
             switch ( input.LA(1) ) {
-            case 78:
+            case 91:
                 {
                 alt79=1;
                 }
                 break;
-            case 79:
+            case 92:
                 {
                 alt79=2;
                 }
                 break;
-            case 80:
+            case 93:
                 {
                 alt79=3;
                 }
                 break;
-            case 81:
+            case 94:
                 {
                 alt79=4;
                 }
@@ -10875,12 +11187,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             switch (alt79) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4203:2: (enumLiteral_0= 'arial' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4281:2: (enumLiteral_0= 'arial' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4203:2: (enumLiteral_0= 'arial' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4203:4: enumLiteral_0= 'arial'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4281:2: (enumLiteral_0= 'arial' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4281:4: enumLiteral_0= 'arial'
                     {
-                    enumLiteral_0=(Token)match(input,78,FOLLOW_78_in_ruleFontFaceType9460); 
+                    enumLiteral_0=(Token)match(input,91,FOLLOW_91_in_ruleFontFaceType9681); 
 
                             current = grammarAccess.getFontFaceTypeAccess().getARIALEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getFontFaceTypeAccess().getARIALEnumLiteralDeclaration_0()); 
@@ -10892,12 +11204,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4209:6: (enumLiteral_1= 'verdana' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4287:6: (enumLiteral_1= 'verdana' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4209:6: (enumLiteral_1= 'verdana' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4209:8: enumLiteral_1= 'verdana'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4287:6: (enumLiteral_1= 'verdana' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4287:8: enumLiteral_1= 'verdana'
                     {
-                    enumLiteral_1=(Token)match(input,79,FOLLOW_79_in_ruleFontFaceType9477); 
+                    enumLiteral_1=(Token)match(input,92,FOLLOW_92_in_ruleFontFaceType9698); 
 
                             current = grammarAccess.getFontFaceTypeAccess().getVERDANAEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getFontFaceTypeAccess().getVERDANAEnumLiteralDeclaration_1()); 
@@ -10909,12 +11221,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4215:6: (enumLiteral_2= 'times' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4293:6: (enumLiteral_2= 'times' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4215:6: (enumLiteral_2= 'times' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4215:8: enumLiteral_2= 'times'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4293:6: (enumLiteral_2= 'times' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4293:8: enumLiteral_2= 'times'
                     {
-                    enumLiteral_2=(Token)match(input,80,FOLLOW_80_in_ruleFontFaceType9494); 
+                    enumLiteral_2=(Token)match(input,93,FOLLOW_93_in_ruleFontFaceType9715); 
 
                             current = grammarAccess.getFontFaceTypeAccess().getTIMESEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getFontFaceTypeAccess().getTIMESEnumLiteralDeclaration_2()); 
@@ -10926,12 +11238,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4221:6: (enumLiteral_3= 'courier' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4299:6: (enumLiteral_3= 'courier' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4221:6: (enumLiteral_3= 'courier' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4221:8: enumLiteral_3= 'courier'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4299:6: (enumLiteral_3= 'courier' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4299:8: enumLiteral_3= 'courier'
                     {
-                    enumLiteral_3=(Token)match(input,81,FOLLOW_81_in_ruleFontFaceType9511); 
+                    enumLiteral_3=(Token)match(input,94,FOLLOW_94_in_ruleFontFaceType9732); 
 
                             current = grammarAccess.getFontFaceTypeAccess().getCOURIEREnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getFontFaceTypeAccess().getCOURIEREnumLiteralDeclaration_3()); 
@@ -10963,7 +11275,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFontStyleType"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4231:1: ruleFontStyleType returns [Enumerator current=null] : ( (enumLiteral_0= 'italics' ) | (enumLiteral_1= 'bold' ) | (enumLiteral_2= 'underline' ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4309:1: ruleFontStyleType returns [Enumerator current=null] : ( (enumLiteral_0= 'italics' ) | (enumLiteral_1= 'bold' ) | (enumLiteral_2= 'underline' ) ) ;
     public final Enumerator ruleFontStyleType() throws RecognitionException {
         Enumerator current = null;
 
@@ -10973,23 +11285,23 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4233:28: ( ( (enumLiteral_0= 'italics' ) | (enumLiteral_1= 'bold' ) | (enumLiteral_2= 'underline' ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4234:1: ( (enumLiteral_0= 'italics' ) | (enumLiteral_1= 'bold' ) | (enumLiteral_2= 'underline' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4311:28: ( ( (enumLiteral_0= 'italics' ) | (enumLiteral_1= 'bold' ) | (enumLiteral_2= 'underline' ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4312:1: ( (enumLiteral_0= 'italics' ) | (enumLiteral_1= 'bold' ) | (enumLiteral_2= 'underline' ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4234:1: ( (enumLiteral_0= 'italics' ) | (enumLiteral_1= 'bold' ) | (enumLiteral_2= 'underline' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4312:1: ( (enumLiteral_0= 'italics' ) | (enumLiteral_1= 'bold' ) | (enumLiteral_2= 'underline' ) )
             int alt80=3;
             switch ( input.LA(1) ) {
-            case 82:
+            case 95:
                 {
                 alt80=1;
                 }
                 break;
-            case 83:
+            case 96:
                 {
                 alt80=2;
                 }
                 break;
-            case 84:
+            case 97:
                 {
                 alt80=3;
                 }
@@ -11003,12 +11315,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             switch (alt80) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4234:2: (enumLiteral_0= 'italics' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4312:2: (enumLiteral_0= 'italics' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4234:2: (enumLiteral_0= 'italics' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4234:4: enumLiteral_0= 'italics'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4312:2: (enumLiteral_0= 'italics' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4312:4: enumLiteral_0= 'italics'
                     {
-                    enumLiteral_0=(Token)match(input,82,FOLLOW_82_in_ruleFontStyleType9556); 
+                    enumLiteral_0=(Token)match(input,95,FOLLOW_95_in_ruleFontStyleType9777); 
 
                             current = grammarAccess.getFontStyleTypeAccess().getITALICSEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getFontStyleTypeAccess().getITALICSEnumLiteralDeclaration_0()); 
@@ -11020,12 +11332,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4240:6: (enumLiteral_1= 'bold' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4318:6: (enumLiteral_1= 'bold' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4240:6: (enumLiteral_1= 'bold' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4240:8: enumLiteral_1= 'bold'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4318:6: (enumLiteral_1= 'bold' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4318:8: enumLiteral_1= 'bold'
                     {
-                    enumLiteral_1=(Token)match(input,83,FOLLOW_83_in_ruleFontStyleType9573); 
+                    enumLiteral_1=(Token)match(input,96,FOLLOW_96_in_ruleFontStyleType9794); 
 
                             current = grammarAccess.getFontStyleTypeAccess().getBOLDEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getFontStyleTypeAccess().getBOLDEnumLiteralDeclaration_1()); 
@@ -11037,12 +11349,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4246:6: (enumLiteral_2= 'underline' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4324:6: (enumLiteral_2= 'underline' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4246:6: (enumLiteral_2= 'underline' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4246:8: enumLiteral_2= 'underline'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4324:6: (enumLiteral_2= 'underline' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4324:8: enumLiteral_2= 'underline'
                     {
-                    enumLiteral_2=(Token)match(input,84,FOLLOW_84_in_ruleFontStyleType9590); 
+                    enumLiteral_2=(Token)match(input,97,FOLLOW_97_in_ruleFontStyleType9811); 
 
                             current = grammarAccess.getFontStyleTypeAccess().getUNDERLINEEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getFontStyleTypeAccess().getUNDERLINEEnumLiteralDeclaration_2()); 
@@ -11074,7 +11386,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLineType"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4256:1: ruleLineType returns [Enumerator current=null] : ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dash' ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4334:1: ruleLineType returns [Enumerator current=null] : ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dash' ) ) ;
     public final Enumerator ruleLineType() throws RecognitionException {
         Enumerator current = null;
 
@@ -11083,17 +11395,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4258:28: ( ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dash' ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4259:1: ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dash' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4336:28: ( ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dash' ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4337:1: ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dash' ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4259:1: ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dash' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4337:1: ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dash' ) )
             int alt81=2;
             int LA81_0 = input.LA(1);
 
-            if ( (LA81_0==85) ) {
+            if ( (LA81_0==98) ) {
                 alt81=1;
             }
-            else if ( (LA81_0==86) ) {
+            else if ( (LA81_0==99) ) {
                 alt81=2;
             }
             else {
@@ -11104,12 +11416,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             }
             switch (alt81) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4259:2: (enumLiteral_0= 'solid' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4337:2: (enumLiteral_0= 'solid' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4259:2: (enumLiteral_0= 'solid' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4259:4: enumLiteral_0= 'solid'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4337:2: (enumLiteral_0= 'solid' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4337:4: enumLiteral_0= 'solid'
                     {
-                    enumLiteral_0=(Token)match(input,85,FOLLOW_85_in_ruleLineType9635); 
+                    enumLiteral_0=(Token)match(input,98,FOLLOW_98_in_ruleLineType9856); 
 
                             current = grammarAccess.getLineTypeAccess().getSOLIDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getLineTypeAccess().getSOLIDEnumLiteralDeclaration_0()); 
@@ -11121,12 +11433,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4265:6: (enumLiteral_1= 'dash' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4343:6: (enumLiteral_1= 'dash' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4265:6: (enumLiteral_1= 'dash' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4265:8: enumLiteral_1= 'dash'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4343:6: (enumLiteral_1= 'dash' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4343:8: enumLiteral_1= 'dash'
                     {
-                    enumLiteral_1=(Token)match(input,86,FOLLOW_86_in_ruleLineType9652); 
+                    enumLiteral_1=(Token)match(input,99,FOLLOW_99_in_ruleLineType9873); 
 
                             current = grammarAccess.getLineTypeAccess().getDASHEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getLineTypeAccess().getDASHEnumLiteralDeclaration_1()); 
@@ -11220,8 +11532,8 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleFeatureConditional_in_entryRuleFeatureConditional1510 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleFeatureConditional1520 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_22_in_ruleFeatureConditional1557 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleFeatureConditional1580 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000C00L});
-    public static final BitSet FOLLOW_ruleOperator_in_ruleFeatureConditional1601 = new BitSet(new long[]{0x0001000000000070L,0x0000000000003000L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleFeatureConditional1580 = new BitSet(new long[]{0x0000000000000000L,0x0000000001800000L});
+    public static final BitSet FOLLOW_ruleOperator_in_ruleFeatureConditional1601 = new BitSet(new long[]{0x0001000000000070L,0x0000000006000000L});
     public static final BitSet FOLLOW_ruleValue_in_ruleFeatureConditional1622 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleNode_in_entryRuleNode1660 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleNode1670 = new BitSet(new long[]{0x0000000000000002L});
@@ -11358,8 +11670,8 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleContains_in_entryRuleContains4957 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleContains4967 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_46_in_ruleContains5004 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContains5027 = new BitSet(new long[]{0x0000800000400000L,0x0000000000000204L});
-    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleContains5048 = new BitSet(new long[]{0x0000800000000000L,0x0000000000000204L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContains5027 = new BitSet(new long[]{0x0000800000400000L,0x0000000000400004L});
+    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleContains5048 = new BitSet(new long[]{0x0000800000000000L,0x0000000000400004L});
     public static final BitSet FOLLOW_ruleContainerLayout_in_ruleContains5070 = new BitSet(new long[]{0x0000800000000000L});
     public static final BitSet FOLLOW_47_in_ruleContains5083 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleValue_in_entryRuleValue5119 = new BitSet(new long[]{0x0000000000000000L});
@@ -11436,13 +11748,13 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleBackground_in_ruleColorFeature7051 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleForeground_in_entryRuleForeground7086 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleForeground7096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_ruleForeground7133 = new BitSet(new long[]{0x0000000000000020L,0x00000000000001C0L});
+    public static final BitSet FOLLOW_52_in_ruleForeground7133 = new BitSet(new long[]{0x0000000000000020L,0x00000000003FFFC0L});
     public static final BitSet FOLLOW_ruleColor_in_ruleForeground7154 = new BitSet(new long[]{0x0000800000400000L});
     public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleForeground7175 = new BitSet(new long[]{0x0000800000000000L});
     public static final BitSet FOLLOW_47_in_ruleForeground7188 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleBackground_in_entryRuleBackground7224 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleBackground7234 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_ruleBackground7271 = new BitSet(new long[]{0x0000000000000020L,0x00000000000001C0L});
+    public static final BitSet FOLLOW_53_in_ruleBackground7271 = new BitSet(new long[]{0x0000000000000020L,0x00000000003FFFC0L});
     public static final BitSet FOLLOW_ruleColor_in_ruleBackground7292 = new BitSet(new long[]{0x0000800000400000L});
     public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleBackground7313 = new BitSet(new long[]{0x0000800000000000L});
     public static final BitSet FOLLOW_47_in_ruleBackground7326 = new BitSet(new long[]{0x0000000000000002L});
@@ -11491,7 +11803,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_47_in_ruleTextValue8293 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleFontFace_in_entryRuleFontFace8329 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleFontFace8339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_61_in_ruleFontFace8376 = new BitSet(new long[]{0x0000000000000000L,0x000000000003C000L});
+    public static final BitSet FOLLOW_61_in_ruleFontFace8376 = new BitSet(new long[]{0x0000000000000000L,0x0000000078000000L});
     public static final BitSet FOLLOW_ruleFontFaceType_in_ruleFontFace8397 = new BitSet(new long[]{0x0000800000400000L});
     public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleFontFace8418 = new BitSet(new long[]{0x0000800000000000L});
     public static final BitSet FOLLOW_47_in_ruleFontFace8431 = new BitSet(new long[]{0x0000000000000002L});
@@ -11503,15 +11815,15 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_47_in_ruleFontSize8570 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleFontStyle_in_entryRuleFontStyle8606 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleFontStyle8616 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_ruleFontStyle8653 = new BitSet(new long[]{0x0000000000000000L,0x00000000001C0000L});
+    public static final BitSet FOLLOW_63_in_ruleFontStyle8653 = new BitSet(new long[]{0x0000000000000000L,0x0000000380000000L});
     public static final BitSet FOLLOW_ruleFontStyleType_in_ruleFontStyle8674 = new BitSet(new long[]{0x0000801000400000L});
-    public static final BitSet FOLLOW_36_in_ruleFontStyle8687 = new BitSet(new long[]{0x0000000000000000L,0x00000000001C0000L});
+    public static final BitSet FOLLOW_36_in_ruleFontStyle8687 = new BitSet(new long[]{0x0000000000000000L,0x0000000380000000L});
     public static final BitSet FOLLOW_ruleFontStyleType_in_ruleFontStyle8708 = new BitSet(new long[]{0x0000801000400000L});
     public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleFontStyle8731 = new BitSet(new long[]{0x0000800000000000L});
     public static final BitSet FOLLOW_47_in_ruleFontStyle8744 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLineStyle_in_entryRuleLineStyle8780 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLineStyle8790 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_ruleLineStyle8827 = new BitSet(new long[]{0x0000000000000000L,0x0000000000600000L});
+    public static final BitSet FOLLOW_64_in_ruleLineStyle8827 = new BitSet(new long[]{0x0000000000000000L,0x0000000C00000000L});
     public static final BitSet FOLLOW_ruleLineType_in_ruleLineStyle8848 = new BitSet(new long[]{0x0000800000400000L});
     public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleLineStyle8869 = new BitSet(new long[]{0x0000800000000000L});
     public static final BitSet FOLLOW_47_in_ruleLineStyle8882 = new BitSet(new long[]{0x0000000000000002L});
@@ -11528,20 +11840,33 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_70_in_ruleDefaultColor9195 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_71_in_ruleDefaultColor9212 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_72_in_ruleDefaultColor9229 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_ruleContainerLayout9274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_ruleContainerLayout9291 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_ruleOperator9336 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_75_in_ruleOperator9353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_76_in_ruleBooleanLiteral9398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_77_in_ruleBooleanLiteral9415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_78_in_ruleFontFaceType9460 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_79_in_ruleFontFaceType9477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_80_in_ruleFontFaceType9494 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_81_in_ruleFontFaceType9511 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_82_in_ruleFontStyleType9556 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_ruleFontStyleType9573 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_84_in_ruleFontStyleType9590 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_85_in_ruleLineType9635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_86_in_ruleLineType9652 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_73_in_ruleDefaultColor9246 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_ruleDefaultColor9263 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_75_in_ruleDefaultColor9280 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_76_in_ruleDefaultColor9297 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_77_in_ruleDefaultColor9314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_78_in_ruleDefaultColor9331 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_79_in_ruleDefaultColor9348 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_80_in_ruleDefaultColor9365 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_81_in_ruleDefaultColor9382 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_82_in_ruleDefaultColor9399 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_ruleDefaultColor9416 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_84_in_ruleDefaultColor9433 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_85_in_ruleDefaultColor9450 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_86_in_ruleContainerLayout9495 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_ruleContainerLayout9512 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_87_in_ruleOperator9557 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_88_in_ruleOperator9574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_89_in_ruleBooleanLiteral9619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_90_in_ruleBooleanLiteral9636 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_91_in_ruleFontFaceType9681 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_92_in_ruleFontFaceType9698 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_93_in_ruleFontFaceType9715 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_94_in_ruleFontFaceType9732 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_95_in_ruleFontStyleType9777 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_96_in_ruleFontStyleType9794 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_97_in_ruleFontStyleType9811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_98_in_ruleLineType9856 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_99_in_ruleLineType9873 = new BitSet(new long[]{0x0000000000000002L});
 
 }

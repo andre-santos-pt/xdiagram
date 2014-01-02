@@ -1888,13 +1888,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Foreground:
-		//	"foreground" color=Color conditional=FeatureConditional? ";";
+		//	"foreground " color=Color conditional=FeatureConditional? ";";
 		public ParserRule getRule() { return rule; }
 
-		//"foreground" color=Color conditional=FeatureConditional? ";"
+		//"foreground " color=Color conditional=FeatureConditional? ";"
 		public Group getGroup() { return cGroup; }
 
-		//"foreground"
+		//"foreground "
 		public Keyword getForegroundKeyword_0() { return cForegroundKeyword_0; }
 
 		//color=Color
@@ -1924,13 +1924,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Background:
-		//	"background" color=Color conditional=FeatureConditional? ";";
+		//	"background " color=Color conditional=FeatureConditional? ";";
 		public ParserRule getRule() { return rule; }
 
-		//"background" color=Color conditional=FeatureConditional? ";"
+		//"background " color=Color conditional=FeatureConditional? ";"
 		public Group getGroup() { return cGroup; }
 
-		//"background"
+		//"background "
 		public Keyword getBackgroundKeyword_0() { return cBackgroundKeyword_0; }
 
 		//color=Color
@@ -2478,38 +2478,145 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	public class DefaultColorElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "DefaultColor");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cREDEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cREDRedKeyword_0_0 = (Keyword)cREDEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cBLUEEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cBLUEBlueKeyword_1_0 = (Keyword)cBLUEEnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cYELLOWEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cYELLOWYellowKeyword_2_0 = (Keyword)cYELLOWEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cWHITEEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cWHITEWhiteKeyword_0_0 = (Keyword)cWHITEEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cSILVEREnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cSILVERSilverKeyword_1_0 = (Keyword)cSILVEREnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cGRAYEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cGRAYGrayKeyword_2_0 = (Keyword)cGRAYEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cBLACKEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cBLACKBlackKeyword_3_0 = (Keyword)cBLACKEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cREDEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cREDRedKeyword_4_0 = (Keyword)cREDEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cMAROONEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cMAROONMaroonKeyword_5_0 = (Keyword)cMAROONEnumLiteralDeclaration_5.eContents().get(0);
+		private final EnumLiteralDeclaration cYELLOWEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
+		private final Keyword cYELLOWYellowKeyword_6_0 = (Keyword)cYELLOWEnumLiteralDeclaration_6.eContents().get(0);
+		private final EnumLiteralDeclaration cOLIVEEnumLiteralDeclaration_7 = (EnumLiteralDeclaration)cAlternatives.eContents().get(7);
+		private final Keyword cOLIVEOliveKeyword_7_0 = (Keyword)cOLIVEEnumLiteralDeclaration_7.eContents().get(0);
+		private final EnumLiteralDeclaration cLIMEEnumLiteralDeclaration_8 = (EnumLiteralDeclaration)cAlternatives.eContents().get(8);
+		private final Keyword cLIMELimeKeyword_8_0 = (Keyword)cLIMEEnumLiteralDeclaration_8.eContents().get(0);
+		private final EnumLiteralDeclaration cGREENEnumLiteralDeclaration_9 = (EnumLiteralDeclaration)cAlternatives.eContents().get(9);
+		private final Keyword cGREENGreenKeyword_9_0 = (Keyword)cGREENEnumLiteralDeclaration_9.eContents().get(0);
+		private final EnumLiteralDeclaration cAQUAEnumLiteralDeclaration_10 = (EnumLiteralDeclaration)cAlternatives.eContents().get(10);
+		private final Keyword cAQUAAquaKeyword_10_0 = (Keyword)cAQUAEnumLiteralDeclaration_10.eContents().get(0);
+		private final EnumLiteralDeclaration cTEALEnumLiteralDeclaration_11 = (EnumLiteralDeclaration)cAlternatives.eContents().get(11);
+		private final Keyword cTEALTealKeyword_11_0 = (Keyword)cTEALEnumLiteralDeclaration_11.eContents().get(0);
+		private final EnumLiteralDeclaration cBLUEEnumLiteralDeclaration_12 = (EnumLiteralDeclaration)cAlternatives.eContents().get(12);
+		private final Keyword cBLUEBlueKeyword_12_0 = (Keyword)cBLUEEnumLiteralDeclaration_12.eContents().get(0);
+		private final EnumLiteralDeclaration cNAVYEnumLiteralDeclaration_13 = (EnumLiteralDeclaration)cAlternatives.eContents().get(13);
+		private final Keyword cNAVYNavyKeyword_13_0 = (Keyword)cNAVYEnumLiteralDeclaration_13.eContents().get(0);
+		private final EnumLiteralDeclaration cFUCHSIAEnumLiteralDeclaration_14 = (EnumLiteralDeclaration)cAlternatives.eContents().get(14);
+		private final Keyword cFUCHSIAFuchsiaKeyword_14_0 = (Keyword)cFUCHSIAEnumLiteralDeclaration_14.eContents().get(0);
+		private final EnumLiteralDeclaration cPURPLEEnumLiteralDeclaration_15 = (EnumLiteralDeclaration)cAlternatives.eContents().get(15);
+		private final Keyword cPURPLEPurpleKeyword_15_0 = (Keyword)cPURPLEEnumLiteralDeclaration_15.eContents().get(0);
 		
-		//// TODO : 16 standard
 		//enum DefaultColor:
-		//	RED="red" | BLUE="blue" | YELLOW="yellow";
+		//	WHITE="white" | SILVER="silver" | GRAY="gray" | BLACK="black" | RED="red" | MAROON="maroon" | YELLOW="yellow" |
+		//	OLIVE="olive" | LIME="lime" | GREEN="green" | AQUA="aqua" | TEAL="teal" | BLUE="blue" | NAVY="navy" |
+		//	FUCHSIA="fuchsia" | PURPLE="purple";
 		public EnumRule getRule() { return rule; }
 
-		//RED="red" | BLUE="blue" | YELLOW="yellow"
+		//WHITE="white" | SILVER="silver" | GRAY="gray" | BLACK="black" | RED="red" | MAROON="maroon" | YELLOW="yellow" |
+		//OLIVE="olive" | LIME="lime" | GREEN="green" | AQUA="aqua" | TEAL="teal" | BLUE="blue" | NAVY="navy" | FUCHSIA="fuchsia"
+		//| PURPLE="purple"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
+		//WHITE="white"
+		public EnumLiteralDeclaration getWHITEEnumLiteralDeclaration_0() { return cWHITEEnumLiteralDeclaration_0; }
+
+		//"white"
+		public Keyword getWHITEWhiteKeyword_0_0() { return cWHITEWhiteKeyword_0_0; }
+
+		//SILVER="silver"
+		public EnumLiteralDeclaration getSILVEREnumLiteralDeclaration_1() { return cSILVEREnumLiteralDeclaration_1; }
+
+		//"silver"
+		public Keyword getSILVERSilverKeyword_1_0() { return cSILVERSilverKeyword_1_0; }
+
+		//GRAY="gray"
+		public EnumLiteralDeclaration getGRAYEnumLiteralDeclaration_2() { return cGRAYEnumLiteralDeclaration_2; }
+
+		//"gray"
+		public Keyword getGRAYGrayKeyword_2_0() { return cGRAYGrayKeyword_2_0; }
+
+		//BLACK="black"
+		public EnumLiteralDeclaration getBLACKEnumLiteralDeclaration_3() { return cBLACKEnumLiteralDeclaration_3; }
+
+		//"black"
+		public Keyword getBLACKBlackKeyword_3_0() { return cBLACKBlackKeyword_3_0; }
+
 		//RED="red"
-		public EnumLiteralDeclaration getREDEnumLiteralDeclaration_0() { return cREDEnumLiteralDeclaration_0; }
+		public EnumLiteralDeclaration getREDEnumLiteralDeclaration_4() { return cREDEnumLiteralDeclaration_4; }
 
 		//"red"
-		public Keyword getREDRedKeyword_0_0() { return cREDRedKeyword_0_0; }
+		public Keyword getREDRedKeyword_4_0() { return cREDRedKeyword_4_0; }
 
-		//BLUE="blue"
-		public EnumLiteralDeclaration getBLUEEnumLiteralDeclaration_1() { return cBLUEEnumLiteralDeclaration_1; }
+		//MAROON="maroon"
+		public EnumLiteralDeclaration getMAROONEnumLiteralDeclaration_5() { return cMAROONEnumLiteralDeclaration_5; }
 
-		//"blue"
-		public Keyword getBLUEBlueKeyword_1_0() { return cBLUEBlueKeyword_1_0; }
+		//"maroon"
+		public Keyword getMAROONMaroonKeyword_5_0() { return cMAROONMaroonKeyword_5_0; }
 
 		//YELLOW="yellow"
-		public EnumLiteralDeclaration getYELLOWEnumLiteralDeclaration_2() { return cYELLOWEnumLiteralDeclaration_2; }
+		public EnumLiteralDeclaration getYELLOWEnumLiteralDeclaration_6() { return cYELLOWEnumLiteralDeclaration_6; }
 
 		//"yellow"
-		public Keyword getYELLOWYellowKeyword_2_0() { return cYELLOWYellowKeyword_2_0; }
+		public Keyword getYELLOWYellowKeyword_6_0() { return cYELLOWYellowKeyword_6_0; }
+
+		//OLIVE="olive"
+		public EnumLiteralDeclaration getOLIVEEnumLiteralDeclaration_7() { return cOLIVEEnumLiteralDeclaration_7; }
+
+		//"olive"
+		public Keyword getOLIVEOliveKeyword_7_0() { return cOLIVEOliveKeyword_7_0; }
+
+		//LIME="lime"
+		public EnumLiteralDeclaration getLIMEEnumLiteralDeclaration_8() { return cLIMEEnumLiteralDeclaration_8; }
+
+		//"lime"
+		public Keyword getLIMELimeKeyword_8_0() { return cLIMELimeKeyword_8_0; }
+
+		//GREEN="green"
+		public EnumLiteralDeclaration getGREENEnumLiteralDeclaration_9() { return cGREENEnumLiteralDeclaration_9; }
+
+		//"green"
+		public Keyword getGREENGreenKeyword_9_0() { return cGREENGreenKeyword_9_0; }
+
+		//AQUA="aqua"
+		public EnumLiteralDeclaration getAQUAEnumLiteralDeclaration_10() { return cAQUAEnumLiteralDeclaration_10; }
+
+		//"aqua"
+		public Keyword getAQUAAquaKeyword_10_0() { return cAQUAAquaKeyword_10_0; }
+
+		//TEAL="teal"
+		public EnumLiteralDeclaration getTEALEnumLiteralDeclaration_11() { return cTEALEnumLiteralDeclaration_11; }
+
+		//"teal"
+		public Keyword getTEALTealKeyword_11_0() { return cTEALTealKeyword_11_0; }
+
+		//BLUE="blue"
+		public EnumLiteralDeclaration getBLUEEnumLiteralDeclaration_12() { return cBLUEEnumLiteralDeclaration_12; }
+
+		//"blue"
+		public Keyword getBLUEBlueKeyword_12_0() { return cBLUEBlueKeyword_12_0; }
+
+		//NAVY="navy"
+		public EnumLiteralDeclaration getNAVYEnumLiteralDeclaration_13() { return cNAVYEnumLiteralDeclaration_13; }
+
+		//"navy"
+		public Keyword getNAVYNavyKeyword_13_0() { return cNAVYNavyKeyword_13_0; }
+
+		//FUCHSIA="fuchsia"
+		public EnumLiteralDeclaration getFUCHSIAEnumLiteralDeclaration_14() { return cFUCHSIAEnumLiteralDeclaration_14; }
+
+		//"fuchsia"
+		public Keyword getFUCHSIAFuchsiaKeyword_14_0() { return cFUCHSIAFuchsiaKeyword_14_0; }
+
+		//PURPLE="purple"
+		public EnumLiteralDeclaration getPURPLEEnumLiteralDeclaration_15() { return cPURPLEEnumLiteralDeclaration_15; }
+
+		//"purple"
+		public Keyword getPURPLEPurpleKeyword_15_0() { return cPURPLEPurpleKeyword_15_0; }
 	}
 
 	public class ContainerLayoutElements extends AbstractEnumRuleElementFinder {
@@ -3029,9 +3136,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getColorAccess().getRule();
 	}
 
-	//// TODO : 16 standard
 	//enum DefaultColor:
-	//	RED="red" | BLUE="blue" | YELLOW="yellow";
+	//	WHITE="white" | SILVER="silver" | GRAY="gray" | BLACK="black" | RED="red" | MAROON="maroon" | YELLOW="yellow" |
+	//	OLIVE="olive" | LIME="lime" | GREEN="green" | AQUA="aqua" | TEAL="teal" | BLUE="blue" | NAVY="navy" |
+	//	FUCHSIA="fuchsia" | PURPLE="purple";
 	public DefaultColorElements getDefaultColorAccess() {
 		return (unknownRuleDefaultColor != null) ? unknownRuleDefaultColor : (unknownRuleDefaultColor = new DefaultColorElements());
 	}
@@ -3307,7 +3415,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Foreground:
-	//	"foreground" color=Color conditional=FeatureConditional? ";";
+	//	"foreground " color=Color conditional=FeatureConditional? ";";
 	public ForegroundElements getForegroundAccess() {
 		return (pForeground != null) ? pForeground : (pForeground = new ForegroundElements());
 	}
@@ -3317,7 +3425,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Background:
-	//	"background" color=Color conditional=FeatureConditional? ";";
+	//	"background " color=Color conditional=FeatureConditional? ";";
 	public BackgroundElements getBackgroundAccess() {
 		return (pBackground != null) ? pBackground : (pBackground = new BackgroundElements());
 	}

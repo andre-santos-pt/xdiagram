@@ -16,9 +16,22 @@
       <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//AnchorDirection/OUTGOING"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//DefaultColor">
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/WHITE"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/SILVER"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/GRAY"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/BLACK"/>
       <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/RED"/>
-      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/BLUE"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/MAROON"/>
       <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/YELLOW"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/OLIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/LIME"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/GREEN"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/AQUA"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/TEAL"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/BLUE"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/NAVY"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/FUCHSIA"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/PURPLE"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//ContainerLayout">
       <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//ContainerLayout/STACK"/>
