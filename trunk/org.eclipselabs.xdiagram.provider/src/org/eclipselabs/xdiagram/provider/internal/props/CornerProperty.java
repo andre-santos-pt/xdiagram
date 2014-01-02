@@ -8,8 +8,8 @@ import org.eclipse.graphiti.mm.Property;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.algorithms.RoundedRectangle;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
-import org.eclipselabs.xdiagram.xtext.xdiagram.Corner;
-import org.eclipselabs.xdiagram.xtext.xdiagram.Feature;
+import org.eclipselabs.xdiagram.dsl.Corner;
+import org.eclipselabs.xdiagram.dsl.Feature;
 
 public class CornerProperty extends AbstractPropertyFeature<Integer, Corner> {
 

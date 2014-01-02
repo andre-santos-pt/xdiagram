@@ -12,15 +12,16 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
-import org.eclipselabs.xdiagram.xtext.xdiagram.Element;
-import org.eclipselabs.xdiagram.xtext.xdiagram.Feature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.FeatureConditional;
-import org.eclipselabs.xdiagram.xtext.xdiagram.IntValue;
-import org.eclipselabs.xdiagram.xtext.xdiagram.StringValue;
-import org.eclipselabs.xdiagram.xtext.xdiagram.Value;
+import org.eclipselabs.xdiagram.dsl.Element;
+import org.eclipselabs.xdiagram.dsl.Feature;
+import org.eclipselabs.xdiagram.dsl.FeatureConditional;
+import org.eclipselabs.xdiagram.dsl.IntValue;
+import org.eclipselabs.xdiagram.dsl.StringValue;
+import org.eclipselabs.xdiagram.dsl.Value;
 
 public class FeatureHandlerChain implements Iterable<FeatureHandler> {
 
@@ -40,7 +41,7 @@ public class FeatureHandlerChain implements Iterable<FeatureHandler> {
 		return this;
 	}
 
-	public void update(Element element, EObject eObject, Diagram diagram, GraphicsAlgorithm figure, ContainerShape container) {
+	public void update(Element element, EObject eObject, Diagram diagram, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
 		
 		Set<Class<?>> defined = new HashSet<>();
 
@@ -76,7 +77,7 @@ public class FeatureHandlerChain implements Iterable<FeatureHandler> {
 	
 	private void addListener(final Element element,
 			final Diagram diagram, final EObject eObject,
-			final GraphicsAlgorithm figure, final ContainerShape container) {
+			final GraphicsAlgorithm figure, final GraphicsAlgorithmContainer container) {
 		
 		eObject.eAdapters().add(new AdapterImpl() {
 			@Override

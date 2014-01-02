@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.graphiti.mm.Property;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
-import org.eclipselabs.xdiagram.xtext.xdiagram.Feature;
+import org.eclipselabs.xdiagram.dsl.Feature;
 
 public interface PropertyFeature<T,M extends Feature> {
 

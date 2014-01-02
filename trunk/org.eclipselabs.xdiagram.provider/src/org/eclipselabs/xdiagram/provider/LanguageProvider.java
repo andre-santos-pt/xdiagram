@@ -17,9 +17,12 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.graphiti.features.context.IAddContext;
+import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.algorithms.Polyline;
 import org.eclipse.graphiti.mm.pictograms.Anchor;
+import org.eclipse.graphiti.mm.pictograms.AnchorContainer;
+import org.eclipse.graphiti.mm.pictograms.BoxRelativeAnchor;
 import org.eclipse.graphiti.mm.pictograms.ChopboxAnchor;
 import org.eclipse.graphiti.mm.pictograms.Connection;
 import org.eclipse.graphiti.mm.pictograms.ConnectionDecorator;
@@ -30,11 +33,13 @@ import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.mm.pictograms.PictogramLink;
 import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipse.graphiti.services.Graphiti;
+import org.eclipselabs.xdiagram.DslStandaloneSetup;
 import org.eclipselabs.xdiagram.interpreter.GraphicsProvider;
 import org.eclipselabs.xdiagram.interpreter.ProviderException;
 import org.eclipselabs.xdiagram.provider.internal.ElementCreation;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandlerChain;
+import org.eclipselabs.xdiagram.provider.internal.handlers.AnchorHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.ColorHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.ContainsHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.LineWidthHandler;
@@ -42,16 +47,16 @@ import org.eclipselabs.xdiagram.provider.internal.handlers.PointHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.PositionHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.SizeHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.TextValueHandler;
-import org.eclipselabs.xdiagram.xtext.XDiagramStandaloneSetup;
-import org.eclipselabs.xdiagram.xtext.xdiagram.ConnectableElement;
-import org.eclipselabs.xdiagram.xtext.xdiagram.Contains;
-import org.eclipselabs.xdiagram.xtext.xdiagram.Decorator;
-import org.eclipselabs.xdiagram.xtext.xdiagram.Feature;
-import org.eclipselabs.xdiagram.xtext.xdiagram.Label;
-import org.eclipselabs.xdiagram.xtext.xdiagram.Link;
-import org.eclipselabs.xdiagram.xtext.xdiagram.Node;
-import org.eclipselabs.xdiagram.xtext.xdiagram.TextValue;
-import org.eclipselabs.xdiagram.xtext.xdiagram.XDiagram;
+import org.eclipselabs.xdiagram.dsl.ConnectableElement;
+import org.eclipselabs.xdiagram.dsl.Contains;
+import org.eclipselabs.xdiagram.dsl.Decorator;
+import org.eclipselabs.xdiagram.dsl.Element;
+import org.eclipselabs.xdiagram.dsl.Feature;
+import org.eclipselabs.xdiagram.dsl.Label;
+import org.eclipselabs.xdiagram.dsl.Link;
+import org.eclipselabs.xdiagram.dsl.Node;
+import org.eclipselabs.xdiagram.dsl.TextValue;
+import org.eclipselabs.xdiagram.dsl.XDiagram;
 import org.osgi.framework.Bundle;
 
 public class LanguageProvider implements GraphicsProvider {
@@ -73,12 +78,13 @@ public class LanguageProvider implements GraphicsProvider {
 		.add(new LineWidthHandler())
 		.add(new PointHandler())
 		.add(new TextValueHandler())
-		.add(containsHandler);
+		.add(containsHandler)
+		.add(new AnchorHandler());
 	}
 
 	@Override
 	public void setup(Map<String, String> properties) throws ProviderException {		
-		new XDiagramStandaloneSetup().createInjectorAndDoEMFRegistration();
+		new DslStandaloneSetup().createInjectorAndDoEMFRegistration();
 
 		modelFilePath = properties.get("file");
 		if(!new File(modelFilePath).exists())
@@ -130,19 +136,12 @@ public class LanguageProvider implements GraphicsProvider {
 	@Override
 	public EClass getRoot(EPackage ePackage) {
 		return (EClass) ePackage.getEClassifier(this.model.getModelClass().getName());
-		//		return this.model.getModelClass();
 	}
 
 
 	@Override
 	public boolean canAddChild(ContainerShape container, EClass eClass, int x, int y) {
-
-		//		ILocationInfo loc = Graphiti.getPeLayoutService().getLocationInfo(container, x, y);
-		//		Shape child = loc.getShape();
-		//		System.out.println("LOC " + child);
 		if(!containsHandler.isContainer( container)) {
-			System.out.println("NOT " + container);
-
 			return false;
 		}
 
@@ -220,214 +219,180 @@ public class LanguageProvider implements GraphicsProvider {
 		for(ConnectableElement child : mainFig.getChildren())
 			addChildren(child, container, diagram, eObject);
 
-		//TODO:Eduardo
-		handleAnchors(diagram, container, eObject, nodeFigure, node);
 		return nodeFigure;		
 	}
 
 
+	// TODO validation anchors cannot have children?
+	private void addChildren(ConnectableElement element, Shape container, Diagram diagram, EObject eObject) {
+		boolean isActive = hasFeature(element, Contains.class, false);
+		boolean hasAnchor = hasFeature(element, org.eclipselabs.xdiagram.dsl.Anchor.class, false);
 
-	private void addChildren(ConnectableElement element, ContainerShape container, Diagram diagram, EObject eObject) {
-		boolean active = isContainer(element);
-		ContainerShape childContainer = Graphiti.getPeCreateService().createContainerShape(container, active);
+		GraphicsAlgorithmContainer childContainer = null; 
+		if(hasAnchor) {
+			BoxRelativeAnchor anchor = Graphiti.getPeCreateService().createBoxRelativeAnchor(container);
+			anchor.setReferencedGraphicsAlgorithm(container.getGraphicsAlgorithm());
+			childContainer = anchor;
+		}
+		else {
+			childContainer = Graphiti.getPeCreateService().createContainerShape((ContainerShape) container, isActive);
+		}
+
 		GraphicsAlgorithm childFigure =  ElementCreation.createNodeFigure(element, diagram, childContainer);
 		featureChain.update(element, eObject, diagram, childFigure, childContainer);
-		for(ConnectableElement child : element.getChildren())
-			addChildren(child, childContainer, diagram, eObject);
+
+//		Graphiti.getGaLayoutService().setLocation(childFigure, -2, -2);
+		
+		// anchors cannot have children
+		if(!hasAnchor) {
+			for(ConnectableElement child : element.getChildren())
+				addChildren(child, (Shape) childContainer, diagram, eObject);
+		}
 	}
 
 
 
-
-	public static boolean isContainer(ConnectableElement element) {
-		for(Feature f : element.getFeatures())
-			if(f instanceof Contains)
+	public static boolean hasFeature(ConnectableElement element, Class<? extends Feature> clazz, boolean recursive) {
+		for(Feature f : element.getFeatures()) {
+			if(clazz.isInstance(f))
 				return true;
+
+			if(recursive)
+				for(ConnectableElement child : element.getChildren())
+					hasFeature(child, clazz, recursive);
+		}
 
 		return false;
 	}
 
-
-
-	//private Map<ContainerShape, EReference> containers = new HashMap<>();
-
-	//private void handleContainers(Diagram diagram, ContainerShape container, EObject eObject,
-	//		GraphicsAlgorithm nodeFigure, Node node) {
+	//	public static boolean isContainer(ConnectableElement element) {
+	//		for(Feature f : element.getFeatures())
+	//			if(f instanceof Contains)
+	//				return true;
 	//
-	//	int remaining = 100;
-	//	int count = 0;
-	//	for (NodeContainer cont : node.getContainers()){
-	//
-	//		ContainerShape containerShape = Graphiti.getPeCreateService().createContainerShape(container, false);
-	//		EReference ref = (EReference) Util.matchFeature(eObject.eClass(), cont.getModelReference());
-	//		containers.put(containerShape, ref);
-	//		System.out.println("PARENT " + container);
-	//		System.out.println("CONT " + containerShape);
-	//		//			GraphicsAlgorithm nodeContainer = Graphiti.getGaService().createInvisibleRectangle(containerShape);
-	//
-	//		ConnectableElement e = cont.getFigures().get(0).getElement();
-	//
-	//		GraphicsAlgorithm fig = nodeHandler.createNodeFigure(e, diagram, containerShape, nodeFigure, eObject);
-	//
-	//
-	//		//			EClass childClass = (EClass) cont.getModelReference().getEType();
-	//
-	//		//			FigureProperty.setProperties(nodeContainer, obj== null ? this.model.getName() : obj );
-	//		//			FigureProperty.setProperties(nodeContainer, obj== null ? this.model.getModelClass().getName() : obj );
-	//		//			FigureProperty.setProperties(nodeContainer, childClass== null ? this.model.getModelClass().getName() : childClass.getName());
-	//
-	//		//			FigureProperty.TYPE.set(nodeContainer, cont.getLayout());
-	//
-	//		//			if (nodecontainer.getFormat()==null){
-	//		//				FigureProperty.VERTICAL.set(nodeContainer, vertical);
-	//		//				FigureProperty.FORMAT.set(nodeContainer, "px");
-	//		//				count++;
-	//		//			}else if (nodecontainer.getFormat().equals("%")){
-	//		//				vertical = 0;
-	//		//				if (remaining>nodecontainer.getValue()){
-	//		//					vertical = nodecontainer.getValue();
-	//		//					remaining -= vertical;
-	//		//				}else{
-	//		//					vertical = remaining;
-	//		//					remaining = 0;
-	//		//				}
-	//		//				FigureProperty.VERTICAL.set(nodeContainer, vertical);
-	//		//				FigureProperty.FORMAT.set(nodeContainer, "%");
-	//		//			}else{
-	//		//				FigureProperty.VERTICAL.set(nodeContainer, nodecontainer.getValue());
-	//		//				FigureProperty.FORMAT.set(nodeContainer, "px");
-	//		//			}					
-	//
+	//		return false;
 	//	}
+
+
+
+
+
+
+	//	private void handleAnchors(Diagram diagram, ContainerShape container, EObject eObject,
+	//			GraphicsAlgorithm nodeFigure, Node node) {
 	//
-	//	//		if (count>0){
-	//	//			int part = remaining / count;
-	//	//			for (GraphicsAlgorithm figure : nodeFigure.getGraphicsAlgorithmChildren()){
-	//	//				if (FigureProperty.VERTICAL.get(figure).length()==0)
-	//	//					FigureProperty.VERTICAL.set(figure, part);						
-	//	//			}
-	//	//		}
-	//}
-
-
-
-
-
-	private void handleAnchors(Diagram diagram, ContainerShape container, EObject eObject,
-			GraphicsAlgorithm nodeFigure, Node node) {
-
-		if (node.getAnchors().size()==0){
-			ChopboxAnchor boxAnchor = Graphiti.getPeCreateService().createChopboxAnchor(container);
-			GraphicsAlgorithm nodeAnchor = Graphiti.getGaService().createInvisibleRectangle(boxAnchor);
-			//			FigureProperty.PARENT.set(nodeAnchor, node.getModelClass().getName());
-		}
-
-
-		int anchor_left = 0;
-		int anchor_right = 0;
-		int anchor_down = 0;
-		int anchor_up = 0;
-
-
-		for (org.eclipselabs.xdiagram.xtext.xdiagram.Anchor anchor : node.getAnchors()) {
-
-			GraphicsAlgorithm nodeAnchor = null;
-
-			if (anchor.getFigures().size()==0){
-
-				ChopboxAnchor boxAnchor = Graphiti.getPeCreateService().createChopboxAnchor(container);
-				nodeAnchor = Graphiti.getGaService().createInvisibleRectangle(boxAnchor);
-
-			}else{
-
-				FixPointAnchor boxAnchor = 
-						Graphiti.getPeCreateService().createFixPointAnchor(container);				      
-				boxAnchor.setLocation(Graphiti.getGaService().createPoint(0, 0)); //use golden section
-				//boxAnchor.setUseAnchorLocationAsConnectionEndpoint(true);
-				boxAnchor.setReferencedGraphicsAlgorithm(nodeFigure);
-
-				nodeAnchor = Graphiti.getGaService().createInvisibleRectangle(boxAnchor);
-
-				//			ConnectableElement e = node.getFigures().get(0).getElement();
-				ConnectableElement e = node.getMainFigure();
-
-				// TODO: Eduardo
-				//			GraphicsAlgorithm figure = nodeHandler.createNodeFigure(e, diagram, nodeAnchor, nodeFigure, eObject);
-
-				// TODO: to feature handler
-				nodeAnchor.setTransparency(1.0);
-			}
-		}
-
-		// TODO: Eduardo
-		//				int horizontal =  bounds.width-bounds.x;
-		//				int vertical = bounds.height-bounds.y;
-		//	
-		//				Graphiti.getGaService().setLocationAndSize(nodeAnchor, bounds.x, bounds.y, horizontal, vertical);
-		//				FigureProperty.setProperties(nodeAnchor);
-
-
-
-		//				int value = 0;	
-		//				FigureProperty.ANCHOR_HORIZ.set(nodeAnchor, anchor.getFormatX());
-		//				value = -anchor.getX();
-		//				if (anchor.getPassX()!=null && anchor.getPassX().equals("-"))
-		//					value = -value;
-		//				if (anchor.getFormatX().equals("%") && value<0)
-		//					value = -value;
-		//				FigureProperty.FORMAT.set(nodeAnchor, Integer.toString(value));
-		//				if (anchor.getFormatX().equals("lf") && value>anchor_left)
-		//					anchor_left = value;
-		//				if (anchor.getFormatX().equals("rg") && value>anchor_right)
-		//					anchor_right = value;
-		//	
-		//				FigureProperty.ANCHOR_VERT.set(nodeAnchor, anchor.getFormatY());
-		//				value = -anchor.getY();
-		//				if (anchor.getPassY()!=null && anchor.getPassY().equals("-"))
-		//					value = -value;
-		//				if (anchor.getFormatY().equals("%") && value<0)
-		//					value = -value;
-		//				FigureProperty.VERTICAL.set(nodeAnchor, value);
-		//				if (anchor.getFormatY().equals("up") && value>anchor_up)
-		//					anchor_up = value;
-		//				if (anchor.getFormatY().equals("dw") && value>anchor_down)
-		//					anchor_down = value;	
-		//	
-		////				Graphiti.getGaService().setLocationAndSize(nodeAnchor, 
-		////						bounds.x, bounds.y, bounds.width, bounds.height);
-		//				
-		//			}
-		//			
-		//			
-		//			FigureProperty.PARENT.set(nodeAnchor, node.getModelClass().getName());
-		//			
-		//			String incoming = expressionSeparator;
-		//			String outgoing = expressionSeparator;
-		//			for (AnchorConstraint arrow : anchor.getConstraints()){
-		//				if ("both".equalsIgnoreCase(arrow.getType()) || "incoming".equalsIgnoreCase(arrow.getType()))
-		//					incoming += arrow.getReference() + expressionSeparator;
-		//				if ("both".equalsIgnoreCase(arrow.getType()) || "outgoing".equalsIgnoreCase(arrow.getType()))
-		//					outgoing += arrow.getReference() + expressionSeparator;
-		//			}
-		//			if (incoming.length()==1 && outgoing.length()==1)
-		//				incoming = outgoing = null;
-		//			FigureProperty.ANCHOR_INCOMING.set(nodeAnchor, incoming);
-		//			FigureProperty.ANCHOR_OUTGOING.set(nodeAnchor, outgoing);
-		//			
-		//		}
-		//
-		//
-		//		FigureProperty.ANCHOR_UP.set(nodeFigure, anchor_up);
-		//		FigureProperty.ANCHOR_LEFT.set(nodeFigure, anchor_left);
-		//		FigureProperty.ANCHOR_DOWN.set(nodeFigure, anchor_down);
-		//		FigureProperty.ANCHOR_RIGHT.set(nodeFigure, anchor_right);
-		//
-		//		
-		//		if (anchor_left+anchor_right+anchor_up+anchor_down>0)
-		//			resizeNodeFigure(diagram, container, 
-		//					nodeFigure.getWidth()+anchor_left+anchor_right, 
-		//					nodeFigure.getHeight()+anchor_up+anchor_down);
-	}
+	//		if (node.getAnchors().size()==0){
+	//			ChopboxAnchor boxAnchor = Graphiti.getPeCreateService().createChopboxAnchor(container);
+	//			GraphicsAlgorithm nodeAnchor = Graphiti.getGaService().createInvisibleRectangle(boxAnchor);
+	//			//			FigureProperty.PARENT.set(nodeAnchor, node.getModelClass().getName());
+	//		}
+	//
+	//
+	//		int anchor_left = 0;
+	//		int anchor_right = 0;
+	//		int anchor_down = 0;
+	//		int anchor_up = 0;
+	//
+	//
+	//		for (org.eclipselabs.xdiagram.dsl.Anchor anchor : node.getAnchors()) {
+	//
+	//			GraphicsAlgorithm nodeAnchor = null;
+	//
+	//			if (anchor.getFigures().size()==0){
+	//
+	//				ChopboxAnchor boxAnchor = Graphiti.getPeCreateService().createChopboxAnchor(container);
+	//				nodeAnchor = Graphiti.getGaService().createInvisibleRectangle(boxAnchor);
+	//
+	//			}else{
+	//
+	//				FixPointAnchor boxAnchor = 
+	//						Graphiti.getPeCreateService().createFixPointAnchor(container);				      
+	//				boxAnchor.setLocation(Graphiti.getGaService().createPoint(0, 0)); //use golden section
+	//				//boxAnchor.setUseAnchorLocationAsConnectionEndpoint(true);
+	//				boxAnchor.setReferencedGraphicsAlgorithm(nodeFigure);
+	//
+	//				nodeAnchor = Graphiti.getGaService().createInvisibleRectangle(boxAnchor);
+	//
+	//				//			ConnectableElement e = node.getFigures().get(0).getElement();
+	//				ConnectableElement e = node.getMainFigure();
+	//
+	//				// TODO: Eduardo
+	//				//			GraphicsAlgorithm figure = nodeHandler.createNodeFigure(e, diagram, nodeAnchor, nodeFigure, eObject);
+	//
+	//				// TODO: to feature handler
+	//				nodeAnchor.setTransparency(1.0);
+	//			}
+	//		}
+	//
+	//		// TODO: Eduardo
+	//		//				int horizontal =  bounds.width-bounds.x;
+	//		//				int vertical = bounds.height-bounds.y;
+	//		//	
+	//		//				Graphiti.getGaService().setLocationAndSize(nodeAnchor, bounds.x, bounds.y, horizontal, vertical);
+	//		//				FigureProperty.setProperties(nodeAnchor);
+	//
+	//
+	//
+	//		//				int value = 0;	
+	//		//				FigureProperty.ANCHOR_HORIZ.set(nodeAnchor, anchor.getFormatX());
+	//		//				value = -anchor.getX();
+	//		//				if (anchor.getPassX()!=null && anchor.getPassX().equals("-"))
+	//		//					value = -value;
+	//		//				if (anchor.getFormatX().equals("%") && value<0)
+	//		//					value = -value;
+	//		//				FigureProperty.FORMAT.set(nodeAnchor, Integer.toString(value));
+	//		//				if (anchor.getFormatX().equals("lf") && value>anchor_left)
+	//		//					anchor_left = value;
+	//		//				if (anchor.getFormatX().equals("rg") && value>anchor_right)
+	//		//					anchor_right = value;
+	//		//	
+	//		//				FigureProperty.ANCHOR_VERT.set(nodeAnchor, anchor.getFormatY());
+	//		//				value = -anchor.getY();
+	//		//				if (anchor.getPassY()!=null && anchor.getPassY().equals("-"))
+	//		//					value = -value;
+	//		//				if (anchor.getFormatY().equals("%") && value<0)
+	//		//					value = -value;
+	//		//				FigureProperty.VERTICAL.set(nodeAnchor, value);
+	//		//				if (anchor.getFormatY().equals("up") && value>anchor_up)
+	//		//					anchor_up = value;
+	//		//				if (anchor.getFormatY().equals("dw") && value>anchor_down)
+	//		//					anchor_down = value;	
+	//		//	
+	//		////				Graphiti.getGaService().setLocationAndSize(nodeAnchor, 
+	//		////						bounds.x, bounds.y, bounds.width, bounds.height);
+	//		//				
+	//		//			}
+	//		//			
+	//		//			
+	//		//			FigureProperty.PARENT.set(nodeAnchor, node.getModelClass().getName());
+	//		//			
+	//		//			String incoming = expressionSeparator;
+	//		//			String outgoing = expressionSeparator;
+	//		//			for (AnchorConstraint arrow : anchor.getConstraints()){
+	//		//				if ("both".equalsIgnoreCase(arrow.getType()) || "incoming".equalsIgnoreCase(arrow.getType()))
+	//		//					incoming += arrow.getReference() + expressionSeparator;
+	//		//				if ("both".equalsIgnoreCase(arrow.getType()) || "outgoing".equalsIgnoreCase(arrow.getType()))
+	//		//					outgoing += arrow.getReference() + expressionSeparator;
+	//		//			}
+	//		//			if (incoming.length()==1 && outgoing.length()==1)
+	//		//				incoming = outgoing = null;
+	//		//			FigureProperty.ANCHOR_INCOMING.set(nodeAnchor, incoming);
+	//		//			FigureProperty.ANCHOR_OUTGOING.set(nodeAnchor, outgoing);
+	//		//			
+	//		//		}
+	//		//
+	//		//
+	//		//		FigureProperty.ANCHOR_UP.set(nodeFigure, anchor_up);
+	//		//		FigureProperty.ANCHOR_LEFT.set(nodeFigure, anchor_left);
+	//		//		FigureProperty.ANCHOR_DOWN.set(nodeFigure, anchor_down);
+	//		//		FigureProperty.ANCHOR_RIGHT.set(nodeFigure, anchor_right);
+	//		//
+	//		//		
+	//		//		if (anchor_left+anchor_right+anchor_up+anchor_down>0)
+	//		//			resizeNodeFigure(diagram, container, 
+	//		//					nodeFigure.getWidth()+anchor_left+anchor_right, 
+	//		//					nodeFigure.getHeight()+anchor_up+anchor_down);
+	//	}
 
 	//	@Override
 	//	public void updateNodeFigure(Diagram diagram, ContainerShape container, GraphicsAlgorithm figure, EObject eObject) {
@@ -451,11 +416,13 @@ public class LanguageProvider implements GraphicsProvider {
 	@Override
 	public boolean canResizeNodeFigure(EObject eObject) {
 
-		for(Node node : model.getNodes())
-			if (equals(node.getModelClass(), eObject.eClass()) && node.isResizable())
-				return true;
-
-		return false;
+		//		for(Node node : model.getNodes())
+		//			if (equals(node.getModelClass(), eObject.eClass()) && node.isResizable())
+		//				return true;
+		//
+		//		return false;
+		//TODO
+		return true;
 	}
 
 	@Override
@@ -565,8 +532,10 @@ public class LanguageProvider implements GraphicsProvider {
 			}
 
 			if (isLink){
-				connection = link.isManhattan() ? Graphiti.getPeCreateService().createManhattanConnection(diagram) :
-					Graphiti.getPeCreateService().createFreeFormConnection(diagram);
+				connection = Graphiti.getPeCreateService().createFreeFormConnection(diagram);
+
+				// link.isManhattan() ?  Graphiti.getPeCreateService().createManhattanConnection(diagram) :
+
 
 				GraphicsAlgorithm connectionLink = createLinkConnection(link, diagram, connection, eObject);
 
