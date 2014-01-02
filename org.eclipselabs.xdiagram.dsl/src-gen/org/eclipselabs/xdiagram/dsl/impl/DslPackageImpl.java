@@ -2233,9 +2233,22 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     addEEnumLiteral(anchorDirectionEEnum, AnchorDirection.OUTGOING);
 
     initEEnum(defaultColorEEnum, DefaultColor.class, "DefaultColor");
+    addEEnumLiteral(defaultColorEEnum, DefaultColor.WHITE);
+    addEEnumLiteral(defaultColorEEnum, DefaultColor.SILVER);
+    addEEnumLiteral(defaultColorEEnum, DefaultColor.GRAY);
+    addEEnumLiteral(defaultColorEEnum, DefaultColor.BLACK);
     addEEnumLiteral(defaultColorEEnum, DefaultColor.RED);
-    addEEnumLiteral(defaultColorEEnum, DefaultColor.BLUE);
+    addEEnumLiteral(defaultColorEEnum, DefaultColor.MAROON);
     addEEnumLiteral(defaultColorEEnum, DefaultColor.YELLOW);
+    addEEnumLiteral(defaultColorEEnum, DefaultColor.OLIVE);
+    addEEnumLiteral(defaultColorEEnum, DefaultColor.LIME);
+    addEEnumLiteral(defaultColorEEnum, DefaultColor.GREEN);
+    addEEnumLiteral(defaultColorEEnum, DefaultColor.AQUA);
+    addEEnumLiteral(defaultColorEEnum, DefaultColor.TEAL);
+    addEEnumLiteral(defaultColorEEnum, DefaultColor.BLUE);
+    addEEnumLiteral(defaultColorEEnum, DefaultColor.NAVY);
+    addEEnumLiteral(defaultColorEEnum, DefaultColor.FUCHSIA);
+    addEEnumLiteral(defaultColorEEnum, DefaultColor.PURPLE);
 
     initEEnum(containerLayoutEEnum, ContainerLayout.class, "ContainerLayout");
     addEEnumLiteral(containerLayoutEEnum, ContainerLayout.STACK);
