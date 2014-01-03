@@ -1360,7 +1360,11 @@ ruleAnchor returns [EObject current=null]
 	    }
 
 )
-)?)
+)?	otherlv_4=';' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getAnchorAccess().getSemicolonKeyword_4());
+    }
+)
 ;
 
 
@@ -2801,6 +2805,16 @@ ruleLabelFeature returns [EObject current=null]
     this_FontStyle_5=ruleFontStyle
     { 
         $current = $this_FontStyle_5.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getLabelFeatureAccess().getSizeParserRuleCall_6()); 
+    }
+    this_Size_6=ruleSize
+    { 
+        $current = $this_Size_6.current; 
         afterParserOrEnumRuleCall();
     }
 )

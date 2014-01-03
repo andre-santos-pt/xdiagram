@@ -605,11 +605,10 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:34:7: ( 'color' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:34:9: 'color'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:34:7: ( ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:34:9: ';'
             {
-            match("color"); 
-
+            match(';'); 
 
             }
 
@@ -626,10 +625,11 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:35:7: ( ',' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:35:9: ','
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:35:7: ( 'color' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:35:9: 'color'
             {
-            match(','); 
+            match("color"); 
+
 
             }
 
@@ -646,11 +646,10 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:36:7: ( 'figure' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:36:9: 'figure'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:36:7: ( ',' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:36:9: ','
             {
-            match("figure"); 
-
+            match(','); 
 
             }
 
@@ -667,10 +666,10 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:37:7: ( 'rectangle' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:37:9: 'rectangle'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:37:7: ( 'figure' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:37:9: 'figure'
             {
-            match("rectangle"); 
+            match("figure"); 
 
 
             }
@@ -688,10 +687,10 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:38:7: ( 'square' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:38:9: 'square'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:38:7: ( 'rectangle' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:38:9: 'rectangle'
             {
-            match("square"); 
+            match("rectangle"); 
 
 
             }
@@ -709,10 +708,10 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:39:7: ( 'children:' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:39:9: 'children:'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:39:7: ( 'square' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:39:9: 'square'
             {
-            match("children:"); 
+            match("square"); 
 
 
             }
@@ -730,10 +729,10 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:40:7: ( 'rhombus' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:40:9: 'rhombus'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:40:7: ( 'children:' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:40:9: 'children:'
             {
-            match("rhombus"); 
+            match("children:"); 
 
 
             }
@@ -751,10 +750,10 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:41:7: ( 'ellipse' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:41:9: 'ellipse'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:41:7: ( 'rhombus' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:41:9: 'rhombus'
             {
-            match("ellipse"); 
+            match("rhombus"); 
 
 
             }
@@ -772,10 +771,10 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:42:7: ( 'circle' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:42:9: 'circle'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:42:7: ( 'ellipse' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:42:9: 'ellipse'
             {
-            match("circle"); 
+            match("ellipse"); 
 
 
             }
@@ -793,10 +792,10 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:43:7: ( 'polygon' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:43:9: 'polygon'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:43:7: ( 'circle' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:43:9: 'circle'
             {
-            match("polygon"); 
+            match("circle"); 
 
 
             }
@@ -814,10 +813,10 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:44:7: ( 'polyline' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:44:9: 'polyline'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:44:7: ( 'polygon' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:44:9: 'polygon'
             {
-            match("polyline"); 
+            match("polygon"); 
 
 
             }
@@ -835,10 +834,10 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:45:7: ( 'contains' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:45:9: 'contains'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:45:7: ( 'polyline' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:45:9: 'polyline'
             {
-            match("contains"); 
+            match("polyline"); 
 
 
             }
@@ -856,10 +855,11 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:46:7: ( ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:46:9: ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:46:7: ( 'contains' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:46:9: 'contains'
             {
-            match(';'); 
+            match("contains"); 
+
 
             }
 
@@ -1966,10 +1966,10 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = RULE_PERCENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4352:14: ( ( '0' | '1' .. '9' ( '0' .. '9' )? | '100' ) '%' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4352:16: ( '0' | '1' .. '9' ( '0' .. '9' )? | '100' ) '%'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4366:14: ( ( '0' | '1' .. '9' ( '0' .. '9' )? | '100' ) '%' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4366:16: ( '0' | '1' .. '9' ( '0' .. '9' )? | '100' ) '%'
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4352:16: ( '0' | '1' .. '9' ( '0' .. '9' )? | '100' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4366:16: ( '0' | '1' .. '9' ( '0' .. '9' )? | '100' )
             int alt2=3;
             switch ( input.LA(1) ) {
             case '0':
@@ -2029,17 +2029,17 @@ public class InternalDslLexer extends Lexer {
 
             switch (alt2) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4352:17: '0'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4366:17: '0'
                     {
                     match('0'); 
 
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4352:21: '1' .. '9' ( '0' .. '9' )?
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4366:21: '1' .. '9' ( '0' .. '9' )?
                     {
                     matchRange('1','9'); 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4352:30: ( '0' .. '9' )?
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4366:30: ( '0' .. '9' )?
                     int alt1=2;
                     int LA1_0 = input.LA(1);
 
@@ -2048,7 +2048,7 @@ public class InternalDslLexer extends Lexer {
                     }
                     switch (alt1) {
                         case 1 :
-                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4352:31: '0' .. '9'
+                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4366:31: '0' .. '9'
                             {
                             matchRange('0','9'); 
 
@@ -2061,7 +2061,7 @@ public class InternalDslLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4352:42: '100'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4366:42: '100'
                     {
                     match("100"); 
 
@@ -2088,10 +2088,10 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4354:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4354:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4368:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4368:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4354:11: ( '^' )?
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4368:11: ( '^' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -2100,7 +2100,7 @@ public class InternalDslLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4354:11: '^'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4368:11: '^'
                     {
                     match('^'); 
 
@@ -2118,7 +2118,7 @@ public class InternalDslLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4354:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4368:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop4:
             do {
                 int alt4=2;
@@ -2167,10 +2167,10 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4356:10: ( ( '0' .. '9' )+ )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4356:12: ( '0' .. '9' )+
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4370:10: ( ( '0' .. '9' )+ )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4370:12: ( '0' .. '9' )+
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4356:12: ( '0' .. '9' )+
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4370:12: ( '0' .. '9' )+
             int cnt5=0;
             loop5:
             do {
@@ -2184,7 +2184,7 @@ public class InternalDslLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4356:13: '0' .. '9'
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4370:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2216,10 +2216,10 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4358:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4358:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4372:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4372:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4358:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4372:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -2237,10 +2237,10 @@ public class InternalDslLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4358:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4372:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4358:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4372:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -2256,7 +2256,7 @@ public class InternalDslLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4358:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4372:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -2272,7 +2272,7 @@ public class InternalDslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4358:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4372:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2297,10 +2297,10 @@ public class InternalDslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4358:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4372:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4358:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4372:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -2316,7 +2316,7 @@ public class InternalDslLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4358:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4372:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -2332,7 +2332,7 @@ public class InternalDslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4358:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4372:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2375,12 +2375,12 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4360:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4360:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4374:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4374:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4360:24: ( options {greedy=false; } : . )*
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4374:24: ( options {greedy=false; } : . )*
             loop9:
             do {
                 int alt9=2;
@@ -2405,7 +2405,7 @@ public class InternalDslLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4360:52: .
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4374:52: .
             	    {
             	    matchAny(); 
 
@@ -2435,12 +2435,12 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4362:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4362:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4376:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4376:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4362:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4376:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop10:
             do {
                 int alt10=2;
@@ -2453,7 +2453,7 @@ public class InternalDslLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4362:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4376:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2473,7 +2473,7 @@ public class InternalDslLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4362:40: ( ( '\\r' )? '\\n' )?
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4376:40: ( ( '\\r' )? '\\n' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -2482,9 +2482,9 @@ public class InternalDslLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4362:41: ( '\\r' )? '\\n'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4376:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4362:41: ( '\\r' )?
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4376:41: ( '\\r' )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
@@ -2493,7 +2493,7 @@ public class InternalDslLexer extends Lexer {
                     }
                     switch (alt11) {
                         case 1 :
-                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4362:41: '\\r'
+                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4376:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2525,10 +2525,10 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4364:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4364:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4378:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4378:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4364:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4378:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt13=0;
             loop13:
             do {
@@ -2582,8 +2582,8 @@ public class InternalDslLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4366:16: ( . )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4366:18: .
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4380:16: ( . )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4380:18: .
             {
             matchAny(); 
 
@@ -3282,102 +3282,101 @@ public class InternalDslLexer extends Lexer {
 
     protected DFA14 dfa14 = new DFA14(this);
     static final String DFA14_eotS =
-        "\1\uffff\3\55\2\uffff\1\55\3\uffff\6\55\2\uffff\4\55\1\uffff\1\55"+
-        "\1\143\3\55\1\uffff\1\51\2\55\3\154\1\51\1\uffff\3\51\2\uffff\3"+
-        "\55\1\uffff\4\55\1\174\3\55\2\uffff\4\55\3\uffff\17\55\1\u009d\3"+
-        "\55\2\uffff\13\55\1\uffff\3\55\1\uffff\3\55\2\uffff\2\55\2\uffff"+
-        "\2\154\4\uffff\11\55\1\uffff\40\55\1\uffff\12\55\1\u00f0\21\55\1"+
-        "\154\6\55\1\u0108\2\55\1\u010b\10\55\1\u0114\1\55\1\u0116\1\u0117"+
-        "\1\u0118\1\u0119\1\55\1\u011b\6\55\1\u0122\1\u0123\1\u0124\11\55"+
-        "\1\u012e\4\55\1\u0133\3\55\1\uffff\11\55\1\u0141\1\u0142\1\55\1"+
-        "\u0144\12\55\1\uffff\1\55\1\u0150\1\uffff\3\55\1\u0154\1\u0155\1"+
-        "\55\1\u0157\1\55\1\uffff\1\55\6\uffff\1\u015c\2\55\1\u015f\2\55"+
-        "\3\uffff\1\u0162\2\55\1\u0165\5\55\1\uffff\1\u016b\2\55\2\uffff"+
-        "\1\55\1\u0171\6\55\1\u0178\3\55\1\u017c\2\uffff\1\u017d\1\uffff"+
-        "\1\u017e\4\55\1\u0183\1\55\1\u0185\2\55\1\u0188\1\uffff\3\55\2\uffff"+
-        "\1\u018c\1\uffff\1\u018d\1\u018e\3\uffff\1\u018f\1\55\1\uffff\1"+
-        "\u0191\1\55\1\uffff\2\55\1\uffff\1\u0195\2\55\1\u0198\1\u0199\1"+
-        "\uffff\1\u019a\1\55\2\uffff\1\55\1\uffff\6\55\1\uffff\1\55\1\u01a6"+
-        "\1\55\3\uffff\1\u01a8\3\55\1\uffff\1\55\1\uffff\1\u01ad\1\55\1\uffff"+
-        "\2\55\1\u01b1\4\uffff\1\55\1\uffff\3\55\1\uffff\1\u01b6\1\55\3\uffff"+
-        "\1\55\2\uffff\1\u01b9\1\55\1\u01bb\1\u01bc\1\55\1\u01be\2\55\1\uffff"+
-        "\1\55\1\uffff\1\u01c2\3\55\1\uffff\2\55\1\u01c8\1\uffff\1\u01c9"+
-        "\2\55\1\u01cc\1\uffff\2\55\1\uffff\1\55\2\uffff\1\u01d0\1\uffff"+
-        "\1\u01d1\1\u01d2\1\55\1\uffff\1\55\1\u01d5\1\u01d6\1\55\1\u01d8"+
-        "\2\uffff\2\55\2\uffff\1\55\1\u01dc\3\uffff\1\55\1\u01de\2\uffff"+
-        "\1\55\1\uffff\1\55\1\u01e1\1\55\1\uffff\1\55\2\uffff\1\55\3\uffff"+
-        "\1\u01e5\1\uffff";
+        "\1\uffff\3\55\2\uffff\1\55\3\uffff\6\55\3\uffff\5\55\1\143\3\55"+
+        "\1\uffff\1\51\2\55\3\154\1\51\1\uffff\3\51\2\uffff\3\55\1\uffff"+
+        "\4\55\1\174\3\55\2\uffff\4\55\3\uffff\17\55\1\u009d\3\55\3\uffff"+
+        "\16\55\1\uffff\3\55\2\uffff\2\55\2\uffff\2\154\4\uffff\11\55\1\uffff"+
+        "\40\55\1\uffff\12\55\1\u00f0\21\55\1\154\6\55\1\u0108\2\55\1\u010b"+
+        "\10\55\1\u0114\1\55\1\u0116\1\u0117\1\u0118\1\u0119\1\55\1\u011b"+
+        "\6\55\1\u0122\1\u0123\1\u0124\11\55\1\u012e\4\55\1\u0133\3\55\1"+
+        "\uffff\11\55\1\u0141\1\u0142\1\55\1\u0144\12\55\1\uffff\1\55\1\u0150"+
+        "\1\uffff\3\55\1\u0154\1\u0155\1\55\1\u0157\1\55\1\uffff\1\55\6\uffff"+
+        "\1\u015c\2\55\1\u015f\2\55\3\uffff\1\u0162\2\55\1\u0165\5\55\1\uffff"+
+        "\1\u016b\2\55\2\uffff\1\55\1\u0171\6\55\1\u0178\3\55\1\u017c\2\uffff"+
+        "\1\u017d\1\uffff\1\u017e\4\55\1\u0183\1\55\1\u0185\2\55\1\u0188"+
+        "\1\uffff\3\55\2\uffff\1\u018c\1\uffff\1\u018d\1\u018e\3\uffff\1"+
+        "\u018f\1\55\1\uffff\1\u0191\1\55\1\uffff\2\55\1\uffff\1\u0195\2"+
+        "\55\1\u0198\1\u0199\1\uffff\1\u019a\1\55\2\uffff\1\55\1\uffff\6"+
+        "\55\1\uffff\1\55\1\u01a6\1\55\3\uffff\1\u01a8\3\55\1\uffff\1\55"+
+        "\1\uffff\1\u01ad\1\55\1\uffff\2\55\1\u01b1\4\uffff\1\55\1\uffff"+
+        "\3\55\1\uffff\1\u01b6\1\55\3\uffff\1\55\2\uffff\1\u01b9\1\55\1\u01bb"+
+        "\1\u01bc\1\55\1\u01be\2\55\1\uffff\1\55\1\uffff\1\u01c2\3\55\1\uffff"+
+        "\2\55\1\u01c8\1\uffff\1\u01c9\2\55\1\u01cc\1\uffff\2\55\1\uffff"+
+        "\1\55\2\uffff\1\u01d0\1\uffff\1\u01d1\1\u01d2\1\55\1\uffff\1\55"+
+        "\1\u01d5\1\u01d6\1\55\1\u01d8\2\uffff\2\55\2\uffff\1\55\1\u01dc"+
+        "\3\uffff\1\55\1\u01de\2\uffff\1\55\1\uffff\1\55\1\u01e1\1\55\1\uffff"+
+        "\1\55\2\uffff\1\55\3\uffff\1\u01e5\1\uffff";
     static final String DFA14_eofS =
         "\u01e6\uffff";
     static final String DFA14_minS =
         "\1\0\2\141\1\143\2\uffff\1\151\3\uffff\2\141\1\142\1\141\1\150\1"+
-        "\156\2\uffff\1\141\1\145\1\144\1\157\1\uffff\1\141\1\60\1\150\1"+
-        "\162\1\145\1\uffff\1\76\1\145\1\156\3\45\1\101\1\uffff\2\0\1\52"+
-        "\2\uffff\1\164\1\144\1\156\1\uffff\1\141\1\143\1\163\1\141\1\60"+
-        "\1\157\1\143\1\141\2\uffff\1\141\1\154\1\165\1\154\3\uffff\1\144"+
-        "\1\154\1\166\1\155\1\142\1\152\1\164\1\151\1\162\2\141\1\155\1\154"+
-        "\1\151\1\162\1\60\1\143\1\165\1\151\2\uffff\1\147\1\156\1\145\1"+
-        "\143\1\154\1\143\1\157\1\154\2\151\1\162\1\uffff\1\143\1\141\1\154"+
-        "\1\uffff\1\151\1\141\1\154\2\uffff\1\162\1\144\2\uffff\2\45\4\uffff"+
-        "\1\141\1\144\1\150\1\157\1\147\1\157\1\150\1\157\1\147\1\uffff\1"+
-        "\156\1\151\1\157\2\154\1\143\1\162\1\151\1\141\1\145\1\166\1\145"+
-        "\1\154\1\171\4\145\1\147\1\166\1\147\1\156\1\145\1\164\1\154\1\145"+
-        "\1\156\1\157\1\156\1\162\1\154\1\143\1\uffff\1\150\2\141\1\165\1"+
-        "\145\1\164\1\145\1\150\1\163\1\164\1\60\1\155\1\151\1\164\1\171"+
-        "\1\156\1\151\1\160\1\153\1\143\1\145\1\144\1\164\1\171\1\145\1\154"+
-        "\1\144\1\145\1\45\1\155\1\154\1\141\1\157\2\162\1\60\1\162\1\145"+
-        "\1\60\1\163\1\155\1\151\1\145\1\153\1\143\1\144\1\162\1\60\1\145"+
-        "\4\60\1\55\1\60\1\154\1\143\1\157\2\145\1\163\3\60\1\163\1\145\1"+
-        "\141\1\162\1\145\1\151\1\144\1\154\1\157\1\60\1\154\1\162\1\147"+
-        "\1\55\1\60\1\163\1\145\1\141\1\uffff\1\142\1\160\1\141\1\147\2\164"+
-        "\1\154\1\147\1\153\2\60\1\145\1\60\1\156\1\157\1\141\1\162\1\157"+
-        "\1\145\1\164\1\156\2\141\1\uffff\1\164\1\60\1\uffff\2\151\1\143"+
-        "\2\60\1\145\1\60\1\145\1\uffff\1\162\4\uffff\1\163\1\uffff\1\60"+
-        "\1\164\1\151\1\60\1\164\1\160\3\uffff\1\60\1\143\1\151\1\60\1\162"+
-        "\1\145\1\162\1\145\1\162\1\uffff\1\60\1\145\1\162\1\146\1\uffff"+
-        "\1\151\1\60\1\156\1\165\1\163\1\142\1\157\1\151\1\60\1\151\1\145"+
-        "\1\162\1\60\2\uffff\1\60\1\uffff\1\60\1\167\1\156\1\154\1\144\1"+
-        "\60\1\164\1\60\1\155\1\164\1\60\1\uffff\1\142\1\156\1\163\2\uffff"+
-        "\1\60\1\uffff\2\60\3\uffff\1\60\1\156\1\uffff\1\60\1\141\1\uffff"+
-        "\1\164\1\156\1\uffff\1\60\1\162\1\145\2\60\1\uffff\1\60\1\157\1"+
-        "\uffff\1\151\1\141\1\uffff\1\147\1\163\1\145\1\154\2\156\1\uffff"+
-        "\1\157\1\60\1\157\3\uffff\1\60\1\141\1\151\1\145\1\uffff\1\141\1"+
-        "\uffff\1\60\1\157\1\uffff\1\154\1\147\1\60\4\uffff\1\147\1\uffff"+
-        "\1\162\1\151\1\163\1\uffff\1\60\1\156\3\uffff\1\165\2\uffff\1\60"+
-        "\1\154\2\60\1\145\1\60\1\145\1\156\1\uffff\1\165\1\uffff\1\60\1"+
-        "\156\1\154\1\156\1\uffff\1\162\1\145\1\60\1\uffff\1\60\1\145\1\157"+
-        "\1\60\1\uffff\1\72\1\156\1\uffff\1\145\2\uffff\1\60\1\uffff\2\60"+
-        "\1\156\1\uffff\1\145\2\60\1\163\1\60\2\uffff\2\156\2\uffff\1\144"+
-        "\1\60\3\uffff\1\144\1\60\2\uffff\1\72\1\uffff\1\143\1\60\1\40\1"+
-        "\uffff\1\40\2\uffff\1\171\3\uffff\1\60\1\uffff";
+        "\156\3\uffff\1\141\1\145\1\144\1\157\1\141\1\60\1\150\1\162\1\145"+
+        "\1\uffff\1\76\1\145\1\156\3\45\1\101\1\uffff\2\0\1\52\2\uffff\1"+
+        "\164\1\144\1\156\1\uffff\1\141\1\143\1\163\1\141\1\60\1\157\1\143"+
+        "\1\141\2\uffff\1\141\1\154\1\165\1\154\3\uffff\1\144\1\154\1\166"+
+        "\1\155\1\142\1\152\1\164\1\151\1\162\2\141\1\155\1\154\1\151\1\162"+
+        "\1\60\1\143\1\165\1\151\3\uffff\1\147\1\156\1\145\1\143\1\154\1"+
+        "\143\1\157\1\154\2\151\1\162\1\143\1\141\1\154\1\uffff\1\151\1\141"+
+        "\1\154\2\uffff\1\162\1\144\2\uffff\2\45\4\uffff\1\141\1\144\1\150"+
+        "\1\157\1\147\1\157\1\150\1\157\1\147\1\uffff\1\156\1\151\1\157\2"+
+        "\154\1\143\1\162\1\151\1\141\1\145\1\166\1\145\1\154\1\171\4\145"+
+        "\1\147\1\166\1\147\1\156\1\145\1\164\1\154\1\145\1\156\1\157\1\156"+
+        "\1\162\1\154\1\143\1\uffff\1\150\2\141\1\165\1\145\1\164\1\145\1"+
+        "\150\1\163\1\164\1\60\1\155\1\151\1\164\1\171\1\156\1\151\1\160"+
+        "\1\153\1\143\1\145\1\144\1\164\1\171\1\145\1\154\1\144\1\145\1\45"+
+        "\1\155\1\154\1\141\1\157\2\162\1\60\1\162\1\145\1\60\1\163\1\155"+
+        "\1\151\1\145\1\153\1\143\1\144\1\162\1\60\1\145\4\60\1\55\1\60\1"+
+        "\154\1\143\1\157\2\145\1\163\3\60\1\163\1\145\1\141\1\162\1\145"+
+        "\1\151\1\144\1\154\1\157\1\60\1\154\1\162\1\147\1\55\1\60\1\163"+
+        "\1\145\1\141\1\uffff\1\142\1\160\1\141\1\147\2\164\1\154\1\147\1"+
+        "\153\2\60\1\145\1\60\1\156\1\157\1\141\1\162\1\157\1\145\1\164\1"+
+        "\156\2\141\1\uffff\1\164\1\60\1\uffff\2\151\1\143\2\60\1\145\1\60"+
+        "\1\145\1\uffff\1\162\4\uffff\1\163\1\uffff\1\60\1\164\1\151\1\60"+
+        "\1\164\1\160\3\uffff\1\60\1\143\1\151\1\60\1\162\1\145\1\162\1\145"+
+        "\1\162\1\uffff\1\60\1\145\1\162\1\146\1\uffff\1\151\1\60\1\156\1"+
+        "\165\1\163\1\142\1\157\1\151\1\60\1\151\1\145\1\162\1\60\2\uffff"+
+        "\1\60\1\uffff\1\60\1\167\1\156\1\154\1\144\1\60\1\164\1\60\1\155"+
+        "\1\164\1\60\1\uffff\1\142\1\156\1\163\2\uffff\1\60\1\uffff\2\60"+
+        "\3\uffff\1\60\1\156\1\uffff\1\60\1\141\1\uffff\1\164\1\156\1\uffff"+
+        "\1\60\1\162\1\145\2\60\1\uffff\1\60\1\157\1\uffff\1\151\1\141\1"+
+        "\uffff\1\147\1\163\1\145\1\154\2\156\1\uffff\1\157\1\60\1\157\3"+
+        "\uffff\1\60\1\141\1\151\1\145\1\uffff\1\141\1\uffff\1\60\1\157\1"+
+        "\uffff\1\154\1\147\1\60\4\uffff\1\147\1\uffff\1\162\1\151\1\163"+
+        "\1\uffff\1\60\1\156\3\uffff\1\165\2\uffff\1\60\1\154\2\60\1\145"+
+        "\1\60\1\145\1\156\1\uffff\1\165\1\uffff\1\60\1\156\1\154\1\156\1"+
+        "\uffff\1\162\1\145\1\60\1\uffff\1\60\1\145\1\157\1\60\1\uffff\1"+
+        "\72\1\156\1\uffff\1\145\2\uffff\1\60\1\uffff\2\60\1\156\1\uffff"+
+        "\1\145\2\60\1\163\1\60\2\uffff\2\156\2\uffff\1\144\1\60\3\uffff"+
+        "\1\144\1\60\2\uffff\1\72\1\uffff\1\143\1\60\1\40\1\uffff\1\40\2"+
+        "\uffff\1\171\3\uffff\1\60\1\uffff";
     static final String DFA14_maxS =
         "\1\uffff\2\151\1\164\2\uffff\1\164\3\uffff\1\165\1\151\1\165\1\162"+
-        "\1\157\1\164\2\uffff\1\165\1\150\1\154\1\165\1\uffff\1\157\1\172"+
-        "\1\150\1\162\1\145\1\uffff\1\76\1\145\1\156\1\45\2\71\1\172\1\uffff"+
-        "\2\uffff\1\57\2\uffff\1\164\1\144\1\162\1\uffff\1\141\1\143\1\163"+
-        "\1\160\1\172\1\157\1\166\1\141\2\uffff\1\171\2\165\1\172\3\uffff"+
-        "\1\144\1\154\1\166\1\156\1\142\1\152\1\164\1\151\1\162\1\165\1\170"+
-        "\1\155\1\165\1\151\1\162\1\172\1\143\1\165\1\151\2\uffff\1\147\1"+
-        "\162\1\145\1\143\1\154\1\144\1\157\1\154\1\151\1\163\1\162\1\uffff"+
-        "\1\143\1\165\1\154\1\uffff\1\151\1\145\1\154\2\uffff\1\162\1\144"+
-        "\2\uffff\1\60\1\45\4\uffff\1\141\1\144\1\150\1\157\1\147\1\157\1"+
-        "\150\1\157\1\147\1\uffff\1\156\1\151\1\157\2\154\1\143\1\162\1\151"+
-        "\1\141\1\145\1\166\1\145\1\154\1\171\1\153\3\145\1\147\1\166\1\147"+
-        "\1\156\1\145\1\164\1\154\1\145\1\164\1\157\1\156\1\162\1\154\1\143"+
-        "\1\uffff\1\150\2\141\1\165\1\145\1\164\1\145\1\150\1\163\1\164\1"+
-        "\172\1\155\1\151\1\164\1\171\1\156\1\151\1\160\1\153\1\143\1\145"+
-        "\1\144\1\164\1\171\1\145\1\154\1\144\1\145\1\45\1\155\1\154\1\141"+
-        "\1\157\2\162\1\172\1\162\1\145\1\172\1\163\1\155\1\151\1\145\1\153"+
-        "\1\143\1\144\1\162\1\172\1\145\4\172\1\55\1\172\1\154\1\143\1\157"+
-        "\2\145\1\163\3\172\1\163\1\145\1\141\1\162\1\145\1\151\1\144\1\154"+
-        "\1\157\1\172\1\154\1\162\1\147\1\55\1\172\1\163\1\145\1\141\1\uffff"+
-        "\1\142\1\160\1\141\1\154\2\164\1\154\1\147\1\153\2\172\1\145\1\172"+
-        "\1\156\1\157\1\141\1\162\1\157\1\145\1\164\1\156\2\141\1\uffff\1"+
-        "\164\1\172\1\uffff\2\151\1\143\2\172\1\145\1\172\1\145\1\uffff\1"+
-        "\162\4\uffff\1\167\1\uffff\1\172\1\164\1\151\1\172\1\164\1\160\3"+
-        "\uffff\1\172\1\143\1\151\1\172\1\162\1\145\1\162\1\145\1\162\1\uffff"+
-        "\1\172\1\145\1\162\1\163\1\uffff\1\151\1\172\1\156\1\165\1\163\1"+
-        "\142\1\157\1\151\1\172\1\151\1\145\1\162\1\172\2\uffff\1\172\1\uffff"+
+        "\1\157\1\164\3\uffff\1\165\1\150\1\154\1\165\1\157\1\172\1\150\1"+
+        "\162\1\145\1\uffff\1\76\1\145\1\156\1\45\2\71\1\172\1\uffff\2\uffff"+
+        "\1\57\2\uffff\1\164\1\144\1\162\1\uffff\1\141\1\143\1\163\1\160"+
+        "\1\172\1\157\1\166\1\141\2\uffff\1\171\2\165\1\172\3\uffff\1\144"+
+        "\1\154\1\166\1\156\1\142\1\152\1\164\1\151\1\162\1\165\1\170\1\155"+
+        "\1\165\1\151\1\162\1\172\1\143\1\165\1\151\3\uffff\1\147\1\162\1"+
+        "\145\1\143\1\154\1\144\1\157\1\154\1\151\1\163\1\162\1\143\1\165"+
+        "\1\154\1\uffff\1\151\1\145\1\154\2\uffff\1\162\1\144\2\uffff\1\60"+
+        "\1\45\4\uffff\1\141\1\144\1\150\1\157\1\147\1\157\1\150\1\157\1"+
+        "\147\1\uffff\1\156\1\151\1\157\2\154\1\143\1\162\1\151\1\141\1\145"+
+        "\1\166\1\145\1\154\1\171\1\153\3\145\1\147\1\166\1\147\1\156\1\145"+
+        "\1\164\1\154\1\145\1\164\1\157\1\156\1\162\1\154\1\143\1\uffff\1"+
+        "\150\2\141\1\165\1\145\1\164\1\145\1\150\1\163\1\164\1\172\1\155"+
+        "\1\151\1\164\1\171\1\156\1\151\1\160\1\153\1\143\1\145\1\144\1\164"+
+        "\1\171\1\145\1\154\1\144\1\145\1\45\1\155\1\154\1\141\1\157\2\162"+
+        "\1\172\1\162\1\145\1\172\1\163\1\155\1\151\1\145\1\153\1\143\1\144"+
+        "\1\162\1\172\1\145\4\172\1\55\1\172\1\154\1\143\1\157\2\145\1\163"+
+        "\3\172\1\163\1\145\1\141\1\162\1\145\1\151\1\144\1\154\1\157\1\172"+
+        "\1\154\1\162\1\147\1\55\1\172\1\163\1\145\1\141\1\uffff\1\142\1"+
+        "\160\1\141\1\154\2\164\1\154\1\147\1\153\2\172\1\145\1\172\1\156"+
+        "\1\157\1\141\1\162\1\157\1\145\1\164\1\156\2\141\1\uffff\1\164\1"+
+        "\172\1\uffff\2\151\1\143\2\172\1\145\1\172\1\145\1\uffff\1\162\4"+
+        "\uffff\1\167\1\uffff\1\172\1\164\1\151\1\172\1\164\1\160\3\uffff"+
+        "\1\172\1\143\1\151\1\172\1\162\1\145\1\162\1\145\1\162\1\uffff\1"+
+        "\172\1\145\1\162\1\163\1\uffff\1\151\1\172\1\156\1\165\1\163\1\142"+
+        "\1\157\1\151\1\172\1\151\1\145\1\162\1\172\2\uffff\1\172\1\uffff"+
         "\1\172\1\167\1\156\1\154\1\144\1\172\1\164\1\172\1\155\1\164\1\172"+
         "\1\uffff\1\142\1\156\1\163\2\uffff\1\172\1\uffff\2\172\3\uffff\1"+
         "\172\1\156\1\uffff\1\172\1\141\1\uffff\1\164\1\156\1\uffff\1\172"+
@@ -3393,32 +3392,31 @@ public class InternalDslLexer extends Lexer {
         "\1\144\1\172\2\uffff\1\72\1\uffff\1\143\1\172\1\40\1\uffff\1\40"+
         "\2\uffff\1\171\3\uffff\1\172\1\uffff";
     static final String DFA14_acceptS =
-        "\4\uffff\1\4\1\5\1\uffff\1\7\1\10\1\11\6\uffff\1\25\1\31\4\uffff"+
-        "\1\44\5\uffff\1\114\7\uffff\1\132\3\uffff\1\137\1\140\3\uffff\1"+
-        "\132\10\uffff\1\4\1\5\4\uffff\1\7\1\10\1\11\23\uffff\1\25\1\31\13"+
-        "\uffff\1\44\3\uffff\1\55\3\uffff\1\114\1\115\2\uffff\1\131\1\133"+
-        "\2\uffff\1\134\1\135\1\136\1\137\11\uffff\1\13\40\uffff\1\24\122"+
-        "\uffff\1\77\27\uffff\1\130\2\uffff\1\15\10\uffff\1\54\1\uffff\1"+
-        "\14\1\45\1\110\1\16\1\uffff\1\103\6\uffff\1\116\1\61\1\106\11\uffff"+
-        "\1\105\4\uffff\1\67\15\uffff\1\107\1\125\1\uffff\1\75\13\uffff\1"+
-        "\12\3\uffff\1\6\1\113\1\uffff\1\127\2\uffff\1\65\1\66\1\46\2\uffff"+
-        "\1\102\2\uffff\1\122\2\uffff\1\30\5\uffff\1\120\2\uffff\1\62\2\uffff"+
-        "\1\117\6\uffff\1\56\3\uffff\1\76\1\73\1\104\4\uffff\1\26\1\uffff"+
-        "\1\100\2\uffff\1\3\3\uffff\1\20\1\34\1\74\1\17\1\uffff\1\21\3\uffff"+
-        "\1\60\2\uffff\1\40\1\27\1\32\1\uffff\1\63\1\64\10\uffff\1\112\1"+
-        "\uffff\1\101\4\uffff\1\2\3\uffff\1\124\4\uffff\1\123\2\uffff\1\111"+
-        "\1\uffff\1\36\1\37\1\uffff\1\41\3\uffff\1\121\5\uffff\1\71\1\72"+
-        "\2\uffff\1\43\1\35\2\uffff\1\47\1\42\1\57\2\uffff\1\1\1\70\1\uffff"+
-        "\1\50\3\uffff\1\33\1\uffff\1\126\1\23\1\uffff\1\22\1\51\1\52\1\uffff"+
-        "\1\53";
+        "\4\uffff\1\4\1\5\1\uffff\1\7\1\10\1\11\6\uffff\1\25\1\30\1\32\11"+
+        "\uffff\1\114\7\uffff\1\132\3\uffff\1\137\1\140\3\uffff\1\132\10"+
+        "\uffff\1\4\1\5\4\uffff\1\7\1\10\1\11\23\uffff\1\25\1\30\1\32\16"+
+        "\uffff\1\55\3\uffff\1\114\1\115\2\uffff\1\131\1\133\2\uffff\1\134"+
+        "\1\135\1\136\1\137\11\uffff\1\13\40\uffff\1\24\122\uffff\1\77\27"+
+        "\uffff\1\130\2\uffff\1\15\10\uffff\1\54\1\uffff\1\14\1\45\1\110"+
+        "\1\16\1\uffff\1\103\6\uffff\1\116\1\61\1\106\11\uffff\1\105\4\uffff"+
+        "\1\67\15\uffff\1\107\1\125\1\uffff\1\75\13\uffff\1\12\3\uffff\1"+
+        "\6\1\113\1\uffff\1\127\2\uffff\1\65\1\66\1\46\2\uffff\1\102\2\uffff"+
+        "\1\122\2\uffff\1\31\5\uffff\1\120\2\uffff\1\62\2\uffff\1\117\6\uffff"+
+        "\1\56\3\uffff\1\76\1\73\1\104\4\uffff\1\26\1\uffff\1\100\2\uffff"+
+        "\1\3\3\uffff\1\20\1\35\1\74\1\17\1\uffff\1\21\3\uffff\1\60\2\uffff"+
+        "\1\41\1\27\1\33\1\uffff\1\63\1\64\10\uffff\1\112\1\uffff\1\101\4"+
+        "\uffff\1\2\3\uffff\1\124\4\uffff\1\123\2\uffff\1\111\1\uffff\1\37"+
+        "\1\40\1\uffff\1\42\3\uffff\1\121\5\uffff\1\71\1\72\2\uffff\1\44"+
+        "\1\36\2\uffff\1\47\1\43\1\57\2\uffff\1\1\1\70\1\uffff\1\50\3\uffff"+
+        "\1\34\1\uffff\1\126\1\23\1\uffff\1\22\1\51\1\52\1\uffff\1\53";
     static final String DFA14_specialS =
         "\1\0\44\uffff\1\1\1\2\u01bf\uffff}>";
     static final String[] DFA14_transitionS = {
             "\11\51\2\50\2\51\1\50\22\51\1\50\1\51\1\45\2\51\1\20\1\51\1"+
-            "\46\2\51\1\5\1\51\1\21\1\51\1\4\1\47\1\40\1\41\10\42\1\7\1\26"+
+            "\46\2\51\1\5\1\51\1\22\1\51\1\4\1\47\1\40\1\41\10\42\1\7\1\21"+
             "\1\35\1\34\3\51\32\44\3\51\1\43\1\44\1\51\1\17\1\27\1\16\1\2"+
-            "\1\24\1\22\1\32\1\44\1\3\2\44\1\13\1\1\1\12\1\14\1\25\1\44\1"+
-            "\23\1\6\1\15\1\37\1\36\1\31\1\30\1\33\1\44\1\10\1\51\1\11\uff82"+
+            "\1\25\1\23\1\32\1\44\1\3\2\44\1\13\1\1\1\12\1\14\1\26\1\44\1"+
+            "\24\1\6\1\15\1\37\1\36\1\31\1\30\1\33\1\44\1\10\1\51\1\11\uff82"+
             "\51",
             "\1\54\3\uffff\1\52\3\uffff\1\53",
             "\1\60\3\uffff\1\57\3\uffff\1\56",
@@ -3437,12 +3435,12 @@ public class InternalDslLexer extends Lexer {
             "\1\117\2\uffff\1\120\1\121\1\uffff\1\116",
             "",
             "",
-            "\1\130\7\uffff\1\124\5\uffff\1\125\2\uffff\1\126\2\uffff\1"+
-            "\127",
-            "\1\131\2\uffff\1\132",
-            "\1\134\7\uffff\1\133",
-            "\1\135\5\uffff\1\136",
             "",
+            "\1\131\7\uffff\1\125\5\uffff\1\126\2\uffff\1\127\2\uffff\1"+
+            "\130",
+            "\1\132\2\uffff\1\133",
+            "\1\135\7\uffff\1\134",
+            "\1\136\5\uffff\1\137",
             "\1\140\12\uffff\1\141\2\uffff\1\142",
             "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
             "\1\144",
@@ -3504,6 +3502,7 @@ public class InternalDslLexer extends Lexer {
             "\1\u00a0",
             "",
             "",
+            "",
             "\1\u00a1",
             "\1\u00a3\3\uffff\1\u00a2",
             "\1\u00a4",
@@ -3515,7 +3514,6 @@ public class InternalDslLexer extends Lexer {
             "\1\u00ab",
             "\1\u00ad\2\uffff\1\u00ac\6\uffff\1\u00ae",
             "\1\u00af",
-            "",
             "\1\u00b0",
             "\1\u00b1\23\uffff\1\u00b2",
             "\1\u00b3",
@@ -3980,17 +3978,17 @@ public class InternalDslLexer extends Lexer {
 
                         else if ( (LA14_0=='%') ) {s = 16;}
 
-                        else if ( (LA14_0==',') ) {s = 17;}
+                        else if ( (LA14_0==';') ) {s = 17;}
 
-                        else if ( (LA14_0=='f') ) {s = 18;}
+                        else if ( (LA14_0==',') ) {s = 18;}
 
-                        else if ( (LA14_0=='r') ) {s = 19;}
+                        else if ( (LA14_0=='f') ) {s = 19;}
 
-                        else if ( (LA14_0=='e') ) {s = 20;}
+                        else if ( (LA14_0=='r') ) {s = 20;}
 
-                        else if ( (LA14_0=='p') ) {s = 21;}
+                        else if ( (LA14_0=='e') ) {s = 21;}
 
-                        else if ( (LA14_0==';') ) {s = 22;}
+                        else if ( (LA14_0=='p') ) {s = 22;}
 
                         else if ( (LA14_0=='b') ) {s = 23;}
 
