@@ -1,5 +1,6 @@
 package org.eclipselabs.xdiagram.interpreter;
 
+import java.util.Collection;
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -143,7 +144,7 @@ public interface GraphicsProvider {
 	// TODO remove x,y
 	boolean canAddChild(ContainerShape container, EClass eClass, int x, int y);
 	
-	EReference getContainerReference(ContainerShape targetContainer);
+	
 
 	
 	// FUTURE:
@@ -157,5 +158,8 @@ public interface GraphicsProvider {
 	void update(Diagram diagram);
 
 	
+	Collection<EReference> getContainerReferences(ContainerShape container);
+
+	Collection<EReference> getCompatibleContainerReferences(ContainerShape targetContainer, EObject eObject);
 	
 }

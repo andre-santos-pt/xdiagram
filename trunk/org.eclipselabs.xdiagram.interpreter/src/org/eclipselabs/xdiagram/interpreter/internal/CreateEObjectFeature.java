@@ -16,6 +16,7 @@
 package org.eclipselabs.xdiagram.interpreter.internal;
 
 import java.io.IOException;
+import java.util.Collection;
 
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.emf.ecore.EClass;
@@ -71,25 +72,16 @@ public class CreateEObjectFeature extends AbstractCreateFeature {
 			return ECoreUtil.matchContainment(context.getTargetContainer(), provider.getRootClass(), eClass);
 
 
-//		ILocationInfo loc = Graphiti.getPeLayoutService().getLocationInfo(container, context.getX(), context.getY());
-//		if(loc != null) {
-//			Shape child = loc.getShape();
-//			if(child instanceof ContainerShape)
-//				container = (ContainerShape) child;
 
-			//		System.out.println((loc.getShape() instanceof ContainerShape) + "\t" + container);
+		Collection<EReference> refs = provider.getGraphicsProvider().getContainerReferences(container);
 
-			EReference ref = provider.getGraphicsProvider().getContainerReference(container);
+		if(refs.isEmpty())
+			return false;
 
-			if(ref == null)
-				return false;
+//		EObject owner = provider.getGraphicsProvider().getContainerObject(container);
 
-			EObject owner = provider.getGraphicsProvider().getContainerObject(container);
-
-			// TODO: enough upper bound
-			return provider.getGraphicsProvider().canAddChild(container, eClass, context.getX(), context.getY());
-//		}
-//		return false;
+		// TODO: enough upper bound
+		return provider.getGraphicsProvider().canAddChild(container, eClass, context.getX(), context.getY());
 	}
 
 	public Object[] create(ICreateContext context) {
@@ -98,30 +90,27 @@ public class CreateEObjectFeature extends AbstractCreateFeature {
 		EReference containingRef = null;
 
 		ContainerShape containerShape = context.getTargetContainer();
-//		ILocationInfo loc = Graphiti.getPeLayoutService().getLocationInfo(container, context.getX(), context.getY());
-//		if(loc != null) {
-//			Shape child = loc.getShape();
-//			if(child instanceof ContainerShape)
-//				containerShape = (ContainerShape) child;
-//		}
-		
-		if (containerShape != null && !(containerShape instanceof Diagram)) {
-//			PictogramLink link = containerShape.getLink();
-//			eObjectParent = link.getBusinessObjects().get(0);
+
+		if (!(containerShape instanceof Diagram)) {
+			//			PictogramLink link = containerShape.getLink();
+			//			eObjectParent = link.getBusinessObjects().get(0);
 
 
-			EReference ref = provider.getGraphicsProvider().getContainerReference(containerShape);
+			Collection<EReference> refs = provider.getGraphicsProvider().getCompatibleContainerReferences(containerShape, eObject);
+			
+			EReference ref = selectReference(refs, eObject);
+					
 			EObject parent = provider.getGraphicsProvider().getContainerObject(containerShape);
 			ECoreUtil.setReference(parent, ref, eObject);
-			
+
 			//TODO: rever
-//			for (EReference r : eObjectParent.eClass().getEAllContainments()) {
-//				if (((EClass) r.getEType()).isSuperTypeOf(eObject.eClass())) {
-//					containingRef = r;
-//					ECoreUtil.setReference(eObjectParent, r, eObject);
-//					break;
-//				}
-//			}
+			//			for (EReference r : eObjectParent.eClass().getEAllContainments()) {
+			//				if (((EClass) r.getEType()).isSuperTypeOf(eObject.eClass())) {
+			//					containingRef = r;
+			//					ECoreUtil.setReference(eObjectParent, r, eObject);
+			//					break;
+			//				}
+			//			}
 		}
 
 		// Add model element to resource.
@@ -147,5 +136,22 @@ public class CreateEObjectFeature extends AbstractCreateFeature {
 		getFeatureProvider().getDirectEditingInfo().setActive(true);
 
 		return new Object[] { eObject };
+	}
+
+	/**
+	 * Criteria: most specific type
+	 * @param refs
+	 * @param eObject
+	 * @return
+	 */
+	private EReference selectReference(Collection<EReference> refs, EObject eObject) {
+		EReference ref = null;
+		for(EReference r : refs) {
+			if(r.getEType().isInstance(eObject)) {
+				if(ref == null || ((EClass) ref.getEType()).isSuperTypeOf((EClass) r.getEType()))
+					ref = r;
+			}
+		}
+		return ref;
 	}
 }
