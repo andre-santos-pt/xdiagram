@@ -73,23 +73,6 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 		factory = getWidgetFactory();
 		composite = factory.createPlainComposite(parent, SWT.NONE);
 		composite.setLayout(new GridLayout(2, false));
-
-
-		// factory.createCLabel(composite, "ToString:"); //$NON-NLS-1$
-
-		//		nameText = factory.createText(composite, ""); //$NON-NLS-1$
-		//		nameText.setEditable(false);
-
-
-
-		//		try{
-		//			Object obj = this.getDiagramTypeProvider().getFeatureProvider();
-		//			GenericFeatureProvider provider = (GenericFeatureProvider)obj;
-		//			IUpdateFeature update = provider.getUpdateFeature(null);
-		//		}
-		//		catch(Exception ex){
-		//			ex.printStackTrace();
-		//		}
 	}
 
 	@Override
@@ -147,80 +130,106 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 		Control control = null;
 
 		Object obj = eObject.eGet(att);
+		
 		if(att.getEAttributeType().getInstanceClass().equals(boolean.class)) {
-			//	control = factory.createButton(composite, "", SWT.CHECK);
-			control = new Button(composite, SWT.PUSH);
-
-			final Button button = (Button) control;
-			button.setSelection((Boolean) obj);
-			button.addSelectionListener(new SelectionAdapter() {
-				@Override
-				public void widgetSelected(SelectionEvent e) {
-					executeSetCommand(eObject, att, button.getSelection());
-				}
-			});
+			control = handleBooleanElement(eObject, att, obj);
 		}
-
 		else if(att.getEAttributeType() instanceof EEnum) {
-			//control = factory.createCCombo(composite, SWT.DROP_DOWN);
-			final CCombo combo = (CCombo) control;
-			EEnum eenum = (EEnum)att.getEAttributeType();
-			int pos=0, index=0;
-			for ( EEnumLiteral literal : eenum.getELiterals()){
-				combo.add(literal.getName());
-				if ( literal.getName().equals(obj.toString()) )
-					index = pos;
-				pos++;
-			}
-			combo.select(index);
-			combo.addSelectionListener(new SelectionAdapter() {
-				@Override
-				public void widgetSelected(SelectionEvent e) {					
-					EEnum eenum = (EEnum)att.getEAttributeType();
-					for ( EEnumLiteral literal : eenum.getELiterals())
-						if ( literal.getName().equals(combo.getItem(combo.getSelectionIndex())) )
-							executeSetCommand(eObject, att, literal.getInstance());
-				}
-			});
+			// TODO: listener
+			control = handleEnumElement(eObject, att, obj);
 		}
+		else if(att.getEAttributeType().getInstanceClass().equals(String.class)) {
+			control = handleStringElement(eObject, att, obj);
+		}
+		attValues.add(control);		
+	}
 
-		// list / enum
-		else {
-			//			control = factory.createText(composite, obj == null ? "null" : obj.toString());
-			final Text text = new Text(composite, SWT.BORDER);
-			text.setText(obj == null ? "null" : obj.toString());
+	
+	private Control handleEnumElement(final EObject eObject,
+			final EAttribute att, Object obj) {
+		Control control;
+		control = factory.createCCombo(composite, SWT.DROP_DOWN);
+		final CCombo combo = (CCombo) control;
+		EEnum eenum = (EEnum)att.getEAttributeType();
+		int pos=0, index=0;
+		for ( EEnumLiteral literal : eenum.getELiterals()){
+			combo.add(literal.getName());
+			if ( literal.getName().equals(obj.toString()) )
+				index = pos;
+			pos++;
+		}
+		combo.select(index);
+		combo.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {					
+				EEnum eenum = (EEnum)att.getEAttributeType();
+				for ( EEnumLiteral literal : eenum.getELiterals())
+					if ( literal.getName().equals(combo.getItem(combo.getSelectionIndex())) )
+						executeSetCommand(eObject, att, literal.getInstance());
+			}
+		});
+		return control;
+	}
 
-			control = text;
-			text.setEditable(att.getEAttributeType().getInstanceClass().equals(String.class));
-			if(text.getEditable()) {
-				control.addKeyListener(new KeyAdapter() {
-					@Override
-					public void keyPressed(KeyEvent e) {
-						if(e.keyCode == SWT.CR) {
-							executeSetCommand(eObject, att, text.getText());
-						}
+	private Control handleBooleanElement(final EObject eObject,
+			final EAttribute att, Object obj) {
+		Control control = factory.createButton(composite, "", SWT.CHECK);
+		final Button button = (Button) control;
+		button.setSelection((Boolean) obj);
+		button.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				executeSetCommand(eObject, att, button.getSelection());
+			}
+		});
+		Adapter adapter = new AdapterImpl() {
+			@Override
+			public void notifyChanged(Notification notification) {
+				if(att.equals(notification.getFeature()))
+					button.setSelection(notification.getNewBooleanValue());
+			}
+		};
+		addDisposeListener(eObject, control, adapter);
+		return control;
+	}
+
+	private Control handleStringElement(final EObject eObject,
+			final EAttribute att, Object obj) {
+		final Text text = factory.createText(composite, obj == null ? "null" : obj.toString());
+		Control control = text;
+		text.setEditable(att.getEAttributeType().getInstanceClass().equals(String.class));
+		if(text.getEditable()) {
+			control.addKeyListener(new KeyAdapter() {
+				@Override
+				public void keyPressed(KeyEvent e) {
+					if(e.keyCode == SWT.CR) {
+						executeSetCommand(eObject, att, text.getText());
 					}
-				});
-			}
-			
-			final Adapter adapter = new AdapterImpl() {
-				@Override
-				public void notifyChanged(Notification notification) {
-					if(att.equals(notification.getFeature()))
-						text.setText(notification.getNewStringValue());
-				}
-			};
-			
-			eObject.eAdapters().add(adapter);
-			text.addDisposeListener(new DisposeListener() {
-				
-				@Override
-				public void widgetDisposed(DisposeEvent e) {
-					eObject.eAdapters().remove(adapter);
 				}
 			});
 		}
-		attValues.add(control);	
+		
+		final Adapter adapter = new AdapterImpl() {
+			@Override
+			public void notifyChanged(Notification notification) {
+				if(att.equals(notification.getFeature()))
+					text.setText(notification.getNewStringValue());
+			}
+		};
+		
+		addDisposeListener(eObject, control, adapter);
+		return control;
+	}
+
+	private void addDisposeListener(final EObject eObject, final Control control, final Adapter adapter) {
+		eObject.eAdapters().add(adapter);
+		control.addDisposeListener(new DisposeListener() {
+			
+			@Override
+			public void widgetDisposed(DisposeEvent e) {
+				eObject.eAdapters().remove(adapter);
+			}
+		});
 	}
 
 	private void executeSetCommand(final EObject eObject, final EAttribute att, final Object value) {
@@ -231,63 +240,5 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 			}
 		});
 
-		//		domain.getCommandStack().execute(new RecordingCommand(domain) {
-		//			
-		//			@Override
-		//			protected void doExecute() {
-		//				try{	
-		//					eObject.eSet(att, value);
-		//				}
-		//				catch(Exception ex){
-		//					ex.printStackTrace();
-		//				}
-		//			}
-		//		});
-
-		//		domain.getCommandStack().execute(new RecordingCommand(domain) {
-		//			
-		//			@Override
-		//			protected void doExecute() {
-		//				//---------------------------
-		//				try{	
-		//					eObject.eSet(att, value);
-		//				}catch(Exception ex){
-		//				}
-		//				
-		//				//this.getDiagramEditor().refreshRenderingDecorators(pe);
-		//				try{					
-		//					PictogramElement pe = getSelectedPictogramElement();
-		//					for (UpdateNodeFeature feature :  UpdateNodeFeature.getInstances()){
-		//						//feature.update(pe);
-		//						feature.update(new UpdateContext(pe));
-		////						getDiagramEditor().executeFeature(feature, new UpdateContext(pe));
-		//					}
-		//					
-		//					//new MoveShapeContext((Shape) pe);
-		//					
-		//					
-		//					for (GenericFeatureProvider provider :  UpdateNodeFeature.getProviders()){
-		//						//provider.getGraphicsProvider().updateNodeFigure(getDiagram(), (ContainerShape) pe);
-		//					}
-		//					
-		////					getDiagramEditor().refresh();
-		//					
-		//					//updatePictogramElement(pe);
-		////					ContainerShape container0 = ((Shape) pe).getContainer(); //(ContainerShape) pe;
-		////					ContainerShape container = (ContainerShape) pe;
-		////					graphicsProvider.updateNodeFigure(getDiagram(), container);
-		//				}catch (Exception ex){
-		//					
-		//				}
-		//				//this.getDiagramTypeProvider().getFeatureProvider().updateIfPossible(null);
-		////				GraphicsAlgorithm figure = context.getPictogramElement().getGraphicsAlgorithm();
-		////		    	figure.setX(context.getX());
-		////		        figure.setY(context.getY());
-		////		    	ContainerShape container = (ContainerShape) context.getPictogramElement();
-		////		    	provider.getGraphicsProvider().updateNodeFigure(getDiagram(), container);
-		//				//---------------------------
-		//				
-		//			}
-		//		});
 	}
 }
