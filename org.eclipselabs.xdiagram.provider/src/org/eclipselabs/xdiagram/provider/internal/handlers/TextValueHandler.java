@@ -29,8 +29,7 @@ public class TextValueHandler implements FeatureHandler {
 		if(att != null) {
 			final EAttribute a = Util.matchAttribute(eObject.eClass(), att);	
 			value += eObject.eGet(a);
-			eObject.eAdapters().add(new AdapterImpl() {
-				
+			eObject.eAdapters().add(new AdapterImpl() {	
 				@Override
 				public void notifyChanged(Notification notification) {
 					if(a.equals(notification.getFeature()))

@@ -1,6 +1,10 @@
 package org.eclipselabs.xdiagram.provider.internal.handlers;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
@@ -15,34 +19,53 @@ import org.eclipselabs.xdiagram.dsl.Contains;
 import org.eclipselabs.xdiagram.dsl.Element;
 import org.eclipselabs.xdiagram.dsl.Feature;
 
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Maps;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.Multimaps;
+
 public class ContainsHandler implements FeatureHandler {
 
-	private Map<GraphicsAlgorithmContainer, OwnerRef> containers = new HashMap<>();
+	private Multimap<GraphicsAlgorithmContainer, EReference> references;
+	private Map<GraphicsAlgorithmContainer, EObject> owners;
 	
-	private class OwnerRef {
-		EReference reference;
-		EObject owner;
-		
-		@Override
-		public String toString() {
-			return reference.getName() + "   " + owner; 
+	public ContainsHandler() {
+		references = ArrayListMultimap.create();
+		owners = Maps.newHashMap();
+	}
+	
+//	private class OwnerRef {
+//		EReference reference;
+//		EObject owner;
+//		
+//		@Override
+//		public String toString() {
+//			return reference.getName() + "   " + owner; 
+//		}
+//	}
+	
+	public boolean isContainer(GraphicsAlgorithmContainer container) {
+		return references.containsKey(container);
+	}
+	
+	public Collection<EReference> getReferences(ContainerShape container) {
+		return references.get(container); 
+	}
+	
+	public Collection<EReference> getReferences(ContainerShape container, EObject eObject) {
+		List<EReference> list = new ArrayList<>(references.get(container));
+		Iterator<EReference> it = list.iterator();
+		while(it.hasNext()) {
+			if(!it.next().getEType().isInstance(eObject))
+				it.remove();
 		}
-	}
-	
-	public boolean isContainer(ContainerShape container) {
-		return containers.containsKey(container);
-	}
-	
-	public EReference getReference(ContainerShape container) {
-		assert isContainer(container);
-		
-		return containers.get(container).reference; 
+		return list;
 	}
 	
 	public EObject getOwner(ContainerShape container) {
 		assert isContainer(container);
 		
-		return containers.get(container).owner; 
+		return owners.get(container); 
 	}
 	
 	@Override
@@ -57,13 +80,12 @@ public class ContainsHandler implements FeatureHandler {
 		
 		Contains cont = (Contains) feature;
 	
-		OwnerRef or = new OwnerRef();
-		or.reference = (EReference) Util.matchFeature(eObject.eClass(), cont.getModelReference());
-		or.owner = eObject;
+		EReference ref = (EReference) Util.matchFeature(eObject.eClass(), cont.getModelReference());
+
+		owners.put(container, eObject);		
+		references.put(container, ref);
 		
-//		ContainerShape containerShape = Graphiti.getPeCreateService().createContainerShape(container, false);
-		containers.put(container, or);
-		System.out.println("CONT " + container + "  " + or);
+		System.out.println("CONT " + container + "  " + ref);
 	}
 
 	@Override
@@ -76,5 +98,7 @@ public class ContainsHandler implements FeatureHandler {
 			Diagram diagram) {
 		
 	}
+
+	
 
 }
