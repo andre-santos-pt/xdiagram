@@ -5,20 +5,6 @@
       version="0.1">
 
    <plugin
-         id="org.eclipselabs.xdiagram.xtext"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipselabs.xdiagram.xtext.ui"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipselabs.xdiagram.interpreter"
          download-size="0"
          install-size="0"
@@ -27,6 +13,20 @@
 
    <plugin
          id="org.eclipselabs.xdiagram.provider"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipselabs.xdiagram.dsl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipselabs.xdiagram.dsl.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
