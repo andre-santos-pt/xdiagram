@@ -2,6 +2,7 @@ package org.eclipselabs.xdiagram.provider;
 
 
 import java.io.File;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -78,6 +79,7 @@ public class LanguageProvider implements GraphicsProvider {
 		.add(new LineWidthHandler())
 		.add(new PointHandler())
 		.add(new TextValueHandler())
+		
 		.add(containsHandler)
 		.add(new AnchorHandler());
 	}
@@ -145,14 +147,21 @@ public class LanguageProvider implements GraphicsProvider {
 			return false;
 		}
 
-		EReference ref = containsHandler.getReference(container);
-		return ((EClass) ref.getEType()).isSuperTypeOf(eClass);
+		for(EReference r: containsHandler.getReferences(container))
+			if(((EClass) r.getEType()).isSuperTypeOf(eClass))
+				return true;
+		
+		return false;
 	}
 
 
 	@Override
-	public EReference getContainerReference(ContainerShape container) {
-		return containsHandler.isContainer(container) ? containsHandler.getReference(container) : null;
+	public Collection<EReference> getContainerReferences(ContainerShape container) {
+		return containsHandler.getReferences(container);
+	}
+	@Override
+	public Collection<EReference> getCompatibleContainerReferences(ContainerShape container, EObject eObject) {
+		return containsHandler.getReferences(container, eObject);
 	}
 
 	@Override
@@ -584,15 +593,8 @@ public class LanguageProvider implements GraphicsProvider {
 	}
 
 	private GraphicsAlgorithm createLinkConnection(Link link, Diagram diagram, Connection connection, EObject eObject) {
-
-
 		Polyline linkConnector = Graphiti.getGaService().createPlainPolyline(connection);
-
-		for(Feature f : link.getFeatures())
-			for(FeatureHandler fh : featureChain)
-				if(fh.accept(link, f, null))
-					fh.handle(link, f, eObject, diagram, null, linkConnector);
-
+		featureChain.update(link, eObject, diagram, linkConnector, diagram);
 		return linkConnector;
 	}
 

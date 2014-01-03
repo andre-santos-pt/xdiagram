@@ -16,24 +16,21 @@ import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
+import org.eclipselabs.xdiagram.dsl.BooleanValue;
 import org.eclipselabs.xdiagram.dsl.Element;
+import org.eclipselabs.xdiagram.dsl.EnumValue;
 import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.FeatureConditional;
 import org.eclipselabs.xdiagram.dsl.IntValue;
 import org.eclipselabs.xdiagram.dsl.StringValue;
 import org.eclipselabs.xdiagram.dsl.Value;
 
-public class FeatureHandlerChain implements Iterable<FeatureHandler> {
+public class FeatureHandlerChain  {
 
 	private List<FeatureHandler> handlers;
 
 	public FeatureHandlerChain() {
 		handlers = new ArrayList<>();
-	}
-
-	@Override
-	public Iterator<FeatureHandler> iterator() {
-		return handlers.iterator();
 	}
 
 	public FeatureHandlerChain add(FeatureHandler h) {
@@ -117,7 +114,8 @@ public class FeatureHandlerChain implements Iterable<FeatureHandler> {
 	private Object getValue(Value v) {
 		if(v instanceof IntValue) return ((IntValue) v).getValue();
 		if(v instanceof StringValue) return ((StringValue) v).getValue();
-
+		if(v instanceof BooleanValue) return Boolean.parseBoolean(((BooleanValue) v).getValue().name().toLowerCase());
+//		if(v instanceof EnumValue) return null; // TODO enum
 		return null;
 	}
 }
