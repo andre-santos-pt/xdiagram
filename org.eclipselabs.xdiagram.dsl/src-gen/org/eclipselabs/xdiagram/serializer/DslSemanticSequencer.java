@@ -320,6 +320,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				   context == grammarAccess.getFigureFeatureRule() ||
 				   context == grammarAccess.getImageFeatureRule() ||
 				   context == grammarAccess.getInvisibleFeatureRule() ||
+				   context == grammarAccess.getLabelFeatureRule() ||
 				   context == grammarAccess.getRectangleFeatureRule() ||
 				   context == grammarAccess.getSizeRule()) {
 					sequence_Size(context, (Size) semanticObject); 

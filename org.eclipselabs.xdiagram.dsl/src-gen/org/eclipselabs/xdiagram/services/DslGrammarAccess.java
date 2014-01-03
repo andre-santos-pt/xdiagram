@@ -808,12 +808,15 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cModelReferenceEReferenceQualifiedNameParserRuleCall_2_0_1 = (RuleCall)cModelReferenceEReferenceCrossReference_2_0.eContents().get(1);
 		private final Assignment cConditionalAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cConditionalFeatureConditionalParserRuleCall_3_0 = (RuleCall)cConditionalAssignment_3.eContents().get(0);
+		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
+		//// TODO validation
 		//Anchor:
-		//	"anchor" direction=AnchorDirection modelReference=[ecore::EReference|QualifiedName] conditional=FeatureConditional?;
+		//	"anchor" direction=AnchorDirection modelReference=[ecore::EReference|QualifiedName] conditional=FeatureConditional?
+		//	";";
 		public ParserRule getRule() { return rule; }
 
-		//"anchor" direction=AnchorDirection modelReference=[ecore::EReference|QualifiedName] conditional=FeatureConditional?
+		//"anchor" direction=AnchorDirection modelReference=[ecore::EReference|QualifiedName] conditional=FeatureConditional? ";"
 		public Group getGroup() { return cGroup; }
 
 		//"anchor"
@@ -839,6 +842,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 
 		//FeatureConditional
 		public RuleCall getConditionalFeatureConditionalParserRuleCall_3_0() { return cConditionalFeatureConditionalParserRuleCall_3_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
 	}
 
 	public class ElementElements extends AbstractParserRuleElementFinder {
@@ -1663,12 +1669,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFontFaceParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cFontSizeParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cFontStyleParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cSizeParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
 		
 		//LabelFeature returns Feature:
-		//	TextValue | Foreground | Background | FontFace | FontSize | FontStyle;
+		//	TextValue | Foreground | Background | FontFace | FontSize | FontStyle | Size;
 		public ParserRule getRule() { return rule; }
 
-		//TextValue | Foreground | Background | FontFace | FontSize | FontStyle
+		//TextValue | Foreground | Background | FontFace | FontSize | FontStyle | Size
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//TextValue
@@ -1688,6 +1695,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 
 		//FontStyle
 		public RuleCall getFontStyleParserRuleCall_5() { return cFontStyleParserRuleCall_5; }
+
+		//Size
+		public RuleCall getSizeParserRuleCall_6() { return cSizeParserRuleCall_6; }
 	}
 
 	public class ImageElements extends AbstractParserRuleElementFinder {
@@ -3084,8 +3094,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getStaticElementAccess().getRule();
 	}
 
+	//// TODO validation
 	//Anchor:
-	//	"anchor" direction=AnchorDirection modelReference=[ecore::EReference|QualifiedName] conditional=FeatureConditional?;
+	//	"anchor" direction=AnchorDirection modelReference=[ecore::EReference|QualifiedName] conditional=FeatureConditional?
+	//	";";
 	public AnchorElements getAnchorAccess() {
 		return (pAnchor != null) ? pAnchor : (pAnchor = new AnchorElements());
 	}
@@ -3354,7 +3366,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//LabelFeature returns Feature:
-	//	TextValue | Foreground | Background | FontFace | FontSize | FontStyle;
+	//	TextValue | Foreground | Background | FontFace | FontSize | FontStyle | Size;
 	public LabelFeatureElements getLabelFeatureAccess() {
 		return (pLabelFeature != null) ? pLabelFeature : (pLabelFeature = new LabelFeatureElements());
 	}
