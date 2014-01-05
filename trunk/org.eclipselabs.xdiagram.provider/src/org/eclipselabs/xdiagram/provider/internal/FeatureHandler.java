@@ -11,7 +11,13 @@ import org.eclipselabs.xdiagram.dsl.Feature;
 
 public interface FeatureHandler {
 	
-	
+	/**
+	 * This element accepts 
+	 * @param element
+	 * @param feature
+	 * @param container
+	 * @return
+	 */
 	boolean accept(FeatureContainer element, Feature feature, GraphicsAlgorithmContainer container);
 	
 	void handle(FeatureContainer element, Feature feature, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure);
