@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.FeatureContainer#isStyled <em>Styled</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.FeatureContainer#getStyle <em>Style</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.FeatureContainer#getFeatures <em>Features</em>}</li>
  * </ul>
@@ -25,6 +26,32 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface FeatureContainer extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Styled</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Styled</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Styled</em>' attribute.
+   * @see #setStyled(boolean)
+   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getFeatureContainer_Styled()
+   * @model
+   * @generated
+   */
+  boolean isStyled();
+
+  /**
+   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.FeatureContainer#isStyled <em>Styled</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Styled</em>' attribute.
+   * @see #isStyled()
+   * @generated
+   */
+  void setStyled(boolean value);
+
   /**
    * Returns the value of the '<em><b>Style</b></em>' reference.
    * <!-- begin-user-doc -->

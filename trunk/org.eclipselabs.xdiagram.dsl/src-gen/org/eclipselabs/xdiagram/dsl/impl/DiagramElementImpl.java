@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipselabs.xdiagram.dsl.DiagramElement;
 import org.eclipselabs.xdiagram.dsl.DslPackage;
+import org.eclipselabs.xdiagram.dsl.Group;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,6 +23,7 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DiagramElementImpl#getModelClass <em>Model Class</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DiagramElementImpl#getToolName <em>Tool Name</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DiagramElementImpl#getGroup <em>Group</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DiagramElementImpl#getImageId <em>Image Id</em>}</li>
  * </ul>
  * </p>
@@ -59,6 +61,16 @@ public class DiagramElementImpl extends MinimalEObjectImpl.Container implements 
    * @ordered
    */
   protected String toolName = TOOL_NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getGroup() <em>Group</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getGroup()
+   * @generated
+   * @ordered
+   */
+  protected Group group;
 
   /**
    * The default value of the '{@link #getImageId() <em>Image Id</em>}' attribute.
@@ -172,6 +184,49 @@ public class DiagramElementImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  public Group getGroup()
+  {
+    if (group != null && group.eIsProxy())
+    {
+      InternalEObject oldGroup = (InternalEObject)group;
+      group = (Group)eResolveProxy(oldGroup);
+      if (group != oldGroup)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, DslPackage.DIAGRAM_ELEMENT__GROUP, oldGroup, group));
+      }
+    }
+    return group;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Group basicGetGroup()
+  {
+    return group;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setGroup(Group newGroup)
+  {
+    Group oldGroup = group;
+    group = newGroup;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.DIAGRAM_ELEMENT__GROUP, oldGroup, group));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getImageId()
   {
     return imageId;
@@ -205,6 +260,9 @@ public class DiagramElementImpl extends MinimalEObjectImpl.Container implements 
         return basicGetModelClass();
       case DslPackage.DIAGRAM_ELEMENT__TOOL_NAME:
         return getToolName();
+      case DslPackage.DIAGRAM_ELEMENT__GROUP:
+        if (resolve) return getGroup();
+        return basicGetGroup();
       case DslPackage.DIAGRAM_ELEMENT__IMAGE_ID:
         return getImageId();
     }
@@ -226,6 +284,9 @@ public class DiagramElementImpl extends MinimalEObjectImpl.Container implements 
         return;
       case DslPackage.DIAGRAM_ELEMENT__TOOL_NAME:
         setToolName((String)newValue);
+        return;
+      case DslPackage.DIAGRAM_ELEMENT__GROUP:
+        setGroup((Group)newValue);
         return;
       case DslPackage.DIAGRAM_ELEMENT__IMAGE_ID:
         setImageId((String)newValue);
@@ -250,6 +311,9 @@ public class DiagramElementImpl extends MinimalEObjectImpl.Container implements 
       case DslPackage.DIAGRAM_ELEMENT__TOOL_NAME:
         setToolName(TOOL_NAME_EDEFAULT);
         return;
+      case DslPackage.DIAGRAM_ELEMENT__GROUP:
+        setGroup((Group)null);
+        return;
       case DslPackage.DIAGRAM_ELEMENT__IMAGE_ID:
         setImageId(IMAGE_ID_EDEFAULT);
         return;
@@ -271,6 +335,8 @@ public class DiagramElementImpl extends MinimalEObjectImpl.Container implements 
         return modelClass != null;
       case DslPackage.DIAGRAM_ELEMENT__TOOL_NAME:
         return TOOL_NAME_EDEFAULT == null ? toolName != null : !TOOL_NAME_EDEFAULT.equals(toolName);
+      case DslPackage.DIAGRAM_ELEMENT__GROUP:
+        return group != null;
       case DslPackage.DIAGRAM_ELEMENT__IMAGE_ID:
         return IMAGE_ID_EDEFAULT == null ? imageId != null : !IMAGE_ID_EDEFAULT.equals(imageId);
     }

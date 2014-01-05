@@ -21,7 +21,9 @@ import org.eclipselabs.xdiagram.dsl.ConnectionType;
 import org.eclipselabs.xdiagram.dsl.ContainerLayout;
 import org.eclipselabs.xdiagram.dsl.Contains;
 import org.eclipselabs.xdiagram.dsl.Corner;
+import org.eclipselabs.xdiagram.dsl.Custom;
 import org.eclipselabs.xdiagram.dsl.CustomColor;
+import org.eclipselabs.xdiagram.dsl.CustomFigure;
 import org.eclipselabs.xdiagram.dsl.Decorator;
 import org.eclipselabs.xdiagram.dsl.DefaultColor;
 import org.eclipselabs.xdiagram.dsl.DiagramElement;
@@ -33,11 +35,13 @@ import org.eclipselabs.xdiagram.dsl.EnumValue;
 import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.FeatureConditional;
 import org.eclipselabs.xdiagram.dsl.FeatureContainer;
+import org.eclipselabs.xdiagram.dsl.FigureType;
 import org.eclipselabs.xdiagram.dsl.FontFace;
 import org.eclipselabs.xdiagram.dsl.FontFaceType;
 import org.eclipselabs.xdiagram.dsl.FontSize;
 import org.eclipselabs.xdiagram.dsl.FontStyle;
 import org.eclipselabs.xdiagram.dsl.FontStyleType;
+import org.eclipselabs.xdiagram.dsl.Group;
 import org.eclipselabs.xdiagram.dsl.Image;
 import org.eclipselabs.xdiagram.dsl.ImportStatement;
 import org.eclipselabs.xdiagram.dsl.IntValue;
@@ -83,6 +87,13 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * @generated
    */
   private EClass importStatementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass groupEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -167,6 +178,20 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * @generated
    */
   private EClass colorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass customFigureEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass customEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -355,6 +380,13 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EEnum figureTypeEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EEnum connectionTypeEEnum = null;
 
   /**
@@ -521,7 +553,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Elements()
+  public EReference getXDiagram_Groups()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(3);
   }
@@ -531,7 +563,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Styles()
+  public EReference getXDiagram_Elements()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(4);
   }
@@ -541,9 +573,29 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Colors()
+  public EReference getXDiagram_Styles()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getXDiagram_Colors()
+  {
+    return (EReference)xDiagramEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getXDiagram_Figures()
+  {
+    return (EReference)xDiagramEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -564,6 +616,26 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
   public EAttribute getImportStatement_ImportedNamespace()
   {
     return (EAttribute)importStatementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGroup()
+  {
+    return groupEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGroup_Name()
+  {
+    return (EAttribute)groupEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -601,9 +673,19 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getDiagramElement_Group()
+  {
+    return (EReference)diagramElementEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getDiagramElement_ImageId()
   {
-    return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -661,9 +743,19 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getFeatureContainer_Styled()
+  {
+    return (EAttribute)featureContainerEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getFeatureContainer_Style()
   {
-    return (EReference)featureContainerEClass.getEStructuralFeatures().get(0);
+    return (EReference)featureContainerEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -673,7 +765,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    */
   public EReference getFeatureContainer_Features()
   {
-    return (EReference)featureContainerEClass.getEStructuralFeatures().get(1);
+    return (EReference)featureContainerEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -801,19 +893,9 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getLink_Styled()
-  {
-    return (EAttribute)linkEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getLink_Decorators()
   {
-    return (EReference)linkEClass.getEStructuralFeatures().get(6);
+    return (EReference)linkEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -901,7 +983,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getConnectableElement_Styled()
+  public EAttribute getConnectableElement_Composite()
   {
     return (EAttribute)connectableElementEClass.getEStructuralFeatures().get(0);
   }
@@ -911,19 +993,9 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getConnectableElement_Composite()
-  {
-    return (EAttribute)connectableElementEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getConnectableElement_Children()
   {
-    return (EReference)connectableElementEClass.getEStructuralFeatures().get(2);
+    return (EReference)connectableElementEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1034,6 +1106,56 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
   public EReference getColor_Custom()
   {
     return (EReference)colorEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCustomFigure()
+  {
+    return customFigureEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCustomFigure_Name()
+  {
+    return (EAttribute)customFigureEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCustomFigure_Element()
+  {
+    return (EReference)customFigureEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCustom()
+  {
+    return customEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCustom_Figure()
+  {
+    return (EReference)customEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1641,6 +1763,16 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EEnum getFigureType()
+  {
+    return figureTypeEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getConnectionType()
   {
     return connectionTypeEEnum;
@@ -1760,16 +1892,22 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     createEAttribute(xDiagramEClass, XDIAGRAM__IMPORT_URI);
     createEReference(xDiagramEClass, XDIAGRAM__IMPORTS);
     createEReference(xDiagramEClass, XDIAGRAM__MODEL_CLASS);
+    createEReference(xDiagramEClass, XDIAGRAM__GROUPS);
     createEReference(xDiagramEClass, XDIAGRAM__ELEMENTS);
     createEReference(xDiagramEClass, XDIAGRAM__STYLES);
     createEReference(xDiagramEClass, XDIAGRAM__COLORS);
+    createEReference(xDiagramEClass, XDIAGRAM__FIGURES);
 
     importStatementEClass = createEClass(IMPORT_STATEMENT);
     createEAttribute(importStatementEClass, IMPORT_STATEMENT__IMPORTED_NAMESPACE);
 
+    groupEClass = createEClass(GROUP);
+    createEAttribute(groupEClass, GROUP__NAME);
+
     diagramElementEClass = createEClass(DIAGRAM_ELEMENT);
     createEReference(diagramElementEClass, DIAGRAM_ELEMENT__MODEL_CLASS);
     createEAttribute(diagramElementEClass, DIAGRAM_ELEMENT__TOOL_NAME);
+    createEReference(diagramElementEClass, DIAGRAM_ELEMENT__GROUP);
     createEAttribute(diagramElementEClass, DIAGRAM_ELEMENT__IMAGE_ID);
 
     styleEClass = createEClass(STYLE);
@@ -1779,6 +1917,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     createEReference(featureEClass, FEATURE__CONDITIONAL);
 
     featureContainerEClass = createEClass(FEATURE_CONTAINER);
+    createEAttribute(featureContainerEClass, FEATURE_CONTAINER__STYLED);
     createEReference(featureContainerEClass, FEATURE_CONTAINER__STYLE);
     createEReference(featureContainerEClass, FEATURE_CONTAINER__FEATURES);
 
@@ -1796,7 +1935,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     createEReference(linkEClass, LINK__SOURCE_REFERENCE);
     createEReference(linkEClass, LINK__TARGET_REFERENCE);
     createEAttribute(linkEClass, LINK__TYPE);
-    createEAttribute(linkEClass, LINK__STYLED);
     createEReference(linkEClass, LINK__DECORATORS);
 
     decoratorEClass = createEClass(DECORATOR);
@@ -1808,7 +1946,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     createEReference(decoratorEClass, DECORATOR__LABEL);
 
     connectableElementEClass = createEClass(CONNECTABLE_ELEMENT);
-    createEAttribute(connectableElementEClass, CONNECTABLE_ELEMENT__STYLED);
     createEAttribute(connectableElementEClass, CONNECTABLE_ELEMENT__COMPOSITE);
     createEReference(connectableElementEClass, CONNECTABLE_ELEMENT__CHILDREN);
 
@@ -1825,6 +1962,13 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     colorEClass = createEClass(COLOR);
     createEAttribute(colorEClass, COLOR__DEFAULT);
     createEReference(colorEClass, COLOR__CUSTOM);
+
+    customFigureEClass = createEClass(CUSTOM_FIGURE);
+    createEAttribute(customFigureEClass, CUSTOM_FIGURE__NAME);
+    createEReference(customFigureEClass, CUSTOM_FIGURE__ELEMENT);
+
+    customEClass = createEClass(CUSTOM);
+    createEReference(customEClass, CUSTOM__FIGURE);
 
     rectangleEClass = createEClass(RECTANGLE);
     createEAttribute(rectangleEClass, RECTANGLE__RECTANGLE);
@@ -1913,6 +2057,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     createEAttribute(lineWidthEClass, LINE_WIDTH__WIDTH);
 
     // Create enums
+    figureTypeEEnum = createEEnum(FIGURE_TYPE);
     connectionTypeEEnum = createEEnum(CONNECTION_TYPE);
     anchorDirectionEEnum = createEEnum(ANCHOR_DIRECTION);
     defaultColorEEnum = createEEnum(DEFAULT_COLOR);
@@ -1959,6 +2104,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     linkEClass.getESuperTypes().add(this.getFeatureContainer());
     connectableElementEClass.getESuperTypes().add(this.getFeatureContainer());
     anchorEClass.getESuperTypes().add(this.getFeature());
+    customEClass.getESuperTypes().add(this.getConnectableElement());
     rectangleEClass.getESuperTypes().add(this.getConnectableElement());
     rhombusEClass.getESuperTypes().add(this.getConnectableElement());
     ellipseEClass.getESuperTypes().add(this.getConnectableElement());
@@ -1990,16 +2136,22 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEAttribute(getXDiagram_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Imports(), this.getImportStatement(), null, "imports", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_ModelClass(), ecorePackage.getEClass(), null, "modelClass", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getXDiagram_Groups(), this.getGroup(), null, "groups", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Elements(), this.getDiagramElement(), null, "elements", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Styles(), this.getStyle(), null, "styles", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Colors(), this.getCustomColor(), null, "colors", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getXDiagram_Figures(), this.getCustomFigure(), null, "figures", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(importStatementEClass, ImportStatement.class, "ImportStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getImportStatement_ImportedNamespace(), ecorePackage.getEString(), "importedNamespace", null, 0, 1, ImportStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(groupEClass, Group.class, "Group", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getGroup_Name(), ecorePackage.getEString(), "name", null, 0, 1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(diagramElementEClass, DiagramElement.class, "DiagramElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDiagramElement_ModelClass(), ecorePackage.getEClass(), null, "modelClass", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDiagramElement_ToolName(), ecorePackage.getEString(), "toolName", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDiagramElement_Group(), this.getGroup(), null, "group", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDiagramElement_ImageId(), ecorePackage.getEString(), "imageId", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(styleEClass, Style.class, "Style", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2009,6 +2161,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEReference(getFeature_Conditional(), this.getFeatureConditional(), null, "conditional", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(featureContainerEClass, FeatureContainer.class, "FeatureContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFeatureContainer_Styled(), ecorePackage.getEBoolean(), "styled", null, 0, 1, FeatureContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFeatureContainer_Style(), this.getStyle(), null, "style", null, 0, 1, FeatureContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFeatureContainer_Features(), this.getFeature(), null, "features", null, 0, -1, FeatureContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2026,7 +2179,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEReference(getLink_SourceReference(), ecorePackage.getEReference(), null, "sourceReference", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getLink_TargetReference(), ecorePackage.getEReference(), null, "targetReference", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getLink_Type(), this.getConnectionType(), "type", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getLink_Styled(), ecorePackage.getEBoolean(), "styled", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getLink_Decorators(), this.getDecorator(), null, "decorators", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(decoratorEClass, Decorator.class, "Decorator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2038,7 +2190,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEReference(getDecorator_Label(), this.getLabel(), null, "label", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(connectableElementEClass, ConnectableElement.class, "ConnectableElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getConnectableElement_Styled(), ecorePackage.getEBoolean(), "styled", null, 0, 1, ConnectableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getConnectableElement_Composite(), ecorePackage.getEBoolean(), "composite", null, 0, 1, ConnectableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getConnectableElement_Children(), this.getConnectableElement(), null, "children", null, 0, -1, ConnectableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2055,6 +2206,13 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEClass(colorEClass, Color.class, "Color", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getColor_Default(), this.getDefaultColor(), "default", null, 0, 1, Color.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getColor_Custom(), this.getCustomColor(), null, "custom", null, 0, 1, Color.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(customFigureEClass, CustomFigure.class, "CustomFigure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCustomFigure_Name(), ecorePackage.getEString(), "name", null, 0, 1, CustomFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCustomFigure_Element(), this.getConnectableElement(), null, "element", null, 0, 1, CustomFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(customEClass, Custom.class, "Custom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCustom_Figure(), this.getCustomFigure(), null, "figure", null, 0, 1, Custom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rectangleEClass, Rectangle.class, "Rectangle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getRectangle_Rectangle(), ecorePackage.getEBoolean(), "rectangle", null, 0, 1, Rectangle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2143,6 +2301,10 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEAttribute(getLineWidth_Width(), ecorePackage.getEInt(), "width", null, 0, 1, LineWidth.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
+    initEEnum(figureTypeEEnum, FigureType.class, "FigureType");
+    addEEnumLiteral(figureTypeEEnum, FigureType.RECTANGLE);
+    addEEnumLiteral(figureTypeEEnum, FigureType.ELLIPSE);
+
     initEEnum(connectionTypeEEnum, ConnectionType.class, "ConnectionType");
     addEEnumLiteral(connectionTypeEEnum, ConnectionType.FREE);
     addEEnumLiteral(connectionTypeEEnum, ConnectionType.MANHATTAN);

@@ -41,6 +41,15 @@ public interface DslFactory extends EFactory
   ImportStatement createImportStatement();
 
   /**
+   * Returns a new object of class '<em>Group</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Group</em>'.
+   * @generated
+   */
+  Group createGroup();
+
+  /**
    * Returns a new object of class '<em>Diagram Element</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -147,6 +156,24 @@ public interface DslFactory extends EFactory
    * @generated
    */
   Color createColor();
+
+  /**
+   * Returns a new object of class '<em>Custom Figure</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Custom Figure</em>'.
+   * @generated
+   */
+  CustomFigure createCustomFigure();
+
+  /**
+   * Returns a new object of class '<em>Custom</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Custom</em>'.
+   * @generated
+   */
+  Custom createCustom();
 
   /**
    * Returns a new object of class '<em>Rectangle</em>'.

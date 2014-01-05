@@ -19,8 +19,10 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipselabs.xdiagram.dsl.CustomColor;
+import org.eclipselabs.xdiagram.dsl.CustomFigure;
 import org.eclipselabs.xdiagram.dsl.DiagramElement;
 import org.eclipselabs.xdiagram.dsl.DslPackage;
+import org.eclipselabs.xdiagram.dsl.Group;
 import org.eclipselabs.xdiagram.dsl.ImportStatement;
 import org.eclipselabs.xdiagram.dsl.Style;
 import org.eclipselabs.xdiagram.dsl.XDiagram;
@@ -35,9 +37,11 @@ import org.eclipselabs.xdiagram.dsl.XDiagram;
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getImportURI <em>Import URI</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getImports <em>Imports</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getModelClass <em>Model Class</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getGroups <em>Groups</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getElements <em>Elements</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getStyles <em>Styles</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getColors <em>Colors</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getFigures <em>Figures</em>}</li>
  * </ul>
  * </p>
  *
@@ -86,6 +90,16 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
   protected EClass modelClass;
 
   /**
+   * The cached value of the '{@link #getGroups() <em>Groups</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getGroups()
+   * @generated
+   * @ordered
+   */
+  protected EList<Group> groups;
+
+  /**
    * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -114,6 +128,16 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * @ordered
    */
   protected EList<CustomColor> colors;
+
+  /**
+   * The cached value of the '{@link #getFigures() <em>Figures</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFigures()
+   * @generated
+   * @ordered
+   */
+  protected EList<CustomFigure> figures;
 
   /**
    * <!-- begin-user-doc -->
@@ -221,6 +245,20 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Group> getGroups()
+  {
+    if (groups == null)
+    {
+      groups = new EObjectContainmentEList<Group>(Group.class, this, DslPackage.XDIAGRAM__GROUPS);
+    }
+    return groups;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<DiagramElement> getElements()
   {
     if (elements == null)
@@ -263,6 +301,20 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<CustomFigure> getFigures()
+  {
+    if (figures == null)
+    {
+      figures = new EObjectContainmentEList<CustomFigure>(CustomFigure.class, this, DslPackage.XDIAGRAM__FIGURES);
+    }
+    return figures;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -270,12 +322,16 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
     {
       case DslPackage.XDIAGRAM__IMPORTS:
         return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
+      case DslPackage.XDIAGRAM__GROUPS:
+        return ((InternalEList<?>)getGroups()).basicRemove(otherEnd, msgs);
       case DslPackage.XDIAGRAM__ELEMENTS:
         return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
       case DslPackage.XDIAGRAM__STYLES:
         return ((InternalEList<?>)getStyles()).basicRemove(otherEnd, msgs);
       case DslPackage.XDIAGRAM__COLORS:
         return ((InternalEList<?>)getColors()).basicRemove(otherEnd, msgs);
+      case DslPackage.XDIAGRAM__FIGURES:
+        return ((InternalEList<?>)getFigures()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -297,12 +353,16 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
       case DslPackage.XDIAGRAM__MODEL_CLASS:
         if (resolve) return getModelClass();
         return basicGetModelClass();
+      case DslPackage.XDIAGRAM__GROUPS:
+        return getGroups();
       case DslPackage.XDIAGRAM__ELEMENTS:
         return getElements();
       case DslPackage.XDIAGRAM__STYLES:
         return getStyles();
       case DslPackage.XDIAGRAM__COLORS:
         return getColors();
+      case DslPackage.XDIAGRAM__FIGURES:
+        return getFigures();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -328,6 +388,10 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
       case DslPackage.XDIAGRAM__MODEL_CLASS:
         setModelClass((EClass)newValue);
         return;
+      case DslPackage.XDIAGRAM__GROUPS:
+        getGroups().clear();
+        getGroups().addAll((Collection<? extends Group>)newValue);
+        return;
       case DslPackage.XDIAGRAM__ELEMENTS:
         getElements().clear();
         getElements().addAll((Collection<? extends DiagramElement>)newValue);
@@ -339,6 +403,10 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
       case DslPackage.XDIAGRAM__COLORS:
         getColors().clear();
         getColors().addAll((Collection<? extends CustomColor>)newValue);
+        return;
+      case DslPackage.XDIAGRAM__FIGURES:
+        getFigures().clear();
+        getFigures().addAll((Collection<? extends CustomFigure>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -363,6 +431,9 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
       case DslPackage.XDIAGRAM__MODEL_CLASS:
         setModelClass((EClass)null);
         return;
+      case DslPackage.XDIAGRAM__GROUPS:
+        getGroups().clear();
+        return;
       case DslPackage.XDIAGRAM__ELEMENTS:
         getElements().clear();
         return;
@@ -371,6 +442,9 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         return;
       case DslPackage.XDIAGRAM__COLORS:
         getColors().clear();
+        return;
+      case DslPackage.XDIAGRAM__FIGURES:
+        getFigures().clear();
         return;
     }
     super.eUnset(featureID);
@@ -392,12 +466,16 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         return imports != null && !imports.isEmpty();
       case DslPackage.XDIAGRAM__MODEL_CLASS:
         return modelClass != null;
+      case DslPackage.XDIAGRAM__GROUPS:
+        return groups != null && !groups.isEmpty();
       case DslPackage.XDIAGRAM__ELEMENTS:
         return elements != null && !elements.isEmpty();
       case DslPackage.XDIAGRAM__STYLES:
         return styles != null && !styles.isEmpty();
       case DslPackage.XDIAGRAM__COLORS:
         return colors != null && !colors.isEmpty();
+      case DslPackage.XDIAGRAM__FIGURES:
+        return figures != null && !figures.isEmpty();
     }
     return super.eIsSet(featureID);
   }

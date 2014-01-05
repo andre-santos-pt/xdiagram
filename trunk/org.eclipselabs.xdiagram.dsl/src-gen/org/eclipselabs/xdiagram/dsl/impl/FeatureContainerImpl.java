@@ -30,6 +30,7 @@ import org.eclipselabs.xdiagram.dsl.Style;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.FeatureContainerImpl#isStyled <em>Styled</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.FeatureContainerImpl#getStyle <em>Style</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.FeatureContainerImpl#getFeatures <em>Features</em>}</li>
  * </ul>
@@ -39,6 +40,26 @@ import org.eclipselabs.xdiagram.dsl.Style;
  */
 public class FeatureContainerImpl extends MinimalEObjectImpl.Container implements FeatureContainer
 {
+  /**
+   * The default value of the '{@link #isStyled() <em>Styled</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isStyled()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean STYLED_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isStyled() <em>Styled</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isStyled()
+   * @generated
+   * @ordered
+   */
+  protected boolean styled = STYLED_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getStyle() <em>Style</em>}' reference.
    * <!-- begin-user-doc -->
@@ -78,6 +99,29 @@ public class FeatureContainerImpl extends MinimalEObjectImpl.Container implement
   protected EClass eStaticClass()
   {
     return DslPackage.Literals.FEATURE_CONTAINER;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isStyled()
+  {
+    return styled;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setStyled(boolean newStyled)
+  {
+    boolean oldStyled = styled;
+    styled = newStyled;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.FEATURE_CONTAINER__STYLED, oldStyled, styled));
   }
 
   /**
@@ -163,6 +207,8 @@ public class FeatureContainerImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
+      case DslPackage.FEATURE_CONTAINER__STYLED:
+        return isStyled();
       case DslPackage.FEATURE_CONTAINER__STYLE:
         if (resolve) return getStyle();
         return basicGetStyle();
@@ -183,6 +229,9 @@ public class FeatureContainerImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
+      case DslPackage.FEATURE_CONTAINER__STYLED:
+        setStyled((Boolean)newValue);
+        return;
       case DslPackage.FEATURE_CONTAINER__STYLE:
         setStyle((Style)newValue);
         return;
@@ -204,6 +253,9 @@ public class FeatureContainerImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
+      case DslPackage.FEATURE_CONTAINER__STYLED:
+        setStyled(STYLED_EDEFAULT);
+        return;
       case DslPackage.FEATURE_CONTAINER__STYLE:
         setStyle((Style)null);
         return;
@@ -224,12 +276,31 @@ public class FeatureContainerImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
+      case DslPackage.FEATURE_CONTAINER__STYLED:
+        return styled != STYLED_EDEFAULT;
       case DslPackage.FEATURE_CONTAINER__STYLE:
         return style != null;
       case DslPackage.FEATURE_CONTAINER__FEATURES:
         return features != null && !features.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (styled: ");
+    result.append(styled);
+    result.append(')');
+    return result.toString();
   }
 
 } //FeatureContainerImpl

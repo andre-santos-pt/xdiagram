@@ -18,9 +18,11 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getImportURI <em>Import URI</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getImports <em>Imports</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getModelClass <em>Model Class</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getGroups <em>Groups</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getElements <em>Elements</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getStyles <em>Styles</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getColors <em>Colors</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getFigures <em>Figures</em>}</li>
  * </ul>
  * </p>
  *
@@ -99,6 +101,22 @@ public interface XDiagram extends EObject
   void setModelClass(EClass value);
 
   /**
+   * Returns the value of the '<em><b>Groups</b></em>' containment reference list.
+   * The list contents are of type {@link org.eclipselabs.xdiagram.dsl.Group}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Groups</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Groups</em>' containment reference list.
+   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getXDiagram_Groups()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Group> getGroups();
+
+  /**
    * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
    * The list contents are of type {@link org.eclipselabs.xdiagram.dsl.DiagramElement}.
    * <!-- begin-user-doc -->
@@ -145,5 +163,21 @@ public interface XDiagram extends EObject
    * @generated
    */
   EList<CustomColor> getColors();
+
+  /**
+   * Returns the value of the '<em><b>Figures</b></em>' containment reference list.
+   * The list contents are of type {@link org.eclipselabs.xdiagram.dsl.CustomFigure}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Figures</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Figures</em>' containment reference list.
+   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getXDiagram_Figures()
+   * @model containment="true"
+   * @generated
+   */
+  EList<CustomFigure> getFigures();
 
 } // XDiagram
