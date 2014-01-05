@@ -13,20 +13,22 @@ import org.eclipse.graphiti.mm.pictograms.FixPointAnchor;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipselabs.xdiagram.dsl.Anchor;
 import org.eclipselabs.xdiagram.dsl.ConnectableElement;
-import org.eclipselabs.xdiagram.dsl.Element;
+import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.Position;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 
 public class AnchorHandler implements FeatureHandler {
 
+	
+	
 	@Override
-	public boolean accept(Element element, Feature feature, GraphicsAlgorithmContainer container) {
+	public boolean accept(FeatureContainer element, Feature feature, GraphicsAlgorithmContainer container) {
 		return feature instanceof Anchor && container instanceof org.eclipse.graphiti.mm.pictograms.Anchor;
 	}
 
 	@Override
-	public void handle(Element element, Feature feature, EObject eObject,
+	public void handle(FeatureContainer element, Feature feature, EObject eObject,
 			Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
 		Anchor anchor = (Anchor) feature;
 		org.eclipse.graphiti.mm.pictograms.Anchor gAnchor = (org.eclipse.graphiti.mm.pictograms.Anchor) container;
@@ -39,13 +41,14 @@ public class AnchorHandler implements FeatureHandler {
 	}
 
 	@Override
-	public boolean acceptDefaults(Element element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
+	public boolean acceptDefaults(FeatureContainer element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
 		return true;
 	}
 
 	@Override
-	public void setDefaults(Element element, GraphicsAlgorithm figure, Diagram diagram) {
-		Graphiti.getPeCreateService().createChopboxAnchor((ContainerShape)figure.getPictogramElement());
+	public void setDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
+		
+		
 	}
 	
 }

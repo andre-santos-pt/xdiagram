@@ -17,7 +17,8 @@ import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipselabs.xdiagram.dsl.BooleanValue;
-import org.eclipselabs.xdiagram.dsl.Element;
+import org.eclipselabs.xdiagram.dsl.Custom;
+import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.EnumValue;
 import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.FeatureConditional;
@@ -38,9 +39,13 @@ public class FeatureHandlerChain  {
 		return this;
 	}
 
-	public void update(Element element, EObject eObject, Diagram diagram, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
-		
-		Set<Class<?>> defined = new HashSet<>();
+	public Set<Class<?>> update(FeatureContainer element, EObject eObject, Diagram diagram, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
+		Set<Class<?>> defined = null;
+				
+		if(element instanceof Custom)
+			defined = update(((Custom) element).getFigure().getElement(), eObject, diagram, figure, container);
+		else
+			defined = new HashSet<>();
 
 		boolean existsConditional = false;
 		
@@ -68,11 +73,12 @@ public class FeatureHandlerChain  {
 		for(FeatureHandler fh : handlers)
 			if(!defined.contains(fh.getClass()) && fh.acceptDefaults(element, figure, container))
 				fh.setDefaults(element, figure, diagram);
-	
+		
+		return defined;
 	}
 
 	
-	private void addListener(final Element element,
+	private void addListener(final FeatureContainer element,
 			final Diagram diagram, final EObject eObject,
 			final GraphicsAlgorithm figure, final GraphicsAlgorithmContainer container) {
 		
@@ -95,9 +101,9 @@ public class FeatureHandlerChain  {
 		if(cond == null)
 			return true;
 
-		EAttribute att = Util.matchAttribute(eObject.eClass(), cond.getModelAttribute());
+//		EAttribute att = Util.matchAttribute(eObject.eClass(), cond.getModelAttribute());
 
-		Object obj = eObject.eGet(att);
+		Object obj = eObject.eGet(cond.getModelAttribute());
 
 		if(obj == null)
 			return false;

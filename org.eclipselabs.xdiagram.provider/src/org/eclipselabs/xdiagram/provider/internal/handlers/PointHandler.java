@@ -7,19 +7,19 @@ import org.eclipse.graphiti.mm.algorithms.Polyline;
 import org.eclipse.graphiti.mm.algorithms.styles.StylesFactory;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
-import org.eclipselabs.xdiagram.dsl.Element;
+import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.Point;
 
 public class PointHandler implements FeatureHandler {
 
 	@Override
-	public boolean accept(Element element, Feature feature, GraphicsAlgorithmContainer container) {
+	public boolean accept(FeatureContainer element, Feature feature, GraphicsAlgorithmContainer container) {
 		return feature instanceof Point;
 	}
 
 	@Override
-	public void handle(Element element, Feature feature, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
+	public void handle(FeatureContainer element, Feature feature, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
 		
 		if(figure instanceof Polyline) {
 			Point point = (Point) feature;
@@ -31,12 +31,12 @@ public class PointHandler implements FeatureHandler {
 	}
 	
 	@Override
-	public boolean acceptDefaults(Element element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
+	public boolean acceptDefaults(FeatureContainer element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
 		return false;
 	}
 	
 	@Override
-	public void setDefaults(Element element, GraphicsAlgorithm figure, Diagram diagram) {
+	public void setDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
 
 	}
 

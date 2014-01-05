@@ -11,6 +11,9 @@ import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipselabs.xdiagram.dsl.Anchor;
 import org.eclipselabs.xdiagram.dsl.ConnectableElement;
+import org.eclipselabs.xdiagram.dsl.Custom;
+import org.eclipselabs.xdiagram.dsl.CustomFigure;
+import org.eclipselabs.xdiagram.dsl.Image;
 import org.eclipselabs.xdiagram.dsl.Polyline;
 import org.eclipselabs.xdiagram.provider.LanguageProvider;
 
@@ -44,13 +47,25 @@ public enum ElementCreation {
 		}
 	},
 	
-	// TODO: IMAGE
+	IMAGE {
+		protected GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
+			Image image = (Image) element;
+			return Graphiti.getGaService().createImage(container, image.getImageId());			
+		}
+	},
 	
 	INVISIBLE {
 		protected GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
 			return Graphiti.getGaService().createInvisibleRectangle((PictogramElement) container);
 		}
 	},
+	
+	CUSTOM {
+		protected GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
+			CustomFigure fig = ((Custom) element).getFigure();
+			return createNodeFigure(fig.getElement(), diagram, container);			
+		}
+	}
 	;
 
 	protected abstract GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container);

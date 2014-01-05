@@ -13,14 +13,12 @@ import org.eclipse.graphiti.services.Graphiti;
 import org.eclipse.graphiti.util.ColorConstant;
 import org.eclipse.graphiti.util.IColorConstant;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
-import org.eclipselabs.xdiagram.dsl.Background;
 import org.eclipselabs.xdiagram.dsl.Color;
 import org.eclipselabs.xdiagram.dsl.ColorFeature;
 import org.eclipselabs.xdiagram.dsl.CustomColor;
 import org.eclipselabs.xdiagram.dsl.DefaultColor;
-import org.eclipselabs.xdiagram.dsl.Element;
+import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.Feature;
-import org.eclipselabs.xdiagram.dsl.Foreground;
 
 public class ColorHandler implements FeatureHandler {
 
@@ -48,12 +46,12 @@ public class ColorHandler implements FeatureHandler {
 	}
 	
 	@Override
-	public boolean accept(Element element, Feature feature, GraphicsAlgorithmContainer container) {
+	public boolean accept(FeatureContainer element, Feature feature, GraphicsAlgorithmContainer container) {
 		return feature instanceof ColorFeature;
 	}
 
 	@Override
-	public void handle(Element element, Feature feature, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
+	public void handle(FeatureContainer element, Feature feature, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
 
 		ColorFeature colorFeature = (ColorFeature) feature;
 		Color c = colorFeature.getColor();
@@ -66,20 +64,20 @@ public class ColorHandler implements FeatureHandler {
 			cg = Graphiti.getGaService().manageColor(diagram, (map.get(c.getDefault())));
 		}
 
-		if(colorFeature instanceof Background)
-			figure.setBackground(cg);
-		else if(colorFeature instanceof Foreground)
-			figure.setForeground(cg);
+		switch(colorFeature.getType()) {
+		case "background": figure.setBackground(cg); break;
+		case "foreground": figure.setForeground(cg); break;
+		}
 	}
 
 	@Override
-	public void setDefaults(Element element, GraphicsAlgorithm figure, Diagram diagram) {
+	public void setDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
 		figure.setBackground(Graphiti.getGaService().manageColor(diagram, map.get(DefaultColor.WHITE)));
 		figure.setForeground(Graphiti.getGaService().manageColor(diagram, map.get(DefaultColor.BLACK)));
 	}
 
 	@Override
-	public boolean acceptDefaults(Element element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
+	public boolean acceptDefaults(FeatureContainer element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
 		return true;
 	}
 

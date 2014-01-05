@@ -7,16 +7,23 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.impl.EClassImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.transaction.RecordingCommand;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
+import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.graphiti.features.context.IAddContext;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
@@ -50,26 +57,40 @@ import org.eclipselabs.xdiagram.provider.internal.handlers.SizeHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.TextValueHandler;
 import org.eclipselabs.xdiagram.dsl.ConnectableElement;
 import org.eclipselabs.xdiagram.dsl.Contains;
+import org.eclipselabs.xdiagram.dsl.Custom;
 import org.eclipselabs.xdiagram.dsl.Decorator;
-import org.eclipselabs.xdiagram.dsl.Element;
+import org.eclipselabs.xdiagram.dsl.DiagramElement;
+import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.Feature;
+import org.eclipselabs.xdiagram.dsl.FeatureConditional;
 import org.eclipselabs.xdiagram.dsl.Label;
 import org.eclipselabs.xdiagram.dsl.Link;
 import org.eclipselabs.xdiagram.dsl.Node;
 import org.eclipselabs.xdiagram.dsl.TextValue;
 import org.eclipselabs.xdiagram.dsl.XDiagram;
+import org.eclipselabs.xdiagram.dsl.util.DslSwitch;
 import org.osgi.framework.Bundle;
+
+import com.google.common.collect.Maps;
 
 public class LanguageProvider implements GraphicsProvider {
 
 	private String modelFilePath;
 	private XDiagram model;
+	private EPackage ePackage;
 
 	private FeatureHandlerChain featureChain;
 
 	private ContainsHandler containsHandler;
 
+	private Map<EClass, Node> nodes;
+	private Map<EClass, Link> complexLinks;
+	private Map<EReference, Link> links;
+
+	private Map<Anchor, EObject> anchors;
+	
 	public LanguageProvider() {
+		anchors = Maps.newHashMap();
 		containsHandler = new ContainsHandler();
 
 		featureChain = new FeatureHandlerChain()
@@ -79,14 +100,16 @@ public class LanguageProvider implements GraphicsProvider {
 		.add(new LineWidthHandler())
 		.add(new PointHandler())
 		.add(new TextValueHandler())
-		
+
 		.add(containsHandler)
 		.add(new AnchorHandler());
 	}
 
+
 	@Override
-	public void setup(Map<String, String> properties) throws ProviderException {		
+	public void setup(Map<String, String> properties, EPackage ePackage) throws ProviderException {		
 		new DslStandaloneSetup().createInjectorAndDoEMFRegistration();
+		this.ePackage = ePackage;
 
 		modelFilePath = properties.get("file");
 		if(!new File(modelFilePath).exists())
@@ -109,35 +132,150 @@ public class LanguageProvider implements GraphicsProvider {
 
 			//			resource = rs.getResource(URI.createURI(uri), true);
 			Resource resource = rs.getResource(uri, true);
-
 			List<EObject> objs = resource.getContents();
-			this.model = (XDiagram) objs.get(0);
-			//			String importUri = this.model.getMetamodel().getImportURI();
-			//			ePackage = EPackage.Registry.INSTANCE.getEPackage(this.model.getModel());	
-
-			// TODO: Eduardo
-			//			FigureProvider.setStyles(this.model.getStyles());
-			//			NodeProvider.registerNodeImages(properties, bundle, this.model.getNodes());
+			model = (XDiagram) objs.get(0);
+			
+			
+			
+			loadModelData();
 		}
 		catch(Exception e){
+			e.printStackTrace();
 			throw new ProviderException("Could not load language model:" + e.getMessage());
 		}
 	}
+	
+	private class LoadModelData extends DslSwitch<Object> {
+		
+		private EClass match(EClass c) {
+			return (EClass) ePackage.getEClassifier(c.getName());
+		}
+		
+		private <T extends EStructuralFeature> T match(T r) {
+			EClass c = match((EClass) r.eContainer());
+			T f = (T) c.getEStructuralFeature(r.getName());
+			return f;
+		}
+		
+		public Object caseXDiagram(XDiagram model) {
+			model.setModelClass(match(model.getModelClass())); 
+			return null;
+		};
+		
+		public Object caseNode(Node node) {
+			EClass c = match(node.getModelClass());
+			node.setModelClass(c);
+			nodes.put(c, node);
+			return null;
+		}
+		
+		public Object caseLink(Link link) {
+			if(link.isComplex()) {
+				EClass c = match(link.getModelClass());
+				link.setModelClass(c);
+				complexLinks.put(c, link);
+				
+				link.setSourceReference(match(link.getSourceReference()));
+				link.setTargetReference(match(link.getTargetReference()));
+			}
+			else {
+				EReference r = match(link.getModelReference());
+				link.setModelReference(r);
+				links.put(r, link);
+			}
+			return null;
+		};
+	
+		public Object caseContains(Contains contains) {
+			contains.setModelReference(match(contains.getModelReference()));
+			return null;
+		};
+		
+		public Object caseAnchor(org.eclipselabs.xdiagram.dsl.Anchor anchor) {
+			anchor.setModelReference(match(anchor.getModelReference()));
+			return null;
+		};
+		
+		public Object caseTextValue(TextValue textValue) {
+			textValue.setModelAttribute(match(textValue.getModelAttribute()));
+			return null;
+		};
+		
+		public Object caseFeatureConditional(FeatureConditional conditional) {
+			conditional.setModelAttribute(match(conditional.getModelAttribute()));
+			return null;
+		};
+		
+	};
+	
+	
+	
+	private void loadModelData() {
+		nodes = Maps.newHashMap();
+		links = Maps.newHashMap();
+		complexLinks = Maps.newHashMap();
 
-	private static boolean equals(EClass a, EClass b) {
-		return a.getName().equals(b.getName());
+		LoadModelData doSwitch = new LoadModelData();
+		
+		for(TreeIterator<EObject> iterator = EcoreUtil.getAllContents(model.eResource(), false); iterator.hasNext();)
+		     doSwitch.doSwitch(iterator.next());
+	}		
+
+	private boolean isNode(EClass c) {
+		assert c != null;
+		return nodes.containsKey(c);
 	}
 
-	private Node match(EClass c) {
-		for(Node node : model.getNodes())
-			if (equals(node.getModelClass(), c))
-				return node;
-		return null;
+	private Node getNode(EClass c) {
+		assert c != null;
+		return nodes.get(c);
+	}
+
+	private boolean isComplexLink(EClass c) {
+		assert c != null;
+		return complexLinks.containsKey(c);
+	}
+
+	private Link getComplexLink(EClass c) {
+		assert c != null;
+		return complexLinks.get(c);
+	}
+
+
+	private boolean isLink(EReference r) {
+		assert r != null;
+		return links.containsKey(r);
+	}
+
+	private Link getLink(EReference r) {
+		assert r != null;
+		return links.get(r);
+	}
+
+
+	@Override
+	public boolean hasTool(EClass eClass) {
+		return isNode(eClass);
 	}
 
 	@Override
-	public EClass getRoot(EPackage ePackage) {
-		return (EClass) ePackage.getEClassifier(this.model.getModelClass().getName());
+	public boolean hasTool(EReference eReference) {	
+		return isLink(eReference);
+	}
+
+	@Override
+	public boolean isLink(EClass eClass) {
+		return isComplexLink(eClass);
+	}
+	
+	@Override
+	public boolean isProperty(EStructuralFeature feature) {
+		return true;
+	}
+	
+	@Override
+	public EClass getRoot() {
+		return model.getModelClass();
 	}
 
 
@@ -148,9 +286,9 @@ public class LanguageProvider implements GraphicsProvider {
 		}
 
 		for(EReference r: containsHandler.getReferences(container))
-			if(((EClass) r.getEType()).isSuperTypeOf(eClass))
+			if(r.getEReferenceType().isSuperTypeOf(eClass))
 				return true;
-		
+
 		return false;
 	}
 
@@ -169,6 +307,8 @@ public class LanguageProvider implements GraphicsProvider {
 		return containsHandler.isContainer(container) ? containsHandler.getOwner(container) : null;
 	}
 
+
+
 	@Override
 	public void update(Diagram diagram) {
 		try {
@@ -183,11 +323,11 @@ public class LanguageProvider implements GraphicsProvider {
 		}
 	}
 
-	public void updateLinked(ContainerShape shape, Diagram diagram) {
+	private void updateLinked(ContainerShape shape, Diagram diagram) {
 		PictogramLink link = shape.getLink();
 		EObject eObject = (EObject) link.getBusinessObjects().get(0);
-		Node node = matchNode(eObject.eClass());
-		updateElement(node.getMainFigure(), eObject, shape, diagram);
+		Node node = getNode(eObject.eClass());
+		updateElement(node.getRootFigure(), eObject, shape, diagram);
 	}
 
 	private void updateElement(ConnectableElement e, EObject o, ContainerShape s, Diagram diagram) {
@@ -208,29 +348,30 @@ public class LanguageProvider implements GraphicsProvider {
 
 
 
-	private Node matchNode(EClass eClass) {
-		for (Node node : model.getNodes())
-			if (equals(node.getModelClass(), eClass))
-				return node;
-
-		return null;
-	}
-
 	@Override
 	public GraphicsAlgorithm createNodeFigure(Diagram diagram, IAddContext context, ContainerShape container, EObject eObject) {
 		GraphicsAlgorithm nodeFigure = null;
 
-		Node node = matchNode(eObject.eClass());
-		ConnectableElement mainFig = node.getMainFigure();
+		Node node = getNode(eObject.eClass());
+		ConnectableElement mainFig = node.getRootFigure();
 		nodeFigure = ElementCreation.createNodeFigure(mainFig, diagram, container);
+		
+//		if(mainFig instanceof Custom)
+//			featureChain.update(((Custom) mainFig).getFigure().getElement(), eObject, diagram, nodeFigure, container);
+
 		featureChain.update(mainFig, eObject, diagram, nodeFigure, container);
 
 		for(ConnectableElement child : mainFig.getChildren())
 			addChildren(child, container, diagram, eObject);
 
+		if(!hasFeature(mainFig, org.eclipselabs.xdiagram.dsl.Anchor.class, true)) {
+			Anchor anchor = Graphiti.getPeCreateService().createChopboxAnchor(container);
+			anchors.put(anchor, eObject);
+		}
 		return nodeFigure;		
 	}
 
+	
 
 	// TODO validation anchors cannot have children?
 	private void addChildren(ConnectableElement element, Shape container, Diagram diagram, EObject eObject) {
@@ -242,6 +383,7 @@ public class LanguageProvider implements GraphicsProvider {
 			BoxRelativeAnchor anchor = Graphiti.getPeCreateService().createBoxRelativeAnchor(container);
 			anchor.setReferencedGraphicsAlgorithm(container.getGraphicsAlgorithm());
 			childContainer = anchor;
+			anchors.put(anchor, eObject);
 		}
 		else {
 			childContainer = Graphiti.getPeCreateService().createContainerShape((ContainerShape) container, isActive);
@@ -250,8 +392,6 @@ public class LanguageProvider implements GraphicsProvider {
 		GraphicsAlgorithm childFigure =  ElementCreation.createNodeFigure(element, diagram, childContainer);
 		featureChain.update(element, eObject, diagram, childFigure, childContainer);
 
-//		Graphiti.getGaLayoutService().setLocation(childFigure, -2, -2);
-		
 		// anchors cannot have children
 		if(!hasAnchor) {
 			for(ConnectableElement child : element.getChildren())
@@ -274,18 +414,7 @@ public class LanguageProvider implements GraphicsProvider {
 		return false;
 	}
 
-	//	public static boolean isContainer(ConnectableElement element) {
-	//		for(Feature f : element.getFeatures())
-	//			if(f instanceof Contains)
-	//				return true;
-	//
-	//		return false;
-	//	}
-
-
-
-
-
+	
 
 	//	private void handleAnchors(Diagram diagram, ContainerShape container, EObject eObject,
 	//			GraphicsAlgorithm nodeFigure, Node node) {
@@ -403,13 +532,10 @@ public class LanguageProvider implements GraphicsProvider {
 	//		//					nodeFigure.getHeight()+anchor_up+anchor_down);
 	//	}
 
-	//	@Override
-	//	public void updateNodeFigure(Diagram diagram, ContainerShape container, GraphicsAlgorithm figure, EObject eObject) {
-	//		nodeHandler.updateNodeFigure(null, diagram, container, null, eObject);
-	//	}
 
 	@Override
 	public void resizeNodeFigure(Diagram diagram, ContainerShape container, int width, int height) {
+		// TODO: Eduardo
 		Graphiti.getLayoutService().setSize(container.getGraphicsAlgorithm(), width, height);
 
 		//		nodeHandler.resizeNodeFigure(null, diagram, container, new Dimension(width, height));
@@ -446,8 +572,8 @@ public class LanguageProvider implements GraphicsProvider {
 
 	@Override
 	public boolean canEditFigureLabel(GraphicsAlgorithm figure, EObject eObject) {
-		Node node = match(eObject.eClass());
-		ConnectableElement element  = node.getMainFigure();
+		Node node = getNode(eObject.eClass());
+		ConnectableElement element  = node.getRootFigure();
 
 		// TODO
 		//	for(NodeFigure f : node.getFigures()) {
@@ -461,129 +587,76 @@ public class LanguageProvider implements GraphicsProvider {
 
 	@Override
 	public EAttribute getTextEditableAttribute(EClass eClass) {
-		Node node = match(eClass);
+		Node node = getNode(eClass);
 
-		// TODO
-		//	for(NodeFigure fig : node.getFigures()) {
-		//		if(fig.getElement() instanceof Label && ((Label) fig.getElement()).isEditable()) {
-		//			for(Feature f : ((Label) fig.getElement()).getFeatures())
-		//				if(f instanceof TextValue && ((TextValue) f).getModelAttribute() != null)
-		//					return match(eClass, ((TextValue) f).getModelAttribute());
-		//		}
-		//	}
-		ConnectableElement element  = node.getMainFigure();
-		for(Feature f : element.getFeatures())
-			if(f instanceof TextValue && ((TextValue) f).getModelAttribute() != null)
-				return match(eClass, ((TextValue) f).getModelAttribute());
-
-
+		ConnectableElement element  = node.getRootFigure();
+		for(Feature f : element.getFeatures()) {
+			if(f instanceof TextValue) {
+				TextValue v = (TextValue) f;
+				if(v.getModelAttribute() != null)
+					return v.getModelAttribute();
+			}
+		}
 		return null;
 	}
-
-	private EAttribute match(EClass eClass, EAttribute att) {
-		for(EAttribute a : eClass.getEAllAttributes())
-			if(a.getName().equals(att.getName()))
-				return a;
-
-		return null;
-	}
-
-	//	@Override
-	//	public String getFigureLabelValue(GraphicsAlgorithm figure) {
-	//		if (FigureProperty.TEXT_ATTR.get(figure)!=null)
-	//			return FigureProperty.TEXT_VALUE.get(figure);
-	//		return FigureProperty.TEXT.get(figure);
-	//	}
-
-	//	@Override
-	//	public void updateFigureLabel(Diagram diagram, GraphicsAlgorithm figure, String value) {
-	// TODO: Eduardo
-	//		setLabelValue(figure, value);
-	//		Object container = getContainerObject(figure);
-	//		if (container instanceof ContainerShape)
-	//			nodeProvider.updateNodeFigure(diagram, (ContainerShape)container);
-	//		else if (container instanceof Connection)
-	//			LinkProvider.updateLinkConnection(diagram, (Connection)container);
-	//	}
-
-	//	@Override
-	//	public GraphicsAlgorithm getFigureLabel(Diagram diagram, ContainerShape container) {
-	//		
-	//		return null;
-	//		// TODO: Eduardo
-	//		//		return FigureProvider.getTextFigure(container);
-	//	}
 
 
 
 	@Override
 	public Connection getConnectionFigure(Diagram diagram, Anchor source, Anchor target, EObject eObject) {
+		assert source != null && target != null;
+		
 		Connection connection = null;
+		Link link = null;
 
-		// TODO: refactor
-		for (Link link : model.getLinks()){
-			boolean isLink = link.isComplex() && eObject != null && equals(link.getModelClass(), eObject.eClass());
+		// complex link
+		if(eObject != null) {
+			link = getComplexLink(eObject.eClass());
+		}
+		// simple link
+		else {
+			EObject sourceObject = anchors.get(source);
+			EObject targetObject = anchors.get(target);
 
-			if (!isLink && !link.isComplex() && eObject == null) {
-				EClass owner = (EClass) link.getModelReference().eContainer();
-
-				for(Node node : model.getNodes()) {
-					EClass c = node.getModelClass();
-					if(equals(c, owner)) {
-						for (EReference ref : c.getEAllReferences()) {
-							EReference r = link.getModelReference();
-							if(ref.getName().equals(r.getName())) {
-								isLink = true;
-							}
-						}
-					}
-				}
-			}
-
-			if (isLink){
-				connection = Graphiti.getPeCreateService().createFreeFormConnection(diagram);
-
-				// link.isManhattan() ?  Graphiti.getPeCreateService().createManhattanConnection(diagram) :
-
-
-				GraphicsAlgorithm connectionLink = createLinkConnection(link, diagram, connection, eObject);
-
-				//TODO: Eduardo			
-				//				if (link.getAttributes().size()>0)
-				//					setAttributesValue(link.getAttributes(), eObject);
-
-
-				//TODO: Eduardo
-				for (Decorator decorator: link.getDecorators()) {
-					ConnectionDecorator cd = Graphiti.getPeCreateService().createConnectionDecorator(connection, 
-							false, (double) decorator.getPosition()/100.0, true);
-
-					if (decorator.getStaticElement() != null) {
-						ElementCreation.createNodeFigure(decorator.getStaticElement(), diagram, cd);
-						//						nodeHandler.createNodeFigure(decorator.getStaticElement(), diagram, cd, connectionLink, eObject);
-						//						linkHandler.createLinkFigure((Link) eObject, diagram, cd, decorator.getPlacingStatic(), link.getStyle());
-
-					}
-					else {
-						Label label = decorator.getLabel();
-						ElementCreation.createNodeFigure(label, diagram, cd);
-						//						nodeHandler.createNodeFigure(label, diagram, cd, connectionLink, null);
-						//linkHandler.createDynamicFigure((Link) eObject, diagram, cd, label);
-					}
-					//					for (DynamicFigure text: decorator.getPlacingDynamic()){
-					//						ConnectionDecorator cd = Graphiti.getPeCreateService().createConnectionDecorator(connection, 
-					//								true, (double)decorator.getPos()/100.0, true);
-					//						linkHandler.createDynamicFigure((Link) eObject, diagram, cd, text, link.getStyle());
-					//					}
-				}
-
-				break;
+			for(Link l : links.values()) {
+				EReference ref = l.getModelReference();
+				EClass refOwner = (EClass) ref.eContainer();
+				if(refOwner.isSuperTypeOf(sourceObject.eClass()))
+					link = l;
 			}
 		}
 
-		if (connection == null) {
-			connection = Graphiti.getPeCreateService().createFreeFormConnection(diagram);
-			Graphiti.getGaService().createPlainPolyline(connection);
+		assert link != null;
+
+		// TODO connection type
+		connection = Graphiti.getPeCreateService().createFreeFormConnection(diagram);
+		// link.isManhattan() ?  Graphiti.getPeCreateService().createManhattanConnection(diagram) :
+
+
+		GraphicsAlgorithm connectionLink = createLinkConnection(link, diagram, connection, eObject);
+
+		//TODO: Eduardo
+		for (Decorator decorator: link.getDecorators()) {
+			ConnectionDecorator cd = Graphiti.getPeCreateService().createConnectionDecorator(connection, 
+					false, (double) decorator.getPosition()/100.0, true);
+
+			if (decorator.getStaticElement() != null) {
+				ElementCreation.createNodeFigure(decorator.getStaticElement(), diagram, cd);
+				//						nodeHandler.createNodeFigure(decorator.getStaticElement(), diagram, cd, connectionLink, eObject);
+				//						linkHandler.createLinkFigure((Link) eObject, diagram, cd, decorator.getPlacingStatic(), link.getStyle());
+
+			}
+			else {
+				Label label = decorator.getLabel();
+				ElementCreation.createNodeFigure(label, diagram, cd);
+				//						nodeHandler.createNodeFigure(label, diagram, cd, connectionLink, null);
+				//linkHandler.createDynamicFigure((Link) eObject, diagram, cd, label);
+			}
+			//					for (DynamicFigure text: decorator.getPlacingDynamic()){
+			//						ConnectionDecorator cd = Graphiti.getPeCreateService().createConnectionDecorator(connection, 
+			//								true, (double)decorator.getPos()/100.0, true);
+			//						linkHandler.createDynamicFigure((Link) eObject, diagram, cd, text, link.getStyle());
+			//					}
 		}
 
 		connection.setStart(source);
@@ -605,46 +678,7 @@ public class LanguageProvider implements GraphicsProvider {
 	//	}
 
 
-	@Override
-	public boolean hasTool(EClass eClass) {
-		for(Link link : model.getLinks()) {
-			if (link.isComplex() && equals(link.getModelClass(), eClass)) // review
-				return false;				
-		}
-
-		for(Node node : model.getNodes()) {
-			if(equals(node.getModelClass(), eClass))
-				return true;
-		}
-
-		return false;
-	}
-
-
-	@Override
-	public boolean hasTool(EReference eReference) {		
-		EClass parent = (EClass)eReference.eContainer();
-		EList<Link> links = this.model.getLinks();
-		for (Link link : links) {
-			if (link.isComplex() && equals(link.getModelClass(), parent))
-				return false;
-			else if(!link.isComplex() && equals((EClass) link.getModelReference().eContainer(), (EClass) eReference.eContainer()))
-				return true;
-		}
-
-		return false;
-	}
-
-	@Override
-	public boolean isLink(EClass eClass) {		
-		EList<Link> links = this.model.getLinks();
-		for (Link link : links){
-			if (link.isComplex() && equals(link.getModelClass(), eClass) ) 
-				return true;				
-		}
-		return false;
-	}
-
+	
 	//	public boolean canSetConnection(Anchor anchor, EReference eReference, FigureProperty feature) {
 	//		GraphicsAlgorithm ga = anchor.getGraphicsAlgorithm();		
 	//		String arrows = Graphiti.getPeService().getPropertyValue(ga, feature.toString());
@@ -670,26 +704,9 @@ public class LanguageProvider implements GraphicsProvider {
 	}
 
 	@Override
-	public EReference getLinkTarget(EClass eClass) {		
-		return getLink(false, eClass);
+	public EReference getLinkTarget(EClass eClass) {	
+		assert isComplexLink(eClass);
+		return getComplexLink(eClass).getTargetReference();
 	}
-
-	private EReference getLink(boolean source, EClass eClass) {		
-		EList<Link> links = this.model.getLinks();
-		for (Link link : links)
-			if (link.isComplex() && equals(link.getModelClass(), eClass)){
-				String nlink = source ? link.getSourceReference().getName() : link.getTargetReference().getName();
-				for (EReference ref : eClass.getEReferences())
-					if (nlink.equals(ref.getName()))
-						return ref;
-			}
-		return null;
-	}
-
-	@Override
-	public boolean isProperty(EStructuralFeature feature) {
-		return true;
-	}
-
 
 }
