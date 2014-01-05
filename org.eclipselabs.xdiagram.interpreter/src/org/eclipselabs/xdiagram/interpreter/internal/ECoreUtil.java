@@ -107,7 +107,7 @@ public class ECoreUtil {
 	
 	public static boolean contains(EClass parent, EClass child) {
 		for(EReference r : parent.getEAllContainments()) {
-			if(((EClass) r.getEType()).isSuperTypeOf(child))
+			if(r.getEReferenceType().isSuperTypeOf(child))
 				return true;
 		}
 		
@@ -116,7 +116,7 @@ public class ECoreUtil {
 	
 	public static EReference getContainmentReference(EClass parent, EClass child) {
 		for(EReference r : parent.getEAllContainments()) {
-			if(((EClass) r.getEType()).isSuperTypeOf(child))
+			if(r.getEReferenceType().isSuperTypeOf(child))
 				return r;
 		}
 		

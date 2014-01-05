@@ -50,4 +50,6 @@ public class InternalDiagramTypeProvider extends AbstractDiagramTypeProvider {
 	public final boolean isAutoUpdateAtRuntimeWhenEditorIsSaved() {
 		return super.isAutoUpdateAtRuntimeWhenEditorIsSaved();
 	}
+	
+	
 }

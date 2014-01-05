@@ -24,16 +24,16 @@ public interface GraphicsProvider {
 	 * Provider setup. This is always the first operation to be invoked.
 	 * @param diagramType
 	 * @param properties
+	 * @param ePackage 
 	 * @param bundle
 	 */
-	void setup(Map<String, String> properties) throws ProviderException;
+	void setup(Map<String, String> properties, EPackage ePackage) throws ProviderException;
 	
 	/**
 	 * Obtains the root class of the model that will be mapped to the whole diagram area.
-	 * @param ePackage
 	 * @return non-null reference to an EClass
 	 */
-	EClass getRoot(EPackage ePackage);
+	EClass getRoot();
 	
 	
 	/**

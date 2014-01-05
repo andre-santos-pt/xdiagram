@@ -1,8 +1,8 @@
 package org.eclipselabs.xdiagram.interpreter.internal;
 
 import static org.eclipselabs.xdiagram.interpreter.ExtensionPointIds.BINDINGS_EPACKAGE_URI;
-import static org.eclipselabs.xdiagram.interpreter.ExtensionPointIds.PROVIDERS_ID;
-import static org.eclipselabs.xdiagram.interpreter.ExtensionPointIds.PROVIDERS_PROVIDER;
+import static org.eclipselabs.xdiagram.interpreter.ExtensionPointIds.XDIAGRAM_PROVIDERS_EXT;
+import static org.eclipselabs.xdiagram.interpreter.ExtensionPointIds.XDIAGRAM_PROVIDERS_PROVIDER;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +12,6 @@ import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.Platform;
 import org.eclipselabs.xdiagram.interpreter.ExtensionPointIds;
 import org.eclipselabs.xdiagram.interpreter.GraphicsProvider;
-import org.eclipselabs.xdiagram.interpreter.internal.Activator.LanguageDescription;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
@@ -51,12 +50,12 @@ public class Activator implements BundleActivator {
 	}
 
 	private void loadProviders() {
-		for(IConfigurationElement reg : Platform.getExtensionRegistry().getConfigurationElementsFor(PROVIDERS_ID)) {
+		for(IConfigurationElement reg : Platform.getExtensionRegistry().getConfigurationElementsFor(XDIAGRAM_PROVIDERS_EXT)) {
 			Bundle bundle = Platform.getBundle(reg.getContributor().getName());
 			String uri = reg.getAttribute(BINDINGS_EPACKAGE_URI);
 			GraphicsProvider provider = null;
 			try {
-				provider = (GraphicsProvider) reg.createExecutableExtension(PROVIDERS_PROVIDER);
+				provider = (GraphicsProvider) reg.createExecutableExtension(XDIAGRAM_PROVIDERS_PROVIDER);
 			} catch (CoreException e) {
 				e.printStackTrace();
 			}	

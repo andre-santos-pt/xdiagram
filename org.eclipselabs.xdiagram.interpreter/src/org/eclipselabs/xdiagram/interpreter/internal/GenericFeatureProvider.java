@@ -78,18 +78,18 @@ public class GenericFeatureProvider extends DefaultFeatureProvider {
 		LanguageDescription desc = Activator.getInstance().getLanguageProvider(diagramType);
 		graphicsProvider = desc.provider;
 
+		ePackage = EPackage.Registry.INSTANCE.getEPackage(desc.ecoreURI);
+		if(ePackage == null)
+			System.err.println("Could not bind an EPackage for diagram type '" + diagramType + "'");
+
 		try {
-			graphicsProvider.setup(desc.properties);
+			graphicsProvider.setup(desc.properties, ePackage);
 		} catch (ProviderException e) {
 			System.err.println("Problem in graphics provider '" + graphicsProvider.getClass().getName() + "' :" + e.getMessage());
 			return null;
 		}
 		
-		ePackage = EPackage.Registry.INSTANCE.getEPackage(desc.ecoreURI);
-		if(ePackage == null)
-			System.err.println("Could not bind an EPackage for diagram type '" + diagramType + "'");
-
-		rootClass = graphicsProvider.getRoot(ePackage);
+		rootClass = graphicsProvider.getRoot();
 		if(rootClass == null)
 			System.err.println("Could not load root class for diagram type '" + diagramType + "'");
 
@@ -164,10 +164,10 @@ public class GenericFeatureProvider extends DefaultFeatureProvider {
 						list.add(new CreateEReferenceFeature(this, ref));
 					}
 					else {
-						EClass refType = (EClass) ref.getEType();
+						EClass refType = ref.getEReferenceType();
 						for(EClass type : ECoreUtil.allCompatibleClasses(ePackage, refType)) {
 							if(!handledLinks.contains(type) && graphicsProvider.isLink(type)) {
-								EReference target = graphicsProvider.getLinkTarget((EClass) ref.getEType());
+								EReference target = graphicsProvider.getLinkTarget(ref.getEReferenceType());
 								list.add(new CreateEReferenceFeatureIndirect(this, ref, target, type));
 								handledLinks.add(type);
 							}

@@ -35,7 +35,7 @@ public class CreateEReferenceFeature extends AbstractCreateConnectionFeature {
 		super(fp, eReference.getName(), tooltip(eReference));
 		this.eReference = eReference;
 		sourceType = (EClass) eReference.eContainer();
-		targetType = (EClass) eReference.getEType();
+		targetType = eReference.getEReferenceType();
 		provider = fp.getGraphicsProvider();
 	}
 
