@@ -67,18 +67,13 @@ public class CreateEReferenceFeatureIndirect extends AbstractCreateConnectionFea
 		EObject sourceObj = getEObject(context.getSourceAnchor());
 		EObject targetObj = getEObject(context.getTargetAnchor());
 	
-		if (sourceType.isInstance(sourceObj) && targetRef.getEType().isInstance(targetObj)) {
+		if (sourceType.isInstance(sourceObj) && targetRef.getEReferenceType().isInstance(targetObj)) {
 
-			EObject eObject = sourceType.getEPackage().getEFactoryInstance().create((EClass) eReference.getEType());
+			EObject eObject = sourceType.getEPackage().getEFactoryInstance().create(eReference.getEReferenceType());
 			eObject.eSet(targetRef, targetObj);
 			
 			ECoreUtil.setReference(sourceObj, eReference, eObject);
-//			Object obj = sourceObj.eGet(eReference);
-//			if(obj instanceof List)
-//				((List) obj).add(eObject);
-//			else
-//				sourceObj.eSet(eReference, eObject);
-				
+
 			// add connection for business object
 			AddConnectionContext addContext = new AddConnectionContext(context.getSourceAnchor(), context.getTargetAnchor());
 			addContext.setNewObject(eObject);

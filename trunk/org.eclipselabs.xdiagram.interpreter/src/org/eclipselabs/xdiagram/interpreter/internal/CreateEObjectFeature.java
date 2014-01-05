@@ -147,8 +147,8 @@ public class CreateEObjectFeature extends AbstractCreateFeature {
 	private EReference selectReference(Collection<EReference> refs, EObject eObject) {
 		EReference ref = null;
 		for(EReference r : refs) {
-			if(r.getEType().isInstance(eObject)) {
-				if(ref == null || ((EClass) ref.getEType()).isSuperTypeOf((EClass) r.getEType()))
+			if(r.getEReferenceType().isInstance(eObject)) {
+				if(ref == null || ref.getEReferenceType().isSuperTypeOf((EClass) r.getEType()))
 					ref = r;
 			}
 		}

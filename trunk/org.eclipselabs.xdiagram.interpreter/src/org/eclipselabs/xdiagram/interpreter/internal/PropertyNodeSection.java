@@ -118,11 +118,8 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 				createControl(eObject, att);
 			}
 
-			//$NON-NLS-1$
-
+			composite.redraw();
 			composite.layout();
-			composite.getParent().redraw();
-			composite.getParent().layout();
 		}
 	}
 

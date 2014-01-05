@@ -138,18 +138,10 @@ public class ToolBehaviorProvider extends DefaultToolBehaviorProvider {
 	public IPaletteCompartmentEntry[] getPalette() {
 		List<IPaletteCompartmentEntry> ret = new ArrayList<IPaletteCompartmentEntry>();
 
-		// add compartments from super class
-//		IPaletteCompartmentEntry[] superCompartments = super.getPalette();
-//		for (int i = 0; i < superCompartments.length; i++)
-//			ret.add(superCompartments[i]);
-
 		// add new compartment at the end of the existing compartments
-		PaletteCompartmentEntry nodesEntry = new PaletteCompartmentEntry("Nodes", null); //$NON-NLS-1$
+		PaletteCompartmentEntry nodesEntry = new PaletteCompartmentEntry("Default", null); //$NON-NLS-1$
 		ret.add(nodesEntry);
 		
-		// add new stack entry to new compartment
-//		StackEntry stackEntry = new StackEntry("Adaptive2", "Adaptive2", null); //$NON-NLS-1$ //$NON-NLS-2$
-//		compartmentEntry.addToolEntry(stackEntry);
 
 		// add all create-features to the new stack-entry
 		IFeatureProvider featureProvider = getFeatureProvider();
@@ -181,6 +173,7 @@ public class ToolBehaviorProvider extends DefaultToolBehaviorProvider {
 		return super.getDoubleClickFeature(context);
 	}
 
+	// TODO: errors
 	@Override
 	public IDecorator[] getDecorators(PictogramElement pe) {
 		IFeatureProvider featureProvider = getFeatureProvider();
