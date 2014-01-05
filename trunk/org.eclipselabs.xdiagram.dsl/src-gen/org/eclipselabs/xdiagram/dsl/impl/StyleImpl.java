@@ -2,24 +2,13 @@
  */
 package org.eclipselabs.xdiagram.dsl.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipselabs.xdiagram.dsl.DslPackage;
-import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.Style;
 
 /**
@@ -30,13 +19,12 @@ import org.eclipselabs.xdiagram.dsl.Style;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.StyleImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.StyleImpl#getFeatures <em>Features</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class StyleImpl extends MinimalEObjectImpl.Container implements Style
+public class StyleImpl extends FeatureContainerImpl implements Style
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -57,16 +45,6 @@ public class StyleImpl extends MinimalEObjectImpl.Container implements Style
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getFeatures()
-   * @generated
-   * @ordered
-   */
-  protected EList<Feature> features;
 
   /**
    * <!-- begin-user-doc -->
@@ -117,36 +95,6 @@ public class StyleImpl extends MinimalEObjectImpl.Container implements Style
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Feature> getFeatures()
-  {
-    if (features == null)
-    {
-      features = new EObjectContainmentEList<Feature>(Feature.class, this, DslPackage.STYLE__FEATURES);
-    }
-    return features;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case DslPackage.STYLE__FEATURES:
-        return ((InternalEList<?>)getFeatures()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -154,8 +102,6 @@ public class StyleImpl extends MinimalEObjectImpl.Container implements Style
     {
       case DslPackage.STYLE__NAME:
         return getName();
-      case DslPackage.STYLE__FEATURES:
-        return getFeatures();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -165,7 +111,6 @@ public class StyleImpl extends MinimalEObjectImpl.Container implements Style
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -173,10 +118,6 @@ public class StyleImpl extends MinimalEObjectImpl.Container implements Style
     {
       case DslPackage.STYLE__NAME:
         setName((String)newValue);
-        return;
-      case DslPackage.STYLE__FEATURES:
-        getFeatures().clear();
-        getFeatures().addAll((Collection<? extends Feature>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -195,9 +136,6 @@ public class StyleImpl extends MinimalEObjectImpl.Container implements Style
       case DslPackage.STYLE__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case DslPackage.STYLE__FEATURES:
-        getFeatures().clear();
-        return;
     }
     super.eUnset(featureID);
   }
@@ -214,8 +152,6 @@ public class StyleImpl extends MinimalEObjectImpl.Container implements Style
     {
       case DslPackage.STYLE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case DslPackage.STYLE__FEATURES:
-        return features != null && !features.isEmpty();
     }
     return super.eIsSet(featureID);
   }

@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipselabs.xdiagram.dsl.DiagramElement;
 import org.eclipselabs.xdiagram.dsl.DslPackage;
-import org.eclipselabs.xdiagram.dsl.ImageFile;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipselabs.xdiagram.dsl.ImageFile;
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DiagramElementImpl#getModelClass <em>Model Class</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DiagramElementImpl#getToolName <em>Tool Name</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DiagramElementImpl#getIcon <em>Icon</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DiagramElementImpl#getImageId <em>Image Id</em>}</li>
  * </ul>
  * </p>
  *
@@ -62,14 +61,24 @@ public class DiagramElementImpl extends MinimalEObjectImpl.Container implements 
   protected String toolName = TOOL_NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getIcon() <em>Icon</em>}' reference.
+   * The default value of the '{@link #getImageId() <em>Image Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIcon()
+   * @see #getImageId()
    * @generated
    * @ordered
    */
-  protected ImageFile icon;
+  protected static final String IMAGE_ID_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getImageId() <em>Image Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getImageId()
+   * @generated
+   * @ordered
+   */
+  protected String imageId = IMAGE_ID_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -163,19 +172,9 @@ public class DiagramElementImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public ImageFile getIcon()
+  public String getImageId()
   {
-    if (icon != null && icon.eIsProxy())
-    {
-      InternalEObject oldIcon = (InternalEObject)icon;
-      icon = (ImageFile)eResolveProxy(oldIcon);
-      if (icon != oldIcon)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, DslPackage.DIAGRAM_ELEMENT__ICON, oldIcon, icon));
-      }
-    }
-    return icon;
+    return imageId;
   }
 
   /**
@@ -183,22 +182,12 @@ public class DiagramElementImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public ImageFile basicGetIcon()
+  public void setImageId(String newImageId)
   {
-    return icon;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setIcon(ImageFile newIcon)
-  {
-    ImageFile oldIcon = icon;
-    icon = newIcon;
+    String oldImageId = imageId;
+    imageId = newImageId;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.DIAGRAM_ELEMENT__ICON, oldIcon, icon));
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.DIAGRAM_ELEMENT__IMAGE_ID, oldImageId, imageId));
   }
 
   /**
@@ -216,9 +205,8 @@ public class DiagramElementImpl extends MinimalEObjectImpl.Container implements 
         return basicGetModelClass();
       case DslPackage.DIAGRAM_ELEMENT__TOOL_NAME:
         return getToolName();
-      case DslPackage.DIAGRAM_ELEMENT__ICON:
-        if (resolve) return getIcon();
-        return basicGetIcon();
+      case DslPackage.DIAGRAM_ELEMENT__IMAGE_ID:
+        return getImageId();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -239,8 +227,8 @@ public class DiagramElementImpl extends MinimalEObjectImpl.Container implements 
       case DslPackage.DIAGRAM_ELEMENT__TOOL_NAME:
         setToolName((String)newValue);
         return;
-      case DslPackage.DIAGRAM_ELEMENT__ICON:
-        setIcon((ImageFile)newValue);
+      case DslPackage.DIAGRAM_ELEMENT__IMAGE_ID:
+        setImageId((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -262,8 +250,8 @@ public class DiagramElementImpl extends MinimalEObjectImpl.Container implements 
       case DslPackage.DIAGRAM_ELEMENT__TOOL_NAME:
         setToolName(TOOL_NAME_EDEFAULT);
         return;
-      case DslPackage.DIAGRAM_ELEMENT__ICON:
-        setIcon((ImageFile)null);
+      case DslPackage.DIAGRAM_ELEMENT__IMAGE_ID:
+        setImageId(IMAGE_ID_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -283,8 +271,8 @@ public class DiagramElementImpl extends MinimalEObjectImpl.Container implements 
         return modelClass != null;
       case DslPackage.DIAGRAM_ELEMENT__TOOL_NAME:
         return TOOL_NAME_EDEFAULT == null ? toolName != null : !TOOL_NAME_EDEFAULT.equals(toolName);
-      case DslPackage.DIAGRAM_ELEMENT__ICON:
-        return icon != null;
+      case DslPackage.DIAGRAM_ELEMENT__IMAGE_ID:
+        return IMAGE_ID_EDEFAULT == null ? imageId != null : !IMAGE_ID_EDEFAULT.equals(imageId);
     }
     return super.eIsSet(featureID);
   }
@@ -302,6 +290,8 @@ public class DiagramElementImpl extends MinimalEObjectImpl.Container implements 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (toolName: ");
     result.append(toolName);
+    result.append(", imageId: ");
+    result.append(imageId);
     result.append(')');
     return result.toString();
   }

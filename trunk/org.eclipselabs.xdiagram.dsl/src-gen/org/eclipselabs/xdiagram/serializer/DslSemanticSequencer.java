@@ -14,9 +14,9 @@ import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.eclipselabs.xdiagram.dsl.Anchor;
-import org.eclipselabs.xdiagram.dsl.Background;
 import org.eclipselabs.xdiagram.dsl.BooleanValue;
 import org.eclipselabs.xdiagram.dsl.Color;
+import org.eclipselabs.xdiagram.dsl.ColorFeature;
 import org.eclipselabs.xdiagram.dsl.Contains;
 import org.eclipselabs.xdiagram.dsl.Corner;
 import org.eclipselabs.xdiagram.dsl.CustomColor;
@@ -29,9 +29,7 @@ import org.eclipselabs.xdiagram.dsl.FeatureConditional;
 import org.eclipselabs.xdiagram.dsl.FontFace;
 import org.eclipselabs.xdiagram.dsl.FontSize;
 import org.eclipselabs.xdiagram.dsl.FontStyle;
-import org.eclipselabs.xdiagram.dsl.Foreground;
 import org.eclipselabs.xdiagram.dsl.Image;
-import org.eclipselabs.xdiagram.dsl.ImageFile;
 import org.eclipselabs.xdiagram.dsl.ImportStatement;
 import org.eclipselabs.xdiagram.dsl.IntValue;
 import org.eclipselabs.xdiagram.dsl.Invisible;
@@ -70,18 +68,6 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case DslPackage.BACKGROUND:
-				if(context == grammarAccess.getBackgroundRule() ||
-				   context == grammarAccess.getColorFeatureRule() ||
-				   context == grammarAccess.getConnectableElementFeatureRule() ||
-				   context == grammarAccess.getFeatureRule() ||
-				   context == grammarAccess.getFigureFeatureRule() ||
-				   context == grammarAccess.getLabelFeatureRule() ||
-				   context == grammarAccess.getRectangleFeatureRule()) {
-					sequence_Background(context, (Background) semanticObject); 
-					return; 
-				}
-				else break;
 			case DslPackage.BOOLEAN_VALUE:
 				if(context == grammarAccess.getBooleanValueRule() ||
 				   context == grammarAccess.getValueRule()) {
@@ -92,6 +78,27 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case DslPackage.COLOR:
 				if(context == grammarAccess.getColorRule()) {
 					sequence_Color(context, (Color) semanticObject); 
+					return; 
+				}
+				else break;
+			case DslPackage.COLOR_FEATURE:
+				if(context == grammarAccess.getBackgroundRule()) {
+					sequence_Background(context, (ColorFeature) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getColorFeatureRule() ||
+				   context == grammarAccess.getConnectableElementFeatureRule() ||
+				   context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getFigureFeatureRule() ||
+				   context == grammarAccess.getLabelFeatureRule() ||
+				   context == grammarAccess.getRectangleFeatureRule() ||
+				   context == grammarAccess.getStyleFeatureRule()) {
+					sequence_Background_Foreground_StyleFeature(context, (ColorFeature) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getForegroundRule() ||
+				   context == grammarAccess.getLinkFeatureRule()) {
+					sequence_Foreground(context, (ColorFeature) semanticObject); 
 					return; 
 				}
 				else break;
@@ -107,7 +114,8 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case DslPackage.CORNER:
 				if(context == grammarAccess.getCornerRule() ||
 				   context == grammarAccess.getFeatureRule() ||
-				   context == grammarAccess.getRectangleFeatureRule()) {
+				   context == grammarAccess.getRectangleFeatureRule() ||
+				   context == grammarAccess.getStyleFeatureRule()) {
 					sequence_Corner(context, (Corner) semanticObject); 
 					return; 
 				}
@@ -133,8 +141,8 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case DslPackage.ELLIPSE:
 				if(context == grammarAccess.getConnectableElementRule() ||
-				   context == grammarAccess.getElementRule() ||
-				   context == grammarAccess.getEllipseRule()) {
+				   context == grammarAccess.getEllipseRule() ||
+				   context == grammarAccess.getFeatureContainerRule()) {
 					sequence_Ellipse(context, (Ellipse) semanticObject); 
 					return; 
 				}
@@ -155,7 +163,8 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case DslPackage.FONT_FACE:
 				if(context == grammarAccess.getFeatureRule() ||
 				   context == grammarAccess.getFontFaceRule() ||
-				   context == grammarAccess.getLabelFeatureRule()) {
+				   context == grammarAccess.getLabelFeatureRule() ||
+				   context == grammarAccess.getStyleFeatureRule()) {
 					sequence_FontFace(context, (FontFace) semanticObject); 
 					return; 
 				}
@@ -163,7 +172,8 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case DslPackage.FONT_SIZE:
 				if(context == grammarAccess.getFeatureRule() ||
 				   context == grammarAccess.getFontSizeRule() ||
-				   context == grammarAccess.getLabelFeatureRule()) {
+				   context == grammarAccess.getLabelFeatureRule() ||
+				   context == grammarAccess.getStyleFeatureRule()) {
 					sequence_FontSize(context, (FontSize) semanticObject); 
 					return; 
 				}
@@ -171,35 +181,17 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case DslPackage.FONT_STYLE:
 				if(context == grammarAccess.getFeatureRule() ||
 				   context == grammarAccess.getFontStyleRule() ||
-				   context == grammarAccess.getLabelFeatureRule()) {
-					sequence_FontStyle(context, (FontStyle) semanticObject); 
-					return; 
-				}
-				else break;
-			case DslPackage.FOREGROUND:
-				if(context == grammarAccess.getColorFeatureRule() ||
-				   context == grammarAccess.getConnectableElementFeatureRule() ||
-				   context == grammarAccess.getFeatureRule() ||
-				   context == grammarAccess.getFigureFeatureRule() ||
-				   context == grammarAccess.getForegroundRule() ||
 				   context == grammarAccess.getLabelFeatureRule() ||
-				   context == grammarAccess.getLinkFeatureRule() ||
-				   context == grammarAccess.getRectangleFeatureRule()) {
-					sequence_Foreground(context, (Foreground) semanticObject); 
+				   context == grammarAccess.getStyleFeatureRule()) {
+					sequence_FontStyle(context, (FontStyle) semanticObject); 
 					return; 
 				}
 				else break;
 			case DslPackage.IMAGE:
 				if(context == grammarAccess.getConnectableElementRule() ||
-				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getFeatureContainerRule() ||
 				   context == grammarAccess.getImageRule()) {
 					sequence_Image(context, (Image) semanticObject); 
-					return; 
-				}
-				else break;
-			case DslPackage.IMAGE_FILE:
-				if(context == grammarAccess.getImageFileRule()) {
-					sequence_ImageFile(context, (ImageFile) semanticObject); 
 					return; 
 				}
 				else break;
@@ -218,7 +210,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case DslPackage.INVISIBLE:
 				if(context == grammarAccess.getConnectableElementRule() ||
-				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getFeatureContainerRule() ||
 				   context == grammarAccess.getInvisibleRule()) {
 					sequence_Invisible(context, (Invisible) semanticObject); 
 					return; 
@@ -226,7 +218,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case DslPackage.LABEL:
 				if(context == grammarAccess.getConnectableElementRule() ||
-				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getFeatureContainerRule() ||
 				   context == grammarAccess.getLabelRule()) {
 					sequence_Label(context, (Label) semanticObject); 
 					return; 
@@ -238,7 +230,8 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				   context == grammarAccess.getFigureFeatureRule() ||
 				   context == grammarAccess.getLineStyleRule() ||
 				   context == grammarAccess.getLinkFeatureRule() ||
-				   context == grammarAccess.getRectangleFeatureRule()) {
+				   context == grammarAccess.getRectangleFeatureRule() ||
+				   context == grammarAccess.getStyleFeatureRule()) {
 					sequence_LineStyle(context, (LineStyle) semanticObject); 
 					return; 
 				}
@@ -248,14 +241,15 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				   context == grammarAccess.getFeatureRule() ||
 				   context == grammarAccess.getLineWidthRule() ||
 				   context == grammarAccess.getLinkFeatureRule() ||
-				   context == grammarAccess.getRectangleFeatureRule()) {
+				   context == grammarAccess.getRectangleFeatureRule() ||
+				   context == grammarAccess.getStyleFeatureRule()) {
 					sequence_LineWidth(context, (LineWidth) semanticObject); 
 					return; 
 				}
 				else break;
 			case DslPackage.LINK:
 				if(context == grammarAccess.getDiagramElementRule() ||
-				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getFeatureContainerRule() ||
 				   context == grammarAccess.getLinkRule()) {
 					sequence_Link(context, (Link) semanticObject); 
 					return; 
@@ -271,14 +265,15 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case DslPackage.POINT:
 				if(context == grammarAccess.getFeatureRule() ||
 				   context == grammarAccess.getFigureFeatureRule() ||
-				   context == grammarAccess.getPointRule()) {
+				   context == grammarAccess.getPointRule() ||
+				   context == grammarAccess.getStyleFeatureRule()) {
 					sequence_Point(context, (Point) semanticObject); 
 					return; 
 				}
 				else break;
 			case DslPackage.POLYLINE:
 				if(context == grammarAccess.getConnectableElementRule() ||
-				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getFeatureContainerRule() ||
 				   context == grammarAccess.getPolylineRule() ||
 				   context == grammarAccess.getStaticElementRule()) {
 					sequence_Polyline(context, (Polyline) semanticObject); 
@@ -292,14 +287,15 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				   context == grammarAccess.getImageFeatureRule() ||
 				   context == grammarAccess.getInvisibleFeatureRule() ||
 				   context == grammarAccess.getPositionRule() ||
-				   context == grammarAccess.getRectangleFeatureRule()) {
+				   context == grammarAccess.getRectangleFeatureRule() ||
+				   context == grammarAccess.getStyleFeatureRule()) {
 					sequence_Position(context, (Position) semanticObject); 
 					return; 
 				}
 				else break;
 			case DslPackage.RECTANGLE:
 				if(context == grammarAccess.getConnectableElementRule() ||
-				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getFeatureContainerRule() ||
 				   context == grammarAccess.getRectangleRule()) {
 					sequence_Rectangle(context, (Rectangle) semanticObject); 
 					return; 
@@ -307,7 +303,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case DslPackage.RHOMBUS:
 				if(context == grammarAccess.getConnectableElementRule() ||
-				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getFeatureContainerRule() ||
 				   context == grammarAccess.getRhombusRule() ||
 				   context == grammarAccess.getStaticElementRule()) {
 					sequence_Rhombus(context, (Rhombus) semanticObject); 
@@ -322,7 +318,8 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				   context == grammarAccess.getInvisibleFeatureRule() ||
 				   context == grammarAccess.getLabelFeatureRule() ||
 				   context == grammarAccess.getRectangleFeatureRule() ||
-				   context == grammarAccess.getSizeRule()) {
+				   context == grammarAccess.getSizeRule() ||
+				   context == grammarAccess.getStyleFeatureRule()) {
 					sequence_Size(context, (Size) semanticObject); 
 					return; 
 				}
@@ -335,7 +332,8 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case DslPackage.STYLE:
-				if(context == grammarAccess.getStyleRule()) {
+				if(context == grammarAccess.getFeatureContainerRule() ||
+				   context == grammarAccess.getStyleRule()) {
 					sequence_Style(context, (Style) semanticObject); 
 					return; 
 				}
@@ -351,6 +349,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case DslPackage.TRANSPARENCY:
 				if(context == grammarAccess.getFeatureRule() ||
 				   context == grammarAccess.getImageFeatureRule() ||
+				   context == grammarAccess.getStyleFeatureRule() ||
 				   context == grammarAccess.getTransparencyRule()) {
 					sequence_Transparency(context, (Transparency) semanticObject); 
 					return; 
@@ -377,9 +376,18 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (color=Color conditional=FeatureConditional?)
+	 *     (type='background' color=Color conditional=FeatureConditional?)
 	 */
-	protected void sequence_Background(EObject context, Background semanticObject) {
+	protected void sequence_Background(EObject context, ColorFeature semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     ((type='background' color=Color conditional=FeatureConditional?) | (type='foreground' color=Color conditional=FeatureConditional?))
+	 */
+	protected void sequence_Background_Foreground_StyleFeature(EObject context, ColorFeature semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -482,7 +490,12 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     ((ellipse?='ellipse' | circle?='circle') features+=ConnectableElementFeature* (composite?='children:' children+=ConnectableElement+)?)
+	 *     (
+	 *         (ellipse?='ellipse' | circle?='circle') 
+	 *         (styled?='style' style=[Style|ID])? 
+	 *         features+=ConnectableElementFeature* 
+	 *         (composite?='children:' children+=ConnectableElement+)?
+	 *     )
 	 */
 	protected void sequence_Ellipse(EObject context, Ellipse semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -556,35 +569,16 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (color=Color conditional=FeatureConditional?)
+	 *     (type='foreground' color=Color conditional=FeatureConditional?)
 	 */
-	protected void sequence_Foreground(EObject context, Foreground semanticObject) {
+	protected void sequence_Foreground(EObject context, ColorFeature semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=ID src=STRING)
-	 */
-	protected void sequence_ImageFile(EObject context, ImageFile semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.IMAGE_FILE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.IMAGE_FILE__NAME));
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.IMAGE_FILE__SRC) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.IMAGE_FILE__SRC));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getImageFileAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getImageFileAccess().getSrcSTRINGTerminalRuleCall_2_0(), semanticObject.getSrc());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (image=[ImageFile|ID] features+=ImageFeature* (composite?='children:' children+=ConnectableElement+)?)
+	 *     (imageId=ID (styled?='style' style=[Style|ID])? features+=ImageFeature* (composite?='children:' children+=ConnectableElement+)?)
 	 */
 	protected void sequence_Image(EObject context, Image semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -618,7 +612,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (features+=InvisibleFeature* (composite?='children:' children+=ConnectableElement+)?)
+	 *     ((styled?='style' style=[Style|ID])? features+=InvisibleFeature* (composite?='children:' children+=ConnectableElement+)?)
 	 */
 	protected void sequence_Invisible(EObject context, Invisible semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -627,7 +621,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (editable?='editable'? features+=LabelFeature* (composite?='children:' children+=ConnectableElement+)?)
+	 *     (editable?='editable'? (styled?='style' style=[Style|ID])? features+=LabelFeature* (composite?='children:' children+=ConnectableElement+)?)
 	 */
 	protected void sequence_Label(EObject context, Label semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -660,8 +654,9 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             (complex?='object' modelClass=[EClass|QualifiedName] sourceReference=[EReference|QualifiedName] targetReference=[EReference|QualifiedName])
 	 *         ) 
 	 *         toolName=STRING? 
-	 *         icon=[ImageFile|ID]? 
+	 *         imageId=ID? 
 	 *         type=ConnectionType 
+	 *         (styled?='style' style=[Style|ID])? 
 	 *         features+=LinkFeature* 
 	 *         decorators+=Decorator*
 	 *     )
@@ -673,7 +668,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (modelClass=[EClass|QualifiedName] toolName=STRING? icon=[ImageFile|ID]? mainFigure=ConnectableElement)
+	 *     (modelClass=[EClass|QualifiedName] toolName=STRING? imageId=ID? rootFigure=ConnectableElement)
 	 */
 	protected void sequence_Node(EObject context, Node semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -693,6 +688,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         (polygon?='polygon' | polyline?='polyline') 
+	 *         (styled?='style' style=[Style|ID])? 
 	 *         features+=Point 
 	 *         features+=Point 
 	 *         features+=Point* 
@@ -716,7 +712,12 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     ((rectangle?='rectangle' | square?='square') features+=RectangleFeature* (composite?='children:' children+=ConnectableElement+)?)
+	 *     (
+	 *         (rectangle?='rectangle' | square?='square') 
+	 *         (styled?='style' style=[Style|ID])? 
+	 *         features+=RectangleFeature* 
+	 *         (composite?='children:' children+=ConnectableElement+)?
+	 *     )
 	 */
 	protected void sequence_Rectangle(EObject context, Rectangle semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -725,7 +726,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (features+=ConnectableElementFeature* (composite?='children:' children+=ConnectableElement+)?)
+	 *     ((styled?='style' style=[Style|ID])? features+=ConnectableElementFeature* (composite?='children:' children+=ConnectableElement+)?)
 	 */
 	protected void sequence_Rhombus(EObject context, Rhombus semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -752,7 +753,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID features+=Feature*)
+	 *     (name=ID style=[Style|ID]? features+=StyleFeature*)
 	 */
 	protected void sequence_Style(EObject context, Style semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -779,12 +780,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         importURI=STRING 
-	 *         imports+=ImportStatement 
-	 *         modelClass=[EClass|QualifiedName] 
-	 *         (nodes+=Node | links+=Link | styles+=Style | colors+=CustomColor | images+=ImageFile)*
-	 *     )
+	 *     (importURI=STRING imports+=ImportStatement modelClass=[EClass|QualifiedName] (elements+=DiagramElement | styles+=Style | colors+=CustomColor)*)
 	 */
 	protected void sequence_XDiagram(EObject context, XDiagram semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

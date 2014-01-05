@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.DiagramElement#getModelClass <em>Model Class</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.DiagramElement#getToolName <em>Tool Name</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.DiagramElement#getIcon <em>Icon</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.DiagramElement#getImageId <em>Image Id</em>}</li>
  * </ul>
  * </p>
  *
@@ -78,29 +78,29 @@ public interface DiagramElement extends EObject
   void setToolName(String value);
 
   /**
-   * Returns the value of the '<em><b>Icon</b></em>' reference.
+   * Returns the value of the '<em><b>Image Id</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Icon</em>' reference isn't clear,
+   * If the meaning of the '<em>Image Id</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Icon</em>' reference.
-   * @see #setIcon(ImageFile)
-   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getDiagramElement_Icon()
+   * @return the value of the '<em>Image Id</em>' attribute.
+   * @see #setImageId(String)
+   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getDiagramElement_ImageId()
    * @model
    * @generated
    */
-  ImageFile getIcon();
+  String getImageId();
 
   /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.DiagramElement#getIcon <em>Icon</em>}' reference.
+   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.DiagramElement#getImageId <em>Image Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Icon</em>' reference.
-   * @see #getIcon()
+   * @param value the new value of the '<em>Image Id</em>' attribute.
+   * @see #getImageId()
    * @generated
    */
-  void setIcon(ImageFile value);
+  void setImageId(String value);
 
 } // DiagramElement

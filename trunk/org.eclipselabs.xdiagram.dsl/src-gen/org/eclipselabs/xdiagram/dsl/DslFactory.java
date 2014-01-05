@@ -41,6 +41,15 @@ public interface DslFactory extends EFactory
   ImportStatement createImportStatement();
 
   /**
+   * Returns a new object of class '<em>Diagram Element</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Diagram Element</em>'.
+   * @generated
+   */
+  DiagramElement createDiagramElement();
+
+  /**
    * Returns a new object of class '<em>Style</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -48,15 +57,6 @@ public interface DslFactory extends EFactory
    * @generated
    */
   Style createStyle();
-
-  /**
-   * Returns a new object of class '<em>Image File</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Image File</em>'.
-   * @generated
-   */
-  ImageFile createImageFile();
 
   /**
    * Returns a new object of class '<em>Feature</em>'.
@@ -68,6 +68,15 @@ public interface DslFactory extends EFactory
   Feature createFeature();
 
   /**
+   * Returns a new object of class '<em>Feature Container</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Feature Container</em>'.
+   * @generated
+   */
+  FeatureContainer createFeatureContainer();
+
+  /**
    * Returns a new object of class '<em>Feature Conditional</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -75,15 +84,6 @@ public interface DslFactory extends EFactory
    * @generated
    */
   FeatureConditional createFeatureConditional();
-
-  /**
-   * Returns a new object of class '<em>Diagram Element</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Diagram Element</em>'.
-   * @generated
-   */
-  DiagramElement createDiagramElement();
 
   /**
    * Returns a new object of class '<em>Node</em>'.
@@ -129,15 +129,6 @@ public interface DslFactory extends EFactory
    * @generated
    */
   Anchor createAnchor();
-
-  /**
-   * Returns a new object of class '<em>Element</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Element</em>'.
-   * @generated
-   */
-  Element createElement();
 
   /**
    * Returns a new object of class '<em>Custom Color</em>'.
@@ -291,24 +282,6 @@ public interface DslFactory extends EFactory
    * @generated
    */
   ColorFeature createColorFeature();
-
-  /**
-   * Returns a new object of class '<em>Foreground</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Foreground</em>'.
-   * @generated
-   */
-  Foreground createForeground();
-
-  /**
-   * Returns a new object of class '<em>Background</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Background</em>'.
-   * @generated
-   */
-  Background createBackground();
 
   /**
    * Returns a new object of class '<em>Transparency</em>'.

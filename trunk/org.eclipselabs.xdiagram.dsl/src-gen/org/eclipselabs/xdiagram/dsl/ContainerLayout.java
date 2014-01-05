@@ -20,16 +20,6 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum ContainerLayout implements Enumerator
 {
   /**
-   * The '<em><b>STACK</b></em>' literal object.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #STACK_VALUE
-   * @generated
-   * @ordered
-   */
-  STACK(0, "STACK", "stack"),
-
-  /**
    * The '<em><b>FREE</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -37,22 +27,27 @@ public enum ContainerLayout implements Enumerator
    * @generated
    * @ordered
    */
-  FREE(1, "FREE", "free");
+  FREE(0, "FREE", "free"),
 
   /**
-   * The '<em><b>STACK</b></em>' literal value.
+   * The '<em><b>VSTACK</b></em>' literal object.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of '<em><b>STACK</b></em>' literal object isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
-   * @see #STACK
-   * @model literal="stack"
+   * @see #VSTACK_VALUE
    * @generated
    * @ordered
    */
-  public static final int STACK_VALUE = 0;
+  VSTACK(1, "VSTACK", "vstack"),
+
+  /**
+   * The '<em><b>HSTACK</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #HSTACK_VALUE
+   * @generated
+   * @ordered
+   */
+  HSTACK(2, "HSTACK", "hstack");
 
   /**
    * The '<em><b>FREE</b></em>' literal value.
@@ -67,7 +62,37 @@ public enum ContainerLayout implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int FREE_VALUE = 1;
+  public static final int FREE_VALUE = 0;
+
+  /**
+   * The '<em><b>VSTACK</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>VSTACK</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #VSTACK
+   * @model literal="vstack"
+   * @generated
+   * @ordered
+   */
+  public static final int VSTACK_VALUE = 1;
+
+  /**
+   * The '<em><b>HSTACK</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>HSTACK</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #HSTACK
+   * @model literal="hstack"
+   * @generated
+   * @ordered
+   */
+  public static final int HSTACK_VALUE = 2;
 
   /**
    * An array of all the '<em><b>Container Layout</b></em>' enumerators.
@@ -78,8 +103,9 @@ public enum ContainerLayout implements Enumerator
   private static final ContainerLayout[] VALUES_ARRAY =
     new ContainerLayout[]
     {
-      STACK,
       FREE,
+      VSTACK,
+      HSTACK,
     };
 
   /**
@@ -138,8 +164,9 @@ public enum ContainerLayout implements Enumerator
   {
     switch (value)
     {
-      case STACK_VALUE: return STACK;
       case FREE_VALUE: return FREE;
+      case VSTACK_VALUE: return VSTACK;
+      case HSTACK_VALUE: return HSTACK;
     }
     return null;
   }

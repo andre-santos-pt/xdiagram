@@ -48,7 +48,7 @@ public class ContainsImpl extends FeatureImpl implements Contains
    * @generated
    * @ordered
    */
-  protected static final ContainerLayout LAYOUT_EDEFAULT = ContainerLayout.STACK;
+  protected static final ContainerLayout LAYOUT_EDEFAULT = ContainerLayout.FREE;
 
   /**
    * The cached value of the '{@link #getLayout() <em>Layout</em>}' attribute.

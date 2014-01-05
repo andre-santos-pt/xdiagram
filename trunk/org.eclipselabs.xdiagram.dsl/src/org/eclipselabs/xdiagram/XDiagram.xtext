@@ -16,11 +16,9 @@ XDiagram:
     'diagram' modelClass=[ecore::EClass|QualifiedName]
     
     (
-    	(nodes += Node) |
-    	(links += Link) |
+    	(elements += DiagramElement) |
     	(styles += Style) |
-    	(colors += CustomColor) |
-    	(images += ImageFile)
+    	(colors += CustomColor)
     )*
 ;
 
@@ -39,15 +37,17 @@ QualifiedNameWithWildCard returns ecore::EString :
     QualifiedName  ('.' '*')?;
     
 
+DiagramElement:
+	Node | Link
+;
+
+
 Style:
-	'style' ':' name=ID '{'
-	      features+=Feature*
+	'style' name=ID ('extends' style=[Style])? '{'
+	      features+=StyleFeature*
 	'}'
 ;
 
-ImageFile:
-	'image' name=ID src=STRING
-;
 
 
 /**
@@ -55,12 +55,21 @@ ImageFile:
  * (conditional=FeatureConditional)?
  */
 Feature:
-		Size | Position | Point | 
-		Background | Foreground |
-		TextValue | FontFace | FontSize | FontStyle | 
-		LineStyle | LineWidth | Transparency | Corner 
-		| Contains
-		| Anchor
+		StyleFeature |
+		TextValue | 
+		Contains | 
+		Anchor
+;
+
+StyleFeature returns Feature:
+	Size | Position | Point | 
+	Background | Foreground |
+	FontFace | FontSize | FontStyle | 
+	LineStyle | LineWidth | Transparency | Corner 
+;
+
+FeatureContainer:
+	ConnectableElement | Link | Style
 ;
 
 // validate ATT / Value
@@ -72,17 +81,13 @@ FeatureConditional:
 
 
 
-// TODO: common: text / icon / tooltip
-DiagramElement:
-	Node | Link
-;
 
 
 // TODO validation: unique nodes
 // notation inheritance?
 Node:
-    'node' modelClass=[ecore::EClass|QualifiedName]  (toolName=STRING)?  ('icon' icon=[ImageFile])? ':'
-    	mainFigure = ConnectableElement
+    'node' modelClass=[ecore::EClass|QualifiedName]  (toolName=STRING)?  ('icon' imageId=ID)? ':'
+    	rootFigure = ConnectableElement
 ;
     
    
@@ -98,11 +103,10 @@ Link:
     	'source' sourceReference=[ecore::EReference|QualifiedName] 
     	'target' targetReference=[ecore::EReference|QualifiedName]
     	)
-    )  (toolName=STRING)?  ('icon' icon=[ImageFile])? 
+    )  (toolName=STRING)?  ('icon' imageId=ID)? 
     ':'
-    'connection' type=ConnectionType '{'
+    'connection' type=ConnectionType (styled?='style' style=[Style])? '{'
     	features += LinkFeature*
-    	
     	(
     	'decorators:'
     	 decorators += Decorator+	
@@ -155,9 +159,7 @@ enum AnchorDirection:
 
 
 
-Element:
-	ConnectableElement | Link
-;
+
 
 
 
@@ -204,8 +206,9 @@ enum DefaultColor:
 //---------------------------------------
 // Connectable Elements
 /*
- * Every connectable element must be included here.
- * and have (composite?='children:' children+=ConnectableElement+)?
+ * Every connectable element must be included here, and have:
+ * (composite?='children:' children+=ConnectableElement+)?
+ * (styled?='style' style=[Style])?
  */
 ConnectableElement:
 	Rectangle | Rhombus | Ellipse | Polyline | Label | Image | Invisible
@@ -218,7 +221,7 @@ ConnectableElementFeature returns Feature:
 
 
 Rectangle:
-	'figure' (rectangle?='rectangle' | square?='square') '{'
+	'figure' (rectangle?='rectangle' | square?='square') (styled?='style' style=[Style])? '{'
 		features+=RectangleFeature*
 		(composite?='children:' children+=ConnectableElement+)?
 	'}'
@@ -230,14 +233,14 @@ RectangleFeature returns Feature:
 
 Rhombus:
 	{Rhombus}
-	'figure' 'rhombus' '{'
+	'figure' 'rhombus' (styled?='style' style=[Style])? '{'
 		features+=ConnectableElementFeature*
 		(composite?='children:' children+=ConnectableElement+)?
 	'}'
 ;
 
 Ellipse:
-	'figure' (ellipse?='ellipse' | circle?='circle') '{'
+	'figure' (ellipse?='ellipse' | circle?='circle') (styled?='style' style=[Style])? '{'
 		features+=ConnectableElementFeature*
 		(composite?='children:' children+=ConnectableElement+)?
 	'}'
@@ -245,7 +248,7 @@ Ellipse:
 
 
 Polyline: 
-	'figure' (polygon?='polygon' | polyline?='polyline') '{'
+	'figure' (polygon?='polygon' | polyline?='polyline') (styled?='style' style=[Style])? '{'
 		features+=Point
 		features+=Point
 		features+=Point*
@@ -270,18 +273,19 @@ Contains:
 ;
 
 
-// TODO vstack / hstack
 enum ContainerLayout:
-	STACK='stack' |
-	FREE='free'
+	FREE='free' |
+	VSTACK='vstack' |
+	HSTACK='hstack'
 ;
 
+//TODO < > <= =>
 enum Operator:
 	EQUAL='=' |
 	DIFFERENT='<>'
 ;
 
-// TODO include object type
+// TODO include object type?
 Value:
 	IntValue | DoubleValue | StringValue | BooleanValue | EnumValue
 ;
@@ -326,7 +330,7 @@ FigureFeature returns Feature:
 // TODO: validation  at most one editable
 Label:
 	{Label}
-	'label' (editable?='editable')? '{'
+	'label' (editable?='editable')? (styled?='style' style=[Style])? '{'
 	features+=LabelFeature*
 	(composite?='children:' children+=ConnectableElement+)?
 	'}'
@@ -339,7 +343,7 @@ LabelFeature returns Feature:
 
 
 Image:
-	'image' image=[ImageFile] '{'
+	'image' imageId=ID (styled?='style' style=[Style])? '{'
 	features+=ImageFeature*
 	(composite?='children:' children+=ConnectableElement+)?
 	'}'
@@ -352,7 +356,7 @@ ImageFeature returns Feature:
 
 Invisible:
 	{Invisible}
-	'invisible' '{'
+	'invisible' (styled?='style' style=[Style])? '{'
 	features+=InvisibleFeature*
 	(composite?='children:' children+=ConnectableElement+)?
 	'}'
@@ -371,17 +375,17 @@ InvisibleFeature returns Feature:
 
 
 ColorFeature:
-	Foreground | Background //| Border
+	Foreground | Background
 ;
 
-Foreground:
-	'foreground ' color=Color
+Foreground returns ColorFeature:
+	type='foreground' color=Color
 	(conditional=FeatureConditional)?
 	';'
 ;
 
-Background:
-	'background ' color=Color
+Background returns ColorFeature:
+	type='background' color=Color
 	(conditional=FeatureConditional)?
 	';'
 ;
@@ -477,7 +481,7 @@ enum FontStyleType:
 
 
 LineStyle:
-	'line-style' style=LineType  
+	'line-type' style=LineType  
 	(conditional=FeatureConditional)?
 	';'
 ;

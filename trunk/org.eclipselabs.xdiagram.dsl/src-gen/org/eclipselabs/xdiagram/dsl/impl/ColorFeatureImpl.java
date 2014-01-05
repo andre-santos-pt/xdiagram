@@ -21,6 +21,7 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ColorFeatureImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ColorFeatureImpl#getColor <em>Color</em>}</li>
  * </ul>
  * </p>
@@ -29,6 +30,26 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  */
 public class ColorFeatureImpl extends FeatureImpl implements ColorFeature
 {
+  /**
+   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected static final String TYPE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected String type = TYPE_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getColor() <em>Color</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -58,6 +79,29 @@ public class ColorFeatureImpl extends FeatureImpl implements ColorFeature
   protected EClass eStaticClass()
   {
     return DslPackage.Literals.COLOR_FEATURE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getType()
+  {
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType(String newType)
+  {
+    String oldType = type;
+    type = newType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.COLOR_FEATURE__TYPE, oldType, type));
   }
 
   /**
@@ -134,6 +178,8 @@ public class ColorFeatureImpl extends FeatureImpl implements ColorFeature
   {
     switch (featureID)
     {
+      case DslPackage.COLOR_FEATURE__TYPE:
+        return getType();
       case DslPackage.COLOR_FEATURE__COLOR:
         return getColor();
     }
@@ -150,6 +196,9 @@ public class ColorFeatureImpl extends FeatureImpl implements ColorFeature
   {
     switch (featureID)
     {
+      case DslPackage.COLOR_FEATURE__TYPE:
+        setType((String)newValue);
+        return;
       case DslPackage.COLOR_FEATURE__COLOR:
         setColor((Color)newValue);
         return;
@@ -167,6 +216,9 @@ public class ColorFeatureImpl extends FeatureImpl implements ColorFeature
   {
     switch (featureID)
     {
+      case DslPackage.COLOR_FEATURE__TYPE:
+        setType(TYPE_EDEFAULT);
+        return;
       case DslPackage.COLOR_FEATURE__COLOR:
         setColor((Color)null);
         return;
@@ -184,10 +236,29 @@ public class ColorFeatureImpl extends FeatureImpl implements ColorFeature
   {
     switch (featureID)
     {
+      case DslPackage.COLOR_FEATURE__TYPE:
+        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
       case DslPackage.COLOR_FEATURE__COLOR:
         return color != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (type: ");
+    result.append(type);
+    result.append(')');
+    return result.toString();
   }
 
 } //ColorFeatureImpl

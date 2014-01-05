@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#getSourceReference <em>Source Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#getTargetReference <em>Target Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#isStyled <em>Styled</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#getDecorators <em>Decorators</em>}</li>
  * </ul>
  * </p>
@@ -27,7 +28,7 @@ import org.eclipse.emf.ecore.EReference;
  * @model
  * @generated
  */
-public interface Link extends DiagramElement, Element
+public interface Link extends DiagramElement, FeatureContainer
 {
   /**
    * Returns the value of the '<em><b>Model Reference</b></em>' reference.
@@ -161,6 +162,32 @@ public interface Link extends DiagramElement, Element
    * @generated
    */
   void setType(ConnectionType value);
+
+  /**
+   * Returns the value of the '<em><b>Styled</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Styled</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Styled</em>' attribute.
+   * @see #setStyled(boolean)
+   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getLink_Styled()
+   * @model
+   * @generated
+   */
+  boolean isStyled();
+
+  /**
+   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.Link#isStyled <em>Styled</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Styled</em>' attribute.
+   * @see #isStyled()
+   * @generated
+   */
+  void setStyled(boolean value);
 
   /**
    * Returns the value of the '<em><b>Decorators</b></em>' containment reference list.

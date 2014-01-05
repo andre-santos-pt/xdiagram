@@ -21,7 +21,7 @@ import org.eclipselabs.xdiagram.dsl.Node;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.NodeImpl#getMainFigure <em>Main Figure</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.NodeImpl#getRootFigure <em>Root Figure</em>}</li>
  * </ul>
  * </p>
  *
@@ -30,14 +30,14 @@ import org.eclipselabs.xdiagram.dsl.Node;
 public class NodeImpl extends DiagramElementImpl implements Node
 {
   /**
-   * The cached value of the '{@link #getMainFigure() <em>Main Figure</em>}' containment reference.
+   * The cached value of the '{@link #getRootFigure() <em>Root Figure</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getMainFigure()
+   * @see #getRootFigure()
    * @generated
    * @ordered
    */
-  protected ConnectableElement mainFigure;
+  protected ConnectableElement rootFigure;
 
   /**
    * <!-- begin-user-doc -->
@@ -65,9 +65,9 @@ public class NodeImpl extends DiagramElementImpl implements Node
    * <!-- end-user-doc -->
    * @generated
    */
-  public ConnectableElement getMainFigure()
+  public ConnectableElement getRootFigure()
   {
-    return mainFigure;
+    return rootFigure;
   }
 
   /**
@@ -75,13 +75,13 @@ public class NodeImpl extends DiagramElementImpl implements Node
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetMainFigure(ConnectableElement newMainFigure, NotificationChain msgs)
+  public NotificationChain basicSetRootFigure(ConnectableElement newRootFigure, NotificationChain msgs)
   {
-    ConnectableElement oldMainFigure = mainFigure;
-    mainFigure = newMainFigure;
+    ConnectableElement oldRootFigure = rootFigure;
+    rootFigure = newRootFigure;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DslPackage.NODE__MAIN_FIGURE, oldMainFigure, newMainFigure);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DslPackage.NODE__ROOT_FIGURE, oldRootFigure, newRootFigure);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -92,20 +92,20 @@ public class NodeImpl extends DiagramElementImpl implements Node
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setMainFigure(ConnectableElement newMainFigure)
+  public void setRootFigure(ConnectableElement newRootFigure)
   {
-    if (newMainFigure != mainFigure)
+    if (newRootFigure != rootFigure)
     {
       NotificationChain msgs = null;
-      if (mainFigure != null)
-        msgs = ((InternalEObject)mainFigure).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DslPackage.NODE__MAIN_FIGURE, null, msgs);
-      if (newMainFigure != null)
-        msgs = ((InternalEObject)newMainFigure).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DslPackage.NODE__MAIN_FIGURE, null, msgs);
-      msgs = basicSetMainFigure(newMainFigure, msgs);
+      if (rootFigure != null)
+        msgs = ((InternalEObject)rootFigure).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DslPackage.NODE__ROOT_FIGURE, null, msgs);
+      if (newRootFigure != null)
+        msgs = ((InternalEObject)newRootFigure).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DslPackage.NODE__ROOT_FIGURE, null, msgs);
+      msgs = basicSetRootFigure(newRootFigure, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.NODE__MAIN_FIGURE, newMainFigure, newMainFigure));
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.NODE__ROOT_FIGURE, newRootFigure, newRootFigure));
   }
 
   /**
@@ -118,8 +118,8 @@ public class NodeImpl extends DiagramElementImpl implements Node
   {
     switch (featureID)
     {
-      case DslPackage.NODE__MAIN_FIGURE:
-        return basicSetMainFigure(null, msgs);
+      case DslPackage.NODE__ROOT_FIGURE:
+        return basicSetRootFigure(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -134,8 +134,8 @@ public class NodeImpl extends DiagramElementImpl implements Node
   {
     switch (featureID)
     {
-      case DslPackage.NODE__MAIN_FIGURE:
-        return getMainFigure();
+      case DslPackage.NODE__ROOT_FIGURE:
+        return getRootFigure();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -150,8 +150,8 @@ public class NodeImpl extends DiagramElementImpl implements Node
   {
     switch (featureID)
     {
-      case DslPackage.NODE__MAIN_FIGURE:
-        setMainFigure((ConnectableElement)newValue);
+      case DslPackage.NODE__ROOT_FIGURE:
+        setRootFigure((ConnectableElement)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -167,8 +167,8 @@ public class NodeImpl extends DiagramElementImpl implements Node
   {
     switch (featureID)
     {
-      case DslPackage.NODE__MAIN_FIGURE:
-        setMainFigure((ConnectableElement)null);
+      case DslPackage.NODE__ROOT_FIGURE:
+        setRootFigure((ConnectableElement)null);
         return;
     }
     super.eUnset(featureID);
@@ -184,8 +184,8 @@ public class NodeImpl extends DiagramElementImpl implements Node
   {
     switch (featureID)
     {
-      case DslPackage.NODE__MAIN_FIGURE:
-        return mainFigure != null;
+      case DslPackage.NODE__ROOT_FIGURE:
+        return rootFigure != null;
     }
     return super.eIsSet(featureID);
   }

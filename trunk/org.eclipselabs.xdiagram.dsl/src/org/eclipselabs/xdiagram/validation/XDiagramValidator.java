@@ -34,9 +34,7 @@ public class XDiagramValidator extends DslValidator {
 
 	//?
 	public void validateUniqueNodes(XDiagram diagram) {
-		for(Node n : diagram.getNodes()) {
-
-		}
+		
 	}
 
 	@Check
