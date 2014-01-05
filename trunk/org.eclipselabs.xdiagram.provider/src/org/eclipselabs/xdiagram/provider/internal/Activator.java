@@ -1,6 +1,14 @@
 package org.eclipselabs.xdiagram.provider.internal;
 
+import org.eclipse.core.runtime.FileLocator;
+import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.Platform;
+import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.jface.resource.ImageRegistry;
+import org.eclipse.swt.graphics.ImageData;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 
 /**
@@ -25,6 +33,15 @@ public class Activator extends AbstractUIPlugin {
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
 		plugin = this;
+		
+//		Bundle bundle = Platform.getBundle("org.eclipselabs.xdiagram.examples.featurediagram");
+//		ImageDescriptor img = ImageDescriptor.createFromURL(
+//		          FileLocator.find(bundle, new Path("images/lolo.jpg"), null));
+//		
+//		((AbstractUIPlugin) Platform.getBundle("org.eclipse.graphiti.ui")).getImageRegistry().put("FeatureDiagramTypeProvider||file", img);
+		
+		
+//		getImageRegistry().put("file", img);
 	}
 
 	/*
@@ -44,5 +61,23 @@ public class Activator extends AbstractUIPlugin {
 	public static Activator getDefault() {
 		return plugin;
 	}
+	
+	@Override
+	protected void initializeImageRegistry(ImageRegistry reg) {
+		// TODO Auto-generated method stub
+		super.initializeImageRegistry(reg);
+	}
+	
+//	@Override
+//	protected ImageRegistry createImageRegistry() {
+//		
+//		ImageRegistry registry = super.createImageRegistry();
+//		Bundle bundle = Platform.getBundle("org.eclipselabs.xdiagram.examples.featurediagram");
+//		ImageDescriptor img = ImageDescriptor.createFromURL(
+//		          FileLocator.find(bundle, new Path("images/lolo.jpg"), null));
+//		
+//		registry.put("file", img);
+//		return registry;
+//	}
 
 }

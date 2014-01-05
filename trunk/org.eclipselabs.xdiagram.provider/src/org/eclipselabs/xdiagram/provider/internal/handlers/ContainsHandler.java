@@ -14,9 +14,8 @@ import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
-import org.eclipselabs.xdiagram.provider.internal.Util;
 import org.eclipselabs.xdiagram.dsl.Contains;
-import org.eclipselabs.xdiagram.dsl.Element;
+import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.Feature;
 
 import com.google.common.collect.ArrayListMultimap;
@@ -56,7 +55,7 @@ public class ContainsHandler implements FeatureHandler {
 		List<EReference> list = new ArrayList<>(references.get(container));
 		Iterator<EReference> it = list.iterator();
 		while(it.hasNext()) {
-			if(!it.next().getEType().isInstance(eObject))
+			if(!it.next().getEReferenceType().isInstance(eObject))
 				it.remove();
 		}
 		return list;
@@ -69,32 +68,32 @@ public class ContainsHandler implements FeatureHandler {
 	}
 	
 	@Override
-	public boolean accept(Element element, Feature feature, GraphicsAlgorithmContainer container) {
+	public boolean accept(FeatureContainer element, Feature feature, GraphicsAlgorithmContainer container) {
 		return feature instanceof Contains;
 	}
 
 	@Override
-	public void handle(Element element, Feature feature,
+	public void handle(FeatureContainer element, Feature feature,
 			EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container,
 			GraphicsAlgorithm figure) {
 		
 		Contains cont = (Contains) feature;
 	
-		EReference ref = (EReference) Util.matchFeature(eObject.eClass(), cont.getModelReference());
+//		EReference ref = (EReference) Util.matchFeature(eObject.eClass(), cont.getModelReference());
 
 		owners.put(container, eObject);		
-		references.put(container, ref);
+		references.put(container, cont.getModelReference());
 		
-		System.out.println("CONT " + container + "  " + ref);
+		System.out.println("CONT " + container + "  " + cont.getModelReference());
 	}
 
 	@Override
-	public boolean acceptDefaults(Element element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
+	public boolean acceptDefaults(FeatureContainer element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
 		return false;
 	}
 
 	@Override
-	public void setDefaults(Element element, GraphicsAlgorithm figure,
+	public void setDefaults(FeatureContainer element, GraphicsAlgorithm figure,
 			Diagram diagram) {
 		
 	}
