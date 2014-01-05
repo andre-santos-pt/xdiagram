@@ -6,32 +6,32 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
         eType="#//ImportStatement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modelClass" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nodes" upperBound="-1"
-        eType="#//Node" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
-        eType="#//Link" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//DiagramElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="styles" upperBound="-1"
         eType="#//Style" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="colors" upperBound="-1"
         eType="#//CustomColor" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="images" upperBound="-1"
-        eType="#//ImageFile" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ImportStatement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importedNamespace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Style">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
-        eType="#//Feature" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DiagramElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modelClass" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="toolName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imageId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ImageFile">
+  <eClassifiers xsi:type="ecore:EClass" name="Style" eSuperTypes="#//FeatureContainer">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="src" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Feature">
     <eStructuralFeatures xsi:type="ecore:EReference" name="conditional" eType="#//FeatureConditional"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="style" eType="#//Style"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
+        eType="#//Feature" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FeatureConditional">
     <eStructuralFeatures xsi:type="ecore:EReference" name="modelAttribute" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
@@ -39,21 +39,17 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Value"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DiagramElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="modelClass" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="toolName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="icon" eType="#//ImageFile"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Node" eSuperTypes="#//DiagramElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mainFigure" eType="#//ConnectableElement"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rootFigure" eType="#//ConnectableElement"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//DiagramElement #//Element">
+  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//DiagramElement #//FeatureContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="modelReference" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="complex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceReference" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetReference" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ConnectionType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="styled" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="decorators" upperBound="-1"
         eType="#//Decorator" containment="true"/>
   </eClassifiers>
@@ -71,7 +67,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="label" eType="#//Label"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConnectableElement" eSuperTypes="#//Element">
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectableElement" eSuperTypes="#//FeatureContainer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="styled" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="composite" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//ConnectableElement" containment="true"/>
@@ -83,10 +80,6 @@
   <eClassifiers xsi:type="ecore:EEnum" name="AnchorDirection">
     <eLiterals name="INCOMING" literal="incoming"/>
     <eLiterals name="OUTGOING" value="1" literal="outgoing"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Element">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
-        eType="#//Feature" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CustomColor">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -134,8 +127,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout" eType="#//ContainerLayout"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ContainerLayout">
-    <eLiterals name="STACK" literal="stack"/>
-    <eLiterals name="FREE" value="1" literal="free"/>
+    <eLiterals name="FREE" literal="free"/>
+    <eLiterals name="VSTACK" value="1" literal="vstack"/>
+    <eLiterals name="HSTACK" value="2" literal="hstack"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Operator">
     <eLiterals name="EQUAL" literal="="/>
@@ -167,15 +161,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="editable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//ConnectableElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="image" eType="#//ImageFile"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imageId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Invisible" eSuperTypes="#//ConnectableElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="ColorFeature" eSuperTypes="#//Feature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="color" eType="#//Color"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Foreground" eSuperTypes="#//Feature #//ColorFeature"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Background" eSuperTypes="#//Feature #//ColorFeature"/>
   <eClassifiers xsi:type="ecore:EClass" name="Transparency" eSuperTypes="#//Feature">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="percent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

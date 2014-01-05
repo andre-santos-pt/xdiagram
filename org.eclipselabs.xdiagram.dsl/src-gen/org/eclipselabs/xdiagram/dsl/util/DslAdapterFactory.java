@@ -85,14 +85,14 @@ public class DslAdapterFactory extends AdapterFactoryImpl
         return createImportStatementAdapter();
       }
       @Override
+      public Adapter caseDiagramElement(DiagramElement object)
+      {
+        return createDiagramElementAdapter();
+      }
+      @Override
       public Adapter caseStyle(Style object)
       {
         return createStyleAdapter();
-      }
-      @Override
-      public Adapter caseImageFile(ImageFile object)
-      {
-        return createImageFileAdapter();
       }
       @Override
       public Adapter caseFeature(Feature object)
@@ -100,14 +100,14 @@ public class DslAdapterFactory extends AdapterFactoryImpl
         return createFeatureAdapter();
       }
       @Override
+      public Adapter caseFeatureContainer(FeatureContainer object)
+      {
+        return createFeatureContainerAdapter();
+      }
+      @Override
       public Adapter caseFeatureConditional(FeatureConditional object)
       {
         return createFeatureConditionalAdapter();
-      }
-      @Override
-      public Adapter caseDiagramElement(DiagramElement object)
-      {
-        return createDiagramElementAdapter();
       }
       @Override
       public Adapter caseNode(Node object)
@@ -133,11 +133,6 @@ public class DslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseAnchor(Anchor object)
       {
         return createAnchorAdapter();
-      }
-      @Override
-      public Adapter caseElement(Element object)
-      {
-        return createElementAdapter();
       }
       @Override
       public Adapter caseCustomColor(CustomColor object)
@@ -223,16 +218,6 @@ public class DslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseColorFeature(ColorFeature object)
       {
         return createColorFeatureAdapter();
-      }
-      @Override
-      public Adapter caseForeground(Foreground object)
-      {
-        return createForegroundAdapter();
-      }
-      @Override
-      public Adapter caseBackground(Background object)
-      {
-        return createBackgroundAdapter();
       }
       @Override
       public Adapter caseTransparency(Transparency object)
@@ -342,6 +327,21 @@ public class DslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.DiagramElement <em>Diagram Element</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.dsl.DiagramElement
+   * @generated
+   */
+  public Adapter createDiagramElementAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Style <em>Style</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -352,21 +352,6 @@ public class DslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createStyleAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.ImageFile <em>Image File</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.dsl.ImageFile
-   * @generated
-   */
-  public Adapter createImageFileAdapter()
   {
     return null;
   }
@@ -387,6 +372,21 @@ public class DslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.FeatureContainer <em>Feature Container</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.dsl.FeatureContainer
+   * @generated
+   */
+  public Adapter createFeatureContainerAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.FeatureConditional <em>Feature Conditional</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -397,21 +397,6 @@ public class DslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFeatureConditionalAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.DiagramElement <em>Diagram Element</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.dsl.DiagramElement
-   * @generated
-   */
-  public Adapter createDiagramElementAdapter()
   {
     return null;
   }
@@ -487,21 +472,6 @@ public class DslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAnchorAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Element <em>Element</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.dsl.Element
-   * @generated
-   */
-  public Adapter createElementAdapter()
   {
     return null;
   }
@@ -757,36 +727,6 @@ public class DslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createColorFeatureAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Foreground <em>Foreground</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.dsl.Foreground
-   * @generated
-   */
-  public Adapter createForegroundAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Background <em>Background</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.dsl.Background
-   * @generated
-   */
-  public Adapter createBackgroundAdapter()
   {
     return null;
   }

@@ -21,9 +21,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipselabs.xdiagram.dsl.ConnectionType;
 import org.eclipselabs.xdiagram.dsl.Decorator;
 import org.eclipselabs.xdiagram.dsl.DslPackage;
-import org.eclipselabs.xdiagram.dsl.Element;
 import org.eclipselabs.xdiagram.dsl.Feature;
+import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.Link;
+import org.eclipselabs.xdiagram.dsl.Style;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,12 +33,14 @@ import org.eclipselabs.xdiagram.dsl.Link;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getStyle <em>Style</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getFeatures <em>Features</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getModelReference <em>Model Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#isComplex <em>Complex</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getSourceReference <em>Source Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getTargetReference <em>Target Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#isStyled <em>Styled</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getDecorators <em>Decorators</em>}</li>
  * </ul>
  * </p>
@@ -46,6 +49,16 @@ import org.eclipselabs.xdiagram.dsl.Link;
  */
 public class LinkImpl extends DiagramElementImpl implements Link
 {
+  /**
+   * The cached value of the '{@link #getStyle() <em>Style</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStyle()
+   * @generated
+   * @ordered
+   */
+  protected Style style;
+
   /**
    * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -127,6 +140,26 @@ public class LinkImpl extends DiagramElementImpl implements Link
   protected ConnectionType type = TYPE_EDEFAULT;
 
   /**
+   * The default value of the '{@link #isStyled() <em>Styled</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isStyled()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean STYLED_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isStyled() <em>Styled</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isStyled()
+   * @generated
+   * @ordered
+   */
+  protected boolean styled = STYLED_EDEFAULT;
+
+  /**
    * The cached value of the '{@link #getDecorators() <em>Decorators</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -155,6 +188,49 @@ public class LinkImpl extends DiagramElementImpl implements Link
   protected EClass eStaticClass()
   {
     return DslPackage.Literals.LINK;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Style getStyle()
+  {
+    if (style != null && style.eIsProxy())
+    {
+      InternalEObject oldStyle = (InternalEObject)style;
+      style = (Style)eResolveProxy(oldStyle);
+      if (style != oldStyle)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, DslPackage.LINK__STYLE, oldStyle, style));
+      }
+    }
+    return style;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Style basicGetStyle()
+  {
+    return style;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setStyle(Style newStyle)
+  {
+    Style oldStyle = style;
+    style = newStyle;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.LINK__STYLE, oldStyle, style));
   }
 
   /**
@@ -351,6 +427,29 @@ public class LinkImpl extends DiagramElementImpl implements Link
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isStyled()
+  {
+    return styled;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setStyled(boolean newStyled)
+  {
+    boolean oldStyled = styled;
+    styled = newStyled;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.LINK__STYLED, oldStyled, styled));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<Decorator> getDecorators()
   {
     if (decorators == null)
@@ -388,6 +487,9 @@ public class LinkImpl extends DiagramElementImpl implements Link
   {
     switch (featureID)
     {
+      case DslPackage.LINK__STYLE:
+        if (resolve) return getStyle();
+        return basicGetStyle();
       case DslPackage.LINK__FEATURES:
         return getFeatures();
       case DslPackage.LINK__MODEL_REFERENCE:
@@ -403,6 +505,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
         return basicGetTargetReference();
       case DslPackage.LINK__TYPE:
         return getType();
+      case DslPackage.LINK__STYLED:
+        return isStyled();
       case DslPackage.LINK__DECORATORS:
         return getDecorators();
     }
@@ -420,6 +524,9 @@ public class LinkImpl extends DiagramElementImpl implements Link
   {
     switch (featureID)
     {
+      case DslPackage.LINK__STYLE:
+        setStyle((Style)newValue);
+        return;
       case DslPackage.LINK__FEATURES:
         getFeatures().clear();
         getFeatures().addAll((Collection<? extends Feature>)newValue);
@@ -439,6 +546,9 @@ public class LinkImpl extends DiagramElementImpl implements Link
       case DslPackage.LINK__TYPE:
         setType((ConnectionType)newValue);
         return;
+      case DslPackage.LINK__STYLED:
+        setStyled((Boolean)newValue);
+        return;
       case DslPackage.LINK__DECORATORS:
         getDecorators().clear();
         getDecorators().addAll((Collection<? extends Decorator>)newValue);
@@ -457,6 +567,9 @@ public class LinkImpl extends DiagramElementImpl implements Link
   {
     switch (featureID)
     {
+      case DslPackage.LINK__STYLE:
+        setStyle((Style)null);
+        return;
       case DslPackage.LINK__FEATURES:
         getFeatures().clear();
         return;
@@ -475,6 +588,9 @@ public class LinkImpl extends DiagramElementImpl implements Link
       case DslPackage.LINK__TYPE:
         setType(TYPE_EDEFAULT);
         return;
+      case DslPackage.LINK__STYLED:
+        setStyled(STYLED_EDEFAULT);
+        return;
       case DslPackage.LINK__DECORATORS:
         getDecorators().clear();
         return;
@@ -492,6 +608,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
   {
     switch (featureID)
     {
+      case DslPackage.LINK__STYLE:
+        return style != null;
       case DslPackage.LINK__FEATURES:
         return features != null && !features.isEmpty();
       case DslPackage.LINK__MODEL_REFERENCE:
@@ -504,6 +622,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
         return targetReference != null;
       case DslPackage.LINK__TYPE:
         return type != TYPE_EDEFAULT;
+      case DslPackage.LINK__STYLED:
+        return styled != STYLED_EDEFAULT;
       case DslPackage.LINK__DECORATORS:
         return decorators != null && !decorators.isEmpty();
     }
@@ -518,11 +638,12 @@ public class LinkImpl extends DiagramElementImpl implements Link
   @Override
   public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
   {
-    if (baseClass == Element.class)
+    if (baseClass == FeatureContainer.class)
     {
       switch (derivedFeatureID)
       {
-        case DslPackage.LINK__FEATURES: return DslPackage.ELEMENT__FEATURES;
+        case DslPackage.LINK__STYLE: return DslPackage.FEATURE_CONTAINER__STYLE;
+        case DslPackage.LINK__FEATURES: return DslPackage.FEATURE_CONTAINER__FEATURES;
         default: return -1;
       }
     }
@@ -537,11 +658,12 @@ public class LinkImpl extends DiagramElementImpl implements Link
   @Override
   public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
   {
-    if (baseClass == Element.class)
+    if (baseClass == FeatureContainer.class)
     {
       switch (baseFeatureID)
       {
-        case DslPackage.ELEMENT__FEATURES: return DslPackage.LINK__FEATURES;
+        case DslPackage.FEATURE_CONTAINER__STYLE: return DslPackage.LINK__STYLE;
+        case DslPackage.FEATURE_CONTAINER__FEATURES: return DslPackage.LINK__FEATURES;
         default: return -1;
       }
     }
@@ -563,6 +685,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
     result.append(complex);
     result.append(", type: ");
     result.append(type);
+    result.append(", styled: ");
+    result.append(styled);
     result.append(')');
     return result.toString();
   }

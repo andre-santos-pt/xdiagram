@@ -11,7 +11,7 @@ package org.eclipselabs.xdiagram.dsl;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.Image#getImage <em>Image</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.Image#getImageId <em>Image Id</em>}</li>
  * </ul>
  * </p>
  *
@@ -22,29 +22,29 @@ package org.eclipselabs.xdiagram.dsl;
 public interface Image extends ConnectableElement
 {
   /**
-   * Returns the value of the '<em><b>Image</b></em>' reference.
+   * Returns the value of the '<em><b>Image Id</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Image</em>' reference isn't clear,
+   * If the meaning of the '<em>Image Id</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Image</em>' reference.
-   * @see #setImage(ImageFile)
-   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getImage_Image()
+   * @return the value of the '<em>Image Id</em>' attribute.
+   * @see #setImageId(String)
+   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getImage_ImageId()
    * @model
    * @generated
    */
-  ImageFile getImage();
+  String getImageId();
 
   /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.Image#getImage <em>Image</em>}' reference.
+   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.Image#getImageId <em>Image Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Image</em>' reference.
-   * @see #getImage()
+   * @param value the new value of the '<em>Image Id</em>' attribute.
+   * @see #getImageId()
    * @generated
    */
-  void setImage(ImageFile value);
+  void setImageId(String value);
 
 } // Image

@@ -5,13 +5,11 @@ package org.eclipselabs.xdiagram.dsl.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipselabs.xdiagram.dsl.DslPackage;
 import org.eclipselabs.xdiagram.dsl.Image;
-import org.eclipselabs.xdiagram.dsl.ImageFile;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +18,7 @@ import org.eclipselabs.xdiagram.dsl.ImageFile;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ImageImpl#getImage <em>Image</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ImageImpl#getImageId <em>Image Id</em>}</li>
  * </ul>
  * </p>
  *
@@ -29,14 +27,24 @@ import org.eclipselabs.xdiagram.dsl.ImageFile;
 public class ImageImpl extends ConnectableElementImpl implements Image
 {
   /**
-   * The cached value of the '{@link #getImage() <em>Image</em>}' reference.
+   * The default value of the '{@link #getImageId() <em>Image Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getImage()
+   * @see #getImageId()
    * @generated
    * @ordered
    */
-  protected ImageFile image;
+  protected static final String IMAGE_ID_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getImageId() <em>Image Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getImageId()
+   * @generated
+   * @ordered
+   */
+  protected String imageId = IMAGE_ID_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -64,19 +72,9 @@ public class ImageImpl extends ConnectableElementImpl implements Image
    * <!-- end-user-doc -->
    * @generated
    */
-  public ImageFile getImage()
+  public String getImageId()
   {
-    if (image != null && image.eIsProxy())
-    {
-      InternalEObject oldImage = (InternalEObject)image;
-      image = (ImageFile)eResolveProxy(oldImage);
-      if (image != oldImage)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, DslPackage.IMAGE__IMAGE, oldImage, image));
-      }
-    }
-    return image;
+    return imageId;
   }
 
   /**
@@ -84,22 +82,12 @@ public class ImageImpl extends ConnectableElementImpl implements Image
    * <!-- end-user-doc -->
    * @generated
    */
-  public ImageFile basicGetImage()
+  public void setImageId(String newImageId)
   {
-    return image;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setImage(ImageFile newImage)
-  {
-    ImageFile oldImage = image;
-    image = newImage;
+    String oldImageId = imageId;
+    imageId = newImageId;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.IMAGE__IMAGE, oldImage, image));
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.IMAGE__IMAGE_ID, oldImageId, imageId));
   }
 
   /**
@@ -112,9 +100,8 @@ public class ImageImpl extends ConnectableElementImpl implements Image
   {
     switch (featureID)
     {
-      case DslPackage.IMAGE__IMAGE:
-        if (resolve) return getImage();
-        return basicGetImage();
+      case DslPackage.IMAGE__IMAGE_ID:
+        return getImageId();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -129,8 +116,8 @@ public class ImageImpl extends ConnectableElementImpl implements Image
   {
     switch (featureID)
     {
-      case DslPackage.IMAGE__IMAGE:
-        setImage((ImageFile)newValue);
+      case DslPackage.IMAGE__IMAGE_ID:
+        setImageId((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -146,8 +133,8 @@ public class ImageImpl extends ConnectableElementImpl implements Image
   {
     switch (featureID)
     {
-      case DslPackage.IMAGE__IMAGE:
-        setImage((ImageFile)null);
+      case DslPackage.IMAGE__IMAGE_ID:
+        setImageId(IMAGE_ID_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -163,10 +150,27 @@ public class ImageImpl extends ConnectableElementImpl implements Image
   {
     switch (featureID)
     {
-      case DslPackage.IMAGE__IMAGE:
-        return image != null;
+      case DslPackage.IMAGE__IMAGE_ID:
+        return IMAGE_ID_EDEFAULT == null ? imageId != null : !IMAGE_ID_EDEFAULT.equals(imageId);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (imageId: ");
+    result.append(imageId);
+    result.append(')');
+    return result.toString();
   }
 
 } //ImageImpl

@@ -86,17 +86,18 @@ public class DslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case DslPackage.DIAGRAM_ELEMENT:
+      {
+        DiagramElement diagramElement = (DiagramElement)theEObject;
+        T result = caseDiagramElement(diagramElement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case DslPackage.STYLE:
       {
         Style style = (Style)theEObject;
         T result = caseStyle(style);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DslPackage.IMAGE_FILE:
-      {
-        ImageFile imageFile = (ImageFile)theEObject;
-        T result = caseImageFile(imageFile);
+        if (result == null) result = caseFeatureContainer(style);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -107,17 +108,17 @@ public class DslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case DslPackage.FEATURE_CONTAINER:
+      {
+        FeatureContainer featureContainer = (FeatureContainer)theEObject;
+        T result = caseFeatureContainer(featureContainer);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case DslPackage.FEATURE_CONDITIONAL:
       {
         FeatureConditional featureConditional = (FeatureConditional)theEObject;
         T result = caseFeatureConditional(featureConditional);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DslPackage.DIAGRAM_ELEMENT:
-      {
-        DiagramElement diagramElement = (DiagramElement)theEObject;
-        T result = caseDiagramElement(diagramElement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -134,7 +135,7 @@ public class DslSwitch<T> extends Switch<T>
         Link link = (Link)theEObject;
         T result = caseLink(link);
         if (result == null) result = caseDiagramElement(link);
-        if (result == null) result = caseElement(link);
+        if (result == null) result = caseFeatureContainer(link);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -149,7 +150,7 @@ public class DslSwitch<T> extends Switch<T>
       {
         ConnectableElement connectableElement = (ConnectableElement)theEObject;
         T result = caseConnectableElement(connectableElement);
-        if (result == null) result = caseElement(connectableElement);
+        if (result == null) result = caseFeatureContainer(connectableElement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -158,13 +159,6 @@ public class DslSwitch<T> extends Switch<T>
         Anchor anchor = (Anchor)theEObject;
         T result = caseAnchor(anchor);
         if (result == null) result = caseFeature(anchor);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DslPackage.ELEMENT:
-      {
-        Element element = (Element)theEObject;
-        T result = caseElement(element);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -187,7 +181,7 @@ public class DslSwitch<T> extends Switch<T>
         Rectangle rectangle = (Rectangle)theEObject;
         T result = caseRectangle(rectangle);
         if (result == null) result = caseConnectableElement(rectangle);
-        if (result == null) result = caseElement(rectangle);
+        if (result == null) result = caseFeatureContainer(rectangle);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -196,7 +190,7 @@ public class DslSwitch<T> extends Switch<T>
         Rhombus rhombus = (Rhombus)theEObject;
         T result = caseRhombus(rhombus);
         if (result == null) result = caseConnectableElement(rhombus);
-        if (result == null) result = caseElement(rhombus);
+        if (result == null) result = caseFeatureContainer(rhombus);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -205,7 +199,7 @@ public class DslSwitch<T> extends Switch<T>
         Ellipse ellipse = (Ellipse)theEObject;
         T result = caseEllipse(ellipse);
         if (result == null) result = caseConnectableElement(ellipse);
-        if (result == null) result = caseElement(ellipse);
+        if (result == null) result = caseFeatureContainer(ellipse);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -214,7 +208,7 @@ public class DslSwitch<T> extends Switch<T>
         Polyline polyline = (Polyline)theEObject;
         T result = casePolyline(polyline);
         if (result == null) result = caseConnectableElement(polyline);
-        if (result == null) result = caseElement(polyline);
+        if (result == null) result = caseFeatureContainer(polyline);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -278,7 +272,7 @@ public class DslSwitch<T> extends Switch<T>
         Label label = (Label)theEObject;
         T result = caseLabel(label);
         if (result == null) result = caseConnectableElement(label);
-        if (result == null) result = caseElement(label);
+        if (result == null) result = caseFeatureContainer(label);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -287,7 +281,7 @@ public class DslSwitch<T> extends Switch<T>
         Image image = (Image)theEObject;
         T result = caseImage(image);
         if (result == null) result = caseConnectableElement(image);
-        if (result == null) result = caseElement(image);
+        if (result == null) result = caseFeatureContainer(image);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -296,7 +290,7 @@ public class DslSwitch<T> extends Switch<T>
         Invisible invisible = (Invisible)theEObject;
         T result = caseInvisible(invisible);
         if (result == null) result = caseConnectableElement(invisible);
-        if (result == null) result = caseElement(invisible);
+        if (result == null) result = caseFeatureContainer(invisible);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -305,24 +299,6 @@ public class DslSwitch<T> extends Switch<T>
         ColorFeature colorFeature = (ColorFeature)theEObject;
         T result = caseColorFeature(colorFeature);
         if (result == null) result = caseFeature(colorFeature);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DslPackage.FOREGROUND:
-      {
-        Foreground foreground = (Foreground)theEObject;
-        T result = caseForeground(foreground);
-        if (result == null) result = caseColorFeature(foreground);
-        if (result == null) result = caseFeature(foreground);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DslPackage.BACKGROUND:
-      {
-        Background background = (Background)theEObject;
-        T result = caseBackground(background);
-        if (result == null) result = caseColorFeature(background);
-        if (result == null) result = caseFeature(background);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -451,6 +427,22 @@ public class DslSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDiagramElement(DiagramElement object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Style</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -462,22 +454,6 @@ public class DslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseStyle(Style object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Image File</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Image File</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseImageFile(ImageFile object)
   {
     return null;
   }
@@ -499,6 +475,22 @@ public class DslSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Feature Container</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Feature Container</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFeatureContainer(FeatureContainer object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Feature Conditional</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -510,22 +502,6 @@ public class DslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFeatureConditional(FeatureConditional object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseDiagramElement(DiagramElement object)
   {
     return null;
   }
@@ -606,22 +582,6 @@ public class DslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAnchor(Anchor object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Element</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Element</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseElement(Element object)
   {
     return null;
   }
@@ -894,38 +854,6 @@ public class DslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseColorFeature(ColorFeature object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Foreground</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Foreground</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseForeground(Foreground object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Background</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Background</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseBackground(Background object)
   {
     return null;
   }

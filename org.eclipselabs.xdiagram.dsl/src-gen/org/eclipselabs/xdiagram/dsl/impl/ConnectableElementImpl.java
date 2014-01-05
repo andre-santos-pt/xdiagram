@@ -27,6 +27,7 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ConnectableElementImpl#isStyled <em>Styled</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ConnectableElementImpl#isComposite <em>Composite</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ConnectableElementImpl#getChildren <em>Children</em>}</li>
  * </ul>
@@ -34,8 +35,28 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  *
  * @generated
  */
-public class ConnectableElementImpl extends ElementImpl implements ConnectableElement
+public class ConnectableElementImpl extends FeatureContainerImpl implements ConnectableElement
 {
+  /**
+   * The default value of the '{@link #isStyled() <em>Styled</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isStyled()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean STYLED_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isStyled() <em>Styled</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isStyled()
+   * @generated
+   * @ordered
+   */
+  protected boolean styled = STYLED_EDEFAULT;
+
   /**
    * The default value of the '{@link #isComposite() <em>Composite</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -85,6 +106,29 @@ public class ConnectableElementImpl extends ElementImpl implements ConnectableEl
   protected EClass eStaticClass()
   {
     return DslPackage.Literals.CONNECTABLE_ELEMENT;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isStyled()
+  {
+    return styled;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setStyled(boolean newStyled)
+  {
+    boolean oldStyled = styled;
+    styled = newStyled;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.CONNECTABLE_ELEMENT__STYLED, oldStyled, styled));
   }
 
   /**
@@ -150,6 +194,8 @@ public class ConnectableElementImpl extends ElementImpl implements ConnectableEl
   {
     switch (featureID)
     {
+      case DslPackage.CONNECTABLE_ELEMENT__STYLED:
+        return isStyled();
       case DslPackage.CONNECTABLE_ELEMENT__COMPOSITE:
         return isComposite();
       case DslPackage.CONNECTABLE_ELEMENT__CHILDREN:
@@ -169,6 +215,9 @@ public class ConnectableElementImpl extends ElementImpl implements ConnectableEl
   {
     switch (featureID)
     {
+      case DslPackage.CONNECTABLE_ELEMENT__STYLED:
+        setStyled((Boolean)newValue);
+        return;
       case DslPackage.CONNECTABLE_ELEMENT__COMPOSITE:
         setComposite((Boolean)newValue);
         return;
@@ -190,6 +239,9 @@ public class ConnectableElementImpl extends ElementImpl implements ConnectableEl
   {
     switch (featureID)
     {
+      case DslPackage.CONNECTABLE_ELEMENT__STYLED:
+        setStyled(STYLED_EDEFAULT);
+        return;
       case DslPackage.CONNECTABLE_ELEMENT__COMPOSITE:
         setComposite(COMPOSITE_EDEFAULT);
         return;
@@ -210,6 +262,8 @@ public class ConnectableElementImpl extends ElementImpl implements ConnectableEl
   {
     switch (featureID)
     {
+      case DslPackage.CONNECTABLE_ELEMENT__STYLED:
+        return styled != STYLED_EDEFAULT;
       case DslPackage.CONNECTABLE_ELEMENT__COMPOSITE:
         return composite != COMPOSITE_EDEFAULT;
       case DslPackage.CONNECTABLE_ELEMENT__CHILDREN:
@@ -229,7 +283,9 @@ public class ConnectableElementImpl extends ElementImpl implements ConnectableEl
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (composite: ");
+    result.append(" (styled: ");
+    result.append(styled);
+    result.append(", composite: ");
     result.append(composite);
     result.append(')');
     return result.toString();

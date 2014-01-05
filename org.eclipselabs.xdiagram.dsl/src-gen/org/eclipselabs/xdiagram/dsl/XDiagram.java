@@ -18,11 +18,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getImportURI <em>Import URI</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getImports <em>Imports</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getModelClass <em>Model Class</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getNodes <em>Nodes</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getLinks <em>Links</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getElements <em>Elements</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getStyles <em>Styles</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getColors <em>Colors</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getImages <em>Images</em>}</li>
  * </ul>
  * </p>
  *
@@ -101,36 +99,20 @@ public interface XDiagram extends EObject
   void setModelClass(EClass value);
 
   /**
-   * Returns the value of the '<em><b>Nodes</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.dsl.Node}.
+   * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
+   * The list contents are of type {@link org.eclipselabs.xdiagram.dsl.DiagramElement}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Nodes</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Elements</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Nodes</em>' containment reference list.
-   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getXDiagram_Nodes()
+   * @return the value of the '<em>Elements</em>' containment reference list.
+   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getXDiagram_Elements()
    * @model containment="true"
    * @generated
    */
-  EList<Node> getNodes();
-
-  /**
-   * Returns the value of the '<em><b>Links</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.dsl.Link}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Links</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Links</em>' containment reference list.
-   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getXDiagram_Links()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Link> getLinks();
+  EList<DiagramElement> getElements();
 
   /**
    * Returns the value of the '<em><b>Styles</b></em>' containment reference list.
@@ -163,21 +145,5 @@ public interface XDiagram extends EObject
    * @generated
    */
   EList<CustomColor> getColors();
-
-  /**
-   * Returns the value of the '<em><b>Images</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.dsl.ImageFile}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Images</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Images</em>' containment reference list.
-   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getXDiagram_Images()
-   * @model containment="true"
-   * @generated
-   */
-  EList<ImageFile> getImages();
 
 } // XDiagram

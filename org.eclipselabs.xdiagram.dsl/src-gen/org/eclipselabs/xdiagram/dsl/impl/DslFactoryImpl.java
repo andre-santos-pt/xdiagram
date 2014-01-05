@@ -67,17 +67,16 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
     {
       case DslPackage.XDIAGRAM: return createXDiagram();
       case DslPackage.IMPORT_STATEMENT: return createImportStatement();
-      case DslPackage.STYLE: return createStyle();
-      case DslPackage.IMAGE_FILE: return createImageFile();
-      case DslPackage.FEATURE: return createFeature();
-      case DslPackage.FEATURE_CONDITIONAL: return createFeatureConditional();
       case DslPackage.DIAGRAM_ELEMENT: return createDiagramElement();
+      case DslPackage.STYLE: return createStyle();
+      case DslPackage.FEATURE: return createFeature();
+      case DslPackage.FEATURE_CONTAINER: return createFeatureContainer();
+      case DslPackage.FEATURE_CONDITIONAL: return createFeatureConditional();
       case DslPackage.NODE: return createNode();
       case DslPackage.LINK: return createLink();
       case DslPackage.DECORATOR: return createDecorator();
       case DslPackage.CONNECTABLE_ELEMENT: return createConnectableElement();
       case DslPackage.ANCHOR: return createAnchor();
-      case DslPackage.ELEMENT: return createElement();
       case DslPackage.CUSTOM_COLOR: return createCustomColor();
       case DslPackage.COLOR: return createColor();
       case DslPackage.RECTANGLE: return createRectangle();
@@ -95,8 +94,6 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
       case DslPackage.IMAGE: return createImage();
       case DslPackage.INVISIBLE: return createInvisible();
       case DslPackage.COLOR_FEATURE: return createColorFeature();
-      case DslPackage.FOREGROUND: return createForeground();
-      case DslPackage.BACKGROUND: return createBackground();
       case DslPackage.TRANSPARENCY: return createTransparency();
       case DslPackage.SIZE: return createSize();
       case DslPackage.POINT: return createPoint();
@@ -206,10 +203,10 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Style createStyle()
+  public DiagramElement createDiagramElement()
   {
-    StyleImpl style = new StyleImpl();
-    return style;
+    DiagramElementImpl diagramElement = new DiagramElementImpl();
+    return diagramElement;
   }
 
   /**
@@ -217,10 +214,10 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ImageFile createImageFile()
+  public Style createStyle()
   {
-    ImageFileImpl imageFile = new ImageFileImpl();
-    return imageFile;
+    StyleImpl style = new StyleImpl();
+    return style;
   }
 
   /**
@@ -239,10 +236,10 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public FeatureConditional createFeatureConditional()
+  public FeatureContainer createFeatureContainer()
   {
-    FeatureConditionalImpl featureConditional = new FeatureConditionalImpl();
-    return featureConditional;
+    FeatureContainerImpl featureContainer = new FeatureContainerImpl();
+    return featureContainer;
   }
 
   /**
@@ -250,10 +247,10 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public DiagramElement createDiagramElement()
+  public FeatureConditional createFeatureConditional()
   {
-    DiagramElementImpl diagramElement = new DiagramElementImpl();
-    return diagramElement;
+    FeatureConditionalImpl featureConditional = new FeatureConditionalImpl();
+    return featureConditional;
   }
 
   /**
@@ -309,17 +306,6 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     AnchorImpl anchor = new AnchorImpl();
     return anchor;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Element createElement()
-  {
-    ElementImpl element = new ElementImpl();
-    return element;
   }
 
   /**
@@ -507,28 +493,6 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     ColorFeatureImpl colorFeature = new ColorFeatureImpl();
     return colorFeature;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Foreground createForeground()
-  {
-    ForegroundImpl foreground = new ForegroundImpl();
-    return foreground;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Background createBackground()
-  {
-    BackgroundImpl background = new BackgroundImpl();
-    return background;
   }
 
   /**
