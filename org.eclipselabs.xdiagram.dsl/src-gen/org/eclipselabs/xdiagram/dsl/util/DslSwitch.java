@@ -86,6 +86,13 @@ public class DslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case DslPackage.GROUP:
+      {
+        Group group = (Group)theEObject;
+        T result = caseGroup(group);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case DslPackage.DIAGRAM_ELEMENT:
       {
         DiagramElement diagramElement = (DiagramElement)theEObject;
@@ -173,6 +180,22 @@ public class DslSwitch<T> extends Switch<T>
       {
         Color color = (Color)theEObject;
         T result = caseColor(color);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DslPackage.CUSTOM_FIGURE:
+      {
+        CustomFigure customFigure = (CustomFigure)theEObject;
+        T result = caseCustomFigure(customFigure);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DslPackage.CUSTOM:
+      {
+        Custom custom = (Custom)theEObject;
+        T result = caseCustom(custom);
+        if (result == null) result = caseConnectableElement(custom);
+        if (result == null) result = caseFeatureContainer(custom);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -427,6 +450,22 @@ public class DslSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Group</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Group</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGroup(Group object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -614,6 +653,38 @@ public class DslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseColor(Color object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Custom Figure</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Custom Figure</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCustomFigure(CustomFigure object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Custom</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Custom</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCustom(Custom object)
   {
     return null;
   }

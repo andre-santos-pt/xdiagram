@@ -12,7 +12,6 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.ConnectableElement#isStyled <em>Styled</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.ConnectableElement#isComposite <em>Composite</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.ConnectableElement#getChildren <em>Children</em>}</li>
  * </ul>
@@ -24,32 +23,6 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface ConnectableElement extends FeatureContainer
 {
-  /**
-   * Returns the value of the '<em><b>Styled</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Styled</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Styled</em>' attribute.
-   * @see #setStyled(boolean)
-   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getConnectableElement_Styled()
-   * @model
-   * @generated
-   */
-  boolean isStyled();
-
-  /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.ConnectableElement#isStyled <em>Styled</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Styled</em>' attribute.
-   * @see #isStyled()
-   * @generated
-   */
-  void setStyled(boolean value);
-
   /**
    * Returns the value of the '<em><b>Composite</b></em>' attribute.
    * <!-- begin-user-doc -->

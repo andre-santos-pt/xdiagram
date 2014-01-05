@@ -85,6 +85,11 @@ public class DslAdapterFactory extends AdapterFactoryImpl
         return createImportStatementAdapter();
       }
       @Override
+      public Adapter caseGroup(Group object)
+      {
+        return createGroupAdapter();
+      }
+      @Override
       public Adapter caseDiagramElement(DiagramElement object)
       {
         return createDiagramElementAdapter();
@@ -143,6 +148,16 @@ public class DslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseColor(Color object)
       {
         return createColorAdapter();
+      }
+      @Override
+      public Adapter caseCustomFigure(CustomFigure object)
+      {
+        return createCustomFigureAdapter();
+      }
+      @Override
+      public Adapter caseCustom(Custom object)
+      {
+        return createCustomAdapter();
       }
       @Override
       public Adapter caseRectangle(Rectangle object)
@@ -327,6 +342,21 @@ public class DslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Group <em>Group</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.dsl.Group
+   * @generated
+   */
+  public Adapter createGroupAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.DiagramElement <em>Diagram Element</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -502,6 +532,36 @@ public class DslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createColorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.CustomFigure <em>Custom Figure</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.dsl.CustomFigure
+   * @generated
+   */
+  public Adapter createCustomFigureAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Custom <em>Custom</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.dsl.Custom
+   * @generated
+   */
+  public Adapter createCustomAdapter()
   {
     return null;
   }

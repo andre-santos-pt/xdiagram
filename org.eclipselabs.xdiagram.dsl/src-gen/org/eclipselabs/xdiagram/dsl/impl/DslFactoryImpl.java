@@ -67,6 +67,7 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
     {
       case DslPackage.XDIAGRAM: return createXDiagram();
       case DslPackage.IMPORT_STATEMENT: return createImportStatement();
+      case DslPackage.GROUP: return createGroup();
       case DslPackage.DIAGRAM_ELEMENT: return createDiagramElement();
       case DslPackage.STYLE: return createStyle();
       case DslPackage.FEATURE: return createFeature();
@@ -79,6 +80,8 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
       case DslPackage.ANCHOR: return createAnchor();
       case DslPackage.CUSTOM_COLOR: return createCustomColor();
       case DslPackage.COLOR: return createColor();
+      case DslPackage.CUSTOM_FIGURE: return createCustomFigure();
+      case DslPackage.CUSTOM: return createCustom();
       case DslPackage.RECTANGLE: return createRectangle();
       case DslPackage.RHOMBUS: return createRhombus();
       case DslPackage.ELLIPSE: return createEllipse();
@@ -120,6 +123,8 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     switch (eDataType.getClassifierID())
     {
+      case DslPackage.FIGURE_TYPE:
+        return createFigureTypeFromString(eDataType, initialValue);
       case DslPackage.CONNECTION_TYPE:
         return createConnectionTypeFromString(eDataType, initialValue);
       case DslPackage.ANCHOR_DIRECTION:
@@ -153,6 +158,8 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     switch (eDataType.getClassifierID())
     {
+      case DslPackage.FIGURE_TYPE:
+        return convertFigureTypeToString(eDataType, instanceValue);
       case DslPackage.CONNECTION_TYPE:
         return convertConnectionTypeToString(eDataType, instanceValue);
       case DslPackage.ANCHOR_DIRECTION:
@@ -196,6 +203,17 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     ImportStatementImpl importStatement = new ImportStatementImpl();
     return importStatement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Group createGroup()
+  {
+    GroupImpl group = new GroupImpl();
+    return group;
   }
 
   /**
@@ -328,6 +346,28 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     ColorImpl color = new ColorImpl();
     return color;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CustomFigure createCustomFigure()
+  {
+    CustomFigureImpl customFigure = new CustomFigureImpl();
+    return customFigure;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Custom createCustom()
+  {
+    CustomImpl custom = new CustomImpl();
+    return custom;
   }
 
   /**
@@ -614,6 +654,28 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     LineWidthImpl lineWidth = new LineWidthImpl();
     return lineWidth;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FigureType createFigureTypeFromString(EDataType eDataType, String initialValue)
+  {
+    FigureType result = FigureType.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertFigureTypeToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**
