@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipselabs.xdiagram.dsl.CustomColor;
 import org.eclipselabs.xdiagram.dsl.CustomFigure;
+import org.eclipselabs.xdiagram.dsl.Diagram;
 import org.eclipselabs.xdiagram.dsl.DiagramElement;
 import org.eclipselabs.xdiagram.dsl.DslPackage;
 import org.eclipselabs.xdiagram.dsl.Group;
@@ -36,7 +37,7 @@ import org.eclipselabs.xdiagram.dsl.XDiagram;
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getImportURI <em>Import URI</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getImports <em>Imports</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getModelClass <em>Model Class</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getDiagram <em>Diagram</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getGroups <em>Groups</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getElements <em>Elements</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getStyles <em>Styles</em>}</li>
@@ -80,14 +81,14 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
   protected EList<ImportStatement> imports;
 
   /**
-   * The cached value of the '{@link #getModelClass() <em>Model Class</em>}' reference.
+   * The cached value of the '{@link #getDiagram() <em>Diagram</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getModelClass()
+   * @see #getDiagram()
    * @generated
    * @ordered
    */
-  protected EClass modelClass;
+  protected Diagram diagram;
 
   /**
    * The cached value of the '{@link #getGroups() <em>Groups</em>}' containment reference list.
@@ -202,19 +203,9 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getModelClass()
+  public Diagram getDiagram()
   {
-    if (modelClass != null && modelClass.eIsProxy())
-    {
-      InternalEObject oldModelClass = (InternalEObject)modelClass;
-      modelClass = (EClass)eResolveProxy(oldModelClass);
-      if (modelClass != oldModelClass)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, DslPackage.XDIAGRAM__MODEL_CLASS, oldModelClass, modelClass));
-      }
-    }
-    return modelClass;
+    return diagram;
   }
 
   /**
@@ -222,22 +213,37 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass basicGetModelClass()
+  public NotificationChain basicSetDiagram(Diagram newDiagram, NotificationChain msgs)
   {
-    return modelClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setModelClass(EClass newModelClass)
-  {
-    EClass oldModelClass = modelClass;
-    modelClass = newModelClass;
+    Diagram oldDiagram = diagram;
+    diagram = newDiagram;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.XDIAGRAM__MODEL_CLASS, oldModelClass, modelClass));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DslPackage.XDIAGRAM__DIAGRAM, oldDiagram, newDiagram);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDiagram(Diagram newDiagram)
+  {
+    if (newDiagram != diagram)
+    {
+      NotificationChain msgs = null;
+      if (diagram != null)
+        msgs = ((InternalEObject)diagram).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DslPackage.XDIAGRAM__DIAGRAM, null, msgs);
+      if (newDiagram != null)
+        msgs = ((InternalEObject)newDiagram).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DslPackage.XDIAGRAM__DIAGRAM, null, msgs);
+      msgs = basicSetDiagram(newDiagram, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.XDIAGRAM__DIAGRAM, newDiagram, newDiagram));
   }
 
   /**
@@ -322,6 +328,8 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
     {
       case DslPackage.XDIAGRAM__IMPORTS:
         return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
+      case DslPackage.XDIAGRAM__DIAGRAM:
+        return basicSetDiagram(null, msgs);
       case DslPackage.XDIAGRAM__GROUPS:
         return ((InternalEList<?>)getGroups()).basicRemove(otherEnd, msgs);
       case DslPackage.XDIAGRAM__ELEMENTS:
@@ -350,9 +358,8 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         return getImportURI();
       case DslPackage.XDIAGRAM__IMPORTS:
         return getImports();
-      case DslPackage.XDIAGRAM__MODEL_CLASS:
-        if (resolve) return getModelClass();
-        return basicGetModelClass();
+      case DslPackage.XDIAGRAM__DIAGRAM:
+        return getDiagram();
       case DslPackage.XDIAGRAM__GROUPS:
         return getGroups();
       case DslPackage.XDIAGRAM__ELEMENTS:
@@ -385,8 +392,8 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         getImports().clear();
         getImports().addAll((Collection<? extends ImportStatement>)newValue);
         return;
-      case DslPackage.XDIAGRAM__MODEL_CLASS:
-        setModelClass((EClass)newValue);
+      case DslPackage.XDIAGRAM__DIAGRAM:
+        setDiagram((Diagram)newValue);
         return;
       case DslPackage.XDIAGRAM__GROUPS:
         getGroups().clear();
@@ -428,8 +435,8 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
       case DslPackage.XDIAGRAM__IMPORTS:
         getImports().clear();
         return;
-      case DslPackage.XDIAGRAM__MODEL_CLASS:
-        setModelClass((EClass)null);
+      case DslPackage.XDIAGRAM__DIAGRAM:
+        setDiagram((Diagram)null);
         return;
       case DslPackage.XDIAGRAM__GROUPS:
         getGroups().clear();
@@ -464,8 +471,8 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         return IMPORT_URI_EDEFAULT == null ? importURI != null : !IMPORT_URI_EDEFAULT.equals(importURI);
       case DslPackage.XDIAGRAM__IMPORTS:
         return imports != null && !imports.isEmpty();
-      case DslPackage.XDIAGRAM__MODEL_CLASS:
-        return modelClass != null;
+      case DslPackage.XDIAGRAM__DIAGRAM:
+        return diagram != null;
       case DslPackage.XDIAGRAM__GROUPS:
         return groups != null && !groups.isEmpty();
       case DslPackage.XDIAGRAM__ELEMENTS:

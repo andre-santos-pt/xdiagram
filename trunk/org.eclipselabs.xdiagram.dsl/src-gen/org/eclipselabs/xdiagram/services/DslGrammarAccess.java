@@ -26,29 +26,30 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cImportURISTRINGTerminalRuleCall_1_0 = (RuleCall)cImportURIAssignment_1.eContents().get(0);
 		private final Assignment cImportsAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cImportsImportStatementParserRuleCall_2_0 = (RuleCall)cImportsAssignment_2.eContents().get(0);
-		private final Keyword cDiagramKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cModelClassAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cModelClassEClassCrossReference_4_0 = (CrossReference)cModelClassAssignment_4.eContents().get(0);
-		private final RuleCall cModelClassEClassQualifiedNameParserRuleCall_4_0_1 = (RuleCall)cModelClassEClassCrossReference_4_0.eContents().get(1);
-		private final Assignment cGroupsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cGroupsGroupParserRuleCall_5_0 = (RuleCall)cGroupsAssignment_5.eContents().get(0);
-		private final Alternatives cAlternatives_6 = (Alternatives)cGroup.eContents().get(6);
-		private final Assignment cElementsAssignment_6_0 = (Assignment)cAlternatives_6.eContents().get(0);
-		private final RuleCall cElementsDiagramElementParserRuleCall_6_0_0 = (RuleCall)cElementsAssignment_6_0.eContents().get(0);
-		private final Assignment cStylesAssignment_6_1 = (Assignment)cAlternatives_6.eContents().get(1);
-		private final RuleCall cStylesStyleParserRuleCall_6_1_0 = (RuleCall)cStylesAssignment_6_1.eContents().get(0);
-		private final Assignment cColorsAssignment_6_2 = (Assignment)cAlternatives_6.eContents().get(2);
-		private final RuleCall cColorsCustomColorParserRuleCall_6_2_0 = (RuleCall)cColorsAssignment_6_2.eContents().get(0);
-		private final Assignment cFiguresAssignment_6_3 = (Assignment)cAlternatives_6.eContents().get(3);
-		private final RuleCall cFiguresCustomFigureParserRuleCall_6_3_0 = (RuleCall)cFiguresAssignment_6_3.eContents().get(0);
+		private final Assignment cDiagramAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cDiagramDiagramParserRuleCall_3_0 = (RuleCall)cDiagramAssignment_3.eContents().get(0);
+		private final Assignment cGroupsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cGroupsGroupParserRuleCall_4_0 = (RuleCall)cGroupsAssignment_4.eContents().get(0);
+		private final Alternatives cAlternatives_5 = (Alternatives)cGroup.eContents().get(5);
+		private final Assignment cElementsAssignment_5_0 = (Assignment)cAlternatives_5.eContents().get(0);
+		private final RuleCall cElementsDiagramElementParserRuleCall_5_0_0 = (RuleCall)cElementsAssignment_5_0.eContents().get(0);
+		private final Assignment cStylesAssignment_5_1 = (Assignment)cAlternatives_5.eContents().get(1);
+		private final RuleCall cStylesStyleParserRuleCall_5_1_0 = (RuleCall)cStylesAssignment_5_1.eContents().get(0);
+		private final Assignment cColorsAssignment_5_2 = (Assignment)cAlternatives_5.eContents().get(2);
+		private final RuleCall cColorsCustomColorParserRuleCall_5_2_0 = (RuleCall)cColorsAssignment_5_2.eContents().get(0);
+		private final Assignment cFiguresAssignment_5_3 = (Assignment)cAlternatives_5.eContents().get(3);
+		private final RuleCall cFiguresCustomFigureParserRuleCall_5_3_0 = (RuleCall)cFiguresAssignment_5_3.eContents().get(0);
 		
 		//XDiagram:
-		//	"metamodel" importURI=STRING imports+=ImportStatement "diagram" modelClass=[ecore::EClass|QualifiedName]
-		//	groups+=Group* (elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*;
+		//	"metamodel" importURI=STRING imports+=ImportStatement //    'diagram' modelClass=[ecore::EClass|QualifiedName] ':'
+		//	//    
+		//	diagram=Diagram groups+=Group* (elements+=DiagramElement | styles+=Style | colors+=CustomColor |
+		//	figures+=CustomFigure)*;
 		public ParserRule getRule() { return rule; }
 
-		//"metamodel" importURI=STRING imports+=ImportStatement "diagram" modelClass=[ecore::EClass|QualifiedName] groups+=Group*
-		//(elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*
+		//"metamodel" importURI=STRING imports+=ImportStatement //    'diagram' modelClass=[ecore::EClass|QualifiedName] ':'
+		////    
+		//diagram=Diagram groups+=Group* (elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*
 		public Group getGroup() { return cGroup; }
 
 		//"metamodel"
@@ -66,50 +67,46 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ImportStatement
 		public RuleCall getImportsImportStatementParserRuleCall_2_0() { return cImportsImportStatementParserRuleCall_2_0; }
 
-		//"diagram"
-		public Keyword getDiagramKeyword_3() { return cDiagramKeyword_3; }
+		////    'diagram' modelClass=[ecore::EClass|QualifiedName] ':'
+		////    
+		//diagram=Diagram
+		public Assignment getDiagramAssignment_3() { return cDiagramAssignment_3; }
 
-		//modelClass=[ecore::EClass|QualifiedName]
-		public Assignment getModelClassAssignment_4() { return cModelClassAssignment_4; }
-
-		//[ecore::EClass|QualifiedName]
-		public CrossReference getModelClassEClassCrossReference_4_0() { return cModelClassEClassCrossReference_4_0; }
-
-		//QualifiedName
-		public RuleCall getModelClassEClassQualifiedNameParserRuleCall_4_0_1() { return cModelClassEClassQualifiedNameParserRuleCall_4_0_1; }
+		//Diagram
+		public RuleCall getDiagramDiagramParserRuleCall_3_0() { return cDiagramDiagramParserRuleCall_3_0; }
 
 		//groups+=Group*
-		public Assignment getGroupsAssignment_5() { return cGroupsAssignment_5; }
+		public Assignment getGroupsAssignment_4() { return cGroupsAssignment_4; }
 
 		//Group
-		public RuleCall getGroupsGroupParserRuleCall_5_0() { return cGroupsGroupParserRuleCall_5_0; }
+		public RuleCall getGroupsGroupParserRuleCall_4_0() { return cGroupsGroupParserRuleCall_4_0; }
 
 		//(elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*
-		public Alternatives getAlternatives_6() { return cAlternatives_6; }
+		public Alternatives getAlternatives_5() { return cAlternatives_5; }
 
 		//elements+=DiagramElement
-		public Assignment getElementsAssignment_6_0() { return cElementsAssignment_6_0; }
+		public Assignment getElementsAssignment_5_0() { return cElementsAssignment_5_0; }
 
 		//DiagramElement
-		public RuleCall getElementsDiagramElementParserRuleCall_6_0_0() { return cElementsDiagramElementParserRuleCall_6_0_0; }
+		public RuleCall getElementsDiagramElementParserRuleCall_5_0_0() { return cElementsDiagramElementParserRuleCall_5_0_0; }
 
 		//styles+=Style
-		public Assignment getStylesAssignment_6_1() { return cStylesAssignment_6_1; }
+		public Assignment getStylesAssignment_5_1() { return cStylesAssignment_5_1; }
 
 		//Style
-		public RuleCall getStylesStyleParserRuleCall_6_1_0() { return cStylesStyleParserRuleCall_6_1_0; }
+		public RuleCall getStylesStyleParserRuleCall_5_1_0() { return cStylesStyleParserRuleCall_5_1_0; }
 
 		//colors+=CustomColor
-		public Assignment getColorsAssignment_6_2() { return cColorsAssignment_6_2; }
+		public Assignment getColorsAssignment_5_2() { return cColorsAssignment_5_2; }
 
 		//CustomColor
-		public RuleCall getColorsCustomColorParserRuleCall_6_2_0() { return cColorsCustomColorParserRuleCall_6_2_0; }
+		public RuleCall getColorsCustomColorParserRuleCall_5_2_0() { return cColorsCustomColorParserRuleCall_5_2_0; }
 
 		//figures+=CustomFigure
-		public Assignment getFiguresAssignment_6_3() { return cFiguresAssignment_6_3; }
+		public Assignment getFiguresAssignment_5_3() { return cFiguresAssignment_5_3; }
 
 		//CustomFigure
-		public RuleCall getFiguresCustomFigureParserRuleCall_6_3_0() { return cFiguresCustomFigureParserRuleCall_6_3_0; }
+		public RuleCall getFiguresCustomFigureParserRuleCall_5_3_0() { return cFiguresCustomFigureParserRuleCall_5_3_0; }
 	}
 
 	public class ImportStatementElements extends AbstractParserRuleElementFinder {
@@ -199,6 +196,50 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"*"
 		public Keyword getAsteriskKeyword_1_1() { return cAsteriskKeyword_1_1; }
+	}
+
+	public class DiagramElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Diagram");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cDiagramKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cModelClassAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cModelClassEClassCrossReference_1_0 = (CrossReference)cModelClassAssignment_1.eContents().get(0);
+		private final RuleCall cModelClassEClassQualifiedNameParserRuleCall_1_0_1 = (RuleCall)cModelClassEClassCrossReference_1_0.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cContainsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cContainsContainsParserRuleCall_3_0 = (RuleCall)cContainsAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//Diagram:
+		//	"diagram" modelClass=[ecore::EClass|QualifiedName] "{" contains+=Contains* "}";
+		public ParserRule getRule() { return rule; }
+
+		//"diagram" modelClass=[ecore::EClass|QualifiedName] "{" contains+=Contains* "}"
+		public Group getGroup() { return cGroup; }
+
+		//"diagram"
+		public Keyword getDiagramKeyword_0() { return cDiagramKeyword_0; }
+
+		//modelClass=[ecore::EClass|QualifiedName]
+		public Assignment getModelClassAssignment_1() { return cModelClassAssignment_1; }
+
+		//[ecore::EClass|QualifiedName]
+		public CrossReference getModelClassEClassCrossReference_1_0() { return cModelClassEClassCrossReference_1_0; }
+
+		//QualifiedName
+		public RuleCall getModelClassEClassQualifiedNameParserRuleCall_1_0_1() { return cModelClassEClassQualifiedNameParserRuleCall_1_0_1; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//contains+=Contains*
+		public Assignment getContainsAssignment_3() { return cContainsAssignment_3; }
+
+		//Contains
+		public RuleCall getContainsContainsParserRuleCall_3_0() { return cContainsContainsParserRuleCall_3_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class GroupElements extends AbstractParserRuleElementFinder {
@@ -335,25 +376,21 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	public class LinkedFeatureElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LinkedFeature");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cTextValueParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cContainsParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cAnchorParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cContainsParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cAnchorParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//LinkedFeature returns Feature:
-		//	TextValue | Contains | Anchor;
+		//	Contains | Anchor;
 		public ParserRule getRule() { return rule; }
 
-		//TextValue | Contains | Anchor
+		//Contains | Anchor
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//TextValue
-		public RuleCall getTextValueParserRuleCall_0() { return cTextValueParserRuleCall_0; }
-
 		//Contains
-		public RuleCall getContainsParserRuleCall_1() { return cContainsParserRuleCall_1; }
+		public RuleCall getContainsParserRuleCall_0() { return cContainsParserRuleCall_0; }
 
 		//Anchor
-		public RuleCall getAnchorParserRuleCall_2() { return cAnchorParserRuleCall_2; }
+		public RuleCall getAnchorParserRuleCall_1() { return cAnchorParserRuleCall_1; }
 	}
 
 	public class StyleFeatureElements extends AbstractParserRuleElementFinder {
@@ -369,16 +406,17 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFontFaceParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		private final RuleCall cFontSizeParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		private final RuleCall cFontStyleParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final RuleCall cLineStyleParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cLineWidthParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cTextValueParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cLineStyleParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cLineWidthParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
 		
 		//StyleFeature returns Feature:
 		//	Size | Position | Point | Corner | Background | Foreground | Transparency | FontFace | FontSize | FontStyle |
-		//	LineStyle | LineWidth;
+		//	TextValue | LineStyle | LineWidth;
 		public ParserRule getRule() { return rule; }
 
-		//Size | Position | Point | Corner | Background | Foreground | Transparency | FontFace | FontSize | FontStyle | LineStyle
-		//| LineWidth
+		//Size | Position | Point | Corner | Background | Foreground | Transparency | FontFace | FontSize | FontStyle | TextValue
+		//| LineStyle | LineWidth
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Size
@@ -411,11 +449,14 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FontStyle
 		public RuleCall getFontStyleParserRuleCall_9() { return cFontStyleParserRuleCall_9; }
 
+		//TextValue
+		public RuleCall getTextValueParserRuleCall_10() { return cTextValueParserRuleCall_10; }
+
 		//LineStyle
-		public RuleCall getLineStyleParserRuleCall_10() { return cLineStyleParserRuleCall_10; }
+		public RuleCall getLineStyleParserRuleCall_11() { return cLineStyleParserRuleCall_11; }
 
 		//LineWidth
-		public RuleCall getLineWidthParserRuleCall_11() { return cLineWidthParserRuleCall_11; }
+		public RuleCall getLineWidthParserRuleCall_12() { return cLineWidthParserRuleCall_12; }
 	}
 
 	public class FeatureContainerElements extends AbstractParserRuleElementFinder {
@@ -2017,12 +2058,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFontSizeParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cFontStyleParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		private final RuleCall cSizeParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cPositionParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		
 		//LabelFeature returns Feature:
-		//	TextValue | Foreground | Background | FontFace | FontSize | FontStyle | Size;
+		//	TextValue | Foreground | Background | FontFace | FontSize | FontStyle | Size | Position;
 		public ParserRule getRule() { return rule; }
 
-		//TextValue | Foreground | Background | FontFace | FontSize | FontStyle | Size
+		//TextValue | Foreground | Background | FontFace | FontSize | FontStyle | Size | Position
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//TextValue
@@ -2045,6 +2087,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Size
 		public RuleCall getSizeParserRuleCall_6() { return cSizeParserRuleCall_6; }
+
+		//Position
+		public RuleCall getPositionParserRuleCall_7() { return cPositionParserRuleCall_7; }
 	}
 
 	public class ImageElements extends AbstractParserRuleElementFinder {
@@ -2244,12 +2289,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cSizeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cPositionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cLinkedFeatureParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//InvisibleFeature returns Feature:
-		//	Size | Position;
+		//	Size | Position | LinkedFeature;
 		public ParserRule getRule() { return rule; }
 
-		//Size | Position
+		//Size | Position | LinkedFeature
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Size
@@ -2257,6 +2303,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Position
 		public RuleCall getPositionParserRuleCall_1() { return cPositionParserRuleCall_1; }
+
+		//LinkedFeature
+		public RuleCall getLinkedFeatureParserRuleCall_2() { return cLinkedFeatureParserRuleCall_2; }
 	}
 
 	public class ColorFeatureElements extends AbstractParserRuleElementFinder {
@@ -3262,6 +3311,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	private ImportStatementElements pImportStatement;
 	private QualifiedNameElements pQualifiedName;
 	private QualifiedNameWithWildCardElements pQualifiedNameWithWildCard;
+	private DiagramElements pDiagram;
 	private GroupElements pGroup;
 	private DiagramElementElements pDiagramElement;
 	private StyleElements pStyle;
@@ -3366,8 +3416,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//XDiagram:
-	//	"metamodel" importURI=STRING imports+=ImportStatement "diagram" modelClass=[ecore::EClass|QualifiedName]
-	//	groups+=Group* (elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*;
+	//	"metamodel" importURI=STRING imports+=ImportStatement //    'diagram' modelClass=[ecore::EClass|QualifiedName] ':'
+	//	//    
+	//	diagram=Diagram groups+=Group* (elements+=DiagramElement | styles+=Style | colors+=CustomColor |
+	//	figures+=CustomFigure)*;
 	public XDiagramElements getXDiagramAccess() {
 		return (pXDiagram != null) ? pXDiagram : (pXDiagram = new XDiagramElements());
 	}
@@ -3405,6 +3457,16 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getQualifiedNameWithWildCardRule() {
 		return getQualifiedNameWithWildCardAccess().getRule();
+	}
+
+	//Diagram:
+	//	"diagram" modelClass=[ecore::EClass|QualifiedName] "{" contains+=Contains* "}";
+	public DiagramElements getDiagramAccess() {
+		return (pDiagram != null) ? pDiagram : (pDiagram = new DiagramElements());
+	}
+	
+	public ParserRule getDiagramRule() {
+		return getDiagramAccess().getRule();
 	}
 
 	//Group:
@@ -3461,7 +3523,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//LinkedFeature returns Feature:
-	//	TextValue | Contains | Anchor;
+	//	Contains | Anchor;
 	public LinkedFeatureElements getLinkedFeatureAccess() {
 		return (pLinkedFeature != null) ? pLinkedFeature : (pLinkedFeature = new LinkedFeatureElements());
 	}
@@ -3472,7 +3534,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 
 	//StyleFeature returns Feature:
 	//	Size | Position | Point | Corner | Background | Foreground | Transparency | FontFace | FontSize | FontStyle |
-	//	LineStyle | LineWidth;
+	//	TextValue | LineStyle | LineWidth;
 	public StyleFeatureElements getStyleFeatureAccess() {
 		return (pStyleFeature != null) ? pStyleFeature : (pStyleFeature = new StyleFeatureElements());
 	}
@@ -3859,7 +3921,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//LabelFeature returns Feature:
-	//	TextValue | Foreground | Background | FontFace | FontSize | FontStyle | Size;
+	//	TextValue | Foreground | Background | FontFace | FontSize | FontStyle | Size | Position;
 	public LabelFeatureElements getLabelFeatureAccess() {
 		return (pLabelFeature != null) ? pLabelFeature : (pLabelFeature = new LabelFeatureElements());
 	}
@@ -3901,7 +3963,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//InvisibleFeature returns Feature:
-	//	Size | Position;
+	//	Size | Position | LinkedFeature;
 	public InvisibleFeatureElements getInvisibleFeatureAccess() {
 		return (pInvisibleFeature != null) ? pInvisibleFeature : (pInvisibleFeature = new InvisibleFeatureElements());
 	}

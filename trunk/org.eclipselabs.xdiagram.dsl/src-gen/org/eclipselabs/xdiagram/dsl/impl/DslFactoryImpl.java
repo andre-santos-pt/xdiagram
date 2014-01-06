@@ -67,6 +67,7 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
     {
       case DslPackage.XDIAGRAM: return createXDiagram();
       case DslPackage.IMPORT_STATEMENT: return createImportStatement();
+      case DslPackage.DIAGRAM: return createDiagram();
       case DslPackage.GROUP: return createGroup();
       case DslPackage.DIAGRAM_ELEMENT: return createDiagramElement();
       case DslPackage.STYLE: return createStyle();
@@ -203,6 +204,17 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     ImportStatementImpl importStatement = new ImportStatementImpl();
     return importStatement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Diagram createDiagram()
+  {
+    DiagramImpl diagram = new DiagramImpl();
+    return diagram;
   }
 
   /**
