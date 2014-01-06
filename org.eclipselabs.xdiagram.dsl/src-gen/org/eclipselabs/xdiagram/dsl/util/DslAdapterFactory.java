@@ -85,6 +85,11 @@ public class DslAdapterFactory extends AdapterFactoryImpl
         return createImportStatementAdapter();
       }
       @Override
+      public Adapter caseDiagram(Diagram object)
+      {
+        return createDiagramAdapter();
+      }
+      @Override
       public Adapter caseGroup(Group object)
       {
         return createGroupAdapter();
@@ -337,6 +342,21 @@ public class DslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createImportStatementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Diagram <em>Diagram</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.dsl.Diagram
+   * @generated
+   */
+  public Adapter createDiagramAdapter()
   {
     return null;
   }

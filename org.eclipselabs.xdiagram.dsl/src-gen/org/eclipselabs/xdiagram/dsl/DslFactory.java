@@ -41,6 +41,15 @@ public interface DslFactory extends EFactory
   ImportStatement createImportStatement();
 
   /**
+   * Returns a new object of class '<em>Diagram</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Diagram</em>'.
+   * @generated
+   */
+  Diagram createDiagram();
+
+  /**
    * Returns a new object of class '<em>Group</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

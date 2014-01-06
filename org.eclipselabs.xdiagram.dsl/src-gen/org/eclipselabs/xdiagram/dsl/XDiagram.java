@@ -4,7 +4,6 @@ package org.eclipselabs.xdiagram.dsl;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -17,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getImportURI <em>Import URI</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getImports <em>Imports</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getModelClass <em>Model Class</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getDiagram <em>Diagram</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getGroups <em>Groups</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getElements <em>Elements</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.XDiagram#getStyles <em>Styles</em>}</li>
@@ -75,30 +74,30 @@ public interface XDiagram extends EObject
   EList<ImportStatement> getImports();
 
   /**
-   * Returns the value of the '<em><b>Model Class</b></em>' reference.
+   * Returns the value of the '<em><b>Diagram</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Model Class</em>' reference isn't clear,
+   * If the meaning of the '<em>Diagram</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Model Class</em>' reference.
-   * @see #setModelClass(EClass)
-   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getXDiagram_ModelClass()
-   * @model
+   * @return the value of the '<em>Diagram</em>' containment reference.
+   * @see #setDiagram(Diagram)
+   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getXDiagram_Diagram()
+   * @model containment="true"
    * @generated
    */
-  EClass getModelClass();
+  Diagram getDiagram();
 
   /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.XDiagram#getModelClass <em>Model Class</em>}' reference.
+   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.XDiagram#getDiagram <em>Diagram</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Model Class</em>' reference.
-   * @see #getModelClass()
+   * @param value the new value of the '<em>Diagram</em>' containment reference.
+   * @see #getDiagram()
    * @generated
    */
-  void setModelClass(EClass value);
+  void setDiagram(Diagram value);
 
   /**
    * Returns the value of the '<em><b>Groups</b></em>' containment reference list.

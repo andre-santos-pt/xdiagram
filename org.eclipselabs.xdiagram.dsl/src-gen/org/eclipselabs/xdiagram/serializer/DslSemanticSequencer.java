@@ -23,6 +23,7 @@ import org.eclipselabs.xdiagram.dsl.Custom;
 import org.eclipselabs.xdiagram.dsl.CustomColor;
 import org.eclipselabs.xdiagram.dsl.CustomFigure;
 import org.eclipselabs.xdiagram.dsl.Decorator;
+import org.eclipselabs.xdiagram.dsl.Diagram;
 import org.eclipselabs.xdiagram.dsl.DoubleValue;
 import org.eclipselabs.xdiagram.dsl.DslPackage;
 import org.eclipselabs.xdiagram.dsl.Ellipse;
@@ -66,6 +67,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				if(context == grammarAccess.getAnchorRule() ||
 				   context == grammarAccess.getConnectableElementFeatureRule() ||
 				   context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getInvisibleFeatureRule() ||
 				   context == grammarAccess.getLinkedFeatureRule() ||
 				   context == grammarAccess.getRectangleFeatureRule()) {
 					sequence_Anchor(context, (Anchor) semanticObject); 
@@ -110,6 +112,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				if(context == grammarAccess.getConnectableElementFeatureRule() ||
 				   context == grammarAccess.getContainsRule() ||
 				   context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getInvisibleFeatureRule() ||
 				   context == grammarAccess.getLinkedFeatureRule() ||
 				   context == grammarAccess.getRectangleFeatureRule()) {
 					sequence_Contains(context, (Contains) semanticObject); 
@@ -148,6 +151,12 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case DslPackage.DECORATOR:
 				if(context == grammarAccess.getDecoratorRule()) {
 					sequence_Decorator(context, (Decorator) semanticObject); 
+					return; 
+				}
+				else break;
+			case DslPackage.DIAGRAM:
+				if(context == grammarAccess.getDiagramRule()) {
+					sequence_Diagram(context, (Diagram) semanticObject); 
 					return; 
 				}
 				else break;
@@ -311,6 +320,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				   context == grammarAccess.getFigureFeatureRule() ||
 				   context == grammarAccess.getImageFeatureRule() ||
 				   context == grammarAccess.getInvisibleFeatureRule() ||
+				   context == grammarAccess.getLabelFeatureRule() ||
 				   context == grammarAccess.getPositionRule() ||
 				   context == grammarAccess.getRectangleFeatureRule() ||
 				   context == grammarAccess.getStyleFeatureRule()) {
@@ -366,7 +376,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case DslPackage.TEXT_VALUE:
 				if(context == grammarAccess.getFeatureRule() ||
 				   context == grammarAccess.getLabelFeatureRule() ||
-				   context == grammarAccess.getLinkedFeatureRule() ||
+				   context == grammarAccess.getStyleFeatureRule() ||
 				   context == grammarAccess.getTextValueRule()) {
 					sequence_TextValue(context, (TextValue) semanticObject); 
 					return; 
@@ -519,6 +529,15 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     ((position=INT | source?='source' | target?='target' | middle?='middle') (staticElement=StaticElement | label=Label)?)
 	 */
 	protected void sequence_Decorator(EObject context, Decorator semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (modelClass=[EClass|QualifiedName] contains+=Contains*)
+	 */
+	protected void sequence_Diagram(EObject context, Diagram semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -853,7 +872,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (
 	 *         importURI=STRING 
 	 *         imports+=ImportStatement 
-	 *         modelClass=[EClass|QualifiedName] 
+	 *         diagram=Diagram 
 	 *         groups+=Group* 
 	 *         (elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*
 	 *     )

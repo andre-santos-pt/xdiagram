@@ -4,16 +4,16 @@ grammar org.eclipselabs.xdiagram.Dsl with org.eclipse.xtext.common.Terminals
 import 'http://www.eclipse.org/emf/2002/Ecore' as ecore
 import "http://www.eclipse.org/xtext/common/JavaVMTypes" as jvmTypes
 
-
-
 generate dsl "http://www.eclipselabs.org/xdiagram/Dsl"
-
 
 
 XDiagram:
     'metamodel' importURI=STRING
-    imports+=ImportStatement    
-    'diagram' modelClass=[ecore::EClass|QualifiedName]
+    imports+=ImportStatement   
+     
+//    'diagram' modelClass=[ecore::EClass|QualifiedName] ':'
+//    
+    diagram=Diagram
     
     groups+=Group*
     
@@ -39,6 +39,12 @@ QualifiedName:
 QualifiedNameWithWildCard returns ecore::EString :
     QualifiedName  ('.' '*')?;
     
+Diagram:
+	'diagram' modelClass=[ecore::EClass|QualifiedName] '{'
+	contains+=Contains*
+	figures+=ConnectableElement*
+	'}'
+;
 
 Group:
 	'group' name=ID
@@ -73,7 +79,6 @@ Feature:
 ;
 
 LinkedFeature returns Feature:
-	TextValue | 
 	Contains | 
 	Anchor
 ;
@@ -81,7 +86,7 @@ LinkedFeature returns Feature:
 StyleFeature returns Feature:
 	Size | Position | Point | Corner |
 	Background | Foreground | Transparency |
-	FontFace | FontSize | FontStyle | 
+	FontFace | FontSize | FontStyle | TextValue |
 	LineStyle | LineWidth
 ;
 
@@ -368,7 +373,7 @@ Label:
 ;
 
 LabelFeature returns Feature:
-	TextValue | Foreground | Background | FontFace | FontSize | FontStyle | Size
+	TextValue | Foreground | Background | FontFace | FontSize | FontStyle | Size | Position
 ;
 
 
@@ -394,7 +399,7 @@ Invisible:
 ;
 
 InvisibleFeature returns Feature:
-	Size | Position
+	Size | Position | LinkedFeature
 ;
 
 
