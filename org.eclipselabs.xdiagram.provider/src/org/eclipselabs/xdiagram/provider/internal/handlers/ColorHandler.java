@@ -46,13 +46,13 @@ public class ColorHandler implements FeatureHandler {
 	}
 	
 	@Override
-	public boolean accept(FeatureContainer element, Feature feature, GraphicsAlgorithmContainer container) {
-		return feature instanceof ColorFeature;
+	public Class<? extends Feature> getTargetFeature() {
+		return ColorFeature.class;
 	}
+	
 
 	@Override
 	public void handle(FeatureContainer element, Feature feature, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
-
 		ColorFeature colorFeature = (ColorFeature) feature;
 		Color c = colorFeature.getColor();
 		org.eclipse.graphiti.mm.algorithms.styles.Color cg = null;
@@ -71,16 +71,8 @@ public class ColorHandler implements FeatureHandler {
 	}
 
 	@Override
-	public void setDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
+	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
 		figure.setBackground(Graphiti.getGaService().manageColor(diagram, map.get(DefaultColor.WHITE)));
 		figure.setForeground(Graphiti.getGaService().manageColor(diagram, map.get(DefaultColor.BLACK)));
 	}
-
-	@Override
-	public boolean acceptDefaults(FeatureContainer element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
-		return true;
-	}
-
-
-
 }

@@ -4,11 +4,13 @@ package org.eclipselabs.xdiagram.provider.internal;
 
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
+import org.eclipse.graphiti.mm.algorithms.Rectangle;
 import org.eclipse.graphiti.mm.pictograms.BoxRelativeAnchor;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipse.graphiti.services.Graphiti;
+import org.eclipse.graphiti.util.ColorConstant;
 import org.eclipselabs.xdiagram.dsl.Anchor;
 import org.eclipselabs.xdiagram.dsl.ConnectableElement;
 import org.eclipselabs.xdiagram.dsl.Custom;

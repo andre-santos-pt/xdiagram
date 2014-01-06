@@ -17,8 +17,8 @@ import org.eclipselabs.xdiagram.dsl.Position;
 public class PositionHandler implements FeatureHandler {
 
 	@Override
-	public boolean accept(FeatureContainer element, Feature feature, GraphicsAlgorithmContainer container) {
-		return feature instanceof Position && element instanceof ConnectableElement && accept(element, container);
+	public Class<? extends Feature> getTargetFeature() {
+		return Position.class;
 	}
 
 	@Override
@@ -29,15 +29,12 @@ public class PositionHandler implements FeatureHandler {
 	}
 	
 	@Override
-	public boolean acceptDefaults(FeatureContainer element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
-		return element instanceof ConnectableElement && accept(element, container);
-	}
-	
-	@Override
-	public void setDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
-		Graphiti.getGaService().setLocation(figure, 5, 5);
+	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
+		if(accept(element, figure.getPictogramElement()))
+			Graphiti.getGaService().setLocation(figure, 5, 5);
 	}
 
+	// TODO review
 	private boolean accept(FeatureContainer element, GraphicsAlgorithmContainer container) {
 		return element instanceof ConnectableElement &&
 				!(container instanceof ContainerShape && ((ContainerShape) container).getContainer() instanceof Diagram) && 

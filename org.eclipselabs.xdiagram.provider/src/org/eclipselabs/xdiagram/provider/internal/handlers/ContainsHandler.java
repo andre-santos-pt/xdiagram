@@ -32,17 +32,7 @@ public class ContainsHandler implements FeatureHandler {
 		references = ArrayListMultimap.create();
 		owners = Maps.newHashMap();
 	}
-	
-//	private class OwnerRef {
-//		EReference reference;
-//		EObject owner;
-//		
-//		@Override
-//		public String toString() {
-//			return reference.getName() + "   " + owner; 
-//		}
-//	}
-	
+
 	public boolean isContainer(GraphicsAlgorithmContainer container) {
 		return references.containsKey(container);
 	}
@@ -68,9 +58,10 @@ public class ContainsHandler implements FeatureHandler {
 	}
 	
 	@Override
-	public boolean accept(FeatureContainer element, Feature feature, GraphicsAlgorithmContainer container) {
-		return feature instanceof Contains;
+	public Class<? extends Feature> getTargetFeature() {
+		return Contains.class;
 	}
+	
 
 	@Override
 	public void handle(FeatureContainer element, Feature feature,
@@ -79,8 +70,6 @@ public class ContainsHandler implements FeatureHandler {
 		
 		Contains cont = (Contains) feature;
 	
-//		EReference ref = (EReference) Util.matchFeature(eObject.eClass(), cont.getModelReference());
-
 		owners.put(container, eObject);		
 		references.put(container, cont.getModelReference());
 		
@@ -88,16 +77,7 @@ public class ContainsHandler implements FeatureHandler {
 	}
 
 	@Override
-	public boolean acceptDefaults(FeatureContainer element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
-		return false;
-	}
-
-	@Override
-	public void setDefaults(FeatureContainer element, GraphicsAlgorithm figure,
-			Diagram diagram) {
+	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
 		
 	}
-
-	
-
 }

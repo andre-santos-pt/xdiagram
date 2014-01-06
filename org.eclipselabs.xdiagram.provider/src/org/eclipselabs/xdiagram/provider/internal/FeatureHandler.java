@@ -12,18 +12,37 @@ import org.eclipselabs.xdiagram.dsl.Feature;
 public interface FeatureHandler {
 	
 	/**
-	 * This element accepts 
-	 * @param element
-	 * @param feature
-	 * @param container
-	 * @return
+	 * Supported feature
 	 */
-	boolean accept(FeatureContainer element, Feature feature, GraphicsAlgorithmContainer container);
+	Class<? extends Feature> getTargetFeature();
 	
+	/**
+	 * Accepts the element?
+	 * @param element
+	 */
+//	boolean accept(FeatureContainer element);
+		
+	/**
+	 * 
+	 * @param element language element that holds the feature
+	 * @param feature always of type equal to getTargetFeature()
+	 * @param eObject model object associated with the element
+	 * @param diagram
+	 * @param container 
+	 * @param figure
+	 */
 	void handle(FeatureContainer element, Feature feature, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure);
 	
-	boolean acceptDefaults(FeatureContainer element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container);
 	
-	void setDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram);
+	/**
+	 * Apply default values for the feature
+	 * @param element
+	 * @param figure
+	 * @param diagram
+	 */
+	void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram);
+
 	
+//	boolean acceptDefaults(FeatureContainer element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container);
+
 }

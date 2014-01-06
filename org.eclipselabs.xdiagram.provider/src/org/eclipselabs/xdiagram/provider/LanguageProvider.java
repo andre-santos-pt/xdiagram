@@ -76,7 +76,8 @@ import com.google.common.collect.Maps;
 
 public class LanguageProvider implements GraphicsProvider {
 
-	private String modelFilePath;
+	private URI modelLocation;
+//	private String modelFilePath;
 	private XDiagram model;
 	private EPackage ePackage;
 
@@ -109,13 +110,15 @@ public class LanguageProvider implements GraphicsProvider {
 
 
 	@Override
-	public void setup(Map<String, String> properties, EPackage ePackage) throws ProviderException {		
+	public void setup(Bundle bundle, Map<String, String> properties, EPackage ePackage) throws ProviderException {		
 		new DslStandaloneSetup().createInjectorAndDoEMFRegistration();
 		this.ePackage = ePackage;
 
-		modelFilePath = properties.get("file");
-		if(!new File(modelFilePath).exists())
-			throw new ProviderException("File not found: " + modelFilePath);
+		modelLocation = URI.createPlatformPluginURI(bundle.getSymbolicName() + "/" + properties.get("file"), false);
+
+//		modelFilePath = properties.get("file");
+//		if(!new File(modelFilePath).exists())
+//			throw new ProviderException("File not found: " + modelFilePath);
 
 		loadModel();
 	}
@@ -130,10 +133,14 @@ public class LanguageProvider implements GraphicsProvider {
 			//String uri = bundle.getResource(file).toString().replace("\\", "/");
 			//String uri = Platform.getBundle(namespace).getResource(recource).toString();
 			//			String uri = file;
-			URI uri = URI.createFileURI(modelFilePath);
+//			URI uri = URI.createFileURI(modelFilePath);
 
 			//			resource = rs.getResource(URI.createURI(uri), true);
-			Resource resource = rs.getResource(uri, true);
+			Resource resource = rs.getResource(modelLocation, true);
+			
+			if(resource == null)
+				throw new ProviderException("Could not load: " + modelLocation);
+			
 			List<EObject> objs = resource.getContents();
 			model = (XDiagram) objs.get(0);
 			
@@ -160,7 +167,7 @@ public class LanguageProvider implements GraphicsProvider {
 		}
 		
 		public Object caseXDiagram(XDiagram model) {
-			model.setModelClass(match(model.getModelClass())); 
+			model.getDiagram().setModelClass(match(model.getDiagram().getModelClass())); 
 			return null;
 		};
 		
@@ -199,7 +206,8 @@ public class LanguageProvider implements GraphicsProvider {
 		};
 		
 		public Object caseTextValue(TextValue textValue) {
-			textValue.setModelAttribute(match(textValue.getModelAttribute()));
+			if(textValue.getModelAttribute() != null)
+				textValue.setModelAttribute(match(textValue.getModelAttribute()));
 			return null;
 		};
 		
@@ -277,7 +285,7 @@ public class LanguageProvider implements GraphicsProvider {
 	
 	@Override
 	public EClass getRoot() {
-		return model.getModelClass();
+		return model.getDiagram().getModelClass();
 	}
 
 

@@ -14,13 +14,12 @@ import org.eclipselabs.xdiagram.dsl.Point;
 public class PointHandler implements FeatureHandler {
 
 	@Override
-	public boolean accept(FeatureContainer element, Feature feature, GraphicsAlgorithmContainer container) {
-		return feature instanceof Point;
+	public Class<? extends Feature> getTargetFeature() {
+		return Point.class;
 	}
 
 	@Override
 	public void handle(FeatureContainer element, Feature feature, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
-		
 		if(figure instanceof Polyline) {
 			Point point = (Point) feature;
 			org.eclipse.graphiti.mm.algorithms.styles.Point p = StylesFactory.eINSTANCE.createPoint();
@@ -30,17 +29,9 @@ public class PointHandler implements FeatureHandler {
 		}
 	}
 	
+
 	@Override
-	public boolean acceptDefaults(FeatureContainer element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
-		return false;
-	}
-	
-	@Override
-	public void setDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
+	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
 
 	}
-
-	
-
-	
 }
