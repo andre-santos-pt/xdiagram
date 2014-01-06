@@ -83,7 +83,7 @@ public class GenericFeatureProvider extends DefaultFeatureProvider {
 			System.err.println("Could not bind an EPackage for diagram type '" + diagramType + "'");
 
 		try {
-			graphicsProvider.setup(desc.properties, ePackage);
+			graphicsProvider.setup(desc.bundle, desc.properties, ePackage);
 		} catch (ProviderException e) {
 			System.err.println("Problem in graphics provider '" + graphicsProvider.getClass().getName() + "' :" + e.getMessage());
 			return null;
