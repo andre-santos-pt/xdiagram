@@ -50,6 +50,7 @@ import org.eclipselabs.xdiagram.provider.internal.FeatureHandlerChain;
 import org.eclipselabs.xdiagram.provider.internal.handlers.AnchorHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.ColorHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.ContainsHandler;
+import org.eclipselabs.xdiagram.provider.internal.handlers.CornerHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.LineWidthHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.PointHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.PositionHandler;
@@ -100,6 +101,7 @@ public class LanguageProvider implements GraphicsProvider {
 		.add(new LineWidthHandler())
 		.add(new PointHandler())
 		.add(new TextValueHandler())
+		.add(new CornerHandler())
 
 		.add(containsHandler)
 		.add(new AnchorHandler());
