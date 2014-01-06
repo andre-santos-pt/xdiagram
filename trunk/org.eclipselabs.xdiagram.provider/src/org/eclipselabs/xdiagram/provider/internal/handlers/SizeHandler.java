@@ -16,10 +16,10 @@ import org.eclipselabs.xdiagram.dsl.Size;
 public class SizeHandler implements FeatureHandler {
 
 	@Override
-	public boolean accept(FeatureContainer element, Feature feature, GraphicsAlgorithmContainer container) {
-		return feature instanceof Size;
+	public Class<? extends Feature> getTargetFeature() {
+		return Size.class;
 	}
-
+	
 	@Override
 	public void handle(FeatureContainer element, Feature feature, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
 		Size size = (Size) feature;
@@ -35,14 +35,13 @@ public class SizeHandler implements FeatureHandler {
 		Graphiti.getGaService().setSize(figure, w, h);
 	}
 	
-	@Override
-	public boolean acceptDefaults(FeatureContainer element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
-		return element instanceof ConnectableElement;
-	}
+	
+	
 	
 	@Override
-	public void setDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
-		Graphiti.getGaService().setSize(figure, 100, 50);
+	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
+		if(element instanceof ConnectableElement)
+			Graphiti.getGaService().setSize(figure, 100, 50);
 	}
 
 	

@@ -16,10 +16,10 @@ import org.eclipselabs.xdiagram.dsl.TextValue;
 public class TextValueHandler implements FeatureHandler {
 
 	@Override
-	public boolean accept(FeatureContainer element, Feature feature, GraphicsAlgorithmContainer container) {
-		return feature instanceof TextValue;
+	public Class<? extends Feature> getTargetFeature() {
+		return TextValue.class;
 	}
-
+	
 	@Override
 	public void handle(FeatureContainer element, Feature feature, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, final GraphicsAlgorithm figure) {
 		TextValue v = (TextValue) feature;
@@ -45,13 +45,8 @@ public class TextValueHandler implements FeatureHandler {
 	
 
 	@Override
-	public boolean acceptDefaults(FeatureContainer element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
-		return figure instanceof AbstractText;
+	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
+		if(figure instanceof AbstractText)
+			((AbstractText) figure).setValue("?");
 	}
-	
-	@Override
-	public void setDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
-		((AbstractText) figure).setValue("?");
-	}
-
 }

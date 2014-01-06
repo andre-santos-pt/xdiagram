@@ -20,13 +20,11 @@ import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 
 public class AnchorHandler implements FeatureHandler {
 
-	
-	
 	@Override
-	public boolean accept(FeatureContainer element, Feature feature, GraphicsAlgorithmContainer container) {
-		return feature instanceof Anchor && container instanceof org.eclipse.graphiti.mm.pictograms.Anchor;
+	public Class<? extends Feature> getTargetFeature() {
+		return Anchor.class;
 	}
-
+	
 	@Override
 	public void handle(FeatureContainer element, Feature feature, EObject eObject,
 			Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
@@ -41,13 +39,7 @@ public class AnchorHandler implements FeatureHandler {
 	}
 
 	@Override
-	public boolean acceptDefaults(FeatureContainer element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
-		return true;
-	}
-
-	@Override
-	public void setDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
-		
+	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
 		
 	}
 	
