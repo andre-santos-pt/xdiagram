@@ -3,7 +3,6 @@ package org.eclipselabs.xdiagram.provider.internal.handlers;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
-import org.eclipse.graphiti.mm.algorithms.Polygon;
 import org.eclipse.graphiti.mm.algorithms.RoundedRectangle;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
@@ -22,9 +21,9 @@ public class CornerHandler implements FeatureHandler {
 	@Override
 	public void handle(FeatureContainer element, Feature feature, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
 		Corner angle = (Corner) feature;
-		if ( figure instanceof RoundedRectangle || figure instanceof Polygon ){
+		if ( figure instanceof RoundedRectangle ){
 			((RoundedRectangle)figure).setCornerWidth(angle.getAngle());
-			((RoundedRectangle)figure).setCornerHeight(angle.getAngle());
+			((RoundedRectangle)figure).setCornerWidth(angle.getAngle());
 		}
 	}
 	
@@ -35,9 +34,9 @@ public class CornerHandler implements FeatureHandler {
 	
 	@Override
 	public void setDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
-		if ( figure instanceof RoundedRectangle || figure instanceof Polygon ){
+		if ( figure instanceof RoundedRectangle ){
 			((RoundedRectangle)figure).setCornerWidth(0);
-			((RoundedRectangle)figure).setCornerHeight(0);
+			((RoundedRectangle)figure).setCornerWidth(0);
 		}
 	}
 
