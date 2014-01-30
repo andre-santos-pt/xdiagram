@@ -113,16 +113,16 @@ public class LanguageProvider implements GraphicsProvider {
 	public void setup(Bundle bundle, Map<String, String> properties, EPackage ePackage) throws ProviderException {		
 		new DslStandaloneSetup().createInjectorAndDoEMFRegistration();
 		this.ePackage = ePackage;
-
 		modelLocation = URI.createPlatformPluginURI(bundle.getSymbolicName() + "/" + properties.get("file"), false);
-
-//		modelFilePath = properties.get("file");
-//		if(!new File(modelFilePath).exists())
-//			throw new ProviderException("File not found: " + modelFilePath);
-
 		loadModel();
 	}
 
+	@Override
+	public void loadDiagram(Diagram diagram, EObject rootObject) {
+		for(Contains c : model.getDiagram().getContains())
+			containsHandler.handle(null, c, rootObject, diagram, diagram, diagram.getGraphicsAlgorithm());
+	}
+	
 	private void loadModel() throws ProviderException {
 
 		try{			
