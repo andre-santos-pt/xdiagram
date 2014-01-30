@@ -16,7 +16,16 @@
 package org.eclipselabs.xdiagram.interpreter.internal;
 
 
+import java.io.IOException;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.transaction.RecordingCommand;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
+import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.graphiti.dt.AbstractDiagramTypeProvider;
+import org.eclipse.graphiti.mm.pictograms.Diagram;
+import org.eclipse.graphiti.platform.IDiagramBehavior;
 import org.eclipse.graphiti.tb.IToolBehaviorProvider;
 import org.eclipselabs.xdiagram.interpreter.GraphicsProvider;
 import org.eclipselabs.xdiagram.interpreter.ProviderException;
@@ -26,15 +35,18 @@ public class InternalDiagramTypeProvider extends AbstractDiagramTypeProvider {
 
 	private IToolBehaviorProvider[] providers;
 
+	private GenericFeatureProvider featureProvider;
+
 	public InternalDiagramTypeProvider() {
-		setFeatureProvider(new GenericFeatureProvider(this));
+		featureProvider = new GenericFeatureProvider(this);
+		setFeatureProvider(featureProvider);
 	}
 
 	@Override
 	public final IToolBehaviorProvider[] getAvailableToolBehaviorProviders() {
 		String diagramType = getDiagram().getDiagramTypeId();
 		LanguageDescription desc = Activator.getInstance().getLanguageProvider(diagramType);
-		
+
 		if (providers == null)
 			providers = new IToolBehaviorProvider[] { new ToolBehaviorProvider(this, desc.provider) };
 
@@ -50,6 +62,27 @@ public class InternalDiagramTypeProvider extends AbstractDiagramTypeProvider {
 	public final boolean isAutoUpdateAtRuntimeWhenEditorIsSaved() {
 		return super.isAutoUpdateAtRuntimeWhenEditorIsSaved();
 	}
+
+	@Override
+	public void init(final Diagram diagram, IDiagramBehavior diagramBehavior) {
+		super.init(diagram, diagramBehavior);	
+		EClass eClass =  featureProvider.getRootClass();
 	
-	
+		// TODO: read from file
+		final EObject root = eClass.getEPackage().getEFactoryInstance().create(eClass);
+
+		TransactionalEditingDomain domain = TransactionUtil.getEditingDomain(diagram);
+		domain.getCommandStack().execute(new RecordingCommand(domain) {
+			public void doExecute() {
+				try {
+					FileUtil.persistEObjectIfEmpty(root, diagram);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		});
+
+		featureProvider.getGraphicsProvider().loadDiagram(diagram, root);
+	}
+
 }
