@@ -92,34 +92,22 @@ public class CreateEObjectFeature extends AbstractCreateFeature {
 		ContainerShape containerShape = context.getTargetContainer();
 
 		Collection<EReference> refs = provider.getGraphicsProvider().getCompatibleContainerReferences(containerShape, eObject);
-		EReference ref = selectReference(refs, eObject);
+		containingRef = selectReference(refs, eObject);
 
 		eObjectParent = provider.getGraphicsProvider().getContainerObject(containerShape);
-		
-		// Add model element to resource.
-		// We add the model element to the resource of the diagram for
-		// simplicity's sake. Normally, a customer would use its own
-		// model persistence layer for storing the business model separately.
-		// getDiagram().eResource().getContents().add(eObject);
 
-		if(eObjectParent == null) {
-			try {
-				try {
-					FileUtil.persistEObject(eObject, eObjectParent, containingRef, getDiagram());
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			} catch (CoreException e) {
-				e.printStackTrace();
-			}
-		}
-		else {
-			ECoreUtil.setReference(eObjectParent, ref, eObject);
+		if(eObjectParent != null)
+			ECoreUtil.setReference(eObjectParent, containingRef, eObject);
+
+		try {
+			FileUtil.persistEObject(eObject, eObjectParent, containingRef, getDiagram());
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 
-		// do the add
 		addGraphicalRepresentation(context, eObject);
 
+		// provider.getGraphicsProvider().canEditFigureLabel(ga, eObject);
 		// activate direct editing after object creation
 		getFeatureProvider().getDirectEditingInfo().setActive(true);
 

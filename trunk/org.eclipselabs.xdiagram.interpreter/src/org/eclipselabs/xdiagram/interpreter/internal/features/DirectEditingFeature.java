@@ -6,6 +6,7 @@ import org.eclipse.graphiti.features.context.IDirectEditingContext;
 import org.eclipse.graphiti.features.impl.AbstractDirectEditingFeature;
 import org.eclipse.graphiti.mm.algorithms.AbstractText;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
+import org.eclipse.graphiti.mm.algorithms.Text;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.mm.pictograms.Shape;
@@ -37,7 +38,6 @@ public class DirectEditingFeature extends AbstractDirectEditingFeature {
 	    	return false;
 	    
 	    EObject eObject = pe.getLink().getBusinessObjects().get(0);
-	    		
 	    if (ga instanceof AbstractText){
 	    	figureLabel = provider.getGraphicsProvider().canEditFigureLabel(ga, eObject) ? ga : null;	    	
 	    }else{
