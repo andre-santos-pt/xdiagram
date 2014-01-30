@@ -91,18 +91,11 @@ public class FileUtil {
 		final Resource resource = rSet.getResource(uri, true);
 		
 		List<EObject> contents = resource.getContents();
-//		if(parent == null)
+		if(parent == null)
 			contents.add(obj);
-//		else {
-//			ECoreUtil.setReference(parent, containingRef, obj);
-//			if(containingRef.isMany()) {
-//				List<EObject> list = (List<EObject>) parent.eGet(containingRef);
-//				list.add(obj);
-//			}
-//			else {
-//				parent.eSet(containingRef, obj);
-//			}		
-//		}
+		else
+			ECoreUtil.setReference(parent, containingRef, obj);
+			
 	}
 
 	private static URI getXmiUri(final Diagram d) {

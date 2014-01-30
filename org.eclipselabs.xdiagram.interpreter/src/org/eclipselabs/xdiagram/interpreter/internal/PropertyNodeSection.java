@@ -120,6 +120,7 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 
 			composite.redraw();
 			composite.layout();
+			composite.getParent().layout();
 		}
 	}
 
