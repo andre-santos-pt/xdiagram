@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link featuremodel.FeatureSet#getId <em>Id</em>}</li>
  *   <li>{@link featuremodel.FeatureSet#getRoot <em>Root</em>}</li>
  *   <li>{@link featuremodel.FeatureSet#getFeatures <em>Features</em>}</li>
- *   <li>{@link featuremodel.FeatureSet#getNotes <em>Notes</em>}</li>
  * </ul>
  * </p>
  *
@@ -93,21 +92,5 @@ public interface FeatureSet extends EObject {
 	 * @generated
 	 */
 	EList<Feature> getFeatures();
-
-	/**
-	 * Returns the value of the '<em><b>Notes</b></em>' containment reference list.
-	 * The list contents are of type {@link featuremodel.Note}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Notes</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Notes</em>' containment reference list.
-	 * @see featuremodel.FeaturemodelPackage#getFeatureSet_Notes()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Note> getNotes();
 
 } // FeatureSet

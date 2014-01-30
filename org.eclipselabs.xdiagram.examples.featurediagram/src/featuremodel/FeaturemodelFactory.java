@@ -40,15 +40,6 @@ public interface FeaturemodelFactory extends EFactory {
 	Feature createFeature();
 
 	/**
-	 * Returns a new object of class '<em>Feature Set</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Feature Set</em>'.
-	 * @generated
-	 */
-	FeatureSet createFeatureSet();
-
-	/**
 	 * Returns a new object of class '<em>Feature Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,15 +56,6 @@ public interface FeaturemodelFactory extends EFactory {
 	 * @generated
 	 */
 	Constraint createConstraint();
-
-	/**
-	 * Returns a new object of class '<em>Note</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Note</em>'.
-	 * @generated
-	 */
-	Note createNote();
 
 	/**
 	 * Returns the package supported by this factory.

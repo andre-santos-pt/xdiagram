@@ -5,6 +5,7 @@ package featuremodel.impl;
 import featuremodel.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -58,12 +59,40 @@ public class FeaturemodelFactoryImpl extends EFactoryImpl implements Featuremode
 		switch (eClass.getClassifierID()) {
 			case FeaturemodelPackage.ROOT_FEATURE: return createRootFeature();
 			case FeaturemodelPackage.FEATURE: return createFeature();
-			case FeaturemodelPackage.FEATURE_SET: return createFeatureSet();
 			case FeaturemodelPackage.FEATURE_MODEL: return createFeatureModel();
 			case FeaturemodelPackage.CONSTRAINT: return createConstraint();
-			case FeaturemodelPackage.NOTE: return createNote();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case FeaturemodelPackage.CONSTRAINT_TYPE:
+				return createConstraintTypeFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case FeaturemodelPackage.CONSTRAINT_TYPE:
+				return convertConstraintTypeToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -92,16 +121,6 @@ public class FeaturemodelFactoryImpl extends EFactoryImpl implements Featuremode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FeatureSet createFeatureSet() {
-		FeatureSetImpl featureSet = new FeatureSetImpl();
-		return featureSet;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public FeatureModel createFeatureModel() {
 		FeatureModelImpl featureModel = new FeatureModelImpl();
 		return featureModel;
@@ -122,9 +141,19 @@ public class FeaturemodelFactoryImpl extends EFactoryImpl implements Featuremode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Note createNote() {
-		NoteImpl note = new NoteImpl();
-		return note;
+	public ConstraintType createConstraintTypeFromString(EDataType eDataType, String initialValue) {
+		ConstraintType result = ConstraintType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertConstraintTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

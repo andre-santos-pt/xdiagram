@@ -76,20 +76,12 @@ public class FeaturemodelAdapterFactory extends AdapterFactoryImpl {
 				return createFeatureAdapter();
 			}
 			@Override
-			public Adapter caseFeatureSet(FeatureSet object) {
-				return createFeatureSetAdapter();
-			}
-			@Override
 			public Adapter caseFeatureModel(FeatureModel object) {
 				return createFeatureModelAdapter();
 			}
 			@Override
 			public Adapter caseConstraint(Constraint object) {
 				return createConstraintAdapter();
-			}
-			@Override
-			public Adapter caseNote(Note object) {
-				return createNoteAdapter();
 			}
 			@Override
 			public Adapter caseAbstractFeature(AbstractFeature object) {
@@ -144,20 +136,6 @@ public class FeaturemodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link featuremodel.FeatureSet <em>Feature Set</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see featuremodel.FeatureSet
-	 * @generated
-	 */
-	public Adapter createFeatureSetAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link featuremodel.FeatureModel <em>Feature Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -182,20 +160,6 @@ public class FeaturemodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createConstraintAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link featuremodel.Note <em>Note</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see featuremodel.Note
-	 * @generated
-	 */
-	public Adapter createNoteAdapter() {
 		return null;
 	}
 
