@@ -4,6 +4,7 @@ package featuremodel;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -64,7 +65,7 @@ public interface FeaturemodelPackage extends EPackage {
 	 * @see featuremodel.impl.FeaturemodelPackageImpl#getAbstractFeature()
 	 * @generated
 	 */
-	int ABSTRACT_FEATURE = 6;
+	int ABSTRACT_FEATURE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -195,32 +196,14 @@ public interface FeaturemodelPackage extends EPackage {
 	int FEATURE_OPERATION_COUNT = ABSTRACT_FEATURE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link featuremodel.impl.FeatureSetImpl <em>Feature Set</em>}' class.
+	 * The meta object id for the '{@link featuremodel.impl.FeatureModelImpl <em>Feature Model</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see featuremodel.impl.FeatureSetImpl
-	 * @see featuremodel.impl.FeaturemodelPackageImpl#getFeatureSet()
+	 * @see featuremodel.impl.FeatureModelImpl
+	 * @see featuremodel.impl.FeaturemodelPackageImpl#getFeatureModel()
 	 * @generated
 	 */
-	int FEATURE_SET = 2;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_SET__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Root</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_SET__ROOT = 1;
+	int FEATURE_MODEL = 2;
 
 	/**
 	 * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -229,53 +212,16 @@ public interface FeaturemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_SET__FEATURES = 2;
+	int FEATURE_MODEL__FEATURES = 0;
 
 	/**
-	 * The feature id for the '<em><b>Notes</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Root</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_SET__NOTES = 3;
-
-	/**
-	 * The number of structural features of the '<em>Feature Set</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_SET_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Feature Set</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_SET_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link featuremodel.impl.FeatureModelImpl <em>Feature Model</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see featuremodel.impl.FeatureModelImpl
-	 * @see featuremodel.impl.FeaturemodelPackageImpl#getFeatureModel()
-	 * @generated
-	 */
-	int FEATURE_MODEL = 3;
-
-	/**
-	 * The feature id for the '<em><b>Sets</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FEATURE_MODEL__SETS = 0;
+	int FEATURE_MODEL__ROOT = 1;
 
 	/**
 	 * The number of structural features of the '<em>Feature Model</em>' class.
@@ -284,7 +230,7 @@ public interface FeaturemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FEATURE_MODEL_FEATURE_COUNT = 1;
+	int FEATURE_MODEL_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Feature Model</em>' class.
@@ -303,7 +249,7 @@ public interface FeaturemodelPackage extends EPackage {
 	 * @see featuremodel.impl.FeaturemodelPackageImpl#getConstraint()
 	 * @generated
 	 */
-	int CONSTRAINT = 4;
+	int CONSTRAINT = 3;
 
 	/**
 	 * The feature id for the '<em><b>Annotation</b></em>' attribute.
@@ -342,42 +288,14 @@ public interface FeaturemodelPackage extends EPackage {
 	int CONSTRAINT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link featuremodel.impl.NoteImpl <em>Note</em>}' class.
+	 * The meta object id for the '{@link featuremodel.ConstraintType <em>Constraint Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see featuremodel.impl.NoteImpl
-	 * @see featuremodel.impl.FeaturemodelPackageImpl#getNote()
+	 * @see featuremodel.ConstraintType
+	 * @see featuremodel.impl.FeaturemodelPackageImpl#getConstraintType()
 	 * @generated
 	 */
-	int NOTE = 5;
-
-	/**
-	 * The feature id for the '<em><b>Note</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NOTE__NOTE = 0;
-
-	/**
-	 * The number of structural features of the '<em>Note</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NOTE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Note</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NOTE_OPERATION_COUNT = 0;
-
+	int CONSTRAINT_TYPE = 5;
 
 	/**
 	 * Returns the meta object for class '{@link featuremodel.RootFeature <em>Root Feature</em>}'.
@@ -433,60 +351,6 @@ public interface FeaturemodelPackage extends EPackage {
 	EReference getFeature_Parent();
 
 	/**
-	 * Returns the meta object for class '{@link featuremodel.FeatureSet <em>Feature Set</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Feature Set</em>'.
-	 * @see featuremodel.FeatureSet
-	 * @generated
-	 */
-	EClass getFeatureSet();
-
-	/**
-	 * Returns the meta object for the attribute '{@link featuremodel.FeatureSet#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see featuremodel.FeatureSet#getId()
-	 * @see #getFeatureSet()
-	 * @generated
-	 */
-	EAttribute getFeatureSet_Id();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link featuremodel.FeatureSet#getRoot <em>Root</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Root</em>'.
-	 * @see featuremodel.FeatureSet#getRoot()
-	 * @see #getFeatureSet()
-	 * @generated
-	 */
-	EReference getFeatureSet_Root();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link featuremodel.FeatureSet#getFeatures <em>Features</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Features</em>'.
-	 * @see featuremodel.FeatureSet#getFeatures()
-	 * @see #getFeatureSet()
-	 * @generated
-	 */
-	EReference getFeatureSet_Features();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link featuremodel.FeatureSet#getNotes <em>Notes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Notes</em>'.
-	 * @see featuremodel.FeatureSet#getNotes()
-	 * @see #getFeatureSet()
-	 * @generated
-	 */
-	EReference getFeatureSet_Notes();
-
-	/**
 	 * Returns the meta object for class '{@link featuremodel.FeatureModel <em>Feature Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -497,15 +361,26 @@ public interface FeaturemodelPackage extends EPackage {
 	EClass getFeatureModel();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link featuremodel.FeatureModel#getSets <em>Sets</em>}'.
+	 * Returns the meta object for the containment reference list '{@link featuremodel.FeatureModel#getFeatures <em>Features</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sets</em>'.
-	 * @see featuremodel.FeatureModel#getSets()
+	 * @return the meta object for the containment reference list '<em>Features</em>'.
+	 * @see featuremodel.FeatureModel#getFeatures()
 	 * @see #getFeatureModel()
 	 * @generated
 	 */
-	EReference getFeatureModel_Sets();
+	EReference getFeatureModel_Features();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link featuremodel.FeatureModel#getRoot <em>Root</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Root</em>'.
+	 * @see featuremodel.FeatureModel#getRoot()
+	 * @see #getFeatureModel()
+	 * @generated
+	 */
+	EReference getFeatureModel_Root();
 
 	/**
 	 * Returns the meta object for class '{@link featuremodel.Constraint <em>Constraint</em>}'.
@@ -540,27 +415,6 @@ public interface FeaturemodelPackage extends EPackage {
 	EReference getConstraint_Feature();
 
 	/**
-	 * Returns the meta object for class '{@link featuremodel.Note <em>Note</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Note</em>'.
-	 * @see featuremodel.Note
-	 * @generated
-	 */
-	EClass getNote();
-
-	/**
-	 * Returns the meta object for the attribute '{@link featuremodel.Note#getNote <em>Note</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Note</em>'.
-	 * @see featuremodel.Note#getNote()
-	 * @see #getNote()
-	 * @generated
-	 */
-	EAttribute getNote_Note();
-
-	/**
 	 * Returns the meta object for class '{@link featuremodel.AbstractFeature <em>Abstract Feature</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -580,6 +434,16 @@ public interface FeaturemodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAbstractFeature_Name();
+
+	/**
+	 * Returns the meta object for enum '{@link featuremodel.ConstraintType <em>Constraint Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Constraint Type</em>'.
+	 * @see featuremodel.ConstraintType
+	 * @generated
+	 */
+	EEnum getConstraintType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -649,48 +513,6 @@ public interface FeaturemodelPackage extends EPackage {
 		EReference FEATURE__PARENT = eINSTANCE.getFeature_Parent();
 
 		/**
-		 * The meta object literal for the '{@link featuremodel.impl.FeatureSetImpl <em>Feature Set</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see featuremodel.impl.FeatureSetImpl
-		 * @see featuremodel.impl.FeaturemodelPackageImpl#getFeatureSet()
-		 * @generated
-		 */
-		EClass FEATURE_SET = eINSTANCE.getFeatureSet();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FEATURE_SET__ID = eINSTANCE.getFeatureSet_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Root</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FEATURE_SET__ROOT = eINSTANCE.getFeatureSet_Root();
-
-		/**
-		 * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FEATURE_SET__FEATURES = eINSTANCE.getFeatureSet_Features();
-
-		/**
-		 * The meta object literal for the '<em><b>Notes</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FEATURE_SET__NOTES = eINSTANCE.getFeatureSet_Notes();
-
-		/**
 		 * The meta object literal for the '{@link featuremodel.impl.FeatureModelImpl <em>Feature Model</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -701,12 +523,20 @@ public interface FeaturemodelPackage extends EPackage {
 		EClass FEATURE_MODEL = eINSTANCE.getFeatureModel();
 
 		/**
-		 * The meta object literal for the '<em><b>Sets</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FEATURE_MODEL__SETS = eINSTANCE.getFeatureModel_Sets();
+		EReference FEATURE_MODEL__FEATURES = eINSTANCE.getFeatureModel_Features();
+
+		/**
+		 * The meta object literal for the '<em><b>Root</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FEATURE_MODEL__ROOT = eINSTANCE.getFeatureModel_Root();
 
 		/**
 		 * The meta object literal for the '{@link featuremodel.impl.ConstraintImpl <em>Constraint</em>}' class.
@@ -735,24 +565,6 @@ public interface FeaturemodelPackage extends EPackage {
 		EReference CONSTRAINT__FEATURE = eINSTANCE.getConstraint_Feature();
 
 		/**
-		 * The meta object literal for the '{@link featuremodel.impl.NoteImpl <em>Note</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see featuremodel.impl.NoteImpl
-		 * @see featuremodel.impl.FeaturemodelPackageImpl#getNote()
-		 * @generated
-		 */
-		EClass NOTE = eINSTANCE.getNote();
-
-		/**
-		 * The meta object literal for the '<em><b>Note</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NOTE__NOTE = eINSTANCE.getNote_Note();
-
-		/**
 		 * The meta object literal for the '{@link featuremodel.impl.AbstractFeatureImpl <em>Abstract Feature</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -769,6 +581,16 @@ public interface FeaturemodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ABSTRACT_FEATURE__NAME = eINSTANCE.getAbstractFeature_Name();
+
+		/**
+		 * The meta object literal for the '{@link featuremodel.ConstraintType <em>Constraint Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see featuremodel.ConstraintType
+		 * @see featuremodel.impl.FeaturemodelPackageImpl#getConstraintType()
+		 * @generated
+		 */
+		EEnum CONSTRAINT_TYPE = eINSTANCE.getConstraintType();
 
 	}
 

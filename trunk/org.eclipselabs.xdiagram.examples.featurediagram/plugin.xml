@@ -10,6 +10,8 @@
             type="FeatureDiagram">
       </diagramType>
    </extension>
+   
+   
    <extension
          point="org.eclipse.graphiti.ui.diagramTypeProviders">
       <diagramTypeProvider
@@ -20,8 +22,12 @@
          <diagramType
                id="FeatureDiagramType">
          </diagramType>
+         <imageProvider
+               id="org.eclipselabs.xdiagram.examples.featurediagram.imageProvider">
+         </imageProvider>
       </diagramTypeProvider>
    </extension>
+   
    <extension
          point="org.eclipselabs.xdiagram.interpreter.providers">
       <provider
@@ -30,7 +36,7 @@
             provider="org.eclipselabs.xdiagram.provider.LanguageProvider">
          <property
                id="file"
-               value="/Users/andre/Documents/EclipseWS/runtime-XDiagramFeature/Test/test.xdiagram">
+               value="model/featuremodel.xdiagram">
          </property>
       </provider>
    </extension>
@@ -42,6 +48,14 @@
             uri="http://org.eclipselabs.xdiagram.examples/FeatureModel"
             class="featuremodel.FeaturemodelPackage"
             genModel="model/featuremodel.genmodel"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.graphiti.ui.imageProviders">
+      <imageProvider
+            class="org.eclipselabs.xdiagram.provider.XDiagramImageProvider"
+            id="org.eclipselabs.xdiagram.examples.featurediagram.imageProvider">
+      </imageProvider>
    </extension>
 
 </plugin>

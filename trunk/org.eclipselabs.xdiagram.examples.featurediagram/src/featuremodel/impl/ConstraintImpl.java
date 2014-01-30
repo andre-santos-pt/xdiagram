@@ -3,6 +3,7 @@
 package featuremodel.impl;
 
 import featuremodel.Constraint;
+import featuremodel.ConstraintType;
 import featuremodel.Feature;
 import featuremodel.FeaturemodelPackage;
 
@@ -37,7 +38,7 @@ public class ConstraintImpl extends MinimalEObjectImpl.Container implements Cons
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ANNOTATION_EDEFAULT = null;
+	protected static final ConstraintType ANNOTATION_EDEFAULT = ConstraintType.REQUIRES;
 
 	/**
 	 * The cached value of the '{@link #getAnnotation() <em>Annotation</em>}' attribute.
@@ -47,7 +48,7 @@ public class ConstraintImpl extends MinimalEObjectImpl.Container implements Cons
 	 * @generated
 	 * @ordered
 	 */
-	protected String annotation = ANNOTATION_EDEFAULT;
+	protected ConstraintType annotation = ANNOTATION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getFeature() <em>Feature</em>}' reference.
@@ -83,7 +84,7 @@ public class ConstraintImpl extends MinimalEObjectImpl.Container implements Cons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAnnotation() {
+	public ConstraintType getAnnotation() {
 		return annotation;
 	}
 
@@ -92,9 +93,9 @@ public class ConstraintImpl extends MinimalEObjectImpl.Container implements Cons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAnnotation(String newAnnotation) {
-		String oldAnnotation = annotation;
-		annotation = newAnnotation;
+	public void setAnnotation(ConstraintType newAnnotation) {
+		ConstraintType oldAnnotation = annotation;
+		annotation = newAnnotation == null ? ANNOTATION_EDEFAULT : newAnnotation;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FeaturemodelPackage.CONSTRAINT__ANNOTATION, oldAnnotation, annotation));
 	}
@@ -163,7 +164,7 @@ public class ConstraintImpl extends MinimalEObjectImpl.Container implements Cons
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case FeaturemodelPackage.CONSTRAINT__ANNOTATION:
-				setAnnotation((String)newValue);
+				setAnnotation((ConstraintType)newValue);
 				return;
 			case FeaturemodelPackage.CONSTRAINT__FEATURE:
 				setFeature((Feature)newValue);
@@ -199,7 +200,7 @@ public class ConstraintImpl extends MinimalEObjectImpl.Container implements Cons
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case FeaturemodelPackage.CONSTRAINT__ANNOTATION:
-				return ANNOTATION_EDEFAULT == null ? annotation != null : !ANNOTATION_EDEFAULT.equals(annotation);
+				return annotation != ANNOTATION_EDEFAULT;
 			case FeaturemodelPackage.CONSTRAINT__FEATURE:
 				return feature != null;
 		}

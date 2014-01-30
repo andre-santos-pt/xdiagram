@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Constraint extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Annotation</b></em>' attribute.
+	 * The literals are from the enumeration {@link featuremodel.ConstraintType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Annotation</em>' attribute isn't clear,
@@ -31,22 +32,24 @@ public interface Constraint extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Annotation</em>' attribute.
-	 * @see #setAnnotation(String)
+	 * @see featuremodel.ConstraintType
+	 * @see #setAnnotation(ConstraintType)
 	 * @see featuremodel.FeaturemodelPackage#getConstraint_Annotation()
 	 * @model
 	 * @generated
 	 */
-	String getAnnotation();
+	ConstraintType getAnnotation();
 
 	/**
 	 * Sets the value of the '{@link featuremodel.Constraint#getAnnotation <em>Annotation</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Annotation</em>' attribute.
+	 * @see featuremodel.ConstraintType
 	 * @see #getAnnotation()
 	 * @generated
 	 */
-	void setAnnotation(String value);
+	void setAnnotation(ConstraintType value);
 
 	/**
 	 * Returns the value of the '<em><b>Feature</b></em>' reference.

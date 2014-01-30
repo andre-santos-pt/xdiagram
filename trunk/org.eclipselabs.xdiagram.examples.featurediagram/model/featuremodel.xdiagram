@@ -1,0 +1,57 @@
+metamodel "platform:/plugin/org.eclipselabs.xdiagram.examples.featurediagram/model/featuremodel.ecore"
+import featuremodel.*
+
+diagram FeatureModel {
+	contains FeatureModel.features; // not working
+	contains FeatureModel.root; // not working
+}
+
+
+node RootFeature "toolName" icon imageId:
+rectangle {
+	size 100 x 40;
+	children:
+	label editable {
+		text AbstractFeature.name;
+	}
+}
+
+node Feature:
+invisible {
+	size 100 x 50;
+	children:
+	rectangle {
+		size 100 x 40;
+		position 0, 10;
+	}
+	label {
+		text AbstractFeature.name;
+	}
+	invisible {
+		size 5 x 5;
+		position 45, 45;
+		anchor incoming Feature.parent;
+	}
+	ellipse {
+		size 10 x 10;
+		position 45, 0;
+		background black if Feature.optional = true;
+		background white if Feature.optional = false;
+		anchor outgoing Feature.parent;
+	}
+}
+
+
+link Feature.parent:
+connection free {
+	line-width 2;
+}
+
+link object Constraint 
+source Feature.constraints
+target Constraint.feature:
+connection free {
+	foreground red;
+	line-width 4;
+}
+
