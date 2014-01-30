@@ -68,8 +68,8 @@ public class CreateEObjectFeature extends AbstractCreateFeature {
 		ContainerShape container = context.getTargetContainer();
 
 		// TODO: enough upper bound
-		if(container instanceof Diagram)
-			return ECoreUtil.matchContainment(context.getTargetContainer(), provider.getRootClass(), eClass);
+		//		if(container instanceof Diagram)
+		//			return ECoreUtil.matchContainment(context.getTargetContainer(), provider.getRootClass(), eClass);
 
 
 
@@ -78,7 +78,7 @@ public class CreateEObjectFeature extends AbstractCreateFeature {
 		if(refs.isEmpty())
 			return false;
 
-//		EObject owner = provider.getGraphicsProvider().getContainerObject(container);
+		//		EObject owner = provider.getGraphicsProvider().getContainerObject(container);
 
 		// TODO: enough upper bound
 		return provider.getGraphicsProvider().canAddChild(container, eClass, context.getX(), context.getY());
@@ -91,42 +91,30 @@ public class CreateEObjectFeature extends AbstractCreateFeature {
 
 		ContainerShape containerShape = context.getTargetContainer();
 
-		if (!(containerShape instanceof Diagram)) {
-			//			PictogramLink link = containerShape.getLink();
-			//			eObjectParent = link.getBusinessObjects().get(0);
+		Collection<EReference> refs = provider.getGraphicsProvider().getCompatibleContainerReferences(containerShape, eObject);
+		EReference ref = selectReference(refs, eObject);
 
-
-			Collection<EReference> refs = provider.getGraphicsProvider().getCompatibleContainerReferences(containerShape, eObject);
-			
-			EReference ref = selectReference(refs, eObject);
-					
-			EObject parent = provider.getGraphicsProvider().getContainerObject(containerShape);
-			ECoreUtil.setReference(parent, ref, eObject);
-
-			//TODO: rever
-			//			for (EReference r : eObjectParent.eClass().getEAllContainments()) {
-			//				if (((EClass) r.getEType()).isSuperTypeOf(eObject.eClass())) {
-			//					containingRef = r;
-			//					ECoreUtil.setReference(eObjectParent, r, eObject);
-			//					break;
-			//				}
-			//			}
-		}
-
+		eObjectParent = provider.getGraphicsProvider().getContainerObject(containerShape);
+		
 		// Add model element to resource.
 		// We add the model element to the resource of the diagram for
 		// simplicity's sake. Normally, a customer would use its own
 		// model persistence layer for storing the business model separately.
 		// getDiagram().eResource().getContents().add(eObject);
 
-		try {
+		if(eObjectParent == null) {
 			try {
-				FileUtil.saveToModelFile(eObject, eObjectParent, containingRef, getDiagram());
-			} catch (IOException e) {
+				try {
+					FileUtil.persistEObject(eObject, eObjectParent, containingRef, getDiagram());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			} catch (CoreException e) {
 				e.printStackTrace();
 			}
-		} catch (CoreException e) {
-			e.printStackTrace();
+		}
+		else {
+			ECoreUtil.setReference(eObjectParent, ref, eObject);
 		}
 
 		// do the add

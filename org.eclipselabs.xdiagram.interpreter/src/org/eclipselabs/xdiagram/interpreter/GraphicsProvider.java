@@ -36,6 +36,7 @@ public interface GraphicsProvider {
 	 */
 	EClass getRoot();
 	
+	void loadDiagram(Diagram diagram, EObject rootObject);
 	
 	/**
 	 * Returns true if the given EClass should have a corresponding node creation tool.
@@ -162,5 +163,7 @@ public interface GraphicsProvider {
 	Collection<EReference> getContainerReferences(ContainerShape container);
 
 	Collection<EReference> getCompatibleContainerReferences(ContainerShape targetContainer, EObject eObject);
+
+	
 	
 }

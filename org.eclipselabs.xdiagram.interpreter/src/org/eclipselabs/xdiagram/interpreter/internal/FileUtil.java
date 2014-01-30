@@ -53,28 +53,48 @@ public class FileUtil {
 		return diagramList;
 	}
 
-	public static void saveToModelFile(final EObject obj, final EObject parent, EReference containingRef, final Diagram d) throws CoreException, IOException {
-		URI uri = d.eResource().getURI();
-		uri = uri.trimFragment();
-		uri = uri.trimFileExtension();
-		uri = uri.appendFileExtension("xmi"); //$NON-NLS-1$
-		ResourceSet rSet = d.eResource().getResourceSet();
-		final IWorkspaceRoot workspaceRoot = ResourcesPlugin.getWorkspace().getRoot();
+	private static void createFile(URI uri, ResourceSet rSet,
+			final IWorkspaceRoot workspaceRoot) throws IOException {
 		IResource file = workspaceRoot.findMember(uri.toPlatformString(true));
 		
-		// if does not exist
 		if (file == null || !file.exists()) {
 			Resource createResource = rSet.createResource(uri);
 			createResource.save(Collections.emptyMap());
 			createResource.setTrackingModification(true);
 		}
+	}
+	
+	public static void persistEObjectIfEmpty(EObject rootObject, Diagram d) throws IOException {
+		URI uri = getXmiUri(d);
+		
+		ResourceSet rSet = d.eResource().getResourceSet();
+		final IWorkspaceRoot workspaceRoot = ResourcesPlugin.getWorkspace().getRoot();
+		
+		createFile(uri, rSet, workspaceRoot);
+		
+		Resource resource = rSet.getResource(uri, true);
+		List<EObject> contents = resource.getContents();
+		if(contents.isEmpty())
+			contents.add(rootObject);
+	}
+
+	
+			
+	public static void persistEObject(final EObject obj, final EObject parent, EReference containingRef, final Diagram d) throws CoreException, IOException {
+		URI uri = getXmiUri(d);
+		
+		ResourceSet rSet = d.eResource().getResourceSet();
+		final IWorkspaceRoot workspaceRoot = ResourcesPlugin.getWorkspace().getRoot();
+		
+		createFile(uri, rSet, workspaceRoot);
+		
 		final Resource resource = rSet.getResource(uri, true);
 		
 		List<EObject> contents = resource.getContents();
-		if(parent == null)
+//		if(parent == null)
 			contents.add(obj);
-		else {
-			ECoreUtil.setReference(parent, containingRef, obj);
+//		else {
+//			ECoreUtil.setReference(parent, containingRef, obj);
 //			if(containingRef.isMany()) {
 //				List<EObject> list = (List<EObject>) parent.eGet(containingRef);
 //				list.add(obj);
@@ -82,7 +102,15 @@ public class FileUtil {
 //			else {
 //				parent.eSet(containingRef, obj);
 //			}		
-		}
+//		}
+	}
+
+	private static URI getXmiUri(final Diagram d) {
+		URI uri = d.eResource().getURI();
+		uri = uri.trimFragment();
+		uri = uri.trimFileExtension();
+		uri = uri.appendFileExtension("xmi");
+		return uri;
 	}
 	
 
