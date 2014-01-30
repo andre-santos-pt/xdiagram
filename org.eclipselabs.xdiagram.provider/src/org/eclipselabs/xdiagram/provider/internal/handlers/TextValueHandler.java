@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.AbstractText;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
+import org.eclipse.graphiti.mm.algorithms.MultiText;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 import org.eclipselabs.xdiagram.dsl.FeatureContainer;
@@ -26,7 +27,6 @@ public class TextValueHandler implements FeatureHandler {
 		String value = "";
 		final EAttribute att = v.getModelAttribute();
 		if(att != null) {
-//			final EAttribute a = Util.matchAttribute(eObject.eClass(), att);	
 			value += eObject.eGet(att);
 			eObject.eAdapters().add(new AdapterImpl() {	
 				@Override
@@ -35,6 +35,7 @@ public class TextValueHandler implements FeatureHandler {
 						((AbstractText) figure).setValue(notification.getNewStringValue());
 				}
 			});
+			
 		}
 		else {
 			value += v.getText();
