@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipselabs.xdiagram.dsl/src-gen" editDirectory="/org.eclipselabs.xdiagram.dsl.edit/src"
+    editorDirectory="/org.eclipselabs.xdiagram.dsl.editor/src" modelPluginID="org.eclipselabs.xdiagram.dsl"
+    forceOverwrite="true" modelName="Dsl" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.eclipselabs.xdiagram.dsl.edit"
+    editorPluginID="org.eclipselabs.xdiagram.dsl.editor" runtimeVersion="2.9">
+  <genPackages prefix="Dsl" basePackage="org.eclipselabs.xdiagram" disposableProviderFactory="true"
+      fileExtensions="xdiagram" ecorePackage="Dsl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//FigureType">
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FigureType/RECTANGLE"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FigureType/ELLIPSE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//ConnectionType">
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//ConnectionType/FREE"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//ConnectionType/MANHATTAN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//AnchorDirection">
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//AnchorDirection/INCOMING"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//AnchorDirection/OUTGOING"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//DefaultColor">
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/WHITE"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/SILVER"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/GRAY"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/BLACK"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/RED"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/MAROON"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/YELLOW"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/OLIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/LIME"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/GREEN"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/AQUA"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/TEAL"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/BLUE"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/NAVY"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/FUCHSIA"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/PURPLE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//ContainerLayout">
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//ContainerLayout/FREE"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//ContainerLayout/VSTACK"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//ContainerLayout/HSTACK"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//Operator">
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//Operator/EQUAL"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//Operator/DIFFERENT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//BooleanLiteral">
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//BooleanLiteral/TRUE"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//BooleanLiteral/FALSE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//FontFaceType">
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FontFaceType/ARIAL"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FontFaceType/VERDANA"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FontFaceType/TIMES"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FontFaceType/COURIER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//FontStyleType">
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FontStyleType/ITALICS"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FontStyleType/BOLD"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FontStyleType/UNDERLINE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//LineType">
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//LineType/SOLID"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//LineType/DASH"/>
+    </genEnums>
+    <genClasses ecoreClass="Dsl.ecore#//XDiagram">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//XDiagram/importURI"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//XDiagram/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//XDiagram/diagram"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//XDiagram/groups"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//XDiagram/elements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//XDiagram/styles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//XDiagram/colors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//XDiagram/figures"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//ImportStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//ImportStatement/importedNamespace"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Diagram">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Diagram/modelClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Diagram/contains"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Group">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Group/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//DiagramElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//DiagramElement/modelClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//DiagramElement/toolName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//DiagramElement/group"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//DiagramElement/imageId"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Style">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Style/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Feature">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Feature/conditional"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//FeatureContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//FeatureContainer/styled"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//FeatureContainer/style"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//FeatureContainer/features"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//FeatureConditional">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//FeatureConditional/modelAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//FeatureConditional/operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//FeatureConditional/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Node">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Node/rootFigure"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Link">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Link/modelReference"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Link/complex"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Link/sourceReference"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Link/targetReference"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Link/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Link/decorators"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Decorator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Decorator/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Decorator/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Decorator/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Decorator/middle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Decorator/staticElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Decorator/label"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//ConnectableElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//ConnectableElement/composite"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//ConnectableElement/children"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Anchor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Anchor/direction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Anchor/modelReference"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//CustomColor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//CustomColor/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//CustomColor/R"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//CustomColor/G"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//CustomColor/B"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Color">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Color/default"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Color/custom"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//CustomFigure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//CustomFigure/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//CustomFigure/element"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Custom">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Custom/figure"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Rectangle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Rectangle/rectangle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Rectangle/square"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Rhombus"/>
+    <genClasses ecoreClass="Dsl.ecore#//Ellipse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Ellipse/ellipse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Ellipse/circle"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Polyline">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Polyline/polygon"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Polyline/polyline"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Contains">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Contains/modelReference"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Contains/layout"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Value"/>
+    <genClasses ecoreClass="Dsl.ecore#//IntValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//IntValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//DoubleValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//DoubleValue/valueInt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//DoubleValue/valueDecimal"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//StringValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//StringValue/null"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//StringValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//BooleanValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//BooleanValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//EnumValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//EnumValue/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Label">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Label/editable"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Image">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Image/imageId"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Invisible"/>
+    <genClasses ecoreClass="Dsl.ecore#//ColorFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//ColorFeature/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//ColorFeature/color"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Transparency">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Transparency/percent"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Size">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Size/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Size/height"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Point">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Point/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Point/y"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Position">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Position/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Position/y"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Corner">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Corner/angle"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//TextValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//TextValue/text"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//TextValue/modelAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//FontFace">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//FontFace/face"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//FontSize">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//FontSize/size"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//FontStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//FontStyle/styles"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//LineStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//LineStyle/style"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//LineWidth">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//LineWidth/width"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

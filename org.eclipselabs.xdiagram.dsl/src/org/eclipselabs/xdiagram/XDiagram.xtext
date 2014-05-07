@@ -1,0 +1,550 @@
+grammar org.eclipselabs.xdiagram.Dsl with org.eclipse.xtext.common.Terminals
+
+
+import 'http://www.eclipse.org/emf/2002/Ecore' as ecore
+import "http://www.eclipse.org/xtext/common/JavaVMTypes" as jvmTypes
+
+generate dsl "http://www.eclipselabs.org/xdiagram/Dsl"
+
+
+XDiagram:
+    'metamodel' importURI=STRING
+    imports+=ImportStatement   
+     
+//    'diagram' modelClass=[ecore::EClass|QualifiedName] ':'
+//    
+    diagram=Diagram
+    
+    groups+=Group*
+    
+    (
+    	(elements += DiagramElement) |
+    	(styles += Style) |
+    	(colors += CustomColor) |
+    	(figures += CustomFigure)
+    )*
+;
+
+
+// importedNamespace apparently cannot be on the root element
+ImportStatement:
+	{ImportStatement}
+	('import' importedNamespace=QualifiedNameWithWildCard)?
+;
+
+QualifiedName:
+  ID ('.' ID)*
+;
+
+QualifiedNameWithWildCard returns ecore::EString :
+    QualifiedName  ('.' '*')?;
+    
+Diagram:
+	'diagram' modelClass=[ecore::EClass|QualifiedName] '{'
+	contains+=Contains*
+	figures+=ConnectableElement*
+	'}'
+;
+
+Group:
+	'group' name=ID
+;
+
+DiagramElement:
+	Node | Link
+;
+
+
+Style:
+	'style' name=ID (styled?='extends' style=[Style])? '{'
+	      features+=StyleFeature*
+	'}'
+;
+
+
+
+enum FigureType:
+	RECTANGLE='rectangle' |
+	ELLIPSE='ellipse'
+;
+
+
+/**
+ * Every feature has to be added here, and have:
+ * (conditional=FeatureConditional)?
+ */
+Feature:
+		StyleFeature |
+		LinkedFeature
+;
+
+LinkedFeature returns Feature:
+	Contains | 
+	Anchor
+;
+
+StyleFeature returns Feature:
+	Size | Position | Point | Corner |
+	Background | Foreground | Transparency |
+	FontFace | FontSize | FontStyle | TextValue |
+	LineStyle | LineWidth
+;
+
+FeatureContainer:
+	ConnectableElement | Link | Style
+;
+
+// validate ATT / Value
+FeatureConditional:
+	'if' modelAttribute=[ecore::EAttribute|QualifiedName] operator=Operator value=Value
+;
+
+
+
+
+
+
+
+// TODO validation: unique nodes
+// notation inheritance?
+Node:
+    'node' modelClass=[ecore::EClass|QualifiedName]  (toolName=STRING (':' group=[Group])?)?  ('icon' imageId=ID)? ':'
+    	rootFigure = ConnectableElement
+;
+    
+   
+
+
+// TODO: validation - complex requires source e target, complex structure
+// TODO text / icon
+Link:
+    'link'(
+    	modelReference=[ecore::EReference|QualifiedName] | 
+    	
+    	(complex?='object' modelClass=[ecore::EClass|QualifiedName] 
+    	'source' sourceReference=[ecore::EReference|QualifiedName] 
+    	'target' targetReference=[ecore::EReference|QualifiedName]
+    	)
+    )  (toolName=STRING (':' group=[Group])?)?  ('icon' imageId=ID)? 
+    ':'
+    'connection' type=ConnectionType (styled?='+' style=[Style])? '{'
+    	features += LinkFeature*
+    	(
+    	'decorators:'
+    	 decorators += Decorator+	
+    	)?
+    '}'
+;
+    
+ 
+enum ConnectionType:
+	FREE='free' |
+	MANHATTAN='manhattan'	
+;	
+
+LinkFeature returns Feature:
+	Foreground | LineStyle | LineWidth
+;
+    
+    
+    
+
+
+// % opcional? ou considerar pixeis?
+// ter "constantes" para origem destino
+Decorator:
+	 (('at' position=INT '%')|(source?='source')|(target?='target')|(middle?='middle')) ((staticElement = StaticElement) | (label = Label))?
+		
+	
+;
+
+StaticElement returns ConnectableElement:
+	 Rhombus | Polyline //| Arrow | Triangle
+;
+
+
+// TODO validation
+Anchor:
+	'anchor' direction=AnchorDirection modelReference=[ecore::EReference|QualifiedName] 
+	(conditional=FeatureConditional)?
+	';'
+;
+
+
+enum AnchorDirection:
+	INCOMING='incoming' |
+	OUTGOING='outgoing'
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+//---------------------------------------
+// Colors
+
+
+CustomColor:
+	'color' name=ID R=INT ',' G=INT ',' B=INT
+;
+
+Color:
+	(default=DefaultColor) | (custom=[CustomColor])
+;
+
+
+enum DefaultColor:
+	WHITE='white' |
+	SILVER='silver' |
+	GRAY='gray' |
+	BLACK='black' |
+	RED='red' |
+	MAROON='maroon' |
+	YELLOW='yellow' |
+	OLIVE='olive' |
+	LIME='lime' |
+	GREEN='green' |
+	AQUA='aqua' |
+	TEAL='teal' |
+	BLUE='blue' |
+	NAVY='navy' |
+	FUCHSIA='fuchsia' |
+	PURPLE='purple'
+;
+
+
+
+
+
+
+//---------------------------------------
+// Connectable Elements
+/*
+ * Every connectable element must be included here, and have:
+ * (composite?='children:' children+=ConnectableElement+)?
+ * (styled?='+' style=[Style])?
+ */
+ConnectableElement:
+	Rectangle | Rhombus | Ellipse | Polyline | Label | Image | Invisible | Custom
+;
+
+
+ConnectableElementFeature returns Feature:
+	Position | Size | ColorFeature | LineStyle | LineWidth | Contains | Anchor
+;
+
+CustomFigure:
+	'figure' name=ID 'as' element=ConnectableElement
+;
+
+
+
+Custom:
+	'figure' figure=[CustomFigure] (styled?='+' style=[Style])? '{'
+		features+=LinkedFeature*
+		(composite?='children:' children+=ConnectableElement+)?
+	'}'
+;
+
+Rectangle:
+	(rectangle?='rectangle' | square?='square') (styled?='+' style=[Style])? '{'
+		features+=RectangleFeature*
+		(composite?='children:' children+=ConnectableElement+)?
+	'}'
+;
+
+RectangleFeature returns Feature:
+	ConnectableElementFeature | Corner
+;
+
+Rhombus:
+	{Rhombus}
+	'rhombus' (styled?='+' style=[Style])? '{'
+		features+=ConnectableElementFeature*
+		(composite?='children:' children+=ConnectableElement+)?
+	'}'
+;
+
+Ellipse:
+	(ellipse?='ellipse' | circle?='circle') (styled?='+' style=[Style])? '{'
+		features+=ConnectableElementFeature*
+		(composite?='children:' children+=ConnectableElement+)?
+	'}'
+;
+
+
+Polyline: 
+	(polygon?='polygon' | polyline?='polyline') (styled?='+' style=[Style])? '{'
+		features+=Point
+		features+=Point
+		features+=Point*
+		features+=ConnectableElementFeature*
+		(composite?='children:' children+=ConnectableElement+)?
+	'}'
+;
+
+//TODO line
+
+
+
+
+
+
+
+
+
+
+Contains:
+'contains' modelReference=[ecore::EReference|QualifiedName] 
+(conditional=FeatureConditional)? (layout=ContainerLayout)?
+';'
+;
+
+
+enum ContainerLayout:
+	FREE='free' |
+	VSTACK='vstack' |
+	HSTACK='hstack'
+;
+
+//TODO < > <= =>
+enum Operator:
+	EQUAL='=' |
+	DIFFERENT='<>'
+;
+
+// TODO include object type?
+Value:
+	IntValue | DoubleValue | StringValue | BooleanValue | EnumValue
+;
+
+IntValue:
+	value=INT
+;
+
+DoubleValue:
+	valueInt=INT '.' valueDecimal=INT
+;
+
+StringValue:
+	(null?='null' | value=STRING)
+;
+
+BooleanValue:
+	value=BooleanLiteral
+;
+
+enum BooleanLiteral:
+	TRUE='true' |
+	FALSE='false'
+;
+
+// TODO validation
+EnumValue:
+	name=ID
+;
+
+
+
+
+
+
+
+FigureFeature returns Feature:
+	ColorFeature | Size | Position | Point | LineStyle
+;
+
+
+// TODO: validation  at most one editable
+Label:
+	{Label}
+	'label' (editable?='editable')? (styled?='+' style=[Style])? '{'
+	features+=LabelFeature*
+	(composite?='children:' children+=ConnectableElement+)?
+	'}'
+;
+
+LabelFeature returns Feature:
+	TextValue | Foreground | Background | FontFace | FontSize | FontStyle | Size | Position
+;
+
+
+
+Image:
+	'image' imageId=ID (styled?='+' style=[Style])? '{'
+	features+=ImageFeature*
+	(composite?='children:' children+=ConnectableElement+)?
+	'}'
+;
+
+ImageFeature returns Feature:
+	Size | Position | Transparency
+;
+
+
+Invisible:
+	{Invisible}
+	'invisible' (styled?='+' style=[Style])? '{'
+	features+=InvisibleFeature*
+	(composite?='children:' children+=ConnectableElement+)?
+	'}'
+;
+
+InvisibleFeature returns Feature:
+	Size | Position | LinkedFeature
+;
+
+
+
+
+
+
+
+
+
+ColorFeature:
+	Foreground | Background
+;
+
+Foreground returns ColorFeature:
+	type='foreground' color=Color
+	(conditional=FeatureConditional)?
+	';'
+;
+
+Background returns ColorFeature:
+	type='background' color=Color
+	(conditional=FeatureConditional)?
+	';'
+;
+
+
+Transparency:
+	'transparency' percent=PERCENT
+	(conditional=FeatureConditional)?
+	';'
+;
+
+
+
+
+
+Size:
+	'size' width=INT 'x' height=INT
+	(conditional=FeatureConditional)?
+	';'
+;
+
+Point:
+	'point' x=INT ',' y=INT
+	(conditional=FeatureConditional)?
+	';'
+;
+
+Position:
+	'position' x=INT ',' y=INT
+	(conditional=FeatureConditional)?
+	';'
+;
+
+Corner:
+	'corner' angle=INT
+	(conditional=FeatureConditional)?
+	';'
+;
+
+
+
+
+
+
+
+//--------------------------------
+// Text
+
+// TODO: validation of owned attribute
+TextValue:
+	'text' (text=STRING | modelAttribute=[ecore::EAttribute|QualifiedName])
+	(conditional=FeatureConditional)?
+	';'
+;
+
+FontFace:
+	'font-face' face=FontFaceType
+	(conditional=FeatureConditional)?
+	';'
+;
+
+FontSize:
+	'font-size' size=INT
+	(conditional=FeatureConditional)?
+	';'
+;
+
+FontStyle:
+	'font-style' styles+=FontStyleType (',' styles+=FontStyleType)*
+	(conditional=FeatureConditional)?
+	';'
+;
+
+
+
+enum FontFaceType:
+	ARIAL='arial' |
+	VERDANA='verdana' |
+	TIMES='times' |
+	COURIER='courier'
+;
+
+enum FontStyleType:
+	ITALICS='italics' |
+	BOLD='bold' |
+	UNDERLINE='underline'
+;
+
+
+
+
+
+
+
+//-------------------------------
+// Lines
+
+
+LineStyle:
+	'line-type' style=LineType  
+	(conditional=FeatureConditional)?
+	';'
+;
+
+enum LineType:
+	SOLID='solid' |
+	DASH='dash' 
+;
+
+LineWidth:
+	'line-width' width=INT
+	(conditional=FeatureConditional)?
+	';'
+;
+
+
+
+
+
+//---------------------------------
+// Terminals
+
+terminal PERCENT: ('0'|('1'..'9')(('0'..'9'))?|'100') '%';
+
+//terminal S: (' '|'\t')+;
+
