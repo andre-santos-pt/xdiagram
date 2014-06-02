@@ -63,24 +63,21 @@ public class CreateEObjectFeature extends AbstractCreateFeature {
 	}
 
 	public boolean canCreate(ICreateContext context) {
-
-
 		ContainerShape container = context.getTargetContainer();
-
-		// TODO: enough upper bound
-		//		if(container instanceof Diagram)
-		//			return ECoreUtil.matchContainment(context.getTargetContainer(), provider.getRootClass(), eClass);
-
-
-
+		EObject owner = provider.getGraphicsProvider().getContainerObject(container);
 		Collection<EReference> refs = provider.getGraphicsProvider().getContainerReferences(container);
 
-		if(refs.isEmpty())
+		boolean card = false;
+		
+		for(EReference r : refs)
+			if(r.getEReferenceType().isSuperTypeOf(eClass) && ECoreUtil.enoughUpperBound(r, owner))
+				card = true;
+		
+		if(!card)
 			return false;
-
-		//		EObject owner = provider.getGraphicsProvider().getContainerObject(container);
-
+					
 		// TODO: enough upper bound
+		
 		return provider.getGraphicsProvider().canAddChild(container, eClass, context.getX(), context.getY());
 	}
 
