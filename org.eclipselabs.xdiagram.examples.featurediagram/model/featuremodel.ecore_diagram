@@ -142,7 +142,7 @@
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_8w7wYHDeEeONkYQzjwQZBg" type="4003" source="_UfNgsF5hEeO93PPy1TUSbw" target="__6rFoF5gEeO93PPy1TUSbw">
     <children xmi:type="notation:DecorationNode" xmi:id="_8w7wY3DeEeONkYQzjwQZBg" type="6002">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_8w7wZHDeEeONkYQzjwQZBg" y="40"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_8w7wZHDeEeONkYQzjwQZBg" x="7" y="31"/>
     </children>
     <children xmi:type="notation:DecorationNode" xmi:id="_8w7wZXDeEeONkYQzjwQZBg" type="6004">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_8w7wZnDeEeONkYQzjwQZBg" y="60"/>
