@@ -208,13 +208,15 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cContainsAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cContainsContainsParserRuleCall_3_0 = (RuleCall)cContainsAssignment_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cFiguresAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cFiguresConnectableElementParserRuleCall_4_0 = (RuleCall)cFiguresAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Diagram:
-		//	"diagram" modelClass=[ecore::EClass|QualifiedName] "{" contains+=Contains* "}";
+		//	"diagram" modelClass=[ecore::EClass|QualifiedName] "{" contains+=Contains* figures+=ConnectableElement* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"diagram" modelClass=[ecore::EClass|QualifiedName] "{" contains+=Contains* "}"
+		//"diagram" modelClass=[ecore::EClass|QualifiedName] "{" contains+=Contains* figures+=ConnectableElement* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"diagram"
@@ -238,8 +240,14 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//Contains
 		public RuleCall getContainsContainsParserRuleCall_3_0() { return cContainsContainsParserRuleCall_3_0; }
 
+		//figures+=ConnectableElement*
+		public Assignment getFiguresAssignment_4() { return cFiguresAssignment_4; }
+
+		//ConnectableElement
+		public RuleCall getFiguresConnectableElementParserRuleCall_4_0() { return cFiguresConnectableElementParserRuleCall_4_0; }
+
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class GroupElements extends AbstractParserRuleElementFinder {
@@ -3460,7 +3468,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Diagram:
-	//	"diagram" modelClass=[ecore::EClass|QualifiedName] "{" contains+=Contains* "}";
+	//	"diagram" modelClass=[ecore::EClass|QualifiedName] "{" contains+=Contains* figures+=ConnectableElement* "}";
 	public DiagramElements getDiagramAccess() {
 		return (pDiagram != null) ? pDiagram : (pDiagram = new DiagramElements());
 	}

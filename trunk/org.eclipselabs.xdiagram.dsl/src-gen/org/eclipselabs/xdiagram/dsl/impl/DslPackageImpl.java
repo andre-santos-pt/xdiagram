@@ -661,6 +661,16 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getDiagram_Figures()
+  {
+    return (EReference)diagramEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getGroup()
   {
     return groupEClass;
@@ -1942,6 +1952,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     diagramEClass = createEClass(DIAGRAM);
     createEReference(diagramEClass, DIAGRAM__MODEL_CLASS);
     createEReference(diagramEClass, DIAGRAM__CONTAINS);
+    createEReference(diagramEClass, DIAGRAM__FIGURES);
 
     groupEClass = createEClass(GROUP);
     createEAttribute(groupEClass, GROUP__NAME);
@@ -2190,6 +2201,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEClass(diagramEClass, Diagram.class, "Diagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDiagram_ModelClass(), ecorePackage.getEClass(), null, "modelClass", null, 0, 1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDiagram_Contains(), this.getContains(), null, "contains", null, 0, -1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDiagram_Figures(), this.getConnectableElement(), null, "figures", null, 0, -1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(groupEClass, Group.class, "Group", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getGroup_Name(), ecorePackage.getEString(), "name", null, 0, 1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -425,9 +425,27 @@ ruleDiagram returns [EObject current=null]
 	    }
 
 )
-)*	otherlv_4='}' 
+)*(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getDiagramAccess().getFiguresConnectableElementParserRuleCall_4_0()); 
+	    }
+		lv_figures_4_0=ruleConnectableElement		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getDiagramRule());
+	        }
+       		add(
+       			$current, 
+       			"figures",
+        		lv_figures_4_0, 
+        		"ConnectableElement");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*	otherlv_5='}' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getDiagramAccess().getRightCurlyBracketKeyword_4());
+    	newLeafNode(otherlv_5, grammarAccess.getDiagramAccess().getRightCurlyBracketKeyword_5());
     }
 )
 ;

@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Diagram#getModelClass <em>Model Class</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Diagram#getContains <em>Contains</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.Diagram#getFigures <em>Figures</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,5 +68,21 @@ public interface Diagram extends EObject
    * @generated
    */
   EList<Contains> getContains();
+
+  /**
+   * Returns the value of the '<em><b>Figures</b></em>' containment reference list.
+   * The list contents are of type {@link org.eclipselabs.xdiagram.dsl.ConnectableElement}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Figures</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Figures</em>' containment reference list.
+   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getDiagram_Figures()
+   * @model containment="true"
+   * @generated
+   */
+  EList<ConnectableElement> getFigures();
 
 } // Diagram
