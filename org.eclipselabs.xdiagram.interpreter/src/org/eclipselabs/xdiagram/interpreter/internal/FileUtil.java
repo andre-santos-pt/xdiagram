@@ -40,62 +40,75 @@ import org.eclipse.graphiti.mm.pictograms.Diagram;
 
 public class FileUtil {
 
-	public static Collection<Diagram> getDiagrams(IProject p) {
-		final List<IFile> files = getDiagramFiles(p);
-		final List<Diagram> diagramList = new ArrayList<Diagram>();
-		final ResourceSet rSet = new ResourceSetImpl();
-		for (final IFile file : files) {
-			final Diagram diagram = getDiagramFromFile(file, rSet);
-			if (diagram != null) {
-				diagramList.add(diagram);
-			}
-		}
-		return diagramList;
-	}
+	//	public static Collection<Diagram> getDiagrams(IProject p) {
+	//		final List<IFile> files = getDiagramFiles(p);
+	//		final List<Diagram> diagramList = new ArrayList<Diagram>();
+	//		final ResourceSet rSet = new ResourceSetImpl();
+	//		for (final IFile file : files) {
+	//			final Diagram diagram = getDiagramFromFile(file, rSet);
+	//			if (diagram != null) {
+	//				diagramList.add(diagram);
+	//			}
+	//		}
+	//		return diagramList;
+	//	}
 
 	private static void createFile(URI uri, ResourceSet rSet,
 			final IWorkspaceRoot workspaceRoot) throws IOException {
 		IResource file = workspaceRoot.findMember(uri.toPlatformString(true));
-		
+
 		if (file == null || !file.exists()) {
 			Resource createResource = rSet.createResource(uri);
 			createResource.save(Collections.emptyMap());
 			createResource.setTrackingModification(true);
 		}
 	}
-	
+
+	public static EObject loadContents(Diagram d) {
+		URI uri = getXmiUri(d);
+		IWorkspaceRoot workspaceRoot = ResourcesPlugin.getWorkspace().getRoot();
+		IResource file = workspaceRoot.findMember(uri.toPlatformString(true));
+		if(file != null && file.exists()) {
+			ResourceSet rSet = d.eResource().getResourceSet();
+			Resource resource = rSet.getResource(uri, true);
+			List<EObject> contents = resource.getContents();
+			return contents.get(0);
+		}
+		return null;
+	}
+
 	public static void persistEObjectIfEmpty(EObject rootObject, Diagram d) throws IOException {
 		URI uri = getXmiUri(d);
-		
+
 		ResourceSet rSet = d.eResource().getResourceSet();
-		final IWorkspaceRoot workspaceRoot = ResourcesPlugin.getWorkspace().getRoot();
-		
+		IWorkspaceRoot workspaceRoot = ResourcesPlugin.getWorkspace().getRoot();
+
 		createFile(uri, rSet, workspaceRoot);
-		
+
 		Resource resource = rSet.getResource(uri, true);
 		List<EObject> contents = resource.getContents();
 		if(contents.isEmpty())
 			contents.add(rootObject);
 	}
 
-	
-			
+
+
 	public static void persistEObject(final EObject obj, final EObject parent, EReference containingRef, final Diagram d) throws CoreException, IOException {
 		URI uri = getXmiUri(d);
-		
+
 		ResourceSet rSet = d.eResource().getResourceSet();
 		final IWorkspaceRoot workspaceRoot = ResourcesPlugin.getWorkspace().getRoot();
-		
+
 		createFile(uri, rSet, workspaceRoot);
-		
+
 		final Resource resource = rSet.getResource(uri, true);
-		
+
 		List<EObject> contents = resource.getContents();
 		if(parent == null)
 			contents.add(obj);
 		else
 			ECoreUtil.setReference(parent, containingRef, obj);
-			
+
 	}
 
 	private static URI getXmiUri(final Diagram d) {
@@ -105,7 +118,7 @@ public class FileUtil {
 		uri = uri.appendFileExtension("xmi");
 		return uri;
 	}
-	
+
 
 
 	private static List<IFile> getDiagramFiles(IContainer folder) {

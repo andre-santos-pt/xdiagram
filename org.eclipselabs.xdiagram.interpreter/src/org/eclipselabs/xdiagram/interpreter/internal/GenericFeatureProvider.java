@@ -32,14 +32,12 @@ import org.eclipse.graphiti.features.ICreateConnectionFeature;
 import org.eclipse.graphiti.features.ICreateFeature;
 import org.eclipse.graphiti.features.IDirectEditingFeature;
 import org.eclipse.graphiti.features.IFeature;
-import org.eclipse.graphiti.features.ILayoutFeature;
 import org.eclipse.graphiti.features.IMoveShapeFeature;
 import org.eclipse.graphiti.features.IRemoveFeature;
 import org.eclipse.graphiti.features.IResizeShapeFeature;
 import org.eclipse.graphiti.features.IUpdateFeature;
 import org.eclipse.graphiti.features.context.IAddContext;
 import org.eclipse.graphiti.features.context.IDirectEditingContext;
-import org.eclipse.graphiti.features.context.ILayoutContext;
 import org.eclipse.graphiti.features.context.IMoveShapeContext;
 import org.eclipse.graphiti.features.context.IPictogramElementContext;
 import org.eclipse.graphiti.features.context.IRemoveContext;
@@ -51,7 +49,6 @@ import org.eclipselabs.xdiagram.interpreter.GraphicsProvider;
 import org.eclipselabs.xdiagram.interpreter.ProviderException;
 import org.eclipselabs.xdiagram.interpreter.internal.Activator.LanguageDescription;
 import org.eclipselabs.xdiagram.interpreter.internal.features.DirectEditingFeature;
-import org.eclipselabs.xdiagram.interpreter.internal.features.LayoutFeature;
 import org.eclipselabs.xdiagram.interpreter.internal.features.MoveNodeFeature;
 import org.eclipselabs.xdiagram.interpreter.internal.features.RemoveNodeFeature;
 import org.eclipselabs.xdiagram.interpreter.internal.features.ResizeNodeFeature;
@@ -69,10 +66,7 @@ public class GenericFeatureProvider extends DefaultFeatureProvider {
 		super(dtp);
 	}
 
-	public EPackage getEPackage() {
-		if(ePackage != null)
-			return ePackage;
-		
+	public void init() {
 		String diagramType = getDiagramTypeProvider().getDiagram().getDiagramTypeId();
 
 		LanguageDescription desc = Activator.getInstance().getLanguageProvider(diagramType);
@@ -86,19 +80,24 @@ public class GenericFeatureProvider extends DefaultFeatureProvider {
 			graphicsProvider.setup(desc.bundle, desc.properties, ePackage);
 		} catch (ProviderException e) {
 			System.err.println("Problem in graphics provider '" + graphicsProvider.getClass().getName() + "' :" + e.getMessage());
-			return null;
 		}
 		
 		rootClass = graphicsProvider.getRoot();
 		if(rootClass == null)
 			System.err.println("Could not load root class for diagram type '" + diagramType + "'");
-
+	}
+	
+	// ALSO SETS UP graphicsProvider!!
+	public EPackage getEPackage() {
+		if(ePackage == null)
+			init();
+		
 		return ePackage;
 	}
 
 	public EClass getRootClass() {
 		if(rootClass == null)
-			getEPackage();
+			init();
 
 		return rootClass;
 	}
