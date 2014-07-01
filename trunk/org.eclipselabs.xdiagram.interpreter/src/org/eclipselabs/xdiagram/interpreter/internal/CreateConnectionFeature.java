@@ -45,8 +45,6 @@ public class CreateConnectionFeature extends AbstractAddFeature {
 		if(eObject != null)
 			link(connection, eObject);
 		
-//		provider.getGraphicsProvider().updateLinkFigure(getDiagram(), connection);
-
 		return connection;
 	}
 

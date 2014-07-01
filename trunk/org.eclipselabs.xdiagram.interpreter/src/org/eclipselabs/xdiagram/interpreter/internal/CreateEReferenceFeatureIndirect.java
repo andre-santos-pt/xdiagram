@@ -15,6 +15,8 @@
  *******************************************************************************/
 package org.eclipselabs.xdiagram.interpreter.internal;
 
+import java.util.List;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
@@ -46,18 +48,22 @@ public class CreateEReferenceFeatureIndirect extends AbstractCreateConnectionFea
 	public boolean canCreate(ICreateConnectionContext context) {
 		Anchor sourceAnchor = context.getSourceAnchor();
 		Anchor targetAnchor = context.getTargetAnchor();
+		EObject source = getEObject(sourceAnchor);
 		return 
 				sourceAnchor != null && 
 				targetAnchor != null &&
+				ECoreUtil.enoughUpperBound(eReference, source) &&
 				provider.isValidOutgoingConnection(sourceAnchor, eReference) &&
 				provider.isValidIncomingConnection(targetAnchor, targetRef);
 	}
 
 	public boolean canStartConnection(ICreateConnectionContext context) {
 		Anchor anchor = context.getSourceAnchor();
+		EObject source = getEObject(anchor);
 		return 
 				anchor != null &&
-				sourceType.isInstance(getEObject(anchor)) &&
+				sourceType.isInstance(source) &&
+				ECoreUtil.enoughUpperBound(eReference, source) &&
 				provider.isValidOutgoingConnection(anchor, eReference);
 	}
 

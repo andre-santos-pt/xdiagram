@@ -15,10 +15,8 @@
  *******************************************************************************/
 package org.eclipselabs.xdiagram.interpreter.internal;
 
-import java.io.IOException;
 import java.util.Collection;
 
-import org.eclipse.core.runtime.CoreException;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EFactory;
 import org.eclipse.emf.ecore.EObject;
@@ -26,11 +24,6 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.graphiti.features.context.ICreateContext;
 import org.eclipse.graphiti.features.impl.AbstractCreateFeature;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
-import org.eclipse.graphiti.mm.pictograms.Diagram;
-import org.eclipse.graphiti.mm.pictograms.PictogramLink;
-import org.eclipse.graphiti.mm.pictograms.Shape;
-import org.eclipse.graphiti.services.Graphiti;
-import org.eclipse.graphiti.util.ILocationInfo;
 
 public class CreateEObjectFeature extends AbstractCreateFeature {
 
