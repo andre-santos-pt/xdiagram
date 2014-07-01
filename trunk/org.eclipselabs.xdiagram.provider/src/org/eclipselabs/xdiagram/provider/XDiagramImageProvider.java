@@ -1,38 +1,15 @@
 package org.eclipselabs.xdiagram.provider;
 
 
-import java.awt.Dimension;
 import java.io.File;
-import java.io.IOException;
-import java.net.URL;
 import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
-import javax.imageio.ImageIO;
-import javax.imageio.ImageReader;
-import javax.imageio.stream.ImageInputStream;
 
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IContributor;
-import org.eclipse.core.runtime.IExtension;
 import org.eclipse.core.runtime.IExtensionRegistry;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.graphiti.ui.internal.GraphitiUIPlugin;
 import org.eclipse.graphiti.ui.platform.AbstractImageProvider;
-import org.eclipse.graphiti.ui.platform.IImageProvider;
-import org.eclipse.graphiti.ui.services.GraphitiUi;
-import org.eclipselabs.xdiagram.dsl.XDiagram;
 import org.eclipselabs.xdiagram.interpreter.ExtensionPointIds;
-import org.eclipselabs.xdiagram.interpreter.ProviderException;
 import org.osgi.framework.Bundle;
 
 public class XDiagramImageProvider extends AbstractImageProvider {			

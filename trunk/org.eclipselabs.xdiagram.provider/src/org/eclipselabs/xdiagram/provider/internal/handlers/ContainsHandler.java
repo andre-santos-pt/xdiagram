@@ -2,7 +2,6 @@ package org.eclipselabs.xdiagram.provider.internal.handlers;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -13,15 +12,14 @@ import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
-import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 import org.eclipselabs.xdiagram.dsl.Contains;
-import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.Feature;
+import org.eclipselabs.xdiagram.dsl.FeatureContainer;
+import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
-import com.google.common.collect.Multimaps;
 
 public class ContainsHandler implements FeatureHandler {
 
