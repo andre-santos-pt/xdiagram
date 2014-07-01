@@ -9,13 +9,16 @@ diagram FeatureModel {
 
 node RootFeature "toolName" icon imageId:
 rectangle {
-	size 100 x 40;
+	size 100 x 50;
 	children:
 	label editable {
 		text AbstractFeature.name;
+		position 15,15;
+		foreground blue;
+		//font-size 40;
+		//font-face courier;
 	}
 }
-
 
 
 node Feature:
@@ -28,11 +31,12 @@ invisible {
 	}
 	label {
 		text AbstractFeature.name;
+		position 50, 10;
 	}
 	invisible {
 		size 5 x 5;
 		position 45, 45;
-		anchor incoming Feature.parent;
+		//anchor incoming Feature.parent;
 	}
 	ellipse {
 		size 10 x 10;
@@ -46,15 +50,15 @@ invisible {
 
 link Feature.parent:
 connection free {
-	line-width 2;
+	line-width 3;
 }
 
 link object Constraint 
 source Feature.constraints
 target Constraint.feature:
 connection free {
-	foreground red;
-	line-width 1;
+	foreground blue;
+	line-width 6;
 	line-type dash;
 }
 
