@@ -535,7 +535,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (modelClass=[EClass|QualifiedName] contains+=Contains*)
+	 *     (modelClass=[EClass|QualifiedName] contains+=Contains* figures+=ConnectableElement*)
 	 */
 	protected void sequence_Diagram(EObject context, Diagram semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

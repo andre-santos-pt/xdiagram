@@ -205,13 +205,22 @@ public interface DslPackage extends EPackage
   int DIAGRAM__CONTAINS = 1;
 
   /**
+   * The feature id for the '<em><b>Figures</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIAGRAM__FIGURES = 2;
+
+  /**
    * The number of structural features of the '<em>Diagram</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DIAGRAM_FEATURE_COUNT = 2;
+  int DIAGRAM_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.impl.GroupImpl <em>Group</em>}' class.
@@ -2541,6 +2550,17 @@ public interface DslPackage extends EPackage
   EReference getDiagram_Contains();
 
   /**
+   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.dsl.Diagram#getFigures <em>Figures</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Figures</em>'.
+   * @see org.eclipselabs.xdiagram.dsl.Diagram#getFigures()
+   * @see #getDiagram()
+   * @generated
+   */
+  EReference getDiagram_Figures();
+
+  /**
    * Returns the meta object for class '{@link org.eclipselabs.xdiagram.dsl.Group <em>Group</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3993,6 +4013,14 @@ public interface DslPackage extends EPackage
      * @generated
      */
     EReference DIAGRAM__CONTAINS = eINSTANCE.getDiagram_Contains();
+
+    /**
+     * The meta object literal for the '<em><b>Figures</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIAGRAM__FIGURES = eINSTANCE.getDiagram_Figures();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.xdiagram.dsl.impl.GroupImpl <em>Group</em>}' class.

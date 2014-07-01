@@ -24,108 +24,108 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_PERCENT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'metamodel'", "'import'", "'.'", "'*'", "'diagram'", "'{'", "'}'", "'group'", "'style'", "'extends'", "'if'", "'node'", "':'", "'icon'", "'link'", "'object'", "'source'", "'target'", "'connection'", "'+'", "'decorators:'", "'at'", "'%'", "'middle'", "'anchor'", "';'", "'color'", "','", "'figure'", "'as'", "'children:'", "'rectangle'", "'square'", "'rhombus'", "'ellipse'", "'circle'", "'polygon'", "'polyline'", "'contains'", "'null'", "'label'", "'editable'", "'image'", "'invisible'", "'foreground'", "'background'", "'transparency'", "'size'", "'x'", "'point'", "'position'", "'corner'", "'text'", "'font-face'", "'font-size'", "'font-style'", "'line-type'", "'line-width'", "'free'", "'manhattan'", "'incoming'", "'outgoing'", "'white'", "'silver'", "'gray'", "'black'", "'red'", "'maroon'", "'yellow'", "'olive'", "'lime'", "'green'", "'aqua'", "'teal'", "'blue'", "'navy'", "'fuchsia'", "'purple'", "'vstack'", "'hstack'", "'='", "'<>'", "'true'", "'false'", "'arial'", "'verdana'", "'times'", "'courier'", "'italics'", "'bold'", "'underline'", "'solid'", "'dash'"
     };
-    public static final int RULE_ID=5;
-    public static final int T__29=29;
-    public static final int T__28=28;
-    public static final int T__27=27;
-    public static final int T__26=26;
-    public static final int T__25=25;
-    public static final int T__24=24;
-    public static final int T__23=23;
-    public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=11;
-    public static final int T__21=21;
-    public static final int T__20=20;
-    public static final int RULE_PERCENT=7;
-    public static final int EOF=-1;
-    public static final int T__93=93;
-    public static final int T__19=19;
-    public static final int T__94=94;
-    public static final int T__91=91;
-    public static final int T__92=92;
-    public static final int T__16=16;
-    public static final int T__15=15;
-    public static final int T__90=90;
-    public static final int T__18=18;
-    public static final int T__17=17;
-    public static final int T__12=12;
-    public static final int T__14=14;
-    public static final int T__13=13;
-    public static final int T__99=99;
-    public static final int T__98=98;
-    public static final int T__97=97;
-    public static final int T__96=96;
-    public static final int T__95=95;
-    public static final int T__80=80;
-    public static final int T__81=81;
-    public static final int T__82=82;
-    public static final int T__83=83;
-    public static final int T__85=85;
-    public static final int T__84=84;
-    public static final int T__87=87;
-    public static final int T__86=86;
-    public static final int T__89=89;
-    public static final int T__88=88;
-    public static final int RULE_ML_COMMENT=8;
-    public static final int RULE_STRING=4;
-    public static final int T__71=71;
-    public static final int T__72=72;
-    public static final int T__70=70;
-    public static final int T__76=76;
-    public static final int T__75=75;
-    public static final int T__74=74;
-    public static final int T__73=73;
-    public static final int T__79=79;
-    public static final int T__78=78;
-    public static final int T__77=77;
-    public static final int T__68=68;
-    public static final int T__69=69;
-    public static final int T__66=66;
-    public static final int T__67=67;
-    public static final int T__64=64;
-    public static final int T__65=65;
-    public static final int T__62=62;
-    public static final int T__63=63;
-    public static final int T__61=61;
-    public static final int T__60=60;
+    public static final int T__50=50;
+    public static final int T__59=59;
     public static final int T__55=55;
     public static final int T__56=56;
     public static final int T__57=57;
     public static final int T__58=58;
+    public static final int RULE_PERCENT=7;
     public static final int T__51=51;
     public static final int T__52=52;
     public static final int T__53=53;
     public static final int T__54=54;
-    public static final int T__103=103;
-    public static final int T__59=59;
-    public static final int T__104=104;
+    public static final int T__60=60;
+    public static final int T__61=61;
+    public static final int RULE_ID=5;
     public static final int RULE_INT=6;
-    public static final int T__50=50;
-    public static final int T__42=42;
-    public static final int T__43=43;
-    public static final int T__40=40;
-    public static final int T__41=41;
-    public static final int T__46=46;
-    public static final int T__47=47;
-    public static final int T__44=44;
-    public static final int T__45=45;
-    public static final int T__48=48;
-    public static final int T__49=49;
-    public static final int T__102=102;
-    public static final int T__101=101;
-    public static final int T__100=100;
-    public static final int RULE_SL_COMMENT=9;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int T__32=32;
+    public static final int T__66=66;
+    public static final int RULE_ML_COMMENT=8;
+    public static final int T__67=67;
+    public static final int T__68=68;
+    public static final int T__69=69;
+    public static final int T__62=62;
+    public static final int T__63=63;
+    public static final int T__64=64;
+    public static final int T__65=65;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
     public static final int T__33=33;
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int T__37=37;
-    public static final int T__38=38;
-    public static final int T__39=39;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int T__44=44;
+    public static final int T__45=45;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__40=40;
+    public static final int T__41=41;
+    public static final int T__42=42;
+    public static final int T__43=43;
+    public static final int T__91=91;
+    public static final int T__100=100;
+    public static final int T__92=92;
+    public static final int T__93=93;
+    public static final int T__102=102;
+    public static final int T__94=94;
+    public static final int T__101=101;
+    public static final int T__90=90;
+    public static final int T__19=19;
+    public static final int T__15=15;
+    public static final int T__16=16;
+    public static final int T__17=17;
+    public static final int T__18=18;
+    public static final int T__99=99;
+    public static final int T__12=12;
+    public static final int T__13=13;
+    public static final int T__14=14;
+    public static final int T__95=95;
+    public static final int T__96=96;
+    public static final int T__97=97;
+    public static final int T__98=98;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int T__29=29;
+    public static final int T__22=22;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int T__20=20;
+    public static final int T__21=21;
+    public static final int T__70=70;
+    public static final int T__71=71;
+    public static final int T__72=72;
+    public static final int RULE_STRING=4;
+    public static final int RULE_SL_COMMENT=9;
+    public static final int T__77=77;
+    public static final int T__78=78;
+    public static final int T__79=79;
+    public static final int T__73=73;
+    public static final int EOF=-1;
+    public static final int T__74=74;
+    public static final int T__75=75;
+    public static final int T__76=76;
+    public static final int T__80=80;
+    public static final int T__81=81;
+    public static final int T__82=82;
+    public static final int T__83=83;
     public static final int RULE_WS=10;
+    public static final int RULE_ANY_OTHER=11;
+    public static final int T__88=88;
+    public static final int T__89=89;
+    public static final int T__84=84;
+    public static final int T__104=104;
+    public static final int T__85=85;
+    public static final int T__103=103;
+    public static final int T__86=86;
+    public static final int T__87=87;
 
     // delegates
     // delegators
@@ -989,24 +989,26 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDiagram"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:383:1: ruleDiagram returns [EObject current=null] : (otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* otherlv_4= '}' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:383:1: ruleDiagram returns [EObject current=null] : (otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* ( (lv_figures_4_0= ruleConnectableElement ) )* otherlv_5= '}' ) ;
     public final EObject ruleDiagram() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_2=null;
-        Token otherlv_4=null;
+        Token otherlv_5=null;
         EObject lv_contains_3_0 = null;
+
+        EObject lv_figures_4_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:386:28: ( (otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* otherlv_4= '}' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:387:1: (otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* otherlv_4= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:386:28: ( (otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* ( (lv_figures_4_0= ruleConnectableElement ) )* otherlv_5= '}' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:387:1: (otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* ( (lv_figures_4_0= ruleConnectableElement ) )* otherlv_5= '}' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:387:1: (otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* otherlv_4= '}' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:387:3: otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* otherlv_4= '}'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:387:1: (otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* ( (lv_figures_4_0= ruleConnectableElement ) )* otherlv_5= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:387:3: otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* ( (lv_figures_4_0= ruleConnectableElement ) )* otherlv_5= '}'
             {
             otherlv_0=(Token)match(input,16,FOLLOW_16_in_ruleDiagram778); 
 
@@ -1093,9 +1095,58 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,18,FOLLOW_18_in_ruleDiagram847); 
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:428:3: ( (lv_figures_4_0= ruleConnectableElement ) )*
+            loop7:
+            do {
+                int alt7=2;
+                int LA7_0 = input.LA(1);
 
-                	newLeafNode(otherlv_4, grammarAccess.getDiagramAccess().getRightCurlyBracketKeyword_4());
+                if ( (LA7_0==40||(LA7_0>=43 && LA7_0<=49)||LA7_0==52||(LA7_0>=54 && LA7_0<=55)) ) {
+                    alt7=1;
+                }
+
+
+                switch (alt7) {
+            	case 1 :
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:429:1: (lv_figures_4_0= ruleConnectableElement )
+            	    {
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:429:1: (lv_figures_4_0= ruleConnectableElement )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:430:3: lv_figures_4_0= ruleConnectableElement
+            	    {
+            	     
+            	    	        newCompositeNode(grammarAccess.getDiagramAccess().getFiguresConnectableElementParserRuleCall_4_0()); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleConnectableElement_in_ruleDiagram856);
+            	    lv_figures_4_0=ruleConnectableElement();
+
+            	    state._fsp--;
+
+
+            	    	        if (current==null) {
+            	    	            current = createModelElementForParent(grammarAccess.getDiagramRule());
+            	    	        }
+            	           		add(
+            	           			current, 
+            	           			"figures",
+            	            		lv_figures_4_0, 
+            	            		"ConnectableElement");
+            	    	        afterParserOrEnumRuleCall();
+            	    	    
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop7;
+                }
+            } while (true);
+
+            otherlv_5=(Token)match(input,18,FOLLOW_18_in_ruleDiagram869); 
+
+                	newLeafNode(otherlv_5, grammarAccess.getDiagramAccess().getRightCurlyBracketKeyword_5());
                 
 
             }
@@ -1118,7 +1169,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGroup"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:440:1: entryRuleGroup returns [EObject current=null] : iv_ruleGroup= ruleGroup EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:458:1: entryRuleGroup returns [EObject current=null] : iv_ruleGroup= ruleGroup EOF ;
     public final EObject entryRuleGroup() throws RecognitionException {
         EObject current = null;
 
@@ -1126,17 +1177,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:441:2: (iv_ruleGroup= ruleGroup EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:442:2: iv_ruleGroup= ruleGroup EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:459:2: (iv_ruleGroup= ruleGroup EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:460:2: iv_ruleGroup= ruleGroup EOF
             {
              newCompositeNode(grammarAccess.getGroupRule()); 
-            pushFollow(FOLLOW_ruleGroup_in_entryRuleGroup883);
+            pushFollow(FOLLOW_ruleGroup_in_entryRuleGroup905);
             iv_ruleGroup=ruleGroup();
 
             state._fsp--;
 
              current =iv_ruleGroup; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleGroup893); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleGroup915); 
 
             }
 
@@ -1154,7 +1205,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGroup"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:449:1: ruleGroup returns [EObject current=null] : (otherlv_0= 'group' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:467:1: ruleGroup returns [EObject current=null] : (otherlv_0= 'group' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleGroup() throws RecognitionException {
         EObject current = null;
 
@@ -1164,23 +1215,23 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:452:28: ( (otherlv_0= 'group' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:453:1: (otherlv_0= 'group' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:470:28: ( (otherlv_0= 'group' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:471:1: (otherlv_0= 'group' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:453:1: (otherlv_0= 'group' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:453:3: otherlv_0= 'group' ( (lv_name_1_0= RULE_ID ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:471:1: (otherlv_0= 'group' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:471:3: otherlv_0= 'group' ( (lv_name_1_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleGroup930); 
+            otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleGroup952); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getGroupAccess().getGroupKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:457:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:458:1: (lv_name_1_0= RULE_ID )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:475:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:476:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:458:1: (lv_name_1_0= RULE_ID )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:459:3: lv_name_1_0= RULE_ID
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:476:1: (lv_name_1_0= RULE_ID )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:477:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleGroup947); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleGroup969); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getGroupAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -1221,7 +1272,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDiagramElement"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:483:1: entryRuleDiagramElement returns [EObject current=null] : iv_ruleDiagramElement= ruleDiagramElement EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:501:1: entryRuleDiagramElement returns [EObject current=null] : iv_ruleDiagramElement= ruleDiagramElement EOF ;
     public final EObject entryRuleDiagramElement() throws RecognitionException {
         EObject current = null;
 
@@ -1229,17 +1280,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:484:2: (iv_ruleDiagramElement= ruleDiagramElement EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:485:2: iv_ruleDiagramElement= ruleDiagramElement EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:502:2: (iv_ruleDiagramElement= ruleDiagramElement EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:503:2: iv_ruleDiagramElement= ruleDiagramElement EOF
             {
              newCompositeNode(grammarAccess.getDiagramElementRule()); 
-            pushFollow(FOLLOW_ruleDiagramElement_in_entryRuleDiagramElement988);
+            pushFollow(FOLLOW_ruleDiagramElement_in_entryRuleDiagramElement1010);
             iv_ruleDiagramElement=ruleDiagramElement();
 
             state._fsp--;
 
              current =iv_ruleDiagramElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDiagramElement998); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDiagramElement1020); 
 
             }
 
@@ -1257,7 +1308,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDiagramElement"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:492:1: ruleDiagramElement returns [EObject current=null] : (this_Node_0= ruleNode | this_Link_1= ruleLink ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:510:1: ruleDiagramElement returns [EObject current=null] : (this_Node_0= ruleNode | this_Link_1= ruleLink ) ;
     public final EObject ruleDiagramElement() throws RecognitionException {
         EObject current = null;
 
@@ -1269,33 +1320,33 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:495:28: ( (this_Node_0= ruleNode | this_Link_1= ruleLink ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:496:1: (this_Node_0= ruleNode | this_Link_1= ruleLink )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:513:28: ( (this_Node_0= ruleNode | this_Link_1= ruleLink ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:514:1: (this_Node_0= ruleNode | this_Link_1= ruleLink )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:496:1: (this_Node_0= ruleNode | this_Link_1= ruleLink )
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:514:1: (this_Node_0= ruleNode | this_Link_1= ruleLink )
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA7_0==23) ) {
-                alt7=1;
+            if ( (LA8_0==23) ) {
+                alt8=1;
             }
-            else if ( (LA7_0==26) ) {
-                alt7=2;
+            else if ( (LA8_0==26) ) {
+                alt8=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 7, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
-            switch (alt7) {
+            switch (alt8) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:497:5: this_Node_0= ruleNode
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:515:5: this_Node_0= ruleNode
                     {
                      
                             newCompositeNode(grammarAccess.getDiagramElementAccess().getNodeParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleNode_in_ruleDiagramElement1045);
+                    pushFollow(FOLLOW_ruleNode_in_ruleDiagramElement1067);
                     this_Node_0=ruleNode();
 
                     state._fsp--;
@@ -1308,12 +1359,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:507:5: this_Link_1= ruleLink
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:525:5: this_Link_1= ruleLink
                     {
                      
                             newCompositeNode(grammarAccess.getDiagramElementAccess().getLinkParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleLink_in_ruleDiagramElement1072);
+                    pushFollow(FOLLOW_ruleLink_in_ruleDiagramElement1094);
                     this_Link_1=ruleLink();
 
                     state._fsp--;
@@ -1346,7 +1397,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStyle"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:523:1: entryRuleStyle returns [EObject current=null] : iv_ruleStyle= ruleStyle EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:541:1: entryRuleStyle returns [EObject current=null] : iv_ruleStyle= ruleStyle EOF ;
     public final EObject entryRuleStyle() throws RecognitionException {
         EObject current = null;
 
@@ -1354,17 +1405,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:524:2: (iv_ruleStyle= ruleStyle EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:525:2: iv_ruleStyle= ruleStyle EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:542:2: (iv_ruleStyle= ruleStyle EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:543:2: iv_ruleStyle= ruleStyle EOF
             {
              newCompositeNode(grammarAccess.getStyleRule()); 
-            pushFollow(FOLLOW_ruleStyle_in_entryRuleStyle1107);
+            pushFollow(FOLLOW_ruleStyle_in_entryRuleStyle1129);
             iv_ruleStyle=ruleStyle();
 
             state._fsp--;
 
              current =iv_ruleStyle; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStyle1117); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStyle1139); 
 
             }
 
@@ -1382,7 +1433,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStyle"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:532:1: ruleStyle returns [EObject current=null] : (otherlv_0= 'style' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= 'extends' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleStyleFeature ) )* otherlv_6= '}' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:550:1: ruleStyle returns [EObject current=null] : (otherlv_0= 'style' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= 'extends' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleStyleFeature ) )* otherlv_6= '}' ) ;
     public final EObject ruleStyle() throws RecognitionException {
         EObject current = null;
 
@@ -1398,23 +1449,23 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:535:28: ( (otherlv_0= 'style' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= 'extends' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleStyleFeature ) )* otherlv_6= '}' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:536:1: (otherlv_0= 'style' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= 'extends' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleStyleFeature ) )* otherlv_6= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:553:28: ( (otherlv_0= 'style' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= 'extends' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleStyleFeature ) )* otherlv_6= '}' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:554:1: (otherlv_0= 'style' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= 'extends' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleStyleFeature ) )* otherlv_6= '}' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:536:1: (otherlv_0= 'style' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= 'extends' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleStyleFeature ) )* otherlv_6= '}' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:536:3: otherlv_0= 'style' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= 'extends' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleStyleFeature ) )* otherlv_6= '}'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:554:1: (otherlv_0= 'style' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= 'extends' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleStyleFeature ) )* otherlv_6= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:554:3: otherlv_0= 'style' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= 'extends' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleStyleFeature ) )* otherlv_6= '}'
             {
-            otherlv_0=(Token)match(input,20,FOLLOW_20_in_ruleStyle1154); 
+            otherlv_0=(Token)match(input,20,FOLLOW_20_in_ruleStyle1176); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getStyleAccess().getStyleKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:540:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:541:1: (lv_name_1_0= RULE_ID )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:558:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:559:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:541:1: (lv_name_1_0= RULE_ID )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:542:3: lv_name_1_0= RULE_ID
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:559:1: (lv_name_1_0= RULE_ID )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:560:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleStyle1171); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleStyle1193); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getStyleAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -1434,24 +1485,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:558:2: ( ( (lv_styled_2_0= 'extends' ) ) ( (otherlv_3= RULE_ID ) ) )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:576:2: ( ( (lv_styled_2_0= 'extends' ) ) ( (otherlv_3= RULE_ID ) ) )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( (LA8_0==21) ) {
-                alt8=1;
+            if ( (LA9_0==21) ) {
+                alt9=1;
             }
-            switch (alt8) {
+            switch (alt9) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:558:3: ( (lv_styled_2_0= 'extends' ) ) ( (otherlv_3= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:576:3: ( (lv_styled_2_0= 'extends' ) ) ( (otherlv_3= RULE_ID ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:558:3: ( (lv_styled_2_0= 'extends' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:559:1: (lv_styled_2_0= 'extends' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:576:3: ( (lv_styled_2_0= 'extends' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:577:1: (lv_styled_2_0= 'extends' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:559:1: (lv_styled_2_0= 'extends' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:560:3: lv_styled_2_0= 'extends'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:577:1: (lv_styled_2_0= 'extends' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:578:3: lv_styled_2_0= 'extends'
                     {
-                    lv_styled_2_0=(Token)match(input,21,FOLLOW_21_in_ruleStyle1195); 
+                    lv_styled_2_0=(Token)match(input,21,FOLLOW_21_in_ruleStyle1217); 
 
                             newLeafNode(lv_styled_2_0, grammarAccess.getStyleAccess().getStyledExtendsKeyword_2_0_0());
                         
@@ -1467,18 +1518,18 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:573:2: ( (otherlv_3= RULE_ID ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:574:1: (otherlv_3= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:591:2: ( (otherlv_3= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:592:1: (otherlv_3= RULE_ID )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:574:1: (otherlv_3= RULE_ID )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:575:3: otherlv_3= RULE_ID
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:592:1: (otherlv_3= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:593:3: otherlv_3= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getStyleRule());
                     	        }
                             
-                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleStyle1228); 
+                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleStyle1250); 
 
                     		newLeafNode(otherlv_3, grammarAccess.getStyleAccess().getStyleStyleCrossReference_2_1_0()); 
                     	
@@ -1494,32 +1545,32 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleStyle1242); 
+            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleStyle1264); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getStyleAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:590:1: ( (lv_features_5_0= ruleStyleFeature ) )*
-            loop9:
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:608:1: ( (lv_features_5_0= ruleStyleFeature ) )*
+            loop10:
             do {
-                int alt9=2;
-                int LA9_0 = input.LA(1);
+                int alt10=2;
+                int LA10_0 = input.LA(1);
 
-                if ( ((LA9_0>=56 && LA9_0<=59)||(LA9_0>=61 && LA9_0<=69)) ) {
-                    alt9=1;
+                if ( ((LA10_0>=56 && LA10_0<=59)||(LA10_0>=61 && LA10_0<=69)) ) {
+                    alt10=1;
                 }
 
 
-                switch (alt9) {
+                switch (alt10) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:591:1: (lv_features_5_0= ruleStyleFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:609:1: (lv_features_5_0= ruleStyleFeature )
             	    {
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:591:1: (lv_features_5_0= ruleStyleFeature )
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:592:3: lv_features_5_0= ruleStyleFeature
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:609:1: (lv_features_5_0= ruleStyleFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:610:3: lv_features_5_0= ruleStyleFeature
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getStyleAccess().getFeaturesStyleFeatureParserRuleCall_4_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleStyleFeature_in_ruleStyle1263);
+            	    pushFollow(FOLLOW_ruleStyleFeature_in_ruleStyle1285);
             	    lv_features_5_0=ruleStyleFeature();
 
             	    state._fsp--;
@@ -1543,11 +1594,11 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop9;
+            	    break loop10;
                 }
             } while (true);
 
-            otherlv_6=(Token)match(input,18,FOLLOW_18_in_ruleStyle1276); 
+            otherlv_6=(Token)match(input,18,FOLLOW_18_in_ruleStyle1298); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getStyleAccess().getRightCurlyBracketKeyword_5());
                 
@@ -1572,7 +1623,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLinkedFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:622:1: entryRuleLinkedFeature returns [EObject current=null] : iv_ruleLinkedFeature= ruleLinkedFeature EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:640:1: entryRuleLinkedFeature returns [EObject current=null] : iv_ruleLinkedFeature= ruleLinkedFeature EOF ;
     public final EObject entryRuleLinkedFeature() throws RecognitionException {
         EObject current = null;
 
@@ -1580,17 +1631,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:623:2: (iv_ruleLinkedFeature= ruleLinkedFeature EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:624:2: iv_ruleLinkedFeature= ruleLinkedFeature EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:641:2: (iv_ruleLinkedFeature= ruleLinkedFeature EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:642:2: iv_ruleLinkedFeature= ruleLinkedFeature EOF
             {
              newCompositeNode(grammarAccess.getLinkedFeatureRule()); 
-            pushFollow(FOLLOW_ruleLinkedFeature_in_entryRuleLinkedFeature1314);
+            pushFollow(FOLLOW_ruleLinkedFeature_in_entryRuleLinkedFeature1336);
             iv_ruleLinkedFeature=ruleLinkedFeature();
 
             state._fsp--;
 
              current =iv_ruleLinkedFeature; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLinkedFeature1324); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLinkedFeature1346); 
 
             }
 
@@ -1608,7 +1659,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLinkedFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:631:1: ruleLinkedFeature returns [EObject current=null] : (this_Contains_0= ruleContains | this_Anchor_1= ruleAnchor ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:649:1: ruleLinkedFeature returns [EObject current=null] : (this_Contains_0= ruleContains | this_Anchor_1= ruleAnchor ) ;
     public final EObject ruleLinkedFeature() throws RecognitionException {
         EObject current = null;
 
@@ -1620,33 +1671,33 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:634:28: ( (this_Contains_0= ruleContains | this_Anchor_1= ruleAnchor ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:635:1: (this_Contains_0= ruleContains | this_Anchor_1= ruleAnchor )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:652:28: ( (this_Contains_0= ruleContains | this_Anchor_1= ruleAnchor ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:653:1: (this_Contains_0= ruleContains | this_Anchor_1= ruleAnchor )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:635:1: (this_Contains_0= ruleContains | this_Anchor_1= ruleAnchor )
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:653:1: (this_Contains_0= ruleContains | this_Anchor_1= ruleAnchor )
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA10_0==50) ) {
-                alt10=1;
+            if ( (LA11_0==50) ) {
+                alt11=1;
             }
-            else if ( (LA10_0==36) ) {
-                alt10=2;
+            else if ( (LA11_0==36) ) {
+                alt11=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 10, 0, input);
+                    new NoViableAltException("", 11, 0, input);
 
                 throw nvae;
             }
-            switch (alt10) {
+            switch (alt11) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:636:5: this_Contains_0= ruleContains
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:654:5: this_Contains_0= ruleContains
                     {
                      
                             newCompositeNode(grammarAccess.getLinkedFeatureAccess().getContainsParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleContains_in_ruleLinkedFeature1371);
+                    pushFollow(FOLLOW_ruleContains_in_ruleLinkedFeature1393);
                     this_Contains_0=ruleContains();
 
                     state._fsp--;
@@ -1659,12 +1710,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:646:5: this_Anchor_1= ruleAnchor
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:664:5: this_Anchor_1= ruleAnchor
                     {
                      
                             newCompositeNode(grammarAccess.getLinkedFeatureAccess().getAnchorParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleAnchor_in_ruleLinkedFeature1398);
+                    pushFollow(FOLLOW_ruleAnchor_in_ruleLinkedFeature1420);
                     this_Anchor_1=ruleAnchor();
 
                     state._fsp--;
@@ -1697,7 +1748,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStyleFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:662:1: entryRuleStyleFeature returns [EObject current=null] : iv_ruleStyleFeature= ruleStyleFeature EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:680:1: entryRuleStyleFeature returns [EObject current=null] : iv_ruleStyleFeature= ruleStyleFeature EOF ;
     public final EObject entryRuleStyleFeature() throws RecognitionException {
         EObject current = null;
 
@@ -1705,17 +1756,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:663:2: (iv_ruleStyleFeature= ruleStyleFeature EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:664:2: iv_ruleStyleFeature= ruleStyleFeature EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:681:2: (iv_ruleStyleFeature= ruleStyleFeature EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:682:2: iv_ruleStyleFeature= ruleStyleFeature EOF
             {
              newCompositeNode(grammarAccess.getStyleFeatureRule()); 
-            pushFollow(FOLLOW_ruleStyleFeature_in_entryRuleStyleFeature1433);
+            pushFollow(FOLLOW_ruleStyleFeature_in_entryRuleStyleFeature1455);
             iv_ruleStyleFeature=ruleStyleFeature();
 
             state._fsp--;
 
              current =iv_ruleStyleFeature; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStyleFeature1443); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStyleFeature1465); 
 
             }
 
@@ -1733,7 +1784,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStyleFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:671:1: ruleStyleFeature returns [EObject current=null] : (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Point_2= rulePoint | this_Corner_3= ruleCorner | this_Background_4= ruleBackground | this_Foreground_5= ruleForeground | this_Transparency_6= ruleTransparency | this_FontFace_7= ruleFontFace | this_FontSize_8= ruleFontSize | this_FontStyle_9= ruleFontStyle | this_TextValue_10= ruleTextValue | this_LineStyle_11= ruleLineStyle | this_LineWidth_12= ruleLineWidth ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:689:1: ruleStyleFeature returns [EObject current=null] : (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Point_2= rulePoint | this_Corner_3= ruleCorner | this_Background_4= ruleBackground | this_Foreground_5= ruleForeground | this_Transparency_6= ruleTransparency | this_FontFace_7= ruleFontFace | this_FontSize_8= ruleFontSize | this_FontStyle_9= ruleFontStyle | this_TextValue_10= ruleTextValue | this_LineStyle_11= ruleLineStyle | this_LineWidth_12= ruleLineWidth ) ;
     public final EObject ruleStyleFeature() throws RecognitionException {
         EObject current = null;
 
@@ -1767,92 +1818,92 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:674:28: ( (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Point_2= rulePoint | this_Corner_3= ruleCorner | this_Background_4= ruleBackground | this_Foreground_5= ruleForeground | this_Transparency_6= ruleTransparency | this_FontFace_7= ruleFontFace | this_FontSize_8= ruleFontSize | this_FontStyle_9= ruleFontStyle | this_TextValue_10= ruleTextValue | this_LineStyle_11= ruleLineStyle | this_LineWidth_12= ruleLineWidth ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:675:1: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Point_2= rulePoint | this_Corner_3= ruleCorner | this_Background_4= ruleBackground | this_Foreground_5= ruleForeground | this_Transparency_6= ruleTransparency | this_FontFace_7= ruleFontFace | this_FontSize_8= ruleFontSize | this_FontStyle_9= ruleFontStyle | this_TextValue_10= ruleTextValue | this_LineStyle_11= ruleLineStyle | this_LineWidth_12= ruleLineWidth )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:692:28: ( (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Point_2= rulePoint | this_Corner_3= ruleCorner | this_Background_4= ruleBackground | this_Foreground_5= ruleForeground | this_Transparency_6= ruleTransparency | this_FontFace_7= ruleFontFace | this_FontSize_8= ruleFontSize | this_FontStyle_9= ruleFontStyle | this_TextValue_10= ruleTextValue | this_LineStyle_11= ruleLineStyle | this_LineWidth_12= ruleLineWidth ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:693:1: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Point_2= rulePoint | this_Corner_3= ruleCorner | this_Background_4= ruleBackground | this_Foreground_5= ruleForeground | this_Transparency_6= ruleTransparency | this_FontFace_7= ruleFontFace | this_FontSize_8= ruleFontSize | this_FontStyle_9= ruleFontStyle | this_TextValue_10= ruleTextValue | this_LineStyle_11= ruleLineStyle | this_LineWidth_12= ruleLineWidth )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:675:1: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Point_2= rulePoint | this_Corner_3= ruleCorner | this_Background_4= ruleBackground | this_Foreground_5= ruleForeground | this_Transparency_6= ruleTransparency | this_FontFace_7= ruleFontFace | this_FontSize_8= ruleFontSize | this_FontStyle_9= ruleFontStyle | this_TextValue_10= ruleTextValue | this_LineStyle_11= ruleLineStyle | this_LineWidth_12= ruleLineWidth )
-            int alt11=13;
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:693:1: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Point_2= rulePoint | this_Corner_3= ruleCorner | this_Background_4= ruleBackground | this_Foreground_5= ruleForeground | this_Transparency_6= ruleTransparency | this_FontFace_7= ruleFontFace | this_FontSize_8= ruleFontSize | this_FontStyle_9= ruleFontStyle | this_TextValue_10= ruleTextValue | this_LineStyle_11= ruleLineStyle | this_LineWidth_12= ruleLineWidth )
+            int alt12=13;
             switch ( input.LA(1) ) {
             case 59:
                 {
-                alt11=1;
+                alt12=1;
                 }
                 break;
             case 62:
                 {
-                alt11=2;
+                alt12=2;
                 }
                 break;
             case 61:
                 {
-                alt11=3;
+                alt12=3;
                 }
                 break;
             case 63:
                 {
-                alt11=4;
+                alt12=4;
                 }
                 break;
             case 57:
                 {
-                alt11=5;
+                alt12=5;
                 }
                 break;
             case 56:
                 {
-                alt11=6;
+                alt12=6;
                 }
                 break;
             case 58:
                 {
-                alt11=7;
+                alt12=7;
                 }
                 break;
             case 65:
                 {
-                alt11=8;
+                alt12=8;
                 }
                 break;
             case 66:
                 {
-                alt11=9;
+                alt12=9;
                 }
                 break;
             case 67:
                 {
-                alt11=10;
+                alt12=10;
                 }
                 break;
             case 64:
                 {
-                alt11=11;
+                alt12=11;
                 }
                 break;
             case 68:
                 {
-                alt11=12;
+                alt12=12;
                 }
                 break;
             case 69:
                 {
-                alt11=13;
+                alt12=13;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 11, 0, input);
+                    new NoViableAltException("", 12, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt11) {
+            switch (alt12) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:676:5: this_Size_0= ruleSize
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:694:5: this_Size_0= ruleSize
                     {
                      
                             newCompositeNode(grammarAccess.getStyleFeatureAccess().getSizeParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleSize_in_ruleStyleFeature1490);
+                    pushFollow(FOLLOW_ruleSize_in_ruleStyleFeature1512);
                     this_Size_0=ruleSize();
 
                     state._fsp--;
@@ -1865,12 +1916,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:686:5: this_Position_1= rulePosition
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:704:5: this_Position_1= rulePosition
                     {
                      
                             newCompositeNode(grammarAccess.getStyleFeatureAccess().getPositionParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_rulePosition_in_ruleStyleFeature1517);
+                    pushFollow(FOLLOW_rulePosition_in_ruleStyleFeature1539);
                     this_Position_1=rulePosition();
 
                     state._fsp--;
@@ -1883,12 +1934,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:696:5: this_Point_2= rulePoint
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:714:5: this_Point_2= rulePoint
                     {
                      
                             newCompositeNode(grammarAccess.getStyleFeatureAccess().getPointParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_rulePoint_in_ruleStyleFeature1544);
+                    pushFollow(FOLLOW_rulePoint_in_ruleStyleFeature1566);
                     this_Point_2=rulePoint();
 
                     state._fsp--;
@@ -1901,12 +1952,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:706:5: this_Corner_3= ruleCorner
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:724:5: this_Corner_3= ruleCorner
                     {
                      
                             newCompositeNode(grammarAccess.getStyleFeatureAccess().getCornerParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleCorner_in_ruleStyleFeature1571);
+                    pushFollow(FOLLOW_ruleCorner_in_ruleStyleFeature1593);
                     this_Corner_3=ruleCorner();
 
                     state._fsp--;
@@ -1919,12 +1970,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:716:5: this_Background_4= ruleBackground
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:734:5: this_Background_4= ruleBackground
                     {
                      
                             newCompositeNode(grammarAccess.getStyleFeatureAccess().getBackgroundParserRuleCall_4()); 
                         
-                    pushFollow(FOLLOW_ruleBackground_in_ruleStyleFeature1598);
+                    pushFollow(FOLLOW_ruleBackground_in_ruleStyleFeature1620);
                     this_Background_4=ruleBackground();
 
                     state._fsp--;
@@ -1937,12 +1988,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:726:5: this_Foreground_5= ruleForeground
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:744:5: this_Foreground_5= ruleForeground
                     {
                      
                             newCompositeNode(grammarAccess.getStyleFeatureAccess().getForegroundParserRuleCall_5()); 
                         
-                    pushFollow(FOLLOW_ruleForeground_in_ruleStyleFeature1625);
+                    pushFollow(FOLLOW_ruleForeground_in_ruleStyleFeature1647);
                     this_Foreground_5=ruleForeground();
 
                     state._fsp--;
@@ -1955,12 +2006,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:736:5: this_Transparency_6= ruleTransparency
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:754:5: this_Transparency_6= ruleTransparency
                     {
                      
                             newCompositeNode(grammarAccess.getStyleFeatureAccess().getTransparencyParserRuleCall_6()); 
                         
-                    pushFollow(FOLLOW_ruleTransparency_in_ruleStyleFeature1652);
+                    pushFollow(FOLLOW_ruleTransparency_in_ruleStyleFeature1674);
                     this_Transparency_6=ruleTransparency();
 
                     state._fsp--;
@@ -1973,12 +2024,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:746:5: this_FontFace_7= ruleFontFace
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:764:5: this_FontFace_7= ruleFontFace
                     {
                      
                             newCompositeNode(grammarAccess.getStyleFeatureAccess().getFontFaceParserRuleCall_7()); 
                         
-                    pushFollow(FOLLOW_ruleFontFace_in_ruleStyleFeature1679);
+                    pushFollow(FOLLOW_ruleFontFace_in_ruleStyleFeature1701);
                     this_FontFace_7=ruleFontFace();
 
                     state._fsp--;
@@ -1991,12 +2042,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:756:5: this_FontSize_8= ruleFontSize
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:774:5: this_FontSize_8= ruleFontSize
                     {
                      
                             newCompositeNode(grammarAccess.getStyleFeatureAccess().getFontSizeParserRuleCall_8()); 
                         
-                    pushFollow(FOLLOW_ruleFontSize_in_ruleStyleFeature1706);
+                    pushFollow(FOLLOW_ruleFontSize_in_ruleStyleFeature1728);
                     this_FontSize_8=ruleFontSize();
 
                     state._fsp--;
@@ -2009,12 +2060,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:766:5: this_FontStyle_9= ruleFontStyle
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:784:5: this_FontStyle_9= ruleFontStyle
                     {
                      
                             newCompositeNode(grammarAccess.getStyleFeatureAccess().getFontStyleParserRuleCall_9()); 
                         
-                    pushFollow(FOLLOW_ruleFontStyle_in_ruleStyleFeature1733);
+                    pushFollow(FOLLOW_ruleFontStyle_in_ruleStyleFeature1755);
                     this_FontStyle_9=ruleFontStyle();
 
                     state._fsp--;
@@ -2027,12 +2078,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:776:5: this_TextValue_10= ruleTextValue
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:794:5: this_TextValue_10= ruleTextValue
                     {
                      
                             newCompositeNode(grammarAccess.getStyleFeatureAccess().getTextValueParserRuleCall_10()); 
                         
-                    pushFollow(FOLLOW_ruleTextValue_in_ruleStyleFeature1760);
+                    pushFollow(FOLLOW_ruleTextValue_in_ruleStyleFeature1782);
                     this_TextValue_10=ruleTextValue();
 
                     state._fsp--;
@@ -2045,12 +2096,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:786:5: this_LineStyle_11= ruleLineStyle
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:804:5: this_LineStyle_11= ruleLineStyle
                     {
                      
                             newCompositeNode(grammarAccess.getStyleFeatureAccess().getLineStyleParserRuleCall_11()); 
                         
-                    pushFollow(FOLLOW_ruleLineStyle_in_ruleStyleFeature1787);
+                    pushFollow(FOLLOW_ruleLineStyle_in_ruleStyleFeature1809);
                     this_LineStyle_11=ruleLineStyle();
 
                     state._fsp--;
@@ -2063,12 +2114,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:796:5: this_LineWidth_12= ruleLineWidth
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:814:5: this_LineWidth_12= ruleLineWidth
                     {
                      
                             newCompositeNode(grammarAccess.getStyleFeatureAccess().getLineWidthParserRuleCall_12()); 
                         
-                    pushFollow(FOLLOW_ruleLineWidth_in_ruleStyleFeature1814);
+                    pushFollow(FOLLOW_ruleLineWidth_in_ruleStyleFeature1836);
                     this_LineWidth_12=ruleLineWidth();
 
                     state._fsp--;
@@ -2101,7 +2152,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFeatureConditional"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:814:1: entryRuleFeatureConditional returns [EObject current=null] : iv_ruleFeatureConditional= ruleFeatureConditional EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:832:1: entryRuleFeatureConditional returns [EObject current=null] : iv_ruleFeatureConditional= ruleFeatureConditional EOF ;
     public final EObject entryRuleFeatureConditional() throws RecognitionException {
         EObject current = null;
 
@@ -2109,17 +2160,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:815:2: (iv_ruleFeatureConditional= ruleFeatureConditional EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:816:2: iv_ruleFeatureConditional= ruleFeatureConditional EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:833:2: (iv_ruleFeatureConditional= ruleFeatureConditional EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:834:2: iv_ruleFeatureConditional= ruleFeatureConditional EOF
             {
              newCompositeNode(grammarAccess.getFeatureConditionalRule()); 
-            pushFollow(FOLLOW_ruleFeatureConditional_in_entryRuleFeatureConditional1851);
+            pushFollow(FOLLOW_ruleFeatureConditional_in_entryRuleFeatureConditional1873);
             iv_ruleFeatureConditional=ruleFeatureConditional();
 
             state._fsp--;
 
              current =iv_ruleFeatureConditional; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFeatureConditional1861); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFeatureConditional1883); 
 
             }
 
@@ -2137,7 +2188,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFeatureConditional"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:823:1: ruleFeatureConditional returns [EObject current=null] : (otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:841:1: ruleFeatureConditional returns [EObject current=null] : (otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) ) ) ;
     public final EObject ruleFeatureConditional() throws RecognitionException {
         EObject current = null;
 
@@ -2150,21 +2201,21 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:826:28: ( (otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:827:1: (otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:844:28: ( (otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:845:1: (otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:827:1: (otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:827:3: otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:845:1: (otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:845:3: otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) )
             {
-            otherlv_0=(Token)match(input,22,FOLLOW_22_in_ruleFeatureConditional1898); 
+            otherlv_0=(Token)match(input,22,FOLLOW_22_in_ruleFeatureConditional1920); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getFeatureConditionalAccess().getIfKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:831:1: ( ( ruleQualifiedName ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:832:1: ( ruleQualifiedName )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:849:1: ( ( ruleQualifiedName ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:850:1: ( ruleQualifiedName )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:832:1: ( ruleQualifiedName )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:833:3: ruleQualifiedName
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:850:1: ( ruleQualifiedName )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:851:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -2174,7 +2225,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getFeatureConditionalAccess().getModelAttributeEAttributeCrossReference_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleFeatureConditional1921);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleFeatureConditional1943);
             ruleQualifiedName();
 
             state._fsp--;
@@ -2188,16 +2239,16 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:846:2: ( (lv_operator_2_0= ruleOperator ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:847:1: (lv_operator_2_0= ruleOperator )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:864:2: ( (lv_operator_2_0= ruleOperator ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:865:1: (lv_operator_2_0= ruleOperator )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:847:1: (lv_operator_2_0= ruleOperator )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:848:3: lv_operator_2_0= ruleOperator
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:865:1: (lv_operator_2_0= ruleOperator )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:866:3: lv_operator_2_0= ruleOperator
             {
              
             	        newCompositeNode(grammarAccess.getFeatureConditionalAccess().getOperatorOperatorEnumRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleOperator_in_ruleFeatureConditional1942);
+            pushFollow(FOLLOW_ruleOperator_in_ruleFeatureConditional1964);
             lv_operator_2_0=ruleOperator();
 
             state._fsp--;
@@ -2219,16 +2270,16 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:864:2: ( (lv_value_3_0= ruleValue ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:865:1: (lv_value_3_0= ruleValue )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:882:2: ( (lv_value_3_0= ruleValue ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:883:1: (lv_value_3_0= ruleValue )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:865:1: (lv_value_3_0= ruleValue )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:866:3: lv_value_3_0= ruleValue
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:883:1: (lv_value_3_0= ruleValue )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:884:3: lv_value_3_0= ruleValue
             {
              
             	        newCompositeNode(grammarAccess.getFeatureConditionalAccess().getValueValueParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleValue_in_ruleFeatureConditional1963);
+            pushFollow(FOLLOW_ruleValue_in_ruleFeatureConditional1985);
             lv_value_3_0=ruleValue();
 
             state._fsp--;
@@ -2271,7 +2322,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNode"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:890:1: entryRuleNode returns [EObject current=null] : iv_ruleNode= ruleNode EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:908:1: entryRuleNode returns [EObject current=null] : iv_ruleNode= ruleNode EOF ;
     public final EObject entryRuleNode() throws RecognitionException {
         EObject current = null;
 
@@ -2279,17 +2330,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:891:2: (iv_ruleNode= ruleNode EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:892:2: iv_ruleNode= ruleNode EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:909:2: (iv_ruleNode= ruleNode EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:910:2: iv_ruleNode= ruleNode EOF
             {
              newCompositeNode(grammarAccess.getNodeRule()); 
-            pushFollow(FOLLOW_ruleNode_in_entryRuleNode1999);
+            pushFollow(FOLLOW_ruleNode_in_entryRuleNode2021);
             iv_ruleNode=ruleNode();
 
             state._fsp--;
 
              current =iv_ruleNode; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNode2009); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNode2031); 
 
             }
 
@@ -2307,7 +2358,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNode"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:899:1: ruleNode returns [EObject current=null] : (otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( ( (lv_toolName_2_0= RULE_STRING ) ) (otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) )? )? (otherlv_5= 'icon' ( (lv_imageId_6_0= RULE_ID ) ) )? otherlv_7= ':' ( (lv_rootFigure_8_0= ruleConnectableElement ) ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:917:1: ruleNode returns [EObject current=null] : (otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( ( (lv_toolName_2_0= RULE_STRING ) ) (otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) )? )? (otherlv_5= 'icon' ( (lv_imageId_6_0= RULE_ID ) ) )? otherlv_7= ':' ( (lv_rootFigure_8_0= ruleConnectableElement ) ) ) ;
     public final EObject ruleNode() throws RecognitionException {
         EObject current = null;
 
@@ -2324,21 +2375,21 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:902:28: ( (otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( ( (lv_toolName_2_0= RULE_STRING ) ) (otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) )? )? (otherlv_5= 'icon' ( (lv_imageId_6_0= RULE_ID ) ) )? otherlv_7= ':' ( (lv_rootFigure_8_0= ruleConnectableElement ) ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:903:1: (otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( ( (lv_toolName_2_0= RULE_STRING ) ) (otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) )? )? (otherlv_5= 'icon' ( (lv_imageId_6_0= RULE_ID ) ) )? otherlv_7= ':' ( (lv_rootFigure_8_0= ruleConnectableElement ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:920:28: ( (otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( ( (lv_toolName_2_0= RULE_STRING ) ) (otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) )? )? (otherlv_5= 'icon' ( (lv_imageId_6_0= RULE_ID ) ) )? otherlv_7= ':' ( (lv_rootFigure_8_0= ruleConnectableElement ) ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:921:1: (otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( ( (lv_toolName_2_0= RULE_STRING ) ) (otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) )? )? (otherlv_5= 'icon' ( (lv_imageId_6_0= RULE_ID ) ) )? otherlv_7= ':' ( (lv_rootFigure_8_0= ruleConnectableElement ) ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:903:1: (otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( ( (lv_toolName_2_0= RULE_STRING ) ) (otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) )? )? (otherlv_5= 'icon' ( (lv_imageId_6_0= RULE_ID ) ) )? otherlv_7= ':' ( (lv_rootFigure_8_0= ruleConnectableElement ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:903:3: otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( ( (lv_toolName_2_0= RULE_STRING ) ) (otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) )? )? (otherlv_5= 'icon' ( (lv_imageId_6_0= RULE_ID ) ) )? otherlv_7= ':' ( (lv_rootFigure_8_0= ruleConnectableElement ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:921:1: (otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( ( (lv_toolName_2_0= RULE_STRING ) ) (otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) )? )? (otherlv_5= 'icon' ( (lv_imageId_6_0= RULE_ID ) ) )? otherlv_7= ':' ( (lv_rootFigure_8_0= ruleConnectableElement ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:921:3: otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( ( (lv_toolName_2_0= RULE_STRING ) ) (otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) )? )? (otherlv_5= 'icon' ( (lv_imageId_6_0= RULE_ID ) ) )? otherlv_7= ':' ( (lv_rootFigure_8_0= ruleConnectableElement ) )
             {
-            otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleNode2046); 
+            otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleNode2068); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getNodeAccess().getNodeKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:907:1: ( ( ruleQualifiedName ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:908:1: ( ruleQualifiedName )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:925:1: ( ( ruleQualifiedName ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:926:1: ( ruleQualifiedName )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:908:1: ( ruleQualifiedName )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:909:3: ruleQualifiedName
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:926:1: ( ruleQualifiedName )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:927:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -2348,7 +2399,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getNodeAccess().getModelClassEClassCrossReference_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleNode2069);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleNode2091);
             ruleQualifiedName();
 
             state._fsp--;
@@ -2362,24 +2413,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:922:2: ( ( (lv_toolName_2_0= RULE_STRING ) ) (otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) )? )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:940:2: ( ( (lv_toolName_2_0= RULE_STRING ) ) (otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) )? )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA13_0==RULE_STRING) ) {
-                alt13=1;
+            if ( (LA14_0==RULE_STRING) ) {
+                alt14=1;
             }
-            switch (alt13) {
+            switch (alt14) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:922:3: ( (lv_toolName_2_0= RULE_STRING ) ) (otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) )?
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:940:3: ( (lv_toolName_2_0= RULE_STRING ) ) (otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) )?
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:922:3: ( (lv_toolName_2_0= RULE_STRING ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:923:1: (lv_toolName_2_0= RULE_STRING )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:940:3: ( (lv_toolName_2_0= RULE_STRING ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:941:1: (lv_toolName_2_0= RULE_STRING )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:923:1: (lv_toolName_2_0= RULE_STRING )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:924:3: lv_toolName_2_0= RULE_STRING
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:941:1: (lv_toolName_2_0= RULE_STRING )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:942:3: lv_toolName_2_0= RULE_STRING
                     {
-                    lv_toolName_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleNode2087); 
+                    lv_toolName_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleNode2109); 
 
                     			newLeafNode(lv_toolName_2_0, grammarAccess.getNodeAccess().getToolNameSTRINGTerminalRuleCall_2_0_0()); 
                     		
@@ -2399,37 +2450,37 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:940:2: (otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) )?
-                    int alt12=2;
-                    int LA12_0 = input.LA(1);
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:958:2: (otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) )?
+                    int alt13=2;
+                    int LA13_0 = input.LA(1);
 
-                    if ( (LA12_0==24) ) {
-                        int LA12_1 = input.LA(2);
+                    if ( (LA13_0==24) ) {
+                        int LA13_1 = input.LA(2);
 
-                        if ( (LA12_1==RULE_ID) ) {
-                            alt12=1;
+                        if ( (LA13_1==RULE_ID) ) {
+                            alt13=1;
                         }
                     }
-                    switch (alt12) {
+                    switch (alt13) {
                         case 1 :
-                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:940:4: otherlv_3= ':' ( (otherlv_4= RULE_ID ) )
+                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:958:4: otherlv_3= ':' ( (otherlv_4= RULE_ID ) )
                             {
-                            otherlv_3=(Token)match(input,24,FOLLOW_24_in_ruleNode2105); 
+                            otherlv_3=(Token)match(input,24,FOLLOW_24_in_ruleNode2127); 
 
                                 	newLeafNode(otherlv_3, grammarAccess.getNodeAccess().getColonKeyword_2_1_0());
                                 
-                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:944:1: ( (otherlv_4= RULE_ID ) )
-                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:945:1: (otherlv_4= RULE_ID )
+                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:962:1: ( (otherlv_4= RULE_ID ) )
+                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:963:1: (otherlv_4= RULE_ID )
                             {
-                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:945:1: (otherlv_4= RULE_ID )
-                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:946:3: otherlv_4= RULE_ID
+                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:963:1: (otherlv_4= RULE_ID )
+                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:964:3: otherlv_4= RULE_ID
                             {
 
                             			if (current==null) {
                             	            current = createModelElement(grammarAccess.getNodeRule());
                             	        }
                                     
-                            otherlv_4=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNode2125); 
+                            otherlv_4=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNode2147); 
 
                             		newLeafNode(otherlv_4, grammarAccess.getNodeAccess().getGroupGroupCrossReference_2_1_1_0()); 
                             	
@@ -2451,28 +2502,28 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:957:6: (otherlv_5= 'icon' ( (lv_imageId_6_0= RULE_ID ) ) )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:975:6: (otherlv_5= 'icon' ( (lv_imageId_6_0= RULE_ID ) ) )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA14_0==25) ) {
-                alt14=1;
+            if ( (LA15_0==25) ) {
+                alt15=1;
             }
-            switch (alt14) {
+            switch (alt15) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:957:8: otherlv_5= 'icon' ( (lv_imageId_6_0= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:975:8: otherlv_5= 'icon' ( (lv_imageId_6_0= RULE_ID ) )
                     {
-                    otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleNode2142); 
+                    otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleNode2164); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getNodeAccess().getIconKeyword_3_0());
                         
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:961:1: ( (lv_imageId_6_0= RULE_ID ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:962:1: (lv_imageId_6_0= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:979:1: ( (lv_imageId_6_0= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:980:1: (lv_imageId_6_0= RULE_ID )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:962:1: (lv_imageId_6_0= RULE_ID )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:963:3: lv_imageId_6_0= RULE_ID
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:980:1: (lv_imageId_6_0= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:981:3: lv_imageId_6_0= RULE_ID
                     {
-                    lv_imageId_6_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNode2159); 
+                    lv_imageId_6_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNode2181); 
 
                     			newLeafNode(lv_imageId_6_0, grammarAccess.getNodeAccess().getImageIdIDTerminalRuleCall_3_1_0()); 
                     		
@@ -2498,20 +2549,20 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,24,FOLLOW_24_in_ruleNode2178); 
+            otherlv_7=(Token)match(input,24,FOLLOW_24_in_ruleNode2200); 
 
                 	newLeafNode(otherlv_7, grammarAccess.getNodeAccess().getColonKeyword_4());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:983:1: ( (lv_rootFigure_8_0= ruleConnectableElement ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:984:1: (lv_rootFigure_8_0= ruleConnectableElement )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1001:1: ( (lv_rootFigure_8_0= ruleConnectableElement ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1002:1: (lv_rootFigure_8_0= ruleConnectableElement )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:984:1: (lv_rootFigure_8_0= ruleConnectableElement )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:985:3: lv_rootFigure_8_0= ruleConnectableElement
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1002:1: (lv_rootFigure_8_0= ruleConnectableElement )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1003:3: lv_rootFigure_8_0= ruleConnectableElement
             {
              
             	        newCompositeNode(grammarAccess.getNodeAccess().getRootFigureConnectableElementParserRuleCall_5_0()); 
             	    
-            pushFollow(FOLLOW_ruleConnectableElement_in_ruleNode2199);
+            pushFollow(FOLLOW_ruleConnectableElement_in_ruleNode2221);
             lv_rootFigure_8_0=ruleConnectableElement();
 
             state._fsp--;
@@ -2554,7 +2605,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLink"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1009:1: entryRuleLink returns [EObject current=null] : iv_ruleLink= ruleLink EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1027:1: entryRuleLink returns [EObject current=null] : iv_ruleLink= ruleLink EOF ;
     public final EObject entryRuleLink() throws RecognitionException {
         EObject current = null;
 
@@ -2562,17 +2613,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1010:2: (iv_ruleLink= ruleLink EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1011:2: iv_ruleLink= ruleLink EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1028:2: (iv_ruleLink= ruleLink EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1029:2: iv_ruleLink= ruleLink EOF
             {
              newCompositeNode(grammarAccess.getLinkRule()); 
-            pushFollow(FOLLOW_ruleLink_in_entryRuleLink2235);
+            pushFollow(FOLLOW_ruleLink_in_entryRuleLink2257);
             iv_ruleLink=ruleLink();
 
             state._fsp--;
 
              current =iv_ruleLink; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLink2245); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLink2267); 
 
             }
 
@@ -2590,7 +2641,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLink"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1018:1: ruleLink returns [EObject current=null] : (otherlv_0= 'link' ( ( ( ruleQualifiedName ) ) | ( ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) ) ) ) ( ( (lv_toolName_8_0= RULE_STRING ) ) (otherlv_9= ':' ( (otherlv_10= RULE_ID ) ) )? )? (otherlv_11= 'icon' ( (lv_imageId_12_0= RULE_ID ) ) )? otherlv_13= ':' otherlv_14= 'connection' ( (lv_type_15_0= ruleConnectionType ) ) ( ( (lv_styled_16_0= '+' ) ) ( (otherlv_17= RULE_ID ) ) )? otherlv_18= '{' ( (lv_features_19_0= ruleLinkFeature ) )* (otherlv_20= 'decorators:' ( (lv_decorators_21_0= ruleDecorator ) )+ )? otherlv_22= '}' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1036:1: ruleLink returns [EObject current=null] : (otherlv_0= 'link' ( ( ( ruleQualifiedName ) ) | ( ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) ) ) ) ( ( (lv_toolName_8_0= RULE_STRING ) ) (otherlv_9= ':' ( (otherlv_10= RULE_ID ) ) )? )? (otherlv_11= 'icon' ( (lv_imageId_12_0= RULE_ID ) ) )? otherlv_13= ':' otherlv_14= 'connection' ( (lv_type_15_0= ruleConnectionType ) ) ( ( (lv_styled_16_0= '+' ) ) ( (otherlv_17= RULE_ID ) ) )? otherlv_18= '{' ( (lv_features_19_0= ruleLinkFeature ) )* (otherlv_20= 'decorators:' ( (lv_decorators_21_0= ruleDecorator ) )+ )? otherlv_22= '}' ) ;
     public final EObject ruleLink() throws RecognitionException {
         EObject current = null;
 
@@ -2620,41 +2671,41 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1021:28: ( (otherlv_0= 'link' ( ( ( ruleQualifiedName ) ) | ( ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) ) ) ) ( ( (lv_toolName_8_0= RULE_STRING ) ) (otherlv_9= ':' ( (otherlv_10= RULE_ID ) ) )? )? (otherlv_11= 'icon' ( (lv_imageId_12_0= RULE_ID ) ) )? otherlv_13= ':' otherlv_14= 'connection' ( (lv_type_15_0= ruleConnectionType ) ) ( ( (lv_styled_16_0= '+' ) ) ( (otherlv_17= RULE_ID ) ) )? otherlv_18= '{' ( (lv_features_19_0= ruleLinkFeature ) )* (otherlv_20= 'decorators:' ( (lv_decorators_21_0= ruleDecorator ) )+ )? otherlv_22= '}' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1022:1: (otherlv_0= 'link' ( ( ( ruleQualifiedName ) ) | ( ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) ) ) ) ( ( (lv_toolName_8_0= RULE_STRING ) ) (otherlv_9= ':' ( (otherlv_10= RULE_ID ) ) )? )? (otherlv_11= 'icon' ( (lv_imageId_12_0= RULE_ID ) ) )? otherlv_13= ':' otherlv_14= 'connection' ( (lv_type_15_0= ruleConnectionType ) ) ( ( (lv_styled_16_0= '+' ) ) ( (otherlv_17= RULE_ID ) ) )? otherlv_18= '{' ( (lv_features_19_0= ruleLinkFeature ) )* (otherlv_20= 'decorators:' ( (lv_decorators_21_0= ruleDecorator ) )+ )? otherlv_22= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1039:28: ( (otherlv_0= 'link' ( ( ( ruleQualifiedName ) ) | ( ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) ) ) ) ( ( (lv_toolName_8_0= RULE_STRING ) ) (otherlv_9= ':' ( (otherlv_10= RULE_ID ) ) )? )? (otherlv_11= 'icon' ( (lv_imageId_12_0= RULE_ID ) ) )? otherlv_13= ':' otherlv_14= 'connection' ( (lv_type_15_0= ruleConnectionType ) ) ( ( (lv_styled_16_0= '+' ) ) ( (otherlv_17= RULE_ID ) ) )? otherlv_18= '{' ( (lv_features_19_0= ruleLinkFeature ) )* (otherlv_20= 'decorators:' ( (lv_decorators_21_0= ruleDecorator ) )+ )? otherlv_22= '}' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1040:1: (otherlv_0= 'link' ( ( ( ruleQualifiedName ) ) | ( ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) ) ) ) ( ( (lv_toolName_8_0= RULE_STRING ) ) (otherlv_9= ':' ( (otherlv_10= RULE_ID ) ) )? )? (otherlv_11= 'icon' ( (lv_imageId_12_0= RULE_ID ) ) )? otherlv_13= ':' otherlv_14= 'connection' ( (lv_type_15_0= ruleConnectionType ) ) ( ( (lv_styled_16_0= '+' ) ) ( (otherlv_17= RULE_ID ) ) )? otherlv_18= '{' ( (lv_features_19_0= ruleLinkFeature ) )* (otherlv_20= 'decorators:' ( (lv_decorators_21_0= ruleDecorator ) )+ )? otherlv_22= '}' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1022:1: (otherlv_0= 'link' ( ( ( ruleQualifiedName ) ) | ( ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) ) ) ) ( ( (lv_toolName_8_0= RULE_STRING ) ) (otherlv_9= ':' ( (otherlv_10= RULE_ID ) ) )? )? (otherlv_11= 'icon' ( (lv_imageId_12_0= RULE_ID ) ) )? otherlv_13= ':' otherlv_14= 'connection' ( (lv_type_15_0= ruleConnectionType ) ) ( ( (lv_styled_16_0= '+' ) ) ( (otherlv_17= RULE_ID ) ) )? otherlv_18= '{' ( (lv_features_19_0= ruleLinkFeature ) )* (otherlv_20= 'decorators:' ( (lv_decorators_21_0= ruleDecorator ) )+ )? otherlv_22= '}' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1022:3: otherlv_0= 'link' ( ( ( ruleQualifiedName ) ) | ( ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) ) ) ) ( ( (lv_toolName_8_0= RULE_STRING ) ) (otherlv_9= ':' ( (otherlv_10= RULE_ID ) ) )? )? (otherlv_11= 'icon' ( (lv_imageId_12_0= RULE_ID ) ) )? otherlv_13= ':' otherlv_14= 'connection' ( (lv_type_15_0= ruleConnectionType ) ) ( ( (lv_styled_16_0= '+' ) ) ( (otherlv_17= RULE_ID ) ) )? otherlv_18= '{' ( (lv_features_19_0= ruleLinkFeature ) )* (otherlv_20= 'decorators:' ( (lv_decorators_21_0= ruleDecorator ) )+ )? otherlv_22= '}'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1040:1: (otherlv_0= 'link' ( ( ( ruleQualifiedName ) ) | ( ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) ) ) ) ( ( (lv_toolName_8_0= RULE_STRING ) ) (otherlv_9= ':' ( (otherlv_10= RULE_ID ) ) )? )? (otherlv_11= 'icon' ( (lv_imageId_12_0= RULE_ID ) ) )? otherlv_13= ':' otherlv_14= 'connection' ( (lv_type_15_0= ruleConnectionType ) ) ( ( (lv_styled_16_0= '+' ) ) ( (otherlv_17= RULE_ID ) ) )? otherlv_18= '{' ( (lv_features_19_0= ruleLinkFeature ) )* (otherlv_20= 'decorators:' ( (lv_decorators_21_0= ruleDecorator ) )+ )? otherlv_22= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1040:3: otherlv_0= 'link' ( ( ( ruleQualifiedName ) ) | ( ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) ) ) ) ( ( (lv_toolName_8_0= RULE_STRING ) ) (otherlv_9= ':' ( (otherlv_10= RULE_ID ) ) )? )? (otherlv_11= 'icon' ( (lv_imageId_12_0= RULE_ID ) ) )? otherlv_13= ':' otherlv_14= 'connection' ( (lv_type_15_0= ruleConnectionType ) ) ( ( (lv_styled_16_0= '+' ) ) ( (otherlv_17= RULE_ID ) ) )? otherlv_18= '{' ( (lv_features_19_0= ruleLinkFeature ) )* (otherlv_20= 'decorators:' ( (lv_decorators_21_0= ruleDecorator ) )+ )? otherlv_22= '}'
             {
-            otherlv_0=(Token)match(input,26,FOLLOW_26_in_ruleLink2282); 
+            otherlv_0=(Token)match(input,26,FOLLOW_26_in_ruleLink2304); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getLinkAccess().getLinkKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1026:1: ( ( ( ruleQualifiedName ) ) | ( ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) ) ) )
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1044:1: ( ( ( ruleQualifiedName ) ) | ( ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) ) ) )
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA15_0==RULE_ID) ) {
-                alt15=1;
+            if ( (LA16_0==RULE_ID) ) {
+                alt16=1;
             }
-            else if ( (LA15_0==27) ) {
-                alt15=2;
+            else if ( (LA16_0==27) ) {
+                alt16=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 15, 0, input);
+                    new NoViableAltException("", 16, 0, input);
 
                 throw nvae;
             }
-            switch (alt15) {
+            switch (alt16) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1026:2: ( ( ruleQualifiedName ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1044:2: ( ( ruleQualifiedName ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1026:2: ( ( ruleQualifiedName ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1027:1: ( ruleQualifiedName )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1044:2: ( ( ruleQualifiedName ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1045:1: ( ruleQualifiedName )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1027:1: ( ruleQualifiedName )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1028:3: ruleQualifiedName
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1045:1: ( ruleQualifiedName )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1046:3: ruleQualifiedName
                     {
 
                     			if (current==null) {
@@ -2664,7 +2715,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getLinkAccess().getModelReferenceEReferenceCrossReference_1_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleLink2306);
+                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleLink2328);
                     ruleQualifiedName();
 
                     state._fsp--;
@@ -2682,18 +2733,18 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1042:6: ( ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1060:6: ( ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1042:6: ( ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1042:7: ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1060:6: ( ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1060:7: ( (lv_complex_2_0= 'object' ) ) ( ( ruleQualifiedName ) ) otherlv_4= 'source' ( ( ruleQualifiedName ) ) otherlv_6= 'target' ( ( ruleQualifiedName ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1042:7: ( (lv_complex_2_0= 'object' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1043:1: (lv_complex_2_0= 'object' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1060:7: ( (lv_complex_2_0= 'object' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1061:1: (lv_complex_2_0= 'object' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1043:1: (lv_complex_2_0= 'object' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1044:3: lv_complex_2_0= 'object'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1061:1: (lv_complex_2_0= 'object' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1062:3: lv_complex_2_0= 'object'
                     {
-                    lv_complex_2_0=(Token)match(input,27,FOLLOW_27_in_ruleLink2331); 
+                    lv_complex_2_0=(Token)match(input,27,FOLLOW_27_in_ruleLink2353); 
 
                             newLeafNode(lv_complex_2_0, grammarAccess.getLinkAccess().getComplexObjectKeyword_1_1_0_0());
                         
@@ -2709,11 +2760,11 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1057:2: ( ( ruleQualifiedName ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1058:1: ( ruleQualifiedName )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1075:2: ( ( ruleQualifiedName ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1076:1: ( ruleQualifiedName )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1058:1: ( ruleQualifiedName )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1059:3: ruleQualifiedName
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1076:1: ( ruleQualifiedName )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1077:3: ruleQualifiedName
                     {
 
                     			if (current==null) {
@@ -2723,7 +2774,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getLinkAccess().getModelClassEClassCrossReference_1_1_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleLink2367);
+                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleLink2389);
                     ruleQualifiedName();
 
                     state._fsp--;
@@ -2737,15 +2788,15 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_4=(Token)match(input,28,FOLLOW_28_in_ruleLink2379); 
+                    otherlv_4=(Token)match(input,28,FOLLOW_28_in_ruleLink2401); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getLinkAccess().getSourceKeyword_1_1_2());
                         
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1076:1: ( ( ruleQualifiedName ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1077:1: ( ruleQualifiedName )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1094:1: ( ( ruleQualifiedName ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1095:1: ( ruleQualifiedName )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1077:1: ( ruleQualifiedName )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1078:3: ruleQualifiedName
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1095:1: ( ruleQualifiedName )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1096:3: ruleQualifiedName
                     {
 
                     			if (current==null) {
@@ -2755,7 +2806,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getLinkAccess().getSourceReferenceEReferenceCrossReference_1_1_3_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleLink2402);
+                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleLink2424);
                     ruleQualifiedName();
 
                     state._fsp--;
@@ -2769,15 +2820,15 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_6=(Token)match(input,29,FOLLOW_29_in_ruleLink2414); 
+                    otherlv_6=(Token)match(input,29,FOLLOW_29_in_ruleLink2436); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getLinkAccess().getTargetKeyword_1_1_4());
                         
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1095:1: ( ( ruleQualifiedName ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1096:1: ( ruleQualifiedName )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1113:1: ( ( ruleQualifiedName ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1114:1: ( ruleQualifiedName )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1096:1: ( ruleQualifiedName )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1097:3: ruleQualifiedName
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1114:1: ( ruleQualifiedName )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1115:3: ruleQualifiedName
                     {
 
                     			if (current==null) {
@@ -2787,7 +2838,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getLinkAccess().getTargetReferenceEReferenceCrossReference_1_1_5_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleLink2437);
+                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleLink2459);
                     ruleQualifiedName();
 
                     state._fsp--;
@@ -2810,24 +2861,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1110:4: ( ( (lv_toolName_8_0= RULE_STRING ) ) (otherlv_9= ':' ( (otherlv_10= RULE_ID ) ) )? )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1128:4: ( ( (lv_toolName_8_0= RULE_STRING ) ) (otherlv_9= ':' ( (otherlv_10= RULE_ID ) ) )? )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA17_0==RULE_STRING) ) {
-                alt17=1;
+            if ( (LA18_0==RULE_STRING) ) {
+                alt18=1;
             }
-            switch (alt17) {
+            switch (alt18) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1110:5: ( (lv_toolName_8_0= RULE_STRING ) ) (otherlv_9= ':' ( (otherlv_10= RULE_ID ) ) )?
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1128:5: ( (lv_toolName_8_0= RULE_STRING ) ) (otherlv_9= ':' ( (otherlv_10= RULE_ID ) ) )?
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1110:5: ( (lv_toolName_8_0= RULE_STRING ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1111:1: (lv_toolName_8_0= RULE_STRING )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1128:5: ( (lv_toolName_8_0= RULE_STRING ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1129:1: (lv_toolName_8_0= RULE_STRING )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1111:1: (lv_toolName_8_0= RULE_STRING )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1112:3: lv_toolName_8_0= RULE_STRING
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1129:1: (lv_toolName_8_0= RULE_STRING )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1130:3: lv_toolName_8_0= RULE_STRING
                     {
-                    lv_toolName_8_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleLink2457); 
+                    lv_toolName_8_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleLink2479); 
 
                     			newLeafNode(lv_toolName_8_0, grammarAccess.getLinkAccess().getToolNameSTRINGTerminalRuleCall_2_0_0()); 
                     		
@@ -2847,37 +2898,37 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1128:2: (otherlv_9= ':' ( (otherlv_10= RULE_ID ) ) )?
-                    int alt16=2;
-                    int LA16_0 = input.LA(1);
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1146:2: (otherlv_9= ':' ( (otherlv_10= RULE_ID ) ) )?
+                    int alt17=2;
+                    int LA17_0 = input.LA(1);
 
-                    if ( (LA16_0==24) ) {
-                        int LA16_1 = input.LA(2);
+                    if ( (LA17_0==24) ) {
+                        int LA17_1 = input.LA(2);
 
-                        if ( (LA16_1==RULE_ID) ) {
-                            alt16=1;
+                        if ( (LA17_1==RULE_ID) ) {
+                            alt17=1;
                         }
                     }
-                    switch (alt16) {
+                    switch (alt17) {
                         case 1 :
-                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1128:4: otherlv_9= ':' ( (otherlv_10= RULE_ID ) )
+                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1146:4: otherlv_9= ':' ( (otherlv_10= RULE_ID ) )
                             {
-                            otherlv_9=(Token)match(input,24,FOLLOW_24_in_ruleLink2475); 
+                            otherlv_9=(Token)match(input,24,FOLLOW_24_in_ruleLink2497); 
 
                                 	newLeafNode(otherlv_9, grammarAccess.getLinkAccess().getColonKeyword_2_1_0());
                                 
-                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1132:1: ( (otherlv_10= RULE_ID ) )
-                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1133:1: (otherlv_10= RULE_ID )
+                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1150:1: ( (otherlv_10= RULE_ID ) )
+                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1151:1: (otherlv_10= RULE_ID )
                             {
-                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1133:1: (otherlv_10= RULE_ID )
-                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1134:3: otherlv_10= RULE_ID
+                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1151:1: (otherlv_10= RULE_ID )
+                            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1152:3: otherlv_10= RULE_ID
                             {
 
                             			if (current==null) {
                             	            current = createModelElement(grammarAccess.getLinkRule());
                             	        }
                                     
-                            otherlv_10=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLink2495); 
+                            otherlv_10=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLink2517); 
 
                             		newLeafNode(otherlv_10, grammarAccess.getLinkAccess().getGroupGroupCrossReference_2_1_1_0()); 
                             	
@@ -2899,28 +2950,28 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1145:6: (otherlv_11= 'icon' ( (lv_imageId_12_0= RULE_ID ) ) )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1163:6: (otherlv_11= 'icon' ( (lv_imageId_12_0= RULE_ID ) ) )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA18_0==25) ) {
-                alt18=1;
+            if ( (LA19_0==25) ) {
+                alt19=1;
             }
-            switch (alt18) {
+            switch (alt19) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1145:8: otherlv_11= 'icon' ( (lv_imageId_12_0= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1163:8: otherlv_11= 'icon' ( (lv_imageId_12_0= RULE_ID ) )
                     {
-                    otherlv_11=(Token)match(input,25,FOLLOW_25_in_ruleLink2512); 
+                    otherlv_11=(Token)match(input,25,FOLLOW_25_in_ruleLink2534); 
 
                         	newLeafNode(otherlv_11, grammarAccess.getLinkAccess().getIconKeyword_3_0());
                         
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1149:1: ( (lv_imageId_12_0= RULE_ID ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1150:1: (lv_imageId_12_0= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1167:1: ( (lv_imageId_12_0= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1168:1: (lv_imageId_12_0= RULE_ID )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1150:1: (lv_imageId_12_0= RULE_ID )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1151:3: lv_imageId_12_0= RULE_ID
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1168:1: (lv_imageId_12_0= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1169:3: lv_imageId_12_0= RULE_ID
                     {
-                    lv_imageId_12_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLink2529); 
+                    lv_imageId_12_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLink2551); 
 
                     			newLeafNode(lv_imageId_12_0, grammarAccess.getLinkAccess().getImageIdIDTerminalRuleCall_3_1_0()); 
                     		
@@ -2946,24 +2997,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,24,FOLLOW_24_in_ruleLink2548); 
+            otherlv_13=(Token)match(input,24,FOLLOW_24_in_ruleLink2570); 
 
                 	newLeafNode(otherlv_13, grammarAccess.getLinkAccess().getColonKeyword_4());
                 
-            otherlv_14=(Token)match(input,30,FOLLOW_30_in_ruleLink2560); 
+            otherlv_14=(Token)match(input,30,FOLLOW_30_in_ruleLink2582); 
 
                 	newLeafNode(otherlv_14, grammarAccess.getLinkAccess().getConnectionKeyword_5());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1175:1: ( (lv_type_15_0= ruleConnectionType ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1176:1: (lv_type_15_0= ruleConnectionType )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1193:1: ( (lv_type_15_0= ruleConnectionType ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1194:1: (lv_type_15_0= ruleConnectionType )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1176:1: (lv_type_15_0= ruleConnectionType )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1177:3: lv_type_15_0= ruleConnectionType
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1194:1: (lv_type_15_0= ruleConnectionType )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1195:3: lv_type_15_0= ruleConnectionType
             {
              
             	        newCompositeNode(grammarAccess.getLinkAccess().getTypeConnectionTypeEnumRuleCall_6_0()); 
             	    
-            pushFollow(FOLLOW_ruleConnectionType_in_ruleLink2581);
+            pushFollow(FOLLOW_ruleConnectionType_in_ruleLink2603);
             lv_type_15_0=ruleConnectionType();
 
             state._fsp--;
@@ -2985,24 +3036,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1193:2: ( ( (lv_styled_16_0= '+' ) ) ( (otherlv_17= RULE_ID ) ) )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1211:2: ( ( (lv_styled_16_0= '+' ) ) ( (otherlv_17= RULE_ID ) ) )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA19_0==31) ) {
-                alt19=1;
+            if ( (LA20_0==31) ) {
+                alt20=1;
             }
-            switch (alt19) {
+            switch (alt20) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1193:3: ( (lv_styled_16_0= '+' ) ) ( (otherlv_17= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1211:3: ( (lv_styled_16_0= '+' ) ) ( (otherlv_17= RULE_ID ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1193:3: ( (lv_styled_16_0= '+' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1194:1: (lv_styled_16_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1211:3: ( (lv_styled_16_0= '+' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1212:1: (lv_styled_16_0= '+' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1194:1: (lv_styled_16_0= '+' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1195:3: lv_styled_16_0= '+'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1212:1: (lv_styled_16_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1213:3: lv_styled_16_0= '+'
                     {
-                    lv_styled_16_0=(Token)match(input,31,FOLLOW_31_in_ruleLink2600); 
+                    lv_styled_16_0=(Token)match(input,31,FOLLOW_31_in_ruleLink2622); 
 
                             newLeafNode(lv_styled_16_0, grammarAccess.getLinkAccess().getStyledPlusSignKeyword_7_0_0());
                         
@@ -3018,18 +3069,18 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1208:2: ( (otherlv_17= RULE_ID ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1209:1: (otherlv_17= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1226:2: ( (otherlv_17= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1227:1: (otherlv_17= RULE_ID )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1209:1: (otherlv_17= RULE_ID )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1210:3: otherlv_17= RULE_ID
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1227:1: (otherlv_17= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1228:3: otherlv_17= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getLinkRule());
                     	        }
                             
-                    otherlv_17=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLink2633); 
+                    otherlv_17=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLink2655); 
 
                     		newLeafNode(otherlv_17, grammarAccess.getLinkAccess().getStyleStyleCrossReference_7_1_0()); 
                     	
@@ -3045,32 +3096,32 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_18=(Token)match(input,17,FOLLOW_17_in_ruleLink2647); 
+            otherlv_18=(Token)match(input,17,FOLLOW_17_in_ruleLink2669); 
 
                 	newLeafNode(otherlv_18, grammarAccess.getLinkAccess().getLeftCurlyBracketKeyword_8());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1225:1: ( (lv_features_19_0= ruleLinkFeature ) )*
-            loop20:
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1243:1: ( (lv_features_19_0= ruleLinkFeature ) )*
+            loop21:
             do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+                int alt21=2;
+                int LA21_0 = input.LA(1);
 
-                if ( (LA20_0==56||(LA20_0>=68 && LA20_0<=69)) ) {
-                    alt20=1;
+                if ( (LA21_0==56||(LA21_0>=68 && LA21_0<=69)) ) {
+                    alt21=1;
                 }
 
 
-                switch (alt20) {
+                switch (alt21) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1226:1: (lv_features_19_0= ruleLinkFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1244:1: (lv_features_19_0= ruleLinkFeature )
             	    {
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1226:1: (lv_features_19_0= ruleLinkFeature )
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1227:3: lv_features_19_0= ruleLinkFeature
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1244:1: (lv_features_19_0= ruleLinkFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1245:3: lv_features_19_0= ruleLinkFeature
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getLinkAccess().getFeaturesLinkFeatureParserRuleCall_9_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleLinkFeature_in_ruleLink2668);
+            	    pushFollow(FOLLOW_ruleLinkFeature_in_ruleLink2690);
             	    lv_features_19_0=ruleLinkFeature();
 
             	    state._fsp--;
@@ -3094,48 +3145,48 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop20;
+            	    break loop21;
                 }
             } while (true);
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1243:3: (otherlv_20= 'decorators:' ( (lv_decorators_21_0= ruleDecorator ) )+ )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1261:3: (otherlv_20= 'decorators:' ( (lv_decorators_21_0= ruleDecorator ) )+ )?
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA22_0==32) ) {
-                alt22=1;
+            if ( (LA23_0==32) ) {
+                alt23=1;
             }
-            switch (alt22) {
+            switch (alt23) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1243:5: otherlv_20= 'decorators:' ( (lv_decorators_21_0= ruleDecorator ) )+
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1261:5: otherlv_20= 'decorators:' ( (lv_decorators_21_0= ruleDecorator ) )+
                     {
-                    otherlv_20=(Token)match(input,32,FOLLOW_32_in_ruleLink2682); 
+                    otherlv_20=(Token)match(input,32,FOLLOW_32_in_ruleLink2704); 
 
                         	newLeafNode(otherlv_20, grammarAccess.getLinkAccess().getDecoratorsKeyword_10_0());
                         
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1247:1: ( (lv_decorators_21_0= ruleDecorator ) )+
-                    int cnt21=0;
-                    loop21:
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1265:1: ( (lv_decorators_21_0= ruleDecorator ) )+
+                    int cnt22=0;
+                    loop22:
                     do {
-                        int alt21=2;
-                        int LA21_0 = input.LA(1);
+                        int alt22=2;
+                        int LA22_0 = input.LA(1);
 
-                        if ( ((LA21_0>=28 && LA21_0<=29)||LA21_0==33||LA21_0==35) ) {
-                            alt21=1;
+                        if ( ((LA22_0>=28 && LA22_0<=29)||LA22_0==33||LA22_0==35) ) {
+                            alt22=1;
                         }
 
 
-                        switch (alt21) {
+                        switch (alt22) {
                     	case 1 :
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1248:1: (lv_decorators_21_0= ruleDecorator )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1266:1: (lv_decorators_21_0= ruleDecorator )
                     	    {
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1248:1: (lv_decorators_21_0= ruleDecorator )
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1249:3: lv_decorators_21_0= ruleDecorator
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1266:1: (lv_decorators_21_0= ruleDecorator )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1267:3: lv_decorators_21_0= ruleDecorator
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getLinkAccess().getDecoratorsDecoratorParserRuleCall_10_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleDecorator_in_ruleLink2703);
+                    	    pushFollow(FOLLOW_ruleDecorator_in_ruleLink2725);
                     	    lv_decorators_21_0=ruleDecorator();
 
                     	    state._fsp--;
@@ -3159,12 +3210,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    if ( cnt21 >= 1 ) break loop21;
+                    	    if ( cnt22 >= 1 ) break loop22;
                                 EarlyExitException eee =
-                                    new EarlyExitException(21, input);
+                                    new EarlyExitException(22, input);
                                 throw eee;
                         }
-                        cnt21++;
+                        cnt22++;
                     } while (true);
 
 
@@ -3173,7 +3224,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_22=(Token)match(input,18,FOLLOW_18_in_ruleLink2718); 
+            otherlv_22=(Token)match(input,18,FOLLOW_18_in_ruleLink2740); 
 
                 	newLeafNode(otherlv_22, grammarAccess.getLinkAccess().getRightCurlyBracketKeyword_11());
                 
@@ -3198,7 +3249,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLinkFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1277:1: entryRuleLinkFeature returns [EObject current=null] : iv_ruleLinkFeature= ruleLinkFeature EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1295:1: entryRuleLinkFeature returns [EObject current=null] : iv_ruleLinkFeature= ruleLinkFeature EOF ;
     public final EObject entryRuleLinkFeature() throws RecognitionException {
         EObject current = null;
 
@@ -3206,17 +3257,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1278:2: (iv_ruleLinkFeature= ruleLinkFeature EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1279:2: iv_ruleLinkFeature= ruleLinkFeature EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1296:2: (iv_ruleLinkFeature= ruleLinkFeature EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1297:2: iv_ruleLinkFeature= ruleLinkFeature EOF
             {
              newCompositeNode(grammarAccess.getLinkFeatureRule()); 
-            pushFollow(FOLLOW_ruleLinkFeature_in_entryRuleLinkFeature2754);
+            pushFollow(FOLLOW_ruleLinkFeature_in_entryRuleLinkFeature2776);
             iv_ruleLinkFeature=ruleLinkFeature();
 
             state._fsp--;
 
              current =iv_ruleLinkFeature; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLinkFeature2764); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLinkFeature2786); 
 
             }
 
@@ -3234,7 +3285,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLinkFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1286:1: ruleLinkFeature returns [EObject current=null] : (this_Foreground_0= ruleForeground | this_LineStyle_1= ruleLineStyle | this_LineWidth_2= ruleLineWidth ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1304:1: ruleLinkFeature returns [EObject current=null] : (this_Foreground_0= ruleForeground | this_LineStyle_1= ruleLineStyle | this_LineWidth_2= ruleLineWidth ) ;
     public final EObject ruleLinkFeature() throws RecognitionException {
         EObject current = null;
 
@@ -3248,42 +3299,42 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1289:28: ( (this_Foreground_0= ruleForeground | this_LineStyle_1= ruleLineStyle | this_LineWidth_2= ruleLineWidth ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1290:1: (this_Foreground_0= ruleForeground | this_LineStyle_1= ruleLineStyle | this_LineWidth_2= ruleLineWidth )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1307:28: ( (this_Foreground_0= ruleForeground | this_LineStyle_1= ruleLineStyle | this_LineWidth_2= ruleLineWidth ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1308:1: (this_Foreground_0= ruleForeground | this_LineStyle_1= ruleLineStyle | this_LineWidth_2= ruleLineWidth )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1290:1: (this_Foreground_0= ruleForeground | this_LineStyle_1= ruleLineStyle | this_LineWidth_2= ruleLineWidth )
-            int alt23=3;
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1308:1: (this_Foreground_0= ruleForeground | this_LineStyle_1= ruleLineStyle | this_LineWidth_2= ruleLineWidth )
+            int alt24=3;
             switch ( input.LA(1) ) {
             case 56:
                 {
-                alt23=1;
+                alt24=1;
                 }
                 break;
             case 68:
                 {
-                alt23=2;
+                alt24=2;
                 }
                 break;
             case 69:
                 {
-                alt23=3;
+                alt24=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 23, 0, input);
+                    new NoViableAltException("", 24, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt23) {
+            switch (alt24) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1291:5: this_Foreground_0= ruleForeground
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1309:5: this_Foreground_0= ruleForeground
                     {
                      
                             newCompositeNode(grammarAccess.getLinkFeatureAccess().getForegroundParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleForeground_in_ruleLinkFeature2811);
+                    pushFollow(FOLLOW_ruleForeground_in_ruleLinkFeature2833);
                     this_Foreground_0=ruleForeground();
 
                     state._fsp--;
@@ -3296,12 +3347,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1301:5: this_LineStyle_1= ruleLineStyle
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1319:5: this_LineStyle_1= ruleLineStyle
                     {
                      
                             newCompositeNode(grammarAccess.getLinkFeatureAccess().getLineStyleParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleLineStyle_in_ruleLinkFeature2838);
+                    pushFollow(FOLLOW_ruleLineStyle_in_ruleLinkFeature2860);
                     this_LineStyle_1=ruleLineStyle();
 
                     state._fsp--;
@@ -3314,12 +3365,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1311:5: this_LineWidth_2= ruleLineWidth
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1329:5: this_LineWidth_2= ruleLineWidth
                     {
                      
                             newCompositeNode(grammarAccess.getLinkFeatureAccess().getLineWidthParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleLineWidth_in_ruleLinkFeature2865);
+                    pushFollow(FOLLOW_ruleLineWidth_in_ruleLinkFeature2887);
                     this_LineWidth_2=ruleLineWidth();
 
                     state._fsp--;
@@ -3352,7 +3403,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDecorator"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1327:1: entryRuleDecorator returns [EObject current=null] : iv_ruleDecorator= ruleDecorator EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1345:1: entryRuleDecorator returns [EObject current=null] : iv_ruleDecorator= ruleDecorator EOF ;
     public final EObject entryRuleDecorator() throws RecognitionException {
         EObject current = null;
 
@@ -3360,17 +3411,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1328:2: (iv_ruleDecorator= ruleDecorator EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1329:2: iv_ruleDecorator= ruleDecorator EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1346:2: (iv_ruleDecorator= ruleDecorator EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1347:2: iv_ruleDecorator= ruleDecorator EOF
             {
              newCompositeNode(grammarAccess.getDecoratorRule()); 
-            pushFollow(FOLLOW_ruleDecorator_in_entryRuleDecorator2900);
+            pushFollow(FOLLOW_ruleDecorator_in_entryRuleDecorator2922);
             iv_ruleDecorator=ruleDecorator();
 
             state._fsp--;
 
              current =iv_ruleDecorator; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDecorator2910); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDecorator2932); 
 
             }
 
@@ -3388,7 +3439,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDecorator"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1336:1: ruleDecorator returns [EObject current=null] : ( ( (otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ) | ( (lv_source_3_0= 'source' ) ) | ( (lv_target_4_0= 'target' ) ) | ( (lv_middle_5_0= 'middle' ) ) ) ( ( (lv_staticElement_6_0= ruleStaticElement ) ) | ( (lv_label_7_0= ruleLabel ) ) )? ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1354:1: ruleDecorator returns [EObject current=null] : ( ( (otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ) | ( (lv_source_3_0= 'source' ) ) | ( (lv_target_4_0= 'target' ) ) | ( (lv_middle_5_0= 'middle' ) ) ) ( ( (lv_staticElement_6_0= ruleStaticElement ) ) | ( (lv_label_7_0= ruleLabel ) ) )? ) ;
     public final EObject ruleDecorator() throws RecognitionException {
         EObject current = null;
 
@@ -3406,60 +3457,60 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1339:28: ( ( ( (otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ) | ( (lv_source_3_0= 'source' ) ) | ( (lv_target_4_0= 'target' ) ) | ( (lv_middle_5_0= 'middle' ) ) ) ( ( (lv_staticElement_6_0= ruleStaticElement ) ) | ( (lv_label_7_0= ruleLabel ) ) )? ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1340:1: ( ( (otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ) | ( (lv_source_3_0= 'source' ) ) | ( (lv_target_4_0= 'target' ) ) | ( (lv_middle_5_0= 'middle' ) ) ) ( ( (lv_staticElement_6_0= ruleStaticElement ) ) | ( (lv_label_7_0= ruleLabel ) ) )? )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1357:28: ( ( ( (otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ) | ( (lv_source_3_0= 'source' ) ) | ( (lv_target_4_0= 'target' ) ) | ( (lv_middle_5_0= 'middle' ) ) ) ( ( (lv_staticElement_6_0= ruleStaticElement ) ) | ( (lv_label_7_0= ruleLabel ) ) )? ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1358:1: ( ( (otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ) | ( (lv_source_3_0= 'source' ) ) | ( (lv_target_4_0= 'target' ) ) | ( (lv_middle_5_0= 'middle' ) ) ) ( ( (lv_staticElement_6_0= ruleStaticElement ) ) | ( (lv_label_7_0= ruleLabel ) ) )? )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1340:1: ( ( (otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ) | ( (lv_source_3_0= 'source' ) ) | ( (lv_target_4_0= 'target' ) ) | ( (lv_middle_5_0= 'middle' ) ) ) ( ( (lv_staticElement_6_0= ruleStaticElement ) ) | ( (lv_label_7_0= ruleLabel ) ) )? )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1340:2: ( (otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ) | ( (lv_source_3_0= 'source' ) ) | ( (lv_target_4_0= 'target' ) ) | ( (lv_middle_5_0= 'middle' ) ) ) ( ( (lv_staticElement_6_0= ruleStaticElement ) ) | ( (lv_label_7_0= ruleLabel ) ) )?
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1358:1: ( ( (otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ) | ( (lv_source_3_0= 'source' ) ) | ( (lv_target_4_0= 'target' ) ) | ( (lv_middle_5_0= 'middle' ) ) ) ( ( (lv_staticElement_6_0= ruleStaticElement ) ) | ( (lv_label_7_0= ruleLabel ) ) )? )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1358:2: ( (otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ) | ( (lv_source_3_0= 'source' ) ) | ( (lv_target_4_0= 'target' ) ) | ( (lv_middle_5_0= 'middle' ) ) ) ( ( (lv_staticElement_6_0= ruleStaticElement ) ) | ( (lv_label_7_0= ruleLabel ) ) )?
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1340:2: ( (otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ) | ( (lv_source_3_0= 'source' ) ) | ( (lv_target_4_0= 'target' ) ) | ( (lv_middle_5_0= 'middle' ) ) )
-            int alt24=4;
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1358:2: ( (otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ) | ( (lv_source_3_0= 'source' ) ) | ( (lv_target_4_0= 'target' ) ) | ( (lv_middle_5_0= 'middle' ) ) )
+            int alt25=4;
             switch ( input.LA(1) ) {
             case 33:
                 {
-                alt24=1;
+                alt25=1;
                 }
                 break;
             case 28:
                 {
-                alt24=2;
+                alt25=2;
                 }
                 break;
             case 29:
                 {
-                alt24=3;
+                alt25=3;
                 }
                 break;
             case 35:
                 {
-                alt24=4;
+                alt25=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 24, 0, input);
+                    new NoViableAltException("", 25, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt24) {
+            switch (alt25) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1340:3: (otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1358:3: (otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1340:3: (otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1340:5: otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1358:3: (otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1358:5: otherlv_0= 'at' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%'
                     {
-                    otherlv_0=(Token)match(input,33,FOLLOW_33_in_ruleDecorator2949); 
+                    otherlv_0=(Token)match(input,33,FOLLOW_33_in_ruleDecorator2971); 
 
                         	newLeafNode(otherlv_0, grammarAccess.getDecoratorAccess().getAtKeyword_0_0_0());
                         
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1344:1: ( (lv_position_1_0= RULE_INT ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1345:1: (lv_position_1_0= RULE_INT )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1362:1: ( (lv_position_1_0= RULE_INT ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1363:1: (lv_position_1_0= RULE_INT )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1345:1: (lv_position_1_0= RULE_INT )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1346:3: lv_position_1_0= RULE_INT
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1363:1: (lv_position_1_0= RULE_INT )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1364:3: lv_position_1_0= RULE_INT
                     {
-                    lv_position_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleDecorator2966); 
+                    lv_position_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleDecorator2988); 
 
                     			newLeafNode(lv_position_1_0, grammarAccess.getDecoratorAccess().getPositionINTTerminalRuleCall_0_0_1_0()); 
                     		
@@ -3479,7 +3530,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_2=(Token)match(input,34,FOLLOW_34_in_ruleDecorator2983); 
+                    otherlv_2=(Token)match(input,34,FOLLOW_34_in_ruleDecorator3005); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getDecoratorAccess().getPercentSignKeyword_0_0_2());
                         
@@ -3490,15 +3541,15 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1367:6: ( (lv_source_3_0= 'source' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1385:6: ( (lv_source_3_0= 'source' ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1367:6: ( (lv_source_3_0= 'source' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1368:1: (lv_source_3_0= 'source' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1385:6: ( (lv_source_3_0= 'source' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1386:1: (lv_source_3_0= 'source' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1368:1: (lv_source_3_0= 'source' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1369:3: lv_source_3_0= 'source'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1386:1: (lv_source_3_0= 'source' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1387:3: lv_source_3_0= 'source'
                     {
-                    lv_source_3_0=(Token)match(input,28,FOLLOW_28_in_ruleDecorator3008); 
+                    lv_source_3_0=(Token)match(input,28,FOLLOW_28_in_ruleDecorator3030); 
 
                             newLeafNode(lv_source_3_0, grammarAccess.getDecoratorAccess().getSourceSourceKeyword_0_1_0());
                         
@@ -3518,15 +3569,15 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1383:6: ( (lv_target_4_0= 'target' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1401:6: ( (lv_target_4_0= 'target' ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1383:6: ( (lv_target_4_0= 'target' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1384:1: (lv_target_4_0= 'target' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1401:6: ( (lv_target_4_0= 'target' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1402:1: (lv_target_4_0= 'target' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1384:1: (lv_target_4_0= 'target' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1385:3: lv_target_4_0= 'target'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1402:1: (lv_target_4_0= 'target' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1403:3: lv_target_4_0= 'target'
                     {
-                    lv_target_4_0=(Token)match(input,29,FOLLOW_29_in_ruleDecorator3045); 
+                    lv_target_4_0=(Token)match(input,29,FOLLOW_29_in_ruleDecorator3067); 
 
                             newLeafNode(lv_target_4_0, grammarAccess.getDecoratorAccess().getTargetTargetKeyword_0_2_0());
                         
@@ -3546,15 +3597,15 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1399:6: ( (lv_middle_5_0= 'middle' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1417:6: ( (lv_middle_5_0= 'middle' ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1399:6: ( (lv_middle_5_0= 'middle' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1400:1: (lv_middle_5_0= 'middle' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1417:6: ( (lv_middle_5_0= 'middle' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1418:1: (lv_middle_5_0= 'middle' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1400:1: (lv_middle_5_0= 'middle' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1401:3: lv_middle_5_0= 'middle'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1418:1: (lv_middle_5_0= 'middle' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1419:3: lv_middle_5_0= 'middle'
                     {
-                    lv_middle_5_0=(Token)match(input,35,FOLLOW_35_in_ruleDecorator3082); 
+                    lv_middle_5_0=(Token)match(input,35,FOLLOW_35_in_ruleDecorator3104); 
 
                             newLeafNode(lv_middle_5_0, grammarAccess.getDecoratorAccess().getMiddleMiddleKeyword_0_3_0());
                         
@@ -3576,30 +3627,30 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1414:3: ( ( (lv_staticElement_6_0= ruleStaticElement ) ) | ( (lv_label_7_0= ruleLabel ) ) )?
-            int alt25=3;
-            int LA25_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1432:3: ( ( (lv_staticElement_6_0= ruleStaticElement ) ) | ( (lv_label_7_0= ruleLabel ) ) )?
+            int alt26=3;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA25_0==45||(LA25_0>=48 && LA25_0<=49)) ) {
-                alt25=1;
+            if ( (LA26_0==45||(LA26_0>=48 && LA26_0<=49)) ) {
+                alt26=1;
             }
-            else if ( (LA25_0==52) ) {
-                alt25=2;
+            else if ( (LA26_0==52) ) {
+                alt26=2;
             }
-            switch (alt25) {
+            switch (alt26) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1414:4: ( (lv_staticElement_6_0= ruleStaticElement ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1432:4: ( (lv_staticElement_6_0= ruleStaticElement ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1414:4: ( (lv_staticElement_6_0= ruleStaticElement ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1415:1: (lv_staticElement_6_0= ruleStaticElement )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1432:4: ( (lv_staticElement_6_0= ruleStaticElement ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1433:1: (lv_staticElement_6_0= ruleStaticElement )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1415:1: (lv_staticElement_6_0= ruleStaticElement )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1416:3: lv_staticElement_6_0= ruleStaticElement
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1433:1: (lv_staticElement_6_0= ruleStaticElement )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1434:3: lv_staticElement_6_0= ruleStaticElement
                     {
                      
                     	        newCompositeNode(grammarAccess.getDecoratorAccess().getStaticElementStaticElementParserRuleCall_1_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleStaticElement_in_ruleDecorator3118);
+                    pushFollow(FOLLOW_ruleStaticElement_in_ruleDecorator3140);
                     lv_staticElement_6_0=ruleStaticElement();
 
                     state._fsp--;
@@ -3625,18 +3676,18 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1433:6: ( (lv_label_7_0= ruleLabel ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1451:6: ( (lv_label_7_0= ruleLabel ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1433:6: ( (lv_label_7_0= ruleLabel ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1434:1: (lv_label_7_0= ruleLabel )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1451:6: ( (lv_label_7_0= ruleLabel ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1452:1: (lv_label_7_0= ruleLabel )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1434:1: (lv_label_7_0= ruleLabel )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1435:3: lv_label_7_0= ruleLabel
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1452:1: (lv_label_7_0= ruleLabel )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1453:3: lv_label_7_0= ruleLabel
                     {
                      
                     	        newCompositeNode(grammarAccess.getDecoratorAccess().getLabelLabelParserRuleCall_1_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleLabel_in_ruleDecorator3145);
+                    pushFollow(FOLLOW_ruleLabel_in_ruleDecorator3167);
                     lv_label_7_0=ruleLabel();
 
                     state._fsp--;
@@ -3685,7 +3736,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStaticElement"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1459:1: entryRuleStaticElement returns [EObject current=null] : iv_ruleStaticElement= ruleStaticElement EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1477:1: entryRuleStaticElement returns [EObject current=null] : iv_ruleStaticElement= ruleStaticElement EOF ;
     public final EObject entryRuleStaticElement() throws RecognitionException {
         EObject current = null;
 
@@ -3693,17 +3744,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1460:2: (iv_ruleStaticElement= ruleStaticElement EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1461:2: iv_ruleStaticElement= ruleStaticElement EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1478:2: (iv_ruleStaticElement= ruleStaticElement EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1479:2: iv_ruleStaticElement= ruleStaticElement EOF
             {
              newCompositeNode(grammarAccess.getStaticElementRule()); 
-            pushFollow(FOLLOW_ruleStaticElement_in_entryRuleStaticElement3183);
+            pushFollow(FOLLOW_ruleStaticElement_in_entryRuleStaticElement3205);
             iv_ruleStaticElement=ruleStaticElement();
 
             state._fsp--;
 
              current =iv_ruleStaticElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStaticElement3193); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStaticElement3215); 
 
             }
 
@@ -3721,7 +3772,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStaticElement"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1468:1: ruleStaticElement returns [EObject current=null] : (this_Rhombus_0= ruleRhombus | this_Polyline_1= rulePolyline ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1486:1: ruleStaticElement returns [EObject current=null] : (this_Rhombus_0= ruleRhombus | this_Polyline_1= rulePolyline ) ;
     public final EObject ruleStaticElement() throws RecognitionException {
         EObject current = null;
 
@@ -3733,33 +3784,33 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1471:28: ( (this_Rhombus_0= ruleRhombus | this_Polyline_1= rulePolyline ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1472:1: (this_Rhombus_0= ruleRhombus | this_Polyline_1= rulePolyline )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1489:28: ( (this_Rhombus_0= ruleRhombus | this_Polyline_1= rulePolyline ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1490:1: (this_Rhombus_0= ruleRhombus | this_Polyline_1= rulePolyline )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1472:1: (this_Rhombus_0= ruleRhombus | this_Polyline_1= rulePolyline )
-            int alt26=2;
-            int LA26_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1490:1: (this_Rhombus_0= ruleRhombus | this_Polyline_1= rulePolyline )
+            int alt27=2;
+            int LA27_0 = input.LA(1);
 
-            if ( (LA26_0==45) ) {
-                alt26=1;
+            if ( (LA27_0==45) ) {
+                alt27=1;
             }
-            else if ( ((LA26_0>=48 && LA26_0<=49)) ) {
-                alt26=2;
+            else if ( ((LA27_0>=48 && LA27_0<=49)) ) {
+                alt27=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 26, 0, input);
+                    new NoViableAltException("", 27, 0, input);
 
                 throw nvae;
             }
-            switch (alt26) {
+            switch (alt27) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1473:5: this_Rhombus_0= ruleRhombus
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1491:5: this_Rhombus_0= ruleRhombus
                     {
                      
                             newCompositeNode(grammarAccess.getStaticElementAccess().getRhombusParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleRhombus_in_ruleStaticElement3240);
+                    pushFollow(FOLLOW_ruleRhombus_in_ruleStaticElement3262);
                     this_Rhombus_0=ruleRhombus();
 
                     state._fsp--;
@@ -3772,12 +3823,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1483:5: this_Polyline_1= rulePolyline
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1501:5: this_Polyline_1= rulePolyline
                     {
                      
                             newCompositeNode(grammarAccess.getStaticElementAccess().getPolylineParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_rulePolyline_in_ruleStaticElement3267);
+                    pushFollow(FOLLOW_rulePolyline_in_ruleStaticElement3289);
                     this_Polyline_1=rulePolyline();
 
                     state._fsp--;
@@ -3810,7 +3861,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAnchor"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1499:1: entryRuleAnchor returns [EObject current=null] : iv_ruleAnchor= ruleAnchor EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1517:1: entryRuleAnchor returns [EObject current=null] : iv_ruleAnchor= ruleAnchor EOF ;
     public final EObject entryRuleAnchor() throws RecognitionException {
         EObject current = null;
 
@@ -3818,17 +3869,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1500:2: (iv_ruleAnchor= ruleAnchor EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1501:2: iv_ruleAnchor= ruleAnchor EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1518:2: (iv_ruleAnchor= ruleAnchor EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1519:2: iv_ruleAnchor= ruleAnchor EOF
             {
              newCompositeNode(grammarAccess.getAnchorRule()); 
-            pushFollow(FOLLOW_ruleAnchor_in_entryRuleAnchor3302);
+            pushFollow(FOLLOW_ruleAnchor_in_entryRuleAnchor3324);
             iv_ruleAnchor=ruleAnchor();
 
             state._fsp--;
 
              current =iv_ruleAnchor; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAnchor3312); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAnchor3334); 
 
             }
 
@@ -3846,7 +3897,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAnchor"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1508:1: ruleAnchor returns [EObject current=null] : (otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1526:1: ruleAnchor returns [EObject current=null] : (otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) ;
     public final EObject ruleAnchor() throws RecognitionException {
         EObject current = null;
 
@@ -3860,26 +3911,26 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1511:28: ( (otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1512:1: (otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1529:28: ( (otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1530:1: (otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1512:1: (otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1512:3: otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1530:1: (otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1530:3: otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';'
             {
-            otherlv_0=(Token)match(input,36,FOLLOW_36_in_ruleAnchor3349); 
+            otherlv_0=(Token)match(input,36,FOLLOW_36_in_ruleAnchor3371); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getAnchorAccess().getAnchorKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1516:1: ( (lv_direction_1_0= ruleAnchorDirection ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1517:1: (lv_direction_1_0= ruleAnchorDirection )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1534:1: ( (lv_direction_1_0= ruleAnchorDirection ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1535:1: (lv_direction_1_0= ruleAnchorDirection )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1517:1: (lv_direction_1_0= ruleAnchorDirection )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1518:3: lv_direction_1_0= ruleAnchorDirection
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1535:1: (lv_direction_1_0= ruleAnchorDirection )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1536:3: lv_direction_1_0= ruleAnchorDirection
             {
              
             	        newCompositeNode(grammarAccess.getAnchorAccess().getDirectionAnchorDirectionEnumRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleAnchorDirection_in_ruleAnchor3370);
+            pushFollow(FOLLOW_ruleAnchorDirection_in_ruleAnchor3392);
             lv_direction_1_0=ruleAnchorDirection();
 
             state._fsp--;
@@ -3901,11 +3952,11 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1534:2: ( ( ruleQualifiedName ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1535:1: ( ruleQualifiedName )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1552:2: ( ( ruleQualifiedName ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1553:1: ( ruleQualifiedName )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1535:1: ( ruleQualifiedName )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1536:3: ruleQualifiedName
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1553:1: ( ruleQualifiedName )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1554:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -3915,7 +3966,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getAnchorAccess().getModelReferenceEReferenceCrossReference_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleAnchor3393);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleAnchor3415);
             ruleQualifiedName();
 
             state._fsp--;
@@ -3929,24 +3980,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1549:2: ( (lv_conditional_3_0= ruleFeatureConditional ) )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1567:2: ( (lv_conditional_3_0= ruleFeatureConditional ) )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA27_0==22) ) {
-                alt27=1;
+            if ( (LA28_0==22) ) {
+                alt28=1;
             }
-            switch (alt27) {
+            switch (alt28) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1550:1: (lv_conditional_3_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1568:1: (lv_conditional_3_0= ruleFeatureConditional )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1550:1: (lv_conditional_3_0= ruleFeatureConditional )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1551:3: lv_conditional_3_0= ruleFeatureConditional
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1568:1: (lv_conditional_3_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1569:3: lv_conditional_3_0= ruleFeatureConditional
                     {
                      
                     	        newCompositeNode(grammarAccess.getAnchorAccess().getConditionalFeatureConditionalParserRuleCall_3_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleAnchor3414);
+                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleAnchor3436);
                     lv_conditional_3_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -3971,7 +4022,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,37,FOLLOW_37_in_ruleAnchor3427); 
+            otherlv_4=(Token)match(input,37,FOLLOW_37_in_ruleAnchor3449); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getAnchorAccess().getSemicolonKeyword_4());
                 
@@ -3996,7 +4047,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCustomColor"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1579:1: entryRuleCustomColor returns [EObject current=null] : iv_ruleCustomColor= ruleCustomColor EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1597:1: entryRuleCustomColor returns [EObject current=null] : iv_ruleCustomColor= ruleCustomColor EOF ;
     public final EObject entryRuleCustomColor() throws RecognitionException {
         EObject current = null;
 
@@ -4004,17 +4055,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1580:2: (iv_ruleCustomColor= ruleCustomColor EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1581:2: iv_ruleCustomColor= ruleCustomColor EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1598:2: (iv_ruleCustomColor= ruleCustomColor EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1599:2: iv_ruleCustomColor= ruleCustomColor EOF
             {
              newCompositeNode(grammarAccess.getCustomColorRule()); 
-            pushFollow(FOLLOW_ruleCustomColor_in_entryRuleCustomColor3463);
+            pushFollow(FOLLOW_ruleCustomColor_in_entryRuleCustomColor3485);
             iv_ruleCustomColor=ruleCustomColor();
 
             state._fsp--;
 
              current =iv_ruleCustomColor; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCustomColor3473); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCustomColor3495); 
 
             }
 
@@ -4032,7 +4083,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCustomColor"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1588:1: ruleCustomColor returns [EObject current=null] : (otherlv_0= 'color' ( (lv_name_1_0= RULE_ID ) ) ( (lv_R_2_0= RULE_INT ) ) otherlv_3= ',' ( (lv_G_4_0= RULE_INT ) ) otherlv_5= ',' ( (lv_B_6_0= RULE_INT ) ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1606:1: ruleCustomColor returns [EObject current=null] : (otherlv_0= 'color' ( (lv_name_1_0= RULE_ID ) ) ( (lv_R_2_0= RULE_INT ) ) otherlv_3= ',' ( (lv_G_4_0= RULE_INT ) ) otherlv_5= ',' ( (lv_B_6_0= RULE_INT ) ) ) ;
     public final EObject ruleCustomColor() throws RecognitionException {
         EObject current = null;
 
@@ -4047,23 +4098,23 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1591:28: ( (otherlv_0= 'color' ( (lv_name_1_0= RULE_ID ) ) ( (lv_R_2_0= RULE_INT ) ) otherlv_3= ',' ( (lv_G_4_0= RULE_INT ) ) otherlv_5= ',' ( (lv_B_6_0= RULE_INT ) ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1592:1: (otherlv_0= 'color' ( (lv_name_1_0= RULE_ID ) ) ( (lv_R_2_0= RULE_INT ) ) otherlv_3= ',' ( (lv_G_4_0= RULE_INT ) ) otherlv_5= ',' ( (lv_B_6_0= RULE_INT ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1609:28: ( (otherlv_0= 'color' ( (lv_name_1_0= RULE_ID ) ) ( (lv_R_2_0= RULE_INT ) ) otherlv_3= ',' ( (lv_G_4_0= RULE_INT ) ) otherlv_5= ',' ( (lv_B_6_0= RULE_INT ) ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1610:1: (otherlv_0= 'color' ( (lv_name_1_0= RULE_ID ) ) ( (lv_R_2_0= RULE_INT ) ) otherlv_3= ',' ( (lv_G_4_0= RULE_INT ) ) otherlv_5= ',' ( (lv_B_6_0= RULE_INT ) ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1592:1: (otherlv_0= 'color' ( (lv_name_1_0= RULE_ID ) ) ( (lv_R_2_0= RULE_INT ) ) otherlv_3= ',' ( (lv_G_4_0= RULE_INT ) ) otherlv_5= ',' ( (lv_B_6_0= RULE_INT ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1592:3: otherlv_0= 'color' ( (lv_name_1_0= RULE_ID ) ) ( (lv_R_2_0= RULE_INT ) ) otherlv_3= ',' ( (lv_G_4_0= RULE_INT ) ) otherlv_5= ',' ( (lv_B_6_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1610:1: (otherlv_0= 'color' ( (lv_name_1_0= RULE_ID ) ) ( (lv_R_2_0= RULE_INT ) ) otherlv_3= ',' ( (lv_G_4_0= RULE_INT ) ) otherlv_5= ',' ( (lv_B_6_0= RULE_INT ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1610:3: otherlv_0= 'color' ( (lv_name_1_0= RULE_ID ) ) ( (lv_R_2_0= RULE_INT ) ) otherlv_3= ',' ( (lv_G_4_0= RULE_INT ) ) otherlv_5= ',' ( (lv_B_6_0= RULE_INT ) )
             {
-            otherlv_0=(Token)match(input,38,FOLLOW_38_in_ruleCustomColor3510); 
+            otherlv_0=(Token)match(input,38,FOLLOW_38_in_ruleCustomColor3532); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getCustomColorAccess().getColorKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1596:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1597:1: (lv_name_1_0= RULE_ID )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1614:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1615:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1597:1: (lv_name_1_0= RULE_ID )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1598:3: lv_name_1_0= RULE_ID
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1615:1: (lv_name_1_0= RULE_ID )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1616:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCustomColor3527); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCustomColor3549); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getCustomColorAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -4083,13 +4134,13 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1614:2: ( (lv_R_2_0= RULE_INT ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1615:1: (lv_R_2_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1632:2: ( (lv_R_2_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1633:1: (lv_R_2_0= RULE_INT )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1615:1: (lv_R_2_0= RULE_INT )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1616:3: lv_R_2_0= RULE_INT
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1633:1: (lv_R_2_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1634:3: lv_R_2_0= RULE_INT
             {
-            lv_R_2_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleCustomColor3549); 
+            lv_R_2_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleCustomColor3571); 
 
             			newLeafNode(lv_R_2_0, grammarAccess.getCustomColorAccess().getRINTTerminalRuleCall_2_0()); 
             		
@@ -4109,17 +4160,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,39,FOLLOW_39_in_ruleCustomColor3566); 
+            otherlv_3=(Token)match(input,39,FOLLOW_39_in_ruleCustomColor3588); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getCustomColorAccess().getCommaKeyword_3());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1636:1: ( (lv_G_4_0= RULE_INT ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1637:1: (lv_G_4_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1654:1: ( (lv_G_4_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1655:1: (lv_G_4_0= RULE_INT )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1637:1: (lv_G_4_0= RULE_INT )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1638:3: lv_G_4_0= RULE_INT
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1655:1: (lv_G_4_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1656:3: lv_G_4_0= RULE_INT
             {
-            lv_G_4_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleCustomColor3583); 
+            lv_G_4_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleCustomColor3605); 
 
             			newLeafNode(lv_G_4_0, grammarAccess.getCustomColorAccess().getGINTTerminalRuleCall_4_0()); 
             		
@@ -4139,17 +4190,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,39,FOLLOW_39_in_ruleCustomColor3600); 
+            otherlv_5=(Token)match(input,39,FOLLOW_39_in_ruleCustomColor3622); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getCustomColorAccess().getCommaKeyword_5());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1658:1: ( (lv_B_6_0= RULE_INT ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1659:1: (lv_B_6_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1676:1: ( (lv_B_6_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1677:1: (lv_B_6_0= RULE_INT )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1659:1: (lv_B_6_0= RULE_INT )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1660:3: lv_B_6_0= RULE_INT
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1677:1: (lv_B_6_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1678:3: lv_B_6_0= RULE_INT
             {
-            lv_B_6_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleCustomColor3617); 
+            lv_B_6_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleCustomColor3639); 
 
             			newLeafNode(lv_B_6_0, grammarAccess.getCustomColorAccess().getBINTTerminalRuleCall_6_0()); 
             		
@@ -4190,7 +4241,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleColor"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1684:1: entryRuleColor returns [EObject current=null] : iv_ruleColor= ruleColor EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1702:1: entryRuleColor returns [EObject current=null] : iv_ruleColor= ruleColor EOF ;
     public final EObject entryRuleColor() throws RecognitionException {
         EObject current = null;
 
@@ -4198,17 +4249,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1685:2: (iv_ruleColor= ruleColor EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1686:2: iv_ruleColor= ruleColor EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1703:2: (iv_ruleColor= ruleColor EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1704:2: iv_ruleColor= ruleColor EOF
             {
              newCompositeNode(grammarAccess.getColorRule()); 
-            pushFollow(FOLLOW_ruleColor_in_entryRuleColor3658);
+            pushFollow(FOLLOW_ruleColor_in_entryRuleColor3680);
             iv_ruleColor=ruleColor();
 
             state._fsp--;
 
              current =iv_ruleColor; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleColor3668); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleColor3690); 
 
             }
 
@@ -4226,7 +4277,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleColor"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1693:1: ruleColor returns [EObject current=null] : ( ( (lv_default_0_0= ruleDefaultColor ) ) | ( (otherlv_1= RULE_ID ) ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1711:1: ruleColor returns [EObject current=null] : ( ( (lv_default_0_0= ruleDefaultColor ) ) | ( (otherlv_1= RULE_ID ) ) ) ;
     public final EObject ruleColor() throws RecognitionException {
         EObject current = null;
 
@@ -4237,39 +4288,39 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1696:28: ( ( ( (lv_default_0_0= ruleDefaultColor ) ) | ( (otherlv_1= RULE_ID ) ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1697:1: ( ( (lv_default_0_0= ruleDefaultColor ) ) | ( (otherlv_1= RULE_ID ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1714:28: ( ( ( (lv_default_0_0= ruleDefaultColor ) ) | ( (otherlv_1= RULE_ID ) ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1715:1: ( ( (lv_default_0_0= ruleDefaultColor ) ) | ( (otherlv_1= RULE_ID ) ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1697:1: ( ( (lv_default_0_0= ruleDefaultColor ) ) | ( (otherlv_1= RULE_ID ) ) )
-            int alt28=2;
-            int LA28_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1715:1: ( ( (lv_default_0_0= ruleDefaultColor ) ) | ( (otherlv_1= RULE_ID ) ) )
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( ((LA28_0>=74 && LA28_0<=89)) ) {
-                alt28=1;
+            if ( ((LA29_0>=74 && LA29_0<=89)) ) {
+                alt29=1;
             }
-            else if ( (LA28_0==RULE_ID) ) {
-                alt28=2;
+            else if ( (LA29_0==RULE_ID) ) {
+                alt29=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 28, 0, input);
+                    new NoViableAltException("", 29, 0, input);
 
                 throw nvae;
             }
-            switch (alt28) {
+            switch (alt29) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1697:2: ( (lv_default_0_0= ruleDefaultColor ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1715:2: ( (lv_default_0_0= ruleDefaultColor ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1697:2: ( (lv_default_0_0= ruleDefaultColor ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1698:1: (lv_default_0_0= ruleDefaultColor )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1715:2: ( (lv_default_0_0= ruleDefaultColor ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1716:1: (lv_default_0_0= ruleDefaultColor )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1698:1: (lv_default_0_0= ruleDefaultColor )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1699:3: lv_default_0_0= ruleDefaultColor
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1716:1: (lv_default_0_0= ruleDefaultColor )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1717:3: lv_default_0_0= ruleDefaultColor
                     {
                      
                     	        newCompositeNode(grammarAccess.getColorAccess().getDefaultDefaultColorEnumRuleCall_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleDefaultColor_in_ruleColor3714);
+                    pushFollow(FOLLOW_ruleDefaultColor_in_ruleColor3736);
                     lv_default_0_0=ruleDefaultColor();
 
                     state._fsp--;
@@ -4295,20 +4346,20 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1716:6: ( (otherlv_1= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1734:6: ( (otherlv_1= RULE_ID ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1716:6: ( (otherlv_1= RULE_ID ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1717:1: (otherlv_1= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1734:6: ( (otherlv_1= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1735:1: (otherlv_1= RULE_ID )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1717:1: (otherlv_1= RULE_ID )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1718:3: otherlv_1= RULE_ID
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1735:1: (otherlv_1= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1736:3: otherlv_1= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getColorRule());
                     	        }
                             
-                    otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleColor3740); 
+                    otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleColor3762); 
 
                     		newLeafNode(otherlv_1, grammarAccess.getColorAccess().getCustomCustomColorCrossReference_1_0()); 
                     	
@@ -4342,7 +4393,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConnectableElement"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1737:1: entryRuleConnectableElement returns [EObject current=null] : iv_ruleConnectableElement= ruleConnectableElement EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1755:1: entryRuleConnectableElement returns [EObject current=null] : iv_ruleConnectableElement= ruleConnectableElement EOF ;
     public final EObject entryRuleConnectableElement() throws RecognitionException {
         EObject current = null;
 
@@ -4350,17 +4401,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1738:2: (iv_ruleConnectableElement= ruleConnectableElement EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1739:2: iv_ruleConnectableElement= ruleConnectableElement EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1756:2: (iv_ruleConnectableElement= ruleConnectableElement EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1757:2: iv_ruleConnectableElement= ruleConnectableElement EOF
             {
              newCompositeNode(grammarAccess.getConnectableElementRule()); 
-            pushFollow(FOLLOW_ruleConnectableElement_in_entryRuleConnectableElement3776);
+            pushFollow(FOLLOW_ruleConnectableElement_in_entryRuleConnectableElement3798);
             iv_ruleConnectableElement=ruleConnectableElement();
 
             state._fsp--;
 
              current =iv_ruleConnectableElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleConnectableElement3786); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleConnectableElement3808); 
 
             }
 
@@ -4378,7 +4429,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConnectableElement"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1746:1: ruleConnectableElement returns [EObject current=null] : (this_Rectangle_0= ruleRectangle | this_Rhombus_1= ruleRhombus | this_Ellipse_2= ruleEllipse | this_Polyline_3= rulePolyline | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Invisible_6= ruleInvisible | this_Custom_7= ruleCustom ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1764:1: ruleConnectableElement returns [EObject current=null] : (this_Rectangle_0= ruleRectangle | this_Rhombus_1= ruleRhombus | this_Ellipse_2= ruleEllipse | this_Polyline_3= rulePolyline | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Invisible_6= ruleInvisible | this_Custom_7= ruleCustom ) ;
     public final EObject ruleConnectableElement() throws RecognitionException {
         EObject current = null;
 
@@ -4402,70 +4453,70 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1749:28: ( (this_Rectangle_0= ruleRectangle | this_Rhombus_1= ruleRhombus | this_Ellipse_2= ruleEllipse | this_Polyline_3= rulePolyline | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Invisible_6= ruleInvisible | this_Custom_7= ruleCustom ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1750:1: (this_Rectangle_0= ruleRectangle | this_Rhombus_1= ruleRhombus | this_Ellipse_2= ruleEllipse | this_Polyline_3= rulePolyline | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Invisible_6= ruleInvisible | this_Custom_7= ruleCustom )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1767:28: ( (this_Rectangle_0= ruleRectangle | this_Rhombus_1= ruleRhombus | this_Ellipse_2= ruleEllipse | this_Polyline_3= rulePolyline | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Invisible_6= ruleInvisible | this_Custom_7= ruleCustom ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1768:1: (this_Rectangle_0= ruleRectangle | this_Rhombus_1= ruleRhombus | this_Ellipse_2= ruleEllipse | this_Polyline_3= rulePolyline | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Invisible_6= ruleInvisible | this_Custom_7= ruleCustom )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1750:1: (this_Rectangle_0= ruleRectangle | this_Rhombus_1= ruleRhombus | this_Ellipse_2= ruleEllipse | this_Polyline_3= rulePolyline | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Invisible_6= ruleInvisible | this_Custom_7= ruleCustom )
-            int alt29=8;
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1768:1: (this_Rectangle_0= ruleRectangle | this_Rhombus_1= ruleRhombus | this_Ellipse_2= ruleEllipse | this_Polyline_3= rulePolyline | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Invisible_6= ruleInvisible | this_Custom_7= ruleCustom )
+            int alt30=8;
             switch ( input.LA(1) ) {
             case 43:
             case 44:
                 {
-                alt29=1;
+                alt30=1;
                 }
                 break;
             case 45:
                 {
-                alt29=2;
+                alt30=2;
                 }
                 break;
             case 46:
             case 47:
                 {
-                alt29=3;
+                alt30=3;
                 }
                 break;
             case 48:
             case 49:
                 {
-                alt29=4;
+                alt30=4;
                 }
                 break;
             case 52:
                 {
-                alt29=5;
+                alt30=5;
                 }
                 break;
             case 54:
                 {
-                alt29=6;
+                alt30=6;
                 }
                 break;
             case 55:
                 {
-                alt29=7;
+                alt30=7;
                 }
                 break;
             case 40:
                 {
-                alt29=8;
+                alt30=8;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 29, 0, input);
+                    new NoViableAltException("", 30, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt29) {
+            switch (alt30) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1751:5: this_Rectangle_0= ruleRectangle
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1769:5: this_Rectangle_0= ruleRectangle
                     {
                      
                             newCompositeNode(grammarAccess.getConnectableElementAccess().getRectangleParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleRectangle_in_ruleConnectableElement3833);
+                    pushFollow(FOLLOW_ruleRectangle_in_ruleConnectableElement3855);
                     this_Rectangle_0=ruleRectangle();
 
                     state._fsp--;
@@ -4478,12 +4529,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1761:5: this_Rhombus_1= ruleRhombus
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1779:5: this_Rhombus_1= ruleRhombus
                     {
                      
                             newCompositeNode(grammarAccess.getConnectableElementAccess().getRhombusParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleRhombus_in_ruleConnectableElement3860);
+                    pushFollow(FOLLOW_ruleRhombus_in_ruleConnectableElement3882);
                     this_Rhombus_1=ruleRhombus();
 
                     state._fsp--;
@@ -4496,12 +4547,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1771:5: this_Ellipse_2= ruleEllipse
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1789:5: this_Ellipse_2= ruleEllipse
                     {
                      
                             newCompositeNode(grammarAccess.getConnectableElementAccess().getEllipseParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleEllipse_in_ruleConnectableElement3887);
+                    pushFollow(FOLLOW_ruleEllipse_in_ruleConnectableElement3909);
                     this_Ellipse_2=ruleEllipse();
 
                     state._fsp--;
@@ -4514,12 +4565,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1781:5: this_Polyline_3= rulePolyline
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1799:5: this_Polyline_3= rulePolyline
                     {
                      
                             newCompositeNode(grammarAccess.getConnectableElementAccess().getPolylineParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_rulePolyline_in_ruleConnectableElement3914);
+                    pushFollow(FOLLOW_rulePolyline_in_ruleConnectableElement3936);
                     this_Polyline_3=rulePolyline();
 
                     state._fsp--;
@@ -4532,12 +4583,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1791:5: this_Label_4= ruleLabel
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1809:5: this_Label_4= ruleLabel
                     {
                      
                             newCompositeNode(grammarAccess.getConnectableElementAccess().getLabelParserRuleCall_4()); 
                         
-                    pushFollow(FOLLOW_ruleLabel_in_ruleConnectableElement3941);
+                    pushFollow(FOLLOW_ruleLabel_in_ruleConnectableElement3963);
                     this_Label_4=ruleLabel();
 
                     state._fsp--;
@@ -4550,12 +4601,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1801:5: this_Image_5= ruleImage
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1819:5: this_Image_5= ruleImage
                     {
                      
                             newCompositeNode(grammarAccess.getConnectableElementAccess().getImageParserRuleCall_5()); 
                         
-                    pushFollow(FOLLOW_ruleImage_in_ruleConnectableElement3968);
+                    pushFollow(FOLLOW_ruleImage_in_ruleConnectableElement3990);
                     this_Image_5=ruleImage();
 
                     state._fsp--;
@@ -4568,12 +4619,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1811:5: this_Invisible_6= ruleInvisible
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1829:5: this_Invisible_6= ruleInvisible
                     {
                      
                             newCompositeNode(grammarAccess.getConnectableElementAccess().getInvisibleParserRuleCall_6()); 
                         
-                    pushFollow(FOLLOW_ruleInvisible_in_ruleConnectableElement3995);
+                    pushFollow(FOLLOW_ruleInvisible_in_ruleConnectableElement4017);
                     this_Invisible_6=ruleInvisible();
 
                     state._fsp--;
@@ -4586,12 +4637,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1821:5: this_Custom_7= ruleCustom
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1839:5: this_Custom_7= ruleCustom
                     {
                      
                             newCompositeNode(grammarAccess.getConnectableElementAccess().getCustomParserRuleCall_7()); 
                         
-                    pushFollow(FOLLOW_ruleCustom_in_ruleConnectableElement4022);
+                    pushFollow(FOLLOW_ruleCustom_in_ruleConnectableElement4044);
                     this_Custom_7=ruleCustom();
 
                     state._fsp--;
@@ -4624,7 +4675,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConnectableElementFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1837:1: entryRuleConnectableElementFeature returns [EObject current=null] : iv_ruleConnectableElementFeature= ruleConnectableElementFeature EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1855:1: entryRuleConnectableElementFeature returns [EObject current=null] : iv_ruleConnectableElementFeature= ruleConnectableElementFeature EOF ;
     public final EObject entryRuleConnectableElementFeature() throws RecognitionException {
         EObject current = null;
 
@@ -4632,17 +4683,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1838:2: (iv_ruleConnectableElementFeature= ruleConnectableElementFeature EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1839:2: iv_ruleConnectableElementFeature= ruleConnectableElementFeature EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1856:2: (iv_ruleConnectableElementFeature= ruleConnectableElementFeature EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1857:2: iv_ruleConnectableElementFeature= ruleConnectableElementFeature EOF
             {
              newCompositeNode(grammarAccess.getConnectableElementFeatureRule()); 
-            pushFollow(FOLLOW_ruleConnectableElementFeature_in_entryRuleConnectableElementFeature4057);
+            pushFollow(FOLLOW_ruleConnectableElementFeature_in_entryRuleConnectableElementFeature4079);
             iv_ruleConnectableElementFeature=ruleConnectableElementFeature();
 
             state._fsp--;
 
              current =iv_ruleConnectableElementFeature; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleConnectableElementFeature4067); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleConnectableElementFeature4089); 
 
             }
 
@@ -4660,7 +4711,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConnectableElementFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1846:1: ruleConnectableElementFeature returns [EObject current=null] : (this_Position_0= rulePosition | this_Size_1= ruleSize | this_ColorFeature_2= ruleColorFeature | this_LineStyle_3= ruleLineStyle | this_LineWidth_4= ruleLineWidth | this_Contains_5= ruleContains | this_Anchor_6= ruleAnchor ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1864:1: ruleConnectableElementFeature returns [EObject current=null] : (this_Position_0= rulePosition | this_Size_1= ruleSize | this_ColorFeature_2= ruleColorFeature | this_LineStyle_3= ruleLineStyle | this_LineWidth_4= ruleLineWidth | this_Contains_5= ruleContains | this_Anchor_6= ruleAnchor ) ;
     public final EObject ruleConnectableElementFeature() throws RecognitionException {
         EObject current = null;
 
@@ -4682,63 +4733,63 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1849:28: ( (this_Position_0= rulePosition | this_Size_1= ruleSize | this_ColorFeature_2= ruleColorFeature | this_LineStyle_3= ruleLineStyle | this_LineWidth_4= ruleLineWidth | this_Contains_5= ruleContains | this_Anchor_6= ruleAnchor ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1850:1: (this_Position_0= rulePosition | this_Size_1= ruleSize | this_ColorFeature_2= ruleColorFeature | this_LineStyle_3= ruleLineStyle | this_LineWidth_4= ruleLineWidth | this_Contains_5= ruleContains | this_Anchor_6= ruleAnchor )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1867:28: ( (this_Position_0= rulePosition | this_Size_1= ruleSize | this_ColorFeature_2= ruleColorFeature | this_LineStyle_3= ruleLineStyle | this_LineWidth_4= ruleLineWidth | this_Contains_5= ruleContains | this_Anchor_6= ruleAnchor ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1868:1: (this_Position_0= rulePosition | this_Size_1= ruleSize | this_ColorFeature_2= ruleColorFeature | this_LineStyle_3= ruleLineStyle | this_LineWidth_4= ruleLineWidth | this_Contains_5= ruleContains | this_Anchor_6= ruleAnchor )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1850:1: (this_Position_0= rulePosition | this_Size_1= ruleSize | this_ColorFeature_2= ruleColorFeature | this_LineStyle_3= ruleLineStyle | this_LineWidth_4= ruleLineWidth | this_Contains_5= ruleContains | this_Anchor_6= ruleAnchor )
-            int alt30=7;
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1868:1: (this_Position_0= rulePosition | this_Size_1= ruleSize | this_ColorFeature_2= ruleColorFeature | this_LineStyle_3= ruleLineStyle | this_LineWidth_4= ruleLineWidth | this_Contains_5= ruleContains | this_Anchor_6= ruleAnchor )
+            int alt31=7;
             switch ( input.LA(1) ) {
             case 62:
                 {
-                alt30=1;
+                alt31=1;
                 }
                 break;
             case 59:
                 {
-                alt30=2;
+                alt31=2;
                 }
                 break;
             case 56:
             case 57:
                 {
-                alt30=3;
+                alt31=3;
                 }
                 break;
             case 68:
                 {
-                alt30=4;
+                alt31=4;
                 }
                 break;
             case 69:
                 {
-                alt30=5;
+                alt31=5;
                 }
                 break;
             case 50:
                 {
-                alt30=6;
+                alt31=6;
                 }
                 break;
             case 36:
                 {
-                alt30=7;
+                alt31=7;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 30, 0, input);
+                    new NoViableAltException("", 31, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt30) {
+            switch (alt31) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1851:5: this_Position_0= rulePosition
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1869:5: this_Position_0= rulePosition
                     {
                      
                             newCompositeNode(grammarAccess.getConnectableElementFeatureAccess().getPositionParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_rulePosition_in_ruleConnectableElementFeature4114);
+                    pushFollow(FOLLOW_rulePosition_in_ruleConnectableElementFeature4136);
                     this_Position_0=rulePosition();
 
                     state._fsp--;
@@ -4751,12 +4802,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1861:5: this_Size_1= ruleSize
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1879:5: this_Size_1= ruleSize
                     {
                      
                             newCompositeNode(grammarAccess.getConnectableElementFeatureAccess().getSizeParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleSize_in_ruleConnectableElementFeature4141);
+                    pushFollow(FOLLOW_ruleSize_in_ruleConnectableElementFeature4163);
                     this_Size_1=ruleSize();
 
                     state._fsp--;
@@ -4769,12 +4820,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1871:5: this_ColorFeature_2= ruleColorFeature
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1889:5: this_ColorFeature_2= ruleColorFeature
                     {
                      
                             newCompositeNode(grammarAccess.getConnectableElementFeatureAccess().getColorFeatureParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleColorFeature_in_ruleConnectableElementFeature4168);
+                    pushFollow(FOLLOW_ruleColorFeature_in_ruleConnectableElementFeature4190);
                     this_ColorFeature_2=ruleColorFeature();
 
                     state._fsp--;
@@ -4787,12 +4838,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1881:5: this_LineStyle_3= ruleLineStyle
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1899:5: this_LineStyle_3= ruleLineStyle
                     {
                      
                             newCompositeNode(grammarAccess.getConnectableElementFeatureAccess().getLineStyleParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleLineStyle_in_ruleConnectableElementFeature4195);
+                    pushFollow(FOLLOW_ruleLineStyle_in_ruleConnectableElementFeature4217);
                     this_LineStyle_3=ruleLineStyle();
 
                     state._fsp--;
@@ -4805,12 +4856,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1891:5: this_LineWidth_4= ruleLineWidth
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1909:5: this_LineWidth_4= ruleLineWidth
                     {
                      
                             newCompositeNode(grammarAccess.getConnectableElementFeatureAccess().getLineWidthParserRuleCall_4()); 
                         
-                    pushFollow(FOLLOW_ruleLineWidth_in_ruleConnectableElementFeature4222);
+                    pushFollow(FOLLOW_ruleLineWidth_in_ruleConnectableElementFeature4244);
                     this_LineWidth_4=ruleLineWidth();
 
                     state._fsp--;
@@ -4823,12 +4874,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1901:5: this_Contains_5= ruleContains
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1919:5: this_Contains_5= ruleContains
                     {
                      
                             newCompositeNode(grammarAccess.getConnectableElementFeatureAccess().getContainsParserRuleCall_5()); 
                         
-                    pushFollow(FOLLOW_ruleContains_in_ruleConnectableElementFeature4249);
+                    pushFollow(FOLLOW_ruleContains_in_ruleConnectableElementFeature4271);
                     this_Contains_5=ruleContains();
 
                     state._fsp--;
@@ -4841,12 +4892,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1911:5: this_Anchor_6= ruleAnchor
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1929:5: this_Anchor_6= ruleAnchor
                     {
                      
                             newCompositeNode(grammarAccess.getConnectableElementFeatureAccess().getAnchorParserRuleCall_6()); 
                         
-                    pushFollow(FOLLOW_ruleAnchor_in_ruleConnectableElementFeature4276);
+                    pushFollow(FOLLOW_ruleAnchor_in_ruleConnectableElementFeature4298);
                     this_Anchor_6=ruleAnchor();
 
                     state._fsp--;
@@ -4879,7 +4930,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCustomFigure"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1927:1: entryRuleCustomFigure returns [EObject current=null] : iv_ruleCustomFigure= ruleCustomFigure EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1945:1: entryRuleCustomFigure returns [EObject current=null] : iv_ruleCustomFigure= ruleCustomFigure EOF ;
     public final EObject entryRuleCustomFigure() throws RecognitionException {
         EObject current = null;
 
@@ -4887,17 +4938,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1928:2: (iv_ruleCustomFigure= ruleCustomFigure EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1929:2: iv_ruleCustomFigure= ruleCustomFigure EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1946:2: (iv_ruleCustomFigure= ruleCustomFigure EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1947:2: iv_ruleCustomFigure= ruleCustomFigure EOF
             {
              newCompositeNode(grammarAccess.getCustomFigureRule()); 
-            pushFollow(FOLLOW_ruleCustomFigure_in_entryRuleCustomFigure4311);
+            pushFollow(FOLLOW_ruleCustomFigure_in_entryRuleCustomFigure4333);
             iv_ruleCustomFigure=ruleCustomFigure();
 
             state._fsp--;
 
              current =iv_ruleCustomFigure; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCustomFigure4321); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCustomFigure4343); 
 
             }
 
@@ -4915,7 +4966,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCustomFigure"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1936:1: ruleCustomFigure returns [EObject current=null] : (otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1954:1: ruleCustomFigure returns [EObject current=null] : (otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) ) ) ;
     public final EObject ruleCustomFigure() throws RecognitionException {
         EObject current = null;
 
@@ -4928,23 +4979,23 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1939:28: ( (otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1940:1: (otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1957:28: ( (otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1958:1: (otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1940:1: (otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1940:3: otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1958:1: (otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1958:3: otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) )
             {
-            otherlv_0=(Token)match(input,40,FOLLOW_40_in_ruleCustomFigure4358); 
+            otherlv_0=(Token)match(input,40,FOLLOW_40_in_ruleCustomFigure4380); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getCustomFigureAccess().getFigureKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1944:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1945:1: (lv_name_1_0= RULE_ID )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1962:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1963:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1945:1: (lv_name_1_0= RULE_ID )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1946:3: lv_name_1_0= RULE_ID
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1963:1: (lv_name_1_0= RULE_ID )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1964:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCustomFigure4375); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCustomFigure4397); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getCustomFigureAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -4964,20 +5015,20 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,41,FOLLOW_41_in_ruleCustomFigure4392); 
+            otherlv_2=(Token)match(input,41,FOLLOW_41_in_ruleCustomFigure4414); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getCustomFigureAccess().getAsKeyword_2());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1966:1: ( (lv_element_3_0= ruleConnectableElement ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1967:1: (lv_element_3_0= ruleConnectableElement )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1984:1: ( (lv_element_3_0= ruleConnectableElement ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1985:1: (lv_element_3_0= ruleConnectableElement )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1967:1: (lv_element_3_0= ruleConnectableElement )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1968:3: lv_element_3_0= ruleConnectableElement
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1985:1: (lv_element_3_0= ruleConnectableElement )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1986:3: lv_element_3_0= ruleConnectableElement
             {
              
             	        newCompositeNode(grammarAccess.getCustomFigureAccess().getElementConnectableElementParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleConnectableElement_in_ruleCustomFigure4413);
+            pushFollow(FOLLOW_ruleConnectableElement_in_ruleCustomFigure4435);
             lv_element_3_0=ruleConnectableElement();
 
             state._fsp--;
@@ -5020,7 +5071,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCustom"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1992:1: entryRuleCustom returns [EObject current=null] : iv_ruleCustom= ruleCustom EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2010:1: entryRuleCustom returns [EObject current=null] : iv_ruleCustom= ruleCustom EOF ;
     public final EObject entryRuleCustom() throws RecognitionException {
         EObject current = null;
 
@@ -5028,17 +5079,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1993:2: (iv_ruleCustom= ruleCustom EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:1994:2: iv_ruleCustom= ruleCustom EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2011:2: (iv_ruleCustom= ruleCustom EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2012:2: iv_ruleCustom= ruleCustom EOF
             {
              newCompositeNode(grammarAccess.getCustomRule()); 
-            pushFollow(FOLLOW_ruleCustom_in_entryRuleCustom4449);
+            pushFollow(FOLLOW_ruleCustom_in_entryRuleCustom4471);
             iv_ruleCustom=ruleCustom();
 
             state._fsp--;
 
              current =iv_ruleCustom; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCustom4459); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCustom4481); 
 
             }
 
@@ -5056,7 +5107,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCustom"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2001:1: ruleCustom returns [EObject current=null] : (otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleLinkedFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2019:1: ruleCustom returns [EObject current=null] : (otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleLinkedFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) ;
     public final EObject ruleCustom() throws RecognitionException {
         EObject current = null;
 
@@ -5075,28 +5126,28 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2004:28: ( (otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleLinkedFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2005:1: (otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleLinkedFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2022:28: ( (otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleLinkedFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2023:1: (otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleLinkedFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2005:1: (otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleLinkedFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2005:3: otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleLinkedFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2023:1: (otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleLinkedFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2023:3: otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleLinkedFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}'
             {
-            otherlv_0=(Token)match(input,40,FOLLOW_40_in_ruleCustom4496); 
+            otherlv_0=(Token)match(input,40,FOLLOW_40_in_ruleCustom4518); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getCustomAccess().getFigureKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2009:1: ( (otherlv_1= RULE_ID ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2010:1: (otherlv_1= RULE_ID )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2027:1: ( (otherlv_1= RULE_ID ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2028:1: (otherlv_1= RULE_ID )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2010:1: (otherlv_1= RULE_ID )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2011:3: otherlv_1= RULE_ID
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2028:1: (otherlv_1= RULE_ID )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2029:3: otherlv_1= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getCustomRule());
             	        }
                     
-            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCustom4516); 
+            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCustom4538); 
 
             		newLeafNode(otherlv_1, grammarAccess.getCustomAccess().getFigureCustomFigureCrossReference_1_0()); 
             	
@@ -5106,24 +5157,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2022:2: ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )?
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2040:2: ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )?
+            int alt32=2;
+            int LA32_0 = input.LA(1);
 
-            if ( (LA31_0==31) ) {
-                alt31=1;
+            if ( (LA32_0==31) ) {
+                alt32=1;
             }
-            switch (alt31) {
+            switch (alt32) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2022:3: ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2040:3: ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2022:3: ( (lv_styled_2_0= '+' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2023:1: (lv_styled_2_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2040:3: ( (lv_styled_2_0= '+' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2041:1: (lv_styled_2_0= '+' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2023:1: (lv_styled_2_0= '+' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2024:3: lv_styled_2_0= '+'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2041:1: (lv_styled_2_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2042:3: lv_styled_2_0= '+'
                     {
-                    lv_styled_2_0=(Token)match(input,31,FOLLOW_31_in_ruleCustom4535); 
+                    lv_styled_2_0=(Token)match(input,31,FOLLOW_31_in_ruleCustom4557); 
 
                             newLeafNode(lv_styled_2_0, grammarAccess.getCustomAccess().getStyledPlusSignKeyword_2_0_0());
                         
@@ -5139,18 +5190,18 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2037:2: ( (otherlv_3= RULE_ID ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2038:1: (otherlv_3= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2055:2: ( (otherlv_3= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2056:1: (otherlv_3= RULE_ID )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2038:1: (otherlv_3= RULE_ID )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2039:3: otherlv_3= RULE_ID
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2056:1: (otherlv_3= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2057:3: otherlv_3= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getCustomRule());
                     	        }
                             
-                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCustom4568); 
+                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCustom4590); 
 
                     		newLeafNode(otherlv_3, grammarAccess.getCustomAccess().getStyleStyleCrossReference_2_1_0()); 
                     	
@@ -5166,32 +5217,32 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleCustom4582); 
+            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleCustom4604); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getCustomAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2054:1: ( (lv_features_5_0= ruleLinkedFeature ) )*
-            loop32:
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2072:1: ( (lv_features_5_0= ruleLinkedFeature ) )*
+            loop33:
             do {
-                int alt32=2;
-                int LA32_0 = input.LA(1);
+                int alt33=2;
+                int LA33_0 = input.LA(1);
 
-                if ( (LA32_0==36||LA32_0==50) ) {
-                    alt32=1;
+                if ( (LA33_0==36||LA33_0==50) ) {
+                    alt33=1;
                 }
 
 
-                switch (alt32) {
+                switch (alt33) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2055:1: (lv_features_5_0= ruleLinkedFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2073:1: (lv_features_5_0= ruleLinkedFeature )
             	    {
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2055:1: (lv_features_5_0= ruleLinkedFeature )
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2056:3: lv_features_5_0= ruleLinkedFeature
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2073:1: (lv_features_5_0= ruleLinkedFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2074:3: lv_features_5_0= ruleLinkedFeature
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getCustomAccess().getFeaturesLinkedFeatureParserRuleCall_4_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleLinkedFeature_in_ruleCustom4603);
+            	    pushFollow(FOLLOW_ruleLinkedFeature_in_ruleCustom4625);
             	    lv_features_5_0=ruleLinkedFeature();
 
             	    state._fsp--;
@@ -5215,28 +5266,28 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop32;
+            	    break loop33;
                 }
             } while (true);
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2072:3: ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2090:3: ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )?
+            int alt35=2;
+            int LA35_0 = input.LA(1);
 
-            if ( (LA34_0==42) ) {
-                alt34=1;
+            if ( (LA35_0==42) ) {
+                alt35=1;
             }
-            switch (alt34) {
+            switch (alt35) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2072:4: ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2090:4: ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2072:4: ( (lv_composite_6_0= 'children:' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2073:1: (lv_composite_6_0= 'children:' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2090:4: ( (lv_composite_6_0= 'children:' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2091:1: (lv_composite_6_0= 'children:' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2073:1: (lv_composite_6_0= 'children:' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2074:3: lv_composite_6_0= 'children:'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2091:1: (lv_composite_6_0= 'children:' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2092:3: lv_composite_6_0= 'children:'
                     {
-                    lv_composite_6_0=(Token)match(input,42,FOLLOW_42_in_ruleCustom4623); 
+                    lv_composite_6_0=(Token)match(input,42,FOLLOW_42_in_ruleCustom4645); 
 
                             newLeafNode(lv_composite_6_0, grammarAccess.getCustomAccess().getCompositeChildrenKeyword_5_0_0());
                         
@@ -5252,29 +5303,29 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2087:2: ( (lv_children_7_0= ruleConnectableElement ) )+
-                    int cnt33=0;
-                    loop33:
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2105:2: ( (lv_children_7_0= ruleConnectableElement ) )+
+                    int cnt34=0;
+                    loop34:
                     do {
-                        int alt33=2;
-                        int LA33_0 = input.LA(1);
+                        int alt34=2;
+                        int LA34_0 = input.LA(1);
 
-                        if ( (LA33_0==40||(LA33_0>=43 && LA33_0<=49)||LA33_0==52||(LA33_0>=54 && LA33_0<=55)) ) {
-                            alt33=1;
+                        if ( (LA34_0==40||(LA34_0>=43 && LA34_0<=49)||LA34_0==52||(LA34_0>=54 && LA34_0<=55)) ) {
+                            alt34=1;
                         }
 
 
-                        switch (alt33) {
+                        switch (alt34) {
                     	case 1 :
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2088:1: (lv_children_7_0= ruleConnectableElement )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2106:1: (lv_children_7_0= ruleConnectableElement )
                     	    {
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2088:1: (lv_children_7_0= ruleConnectableElement )
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2089:3: lv_children_7_0= ruleConnectableElement
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2106:1: (lv_children_7_0= ruleConnectableElement )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2107:3: lv_children_7_0= ruleConnectableElement
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getCustomAccess().getChildrenConnectableElementParserRuleCall_5_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleConnectableElement_in_ruleCustom4657);
+                    	    pushFollow(FOLLOW_ruleConnectableElement_in_ruleCustom4679);
                     	    lv_children_7_0=ruleConnectableElement();
 
                     	    state._fsp--;
@@ -5298,12 +5349,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    if ( cnt33 >= 1 ) break loop33;
+                    	    if ( cnt34 >= 1 ) break loop34;
                                 EarlyExitException eee =
-                                    new EarlyExitException(33, input);
+                                    new EarlyExitException(34, input);
                                 throw eee;
                         }
-                        cnt33++;
+                        cnt34++;
                     } while (true);
 
 
@@ -5312,7 +5363,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,18,FOLLOW_18_in_ruleCustom4672); 
+            otherlv_8=(Token)match(input,18,FOLLOW_18_in_ruleCustom4694); 
 
                 	newLeafNode(otherlv_8, grammarAccess.getCustomAccess().getRightCurlyBracketKeyword_6());
                 
@@ -5337,7 +5388,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRectangle"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2117:1: entryRuleRectangle returns [EObject current=null] : iv_ruleRectangle= ruleRectangle EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2135:1: entryRuleRectangle returns [EObject current=null] : iv_ruleRectangle= ruleRectangle EOF ;
     public final EObject entryRuleRectangle() throws RecognitionException {
         EObject current = null;
 
@@ -5345,17 +5396,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2118:2: (iv_ruleRectangle= ruleRectangle EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2119:2: iv_ruleRectangle= ruleRectangle EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2136:2: (iv_ruleRectangle= ruleRectangle EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2137:2: iv_ruleRectangle= ruleRectangle EOF
             {
              newCompositeNode(grammarAccess.getRectangleRule()); 
-            pushFollow(FOLLOW_ruleRectangle_in_entryRuleRectangle4708);
+            pushFollow(FOLLOW_ruleRectangle_in_entryRuleRectangle4730);
             iv_ruleRectangle=ruleRectangle();
 
             state._fsp--;
 
              current =iv_ruleRectangle; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRectangle4718); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRectangle4740); 
 
             }
 
@@ -5373,7 +5424,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRectangle"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2126:1: ruleRectangle returns [EObject current=null] : ( ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleRectangleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2144:1: ruleRectangle returns [EObject current=null] : ( ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleRectangleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) ;
     public final EObject ruleRectangle() throws RecognitionException {
         EObject current = null;
 
@@ -5392,39 +5443,39 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2129:28: ( ( ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleRectangleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2130:1: ( ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleRectangleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2147:28: ( ( ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleRectangleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2148:1: ( ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleRectangleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2130:1: ( ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleRectangleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2130:2: ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleRectangleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2148:1: ( ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleRectangleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2148:2: ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleRectangleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}'
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2130:2: ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) )
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2148:2: ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) )
+            int alt36=2;
+            int LA36_0 = input.LA(1);
 
-            if ( (LA35_0==43) ) {
-                alt35=1;
+            if ( (LA36_0==43) ) {
+                alt36=1;
             }
-            else if ( (LA35_0==44) ) {
-                alt35=2;
+            else if ( (LA36_0==44) ) {
+                alt36=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 35, 0, input);
+                    new NoViableAltException("", 36, 0, input);
 
                 throw nvae;
             }
-            switch (alt35) {
+            switch (alt36) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2130:3: ( (lv_rectangle_0_0= 'rectangle' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2148:3: ( (lv_rectangle_0_0= 'rectangle' ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2130:3: ( (lv_rectangle_0_0= 'rectangle' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2131:1: (lv_rectangle_0_0= 'rectangle' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2148:3: ( (lv_rectangle_0_0= 'rectangle' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2149:1: (lv_rectangle_0_0= 'rectangle' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2131:1: (lv_rectangle_0_0= 'rectangle' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2132:3: lv_rectangle_0_0= 'rectangle'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2149:1: (lv_rectangle_0_0= 'rectangle' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2150:3: lv_rectangle_0_0= 'rectangle'
                     {
-                    lv_rectangle_0_0=(Token)match(input,43,FOLLOW_43_in_ruleRectangle4762); 
+                    lv_rectangle_0_0=(Token)match(input,43,FOLLOW_43_in_ruleRectangle4784); 
 
                             newLeafNode(lv_rectangle_0_0, grammarAccess.getRectangleAccess().getRectangleRectangleKeyword_0_0_0());
                         
@@ -5444,15 +5495,15 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2146:6: ( (lv_square_1_0= 'square' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2164:6: ( (lv_square_1_0= 'square' ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2146:6: ( (lv_square_1_0= 'square' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2147:1: (lv_square_1_0= 'square' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2164:6: ( (lv_square_1_0= 'square' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2165:1: (lv_square_1_0= 'square' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2147:1: (lv_square_1_0= 'square' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2148:3: lv_square_1_0= 'square'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2165:1: (lv_square_1_0= 'square' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2166:3: lv_square_1_0= 'square'
                     {
-                    lv_square_1_0=(Token)match(input,44,FOLLOW_44_in_ruleRectangle4799); 
+                    lv_square_1_0=(Token)match(input,44,FOLLOW_44_in_ruleRectangle4821); 
 
                             newLeafNode(lv_square_1_0, grammarAccess.getRectangleAccess().getSquareSquareKeyword_0_1_0());
                         
@@ -5474,24 +5525,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2161:3: ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )?
-            int alt36=2;
-            int LA36_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2179:3: ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )?
+            int alt37=2;
+            int LA37_0 = input.LA(1);
 
-            if ( (LA36_0==31) ) {
-                alt36=1;
+            if ( (LA37_0==31) ) {
+                alt37=1;
             }
-            switch (alt36) {
+            switch (alt37) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2161:4: ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2179:4: ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2161:4: ( (lv_styled_2_0= '+' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2162:1: (lv_styled_2_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2179:4: ( (lv_styled_2_0= '+' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2180:1: (lv_styled_2_0= '+' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2162:1: (lv_styled_2_0= '+' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2163:3: lv_styled_2_0= '+'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2180:1: (lv_styled_2_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2181:3: lv_styled_2_0= '+'
                     {
-                    lv_styled_2_0=(Token)match(input,31,FOLLOW_31_in_ruleRectangle4832); 
+                    lv_styled_2_0=(Token)match(input,31,FOLLOW_31_in_ruleRectangle4854); 
 
                             newLeafNode(lv_styled_2_0, grammarAccess.getRectangleAccess().getStyledPlusSignKeyword_1_0_0());
                         
@@ -5507,18 +5558,18 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2176:2: ( (otherlv_3= RULE_ID ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2177:1: (otherlv_3= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2194:2: ( (otherlv_3= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2195:1: (otherlv_3= RULE_ID )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2177:1: (otherlv_3= RULE_ID )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2178:3: otherlv_3= RULE_ID
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2195:1: (otherlv_3= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2196:3: otherlv_3= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getRectangleRule());
                     	        }
                             
-                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRectangle4865); 
+                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRectangle4887); 
 
                     		newLeafNode(otherlv_3, grammarAccess.getRectangleAccess().getStyleStyleCrossReference_1_1_0()); 
                     	
@@ -5534,32 +5585,32 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleRectangle4879); 
+            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleRectangle4901); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getRectangleAccess().getLeftCurlyBracketKeyword_2());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2193:1: ( (lv_features_5_0= ruleRectangleFeature ) )*
-            loop37:
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2211:1: ( (lv_features_5_0= ruleRectangleFeature ) )*
+            loop38:
             do {
-                int alt37=2;
-                int LA37_0 = input.LA(1);
+                int alt38=2;
+                int LA38_0 = input.LA(1);
 
-                if ( (LA37_0==36||LA37_0==50||(LA37_0>=56 && LA37_0<=57)||LA37_0==59||(LA37_0>=62 && LA37_0<=63)||(LA37_0>=68 && LA37_0<=69)) ) {
-                    alt37=1;
+                if ( (LA38_0==36||LA38_0==50||(LA38_0>=56 && LA38_0<=57)||LA38_0==59||(LA38_0>=62 && LA38_0<=63)||(LA38_0>=68 && LA38_0<=69)) ) {
+                    alt38=1;
                 }
 
 
-                switch (alt37) {
+                switch (alt38) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2194:1: (lv_features_5_0= ruleRectangleFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2212:1: (lv_features_5_0= ruleRectangleFeature )
             	    {
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2194:1: (lv_features_5_0= ruleRectangleFeature )
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2195:3: lv_features_5_0= ruleRectangleFeature
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2212:1: (lv_features_5_0= ruleRectangleFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2213:3: lv_features_5_0= ruleRectangleFeature
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getRectangleAccess().getFeaturesRectangleFeatureParserRuleCall_3_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleRectangleFeature_in_ruleRectangle4900);
+            	    pushFollow(FOLLOW_ruleRectangleFeature_in_ruleRectangle4922);
             	    lv_features_5_0=ruleRectangleFeature();
 
             	    state._fsp--;
@@ -5583,28 +5634,28 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop37;
+            	    break loop38;
                 }
             } while (true);
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2211:3: ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )?
-            int alt39=2;
-            int LA39_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2229:3: ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )?
+            int alt40=2;
+            int LA40_0 = input.LA(1);
 
-            if ( (LA39_0==42) ) {
-                alt39=1;
+            if ( (LA40_0==42) ) {
+                alt40=1;
             }
-            switch (alt39) {
+            switch (alt40) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2211:4: ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2229:4: ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2211:4: ( (lv_composite_6_0= 'children:' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2212:1: (lv_composite_6_0= 'children:' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2229:4: ( (lv_composite_6_0= 'children:' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2230:1: (lv_composite_6_0= 'children:' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2212:1: (lv_composite_6_0= 'children:' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2213:3: lv_composite_6_0= 'children:'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2230:1: (lv_composite_6_0= 'children:' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2231:3: lv_composite_6_0= 'children:'
                     {
-                    lv_composite_6_0=(Token)match(input,42,FOLLOW_42_in_ruleRectangle4920); 
+                    lv_composite_6_0=(Token)match(input,42,FOLLOW_42_in_ruleRectangle4942); 
 
                             newLeafNode(lv_composite_6_0, grammarAccess.getRectangleAccess().getCompositeChildrenKeyword_4_0_0());
                         
@@ -5620,29 +5671,29 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2226:2: ( (lv_children_7_0= ruleConnectableElement ) )+
-                    int cnt38=0;
-                    loop38:
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2244:2: ( (lv_children_7_0= ruleConnectableElement ) )+
+                    int cnt39=0;
+                    loop39:
                     do {
-                        int alt38=2;
-                        int LA38_0 = input.LA(1);
+                        int alt39=2;
+                        int LA39_0 = input.LA(1);
 
-                        if ( (LA38_0==40||(LA38_0>=43 && LA38_0<=49)||LA38_0==52||(LA38_0>=54 && LA38_0<=55)) ) {
-                            alt38=1;
+                        if ( (LA39_0==40||(LA39_0>=43 && LA39_0<=49)||LA39_0==52||(LA39_0>=54 && LA39_0<=55)) ) {
+                            alt39=1;
                         }
 
 
-                        switch (alt38) {
+                        switch (alt39) {
                     	case 1 :
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2227:1: (lv_children_7_0= ruleConnectableElement )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2245:1: (lv_children_7_0= ruleConnectableElement )
                     	    {
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2227:1: (lv_children_7_0= ruleConnectableElement )
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2228:3: lv_children_7_0= ruleConnectableElement
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2245:1: (lv_children_7_0= ruleConnectableElement )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2246:3: lv_children_7_0= ruleConnectableElement
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getRectangleAccess().getChildrenConnectableElementParserRuleCall_4_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleConnectableElement_in_ruleRectangle4954);
+                    	    pushFollow(FOLLOW_ruleConnectableElement_in_ruleRectangle4976);
                     	    lv_children_7_0=ruleConnectableElement();
 
                     	    state._fsp--;
@@ -5666,12 +5717,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    if ( cnt38 >= 1 ) break loop38;
+                    	    if ( cnt39 >= 1 ) break loop39;
                                 EarlyExitException eee =
-                                    new EarlyExitException(38, input);
+                                    new EarlyExitException(39, input);
                                 throw eee;
                         }
-                        cnt38++;
+                        cnt39++;
                     } while (true);
 
 
@@ -5680,7 +5731,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,18,FOLLOW_18_in_ruleRectangle4969); 
+            otherlv_8=(Token)match(input,18,FOLLOW_18_in_ruleRectangle4991); 
 
                 	newLeafNode(otherlv_8, grammarAccess.getRectangleAccess().getRightCurlyBracketKeyword_5());
                 
@@ -5705,7 +5756,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRectangleFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2256:1: entryRuleRectangleFeature returns [EObject current=null] : iv_ruleRectangleFeature= ruleRectangleFeature EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2274:1: entryRuleRectangleFeature returns [EObject current=null] : iv_ruleRectangleFeature= ruleRectangleFeature EOF ;
     public final EObject entryRuleRectangleFeature() throws RecognitionException {
         EObject current = null;
 
@@ -5713,17 +5764,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2257:2: (iv_ruleRectangleFeature= ruleRectangleFeature EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2258:2: iv_ruleRectangleFeature= ruleRectangleFeature EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2275:2: (iv_ruleRectangleFeature= ruleRectangleFeature EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2276:2: iv_ruleRectangleFeature= ruleRectangleFeature EOF
             {
              newCompositeNode(grammarAccess.getRectangleFeatureRule()); 
-            pushFollow(FOLLOW_ruleRectangleFeature_in_entryRuleRectangleFeature5005);
+            pushFollow(FOLLOW_ruleRectangleFeature_in_entryRuleRectangleFeature5027);
             iv_ruleRectangleFeature=ruleRectangleFeature();
 
             state._fsp--;
 
              current =iv_ruleRectangleFeature; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRectangleFeature5015); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRectangleFeature5037); 
 
             }
 
@@ -5741,7 +5792,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRectangleFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2265:1: ruleRectangleFeature returns [EObject current=null] : (this_ConnectableElementFeature_0= ruleConnectableElementFeature | this_Corner_1= ruleCorner ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2283:1: ruleRectangleFeature returns [EObject current=null] : (this_ConnectableElementFeature_0= ruleConnectableElementFeature | this_Corner_1= ruleCorner ) ;
     public final EObject ruleRectangleFeature() throws RecognitionException {
         EObject current = null;
 
@@ -5753,33 +5804,33 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2268:28: ( (this_ConnectableElementFeature_0= ruleConnectableElementFeature | this_Corner_1= ruleCorner ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2269:1: (this_ConnectableElementFeature_0= ruleConnectableElementFeature | this_Corner_1= ruleCorner )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2286:28: ( (this_ConnectableElementFeature_0= ruleConnectableElementFeature | this_Corner_1= ruleCorner ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2287:1: (this_ConnectableElementFeature_0= ruleConnectableElementFeature | this_Corner_1= ruleCorner )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2269:1: (this_ConnectableElementFeature_0= ruleConnectableElementFeature | this_Corner_1= ruleCorner )
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2287:1: (this_ConnectableElementFeature_0= ruleConnectableElementFeature | this_Corner_1= ruleCorner )
+            int alt41=2;
+            int LA41_0 = input.LA(1);
 
-            if ( (LA40_0==36||LA40_0==50||(LA40_0>=56 && LA40_0<=57)||LA40_0==59||LA40_0==62||(LA40_0>=68 && LA40_0<=69)) ) {
-                alt40=1;
+            if ( (LA41_0==36||LA41_0==50||(LA41_0>=56 && LA41_0<=57)||LA41_0==59||LA41_0==62||(LA41_0>=68 && LA41_0<=69)) ) {
+                alt41=1;
             }
-            else if ( (LA40_0==63) ) {
-                alt40=2;
+            else if ( (LA41_0==63) ) {
+                alt41=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 40, 0, input);
+                    new NoViableAltException("", 41, 0, input);
 
                 throw nvae;
             }
-            switch (alt40) {
+            switch (alt41) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2270:5: this_ConnectableElementFeature_0= ruleConnectableElementFeature
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2288:5: this_ConnectableElementFeature_0= ruleConnectableElementFeature
                     {
                      
                             newCompositeNode(grammarAccess.getRectangleFeatureAccess().getConnectableElementFeatureParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleConnectableElementFeature_in_ruleRectangleFeature5062);
+                    pushFollow(FOLLOW_ruleConnectableElementFeature_in_ruleRectangleFeature5084);
                     this_ConnectableElementFeature_0=ruleConnectableElementFeature();
 
                     state._fsp--;
@@ -5792,12 +5843,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2280:5: this_Corner_1= ruleCorner
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2298:5: this_Corner_1= ruleCorner
                     {
                      
                             newCompositeNode(grammarAccess.getRectangleFeatureAccess().getCornerParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleCorner_in_ruleRectangleFeature5089);
+                    pushFollow(FOLLOW_ruleCorner_in_ruleRectangleFeature5111);
                     this_Corner_1=ruleCorner();
 
                     state._fsp--;
@@ -5830,7 +5881,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRhombus"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2296:1: entryRuleRhombus returns [EObject current=null] : iv_ruleRhombus= ruleRhombus EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2314:1: entryRuleRhombus returns [EObject current=null] : iv_ruleRhombus= ruleRhombus EOF ;
     public final EObject entryRuleRhombus() throws RecognitionException {
         EObject current = null;
 
@@ -5838,17 +5889,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2297:2: (iv_ruleRhombus= ruleRhombus EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2298:2: iv_ruleRhombus= ruleRhombus EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2315:2: (iv_ruleRhombus= ruleRhombus EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2316:2: iv_ruleRhombus= ruleRhombus EOF
             {
              newCompositeNode(grammarAccess.getRhombusRule()); 
-            pushFollow(FOLLOW_ruleRhombus_in_entryRuleRhombus5124);
+            pushFollow(FOLLOW_ruleRhombus_in_entryRuleRhombus5146);
             iv_ruleRhombus=ruleRhombus();
 
             state._fsp--;
 
              current =iv_ruleRhombus; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRhombus5134); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRhombus5156); 
 
             }
 
@@ -5866,7 +5917,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRhombus"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2305:1: ruleRhombus returns [EObject current=null] : ( () otherlv_1= 'rhombus' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2323:1: ruleRhombus returns [EObject current=null] : ( () otherlv_1= 'rhombus' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) ;
     public final EObject ruleRhombus() throws RecognitionException {
         EObject current = null;
 
@@ -5884,14 +5935,14 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2308:28: ( ( () otherlv_1= 'rhombus' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2309:1: ( () otherlv_1= 'rhombus' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2326:28: ( ( () otherlv_1= 'rhombus' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2327:1: ( () otherlv_1= 'rhombus' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2309:1: ( () otherlv_1= 'rhombus' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2309:2: () otherlv_1= 'rhombus' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2327:1: ( () otherlv_1= 'rhombus' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2327:2: () otherlv_1= 'rhombus' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}'
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2309:2: ()
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2310:5: 
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2327:2: ()
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2328:5: 
             {
 
                     current = forceCreateModelElement(
@@ -5901,28 +5952,28 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,45,FOLLOW_45_in_ruleRhombus5180); 
+            otherlv_1=(Token)match(input,45,FOLLOW_45_in_ruleRhombus5202); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getRhombusAccess().getRhombusKeyword_1());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2319:1: ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )?
-            int alt41=2;
-            int LA41_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2337:1: ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )?
+            int alt42=2;
+            int LA42_0 = input.LA(1);
 
-            if ( (LA41_0==31) ) {
-                alt41=1;
+            if ( (LA42_0==31) ) {
+                alt42=1;
             }
-            switch (alt41) {
+            switch (alt42) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2319:2: ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2337:2: ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2319:2: ( (lv_styled_2_0= '+' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2320:1: (lv_styled_2_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2337:2: ( (lv_styled_2_0= '+' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2338:1: (lv_styled_2_0= '+' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2320:1: (lv_styled_2_0= '+' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2321:3: lv_styled_2_0= '+'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2338:1: (lv_styled_2_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2339:3: lv_styled_2_0= '+'
                     {
-                    lv_styled_2_0=(Token)match(input,31,FOLLOW_31_in_ruleRhombus5199); 
+                    lv_styled_2_0=(Token)match(input,31,FOLLOW_31_in_ruleRhombus5221); 
 
                             newLeafNode(lv_styled_2_0, grammarAccess.getRhombusAccess().getStyledPlusSignKeyword_2_0_0());
                         
@@ -5938,18 +5989,18 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2334:2: ( (otherlv_3= RULE_ID ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2335:1: (otherlv_3= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2352:2: ( (otherlv_3= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2353:1: (otherlv_3= RULE_ID )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2335:1: (otherlv_3= RULE_ID )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2336:3: otherlv_3= RULE_ID
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2353:1: (otherlv_3= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2354:3: otherlv_3= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getRhombusRule());
                     	        }
                             
-                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRhombus5232); 
+                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRhombus5254); 
 
                     		newLeafNode(otherlv_3, grammarAccess.getRhombusAccess().getStyleStyleCrossReference_2_1_0()); 
                     	
@@ -5965,32 +6016,32 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleRhombus5246); 
+            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleRhombus5268); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getRhombusAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2351:1: ( (lv_features_5_0= ruleConnectableElementFeature ) )*
-            loop42:
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2369:1: ( (lv_features_5_0= ruleConnectableElementFeature ) )*
+            loop43:
             do {
-                int alt42=2;
-                int LA42_0 = input.LA(1);
+                int alt43=2;
+                int LA43_0 = input.LA(1);
 
-                if ( (LA42_0==36||LA42_0==50||(LA42_0>=56 && LA42_0<=57)||LA42_0==59||LA42_0==62||(LA42_0>=68 && LA42_0<=69)) ) {
-                    alt42=1;
+                if ( (LA43_0==36||LA43_0==50||(LA43_0>=56 && LA43_0<=57)||LA43_0==59||LA43_0==62||(LA43_0>=68 && LA43_0<=69)) ) {
+                    alt43=1;
                 }
 
 
-                switch (alt42) {
+                switch (alt43) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2352:1: (lv_features_5_0= ruleConnectableElementFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2370:1: (lv_features_5_0= ruleConnectableElementFeature )
             	    {
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2352:1: (lv_features_5_0= ruleConnectableElementFeature )
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2353:3: lv_features_5_0= ruleConnectableElementFeature
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2370:1: (lv_features_5_0= ruleConnectableElementFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2371:3: lv_features_5_0= ruleConnectableElementFeature
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getRhombusAccess().getFeaturesConnectableElementFeatureParserRuleCall_4_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleConnectableElementFeature_in_ruleRhombus5267);
+            	    pushFollow(FOLLOW_ruleConnectableElementFeature_in_ruleRhombus5289);
             	    lv_features_5_0=ruleConnectableElementFeature();
 
             	    state._fsp--;
@@ -6014,28 +6065,28 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop42;
+            	    break loop43;
                 }
             } while (true);
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2369:3: ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )?
-            int alt44=2;
-            int LA44_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2387:3: ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )?
+            int alt45=2;
+            int LA45_0 = input.LA(1);
 
-            if ( (LA44_0==42) ) {
-                alt44=1;
+            if ( (LA45_0==42) ) {
+                alt45=1;
             }
-            switch (alt44) {
+            switch (alt45) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2369:4: ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2387:4: ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2369:4: ( (lv_composite_6_0= 'children:' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2370:1: (lv_composite_6_0= 'children:' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2387:4: ( (lv_composite_6_0= 'children:' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2388:1: (lv_composite_6_0= 'children:' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2370:1: (lv_composite_6_0= 'children:' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2371:3: lv_composite_6_0= 'children:'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2388:1: (lv_composite_6_0= 'children:' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2389:3: lv_composite_6_0= 'children:'
                     {
-                    lv_composite_6_0=(Token)match(input,42,FOLLOW_42_in_ruleRhombus5287); 
+                    lv_composite_6_0=(Token)match(input,42,FOLLOW_42_in_ruleRhombus5309); 
 
                             newLeafNode(lv_composite_6_0, grammarAccess.getRhombusAccess().getCompositeChildrenKeyword_5_0_0());
                         
@@ -6051,29 +6102,29 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2384:2: ( (lv_children_7_0= ruleConnectableElement ) )+
-                    int cnt43=0;
-                    loop43:
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2402:2: ( (lv_children_7_0= ruleConnectableElement ) )+
+                    int cnt44=0;
+                    loop44:
                     do {
-                        int alt43=2;
-                        int LA43_0 = input.LA(1);
+                        int alt44=2;
+                        int LA44_0 = input.LA(1);
 
-                        if ( (LA43_0==40||(LA43_0>=43 && LA43_0<=49)||LA43_0==52||(LA43_0>=54 && LA43_0<=55)) ) {
-                            alt43=1;
+                        if ( (LA44_0==40||(LA44_0>=43 && LA44_0<=49)||LA44_0==52||(LA44_0>=54 && LA44_0<=55)) ) {
+                            alt44=1;
                         }
 
 
-                        switch (alt43) {
+                        switch (alt44) {
                     	case 1 :
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2385:1: (lv_children_7_0= ruleConnectableElement )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2403:1: (lv_children_7_0= ruleConnectableElement )
                     	    {
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2385:1: (lv_children_7_0= ruleConnectableElement )
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2386:3: lv_children_7_0= ruleConnectableElement
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2403:1: (lv_children_7_0= ruleConnectableElement )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2404:3: lv_children_7_0= ruleConnectableElement
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getRhombusAccess().getChildrenConnectableElementParserRuleCall_5_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleConnectableElement_in_ruleRhombus5321);
+                    	    pushFollow(FOLLOW_ruleConnectableElement_in_ruleRhombus5343);
                     	    lv_children_7_0=ruleConnectableElement();
 
                     	    state._fsp--;
@@ -6097,12 +6148,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    if ( cnt43 >= 1 ) break loop43;
+                    	    if ( cnt44 >= 1 ) break loop44;
                                 EarlyExitException eee =
-                                    new EarlyExitException(43, input);
+                                    new EarlyExitException(44, input);
                                 throw eee;
                         }
-                        cnt43++;
+                        cnt44++;
                     } while (true);
 
 
@@ -6111,7 +6162,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,18,FOLLOW_18_in_ruleRhombus5336); 
+            otherlv_8=(Token)match(input,18,FOLLOW_18_in_ruleRhombus5358); 
 
                 	newLeafNode(otherlv_8, grammarAccess.getRhombusAccess().getRightCurlyBracketKeyword_6());
                 
@@ -6136,7 +6187,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEllipse"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2414:1: entryRuleEllipse returns [EObject current=null] : iv_ruleEllipse= ruleEllipse EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2432:1: entryRuleEllipse returns [EObject current=null] : iv_ruleEllipse= ruleEllipse EOF ;
     public final EObject entryRuleEllipse() throws RecognitionException {
         EObject current = null;
 
@@ -6144,17 +6195,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2415:2: (iv_ruleEllipse= ruleEllipse EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2416:2: iv_ruleEllipse= ruleEllipse EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2433:2: (iv_ruleEllipse= ruleEllipse EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2434:2: iv_ruleEllipse= ruleEllipse EOF
             {
              newCompositeNode(grammarAccess.getEllipseRule()); 
-            pushFollow(FOLLOW_ruleEllipse_in_entryRuleEllipse5372);
+            pushFollow(FOLLOW_ruleEllipse_in_entryRuleEllipse5394);
             iv_ruleEllipse=ruleEllipse();
 
             state._fsp--;
 
              current =iv_ruleEllipse; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEllipse5382); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEllipse5404); 
 
             }
 
@@ -6172,7 +6223,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEllipse"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2423:1: ruleEllipse returns [EObject current=null] : ( ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2441:1: ruleEllipse returns [EObject current=null] : ( ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) ;
     public final EObject ruleEllipse() throws RecognitionException {
         EObject current = null;
 
@@ -6191,39 +6242,39 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2426:28: ( ( ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2427:1: ( ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2444:28: ( ( ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2445:1: ( ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2427:1: ( ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2427:2: ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2445:1: ( ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2445:2: ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}'
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2427:2: ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) )
-            int alt45=2;
-            int LA45_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2445:2: ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) )
+            int alt46=2;
+            int LA46_0 = input.LA(1);
 
-            if ( (LA45_0==46) ) {
-                alt45=1;
+            if ( (LA46_0==46) ) {
+                alt46=1;
             }
-            else if ( (LA45_0==47) ) {
-                alt45=2;
+            else if ( (LA46_0==47) ) {
+                alt46=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 45, 0, input);
+                    new NoViableAltException("", 46, 0, input);
 
                 throw nvae;
             }
-            switch (alt45) {
+            switch (alt46) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2427:3: ( (lv_ellipse_0_0= 'ellipse' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2445:3: ( (lv_ellipse_0_0= 'ellipse' ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2427:3: ( (lv_ellipse_0_0= 'ellipse' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2428:1: (lv_ellipse_0_0= 'ellipse' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2445:3: ( (lv_ellipse_0_0= 'ellipse' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2446:1: (lv_ellipse_0_0= 'ellipse' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2428:1: (lv_ellipse_0_0= 'ellipse' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2429:3: lv_ellipse_0_0= 'ellipse'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2446:1: (lv_ellipse_0_0= 'ellipse' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2447:3: lv_ellipse_0_0= 'ellipse'
                     {
-                    lv_ellipse_0_0=(Token)match(input,46,FOLLOW_46_in_ruleEllipse5426); 
+                    lv_ellipse_0_0=(Token)match(input,46,FOLLOW_46_in_ruleEllipse5448); 
 
                             newLeafNode(lv_ellipse_0_0, grammarAccess.getEllipseAccess().getEllipseEllipseKeyword_0_0_0());
                         
@@ -6243,15 +6294,15 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2443:6: ( (lv_circle_1_0= 'circle' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2461:6: ( (lv_circle_1_0= 'circle' ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2443:6: ( (lv_circle_1_0= 'circle' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2444:1: (lv_circle_1_0= 'circle' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2461:6: ( (lv_circle_1_0= 'circle' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2462:1: (lv_circle_1_0= 'circle' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2444:1: (lv_circle_1_0= 'circle' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2445:3: lv_circle_1_0= 'circle'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2462:1: (lv_circle_1_0= 'circle' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2463:3: lv_circle_1_0= 'circle'
                     {
-                    lv_circle_1_0=(Token)match(input,47,FOLLOW_47_in_ruleEllipse5463); 
+                    lv_circle_1_0=(Token)match(input,47,FOLLOW_47_in_ruleEllipse5485); 
 
                             newLeafNode(lv_circle_1_0, grammarAccess.getEllipseAccess().getCircleCircleKeyword_0_1_0());
                         
@@ -6273,24 +6324,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2458:3: ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )?
-            int alt46=2;
-            int LA46_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2476:3: ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )?
+            int alt47=2;
+            int LA47_0 = input.LA(1);
 
-            if ( (LA46_0==31) ) {
-                alt46=1;
+            if ( (LA47_0==31) ) {
+                alt47=1;
             }
-            switch (alt46) {
+            switch (alt47) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2458:4: ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2476:4: ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2458:4: ( (lv_styled_2_0= '+' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2459:1: (lv_styled_2_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2476:4: ( (lv_styled_2_0= '+' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2477:1: (lv_styled_2_0= '+' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2459:1: (lv_styled_2_0= '+' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2460:3: lv_styled_2_0= '+'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2477:1: (lv_styled_2_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2478:3: lv_styled_2_0= '+'
                     {
-                    lv_styled_2_0=(Token)match(input,31,FOLLOW_31_in_ruleEllipse5496); 
+                    lv_styled_2_0=(Token)match(input,31,FOLLOW_31_in_ruleEllipse5518); 
 
                             newLeafNode(lv_styled_2_0, grammarAccess.getEllipseAccess().getStyledPlusSignKeyword_1_0_0());
                         
@@ -6306,18 +6357,18 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2473:2: ( (otherlv_3= RULE_ID ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2474:1: (otherlv_3= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2491:2: ( (otherlv_3= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2492:1: (otherlv_3= RULE_ID )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2474:1: (otherlv_3= RULE_ID )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2475:3: otherlv_3= RULE_ID
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2492:1: (otherlv_3= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2493:3: otherlv_3= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getEllipseRule());
                     	        }
                             
-                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEllipse5529); 
+                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEllipse5551); 
 
                     		newLeafNode(otherlv_3, grammarAccess.getEllipseAccess().getStyleStyleCrossReference_1_1_0()); 
                     	
@@ -6333,32 +6384,32 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleEllipse5543); 
+            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleEllipse5565); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getEllipseAccess().getLeftCurlyBracketKeyword_2());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2490:1: ( (lv_features_5_0= ruleConnectableElementFeature ) )*
-            loop47:
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2508:1: ( (lv_features_5_0= ruleConnectableElementFeature ) )*
+            loop48:
             do {
-                int alt47=2;
-                int LA47_0 = input.LA(1);
+                int alt48=2;
+                int LA48_0 = input.LA(1);
 
-                if ( (LA47_0==36||LA47_0==50||(LA47_0>=56 && LA47_0<=57)||LA47_0==59||LA47_0==62||(LA47_0>=68 && LA47_0<=69)) ) {
-                    alt47=1;
+                if ( (LA48_0==36||LA48_0==50||(LA48_0>=56 && LA48_0<=57)||LA48_0==59||LA48_0==62||(LA48_0>=68 && LA48_0<=69)) ) {
+                    alt48=1;
                 }
 
 
-                switch (alt47) {
+                switch (alt48) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2491:1: (lv_features_5_0= ruleConnectableElementFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2509:1: (lv_features_5_0= ruleConnectableElementFeature )
             	    {
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2491:1: (lv_features_5_0= ruleConnectableElementFeature )
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2492:3: lv_features_5_0= ruleConnectableElementFeature
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2509:1: (lv_features_5_0= ruleConnectableElementFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2510:3: lv_features_5_0= ruleConnectableElementFeature
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getEllipseAccess().getFeaturesConnectableElementFeatureParserRuleCall_3_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleConnectableElementFeature_in_ruleEllipse5564);
+            	    pushFollow(FOLLOW_ruleConnectableElementFeature_in_ruleEllipse5586);
             	    lv_features_5_0=ruleConnectableElementFeature();
 
             	    state._fsp--;
@@ -6382,28 +6433,28 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop47;
+            	    break loop48;
                 }
             } while (true);
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2508:3: ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )?
-            int alt49=2;
-            int LA49_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2526:3: ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )?
+            int alt50=2;
+            int LA50_0 = input.LA(1);
 
-            if ( (LA49_0==42) ) {
-                alt49=1;
+            if ( (LA50_0==42) ) {
+                alt50=1;
             }
-            switch (alt49) {
+            switch (alt50) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2508:4: ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2526:4: ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2508:4: ( (lv_composite_6_0= 'children:' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2509:1: (lv_composite_6_0= 'children:' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2526:4: ( (lv_composite_6_0= 'children:' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2527:1: (lv_composite_6_0= 'children:' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2509:1: (lv_composite_6_0= 'children:' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2510:3: lv_composite_6_0= 'children:'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2527:1: (lv_composite_6_0= 'children:' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2528:3: lv_composite_6_0= 'children:'
                     {
-                    lv_composite_6_0=(Token)match(input,42,FOLLOW_42_in_ruleEllipse5584); 
+                    lv_composite_6_0=(Token)match(input,42,FOLLOW_42_in_ruleEllipse5606); 
 
                             newLeafNode(lv_composite_6_0, grammarAccess.getEllipseAccess().getCompositeChildrenKeyword_4_0_0());
                         
@@ -6419,29 +6470,29 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2523:2: ( (lv_children_7_0= ruleConnectableElement ) )+
-                    int cnt48=0;
-                    loop48:
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2541:2: ( (lv_children_7_0= ruleConnectableElement ) )+
+                    int cnt49=0;
+                    loop49:
                     do {
-                        int alt48=2;
-                        int LA48_0 = input.LA(1);
+                        int alt49=2;
+                        int LA49_0 = input.LA(1);
 
-                        if ( (LA48_0==40||(LA48_0>=43 && LA48_0<=49)||LA48_0==52||(LA48_0>=54 && LA48_0<=55)) ) {
-                            alt48=1;
+                        if ( (LA49_0==40||(LA49_0>=43 && LA49_0<=49)||LA49_0==52||(LA49_0>=54 && LA49_0<=55)) ) {
+                            alt49=1;
                         }
 
 
-                        switch (alt48) {
+                        switch (alt49) {
                     	case 1 :
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2524:1: (lv_children_7_0= ruleConnectableElement )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2542:1: (lv_children_7_0= ruleConnectableElement )
                     	    {
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2524:1: (lv_children_7_0= ruleConnectableElement )
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2525:3: lv_children_7_0= ruleConnectableElement
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2542:1: (lv_children_7_0= ruleConnectableElement )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2543:3: lv_children_7_0= ruleConnectableElement
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getEllipseAccess().getChildrenConnectableElementParserRuleCall_4_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleConnectableElement_in_ruleEllipse5618);
+                    	    pushFollow(FOLLOW_ruleConnectableElement_in_ruleEllipse5640);
                     	    lv_children_7_0=ruleConnectableElement();
 
                     	    state._fsp--;
@@ -6465,12 +6516,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    if ( cnt48 >= 1 ) break loop48;
+                    	    if ( cnt49 >= 1 ) break loop49;
                                 EarlyExitException eee =
-                                    new EarlyExitException(48, input);
+                                    new EarlyExitException(49, input);
                                 throw eee;
                         }
-                        cnt48++;
+                        cnt49++;
                     } while (true);
 
 
@@ -6479,7 +6530,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,18,FOLLOW_18_in_ruleEllipse5633); 
+            otherlv_8=(Token)match(input,18,FOLLOW_18_in_ruleEllipse5655); 
 
                 	newLeafNode(otherlv_8, grammarAccess.getEllipseAccess().getRightCurlyBracketKeyword_5());
                 
@@ -6504,7 +6555,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePolyline"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2553:1: entryRulePolyline returns [EObject current=null] : iv_rulePolyline= rulePolyline EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2571:1: entryRulePolyline returns [EObject current=null] : iv_rulePolyline= rulePolyline EOF ;
     public final EObject entryRulePolyline() throws RecognitionException {
         EObject current = null;
 
@@ -6512,17 +6563,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2554:2: (iv_rulePolyline= rulePolyline EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2555:2: iv_rulePolyline= rulePolyline EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2572:2: (iv_rulePolyline= rulePolyline EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2573:2: iv_rulePolyline= rulePolyline EOF
             {
              newCompositeNode(grammarAccess.getPolylineRule()); 
-            pushFollow(FOLLOW_rulePolyline_in_entryRulePolyline5669);
+            pushFollow(FOLLOW_rulePolyline_in_entryRulePolyline5691);
             iv_rulePolyline=rulePolyline();
 
             state._fsp--;
 
              current =iv_rulePolyline; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePolyline5679); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePolyline5701); 
 
             }
 
@@ -6540,7 +6591,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePolyline"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2562:1: rulePolyline returns [EObject current=null] : ( ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= rulePoint ) ) ( (lv_features_6_0= rulePoint ) ) ( (lv_features_7_0= rulePoint ) )* ( (lv_features_8_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_9_0= 'children:' ) ) ( (lv_children_10_0= ruleConnectableElement ) )+ )? otherlv_11= '}' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2580:1: rulePolyline returns [EObject current=null] : ( ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= rulePoint ) ) ( (lv_features_6_0= rulePoint ) ) ( (lv_features_7_0= rulePoint ) )* ( (lv_features_8_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_9_0= 'children:' ) ) ( (lv_children_10_0= ruleConnectableElement ) )+ )? otherlv_11= '}' ) ;
     public final EObject rulePolyline() throws RecognitionException {
         EObject current = null;
 
@@ -6565,39 +6616,39 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2565:28: ( ( ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= rulePoint ) ) ( (lv_features_6_0= rulePoint ) ) ( (lv_features_7_0= rulePoint ) )* ( (lv_features_8_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_9_0= 'children:' ) ) ( (lv_children_10_0= ruleConnectableElement ) )+ )? otherlv_11= '}' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2566:1: ( ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= rulePoint ) ) ( (lv_features_6_0= rulePoint ) ) ( (lv_features_7_0= rulePoint ) )* ( (lv_features_8_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_9_0= 'children:' ) ) ( (lv_children_10_0= ruleConnectableElement ) )+ )? otherlv_11= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2583:28: ( ( ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= rulePoint ) ) ( (lv_features_6_0= rulePoint ) ) ( (lv_features_7_0= rulePoint ) )* ( (lv_features_8_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_9_0= 'children:' ) ) ( (lv_children_10_0= ruleConnectableElement ) )+ )? otherlv_11= '}' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2584:1: ( ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= rulePoint ) ) ( (lv_features_6_0= rulePoint ) ) ( (lv_features_7_0= rulePoint ) )* ( (lv_features_8_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_9_0= 'children:' ) ) ( (lv_children_10_0= ruleConnectableElement ) )+ )? otherlv_11= '}' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2566:1: ( ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= rulePoint ) ) ( (lv_features_6_0= rulePoint ) ) ( (lv_features_7_0= rulePoint ) )* ( (lv_features_8_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_9_0= 'children:' ) ) ( (lv_children_10_0= ruleConnectableElement ) )+ )? otherlv_11= '}' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2566:2: ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= rulePoint ) ) ( (lv_features_6_0= rulePoint ) ) ( (lv_features_7_0= rulePoint ) )* ( (lv_features_8_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_9_0= 'children:' ) ) ( (lv_children_10_0= ruleConnectableElement ) )+ )? otherlv_11= '}'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2584:1: ( ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= rulePoint ) ) ( (lv_features_6_0= rulePoint ) ) ( (lv_features_7_0= rulePoint ) )* ( (lv_features_8_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_9_0= 'children:' ) ) ( (lv_children_10_0= ruleConnectableElement ) )+ )? otherlv_11= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2584:2: ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= rulePoint ) ) ( (lv_features_6_0= rulePoint ) ) ( (lv_features_7_0= rulePoint ) )* ( (lv_features_8_0= ruleConnectableElementFeature ) )* ( ( (lv_composite_9_0= 'children:' ) ) ( (lv_children_10_0= ruleConnectableElement ) )+ )? otherlv_11= '}'
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2566:2: ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) )
-            int alt50=2;
-            int LA50_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2584:2: ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) )
+            int alt51=2;
+            int LA51_0 = input.LA(1);
 
-            if ( (LA50_0==48) ) {
-                alt50=1;
+            if ( (LA51_0==48) ) {
+                alt51=1;
             }
-            else if ( (LA50_0==49) ) {
-                alt50=2;
+            else if ( (LA51_0==49) ) {
+                alt51=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 50, 0, input);
+                    new NoViableAltException("", 51, 0, input);
 
                 throw nvae;
             }
-            switch (alt50) {
+            switch (alt51) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2566:3: ( (lv_polygon_0_0= 'polygon' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2584:3: ( (lv_polygon_0_0= 'polygon' ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2566:3: ( (lv_polygon_0_0= 'polygon' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2567:1: (lv_polygon_0_0= 'polygon' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2584:3: ( (lv_polygon_0_0= 'polygon' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2585:1: (lv_polygon_0_0= 'polygon' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2567:1: (lv_polygon_0_0= 'polygon' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2568:3: lv_polygon_0_0= 'polygon'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2585:1: (lv_polygon_0_0= 'polygon' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2586:3: lv_polygon_0_0= 'polygon'
                     {
-                    lv_polygon_0_0=(Token)match(input,48,FOLLOW_48_in_rulePolyline5723); 
+                    lv_polygon_0_0=(Token)match(input,48,FOLLOW_48_in_rulePolyline5745); 
 
                             newLeafNode(lv_polygon_0_0, grammarAccess.getPolylineAccess().getPolygonPolygonKeyword_0_0_0());
                         
@@ -6617,15 +6668,15 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2582:6: ( (lv_polyline_1_0= 'polyline' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2600:6: ( (lv_polyline_1_0= 'polyline' ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2582:6: ( (lv_polyline_1_0= 'polyline' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2583:1: (lv_polyline_1_0= 'polyline' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2600:6: ( (lv_polyline_1_0= 'polyline' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2601:1: (lv_polyline_1_0= 'polyline' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2583:1: (lv_polyline_1_0= 'polyline' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2584:3: lv_polyline_1_0= 'polyline'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2601:1: (lv_polyline_1_0= 'polyline' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2602:3: lv_polyline_1_0= 'polyline'
                     {
-                    lv_polyline_1_0=(Token)match(input,49,FOLLOW_49_in_rulePolyline5760); 
+                    lv_polyline_1_0=(Token)match(input,49,FOLLOW_49_in_rulePolyline5782); 
 
                             newLeafNode(lv_polyline_1_0, grammarAccess.getPolylineAccess().getPolylinePolylineKeyword_0_1_0());
                         
@@ -6647,24 +6698,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2597:3: ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )?
-            int alt51=2;
-            int LA51_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2615:3: ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )?
+            int alt52=2;
+            int LA52_0 = input.LA(1);
 
-            if ( (LA51_0==31) ) {
-                alt51=1;
+            if ( (LA52_0==31) ) {
+                alt52=1;
             }
-            switch (alt51) {
+            switch (alt52) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2597:4: ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2615:4: ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2597:4: ( (lv_styled_2_0= '+' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2598:1: (lv_styled_2_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2615:4: ( (lv_styled_2_0= '+' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2616:1: (lv_styled_2_0= '+' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2598:1: (lv_styled_2_0= '+' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2599:3: lv_styled_2_0= '+'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2616:1: (lv_styled_2_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2617:3: lv_styled_2_0= '+'
                     {
-                    lv_styled_2_0=(Token)match(input,31,FOLLOW_31_in_rulePolyline5793); 
+                    lv_styled_2_0=(Token)match(input,31,FOLLOW_31_in_rulePolyline5815); 
 
                             newLeafNode(lv_styled_2_0, grammarAccess.getPolylineAccess().getStyledPlusSignKeyword_1_0_0());
                         
@@ -6680,18 +6731,18 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2612:2: ( (otherlv_3= RULE_ID ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2613:1: (otherlv_3= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2630:2: ( (otherlv_3= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2631:1: (otherlv_3= RULE_ID )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2613:1: (otherlv_3= RULE_ID )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2614:3: otherlv_3= RULE_ID
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2631:1: (otherlv_3= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2632:3: otherlv_3= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getPolylineRule());
                     	        }
                             
-                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePolyline5826); 
+                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePolyline5848); 
 
                     		newLeafNode(otherlv_3, grammarAccess.getPolylineAccess().getStyleStyleCrossReference_1_1_0()); 
                     	
@@ -6707,20 +6758,20 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,17,FOLLOW_17_in_rulePolyline5840); 
+            otherlv_4=(Token)match(input,17,FOLLOW_17_in_rulePolyline5862); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getPolylineAccess().getLeftCurlyBracketKeyword_2());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2629:1: ( (lv_features_5_0= rulePoint ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2630:1: (lv_features_5_0= rulePoint )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2647:1: ( (lv_features_5_0= rulePoint ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2648:1: (lv_features_5_0= rulePoint )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2630:1: (lv_features_5_0= rulePoint )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2631:3: lv_features_5_0= rulePoint
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2648:1: (lv_features_5_0= rulePoint )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2649:3: lv_features_5_0= rulePoint
             {
              
             	        newCompositeNode(grammarAccess.getPolylineAccess().getFeaturesPointParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_rulePoint_in_rulePolyline5861);
+            pushFollow(FOLLOW_rulePoint_in_rulePolyline5883);
             lv_features_5_0=rulePoint();
 
             state._fsp--;
@@ -6742,16 +6793,16 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2647:2: ( (lv_features_6_0= rulePoint ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2648:1: (lv_features_6_0= rulePoint )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2665:2: ( (lv_features_6_0= rulePoint ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2666:1: (lv_features_6_0= rulePoint )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2648:1: (lv_features_6_0= rulePoint )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2649:3: lv_features_6_0= rulePoint
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2666:1: (lv_features_6_0= rulePoint )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2667:3: lv_features_6_0= rulePoint
             {
              
             	        newCompositeNode(grammarAccess.getPolylineAccess().getFeaturesPointParserRuleCall_4_0()); 
             	    
-            pushFollow(FOLLOW_rulePoint_in_rulePolyline5882);
+            pushFollow(FOLLOW_rulePoint_in_rulePolyline5904);
             lv_features_6_0=rulePoint();
 
             state._fsp--;
@@ -6773,28 +6824,28 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2665:2: ( (lv_features_7_0= rulePoint ) )*
-            loop52:
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2683:2: ( (lv_features_7_0= rulePoint ) )*
+            loop53:
             do {
-                int alt52=2;
-                int LA52_0 = input.LA(1);
+                int alt53=2;
+                int LA53_0 = input.LA(1);
 
-                if ( (LA52_0==61) ) {
-                    alt52=1;
+                if ( (LA53_0==61) ) {
+                    alt53=1;
                 }
 
 
-                switch (alt52) {
+                switch (alt53) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2666:1: (lv_features_7_0= rulePoint )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2684:1: (lv_features_7_0= rulePoint )
             	    {
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2666:1: (lv_features_7_0= rulePoint )
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2667:3: lv_features_7_0= rulePoint
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2684:1: (lv_features_7_0= rulePoint )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2685:3: lv_features_7_0= rulePoint
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getPolylineAccess().getFeaturesPointParserRuleCall_5_0()); 
             	    	    
-            	    pushFollow(FOLLOW_rulePoint_in_rulePolyline5903);
+            	    pushFollow(FOLLOW_rulePoint_in_rulePolyline5925);
             	    lv_features_7_0=rulePoint();
 
             	    state._fsp--;
@@ -6818,32 +6869,32 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop52;
+            	    break loop53;
                 }
             } while (true);
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2683:3: ( (lv_features_8_0= ruleConnectableElementFeature ) )*
-            loop53:
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2701:3: ( (lv_features_8_0= ruleConnectableElementFeature ) )*
+            loop54:
             do {
-                int alt53=2;
-                int LA53_0 = input.LA(1);
+                int alt54=2;
+                int LA54_0 = input.LA(1);
 
-                if ( (LA53_0==36||LA53_0==50||(LA53_0>=56 && LA53_0<=57)||LA53_0==59||LA53_0==62||(LA53_0>=68 && LA53_0<=69)) ) {
-                    alt53=1;
+                if ( (LA54_0==36||LA54_0==50||(LA54_0>=56 && LA54_0<=57)||LA54_0==59||LA54_0==62||(LA54_0>=68 && LA54_0<=69)) ) {
+                    alt54=1;
                 }
 
 
-                switch (alt53) {
+                switch (alt54) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2684:1: (lv_features_8_0= ruleConnectableElementFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2702:1: (lv_features_8_0= ruleConnectableElementFeature )
             	    {
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2684:1: (lv_features_8_0= ruleConnectableElementFeature )
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2685:3: lv_features_8_0= ruleConnectableElementFeature
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2702:1: (lv_features_8_0= ruleConnectableElementFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2703:3: lv_features_8_0= ruleConnectableElementFeature
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getPolylineAccess().getFeaturesConnectableElementFeatureParserRuleCall_6_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleConnectableElementFeature_in_rulePolyline5925);
+            	    pushFollow(FOLLOW_ruleConnectableElementFeature_in_rulePolyline5947);
             	    lv_features_8_0=ruleConnectableElementFeature();
 
             	    state._fsp--;
@@ -6867,28 +6918,28 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop53;
+            	    break loop54;
                 }
             } while (true);
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2701:3: ( ( (lv_composite_9_0= 'children:' ) ) ( (lv_children_10_0= ruleConnectableElement ) )+ )?
-            int alt55=2;
-            int LA55_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2719:3: ( ( (lv_composite_9_0= 'children:' ) ) ( (lv_children_10_0= ruleConnectableElement ) )+ )?
+            int alt56=2;
+            int LA56_0 = input.LA(1);
 
-            if ( (LA55_0==42) ) {
-                alt55=1;
+            if ( (LA56_0==42) ) {
+                alt56=1;
             }
-            switch (alt55) {
+            switch (alt56) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2701:4: ( (lv_composite_9_0= 'children:' ) ) ( (lv_children_10_0= ruleConnectableElement ) )+
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2719:4: ( (lv_composite_9_0= 'children:' ) ) ( (lv_children_10_0= ruleConnectableElement ) )+
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2701:4: ( (lv_composite_9_0= 'children:' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2702:1: (lv_composite_9_0= 'children:' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2719:4: ( (lv_composite_9_0= 'children:' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2720:1: (lv_composite_9_0= 'children:' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2702:1: (lv_composite_9_0= 'children:' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2703:3: lv_composite_9_0= 'children:'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2720:1: (lv_composite_9_0= 'children:' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2721:3: lv_composite_9_0= 'children:'
                     {
-                    lv_composite_9_0=(Token)match(input,42,FOLLOW_42_in_rulePolyline5945); 
+                    lv_composite_9_0=(Token)match(input,42,FOLLOW_42_in_rulePolyline5967); 
 
                             newLeafNode(lv_composite_9_0, grammarAccess.getPolylineAccess().getCompositeChildrenKeyword_7_0_0());
                         
@@ -6904,29 +6955,29 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2716:2: ( (lv_children_10_0= ruleConnectableElement ) )+
-                    int cnt54=0;
-                    loop54:
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2734:2: ( (lv_children_10_0= ruleConnectableElement ) )+
+                    int cnt55=0;
+                    loop55:
                     do {
-                        int alt54=2;
-                        int LA54_0 = input.LA(1);
+                        int alt55=2;
+                        int LA55_0 = input.LA(1);
 
-                        if ( (LA54_0==40||(LA54_0>=43 && LA54_0<=49)||LA54_0==52||(LA54_0>=54 && LA54_0<=55)) ) {
-                            alt54=1;
+                        if ( (LA55_0==40||(LA55_0>=43 && LA55_0<=49)||LA55_0==52||(LA55_0>=54 && LA55_0<=55)) ) {
+                            alt55=1;
                         }
 
 
-                        switch (alt54) {
+                        switch (alt55) {
                     	case 1 :
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2717:1: (lv_children_10_0= ruleConnectableElement )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2735:1: (lv_children_10_0= ruleConnectableElement )
                     	    {
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2717:1: (lv_children_10_0= ruleConnectableElement )
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2718:3: lv_children_10_0= ruleConnectableElement
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2735:1: (lv_children_10_0= ruleConnectableElement )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2736:3: lv_children_10_0= ruleConnectableElement
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getPolylineAccess().getChildrenConnectableElementParserRuleCall_7_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleConnectableElement_in_rulePolyline5979);
+                    	    pushFollow(FOLLOW_ruleConnectableElement_in_rulePolyline6001);
                     	    lv_children_10_0=ruleConnectableElement();
 
                     	    state._fsp--;
@@ -6950,12 +7001,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    if ( cnt54 >= 1 ) break loop54;
+                    	    if ( cnt55 >= 1 ) break loop55;
                                 EarlyExitException eee =
-                                    new EarlyExitException(54, input);
+                                    new EarlyExitException(55, input);
                                 throw eee;
                         }
-                        cnt54++;
+                        cnt55++;
                     } while (true);
 
 
@@ -6964,7 +7015,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_11=(Token)match(input,18,FOLLOW_18_in_rulePolyline5994); 
+            otherlv_11=(Token)match(input,18,FOLLOW_18_in_rulePolyline6016); 
 
                 	newLeafNode(otherlv_11, grammarAccess.getPolylineAccess().getRightCurlyBracketKeyword_8());
                 
@@ -6989,7 +7040,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContains"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2746:1: entryRuleContains returns [EObject current=null] : iv_ruleContains= ruleContains EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2764:1: entryRuleContains returns [EObject current=null] : iv_ruleContains= ruleContains EOF ;
     public final EObject entryRuleContains() throws RecognitionException {
         EObject current = null;
 
@@ -6997,17 +7048,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2747:2: (iv_ruleContains= ruleContains EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2748:2: iv_ruleContains= ruleContains EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2765:2: (iv_ruleContains= ruleContains EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2766:2: iv_ruleContains= ruleContains EOF
             {
              newCompositeNode(grammarAccess.getContainsRule()); 
-            pushFollow(FOLLOW_ruleContains_in_entryRuleContains6030);
+            pushFollow(FOLLOW_ruleContains_in_entryRuleContains6052);
             iv_ruleContains=ruleContains();
 
             state._fsp--;
 
              current =iv_ruleContains; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContains6040); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContains6062); 
 
             }
 
@@ -7025,7 +7076,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContains"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2755:1: ruleContains returns [EObject current=null] : (otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? ( (lv_layout_3_0= ruleContainerLayout ) )? otherlv_4= ';' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2773:1: ruleContains returns [EObject current=null] : (otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? ( (lv_layout_3_0= ruleContainerLayout ) )? otherlv_4= ';' ) ;
     public final EObject ruleContains() throws RecognitionException {
         EObject current = null;
 
@@ -7039,21 +7090,21 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2758:28: ( (otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? ( (lv_layout_3_0= ruleContainerLayout ) )? otherlv_4= ';' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2759:1: (otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? ( (lv_layout_3_0= ruleContainerLayout ) )? otherlv_4= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2776:28: ( (otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? ( (lv_layout_3_0= ruleContainerLayout ) )? otherlv_4= ';' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2777:1: (otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? ( (lv_layout_3_0= ruleContainerLayout ) )? otherlv_4= ';' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2759:1: (otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? ( (lv_layout_3_0= ruleContainerLayout ) )? otherlv_4= ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2759:3: otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? ( (lv_layout_3_0= ruleContainerLayout ) )? otherlv_4= ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2777:1: (otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? ( (lv_layout_3_0= ruleContainerLayout ) )? otherlv_4= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2777:3: otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? ( (lv_layout_3_0= ruleContainerLayout ) )? otherlv_4= ';'
             {
-            otherlv_0=(Token)match(input,50,FOLLOW_50_in_ruleContains6077); 
+            otherlv_0=(Token)match(input,50,FOLLOW_50_in_ruleContains6099); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getContainsAccess().getContainsKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2763:1: ( ( ruleQualifiedName ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2764:1: ( ruleQualifiedName )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2781:1: ( ( ruleQualifiedName ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2782:1: ( ruleQualifiedName )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2764:1: ( ruleQualifiedName )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2765:3: ruleQualifiedName
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2782:1: ( ruleQualifiedName )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2783:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -7063,7 +7114,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getContainsAccess().getModelReferenceEReferenceCrossReference_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleContains6100);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleContains6122);
             ruleQualifiedName();
 
             state._fsp--;
@@ -7077,24 +7128,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2778:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
-            int alt56=2;
-            int LA56_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2796:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
+            int alt57=2;
+            int LA57_0 = input.LA(1);
 
-            if ( (LA56_0==22) ) {
-                alt56=1;
+            if ( (LA57_0==22) ) {
+                alt57=1;
             }
-            switch (alt56) {
+            switch (alt57) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2779:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2797:1: (lv_conditional_2_0= ruleFeatureConditional )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2779:1: (lv_conditional_2_0= ruleFeatureConditional )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2780:3: lv_conditional_2_0= ruleFeatureConditional
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2797:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2798:3: lv_conditional_2_0= ruleFeatureConditional
                     {
                      
                     	        newCompositeNode(grammarAccess.getContainsAccess().getConditionalFeatureConditionalParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleContains6121);
+                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleContains6143);
                     lv_conditional_2_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -7119,24 +7170,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2796:3: ( (lv_layout_3_0= ruleContainerLayout ) )?
-            int alt57=2;
-            int LA57_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2814:3: ( (lv_layout_3_0= ruleContainerLayout ) )?
+            int alt58=2;
+            int LA58_0 = input.LA(1);
 
-            if ( (LA57_0==70||(LA57_0>=90 && LA57_0<=91)) ) {
-                alt57=1;
+            if ( (LA58_0==70||(LA58_0>=90 && LA58_0<=91)) ) {
+                alt58=1;
             }
-            switch (alt57) {
+            switch (alt58) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2797:1: (lv_layout_3_0= ruleContainerLayout )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2815:1: (lv_layout_3_0= ruleContainerLayout )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2797:1: (lv_layout_3_0= ruleContainerLayout )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2798:3: lv_layout_3_0= ruleContainerLayout
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2815:1: (lv_layout_3_0= ruleContainerLayout )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2816:3: lv_layout_3_0= ruleContainerLayout
                     {
                      
                     	        newCompositeNode(grammarAccess.getContainsAccess().getLayoutContainerLayoutEnumRuleCall_3_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleContainerLayout_in_ruleContains6143);
+                    pushFollow(FOLLOW_ruleContainerLayout_in_ruleContains6165);
                     lv_layout_3_0=ruleContainerLayout();
 
                     state._fsp--;
@@ -7161,7 +7212,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,37,FOLLOW_37_in_ruleContains6156); 
+            otherlv_4=(Token)match(input,37,FOLLOW_37_in_ruleContains6178); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getContainsAccess().getSemicolonKeyword_4());
                 
@@ -7186,7 +7237,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleValue"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2826:1: entryRuleValue returns [EObject current=null] : iv_ruleValue= ruleValue EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2844:1: entryRuleValue returns [EObject current=null] : iv_ruleValue= ruleValue EOF ;
     public final EObject entryRuleValue() throws RecognitionException {
         EObject current = null;
 
@@ -7194,17 +7245,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2827:2: (iv_ruleValue= ruleValue EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2828:2: iv_ruleValue= ruleValue EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2845:2: (iv_ruleValue= ruleValue EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2846:2: iv_ruleValue= ruleValue EOF
             {
              newCompositeNode(grammarAccess.getValueRule()); 
-            pushFollow(FOLLOW_ruleValue_in_entryRuleValue6192);
+            pushFollow(FOLLOW_ruleValue_in_entryRuleValue6214);
             iv_ruleValue=ruleValue();
 
             state._fsp--;
 
              current =iv_ruleValue; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleValue6202); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleValue6224); 
 
             }
 
@@ -7222,7 +7273,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleValue"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2835:1: ruleValue returns [EObject current=null] : (this_IntValue_0= ruleIntValue | this_DoubleValue_1= ruleDoubleValue | this_StringValue_2= ruleStringValue | this_BooleanValue_3= ruleBooleanValue | this_EnumValue_4= ruleEnumValue ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2853:1: ruleValue returns [EObject current=null] : (this_IntValue_0= ruleIntValue | this_DoubleValue_1= ruleDoubleValue | this_StringValue_2= ruleStringValue | this_BooleanValue_3= ruleBooleanValue | this_EnumValue_4= ruleEnumValue ) ;
     public final EObject ruleValue() throws RecognitionException {
         EObject current = null;
 
@@ -7240,25 +7291,25 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2838:28: ( (this_IntValue_0= ruleIntValue | this_DoubleValue_1= ruleDoubleValue | this_StringValue_2= ruleStringValue | this_BooleanValue_3= ruleBooleanValue | this_EnumValue_4= ruleEnumValue ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2839:1: (this_IntValue_0= ruleIntValue | this_DoubleValue_1= ruleDoubleValue | this_StringValue_2= ruleStringValue | this_BooleanValue_3= ruleBooleanValue | this_EnumValue_4= ruleEnumValue )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2856:28: ( (this_IntValue_0= ruleIntValue | this_DoubleValue_1= ruleDoubleValue | this_StringValue_2= ruleStringValue | this_BooleanValue_3= ruleBooleanValue | this_EnumValue_4= ruleEnumValue ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2857:1: (this_IntValue_0= ruleIntValue | this_DoubleValue_1= ruleDoubleValue | this_StringValue_2= ruleStringValue | this_BooleanValue_3= ruleBooleanValue | this_EnumValue_4= ruleEnumValue )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2839:1: (this_IntValue_0= ruleIntValue | this_DoubleValue_1= ruleDoubleValue | this_StringValue_2= ruleStringValue | this_BooleanValue_3= ruleBooleanValue | this_EnumValue_4= ruleEnumValue )
-            int alt58=5;
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2857:1: (this_IntValue_0= ruleIntValue | this_DoubleValue_1= ruleDoubleValue | this_StringValue_2= ruleStringValue | this_BooleanValue_3= ruleBooleanValue | this_EnumValue_4= ruleEnumValue )
+            int alt59=5;
             switch ( input.LA(1) ) {
             case RULE_INT:
                 {
-                int LA58_1 = input.LA(2);
+                int LA59_1 = input.LA(2);
 
-                if ( (LA58_1==EOF||LA58_1==37||LA58_1==70||(LA58_1>=90 && LA58_1<=91)) ) {
-                    alt58=1;
+                if ( (LA59_1==14) ) {
+                    alt59=2;
                 }
-                else if ( (LA58_1==14) ) {
-                    alt58=2;
+                else if ( (LA59_1==EOF||LA59_1==37||LA59_1==70||(LA59_1>=90 && LA59_1<=91)) ) {
+                    alt59=1;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 58, 1, input);
+                        new NoViableAltException("", 59, 1, input);
 
                     throw nvae;
                 }
@@ -7267,35 +7318,35 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             case RULE_STRING:
             case 51:
                 {
-                alt58=3;
+                alt59=3;
                 }
                 break;
             case 94:
             case 95:
                 {
-                alt58=4;
+                alt59=4;
                 }
                 break;
             case RULE_ID:
                 {
-                alt58=5;
+                alt59=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 58, 0, input);
+                    new NoViableAltException("", 59, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt58) {
+            switch (alt59) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2840:5: this_IntValue_0= ruleIntValue
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2858:5: this_IntValue_0= ruleIntValue
                     {
                      
                             newCompositeNode(grammarAccess.getValueAccess().getIntValueParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleIntValue_in_ruleValue6249);
+                    pushFollow(FOLLOW_ruleIntValue_in_ruleValue6271);
                     this_IntValue_0=ruleIntValue();
 
                     state._fsp--;
@@ -7308,12 +7359,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2850:5: this_DoubleValue_1= ruleDoubleValue
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2868:5: this_DoubleValue_1= ruleDoubleValue
                     {
                      
                             newCompositeNode(grammarAccess.getValueAccess().getDoubleValueParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleDoubleValue_in_ruleValue6276);
+                    pushFollow(FOLLOW_ruleDoubleValue_in_ruleValue6298);
                     this_DoubleValue_1=ruleDoubleValue();
 
                     state._fsp--;
@@ -7326,12 +7377,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2860:5: this_StringValue_2= ruleStringValue
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2878:5: this_StringValue_2= ruleStringValue
                     {
                      
                             newCompositeNode(grammarAccess.getValueAccess().getStringValueParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleStringValue_in_ruleValue6303);
+                    pushFollow(FOLLOW_ruleStringValue_in_ruleValue6325);
                     this_StringValue_2=ruleStringValue();
 
                     state._fsp--;
@@ -7344,12 +7395,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2870:5: this_BooleanValue_3= ruleBooleanValue
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2888:5: this_BooleanValue_3= ruleBooleanValue
                     {
                      
                             newCompositeNode(grammarAccess.getValueAccess().getBooleanValueParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleBooleanValue_in_ruleValue6330);
+                    pushFollow(FOLLOW_ruleBooleanValue_in_ruleValue6352);
                     this_BooleanValue_3=ruleBooleanValue();
 
                     state._fsp--;
@@ -7362,12 +7413,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2880:5: this_EnumValue_4= ruleEnumValue
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2898:5: this_EnumValue_4= ruleEnumValue
                     {
                      
                             newCompositeNode(grammarAccess.getValueAccess().getEnumValueParserRuleCall_4()); 
                         
-                    pushFollow(FOLLOW_ruleEnumValue_in_ruleValue6357);
+                    pushFollow(FOLLOW_ruleEnumValue_in_ruleValue6379);
                     this_EnumValue_4=ruleEnumValue();
 
                     state._fsp--;
@@ -7400,7 +7451,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIntValue"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2896:1: entryRuleIntValue returns [EObject current=null] : iv_ruleIntValue= ruleIntValue EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2914:1: entryRuleIntValue returns [EObject current=null] : iv_ruleIntValue= ruleIntValue EOF ;
     public final EObject entryRuleIntValue() throws RecognitionException {
         EObject current = null;
 
@@ -7408,17 +7459,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2897:2: (iv_ruleIntValue= ruleIntValue EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2898:2: iv_ruleIntValue= ruleIntValue EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2915:2: (iv_ruleIntValue= ruleIntValue EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2916:2: iv_ruleIntValue= ruleIntValue EOF
             {
              newCompositeNode(grammarAccess.getIntValueRule()); 
-            pushFollow(FOLLOW_ruleIntValue_in_entryRuleIntValue6392);
+            pushFollow(FOLLOW_ruleIntValue_in_entryRuleIntValue6414);
             iv_ruleIntValue=ruleIntValue();
 
             state._fsp--;
 
              current =iv_ruleIntValue; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIntValue6402); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIntValue6424); 
 
             }
 
@@ -7436,7 +7487,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIntValue"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2905:1: ruleIntValue returns [EObject current=null] : ( (lv_value_0_0= RULE_INT ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2923:1: ruleIntValue returns [EObject current=null] : ( (lv_value_0_0= RULE_INT ) ) ;
     public final EObject ruleIntValue() throws RecognitionException {
         EObject current = null;
 
@@ -7445,16 +7496,16 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2908:28: ( ( (lv_value_0_0= RULE_INT ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2909:1: ( (lv_value_0_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2926:28: ( ( (lv_value_0_0= RULE_INT ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2927:1: ( (lv_value_0_0= RULE_INT ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2909:1: ( (lv_value_0_0= RULE_INT ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2910:1: (lv_value_0_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2927:1: ( (lv_value_0_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2928:1: (lv_value_0_0= RULE_INT )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2910:1: (lv_value_0_0= RULE_INT )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2911:3: lv_value_0_0= RULE_INT
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2928:1: (lv_value_0_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2929:3: lv_value_0_0= RULE_INT
             {
-            lv_value_0_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleIntValue6443); 
+            lv_value_0_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleIntValue6465); 
 
             			newLeafNode(lv_value_0_0, grammarAccess.getIntValueAccess().getValueINTTerminalRuleCall_0()); 
             		
@@ -7492,7 +7543,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDoubleValue"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2935:1: entryRuleDoubleValue returns [EObject current=null] : iv_ruleDoubleValue= ruleDoubleValue EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2953:1: entryRuleDoubleValue returns [EObject current=null] : iv_ruleDoubleValue= ruleDoubleValue EOF ;
     public final EObject entryRuleDoubleValue() throws RecognitionException {
         EObject current = null;
 
@@ -7500,17 +7551,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2936:2: (iv_ruleDoubleValue= ruleDoubleValue EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2937:2: iv_ruleDoubleValue= ruleDoubleValue EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2954:2: (iv_ruleDoubleValue= ruleDoubleValue EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2955:2: iv_ruleDoubleValue= ruleDoubleValue EOF
             {
              newCompositeNode(grammarAccess.getDoubleValueRule()); 
-            pushFollow(FOLLOW_ruleDoubleValue_in_entryRuleDoubleValue6483);
+            pushFollow(FOLLOW_ruleDoubleValue_in_entryRuleDoubleValue6505);
             iv_ruleDoubleValue=ruleDoubleValue();
 
             state._fsp--;
 
              current =iv_ruleDoubleValue; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDoubleValue6493); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDoubleValue6515); 
 
             }
 
@@ -7528,7 +7579,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDoubleValue"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2944:1: ruleDoubleValue returns [EObject current=null] : ( ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2962:1: ruleDoubleValue returns [EObject current=null] : ( ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) ) ) ;
     public final EObject ruleDoubleValue() throws RecognitionException {
         EObject current = null;
 
@@ -7539,19 +7590,19 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2947:28: ( ( ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2948:1: ( ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2965:28: ( ( ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2966:1: ( ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2948:1: ( ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2948:2: ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2966:1: ( ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2966:2: ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2948:2: ( (lv_valueInt_0_0= RULE_INT ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2949:1: (lv_valueInt_0_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2966:2: ( (lv_valueInt_0_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2967:1: (lv_valueInt_0_0= RULE_INT )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2949:1: (lv_valueInt_0_0= RULE_INT )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2950:3: lv_valueInt_0_0= RULE_INT
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2967:1: (lv_valueInt_0_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2968:3: lv_valueInt_0_0= RULE_INT
             {
-            lv_valueInt_0_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleDoubleValue6535); 
+            lv_valueInt_0_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleDoubleValue6557); 
 
             			newLeafNode(lv_valueInt_0_0, grammarAccess.getDoubleValueAccess().getValueIntINTTerminalRuleCall_0_0()); 
             		
@@ -7571,17 +7622,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,14,FOLLOW_14_in_ruleDoubleValue6552); 
+            otherlv_1=(Token)match(input,14,FOLLOW_14_in_ruleDoubleValue6574); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getDoubleValueAccess().getFullStopKeyword_1());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2970:1: ( (lv_valueDecimal_2_0= RULE_INT ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2971:1: (lv_valueDecimal_2_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2988:1: ( (lv_valueDecimal_2_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2989:1: (lv_valueDecimal_2_0= RULE_INT )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2971:1: (lv_valueDecimal_2_0= RULE_INT )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2972:3: lv_valueDecimal_2_0= RULE_INT
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2989:1: (lv_valueDecimal_2_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2990:3: lv_valueDecimal_2_0= RULE_INT
             {
-            lv_valueDecimal_2_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleDoubleValue6569); 
+            lv_valueDecimal_2_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleDoubleValue6591); 
 
             			newLeafNode(lv_valueDecimal_2_0, grammarAccess.getDoubleValueAccess().getValueDecimalINTTerminalRuleCall_2_0()); 
             		
@@ -7622,7 +7673,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStringValue"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2996:1: entryRuleStringValue returns [EObject current=null] : iv_ruleStringValue= ruleStringValue EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3014:1: entryRuleStringValue returns [EObject current=null] : iv_ruleStringValue= ruleStringValue EOF ;
     public final EObject entryRuleStringValue() throws RecognitionException {
         EObject current = null;
 
@@ -7630,17 +7681,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2997:2: (iv_ruleStringValue= ruleStringValue EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:2998:2: iv_ruleStringValue= ruleStringValue EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3015:2: (iv_ruleStringValue= ruleStringValue EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3016:2: iv_ruleStringValue= ruleStringValue EOF
             {
              newCompositeNode(grammarAccess.getStringValueRule()); 
-            pushFollow(FOLLOW_ruleStringValue_in_entryRuleStringValue6610);
+            pushFollow(FOLLOW_ruleStringValue_in_entryRuleStringValue6632);
             iv_ruleStringValue=ruleStringValue();
 
             state._fsp--;
 
              current =iv_ruleStringValue; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStringValue6620); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStringValue6642); 
 
             }
 
@@ -7658,7 +7709,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStringValue"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3005:1: ruleStringValue returns [EObject current=null] : ( ( (lv_null_0_0= 'null' ) ) | ( (lv_value_1_0= RULE_STRING ) ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3023:1: ruleStringValue returns [EObject current=null] : ( ( (lv_null_0_0= 'null' ) ) | ( (lv_value_1_0= RULE_STRING ) ) ) ;
     public final EObject ruleStringValue() throws RecognitionException {
         EObject current = null;
 
@@ -7668,36 +7719,36 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3008:28: ( ( ( (lv_null_0_0= 'null' ) ) | ( (lv_value_1_0= RULE_STRING ) ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3009:1: ( ( (lv_null_0_0= 'null' ) ) | ( (lv_value_1_0= RULE_STRING ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3026:28: ( ( ( (lv_null_0_0= 'null' ) ) | ( (lv_value_1_0= RULE_STRING ) ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3027:1: ( ( (lv_null_0_0= 'null' ) ) | ( (lv_value_1_0= RULE_STRING ) ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3009:1: ( ( (lv_null_0_0= 'null' ) ) | ( (lv_value_1_0= RULE_STRING ) ) )
-            int alt59=2;
-            int LA59_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3027:1: ( ( (lv_null_0_0= 'null' ) ) | ( (lv_value_1_0= RULE_STRING ) ) )
+            int alt60=2;
+            int LA60_0 = input.LA(1);
 
-            if ( (LA59_0==51) ) {
-                alt59=1;
+            if ( (LA60_0==51) ) {
+                alt60=1;
             }
-            else if ( (LA59_0==RULE_STRING) ) {
-                alt59=2;
+            else if ( (LA60_0==RULE_STRING) ) {
+                alt60=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 59, 0, input);
+                    new NoViableAltException("", 60, 0, input);
 
                 throw nvae;
             }
-            switch (alt59) {
+            switch (alt60) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3009:2: ( (lv_null_0_0= 'null' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3027:2: ( (lv_null_0_0= 'null' ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3009:2: ( (lv_null_0_0= 'null' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3010:1: (lv_null_0_0= 'null' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3027:2: ( (lv_null_0_0= 'null' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3028:1: (lv_null_0_0= 'null' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3010:1: (lv_null_0_0= 'null' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3011:3: lv_null_0_0= 'null'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3028:1: (lv_null_0_0= 'null' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3029:3: lv_null_0_0= 'null'
                     {
-                    lv_null_0_0=(Token)match(input,51,FOLLOW_51_in_ruleStringValue6663); 
+                    lv_null_0_0=(Token)match(input,51,FOLLOW_51_in_ruleStringValue6685); 
 
                             newLeafNode(lv_null_0_0, grammarAccess.getStringValueAccess().getNullNullKeyword_0_0());
                         
@@ -7717,15 +7768,15 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3025:6: ( (lv_value_1_0= RULE_STRING ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3043:6: ( (lv_value_1_0= RULE_STRING ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3025:6: ( (lv_value_1_0= RULE_STRING ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3026:1: (lv_value_1_0= RULE_STRING )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3043:6: ( (lv_value_1_0= RULE_STRING ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3044:1: (lv_value_1_0= RULE_STRING )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3026:1: (lv_value_1_0= RULE_STRING )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3027:3: lv_value_1_0= RULE_STRING
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3044:1: (lv_value_1_0= RULE_STRING )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3045:3: lv_value_1_0= RULE_STRING
                     {
-                    lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleStringValue6699); 
+                    lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleStringValue6721); 
 
                     			newLeafNode(lv_value_1_0, grammarAccess.getStringValueAccess().getValueSTRINGTerminalRuleCall_1_0()); 
                     		
@@ -7769,7 +7820,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBooleanValue"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3051:1: entryRuleBooleanValue returns [EObject current=null] : iv_ruleBooleanValue= ruleBooleanValue EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3069:1: entryRuleBooleanValue returns [EObject current=null] : iv_ruleBooleanValue= ruleBooleanValue EOF ;
     public final EObject entryRuleBooleanValue() throws RecognitionException {
         EObject current = null;
 
@@ -7777,17 +7828,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3052:2: (iv_ruleBooleanValue= ruleBooleanValue EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3053:2: iv_ruleBooleanValue= ruleBooleanValue EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3070:2: (iv_ruleBooleanValue= ruleBooleanValue EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3071:2: iv_ruleBooleanValue= ruleBooleanValue EOF
             {
              newCompositeNode(grammarAccess.getBooleanValueRule()); 
-            pushFollow(FOLLOW_ruleBooleanValue_in_entryRuleBooleanValue6740);
+            pushFollow(FOLLOW_ruleBooleanValue_in_entryRuleBooleanValue6762);
             iv_ruleBooleanValue=ruleBooleanValue();
 
             state._fsp--;
 
              current =iv_ruleBooleanValue; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBooleanValue6750); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBooleanValue6772); 
 
             }
 
@@ -7805,7 +7856,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBooleanValue"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3060:1: ruleBooleanValue returns [EObject current=null] : ( (lv_value_0_0= ruleBooleanLiteral ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3078:1: ruleBooleanValue returns [EObject current=null] : ( (lv_value_0_0= ruleBooleanLiteral ) ) ;
     public final EObject ruleBooleanValue() throws RecognitionException {
         EObject current = null;
 
@@ -7815,19 +7866,19 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3063:28: ( ( (lv_value_0_0= ruleBooleanLiteral ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3064:1: ( (lv_value_0_0= ruleBooleanLiteral ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3081:28: ( ( (lv_value_0_0= ruleBooleanLiteral ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3082:1: ( (lv_value_0_0= ruleBooleanLiteral ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3064:1: ( (lv_value_0_0= ruleBooleanLiteral ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3065:1: (lv_value_0_0= ruleBooleanLiteral )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3082:1: ( (lv_value_0_0= ruleBooleanLiteral ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3083:1: (lv_value_0_0= ruleBooleanLiteral )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3065:1: (lv_value_0_0= ruleBooleanLiteral )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3066:3: lv_value_0_0= ruleBooleanLiteral
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3083:1: (lv_value_0_0= ruleBooleanLiteral )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3084:3: lv_value_0_0= ruleBooleanLiteral
             {
              
             	        newCompositeNode(grammarAccess.getBooleanValueAccess().getValueBooleanLiteralEnumRuleCall_0()); 
             	    
-            pushFollow(FOLLOW_ruleBooleanLiteral_in_ruleBooleanValue6795);
+            pushFollow(FOLLOW_ruleBooleanLiteral_in_ruleBooleanValue6817);
             lv_value_0_0=ruleBooleanLiteral();
 
             state._fsp--;
@@ -7867,7 +7918,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEnumValue"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3090:1: entryRuleEnumValue returns [EObject current=null] : iv_ruleEnumValue= ruleEnumValue EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3108:1: entryRuleEnumValue returns [EObject current=null] : iv_ruleEnumValue= ruleEnumValue EOF ;
     public final EObject entryRuleEnumValue() throws RecognitionException {
         EObject current = null;
 
@@ -7875,17 +7926,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3091:2: (iv_ruleEnumValue= ruleEnumValue EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3092:2: iv_ruleEnumValue= ruleEnumValue EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3109:2: (iv_ruleEnumValue= ruleEnumValue EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3110:2: iv_ruleEnumValue= ruleEnumValue EOF
             {
              newCompositeNode(grammarAccess.getEnumValueRule()); 
-            pushFollow(FOLLOW_ruleEnumValue_in_entryRuleEnumValue6830);
+            pushFollow(FOLLOW_ruleEnumValue_in_entryRuleEnumValue6852);
             iv_ruleEnumValue=ruleEnumValue();
 
             state._fsp--;
 
              current =iv_ruleEnumValue; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEnumValue6840); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEnumValue6862); 
 
             }
 
@@ -7903,7 +7954,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEnumValue"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3099:1: ruleEnumValue returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3117:1: ruleEnumValue returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject ruleEnumValue() throws RecognitionException {
         EObject current = null;
 
@@ -7912,16 +7963,16 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3102:28: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3103:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3120:28: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3121:1: ( (lv_name_0_0= RULE_ID ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3103:1: ( (lv_name_0_0= RULE_ID ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3104:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3121:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3122:1: (lv_name_0_0= RULE_ID )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3104:1: (lv_name_0_0= RULE_ID )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3105:3: lv_name_0_0= RULE_ID
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3122:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3123:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEnumValue6881); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEnumValue6903); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getEnumValueAccess().getNameIDTerminalRuleCall_0()); 
             		
@@ -7959,7 +8010,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLabel"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3131:1: entryRuleLabel returns [EObject current=null] : iv_ruleLabel= ruleLabel EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3149:1: entryRuleLabel returns [EObject current=null] : iv_ruleLabel= ruleLabel EOF ;
     public final EObject entryRuleLabel() throws RecognitionException {
         EObject current = null;
 
@@ -7967,17 +8018,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3132:2: (iv_ruleLabel= ruleLabel EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3133:2: iv_ruleLabel= ruleLabel EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3150:2: (iv_ruleLabel= ruleLabel EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3151:2: iv_ruleLabel= ruleLabel EOF
             {
              newCompositeNode(grammarAccess.getLabelRule()); 
-            pushFollow(FOLLOW_ruleLabel_in_entryRuleLabel6923);
+            pushFollow(FOLLOW_ruleLabel_in_entryRuleLabel6945);
             iv_ruleLabel=ruleLabel();
 
             state._fsp--;
 
              current =iv_ruleLabel; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLabel6933); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLabel6955); 
 
             }
 
@@ -7995,7 +8046,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLabel"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3140:1: ruleLabel returns [EObject current=null] : ( () otherlv_1= 'label' ( (lv_editable_2_0= 'editable' ) )? ( ( (lv_styled_3_0= '+' ) ) ( (otherlv_4= RULE_ID ) ) )? otherlv_5= '{' ( (lv_features_6_0= ruleLabelFeature ) )* ( ( (lv_composite_7_0= 'children:' ) ) ( (lv_children_8_0= ruleConnectableElement ) )+ )? otherlv_9= '}' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3158:1: ruleLabel returns [EObject current=null] : ( () otherlv_1= 'label' ( (lv_editable_2_0= 'editable' ) )? ( ( (lv_styled_3_0= '+' ) ) ( (otherlv_4= RULE_ID ) ) )? otherlv_5= '{' ( (lv_features_6_0= ruleLabelFeature ) )* ( ( (lv_composite_7_0= 'children:' ) ) ( (lv_children_8_0= ruleConnectableElement ) )+ )? otherlv_9= '}' ) ;
     public final EObject ruleLabel() throws RecognitionException {
         EObject current = null;
 
@@ -8014,14 +8065,14 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3143:28: ( ( () otherlv_1= 'label' ( (lv_editable_2_0= 'editable' ) )? ( ( (lv_styled_3_0= '+' ) ) ( (otherlv_4= RULE_ID ) ) )? otherlv_5= '{' ( (lv_features_6_0= ruleLabelFeature ) )* ( ( (lv_composite_7_0= 'children:' ) ) ( (lv_children_8_0= ruleConnectableElement ) )+ )? otherlv_9= '}' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3144:1: ( () otherlv_1= 'label' ( (lv_editable_2_0= 'editable' ) )? ( ( (lv_styled_3_0= '+' ) ) ( (otherlv_4= RULE_ID ) ) )? otherlv_5= '{' ( (lv_features_6_0= ruleLabelFeature ) )* ( ( (lv_composite_7_0= 'children:' ) ) ( (lv_children_8_0= ruleConnectableElement ) )+ )? otherlv_9= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3161:28: ( ( () otherlv_1= 'label' ( (lv_editable_2_0= 'editable' ) )? ( ( (lv_styled_3_0= '+' ) ) ( (otherlv_4= RULE_ID ) ) )? otherlv_5= '{' ( (lv_features_6_0= ruleLabelFeature ) )* ( ( (lv_composite_7_0= 'children:' ) ) ( (lv_children_8_0= ruleConnectableElement ) )+ )? otherlv_9= '}' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3162:1: ( () otherlv_1= 'label' ( (lv_editable_2_0= 'editable' ) )? ( ( (lv_styled_3_0= '+' ) ) ( (otherlv_4= RULE_ID ) ) )? otherlv_5= '{' ( (lv_features_6_0= ruleLabelFeature ) )* ( ( (lv_composite_7_0= 'children:' ) ) ( (lv_children_8_0= ruleConnectableElement ) )+ )? otherlv_9= '}' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3144:1: ( () otherlv_1= 'label' ( (lv_editable_2_0= 'editable' ) )? ( ( (lv_styled_3_0= '+' ) ) ( (otherlv_4= RULE_ID ) ) )? otherlv_5= '{' ( (lv_features_6_0= ruleLabelFeature ) )* ( ( (lv_composite_7_0= 'children:' ) ) ( (lv_children_8_0= ruleConnectableElement ) )+ )? otherlv_9= '}' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3144:2: () otherlv_1= 'label' ( (lv_editable_2_0= 'editable' ) )? ( ( (lv_styled_3_0= '+' ) ) ( (otherlv_4= RULE_ID ) ) )? otherlv_5= '{' ( (lv_features_6_0= ruleLabelFeature ) )* ( ( (lv_composite_7_0= 'children:' ) ) ( (lv_children_8_0= ruleConnectableElement ) )+ )? otherlv_9= '}'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3162:1: ( () otherlv_1= 'label' ( (lv_editable_2_0= 'editable' ) )? ( ( (lv_styled_3_0= '+' ) ) ( (otherlv_4= RULE_ID ) ) )? otherlv_5= '{' ( (lv_features_6_0= ruleLabelFeature ) )* ( ( (lv_composite_7_0= 'children:' ) ) ( (lv_children_8_0= ruleConnectableElement ) )+ )? otherlv_9= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3162:2: () otherlv_1= 'label' ( (lv_editable_2_0= 'editable' ) )? ( ( (lv_styled_3_0= '+' ) ) ( (otherlv_4= RULE_ID ) ) )? otherlv_5= '{' ( (lv_features_6_0= ruleLabelFeature ) )* ( ( (lv_composite_7_0= 'children:' ) ) ( (lv_children_8_0= ruleConnectableElement ) )+ )? otherlv_9= '}'
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3144:2: ()
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3145:5: 
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3162:2: ()
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3163:5: 
             {
 
                     current = forceCreateModelElement(
@@ -8031,25 +8082,25 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,52,FOLLOW_52_in_ruleLabel6979); 
+            otherlv_1=(Token)match(input,52,FOLLOW_52_in_ruleLabel7001); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getLabelAccess().getLabelKeyword_1());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3154:1: ( (lv_editable_2_0= 'editable' ) )?
-            int alt60=2;
-            int LA60_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3172:1: ( (lv_editable_2_0= 'editable' ) )?
+            int alt61=2;
+            int LA61_0 = input.LA(1);
 
-            if ( (LA60_0==53) ) {
-                alt60=1;
+            if ( (LA61_0==53) ) {
+                alt61=1;
             }
-            switch (alt60) {
+            switch (alt61) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3155:1: (lv_editable_2_0= 'editable' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3173:1: (lv_editable_2_0= 'editable' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3155:1: (lv_editable_2_0= 'editable' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3156:3: lv_editable_2_0= 'editable'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3173:1: (lv_editable_2_0= 'editable' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3174:3: lv_editable_2_0= 'editable'
                     {
-                    lv_editable_2_0=(Token)match(input,53,FOLLOW_53_in_ruleLabel6997); 
+                    lv_editable_2_0=(Token)match(input,53,FOLLOW_53_in_ruleLabel7019); 
 
                             newLeafNode(lv_editable_2_0, grammarAccess.getLabelAccess().getEditableEditableKeyword_2_0());
                         
@@ -8068,24 +8119,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3169:3: ( ( (lv_styled_3_0= '+' ) ) ( (otherlv_4= RULE_ID ) ) )?
-            int alt61=2;
-            int LA61_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3187:3: ( ( (lv_styled_3_0= '+' ) ) ( (otherlv_4= RULE_ID ) ) )?
+            int alt62=2;
+            int LA62_0 = input.LA(1);
 
-            if ( (LA61_0==31) ) {
-                alt61=1;
+            if ( (LA62_0==31) ) {
+                alt62=1;
             }
-            switch (alt61) {
+            switch (alt62) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3169:4: ( (lv_styled_3_0= '+' ) ) ( (otherlv_4= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3187:4: ( (lv_styled_3_0= '+' ) ) ( (otherlv_4= RULE_ID ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3169:4: ( (lv_styled_3_0= '+' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3170:1: (lv_styled_3_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3187:4: ( (lv_styled_3_0= '+' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3188:1: (lv_styled_3_0= '+' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3170:1: (lv_styled_3_0= '+' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3171:3: lv_styled_3_0= '+'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3188:1: (lv_styled_3_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3189:3: lv_styled_3_0= '+'
                     {
-                    lv_styled_3_0=(Token)match(input,31,FOLLOW_31_in_ruleLabel7030); 
+                    lv_styled_3_0=(Token)match(input,31,FOLLOW_31_in_ruleLabel7052); 
 
                             newLeafNode(lv_styled_3_0, grammarAccess.getLabelAccess().getStyledPlusSignKeyword_3_0_0());
                         
@@ -8101,18 +8152,18 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3184:2: ( (otherlv_4= RULE_ID ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3185:1: (otherlv_4= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3202:2: ( (otherlv_4= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3203:1: (otherlv_4= RULE_ID )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3185:1: (otherlv_4= RULE_ID )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3186:3: otherlv_4= RULE_ID
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3203:1: (otherlv_4= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3204:3: otherlv_4= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getLabelRule());
                     	        }
                             
-                    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLabel7063); 
+                    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLabel7085); 
 
                     		newLeafNode(otherlv_4, grammarAccess.getLabelAccess().getStyleStyleCrossReference_3_1_0()); 
                     	
@@ -8128,32 +8179,32 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,17,FOLLOW_17_in_ruleLabel7077); 
+            otherlv_5=(Token)match(input,17,FOLLOW_17_in_ruleLabel7099); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getLabelAccess().getLeftCurlyBracketKeyword_4());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3201:1: ( (lv_features_6_0= ruleLabelFeature ) )*
-            loop62:
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3219:1: ( (lv_features_6_0= ruleLabelFeature ) )*
+            loop63:
             do {
-                int alt62=2;
-                int LA62_0 = input.LA(1);
+                int alt63=2;
+                int LA63_0 = input.LA(1);
 
-                if ( ((LA62_0>=56 && LA62_0<=57)||LA62_0==59||LA62_0==62||(LA62_0>=64 && LA62_0<=67)) ) {
-                    alt62=1;
+                if ( ((LA63_0>=56 && LA63_0<=57)||LA63_0==59||LA63_0==62||(LA63_0>=64 && LA63_0<=67)) ) {
+                    alt63=1;
                 }
 
 
-                switch (alt62) {
+                switch (alt63) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3202:1: (lv_features_6_0= ruleLabelFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3220:1: (lv_features_6_0= ruleLabelFeature )
             	    {
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3202:1: (lv_features_6_0= ruleLabelFeature )
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3203:3: lv_features_6_0= ruleLabelFeature
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3220:1: (lv_features_6_0= ruleLabelFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3221:3: lv_features_6_0= ruleLabelFeature
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getLabelAccess().getFeaturesLabelFeatureParserRuleCall_5_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleLabelFeature_in_ruleLabel7098);
+            	    pushFollow(FOLLOW_ruleLabelFeature_in_ruleLabel7120);
             	    lv_features_6_0=ruleLabelFeature();
 
             	    state._fsp--;
@@ -8177,28 +8228,28 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop62;
+            	    break loop63;
                 }
             } while (true);
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3219:3: ( ( (lv_composite_7_0= 'children:' ) ) ( (lv_children_8_0= ruleConnectableElement ) )+ )?
-            int alt64=2;
-            int LA64_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3237:3: ( ( (lv_composite_7_0= 'children:' ) ) ( (lv_children_8_0= ruleConnectableElement ) )+ )?
+            int alt65=2;
+            int LA65_0 = input.LA(1);
 
-            if ( (LA64_0==42) ) {
-                alt64=1;
+            if ( (LA65_0==42) ) {
+                alt65=1;
             }
-            switch (alt64) {
+            switch (alt65) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3219:4: ( (lv_composite_7_0= 'children:' ) ) ( (lv_children_8_0= ruleConnectableElement ) )+
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3237:4: ( (lv_composite_7_0= 'children:' ) ) ( (lv_children_8_0= ruleConnectableElement ) )+
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3219:4: ( (lv_composite_7_0= 'children:' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3220:1: (lv_composite_7_0= 'children:' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3237:4: ( (lv_composite_7_0= 'children:' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3238:1: (lv_composite_7_0= 'children:' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3220:1: (lv_composite_7_0= 'children:' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3221:3: lv_composite_7_0= 'children:'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3238:1: (lv_composite_7_0= 'children:' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3239:3: lv_composite_7_0= 'children:'
                     {
-                    lv_composite_7_0=(Token)match(input,42,FOLLOW_42_in_ruleLabel7118); 
+                    lv_composite_7_0=(Token)match(input,42,FOLLOW_42_in_ruleLabel7140); 
 
                             newLeafNode(lv_composite_7_0, grammarAccess.getLabelAccess().getCompositeChildrenKeyword_6_0_0());
                         
@@ -8214,29 +8265,29 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3234:2: ( (lv_children_8_0= ruleConnectableElement ) )+
-                    int cnt63=0;
-                    loop63:
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3252:2: ( (lv_children_8_0= ruleConnectableElement ) )+
+                    int cnt64=0;
+                    loop64:
                     do {
-                        int alt63=2;
-                        int LA63_0 = input.LA(1);
+                        int alt64=2;
+                        int LA64_0 = input.LA(1);
 
-                        if ( (LA63_0==40||(LA63_0>=43 && LA63_0<=49)||LA63_0==52||(LA63_0>=54 && LA63_0<=55)) ) {
-                            alt63=1;
+                        if ( (LA64_0==40||(LA64_0>=43 && LA64_0<=49)||LA64_0==52||(LA64_0>=54 && LA64_0<=55)) ) {
+                            alt64=1;
                         }
 
 
-                        switch (alt63) {
+                        switch (alt64) {
                     	case 1 :
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3235:1: (lv_children_8_0= ruleConnectableElement )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3253:1: (lv_children_8_0= ruleConnectableElement )
                     	    {
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3235:1: (lv_children_8_0= ruleConnectableElement )
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3236:3: lv_children_8_0= ruleConnectableElement
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3253:1: (lv_children_8_0= ruleConnectableElement )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3254:3: lv_children_8_0= ruleConnectableElement
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getLabelAccess().getChildrenConnectableElementParserRuleCall_6_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleConnectableElement_in_ruleLabel7152);
+                    	    pushFollow(FOLLOW_ruleConnectableElement_in_ruleLabel7174);
                     	    lv_children_8_0=ruleConnectableElement();
 
                     	    state._fsp--;
@@ -8260,12 +8311,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    if ( cnt63 >= 1 ) break loop63;
+                    	    if ( cnt64 >= 1 ) break loop64;
                                 EarlyExitException eee =
-                                    new EarlyExitException(63, input);
+                                    new EarlyExitException(64, input);
                                 throw eee;
                         }
-                        cnt63++;
+                        cnt64++;
                     } while (true);
 
 
@@ -8274,7 +8325,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,18,FOLLOW_18_in_ruleLabel7167); 
+            otherlv_9=(Token)match(input,18,FOLLOW_18_in_ruleLabel7189); 
 
                 	newLeafNode(otherlv_9, grammarAccess.getLabelAccess().getRightCurlyBracketKeyword_7());
                 
@@ -8299,7 +8350,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLabelFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3264:1: entryRuleLabelFeature returns [EObject current=null] : iv_ruleLabelFeature= ruleLabelFeature EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3282:1: entryRuleLabelFeature returns [EObject current=null] : iv_ruleLabelFeature= ruleLabelFeature EOF ;
     public final EObject entryRuleLabelFeature() throws RecognitionException {
         EObject current = null;
 
@@ -8307,17 +8358,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3265:2: (iv_ruleLabelFeature= ruleLabelFeature EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3266:2: iv_ruleLabelFeature= ruleLabelFeature EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3283:2: (iv_ruleLabelFeature= ruleLabelFeature EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3284:2: iv_ruleLabelFeature= ruleLabelFeature EOF
             {
              newCompositeNode(grammarAccess.getLabelFeatureRule()); 
-            pushFollow(FOLLOW_ruleLabelFeature_in_entryRuleLabelFeature7203);
+            pushFollow(FOLLOW_ruleLabelFeature_in_entryRuleLabelFeature7225);
             iv_ruleLabelFeature=ruleLabelFeature();
 
             state._fsp--;
 
              current =iv_ruleLabelFeature; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLabelFeature7213); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLabelFeature7235); 
 
             }
 
@@ -8335,7 +8386,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLabelFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3273:1: ruleLabelFeature returns [EObject current=null] : (this_TextValue_0= ruleTextValue | this_Foreground_1= ruleForeground | this_Background_2= ruleBackground | this_FontFace_3= ruleFontFace | this_FontSize_4= ruleFontSize | this_FontStyle_5= ruleFontStyle | this_Size_6= ruleSize | this_Position_7= rulePosition ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3291:1: ruleLabelFeature returns [EObject current=null] : (this_TextValue_0= ruleTextValue | this_Foreground_1= ruleForeground | this_Background_2= ruleBackground | this_FontFace_3= ruleFontFace | this_FontSize_4= ruleFontSize | this_FontStyle_5= ruleFontStyle | this_Size_6= ruleSize | this_Position_7= rulePosition ) ;
     public final EObject ruleLabelFeature() throws RecognitionException {
         EObject current = null;
 
@@ -8359,67 +8410,67 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3276:28: ( (this_TextValue_0= ruleTextValue | this_Foreground_1= ruleForeground | this_Background_2= ruleBackground | this_FontFace_3= ruleFontFace | this_FontSize_4= ruleFontSize | this_FontStyle_5= ruleFontStyle | this_Size_6= ruleSize | this_Position_7= rulePosition ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3277:1: (this_TextValue_0= ruleTextValue | this_Foreground_1= ruleForeground | this_Background_2= ruleBackground | this_FontFace_3= ruleFontFace | this_FontSize_4= ruleFontSize | this_FontStyle_5= ruleFontStyle | this_Size_6= ruleSize | this_Position_7= rulePosition )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3294:28: ( (this_TextValue_0= ruleTextValue | this_Foreground_1= ruleForeground | this_Background_2= ruleBackground | this_FontFace_3= ruleFontFace | this_FontSize_4= ruleFontSize | this_FontStyle_5= ruleFontStyle | this_Size_6= ruleSize | this_Position_7= rulePosition ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3295:1: (this_TextValue_0= ruleTextValue | this_Foreground_1= ruleForeground | this_Background_2= ruleBackground | this_FontFace_3= ruleFontFace | this_FontSize_4= ruleFontSize | this_FontStyle_5= ruleFontStyle | this_Size_6= ruleSize | this_Position_7= rulePosition )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3277:1: (this_TextValue_0= ruleTextValue | this_Foreground_1= ruleForeground | this_Background_2= ruleBackground | this_FontFace_3= ruleFontFace | this_FontSize_4= ruleFontSize | this_FontStyle_5= ruleFontStyle | this_Size_6= ruleSize | this_Position_7= rulePosition )
-            int alt65=8;
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3295:1: (this_TextValue_0= ruleTextValue | this_Foreground_1= ruleForeground | this_Background_2= ruleBackground | this_FontFace_3= ruleFontFace | this_FontSize_4= ruleFontSize | this_FontStyle_5= ruleFontStyle | this_Size_6= ruleSize | this_Position_7= rulePosition )
+            int alt66=8;
             switch ( input.LA(1) ) {
             case 64:
                 {
-                alt65=1;
+                alt66=1;
                 }
                 break;
             case 56:
                 {
-                alt65=2;
+                alt66=2;
                 }
                 break;
             case 57:
                 {
-                alt65=3;
+                alt66=3;
                 }
                 break;
             case 65:
                 {
-                alt65=4;
+                alt66=4;
                 }
                 break;
             case 66:
                 {
-                alt65=5;
+                alt66=5;
                 }
                 break;
             case 67:
                 {
-                alt65=6;
+                alt66=6;
                 }
                 break;
             case 59:
                 {
-                alt65=7;
+                alt66=7;
                 }
                 break;
             case 62:
                 {
-                alt65=8;
+                alt66=8;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 65, 0, input);
+                    new NoViableAltException("", 66, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt65) {
+            switch (alt66) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3278:5: this_TextValue_0= ruleTextValue
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3296:5: this_TextValue_0= ruleTextValue
                     {
                      
                             newCompositeNode(grammarAccess.getLabelFeatureAccess().getTextValueParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleTextValue_in_ruleLabelFeature7260);
+                    pushFollow(FOLLOW_ruleTextValue_in_ruleLabelFeature7282);
                     this_TextValue_0=ruleTextValue();
 
                     state._fsp--;
@@ -8432,12 +8483,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3288:5: this_Foreground_1= ruleForeground
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3306:5: this_Foreground_1= ruleForeground
                     {
                      
                             newCompositeNode(grammarAccess.getLabelFeatureAccess().getForegroundParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleForeground_in_ruleLabelFeature7287);
+                    pushFollow(FOLLOW_ruleForeground_in_ruleLabelFeature7309);
                     this_Foreground_1=ruleForeground();
 
                     state._fsp--;
@@ -8450,12 +8501,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3298:5: this_Background_2= ruleBackground
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3316:5: this_Background_2= ruleBackground
                     {
                      
                             newCompositeNode(grammarAccess.getLabelFeatureAccess().getBackgroundParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleBackground_in_ruleLabelFeature7314);
+                    pushFollow(FOLLOW_ruleBackground_in_ruleLabelFeature7336);
                     this_Background_2=ruleBackground();
 
                     state._fsp--;
@@ -8468,12 +8519,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3308:5: this_FontFace_3= ruleFontFace
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3326:5: this_FontFace_3= ruleFontFace
                     {
                      
                             newCompositeNode(grammarAccess.getLabelFeatureAccess().getFontFaceParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleFontFace_in_ruleLabelFeature7341);
+                    pushFollow(FOLLOW_ruleFontFace_in_ruleLabelFeature7363);
                     this_FontFace_3=ruleFontFace();
 
                     state._fsp--;
@@ -8486,12 +8537,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3318:5: this_FontSize_4= ruleFontSize
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3336:5: this_FontSize_4= ruleFontSize
                     {
                      
                             newCompositeNode(grammarAccess.getLabelFeatureAccess().getFontSizeParserRuleCall_4()); 
                         
-                    pushFollow(FOLLOW_ruleFontSize_in_ruleLabelFeature7368);
+                    pushFollow(FOLLOW_ruleFontSize_in_ruleLabelFeature7390);
                     this_FontSize_4=ruleFontSize();
 
                     state._fsp--;
@@ -8504,12 +8555,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3328:5: this_FontStyle_5= ruleFontStyle
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3346:5: this_FontStyle_5= ruleFontStyle
                     {
                      
                             newCompositeNode(grammarAccess.getLabelFeatureAccess().getFontStyleParserRuleCall_5()); 
                         
-                    pushFollow(FOLLOW_ruleFontStyle_in_ruleLabelFeature7395);
+                    pushFollow(FOLLOW_ruleFontStyle_in_ruleLabelFeature7417);
                     this_FontStyle_5=ruleFontStyle();
 
                     state._fsp--;
@@ -8522,12 +8573,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3338:5: this_Size_6= ruleSize
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3356:5: this_Size_6= ruleSize
                     {
                      
                             newCompositeNode(grammarAccess.getLabelFeatureAccess().getSizeParserRuleCall_6()); 
                         
-                    pushFollow(FOLLOW_ruleSize_in_ruleLabelFeature7422);
+                    pushFollow(FOLLOW_ruleSize_in_ruleLabelFeature7444);
                     this_Size_6=ruleSize();
 
                     state._fsp--;
@@ -8540,12 +8591,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3348:5: this_Position_7= rulePosition
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3366:5: this_Position_7= rulePosition
                     {
                      
                             newCompositeNode(grammarAccess.getLabelFeatureAccess().getPositionParserRuleCall_7()); 
                         
-                    pushFollow(FOLLOW_rulePosition_in_ruleLabelFeature7449);
+                    pushFollow(FOLLOW_rulePosition_in_ruleLabelFeature7471);
                     this_Position_7=rulePosition();
 
                     state._fsp--;
@@ -8578,7 +8629,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleImage"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3364:1: entryRuleImage returns [EObject current=null] : iv_ruleImage= ruleImage EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3382:1: entryRuleImage returns [EObject current=null] : iv_ruleImage= ruleImage EOF ;
     public final EObject entryRuleImage() throws RecognitionException {
         EObject current = null;
 
@@ -8586,17 +8637,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3365:2: (iv_ruleImage= ruleImage EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3366:2: iv_ruleImage= ruleImage EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3383:2: (iv_ruleImage= ruleImage EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3384:2: iv_ruleImage= ruleImage EOF
             {
              newCompositeNode(grammarAccess.getImageRule()); 
-            pushFollow(FOLLOW_ruleImage_in_entryRuleImage7484);
+            pushFollow(FOLLOW_ruleImage_in_entryRuleImage7506);
             iv_ruleImage=ruleImage();
 
             state._fsp--;
 
              current =iv_ruleImage; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleImage7494); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleImage7516); 
 
             }
 
@@ -8614,7 +8665,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImage"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3373:1: ruleImage returns [EObject current=null] : (otherlv_0= 'image' ( (lv_imageId_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleImageFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3391:1: ruleImage returns [EObject current=null] : (otherlv_0= 'image' ( (lv_imageId_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleImageFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) ;
     public final EObject ruleImage() throws RecognitionException {
         EObject current = null;
 
@@ -8633,23 +8684,23 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3376:28: ( (otherlv_0= 'image' ( (lv_imageId_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleImageFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3377:1: (otherlv_0= 'image' ( (lv_imageId_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleImageFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3394:28: ( (otherlv_0= 'image' ( (lv_imageId_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleImageFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3395:1: (otherlv_0= 'image' ( (lv_imageId_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleImageFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3377:1: (otherlv_0= 'image' ( (lv_imageId_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleImageFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3377:3: otherlv_0= 'image' ( (lv_imageId_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleImageFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3395:1: (otherlv_0= 'image' ( (lv_imageId_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleImageFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3395:3: otherlv_0= 'image' ( (lv_imageId_1_0= RULE_ID ) ) ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleImageFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}'
             {
-            otherlv_0=(Token)match(input,54,FOLLOW_54_in_ruleImage7531); 
+            otherlv_0=(Token)match(input,54,FOLLOW_54_in_ruleImage7553); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getImageAccess().getImageKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3381:1: ( (lv_imageId_1_0= RULE_ID ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3382:1: (lv_imageId_1_0= RULE_ID )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3399:1: ( (lv_imageId_1_0= RULE_ID ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3400:1: (lv_imageId_1_0= RULE_ID )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3382:1: (lv_imageId_1_0= RULE_ID )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3383:3: lv_imageId_1_0= RULE_ID
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3400:1: (lv_imageId_1_0= RULE_ID )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3401:3: lv_imageId_1_0= RULE_ID
             {
-            lv_imageId_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleImage7548); 
+            lv_imageId_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleImage7570); 
 
             			newLeafNode(lv_imageId_1_0, grammarAccess.getImageAccess().getImageIdIDTerminalRuleCall_1_0()); 
             		
@@ -8669,24 +8720,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3399:2: ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )?
-            int alt66=2;
-            int LA66_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3417:2: ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )?
+            int alt67=2;
+            int LA67_0 = input.LA(1);
 
-            if ( (LA66_0==31) ) {
-                alt66=1;
+            if ( (LA67_0==31) ) {
+                alt67=1;
             }
-            switch (alt66) {
+            switch (alt67) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3399:3: ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3417:3: ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3399:3: ( (lv_styled_2_0= '+' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3400:1: (lv_styled_2_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3417:3: ( (lv_styled_2_0= '+' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3418:1: (lv_styled_2_0= '+' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3400:1: (lv_styled_2_0= '+' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3401:3: lv_styled_2_0= '+'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3418:1: (lv_styled_2_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3419:3: lv_styled_2_0= '+'
                     {
-                    lv_styled_2_0=(Token)match(input,31,FOLLOW_31_in_ruleImage7572); 
+                    lv_styled_2_0=(Token)match(input,31,FOLLOW_31_in_ruleImage7594); 
 
                             newLeafNode(lv_styled_2_0, grammarAccess.getImageAccess().getStyledPlusSignKeyword_2_0_0());
                         
@@ -8702,18 +8753,18 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3414:2: ( (otherlv_3= RULE_ID ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3415:1: (otherlv_3= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3432:2: ( (otherlv_3= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3433:1: (otherlv_3= RULE_ID )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3415:1: (otherlv_3= RULE_ID )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3416:3: otherlv_3= RULE_ID
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3433:1: (otherlv_3= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3434:3: otherlv_3= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getImageRule());
                     	        }
                             
-                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleImage7605); 
+                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleImage7627); 
 
                     		newLeafNode(otherlv_3, grammarAccess.getImageAccess().getStyleStyleCrossReference_2_1_0()); 
                     	
@@ -8729,32 +8780,32 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleImage7619); 
+            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleImage7641); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getImageAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3431:1: ( (lv_features_5_0= ruleImageFeature ) )*
-            loop67:
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3449:1: ( (lv_features_5_0= ruleImageFeature ) )*
+            loop68:
             do {
-                int alt67=2;
-                int LA67_0 = input.LA(1);
+                int alt68=2;
+                int LA68_0 = input.LA(1);
 
-                if ( ((LA67_0>=58 && LA67_0<=59)||LA67_0==62) ) {
-                    alt67=1;
+                if ( ((LA68_0>=58 && LA68_0<=59)||LA68_0==62) ) {
+                    alt68=1;
                 }
 
 
-                switch (alt67) {
+                switch (alt68) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3432:1: (lv_features_5_0= ruleImageFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3450:1: (lv_features_5_0= ruleImageFeature )
             	    {
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3432:1: (lv_features_5_0= ruleImageFeature )
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3433:3: lv_features_5_0= ruleImageFeature
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3450:1: (lv_features_5_0= ruleImageFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3451:3: lv_features_5_0= ruleImageFeature
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getImageAccess().getFeaturesImageFeatureParserRuleCall_4_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleImageFeature_in_ruleImage7640);
+            	    pushFollow(FOLLOW_ruleImageFeature_in_ruleImage7662);
             	    lv_features_5_0=ruleImageFeature();
 
             	    state._fsp--;
@@ -8778,28 +8829,28 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop67;
+            	    break loop68;
                 }
             } while (true);
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3449:3: ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )?
-            int alt69=2;
-            int LA69_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3467:3: ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )?
+            int alt70=2;
+            int LA70_0 = input.LA(1);
 
-            if ( (LA69_0==42) ) {
-                alt69=1;
+            if ( (LA70_0==42) ) {
+                alt70=1;
             }
-            switch (alt69) {
+            switch (alt70) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3449:4: ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3467:4: ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3449:4: ( (lv_composite_6_0= 'children:' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3450:1: (lv_composite_6_0= 'children:' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3467:4: ( (lv_composite_6_0= 'children:' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3468:1: (lv_composite_6_0= 'children:' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3450:1: (lv_composite_6_0= 'children:' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3451:3: lv_composite_6_0= 'children:'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3468:1: (lv_composite_6_0= 'children:' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3469:3: lv_composite_6_0= 'children:'
                     {
-                    lv_composite_6_0=(Token)match(input,42,FOLLOW_42_in_ruleImage7660); 
+                    lv_composite_6_0=(Token)match(input,42,FOLLOW_42_in_ruleImage7682); 
 
                             newLeafNode(lv_composite_6_0, grammarAccess.getImageAccess().getCompositeChildrenKeyword_5_0_0());
                         
@@ -8815,29 +8866,29 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3464:2: ( (lv_children_7_0= ruleConnectableElement ) )+
-                    int cnt68=0;
-                    loop68:
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3482:2: ( (lv_children_7_0= ruleConnectableElement ) )+
+                    int cnt69=0;
+                    loop69:
                     do {
-                        int alt68=2;
-                        int LA68_0 = input.LA(1);
+                        int alt69=2;
+                        int LA69_0 = input.LA(1);
 
-                        if ( (LA68_0==40||(LA68_0>=43 && LA68_0<=49)||LA68_0==52||(LA68_0>=54 && LA68_0<=55)) ) {
-                            alt68=1;
+                        if ( (LA69_0==40||(LA69_0>=43 && LA69_0<=49)||LA69_0==52||(LA69_0>=54 && LA69_0<=55)) ) {
+                            alt69=1;
                         }
 
 
-                        switch (alt68) {
+                        switch (alt69) {
                     	case 1 :
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3465:1: (lv_children_7_0= ruleConnectableElement )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3483:1: (lv_children_7_0= ruleConnectableElement )
                     	    {
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3465:1: (lv_children_7_0= ruleConnectableElement )
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3466:3: lv_children_7_0= ruleConnectableElement
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3483:1: (lv_children_7_0= ruleConnectableElement )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3484:3: lv_children_7_0= ruleConnectableElement
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getImageAccess().getChildrenConnectableElementParserRuleCall_5_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleConnectableElement_in_ruleImage7694);
+                    	    pushFollow(FOLLOW_ruleConnectableElement_in_ruleImage7716);
                     	    lv_children_7_0=ruleConnectableElement();
 
                     	    state._fsp--;
@@ -8861,12 +8912,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    if ( cnt68 >= 1 ) break loop68;
+                    	    if ( cnt69 >= 1 ) break loop69;
                                 EarlyExitException eee =
-                                    new EarlyExitException(68, input);
+                                    new EarlyExitException(69, input);
                                 throw eee;
                         }
-                        cnt68++;
+                        cnt69++;
                     } while (true);
 
 
@@ -8875,7 +8926,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,18,FOLLOW_18_in_ruleImage7709); 
+            otherlv_8=(Token)match(input,18,FOLLOW_18_in_ruleImage7731); 
 
                 	newLeafNode(otherlv_8, grammarAccess.getImageAccess().getRightCurlyBracketKeyword_6());
                 
@@ -8900,7 +8951,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleImageFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3494:1: entryRuleImageFeature returns [EObject current=null] : iv_ruleImageFeature= ruleImageFeature EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3512:1: entryRuleImageFeature returns [EObject current=null] : iv_ruleImageFeature= ruleImageFeature EOF ;
     public final EObject entryRuleImageFeature() throws RecognitionException {
         EObject current = null;
 
@@ -8908,17 +8959,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3495:2: (iv_ruleImageFeature= ruleImageFeature EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3496:2: iv_ruleImageFeature= ruleImageFeature EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3513:2: (iv_ruleImageFeature= ruleImageFeature EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3514:2: iv_ruleImageFeature= ruleImageFeature EOF
             {
              newCompositeNode(grammarAccess.getImageFeatureRule()); 
-            pushFollow(FOLLOW_ruleImageFeature_in_entryRuleImageFeature7745);
+            pushFollow(FOLLOW_ruleImageFeature_in_entryRuleImageFeature7767);
             iv_ruleImageFeature=ruleImageFeature();
 
             state._fsp--;
 
              current =iv_ruleImageFeature; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleImageFeature7755); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleImageFeature7777); 
 
             }
 
@@ -8936,7 +8987,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImageFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3503:1: ruleImageFeature returns [EObject current=null] : (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Transparency_2= ruleTransparency ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3521:1: ruleImageFeature returns [EObject current=null] : (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Transparency_2= ruleTransparency ) ;
     public final EObject ruleImageFeature() throws RecognitionException {
         EObject current = null;
 
@@ -8950,42 +9001,42 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3506:28: ( (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Transparency_2= ruleTransparency ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3507:1: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Transparency_2= ruleTransparency )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3524:28: ( (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Transparency_2= ruleTransparency ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3525:1: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Transparency_2= ruleTransparency )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3507:1: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Transparency_2= ruleTransparency )
-            int alt70=3;
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3525:1: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Transparency_2= ruleTransparency )
+            int alt71=3;
             switch ( input.LA(1) ) {
             case 59:
                 {
-                alt70=1;
+                alt71=1;
                 }
                 break;
             case 62:
                 {
-                alt70=2;
+                alt71=2;
                 }
                 break;
             case 58:
                 {
-                alt70=3;
+                alt71=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 70, 0, input);
+                    new NoViableAltException("", 71, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt70) {
+            switch (alt71) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3508:5: this_Size_0= ruleSize
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3526:5: this_Size_0= ruleSize
                     {
                      
                             newCompositeNode(grammarAccess.getImageFeatureAccess().getSizeParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleSize_in_ruleImageFeature7802);
+                    pushFollow(FOLLOW_ruleSize_in_ruleImageFeature7824);
                     this_Size_0=ruleSize();
 
                     state._fsp--;
@@ -8998,12 +9049,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3518:5: this_Position_1= rulePosition
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3536:5: this_Position_1= rulePosition
                     {
                      
                             newCompositeNode(grammarAccess.getImageFeatureAccess().getPositionParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_rulePosition_in_ruleImageFeature7829);
+                    pushFollow(FOLLOW_rulePosition_in_ruleImageFeature7851);
                     this_Position_1=rulePosition();
 
                     state._fsp--;
@@ -9016,12 +9067,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3528:5: this_Transparency_2= ruleTransparency
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3546:5: this_Transparency_2= ruleTransparency
                     {
                      
                             newCompositeNode(grammarAccess.getImageFeatureAccess().getTransparencyParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleTransparency_in_ruleImageFeature7856);
+                    pushFollow(FOLLOW_ruleTransparency_in_ruleImageFeature7878);
                     this_Transparency_2=ruleTransparency();
 
                     state._fsp--;
@@ -9054,7 +9105,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInvisible"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3544:1: entryRuleInvisible returns [EObject current=null] : iv_ruleInvisible= ruleInvisible EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3562:1: entryRuleInvisible returns [EObject current=null] : iv_ruleInvisible= ruleInvisible EOF ;
     public final EObject entryRuleInvisible() throws RecognitionException {
         EObject current = null;
 
@@ -9062,17 +9113,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3545:2: (iv_ruleInvisible= ruleInvisible EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3546:2: iv_ruleInvisible= ruleInvisible EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3563:2: (iv_ruleInvisible= ruleInvisible EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3564:2: iv_ruleInvisible= ruleInvisible EOF
             {
              newCompositeNode(grammarAccess.getInvisibleRule()); 
-            pushFollow(FOLLOW_ruleInvisible_in_entryRuleInvisible7891);
+            pushFollow(FOLLOW_ruleInvisible_in_entryRuleInvisible7913);
             iv_ruleInvisible=ruleInvisible();
 
             state._fsp--;
 
              current =iv_ruleInvisible; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInvisible7901); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInvisible7923); 
 
             }
 
@@ -9090,7 +9141,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInvisible"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3553:1: ruleInvisible returns [EObject current=null] : ( () otherlv_1= 'invisible' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleInvisibleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3571:1: ruleInvisible returns [EObject current=null] : ( () otherlv_1= 'invisible' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleInvisibleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) ;
     public final EObject ruleInvisible() throws RecognitionException {
         EObject current = null;
 
@@ -9108,14 +9159,14 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3556:28: ( ( () otherlv_1= 'invisible' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleInvisibleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3557:1: ( () otherlv_1= 'invisible' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleInvisibleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3574:28: ( ( () otherlv_1= 'invisible' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleInvisibleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3575:1: ( () otherlv_1= 'invisible' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleInvisibleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3557:1: ( () otherlv_1= 'invisible' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleInvisibleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3557:2: () otherlv_1= 'invisible' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleInvisibleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3575:1: ( () otherlv_1= 'invisible' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleInvisibleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3575:2: () otherlv_1= 'invisible' ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )? otherlv_4= '{' ( (lv_features_5_0= ruleInvisibleFeature ) )* ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )? otherlv_8= '}'
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3557:2: ()
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3558:5: 
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3575:2: ()
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3576:5: 
             {
 
                     current = forceCreateModelElement(
@@ -9125,28 +9176,28 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,55,FOLLOW_55_in_ruleInvisible7947); 
+            otherlv_1=(Token)match(input,55,FOLLOW_55_in_ruleInvisible7969); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getInvisibleAccess().getInvisibleKeyword_1());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3567:1: ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )?
-            int alt71=2;
-            int LA71_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3585:1: ( ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) ) )?
+            int alt72=2;
+            int LA72_0 = input.LA(1);
 
-            if ( (LA71_0==31) ) {
-                alt71=1;
+            if ( (LA72_0==31) ) {
+                alt72=1;
             }
-            switch (alt71) {
+            switch (alt72) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3567:2: ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3585:2: ( (lv_styled_2_0= '+' ) ) ( (otherlv_3= RULE_ID ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3567:2: ( (lv_styled_2_0= '+' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3568:1: (lv_styled_2_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3585:2: ( (lv_styled_2_0= '+' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3586:1: (lv_styled_2_0= '+' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3568:1: (lv_styled_2_0= '+' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3569:3: lv_styled_2_0= '+'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3586:1: (lv_styled_2_0= '+' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3587:3: lv_styled_2_0= '+'
                     {
-                    lv_styled_2_0=(Token)match(input,31,FOLLOW_31_in_ruleInvisible7966); 
+                    lv_styled_2_0=(Token)match(input,31,FOLLOW_31_in_ruleInvisible7988); 
 
                             newLeafNode(lv_styled_2_0, grammarAccess.getInvisibleAccess().getStyledPlusSignKeyword_2_0_0());
                         
@@ -9162,18 +9213,18 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3582:2: ( (otherlv_3= RULE_ID ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3583:1: (otherlv_3= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3600:2: ( (otherlv_3= RULE_ID ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3601:1: (otherlv_3= RULE_ID )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3583:1: (otherlv_3= RULE_ID )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3584:3: otherlv_3= RULE_ID
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3601:1: (otherlv_3= RULE_ID )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3602:3: otherlv_3= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getInvisibleRule());
                     	        }
                             
-                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleInvisible7999); 
+                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleInvisible8021); 
 
                     		newLeafNode(otherlv_3, grammarAccess.getInvisibleAccess().getStyleStyleCrossReference_2_1_0()); 
                     	
@@ -9189,32 +9240,32 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleInvisible8013); 
+            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleInvisible8035); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getInvisibleAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3599:1: ( (lv_features_5_0= ruleInvisibleFeature ) )*
-            loop72:
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3617:1: ( (lv_features_5_0= ruleInvisibleFeature ) )*
+            loop73:
             do {
-                int alt72=2;
-                int LA72_0 = input.LA(1);
+                int alt73=2;
+                int LA73_0 = input.LA(1);
 
-                if ( (LA72_0==36||LA72_0==50||LA72_0==59||LA72_0==62) ) {
-                    alt72=1;
+                if ( (LA73_0==36||LA73_0==50||LA73_0==59||LA73_0==62) ) {
+                    alt73=1;
                 }
 
 
-                switch (alt72) {
+                switch (alt73) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3600:1: (lv_features_5_0= ruleInvisibleFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3618:1: (lv_features_5_0= ruleInvisibleFeature )
             	    {
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3600:1: (lv_features_5_0= ruleInvisibleFeature )
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3601:3: lv_features_5_0= ruleInvisibleFeature
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3618:1: (lv_features_5_0= ruleInvisibleFeature )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3619:3: lv_features_5_0= ruleInvisibleFeature
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getInvisibleAccess().getFeaturesInvisibleFeatureParserRuleCall_4_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleInvisibleFeature_in_ruleInvisible8034);
+            	    pushFollow(FOLLOW_ruleInvisibleFeature_in_ruleInvisible8056);
             	    lv_features_5_0=ruleInvisibleFeature();
 
             	    state._fsp--;
@@ -9238,28 +9289,28 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop72;
+            	    break loop73;
                 }
             } while (true);
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3617:3: ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )?
-            int alt74=2;
-            int LA74_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3635:3: ( ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+ )?
+            int alt75=2;
+            int LA75_0 = input.LA(1);
 
-            if ( (LA74_0==42) ) {
-                alt74=1;
+            if ( (LA75_0==42) ) {
+                alt75=1;
             }
-            switch (alt74) {
+            switch (alt75) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3617:4: ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3635:4: ( (lv_composite_6_0= 'children:' ) ) ( (lv_children_7_0= ruleConnectableElement ) )+
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3617:4: ( (lv_composite_6_0= 'children:' ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3618:1: (lv_composite_6_0= 'children:' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3635:4: ( (lv_composite_6_0= 'children:' ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3636:1: (lv_composite_6_0= 'children:' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3618:1: (lv_composite_6_0= 'children:' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3619:3: lv_composite_6_0= 'children:'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3636:1: (lv_composite_6_0= 'children:' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3637:3: lv_composite_6_0= 'children:'
                     {
-                    lv_composite_6_0=(Token)match(input,42,FOLLOW_42_in_ruleInvisible8054); 
+                    lv_composite_6_0=(Token)match(input,42,FOLLOW_42_in_ruleInvisible8076); 
 
                             newLeafNode(lv_composite_6_0, grammarAccess.getInvisibleAccess().getCompositeChildrenKeyword_5_0_0());
                         
@@ -9275,29 +9326,29 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3632:2: ( (lv_children_7_0= ruleConnectableElement ) )+
-                    int cnt73=0;
-                    loop73:
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3650:2: ( (lv_children_7_0= ruleConnectableElement ) )+
+                    int cnt74=0;
+                    loop74:
                     do {
-                        int alt73=2;
-                        int LA73_0 = input.LA(1);
+                        int alt74=2;
+                        int LA74_0 = input.LA(1);
 
-                        if ( (LA73_0==40||(LA73_0>=43 && LA73_0<=49)||LA73_0==52||(LA73_0>=54 && LA73_0<=55)) ) {
-                            alt73=1;
+                        if ( (LA74_0==40||(LA74_0>=43 && LA74_0<=49)||LA74_0==52||(LA74_0>=54 && LA74_0<=55)) ) {
+                            alt74=1;
                         }
 
 
-                        switch (alt73) {
+                        switch (alt74) {
                     	case 1 :
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3633:1: (lv_children_7_0= ruleConnectableElement )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3651:1: (lv_children_7_0= ruleConnectableElement )
                     	    {
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3633:1: (lv_children_7_0= ruleConnectableElement )
-                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3634:3: lv_children_7_0= ruleConnectableElement
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3651:1: (lv_children_7_0= ruleConnectableElement )
+                    	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3652:3: lv_children_7_0= ruleConnectableElement
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getInvisibleAccess().getChildrenConnectableElementParserRuleCall_5_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleConnectableElement_in_ruleInvisible8088);
+                    	    pushFollow(FOLLOW_ruleConnectableElement_in_ruleInvisible8110);
                     	    lv_children_7_0=ruleConnectableElement();
 
                     	    state._fsp--;
@@ -9321,12 +9372,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    if ( cnt73 >= 1 ) break loop73;
+                    	    if ( cnt74 >= 1 ) break loop74;
                                 EarlyExitException eee =
-                                    new EarlyExitException(73, input);
+                                    new EarlyExitException(74, input);
                                 throw eee;
                         }
-                        cnt73++;
+                        cnt74++;
                     } while (true);
 
 
@@ -9335,7 +9386,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,18,FOLLOW_18_in_ruleInvisible8103); 
+            otherlv_8=(Token)match(input,18,FOLLOW_18_in_ruleInvisible8125); 
 
                 	newLeafNode(otherlv_8, grammarAccess.getInvisibleAccess().getRightCurlyBracketKeyword_6());
                 
@@ -9360,7 +9411,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInvisibleFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3662:1: entryRuleInvisibleFeature returns [EObject current=null] : iv_ruleInvisibleFeature= ruleInvisibleFeature EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3680:1: entryRuleInvisibleFeature returns [EObject current=null] : iv_ruleInvisibleFeature= ruleInvisibleFeature EOF ;
     public final EObject entryRuleInvisibleFeature() throws RecognitionException {
         EObject current = null;
 
@@ -9368,17 +9419,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3663:2: (iv_ruleInvisibleFeature= ruleInvisibleFeature EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3664:2: iv_ruleInvisibleFeature= ruleInvisibleFeature EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3681:2: (iv_ruleInvisibleFeature= ruleInvisibleFeature EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3682:2: iv_ruleInvisibleFeature= ruleInvisibleFeature EOF
             {
              newCompositeNode(grammarAccess.getInvisibleFeatureRule()); 
-            pushFollow(FOLLOW_ruleInvisibleFeature_in_entryRuleInvisibleFeature8139);
+            pushFollow(FOLLOW_ruleInvisibleFeature_in_entryRuleInvisibleFeature8161);
             iv_ruleInvisibleFeature=ruleInvisibleFeature();
 
             state._fsp--;
 
              current =iv_ruleInvisibleFeature; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInvisibleFeature8149); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInvisibleFeature8171); 
 
             }
 
@@ -9396,7 +9447,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInvisibleFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3671:1: ruleInvisibleFeature returns [EObject current=null] : (this_Size_0= ruleSize | this_Position_1= rulePosition | this_LinkedFeature_2= ruleLinkedFeature ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3689:1: ruleInvisibleFeature returns [EObject current=null] : (this_Size_0= ruleSize | this_Position_1= rulePosition | this_LinkedFeature_2= ruleLinkedFeature ) ;
     public final EObject ruleInvisibleFeature() throws RecognitionException {
         EObject current = null;
 
@@ -9410,43 +9461,43 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3674:28: ( (this_Size_0= ruleSize | this_Position_1= rulePosition | this_LinkedFeature_2= ruleLinkedFeature ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3675:1: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_LinkedFeature_2= ruleLinkedFeature )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3692:28: ( (this_Size_0= ruleSize | this_Position_1= rulePosition | this_LinkedFeature_2= ruleLinkedFeature ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3693:1: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_LinkedFeature_2= ruleLinkedFeature )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3675:1: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_LinkedFeature_2= ruleLinkedFeature )
-            int alt75=3;
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3693:1: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_LinkedFeature_2= ruleLinkedFeature )
+            int alt76=3;
             switch ( input.LA(1) ) {
             case 59:
                 {
-                alt75=1;
+                alt76=1;
                 }
                 break;
             case 62:
                 {
-                alt75=2;
+                alt76=2;
                 }
                 break;
             case 36:
             case 50:
                 {
-                alt75=3;
+                alt76=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 75, 0, input);
+                    new NoViableAltException("", 76, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt75) {
+            switch (alt76) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3676:5: this_Size_0= ruleSize
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3694:5: this_Size_0= ruleSize
                     {
                      
                             newCompositeNode(grammarAccess.getInvisibleFeatureAccess().getSizeParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleSize_in_ruleInvisibleFeature8196);
+                    pushFollow(FOLLOW_ruleSize_in_ruleInvisibleFeature8218);
                     this_Size_0=ruleSize();
 
                     state._fsp--;
@@ -9459,12 +9510,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3686:5: this_Position_1= rulePosition
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3704:5: this_Position_1= rulePosition
                     {
                      
                             newCompositeNode(grammarAccess.getInvisibleFeatureAccess().getPositionParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_rulePosition_in_ruleInvisibleFeature8223);
+                    pushFollow(FOLLOW_rulePosition_in_ruleInvisibleFeature8245);
                     this_Position_1=rulePosition();
 
                     state._fsp--;
@@ -9477,12 +9528,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3696:5: this_LinkedFeature_2= ruleLinkedFeature
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3714:5: this_LinkedFeature_2= ruleLinkedFeature
                     {
                      
                             newCompositeNode(grammarAccess.getInvisibleFeatureAccess().getLinkedFeatureParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleLinkedFeature_in_ruleInvisibleFeature8250);
+                    pushFollow(FOLLOW_ruleLinkedFeature_in_ruleInvisibleFeature8272);
                     this_LinkedFeature_2=ruleLinkedFeature();
 
                     state._fsp--;
@@ -9515,7 +9566,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleColorFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3712:1: entryRuleColorFeature returns [EObject current=null] : iv_ruleColorFeature= ruleColorFeature EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3730:1: entryRuleColorFeature returns [EObject current=null] : iv_ruleColorFeature= ruleColorFeature EOF ;
     public final EObject entryRuleColorFeature() throws RecognitionException {
         EObject current = null;
 
@@ -9523,17 +9574,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3713:2: (iv_ruleColorFeature= ruleColorFeature EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3714:2: iv_ruleColorFeature= ruleColorFeature EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3731:2: (iv_ruleColorFeature= ruleColorFeature EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3732:2: iv_ruleColorFeature= ruleColorFeature EOF
             {
              newCompositeNode(grammarAccess.getColorFeatureRule()); 
-            pushFollow(FOLLOW_ruleColorFeature_in_entryRuleColorFeature8285);
+            pushFollow(FOLLOW_ruleColorFeature_in_entryRuleColorFeature8307);
             iv_ruleColorFeature=ruleColorFeature();
 
             state._fsp--;
 
              current =iv_ruleColorFeature; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleColorFeature8295); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleColorFeature8317); 
 
             }
 
@@ -9551,7 +9602,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleColorFeature"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3721:1: ruleColorFeature returns [EObject current=null] : (this_Foreground_0= ruleForeground | this_Background_1= ruleBackground ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3739:1: ruleColorFeature returns [EObject current=null] : (this_Foreground_0= ruleForeground | this_Background_1= ruleBackground ) ;
     public final EObject ruleColorFeature() throws RecognitionException {
         EObject current = null;
 
@@ -9563,33 +9614,33 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3724:28: ( (this_Foreground_0= ruleForeground | this_Background_1= ruleBackground ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3725:1: (this_Foreground_0= ruleForeground | this_Background_1= ruleBackground )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3742:28: ( (this_Foreground_0= ruleForeground | this_Background_1= ruleBackground ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3743:1: (this_Foreground_0= ruleForeground | this_Background_1= ruleBackground )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3725:1: (this_Foreground_0= ruleForeground | this_Background_1= ruleBackground )
-            int alt76=2;
-            int LA76_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3743:1: (this_Foreground_0= ruleForeground | this_Background_1= ruleBackground )
+            int alt77=2;
+            int LA77_0 = input.LA(1);
 
-            if ( (LA76_0==56) ) {
-                alt76=1;
+            if ( (LA77_0==56) ) {
+                alt77=1;
             }
-            else if ( (LA76_0==57) ) {
-                alt76=2;
+            else if ( (LA77_0==57) ) {
+                alt77=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 76, 0, input);
+                    new NoViableAltException("", 77, 0, input);
 
                 throw nvae;
             }
-            switch (alt76) {
+            switch (alt77) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3726:5: this_Foreground_0= ruleForeground
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3744:5: this_Foreground_0= ruleForeground
                     {
                      
                             newCompositeNode(grammarAccess.getColorFeatureAccess().getForegroundParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleForeground_in_ruleColorFeature8342);
+                    pushFollow(FOLLOW_ruleForeground_in_ruleColorFeature8364);
                     this_Foreground_0=ruleForeground();
 
                     state._fsp--;
@@ -9602,12 +9653,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3736:5: this_Background_1= ruleBackground
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3754:5: this_Background_1= ruleBackground
                     {
                      
                             newCompositeNode(grammarAccess.getColorFeatureAccess().getBackgroundParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleBackground_in_ruleColorFeature8369);
+                    pushFollow(FOLLOW_ruleBackground_in_ruleColorFeature8391);
                     this_Background_1=ruleBackground();
 
                     state._fsp--;
@@ -9640,7 +9691,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleForeground"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3752:1: entryRuleForeground returns [EObject current=null] : iv_ruleForeground= ruleForeground EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3770:1: entryRuleForeground returns [EObject current=null] : iv_ruleForeground= ruleForeground EOF ;
     public final EObject entryRuleForeground() throws RecognitionException {
         EObject current = null;
 
@@ -9648,17 +9699,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3753:2: (iv_ruleForeground= ruleForeground EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3754:2: iv_ruleForeground= ruleForeground EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3771:2: (iv_ruleForeground= ruleForeground EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3772:2: iv_ruleForeground= ruleForeground EOF
             {
              newCompositeNode(grammarAccess.getForegroundRule()); 
-            pushFollow(FOLLOW_ruleForeground_in_entryRuleForeground8404);
+            pushFollow(FOLLOW_ruleForeground_in_entryRuleForeground8426);
             iv_ruleForeground=ruleForeground();
 
             state._fsp--;
 
              current =iv_ruleForeground; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleForeground8414); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleForeground8436); 
 
             }
 
@@ -9676,7 +9727,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleForeground"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3761:1: ruleForeground returns [EObject current=null] : ( ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3779:1: ruleForeground returns [EObject current=null] : ( ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
     public final EObject ruleForeground() throws RecognitionException {
         EObject current = null;
 
@@ -9690,19 +9741,19 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3764:28: ( ( ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3765:1: ( ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3782:28: ( ( ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3783:1: ( ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3765:1: ( ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3765:2: ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3783:1: ( ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3783:2: ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3765:2: ( (lv_type_0_0= 'foreground' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3766:1: (lv_type_0_0= 'foreground' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3783:2: ( (lv_type_0_0= 'foreground' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3784:1: (lv_type_0_0= 'foreground' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3766:1: (lv_type_0_0= 'foreground' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3767:3: lv_type_0_0= 'foreground'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3784:1: (lv_type_0_0= 'foreground' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3785:3: lv_type_0_0= 'foreground'
             {
-            lv_type_0_0=(Token)match(input,56,FOLLOW_56_in_ruleForeground8457); 
+            lv_type_0_0=(Token)match(input,56,FOLLOW_56_in_ruleForeground8479); 
 
                     newLeafNode(lv_type_0_0, grammarAccess.getForegroundAccess().getTypeForegroundKeyword_0_0());
                 
@@ -9718,16 +9769,16 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3780:2: ( (lv_color_1_0= ruleColor ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3781:1: (lv_color_1_0= ruleColor )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3798:2: ( (lv_color_1_0= ruleColor ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3799:1: (lv_color_1_0= ruleColor )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3781:1: (lv_color_1_0= ruleColor )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3782:3: lv_color_1_0= ruleColor
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3799:1: (lv_color_1_0= ruleColor )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3800:3: lv_color_1_0= ruleColor
             {
              
             	        newCompositeNode(grammarAccess.getForegroundAccess().getColorColorParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleColor_in_ruleForeground8491);
+            pushFollow(FOLLOW_ruleColor_in_ruleForeground8513);
             lv_color_1_0=ruleColor();
 
             state._fsp--;
@@ -9749,24 +9800,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3798:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
-            int alt77=2;
-            int LA77_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3816:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
+            int alt78=2;
+            int LA78_0 = input.LA(1);
 
-            if ( (LA77_0==22) ) {
-                alt77=1;
+            if ( (LA78_0==22) ) {
+                alt78=1;
             }
-            switch (alt77) {
+            switch (alt78) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3799:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3817:1: (lv_conditional_2_0= ruleFeatureConditional )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3799:1: (lv_conditional_2_0= ruleFeatureConditional )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3800:3: lv_conditional_2_0= ruleFeatureConditional
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3817:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3818:3: lv_conditional_2_0= ruleFeatureConditional
                     {
                      
                     	        newCompositeNode(grammarAccess.getForegroundAccess().getConditionalFeatureConditionalParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleForeground8512);
+                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleForeground8534);
                     lv_conditional_2_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -9791,7 +9842,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleForeground8525); 
+            otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleForeground8547); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getForegroundAccess().getSemicolonKeyword_3());
                 
@@ -9816,7 +9867,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBackground"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3828:1: entryRuleBackground returns [EObject current=null] : iv_ruleBackground= ruleBackground EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3846:1: entryRuleBackground returns [EObject current=null] : iv_ruleBackground= ruleBackground EOF ;
     public final EObject entryRuleBackground() throws RecognitionException {
         EObject current = null;
 
@@ -9824,17 +9875,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3829:2: (iv_ruleBackground= ruleBackground EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3830:2: iv_ruleBackground= ruleBackground EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3847:2: (iv_ruleBackground= ruleBackground EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3848:2: iv_ruleBackground= ruleBackground EOF
             {
              newCompositeNode(grammarAccess.getBackgroundRule()); 
-            pushFollow(FOLLOW_ruleBackground_in_entryRuleBackground8561);
+            pushFollow(FOLLOW_ruleBackground_in_entryRuleBackground8583);
             iv_ruleBackground=ruleBackground();
 
             state._fsp--;
 
              current =iv_ruleBackground; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBackground8571); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBackground8593); 
 
             }
 
@@ -9852,7 +9903,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBackground"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3837:1: ruleBackground returns [EObject current=null] : ( ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3855:1: ruleBackground returns [EObject current=null] : ( ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
     public final EObject ruleBackground() throws RecognitionException {
         EObject current = null;
 
@@ -9866,19 +9917,19 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3840:28: ( ( ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3841:1: ( ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3858:28: ( ( ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3859:1: ( ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3841:1: ( ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3841:2: ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3859:1: ( ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3859:2: ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3841:2: ( (lv_type_0_0= 'background' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3842:1: (lv_type_0_0= 'background' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3859:2: ( (lv_type_0_0= 'background' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3860:1: (lv_type_0_0= 'background' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3842:1: (lv_type_0_0= 'background' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3843:3: lv_type_0_0= 'background'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3860:1: (lv_type_0_0= 'background' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3861:3: lv_type_0_0= 'background'
             {
-            lv_type_0_0=(Token)match(input,57,FOLLOW_57_in_ruleBackground8614); 
+            lv_type_0_0=(Token)match(input,57,FOLLOW_57_in_ruleBackground8636); 
 
                     newLeafNode(lv_type_0_0, grammarAccess.getBackgroundAccess().getTypeBackgroundKeyword_0_0());
                 
@@ -9894,16 +9945,16 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3856:2: ( (lv_color_1_0= ruleColor ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3857:1: (lv_color_1_0= ruleColor )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3874:2: ( (lv_color_1_0= ruleColor ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3875:1: (lv_color_1_0= ruleColor )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3857:1: (lv_color_1_0= ruleColor )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3858:3: lv_color_1_0= ruleColor
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3875:1: (lv_color_1_0= ruleColor )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3876:3: lv_color_1_0= ruleColor
             {
              
             	        newCompositeNode(grammarAccess.getBackgroundAccess().getColorColorParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleColor_in_ruleBackground8648);
+            pushFollow(FOLLOW_ruleColor_in_ruleBackground8670);
             lv_color_1_0=ruleColor();
 
             state._fsp--;
@@ -9925,24 +9976,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3874:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
-            int alt78=2;
-            int LA78_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3892:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
+            int alt79=2;
+            int LA79_0 = input.LA(1);
 
-            if ( (LA78_0==22) ) {
-                alt78=1;
+            if ( (LA79_0==22) ) {
+                alt79=1;
             }
-            switch (alt78) {
+            switch (alt79) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3875:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3893:1: (lv_conditional_2_0= ruleFeatureConditional )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3875:1: (lv_conditional_2_0= ruleFeatureConditional )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3876:3: lv_conditional_2_0= ruleFeatureConditional
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3893:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3894:3: lv_conditional_2_0= ruleFeatureConditional
                     {
                      
                     	        newCompositeNode(grammarAccess.getBackgroundAccess().getConditionalFeatureConditionalParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleBackground8669);
+                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleBackground8691);
                     lv_conditional_2_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -9967,7 +10018,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleBackground8682); 
+            otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleBackground8704); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getBackgroundAccess().getSemicolonKeyword_3());
                 
@@ -9992,7 +10043,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTransparency"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3904:1: entryRuleTransparency returns [EObject current=null] : iv_ruleTransparency= ruleTransparency EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3922:1: entryRuleTransparency returns [EObject current=null] : iv_ruleTransparency= ruleTransparency EOF ;
     public final EObject entryRuleTransparency() throws RecognitionException {
         EObject current = null;
 
@@ -10000,17 +10051,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3905:2: (iv_ruleTransparency= ruleTransparency EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3906:2: iv_ruleTransparency= ruleTransparency EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3923:2: (iv_ruleTransparency= ruleTransparency EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3924:2: iv_ruleTransparency= ruleTransparency EOF
             {
              newCompositeNode(grammarAccess.getTransparencyRule()); 
-            pushFollow(FOLLOW_ruleTransparency_in_entryRuleTransparency8718);
+            pushFollow(FOLLOW_ruleTransparency_in_entryRuleTransparency8740);
             iv_ruleTransparency=ruleTransparency();
 
             state._fsp--;
 
              current =iv_ruleTransparency; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTransparency8728); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTransparency8750); 
 
             }
 
@@ -10028,7 +10079,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTransparency"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3913:1: ruleTransparency returns [EObject current=null] : (otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_PERCENT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3931:1: ruleTransparency returns [EObject current=null] : (otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_PERCENT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
     public final EObject ruleTransparency() throws RecognitionException {
         EObject current = null;
 
@@ -10041,23 +10092,23 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3916:28: ( (otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_PERCENT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3917:1: (otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_PERCENT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3934:28: ( (otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_PERCENT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3935:1: (otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_PERCENT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3917:1: (otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_PERCENT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3917:3: otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_PERCENT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3935:1: (otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_PERCENT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3935:3: otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_PERCENT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
             {
-            otherlv_0=(Token)match(input,58,FOLLOW_58_in_ruleTransparency8765); 
+            otherlv_0=(Token)match(input,58,FOLLOW_58_in_ruleTransparency8787); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getTransparencyAccess().getTransparencyKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3921:1: ( (lv_percent_1_0= RULE_PERCENT ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3922:1: (lv_percent_1_0= RULE_PERCENT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3939:1: ( (lv_percent_1_0= RULE_PERCENT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3940:1: (lv_percent_1_0= RULE_PERCENT )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3922:1: (lv_percent_1_0= RULE_PERCENT )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3923:3: lv_percent_1_0= RULE_PERCENT
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3940:1: (lv_percent_1_0= RULE_PERCENT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3941:3: lv_percent_1_0= RULE_PERCENT
             {
-            lv_percent_1_0=(Token)match(input,RULE_PERCENT,FOLLOW_RULE_PERCENT_in_ruleTransparency8782); 
+            lv_percent_1_0=(Token)match(input,RULE_PERCENT,FOLLOW_RULE_PERCENT_in_ruleTransparency8804); 
 
             			newLeafNode(lv_percent_1_0, grammarAccess.getTransparencyAccess().getPercentPERCENTTerminalRuleCall_1_0()); 
             		
@@ -10077,24 +10128,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3939:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
-            int alt79=2;
-            int LA79_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3957:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
+            int alt80=2;
+            int LA80_0 = input.LA(1);
 
-            if ( (LA79_0==22) ) {
-                alt79=1;
+            if ( (LA80_0==22) ) {
+                alt80=1;
             }
-            switch (alt79) {
+            switch (alt80) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3940:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3958:1: (lv_conditional_2_0= ruleFeatureConditional )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3940:1: (lv_conditional_2_0= ruleFeatureConditional )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3941:3: lv_conditional_2_0= ruleFeatureConditional
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3958:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3959:3: lv_conditional_2_0= ruleFeatureConditional
                     {
                      
                     	        newCompositeNode(grammarAccess.getTransparencyAccess().getConditionalFeatureConditionalParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleTransparency8808);
+                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleTransparency8830);
                     lv_conditional_2_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -10119,7 +10170,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleTransparency8821); 
+            otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleTransparency8843); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getTransparencyAccess().getSemicolonKeyword_3());
                 
@@ -10144,7 +10195,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSize"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3969:1: entryRuleSize returns [EObject current=null] : iv_ruleSize= ruleSize EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3987:1: entryRuleSize returns [EObject current=null] : iv_ruleSize= ruleSize EOF ;
     public final EObject entryRuleSize() throws RecognitionException {
         EObject current = null;
 
@@ -10152,17 +10203,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3970:2: (iv_ruleSize= ruleSize EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3971:2: iv_ruleSize= ruleSize EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3988:2: (iv_ruleSize= ruleSize EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3989:2: iv_ruleSize= ruleSize EOF
             {
              newCompositeNode(grammarAccess.getSizeRule()); 
-            pushFollow(FOLLOW_ruleSize_in_entryRuleSize8857);
+            pushFollow(FOLLOW_ruleSize_in_entryRuleSize8879);
             iv_ruleSize=ruleSize();
 
             state._fsp--;
 
              current =iv_ruleSize; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSize8867); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSize8889); 
 
             }
 
@@ -10180,7 +10231,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSize"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3978:1: ruleSize returns [EObject current=null] : (otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) otherlv_2= 'x' ( (lv_height_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3996:1: ruleSize returns [EObject current=null] : (otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) otherlv_2= 'x' ( (lv_height_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) ;
     public final EObject ruleSize() throws RecognitionException {
         EObject current = null;
 
@@ -10195,23 +10246,23 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3981:28: ( (otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) otherlv_2= 'x' ( (lv_height_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3982:1: (otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) otherlv_2= 'x' ( (lv_height_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3999:28: ( (otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) otherlv_2= 'x' ( (lv_height_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4000:1: (otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) otherlv_2= 'x' ( (lv_height_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3982:1: (otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) otherlv_2= 'x' ( (lv_height_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3982:3: otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) otherlv_2= 'x' ( (lv_height_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4000:1: (otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) otherlv_2= 'x' ( (lv_height_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4000:3: otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) otherlv_2= 'x' ( (lv_height_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';'
             {
-            otherlv_0=(Token)match(input,59,FOLLOW_59_in_ruleSize8904); 
+            otherlv_0=(Token)match(input,59,FOLLOW_59_in_ruleSize8926); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getSizeAccess().getSizeKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3986:1: ( (lv_width_1_0= RULE_INT ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3987:1: (lv_width_1_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4004:1: ( (lv_width_1_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4005:1: (lv_width_1_0= RULE_INT )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3987:1: (lv_width_1_0= RULE_INT )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:3988:3: lv_width_1_0= RULE_INT
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4005:1: (lv_width_1_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4006:3: lv_width_1_0= RULE_INT
             {
-            lv_width_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleSize8921); 
+            lv_width_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleSize8943); 
 
             			newLeafNode(lv_width_1_0, grammarAccess.getSizeAccess().getWidthINTTerminalRuleCall_1_0()); 
             		
@@ -10231,17 +10282,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,60,FOLLOW_60_in_ruleSize8938); 
+            otherlv_2=(Token)match(input,60,FOLLOW_60_in_ruleSize8960); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getSizeAccess().getXKeyword_2());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4008:1: ( (lv_height_3_0= RULE_INT ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4009:1: (lv_height_3_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4026:1: ( (lv_height_3_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4027:1: (lv_height_3_0= RULE_INT )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4009:1: (lv_height_3_0= RULE_INT )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4010:3: lv_height_3_0= RULE_INT
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4027:1: (lv_height_3_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4028:3: lv_height_3_0= RULE_INT
             {
-            lv_height_3_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleSize8955); 
+            lv_height_3_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleSize8977); 
 
             			newLeafNode(lv_height_3_0, grammarAccess.getSizeAccess().getHeightINTTerminalRuleCall_3_0()); 
             		
@@ -10261,24 +10312,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4026:2: ( (lv_conditional_4_0= ruleFeatureConditional ) )?
-            int alt80=2;
-            int LA80_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4044:2: ( (lv_conditional_4_0= ruleFeatureConditional ) )?
+            int alt81=2;
+            int LA81_0 = input.LA(1);
 
-            if ( (LA80_0==22) ) {
-                alt80=1;
+            if ( (LA81_0==22) ) {
+                alt81=1;
             }
-            switch (alt80) {
+            switch (alt81) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4027:1: (lv_conditional_4_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4045:1: (lv_conditional_4_0= ruleFeatureConditional )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4027:1: (lv_conditional_4_0= ruleFeatureConditional )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4028:3: lv_conditional_4_0= ruleFeatureConditional
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4045:1: (lv_conditional_4_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4046:3: lv_conditional_4_0= ruleFeatureConditional
                     {
                      
                     	        newCompositeNode(grammarAccess.getSizeAccess().getConditionalFeatureConditionalParserRuleCall_4_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleSize8981);
+                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleSize9003);
                     lv_conditional_4_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -10303,7 +10354,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,37,FOLLOW_37_in_ruleSize8994); 
+            otherlv_5=(Token)match(input,37,FOLLOW_37_in_ruleSize9016); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getSizeAccess().getSemicolonKeyword_5());
                 
@@ -10328,7 +10379,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePoint"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4056:1: entryRulePoint returns [EObject current=null] : iv_rulePoint= rulePoint EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4074:1: entryRulePoint returns [EObject current=null] : iv_rulePoint= rulePoint EOF ;
     public final EObject entryRulePoint() throws RecognitionException {
         EObject current = null;
 
@@ -10336,17 +10387,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4057:2: (iv_rulePoint= rulePoint EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4058:2: iv_rulePoint= rulePoint EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4075:2: (iv_rulePoint= rulePoint EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4076:2: iv_rulePoint= rulePoint EOF
             {
              newCompositeNode(grammarAccess.getPointRule()); 
-            pushFollow(FOLLOW_rulePoint_in_entryRulePoint9030);
+            pushFollow(FOLLOW_rulePoint_in_entryRulePoint9052);
             iv_rulePoint=rulePoint();
 
             state._fsp--;
 
              current =iv_rulePoint; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePoint9040); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePoint9062); 
 
             }
 
@@ -10364,7 +10415,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePoint"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4065:1: rulePoint returns [EObject current=null] : (otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4083:1: rulePoint returns [EObject current=null] : (otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) ;
     public final EObject rulePoint() throws RecognitionException {
         EObject current = null;
 
@@ -10379,23 +10430,23 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4068:28: ( (otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4069:1: (otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4086:28: ( (otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4087:1: (otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4069:1: (otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4069:3: otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4087:1: (otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4087:3: otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';'
             {
-            otherlv_0=(Token)match(input,61,FOLLOW_61_in_rulePoint9077); 
+            otherlv_0=(Token)match(input,61,FOLLOW_61_in_rulePoint9099); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getPointAccess().getPointKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4073:1: ( (lv_x_1_0= RULE_INT ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4074:1: (lv_x_1_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4091:1: ( (lv_x_1_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4092:1: (lv_x_1_0= RULE_INT )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4074:1: (lv_x_1_0= RULE_INT )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4075:3: lv_x_1_0= RULE_INT
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4092:1: (lv_x_1_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4093:3: lv_x_1_0= RULE_INT
             {
-            lv_x_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_rulePoint9094); 
+            lv_x_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_rulePoint9116); 
 
             			newLeafNode(lv_x_1_0, grammarAccess.getPointAccess().getXINTTerminalRuleCall_1_0()); 
             		
@@ -10415,17 +10466,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,39,FOLLOW_39_in_rulePoint9111); 
+            otherlv_2=(Token)match(input,39,FOLLOW_39_in_rulePoint9133); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getPointAccess().getCommaKeyword_2());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4095:1: ( (lv_y_3_0= RULE_INT ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4096:1: (lv_y_3_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4113:1: ( (lv_y_3_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4114:1: (lv_y_3_0= RULE_INT )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4096:1: (lv_y_3_0= RULE_INT )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4097:3: lv_y_3_0= RULE_INT
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4114:1: (lv_y_3_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4115:3: lv_y_3_0= RULE_INT
             {
-            lv_y_3_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_rulePoint9128); 
+            lv_y_3_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_rulePoint9150); 
 
             			newLeafNode(lv_y_3_0, grammarAccess.getPointAccess().getYINTTerminalRuleCall_3_0()); 
             		
@@ -10445,24 +10496,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4113:2: ( (lv_conditional_4_0= ruleFeatureConditional ) )?
-            int alt81=2;
-            int LA81_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4131:2: ( (lv_conditional_4_0= ruleFeatureConditional ) )?
+            int alt82=2;
+            int LA82_0 = input.LA(1);
 
-            if ( (LA81_0==22) ) {
-                alt81=1;
+            if ( (LA82_0==22) ) {
+                alt82=1;
             }
-            switch (alt81) {
+            switch (alt82) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4114:1: (lv_conditional_4_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4132:1: (lv_conditional_4_0= ruleFeatureConditional )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4114:1: (lv_conditional_4_0= ruleFeatureConditional )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4115:3: lv_conditional_4_0= ruleFeatureConditional
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4132:1: (lv_conditional_4_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4133:3: lv_conditional_4_0= ruleFeatureConditional
                     {
                      
                     	        newCompositeNode(grammarAccess.getPointAccess().getConditionalFeatureConditionalParserRuleCall_4_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFeatureConditional_in_rulePoint9154);
+                    pushFollow(FOLLOW_ruleFeatureConditional_in_rulePoint9176);
                     lv_conditional_4_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -10487,7 +10538,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,37,FOLLOW_37_in_rulePoint9167); 
+            otherlv_5=(Token)match(input,37,FOLLOW_37_in_rulePoint9189); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getPointAccess().getSemicolonKeyword_5());
                 
@@ -10512,7 +10563,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePosition"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4143:1: entryRulePosition returns [EObject current=null] : iv_rulePosition= rulePosition EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4161:1: entryRulePosition returns [EObject current=null] : iv_rulePosition= rulePosition EOF ;
     public final EObject entryRulePosition() throws RecognitionException {
         EObject current = null;
 
@@ -10520,17 +10571,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4144:2: (iv_rulePosition= rulePosition EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4145:2: iv_rulePosition= rulePosition EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4162:2: (iv_rulePosition= rulePosition EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4163:2: iv_rulePosition= rulePosition EOF
             {
              newCompositeNode(grammarAccess.getPositionRule()); 
-            pushFollow(FOLLOW_rulePosition_in_entryRulePosition9203);
+            pushFollow(FOLLOW_rulePosition_in_entryRulePosition9225);
             iv_rulePosition=rulePosition();
 
             state._fsp--;
 
              current =iv_rulePosition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePosition9213); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePosition9235); 
 
             }
 
@@ -10548,7 +10599,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePosition"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4152:1: rulePosition returns [EObject current=null] : (otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4170:1: rulePosition returns [EObject current=null] : (otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) ;
     public final EObject rulePosition() throws RecognitionException {
         EObject current = null;
 
@@ -10563,23 +10614,23 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4155:28: ( (otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4156:1: (otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4173:28: ( (otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4174:1: (otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4156:1: (otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4156:3: otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4174:1: (otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4174:3: otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) otherlv_2= ',' ( (lv_y_3_0= RULE_INT ) ) ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';'
             {
-            otherlv_0=(Token)match(input,62,FOLLOW_62_in_rulePosition9250); 
+            otherlv_0=(Token)match(input,62,FOLLOW_62_in_rulePosition9272); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getPositionAccess().getPositionKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4160:1: ( (lv_x_1_0= RULE_INT ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4161:1: (lv_x_1_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4178:1: ( (lv_x_1_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4179:1: (lv_x_1_0= RULE_INT )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4161:1: (lv_x_1_0= RULE_INT )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4162:3: lv_x_1_0= RULE_INT
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4179:1: (lv_x_1_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4180:3: lv_x_1_0= RULE_INT
             {
-            lv_x_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_rulePosition9267); 
+            lv_x_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_rulePosition9289); 
 
             			newLeafNode(lv_x_1_0, grammarAccess.getPositionAccess().getXINTTerminalRuleCall_1_0()); 
             		
@@ -10599,17 +10650,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,39,FOLLOW_39_in_rulePosition9284); 
+            otherlv_2=(Token)match(input,39,FOLLOW_39_in_rulePosition9306); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getPositionAccess().getCommaKeyword_2());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4182:1: ( (lv_y_3_0= RULE_INT ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4183:1: (lv_y_3_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4200:1: ( (lv_y_3_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4201:1: (lv_y_3_0= RULE_INT )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4183:1: (lv_y_3_0= RULE_INT )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4184:3: lv_y_3_0= RULE_INT
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4201:1: (lv_y_3_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4202:3: lv_y_3_0= RULE_INT
             {
-            lv_y_3_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_rulePosition9301); 
+            lv_y_3_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_rulePosition9323); 
 
             			newLeafNode(lv_y_3_0, grammarAccess.getPositionAccess().getYINTTerminalRuleCall_3_0()); 
             		
@@ -10629,24 +10680,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4200:2: ( (lv_conditional_4_0= ruleFeatureConditional ) )?
-            int alt82=2;
-            int LA82_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4218:2: ( (lv_conditional_4_0= ruleFeatureConditional ) )?
+            int alt83=2;
+            int LA83_0 = input.LA(1);
 
-            if ( (LA82_0==22) ) {
-                alt82=1;
+            if ( (LA83_0==22) ) {
+                alt83=1;
             }
-            switch (alt82) {
+            switch (alt83) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4201:1: (lv_conditional_4_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4219:1: (lv_conditional_4_0= ruleFeatureConditional )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4201:1: (lv_conditional_4_0= ruleFeatureConditional )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4202:3: lv_conditional_4_0= ruleFeatureConditional
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4219:1: (lv_conditional_4_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4220:3: lv_conditional_4_0= ruleFeatureConditional
                     {
                      
                     	        newCompositeNode(grammarAccess.getPositionAccess().getConditionalFeatureConditionalParserRuleCall_4_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFeatureConditional_in_rulePosition9327);
+                    pushFollow(FOLLOW_ruleFeatureConditional_in_rulePosition9349);
                     lv_conditional_4_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -10671,7 +10722,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,37,FOLLOW_37_in_rulePosition9340); 
+            otherlv_5=(Token)match(input,37,FOLLOW_37_in_rulePosition9362); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getPositionAccess().getSemicolonKeyword_5());
                 
@@ -10696,7 +10747,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCorner"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4230:1: entryRuleCorner returns [EObject current=null] : iv_ruleCorner= ruleCorner EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4248:1: entryRuleCorner returns [EObject current=null] : iv_ruleCorner= ruleCorner EOF ;
     public final EObject entryRuleCorner() throws RecognitionException {
         EObject current = null;
 
@@ -10704,17 +10755,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4231:2: (iv_ruleCorner= ruleCorner EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4232:2: iv_ruleCorner= ruleCorner EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4249:2: (iv_ruleCorner= ruleCorner EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4250:2: iv_ruleCorner= ruleCorner EOF
             {
              newCompositeNode(grammarAccess.getCornerRule()); 
-            pushFollow(FOLLOW_ruleCorner_in_entryRuleCorner9376);
+            pushFollow(FOLLOW_ruleCorner_in_entryRuleCorner9398);
             iv_ruleCorner=ruleCorner();
 
             state._fsp--;
 
              current =iv_ruleCorner; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCorner9386); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCorner9408); 
 
             }
 
@@ -10732,7 +10783,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCorner"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4239:1: ruleCorner returns [EObject current=null] : (otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4257:1: ruleCorner returns [EObject current=null] : (otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
     public final EObject ruleCorner() throws RecognitionException {
         EObject current = null;
 
@@ -10745,23 +10796,23 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4242:28: ( (otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4243:1: (otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4260:28: ( (otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4261:1: (otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4243:1: (otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4243:3: otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4261:1: (otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4261:3: otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
             {
-            otherlv_0=(Token)match(input,63,FOLLOW_63_in_ruleCorner9423); 
+            otherlv_0=(Token)match(input,63,FOLLOW_63_in_ruleCorner9445); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getCornerAccess().getCornerKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4247:1: ( (lv_angle_1_0= RULE_INT ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4248:1: (lv_angle_1_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4265:1: ( (lv_angle_1_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4266:1: (lv_angle_1_0= RULE_INT )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4248:1: (lv_angle_1_0= RULE_INT )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4249:3: lv_angle_1_0= RULE_INT
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4266:1: (lv_angle_1_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4267:3: lv_angle_1_0= RULE_INT
             {
-            lv_angle_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleCorner9440); 
+            lv_angle_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleCorner9462); 
 
             			newLeafNode(lv_angle_1_0, grammarAccess.getCornerAccess().getAngleINTTerminalRuleCall_1_0()); 
             		
@@ -10781,24 +10832,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4265:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
-            int alt83=2;
-            int LA83_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4283:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
+            int alt84=2;
+            int LA84_0 = input.LA(1);
 
-            if ( (LA83_0==22) ) {
-                alt83=1;
+            if ( (LA84_0==22) ) {
+                alt84=1;
             }
-            switch (alt83) {
+            switch (alt84) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4266:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4284:1: (lv_conditional_2_0= ruleFeatureConditional )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4266:1: (lv_conditional_2_0= ruleFeatureConditional )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4267:3: lv_conditional_2_0= ruleFeatureConditional
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4284:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4285:3: lv_conditional_2_0= ruleFeatureConditional
                     {
                      
                     	        newCompositeNode(grammarAccess.getCornerAccess().getConditionalFeatureConditionalParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleCorner9466);
+                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleCorner9488);
                     lv_conditional_2_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -10823,7 +10874,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleCorner9479); 
+            otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleCorner9501); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getCornerAccess().getSemicolonKeyword_3());
                 
@@ -10848,7 +10899,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTextValue"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4295:1: entryRuleTextValue returns [EObject current=null] : iv_ruleTextValue= ruleTextValue EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4313:1: entryRuleTextValue returns [EObject current=null] : iv_ruleTextValue= ruleTextValue EOF ;
     public final EObject entryRuleTextValue() throws RecognitionException {
         EObject current = null;
 
@@ -10856,17 +10907,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4296:2: (iv_ruleTextValue= ruleTextValue EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4297:2: iv_ruleTextValue= ruleTextValue EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4314:2: (iv_ruleTextValue= ruleTextValue EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4315:2: iv_ruleTextValue= ruleTextValue EOF
             {
              newCompositeNode(grammarAccess.getTextValueRule()); 
-            pushFollow(FOLLOW_ruleTextValue_in_entryRuleTextValue9515);
+            pushFollow(FOLLOW_ruleTextValue_in_entryRuleTextValue9537);
             iv_ruleTextValue=ruleTextValue();
 
             state._fsp--;
 
              current =iv_ruleTextValue; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTextValue9525); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTextValue9547); 
 
             }
 
@@ -10884,7 +10935,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTextValue"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4304:1: ruleTextValue returns [EObject current=null] : (otherlv_0= 'text' ( ( (lv_text_1_0= RULE_STRING ) ) | ( ( ruleQualifiedName ) ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4322:1: ruleTextValue returns [EObject current=null] : (otherlv_0= 'text' ( ( (lv_text_1_0= RULE_STRING ) ) | ( ( ruleQualifiedName ) ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) ;
     public final EObject ruleTextValue() throws RecognitionException {
         EObject current = null;
 
@@ -10897,43 +10948,43 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4307:28: ( (otherlv_0= 'text' ( ( (lv_text_1_0= RULE_STRING ) ) | ( ( ruleQualifiedName ) ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4308:1: (otherlv_0= 'text' ( ( (lv_text_1_0= RULE_STRING ) ) | ( ( ruleQualifiedName ) ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4325:28: ( (otherlv_0= 'text' ( ( (lv_text_1_0= RULE_STRING ) ) | ( ( ruleQualifiedName ) ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4326:1: (otherlv_0= 'text' ( ( (lv_text_1_0= RULE_STRING ) ) | ( ( ruleQualifiedName ) ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4308:1: (otherlv_0= 'text' ( ( (lv_text_1_0= RULE_STRING ) ) | ( ( ruleQualifiedName ) ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4308:3: otherlv_0= 'text' ( ( (lv_text_1_0= RULE_STRING ) ) | ( ( ruleQualifiedName ) ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4326:1: (otherlv_0= 'text' ( ( (lv_text_1_0= RULE_STRING ) ) | ( ( ruleQualifiedName ) ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4326:3: otherlv_0= 'text' ( ( (lv_text_1_0= RULE_STRING ) ) | ( ( ruleQualifiedName ) ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';'
             {
-            otherlv_0=(Token)match(input,64,FOLLOW_64_in_ruleTextValue9562); 
+            otherlv_0=(Token)match(input,64,FOLLOW_64_in_ruleTextValue9584); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getTextValueAccess().getTextKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4312:1: ( ( (lv_text_1_0= RULE_STRING ) ) | ( ( ruleQualifiedName ) ) )
-            int alt84=2;
-            int LA84_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4330:1: ( ( (lv_text_1_0= RULE_STRING ) ) | ( ( ruleQualifiedName ) ) )
+            int alt85=2;
+            int LA85_0 = input.LA(1);
 
-            if ( (LA84_0==RULE_STRING) ) {
-                alt84=1;
+            if ( (LA85_0==RULE_STRING) ) {
+                alt85=1;
             }
-            else if ( (LA84_0==RULE_ID) ) {
-                alt84=2;
+            else if ( (LA85_0==RULE_ID) ) {
+                alt85=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 84, 0, input);
+                    new NoViableAltException("", 85, 0, input);
 
                 throw nvae;
             }
-            switch (alt84) {
+            switch (alt85) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4312:2: ( (lv_text_1_0= RULE_STRING ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4330:2: ( (lv_text_1_0= RULE_STRING ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4312:2: ( (lv_text_1_0= RULE_STRING ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4313:1: (lv_text_1_0= RULE_STRING )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4330:2: ( (lv_text_1_0= RULE_STRING ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4331:1: (lv_text_1_0= RULE_STRING )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4313:1: (lv_text_1_0= RULE_STRING )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4314:3: lv_text_1_0= RULE_STRING
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4331:1: (lv_text_1_0= RULE_STRING )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4332:3: lv_text_1_0= RULE_STRING
                     {
-                    lv_text_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTextValue9580); 
+                    lv_text_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTextValue9602); 
 
                     			newLeafNode(lv_text_1_0, grammarAccess.getTextValueAccess().getTextSTRINGTerminalRuleCall_1_0_0()); 
                     		
@@ -10957,13 +11008,13 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4331:6: ( ( ruleQualifiedName ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4349:6: ( ( ruleQualifiedName ) )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4331:6: ( ( ruleQualifiedName ) )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4332:1: ( ruleQualifiedName )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4349:6: ( ( ruleQualifiedName ) )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4350:1: ( ruleQualifiedName )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4332:1: ( ruleQualifiedName )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4333:3: ruleQualifiedName
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4350:1: ( ruleQualifiedName )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4351:3: ruleQualifiedName
                     {
 
                     			if (current==null) {
@@ -10973,7 +11024,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getTextValueAccess().getModelAttributeEAttributeCrossReference_1_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleTextValue9614);
+                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleTextValue9636);
                     ruleQualifiedName();
 
                     state._fsp--;
@@ -10993,24 +11044,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4346:3: ( (lv_conditional_3_0= ruleFeatureConditional ) )?
-            int alt85=2;
-            int LA85_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4364:3: ( (lv_conditional_3_0= ruleFeatureConditional ) )?
+            int alt86=2;
+            int LA86_0 = input.LA(1);
 
-            if ( (LA85_0==22) ) {
-                alt85=1;
+            if ( (LA86_0==22) ) {
+                alt86=1;
             }
-            switch (alt85) {
+            switch (alt86) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4347:1: (lv_conditional_3_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4365:1: (lv_conditional_3_0= ruleFeatureConditional )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4347:1: (lv_conditional_3_0= ruleFeatureConditional )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4348:3: lv_conditional_3_0= ruleFeatureConditional
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4365:1: (lv_conditional_3_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4366:3: lv_conditional_3_0= ruleFeatureConditional
                     {
                      
                     	        newCompositeNode(grammarAccess.getTextValueAccess().getConditionalFeatureConditionalParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleTextValue9636);
+                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleTextValue9658);
                     lv_conditional_3_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -11035,7 +11086,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,37,FOLLOW_37_in_ruleTextValue9649); 
+            otherlv_4=(Token)match(input,37,FOLLOW_37_in_ruleTextValue9671); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getTextValueAccess().getSemicolonKeyword_3());
                 
@@ -11060,7 +11111,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFontFace"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4376:1: entryRuleFontFace returns [EObject current=null] : iv_ruleFontFace= ruleFontFace EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4394:1: entryRuleFontFace returns [EObject current=null] : iv_ruleFontFace= ruleFontFace EOF ;
     public final EObject entryRuleFontFace() throws RecognitionException {
         EObject current = null;
 
@@ -11068,17 +11119,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4377:2: (iv_ruleFontFace= ruleFontFace EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4378:2: iv_ruleFontFace= ruleFontFace EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4395:2: (iv_ruleFontFace= ruleFontFace EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4396:2: iv_ruleFontFace= ruleFontFace EOF
             {
              newCompositeNode(grammarAccess.getFontFaceRule()); 
-            pushFollow(FOLLOW_ruleFontFace_in_entryRuleFontFace9685);
+            pushFollow(FOLLOW_ruleFontFace_in_entryRuleFontFace9707);
             iv_ruleFontFace=ruleFontFace();
 
             state._fsp--;
 
              current =iv_ruleFontFace; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFontFace9695); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFontFace9717); 
 
             }
 
@@ -11096,7 +11147,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFontFace"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4385:1: ruleFontFace returns [EObject current=null] : (otherlv_0= 'font-face' ( (lv_face_1_0= ruleFontFaceType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4403:1: ruleFontFace returns [EObject current=null] : (otherlv_0= 'font-face' ( (lv_face_1_0= ruleFontFaceType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
     public final EObject ruleFontFace() throws RecognitionException {
         EObject current = null;
 
@@ -11110,26 +11161,26 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4388:28: ( (otherlv_0= 'font-face' ( (lv_face_1_0= ruleFontFaceType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4389:1: (otherlv_0= 'font-face' ( (lv_face_1_0= ruleFontFaceType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4406:28: ( (otherlv_0= 'font-face' ( (lv_face_1_0= ruleFontFaceType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4407:1: (otherlv_0= 'font-face' ( (lv_face_1_0= ruleFontFaceType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4389:1: (otherlv_0= 'font-face' ( (lv_face_1_0= ruleFontFaceType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4389:3: otherlv_0= 'font-face' ( (lv_face_1_0= ruleFontFaceType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4407:1: (otherlv_0= 'font-face' ( (lv_face_1_0= ruleFontFaceType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4407:3: otherlv_0= 'font-face' ( (lv_face_1_0= ruleFontFaceType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
             {
-            otherlv_0=(Token)match(input,65,FOLLOW_65_in_ruleFontFace9732); 
+            otherlv_0=(Token)match(input,65,FOLLOW_65_in_ruleFontFace9754); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getFontFaceAccess().getFontFaceKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4393:1: ( (lv_face_1_0= ruleFontFaceType ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4394:1: (lv_face_1_0= ruleFontFaceType )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4411:1: ( (lv_face_1_0= ruleFontFaceType ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4412:1: (lv_face_1_0= ruleFontFaceType )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4394:1: (lv_face_1_0= ruleFontFaceType )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4395:3: lv_face_1_0= ruleFontFaceType
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4412:1: (lv_face_1_0= ruleFontFaceType )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4413:3: lv_face_1_0= ruleFontFaceType
             {
              
             	        newCompositeNode(grammarAccess.getFontFaceAccess().getFaceFontFaceTypeEnumRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleFontFaceType_in_ruleFontFace9753);
+            pushFollow(FOLLOW_ruleFontFaceType_in_ruleFontFace9775);
             lv_face_1_0=ruleFontFaceType();
 
             state._fsp--;
@@ -11151,24 +11202,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4411:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
-            int alt86=2;
-            int LA86_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4429:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
+            int alt87=2;
+            int LA87_0 = input.LA(1);
 
-            if ( (LA86_0==22) ) {
-                alt86=1;
+            if ( (LA87_0==22) ) {
+                alt87=1;
             }
-            switch (alt86) {
+            switch (alt87) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4412:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4430:1: (lv_conditional_2_0= ruleFeatureConditional )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4412:1: (lv_conditional_2_0= ruleFeatureConditional )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4413:3: lv_conditional_2_0= ruleFeatureConditional
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4430:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4431:3: lv_conditional_2_0= ruleFeatureConditional
                     {
                      
                     	        newCompositeNode(grammarAccess.getFontFaceAccess().getConditionalFeatureConditionalParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleFontFace9774);
+                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleFontFace9796);
                     lv_conditional_2_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -11193,7 +11244,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleFontFace9787); 
+            otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleFontFace9809); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getFontFaceAccess().getSemicolonKeyword_3());
                 
@@ -11218,7 +11269,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFontSize"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4441:1: entryRuleFontSize returns [EObject current=null] : iv_ruleFontSize= ruleFontSize EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4459:1: entryRuleFontSize returns [EObject current=null] : iv_ruleFontSize= ruleFontSize EOF ;
     public final EObject entryRuleFontSize() throws RecognitionException {
         EObject current = null;
 
@@ -11226,17 +11277,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4442:2: (iv_ruleFontSize= ruleFontSize EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4443:2: iv_ruleFontSize= ruleFontSize EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4460:2: (iv_ruleFontSize= ruleFontSize EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4461:2: iv_ruleFontSize= ruleFontSize EOF
             {
              newCompositeNode(grammarAccess.getFontSizeRule()); 
-            pushFollow(FOLLOW_ruleFontSize_in_entryRuleFontSize9823);
+            pushFollow(FOLLOW_ruleFontSize_in_entryRuleFontSize9845);
             iv_ruleFontSize=ruleFontSize();
 
             state._fsp--;
 
              current =iv_ruleFontSize; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFontSize9833); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFontSize9855); 
 
             }
 
@@ -11254,7 +11305,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFontSize"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4450:1: ruleFontSize returns [EObject current=null] : (otherlv_0= 'font-size' ( (lv_size_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4468:1: ruleFontSize returns [EObject current=null] : (otherlv_0= 'font-size' ( (lv_size_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
     public final EObject ruleFontSize() throws RecognitionException {
         EObject current = null;
 
@@ -11267,23 +11318,23 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4453:28: ( (otherlv_0= 'font-size' ( (lv_size_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4454:1: (otherlv_0= 'font-size' ( (lv_size_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4471:28: ( (otherlv_0= 'font-size' ( (lv_size_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4472:1: (otherlv_0= 'font-size' ( (lv_size_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4454:1: (otherlv_0= 'font-size' ( (lv_size_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4454:3: otherlv_0= 'font-size' ( (lv_size_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4472:1: (otherlv_0= 'font-size' ( (lv_size_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4472:3: otherlv_0= 'font-size' ( (lv_size_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
             {
-            otherlv_0=(Token)match(input,66,FOLLOW_66_in_ruleFontSize9870); 
+            otherlv_0=(Token)match(input,66,FOLLOW_66_in_ruleFontSize9892); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getFontSizeAccess().getFontSizeKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4458:1: ( (lv_size_1_0= RULE_INT ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4459:1: (lv_size_1_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4476:1: ( (lv_size_1_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4477:1: (lv_size_1_0= RULE_INT )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4459:1: (lv_size_1_0= RULE_INT )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4460:3: lv_size_1_0= RULE_INT
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4477:1: (lv_size_1_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4478:3: lv_size_1_0= RULE_INT
             {
-            lv_size_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleFontSize9887); 
+            lv_size_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleFontSize9909); 
 
             			newLeafNode(lv_size_1_0, grammarAccess.getFontSizeAccess().getSizeINTTerminalRuleCall_1_0()); 
             		
@@ -11303,24 +11354,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4476:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
-            int alt87=2;
-            int LA87_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4494:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
+            int alt88=2;
+            int LA88_0 = input.LA(1);
 
-            if ( (LA87_0==22) ) {
-                alt87=1;
+            if ( (LA88_0==22) ) {
+                alt88=1;
             }
-            switch (alt87) {
+            switch (alt88) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4477:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4495:1: (lv_conditional_2_0= ruleFeatureConditional )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4477:1: (lv_conditional_2_0= ruleFeatureConditional )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4478:3: lv_conditional_2_0= ruleFeatureConditional
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4495:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4496:3: lv_conditional_2_0= ruleFeatureConditional
                     {
                      
                     	        newCompositeNode(grammarAccess.getFontSizeAccess().getConditionalFeatureConditionalParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleFontSize9913);
+                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleFontSize9935);
                     lv_conditional_2_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -11345,7 +11396,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleFontSize9926); 
+            otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleFontSize9948); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getFontSizeAccess().getSemicolonKeyword_3());
                 
@@ -11370,7 +11421,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFontStyle"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4506:1: entryRuleFontStyle returns [EObject current=null] : iv_ruleFontStyle= ruleFontStyle EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4524:1: entryRuleFontStyle returns [EObject current=null] : iv_ruleFontStyle= ruleFontStyle EOF ;
     public final EObject entryRuleFontStyle() throws RecognitionException {
         EObject current = null;
 
@@ -11378,17 +11429,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4507:2: (iv_ruleFontStyle= ruleFontStyle EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4508:2: iv_ruleFontStyle= ruleFontStyle EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4525:2: (iv_ruleFontStyle= ruleFontStyle EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4526:2: iv_ruleFontStyle= ruleFontStyle EOF
             {
              newCompositeNode(grammarAccess.getFontStyleRule()); 
-            pushFollow(FOLLOW_ruleFontStyle_in_entryRuleFontStyle9962);
+            pushFollow(FOLLOW_ruleFontStyle_in_entryRuleFontStyle9984);
             iv_ruleFontStyle=ruleFontStyle();
 
             state._fsp--;
 
              current =iv_ruleFontStyle; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFontStyle9972); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFontStyle9994); 
 
             }
 
@@ -11406,7 +11457,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFontStyle"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4515:1: ruleFontStyle returns [EObject current=null] : (otherlv_0= 'font-style' ( (lv_styles_1_0= ruleFontStyleType ) ) (otherlv_2= ',' ( (lv_styles_3_0= ruleFontStyleType ) ) )* ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4533:1: ruleFontStyle returns [EObject current=null] : (otherlv_0= 'font-style' ( (lv_styles_1_0= ruleFontStyleType ) ) (otherlv_2= ',' ( (lv_styles_3_0= ruleFontStyleType ) ) )* ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) ;
     public final EObject ruleFontStyle() throws RecognitionException {
         EObject current = null;
 
@@ -11423,26 +11474,26 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4518:28: ( (otherlv_0= 'font-style' ( (lv_styles_1_0= ruleFontStyleType ) ) (otherlv_2= ',' ( (lv_styles_3_0= ruleFontStyleType ) ) )* ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4519:1: (otherlv_0= 'font-style' ( (lv_styles_1_0= ruleFontStyleType ) ) (otherlv_2= ',' ( (lv_styles_3_0= ruleFontStyleType ) ) )* ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4536:28: ( (otherlv_0= 'font-style' ( (lv_styles_1_0= ruleFontStyleType ) ) (otherlv_2= ',' ( (lv_styles_3_0= ruleFontStyleType ) ) )* ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4537:1: (otherlv_0= 'font-style' ( (lv_styles_1_0= ruleFontStyleType ) ) (otherlv_2= ',' ( (lv_styles_3_0= ruleFontStyleType ) ) )* ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4519:1: (otherlv_0= 'font-style' ( (lv_styles_1_0= ruleFontStyleType ) ) (otherlv_2= ',' ( (lv_styles_3_0= ruleFontStyleType ) ) )* ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4519:3: otherlv_0= 'font-style' ( (lv_styles_1_0= ruleFontStyleType ) ) (otherlv_2= ',' ( (lv_styles_3_0= ruleFontStyleType ) ) )* ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4537:1: (otherlv_0= 'font-style' ( (lv_styles_1_0= ruleFontStyleType ) ) (otherlv_2= ',' ( (lv_styles_3_0= ruleFontStyleType ) ) )* ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4537:3: otherlv_0= 'font-style' ( (lv_styles_1_0= ruleFontStyleType ) ) (otherlv_2= ',' ( (lv_styles_3_0= ruleFontStyleType ) ) )* ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';'
             {
-            otherlv_0=(Token)match(input,67,FOLLOW_67_in_ruleFontStyle10009); 
+            otherlv_0=(Token)match(input,67,FOLLOW_67_in_ruleFontStyle10031); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getFontStyleAccess().getFontStyleKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4523:1: ( (lv_styles_1_0= ruleFontStyleType ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4524:1: (lv_styles_1_0= ruleFontStyleType )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4541:1: ( (lv_styles_1_0= ruleFontStyleType ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4542:1: (lv_styles_1_0= ruleFontStyleType )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4524:1: (lv_styles_1_0= ruleFontStyleType )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4525:3: lv_styles_1_0= ruleFontStyleType
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4542:1: (lv_styles_1_0= ruleFontStyleType )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4543:3: lv_styles_1_0= ruleFontStyleType
             {
              
             	        newCompositeNode(grammarAccess.getFontStyleAccess().getStylesFontStyleTypeEnumRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleFontStyleType_in_ruleFontStyle10030);
+            pushFollow(FOLLOW_ruleFontStyleType_in_ruleFontStyle10052);
             lv_styles_1_0=ruleFontStyleType();
 
             state._fsp--;
@@ -11464,35 +11515,35 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4541:2: (otherlv_2= ',' ( (lv_styles_3_0= ruleFontStyleType ) ) )*
-            loop88:
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4559:2: (otherlv_2= ',' ( (lv_styles_3_0= ruleFontStyleType ) ) )*
+            loop89:
             do {
-                int alt88=2;
-                int LA88_0 = input.LA(1);
+                int alt89=2;
+                int LA89_0 = input.LA(1);
 
-                if ( (LA88_0==39) ) {
-                    alt88=1;
+                if ( (LA89_0==39) ) {
+                    alt89=1;
                 }
 
 
-                switch (alt88) {
+                switch (alt89) {
             	case 1 :
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4541:4: otherlv_2= ',' ( (lv_styles_3_0= ruleFontStyleType ) )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4559:4: otherlv_2= ',' ( (lv_styles_3_0= ruleFontStyleType ) )
             	    {
-            	    otherlv_2=(Token)match(input,39,FOLLOW_39_in_ruleFontStyle10043); 
+            	    otherlv_2=(Token)match(input,39,FOLLOW_39_in_ruleFontStyle10065); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getFontStyleAccess().getCommaKeyword_2_0());
             	        
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4545:1: ( (lv_styles_3_0= ruleFontStyleType ) )
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4546:1: (lv_styles_3_0= ruleFontStyleType )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4563:1: ( (lv_styles_3_0= ruleFontStyleType ) )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4564:1: (lv_styles_3_0= ruleFontStyleType )
             	    {
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4546:1: (lv_styles_3_0= ruleFontStyleType )
-            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4547:3: lv_styles_3_0= ruleFontStyleType
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4564:1: (lv_styles_3_0= ruleFontStyleType )
+            	    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4565:3: lv_styles_3_0= ruleFontStyleType
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getFontStyleAccess().getStylesFontStyleTypeEnumRuleCall_2_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleFontStyleType_in_ruleFontStyle10064);
+            	    pushFollow(FOLLOW_ruleFontStyleType_in_ruleFontStyle10086);
             	    lv_styles_3_0=ruleFontStyleType();
 
             	    state._fsp--;
@@ -11519,28 +11570,28 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop88;
+            	    break loop89;
                 }
             } while (true);
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4563:4: ( (lv_conditional_4_0= ruleFeatureConditional ) )?
-            int alt89=2;
-            int LA89_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4581:4: ( (lv_conditional_4_0= ruleFeatureConditional ) )?
+            int alt90=2;
+            int LA90_0 = input.LA(1);
 
-            if ( (LA89_0==22) ) {
-                alt89=1;
+            if ( (LA90_0==22) ) {
+                alt90=1;
             }
-            switch (alt89) {
+            switch (alt90) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4564:1: (lv_conditional_4_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4582:1: (lv_conditional_4_0= ruleFeatureConditional )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4564:1: (lv_conditional_4_0= ruleFeatureConditional )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4565:3: lv_conditional_4_0= ruleFeatureConditional
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4582:1: (lv_conditional_4_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4583:3: lv_conditional_4_0= ruleFeatureConditional
                     {
                      
                     	        newCompositeNode(grammarAccess.getFontStyleAccess().getConditionalFeatureConditionalParserRuleCall_3_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleFontStyle10087);
+                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleFontStyle10109);
                     lv_conditional_4_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -11565,7 +11616,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,37,FOLLOW_37_in_ruleFontStyle10100); 
+            otherlv_5=(Token)match(input,37,FOLLOW_37_in_ruleFontStyle10122); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getFontStyleAccess().getSemicolonKeyword_4());
                 
@@ -11590,7 +11641,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLineStyle"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4593:1: entryRuleLineStyle returns [EObject current=null] : iv_ruleLineStyle= ruleLineStyle EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4611:1: entryRuleLineStyle returns [EObject current=null] : iv_ruleLineStyle= ruleLineStyle EOF ;
     public final EObject entryRuleLineStyle() throws RecognitionException {
         EObject current = null;
 
@@ -11598,17 +11649,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4594:2: (iv_ruleLineStyle= ruleLineStyle EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4595:2: iv_ruleLineStyle= ruleLineStyle EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4612:2: (iv_ruleLineStyle= ruleLineStyle EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4613:2: iv_ruleLineStyle= ruleLineStyle EOF
             {
              newCompositeNode(grammarAccess.getLineStyleRule()); 
-            pushFollow(FOLLOW_ruleLineStyle_in_entryRuleLineStyle10136);
+            pushFollow(FOLLOW_ruleLineStyle_in_entryRuleLineStyle10158);
             iv_ruleLineStyle=ruleLineStyle();
 
             state._fsp--;
 
              current =iv_ruleLineStyle; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLineStyle10146); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLineStyle10168); 
 
             }
 
@@ -11626,7 +11677,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLineStyle"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4602:1: ruleLineStyle returns [EObject current=null] : (otherlv_0= 'line-type' ( (lv_style_1_0= ruleLineType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4620:1: ruleLineStyle returns [EObject current=null] : (otherlv_0= 'line-type' ( (lv_style_1_0= ruleLineType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
     public final EObject ruleLineStyle() throws RecognitionException {
         EObject current = null;
 
@@ -11640,26 +11691,26 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4605:28: ( (otherlv_0= 'line-type' ( (lv_style_1_0= ruleLineType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4606:1: (otherlv_0= 'line-type' ( (lv_style_1_0= ruleLineType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4623:28: ( (otherlv_0= 'line-type' ( (lv_style_1_0= ruleLineType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4624:1: (otherlv_0= 'line-type' ( (lv_style_1_0= ruleLineType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4606:1: (otherlv_0= 'line-type' ( (lv_style_1_0= ruleLineType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4606:3: otherlv_0= 'line-type' ( (lv_style_1_0= ruleLineType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4624:1: (otherlv_0= 'line-type' ( (lv_style_1_0= ruleLineType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4624:3: otherlv_0= 'line-type' ( (lv_style_1_0= ruleLineType ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
             {
-            otherlv_0=(Token)match(input,68,FOLLOW_68_in_ruleLineStyle10183); 
+            otherlv_0=(Token)match(input,68,FOLLOW_68_in_ruleLineStyle10205); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getLineStyleAccess().getLineTypeKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4610:1: ( (lv_style_1_0= ruleLineType ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4611:1: (lv_style_1_0= ruleLineType )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4628:1: ( (lv_style_1_0= ruleLineType ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4629:1: (lv_style_1_0= ruleLineType )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4611:1: (lv_style_1_0= ruleLineType )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4612:3: lv_style_1_0= ruleLineType
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4629:1: (lv_style_1_0= ruleLineType )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4630:3: lv_style_1_0= ruleLineType
             {
              
             	        newCompositeNode(grammarAccess.getLineStyleAccess().getStyleLineTypeEnumRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleLineType_in_ruleLineStyle10204);
+            pushFollow(FOLLOW_ruleLineType_in_ruleLineStyle10226);
             lv_style_1_0=ruleLineType();
 
             state._fsp--;
@@ -11681,24 +11732,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4628:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
-            int alt90=2;
-            int LA90_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4646:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
+            int alt91=2;
+            int LA91_0 = input.LA(1);
 
-            if ( (LA90_0==22) ) {
-                alt90=1;
+            if ( (LA91_0==22) ) {
+                alt91=1;
             }
-            switch (alt90) {
+            switch (alt91) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4629:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4647:1: (lv_conditional_2_0= ruleFeatureConditional )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4629:1: (lv_conditional_2_0= ruleFeatureConditional )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4630:3: lv_conditional_2_0= ruleFeatureConditional
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4647:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4648:3: lv_conditional_2_0= ruleFeatureConditional
                     {
                      
                     	        newCompositeNode(grammarAccess.getLineStyleAccess().getConditionalFeatureConditionalParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleLineStyle10225);
+                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleLineStyle10247);
                     lv_conditional_2_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -11723,7 +11774,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleLineStyle10238); 
+            otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleLineStyle10260); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getLineStyleAccess().getSemicolonKeyword_3());
                 
@@ -11748,7 +11799,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLineWidth"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4658:1: entryRuleLineWidth returns [EObject current=null] : iv_ruleLineWidth= ruleLineWidth EOF ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4676:1: entryRuleLineWidth returns [EObject current=null] : iv_ruleLineWidth= ruleLineWidth EOF ;
     public final EObject entryRuleLineWidth() throws RecognitionException {
         EObject current = null;
 
@@ -11756,17 +11807,17 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4659:2: (iv_ruleLineWidth= ruleLineWidth EOF )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4660:2: iv_ruleLineWidth= ruleLineWidth EOF
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4677:2: (iv_ruleLineWidth= ruleLineWidth EOF )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4678:2: iv_ruleLineWidth= ruleLineWidth EOF
             {
              newCompositeNode(grammarAccess.getLineWidthRule()); 
-            pushFollow(FOLLOW_ruleLineWidth_in_entryRuleLineWidth10274);
+            pushFollow(FOLLOW_ruleLineWidth_in_entryRuleLineWidth10296);
             iv_ruleLineWidth=ruleLineWidth();
 
             state._fsp--;
 
              current =iv_ruleLineWidth; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLineWidth10284); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLineWidth10306); 
 
             }
 
@@ -11784,7 +11835,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLineWidth"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4667:1: ruleLineWidth returns [EObject current=null] : (otherlv_0= 'line-width' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4685:1: ruleLineWidth returns [EObject current=null] : (otherlv_0= 'line-width' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
     public final EObject ruleLineWidth() throws RecognitionException {
         EObject current = null;
 
@@ -11797,23 +11848,23 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4670:28: ( (otherlv_0= 'line-width' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4671:1: (otherlv_0= 'line-width' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4688:28: ( (otherlv_0= 'line-width' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4689:1: (otherlv_0= 'line-width' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4671:1: (otherlv_0= 'line-width' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4671:3: otherlv_0= 'line-width' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4689:1: (otherlv_0= 'line-width' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4689:3: otherlv_0= 'line-width' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
             {
-            otherlv_0=(Token)match(input,69,FOLLOW_69_in_ruleLineWidth10321); 
+            otherlv_0=(Token)match(input,69,FOLLOW_69_in_ruleLineWidth10343); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getLineWidthAccess().getLineWidthKeyword_0());
                 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4675:1: ( (lv_width_1_0= RULE_INT ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4676:1: (lv_width_1_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4693:1: ( (lv_width_1_0= RULE_INT ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4694:1: (lv_width_1_0= RULE_INT )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4676:1: (lv_width_1_0= RULE_INT )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4677:3: lv_width_1_0= RULE_INT
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4694:1: (lv_width_1_0= RULE_INT )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4695:3: lv_width_1_0= RULE_INT
             {
-            lv_width_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleLineWidth10338); 
+            lv_width_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleLineWidth10360); 
 
             			newLeafNode(lv_width_1_0, grammarAccess.getLineWidthAccess().getWidthINTTerminalRuleCall_1_0()); 
             		
@@ -11833,24 +11884,24 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4693:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
-            int alt91=2;
-            int LA91_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4711:2: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
+            int alt92=2;
+            int LA92_0 = input.LA(1);
 
-            if ( (LA91_0==22) ) {
-                alt91=1;
+            if ( (LA92_0==22) ) {
+                alt92=1;
             }
-            switch (alt91) {
+            switch (alt92) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4694:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4712:1: (lv_conditional_2_0= ruleFeatureConditional )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4694:1: (lv_conditional_2_0= ruleFeatureConditional )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4695:3: lv_conditional_2_0= ruleFeatureConditional
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4712:1: (lv_conditional_2_0= ruleFeatureConditional )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4713:3: lv_conditional_2_0= ruleFeatureConditional
                     {
                      
                     	        newCompositeNode(grammarAccess.getLineWidthAccess().getConditionalFeatureConditionalParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleLineWidth10364);
+                    pushFollow(FOLLOW_ruleFeatureConditional_in_ruleLineWidth10386);
                     lv_conditional_2_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -11875,7 +11926,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleLineWidth10377); 
+            otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleLineWidth10399); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getLineWidthAccess().getSemicolonKeyword_3());
                 
@@ -11900,7 +11951,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConnectionType"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4725:1: ruleConnectionType returns [Enumerator current=null] : ( (enumLiteral_0= 'free' ) | (enumLiteral_1= 'manhattan' ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4743:1: ruleConnectionType returns [Enumerator current=null] : ( (enumLiteral_0= 'free' ) | (enumLiteral_1= 'manhattan' ) ) ;
     public final Enumerator ruleConnectionType() throws RecognitionException {
         Enumerator current = null;
 
@@ -11909,33 +11960,33 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4727:28: ( ( (enumLiteral_0= 'free' ) | (enumLiteral_1= 'manhattan' ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4728:1: ( (enumLiteral_0= 'free' ) | (enumLiteral_1= 'manhattan' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4745:28: ( ( (enumLiteral_0= 'free' ) | (enumLiteral_1= 'manhattan' ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4746:1: ( (enumLiteral_0= 'free' ) | (enumLiteral_1= 'manhattan' ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4728:1: ( (enumLiteral_0= 'free' ) | (enumLiteral_1= 'manhattan' ) )
-            int alt92=2;
-            int LA92_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4746:1: ( (enumLiteral_0= 'free' ) | (enumLiteral_1= 'manhattan' ) )
+            int alt93=2;
+            int LA93_0 = input.LA(1);
 
-            if ( (LA92_0==70) ) {
-                alt92=1;
+            if ( (LA93_0==70) ) {
+                alt93=1;
             }
-            else if ( (LA92_0==71) ) {
-                alt92=2;
+            else if ( (LA93_0==71) ) {
+                alt93=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 92, 0, input);
+                    new NoViableAltException("", 93, 0, input);
 
                 throw nvae;
             }
-            switch (alt92) {
+            switch (alt93) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4728:2: (enumLiteral_0= 'free' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4746:2: (enumLiteral_0= 'free' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4728:2: (enumLiteral_0= 'free' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4728:4: enumLiteral_0= 'free'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4746:2: (enumLiteral_0= 'free' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4746:4: enumLiteral_0= 'free'
                     {
-                    enumLiteral_0=(Token)match(input,70,FOLLOW_70_in_ruleConnectionType10429); 
+                    enumLiteral_0=(Token)match(input,70,FOLLOW_70_in_ruleConnectionType10451); 
 
                             current = grammarAccess.getConnectionTypeAccess().getFREEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getConnectionTypeAccess().getFREEEnumLiteralDeclaration_0()); 
@@ -11947,12 +11998,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4734:6: (enumLiteral_1= 'manhattan' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4752:6: (enumLiteral_1= 'manhattan' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4734:6: (enumLiteral_1= 'manhattan' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4734:8: enumLiteral_1= 'manhattan'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4752:6: (enumLiteral_1= 'manhattan' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4752:8: enumLiteral_1= 'manhattan'
                     {
-                    enumLiteral_1=(Token)match(input,71,FOLLOW_71_in_ruleConnectionType10446); 
+                    enumLiteral_1=(Token)match(input,71,FOLLOW_71_in_ruleConnectionType10468); 
 
                             current = grammarAccess.getConnectionTypeAccess().getMANHATTANEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getConnectionTypeAccess().getMANHATTANEnumLiteralDeclaration_1()); 
@@ -11984,7 +12035,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAnchorDirection"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4744:1: ruleAnchorDirection returns [Enumerator current=null] : ( (enumLiteral_0= 'incoming' ) | (enumLiteral_1= 'outgoing' ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4762:1: ruleAnchorDirection returns [Enumerator current=null] : ( (enumLiteral_0= 'incoming' ) | (enumLiteral_1= 'outgoing' ) ) ;
     public final Enumerator ruleAnchorDirection() throws RecognitionException {
         Enumerator current = null;
 
@@ -11993,33 +12044,33 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4746:28: ( ( (enumLiteral_0= 'incoming' ) | (enumLiteral_1= 'outgoing' ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4747:1: ( (enumLiteral_0= 'incoming' ) | (enumLiteral_1= 'outgoing' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4764:28: ( ( (enumLiteral_0= 'incoming' ) | (enumLiteral_1= 'outgoing' ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4765:1: ( (enumLiteral_0= 'incoming' ) | (enumLiteral_1= 'outgoing' ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4747:1: ( (enumLiteral_0= 'incoming' ) | (enumLiteral_1= 'outgoing' ) )
-            int alt93=2;
-            int LA93_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4765:1: ( (enumLiteral_0= 'incoming' ) | (enumLiteral_1= 'outgoing' ) )
+            int alt94=2;
+            int LA94_0 = input.LA(1);
 
-            if ( (LA93_0==72) ) {
-                alt93=1;
+            if ( (LA94_0==72) ) {
+                alt94=1;
             }
-            else if ( (LA93_0==73) ) {
-                alt93=2;
+            else if ( (LA94_0==73) ) {
+                alt94=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 93, 0, input);
+                    new NoViableAltException("", 94, 0, input);
 
                 throw nvae;
             }
-            switch (alt93) {
+            switch (alt94) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4747:2: (enumLiteral_0= 'incoming' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4765:2: (enumLiteral_0= 'incoming' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4747:2: (enumLiteral_0= 'incoming' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4747:4: enumLiteral_0= 'incoming'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4765:2: (enumLiteral_0= 'incoming' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4765:4: enumLiteral_0= 'incoming'
                     {
-                    enumLiteral_0=(Token)match(input,72,FOLLOW_72_in_ruleAnchorDirection10491); 
+                    enumLiteral_0=(Token)match(input,72,FOLLOW_72_in_ruleAnchorDirection10513); 
 
                             current = grammarAccess.getAnchorDirectionAccess().getINCOMINGEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getAnchorDirectionAccess().getINCOMINGEnumLiteralDeclaration_0()); 
@@ -12031,12 +12082,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4753:6: (enumLiteral_1= 'outgoing' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4771:6: (enumLiteral_1= 'outgoing' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4753:6: (enumLiteral_1= 'outgoing' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4753:8: enumLiteral_1= 'outgoing'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4771:6: (enumLiteral_1= 'outgoing' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4771:8: enumLiteral_1= 'outgoing'
                     {
-                    enumLiteral_1=(Token)match(input,73,FOLLOW_73_in_ruleAnchorDirection10508); 
+                    enumLiteral_1=(Token)match(input,73,FOLLOW_73_in_ruleAnchorDirection10530); 
 
                             current = grammarAccess.getAnchorDirectionAccess().getOUTGOINGEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getAnchorDirectionAccess().getOUTGOINGEnumLiteralDeclaration_1()); 
@@ -12068,7 +12119,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDefaultColor"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4763:1: ruleDefaultColor returns [Enumerator current=null] : ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4781:1: ruleDefaultColor returns [Enumerator current=null] : ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) ) ;
     public final Enumerator ruleDefaultColor() throws RecognitionException {
         Enumerator current = null;
 
@@ -12091,107 +12142,107 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4765:28: ( ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4766:1: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4783:28: ( ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4784:1: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4766:1: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) )
-            int alt94=16;
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4784:1: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) )
+            int alt95=16;
             switch ( input.LA(1) ) {
             case 74:
                 {
-                alt94=1;
+                alt95=1;
                 }
                 break;
             case 75:
                 {
-                alt94=2;
+                alt95=2;
                 }
                 break;
             case 76:
                 {
-                alt94=3;
+                alt95=3;
                 }
                 break;
             case 77:
                 {
-                alt94=4;
+                alt95=4;
                 }
                 break;
             case 78:
                 {
-                alt94=5;
+                alt95=5;
                 }
                 break;
             case 79:
                 {
-                alt94=6;
+                alt95=6;
                 }
                 break;
             case 80:
                 {
-                alt94=7;
+                alt95=7;
                 }
                 break;
             case 81:
                 {
-                alt94=8;
+                alt95=8;
                 }
                 break;
             case 82:
                 {
-                alt94=9;
+                alt95=9;
                 }
                 break;
             case 83:
                 {
-                alt94=10;
+                alt95=10;
                 }
                 break;
             case 84:
                 {
-                alt94=11;
+                alt95=11;
                 }
                 break;
             case 85:
                 {
-                alt94=12;
+                alt95=12;
                 }
                 break;
             case 86:
                 {
-                alt94=13;
+                alt95=13;
                 }
                 break;
             case 87:
                 {
-                alt94=14;
+                alt95=14;
                 }
                 break;
             case 88:
                 {
-                alt94=15;
+                alt95=15;
                 }
                 break;
             case 89:
                 {
-                alt94=16;
+                alt95=16;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 94, 0, input);
+                    new NoViableAltException("", 95, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt94) {
+            switch (alt95) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4766:2: (enumLiteral_0= 'white' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4784:2: (enumLiteral_0= 'white' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4766:2: (enumLiteral_0= 'white' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4766:4: enumLiteral_0= 'white'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4784:2: (enumLiteral_0= 'white' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4784:4: enumLiteral_0= 'white'
                     {
-                    enumLiteral_0=(Token)match(input,74,FOLLOW_74_in_ruleDefaultColor10553); 
+                    enumLiteral_0=(Token)match(input,74,FOLLOW_74_in_ruleDefaultColor10575); 
 
                             current = grammarAccess.getDefaultColorAccess().getWHITEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getDefaultColorAccess().getWHITEEnumLiteralDeclaration_0()); 
@@ -12203,12 +12254,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4772:6: (enumLiteral_1= 'silver' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4790:6: (enumLiteral_1= 'silver' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4772:6: (enumLiteral_1= 'silver' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4772:8: enumLiteral_1= 'silver'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4790:6: (enumLiteral_1= 'silver' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4790:8: enumLiteral_1= 'silver'
                     {
-                    enumLiteral_1=(Token)match(input,75,FOLLOW_75_in_ruleDefaultColor10570); 
+                    enumLiteral_1=(Token)match(input,75,FOLLOW_75_in_ruleDefaultColor10592); 
 
                             current = grammarAccess.getDefaultColorAccess().getSILVEREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getDefaultColorAccess().getSILVEREnumLiteralDeclaration_1()); 
@@ -12220,12 +12271,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4778:6: (enumLiteral_2= 'gray' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4796:6: (enumLiteral_2= 'gray' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4778:6: (enumLiteral_2= 'gray' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4778:8: enumLiteral_2= 'gray'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4796:6: (enumLiteral_2= 'gray' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4796:8: enumLiteral_2= 'gray'
                     {
-                    enumLiteral_2=(Token)match(input,76,FOLLOW_76_in_ruleDefaultColor10587); 
+                    enumLiteral_2=(Token)match(input,76,FOLLOW_76_in_ruleDefaultColor10609); 
 
                             current = grammarAccess.getDefaultColorAccess().getGRAYEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getDefaultColorAccess().getGRAYEnumLiteralDeclaration_2()); 
@@ -12237,12 +12288,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4784:6: (enumLiteral_3= 'black' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4802:6: (enumLiteral_3= 'black' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4784:6: (enumLiteral_3= 'black' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4784:8: enumLiteral_3= 'black'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4802:6: (enumLiteral_3= 'black' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4802:8: enumLiteral_3= 'black'
                     {
-                    enumLiteral_3=(Token)match(input,77,FOLLOW_77_in_ruleDefaultColor10604); 
+                    enumLiteral_3=(Token)match(input,77,FOLLOW_77_in_ruleDefaultColor10626); 
 
                             current = grammarAccess.getDefaultColorAccess().getBLACKEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getDefaultColorAccess().getBLACKEnumLiteralDeclaration_3()); 
@@ -12254,12 +12305,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4790:6: (enumLiteral_4= 'red' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4808:6: (enumLiteral_4= 'red' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4790:6: (enumLiteral_4= 'red' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4790:8: enumLiteral_4= 'red'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4808:6: (enumLiteral_4= 'red' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4808:8: enumLiteral_4= 'red'
                     {
-                    enumLiteral_4=(Token)match(input,78,FOLLOW_78_in_ruleDefaultColor10621); 
+                    enumLiteral_4=(Token)match(input,78,FOLLOW_78_in_ruleDefaultColor10643); 
 
                             current = grammarAccess.getDefaultColorAccess().getREDEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getDefaultColorAccess().getREDEnumLiteralDeclaration_4()); 
@@ -12271,12 +12322,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4796:6: (enumLiteral_5= 'maroon' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4814:6: (enumLiteral_5= 'maroon' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4796:6: (enumLiteral_5= 'maroon' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4796:8: enumLiteral_5= 'maroon'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4814:6: (enumLiteral_5= 'maroon' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4814:8: enumLiteral_5= 'maroon'
                     {
-                    enumLiteral_5=(Token)match(input,79,FOLLOW_79_in_ruleDefaultColor10638); 
+                    enumLiteral_5=(Token)match(input,79,FOLLOW_79_in_ruleDefaultColor10660); 
 
                             current = grammarAccess.getDefaultColorAccess().getMAROONEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getDefaultColorAccess().getMAROONEnumLiteralDeclaration_5()); 
@@ -12288,12 +12339,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4802:6: (enumLiteral_6= 'yellow' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4820:6: (enumLiteral_6= 'yellow' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4802:6: (enumLiteral_6= 'yellow' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4802:8: enumLiteral_6= 'yellow'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4820:6: (enumLiteral_6= 'yellow' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4820:8: enumLiteral_6= 'yellow'
                     {
-                    enumLiteral_6=(Token)match(input,80,FOLLOW_80_in_ruleDefaultColor10655); 
+                    enumLiteral_6=(Token)match(input,80,FOLLOW_80_in_ruleDefaultColor10677); 
 
                             current = grammarAccess.getDefaultColorAccess().getYELLOWEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_6, grammarAccess.getDefaultColorAccess().getYELLOWEnumLiteralDeclaration_6()); 
@@ -12305,12 +12356,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4808:6: (enumLiteral_7= 'olive' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4826:6: (enumLiteral_7= 'olive' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4808:6: (enumLiteral_7= 'olive' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4808:8: enumLiteral_7= 'olive'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4826:6: (enumLiteral_7= 'olive' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4826:8: enumLiteral_7= 'olive'
                     {
-                    enumLiteral_7=(Token)match(input,81,FOLLOW_81_in_ruleDefaultColor10672); 
+                    enumLiteral_7=(Token)match(input,81,FOLLOW_81_in_ruleDefaultColor10694); 
 
                             current = grammarAccess.getDefaultColorAccess().getOLIVEEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_7, grammarAccess.getDefaultColorAccess().getOLIVEEnumLiteralDeclaration_7()); 
@@ -12322,12 +12373,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4814:6: (enumLiteral_8= 'lime' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4832:6: (enumLiteral_8= 'lime' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4814:6: (enumLiteral_8= 'lime' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4814:8: enumLiteral_8= 'lime'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4832:6: (enumLiteral_8= 'lime' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4832:8: enumLiteral_8= 'lime'
                     {
-                    enumLiteral_8=(Token)match(input,82,FOLLOW_82_in_ruleDefaultColor10689); 
+                    enumLiteral_8=(Token)match(input,82,FOLLOW_82_in_ruleDefaultColor10711); 
 
                             current = grammarAccess.getDefaultColorAccess().getLIMEEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_8, grammarAccess.getDefaultColorAccess().getLIMEEnumLiteralDeclaration_8()); 
@@ -12339,12 +12390,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4820:6: (enumLiteral_9= 'green' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4838:6: (enumLiteral_9= 'green' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4820:6: (enumLiteral_9= 'green' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4820:8: enumLiteral_9= 'green'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4838:6: (enumLiteral_9= 'green' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4838:8: enumLiteral_9= 'green'
                     {
-                    enumLiteral_9=(Token)match(input,83,FOLLOW_83_in_ruleDefaultColor10706); 
+                    enumLiteral_9=(Token)match(input,83,FOLLOW_83_in_ruleDefaultColor10728); 
 
                             current = grammarAccess.getDefaultColorAccess().getGREENEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_9, grammarAccess.getDefaultColorAccess().getGREENEnumLiteralDeclaration_9()); 
@@ -12356,12 +12407,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4826:6: (enumLiteral_10= 'aqua' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4844:6: (enumLiteral_10= 'aqua' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4826:6: (enumLiteral_10= 'aqua' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4826:8: enumLiteral_10= 'aqua'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4844:6: (enumLiteral_10= 'aqua' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4844:8: enumLiteral_10= 'aqua'
                     {
-                    enumLiteral_10=(Token)match(input,84,FOLLOW_84_in_ruleDefaultColor10723); 
+                    enumLiteral_10=(Token)match(input,84,FOLLOW_84_in_ruleDefaultColor10745); 
 
                             current = grammarAccess.getDefaultColorAccess().getAQUAEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_10, grammarAccess.getDefaultColorAccess().getAQUAEnumLiteralDeclaration_10()); 
@@ -12373,12 +12424,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4832:6: (enumLiteral_11= 'teal' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4850:6: (enumLiteral_11= 'teal' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4832:6: (enumLiteral_11= 'teal' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4832:8: enumLiteral_11= 'teal'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4850:6: (enumLiteral_11= 'teal' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4850:8: enumLiteral_11= 'teal'
                     {
-                    enumLiteral_11=(Token)match(input,85,FOLLOW_85_in_ruleDefaultColor10740); 
+                    enumLiteral_11=(Token)match(input,85,FOLLOW_85_in_ruleDefaultColor10762); 
 
                             current = grammarAccess.getDefaultColorAccess().getTEALEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_11, grammarAccess.getDefaultColorAccess().getTEALEnumLiteralDeclaration_11()); 
@@ -12390,12 +12441,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4838:6: (enumLiteral_12= 'blue' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4856:6: (enumLiteral_12= 'blue' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4838:6: (enumLiteral_12= 'blue' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4838:8: enumLiteral_12= 'blue'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4856:6: (enumLiteral_12= 'blue' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4856:8: enumLiteral_12= 'blue'
                     {
-                    enumLiteral_12=(Token)match(input,86,FOLLOW_86_in_ruleDefaultColor10757); 
+                    enumLiteral_12=(Token)match(input,86,FOLLOW_86_in_ruleDefaultColor10779); 
 
                             current = grammarAccess.getDefaultColorAccess().getBLUEEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_12, grammarAccess.getDefaultColorAccess().getBLUEEnumLiteralDeclaration_12()); 
@@ -12407,12 +12458,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4844:6: (enumLiteral_13= 'navy' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4862:6: (enumLiteral_13= 'navy' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4844:6: (enumLiteral_13= 'navy' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4844:8: enumLiteral_13= 'navy'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4862:6: (enumLiteral_13= 'navy' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4862:8: enumLiteral_13= 'navy'
                     {
-                    enumLiteral_13=(Token)match(input,87,FOLLOW_87_in_ruleDefaultColor10774); 
+                    enumLiteral_13=(Token)match(input,87,FOLLOW_87_in_ruleDefaultColor10796); 
 
                             current = grammarAccess.getDefaultColorAccess().getNAVYEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_13, grammarAccess.getDefaultColorAccess().getNAVYEnumLiteralDeclaration_13()); 
@@ -12424,12 +12475,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4850:6: (enumLiteral_14= 'fuchsia' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4868:6: (enumLiteral_14= 'fuchsia' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4850:6: (enumLiteral_14= 'fuchsia' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4850:8: enumLiteral_14= 'fuchsia'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4868:6: (enumLiteral_14= 'fuchsia' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4868:8: enumLiteral_14= 'fuchsia'
                     {
-                    enumLiteral_14=(Token)match(input,88,FOLLOW_88_in_ruleDefaultColor10791); 
+                    enumLiteral_14=(Token)match(input,88,FOLLOW_88_in_ruleDefaultColor10813); 
 
                             current = grammarAccess.getDefaultColorAccess().getFUCHSIAEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_14, grammarAccess.getDefaultColorAccess().getFUCHSIAEnumLiteralDeclaration_14()); 
@@ -12441,12 +12492,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 16 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4856:6: (enumLiteral_15= 'purple' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4874:6: (enumLiteral_15= 'purple' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4856:6: (enumLiteral_15= 'purple' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4856:8: enumLiteral_15= 'purple'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4874:6: (enumLiteral_15= 'purple' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4874:8: enumLiteral_15= 'purple'
                     {
-                    enumLiteral_15=(Token)match(input,89,FOLLOW_89_in_ruleDefaultColor10808); 
+                    enumLiteral_15=(Token)match(input,89,FOLLOW_89_in_ruleDefaultColor10830); 
 
                             current = grammarAccess.getDefaultColorAccess().getPURPLEEnumLiteralDeclaration_15().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_15, grammarAccess.getDefaultColorAccess().getPURPLEEnumLiteralDeclaration_15()); 
@@ -12478,7 +12529,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContainerLayout"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4866:1: ruleContainerLayout returns [Enumerator current=null] : ( (enumLiteral_0= 'free' ) | (enumLiteral_1= 'vstack' ) | (enumLiteral_2= 'hstack' ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4884:1: ruleContainerLayout returns [Enumerator current=null] : ( (enumLiteral_0= 'free' ) | (enumLiteral_1= 'vstack' ) | (enumLiteral_2= 'hstack' ) ) ;
     public final Enumerator ruleContainerLayout() throws RecognitionException {
         Enumerator current = null;
 
@@ -12488,42 +12539,42 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4868:28: ( ( (enumLiteral_0= 'free' ) | (enumLiteral_1= 'vstack' ) | (enumLiteral_2= 'hstack' ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4869:1: ( (enumLiteral_0= 'free' ) | (enumLiteral_1= 'vstack' ) | (enumLiteral_2= 'hstack' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4886:28: ( ( (enumLiteral_0= 'free' ) | (enumLiteral_1= 'vstack' ) | (enumLiteral_2= 'hstack' ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4887:1: ( (enumLiteral_0= 'free' ) | (enumLiteral_1= 'vstack' ) | (enumLiteral_2= 'hstack' ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4869:1: ( (enumLiteral_0= 'free' ) | (enumLiteral_1= 'vstack' ) | (enumLiteral_2= 'hstack' ) )
-            int alt95=3;
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4887:1: ( (enumLiteral_0= 'free' ) | (enumLiteral_1= 'vstack' ) | (enumLiteral_2= 'hstack' ) )
+            int alt96=3;
             switch ( input.LA(1) ) {
             case 70:
                 {
-                alt95=1;
+                alt96=1;
                 }
                 break;
             case 90:
                 {
-                alt95=2;
+                alt96=2;
                 }
                 break;
             case 91:
                 {
-                alt95=3;
+                alt96=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 95, 0, input);
+                    new NoViableAltException("", 96, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt95) {
+            switch (alt96) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4869:2: (enumLiteral_0= 'free' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4887:2: (enumLiteral_0= 'free' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4869:2: (enumLiteral_0= 'free' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4869:4: enumLiteral_0= 'free'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4887:2: (enumLiteral_0= 'free' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4887:4: enumLiteral_0= 'free'
                     {
-                    enumLiteral_0=(Token)match(input,70,FOLLOW_70_in_ruleContainerLayout10853); 
+                    enumLiteral_0=(Token)match(input,70,FOLLOW_70_in_ruleContainerLayout10875); 
 
                             current = grammarAccess.getContainerLayoutAccess().getFREEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getContainerLayoutAccess().getFREEEnumLiteralDeclaration_0()); 
@@ -12535,12 +12586,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4875:6: (enumLiteral_1= 'vstack' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4893:6: (enumLiteral_1= 'vstack' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4875:6: (enumLiteral_1= 'vstack' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4875:8: enumLiteral_1= 'vstack'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4893:6: (enumLiteral_1= 'vstack' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4893:8: enumLiteral_1= 'vstack'
                     {
-                    enumLiteral_1=(Token)match(input,90,FOLLOW_90_in_ruleContainerLayout10870); 
+                    enumLiteral_1=(Token)match(input,90,FOLLOW_90_in_ruleContainerLayout10892); 
 
                             current = grammarAccess.getContainerLayoutAccess().getVSTACKEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getContainerLayoutAccess().getVSTACKEnumLiteralDeclaration_1()); 
@@ -12552,12 +12603,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4881:6: (enumLiteral_2= 'hstack' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4899:6: (enumLiteral_2= 'hstack' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4881:6: (enumLiteral_2= 'hstack' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4881:8: enumLiteral_2= 'hstack'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4899:6: (enumLiteral_2= 'hstack' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4899:8: enumLiteral_2= 'hstack'
                     {
-                    enumLiteral_2=(Token)match(input,91,FOLLOW_91_in_ruleContainerLayout10887); 
+                    enumLiteral_2=(Token)match(input,91,FOLLOW_91_in_ruleContainerLayout10909); 
 
                             current = grammarAccess.getContainerLayoutAccess().getHSTACKEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getContainerLayoutAccess().getHSTACKEnumLiteralDeclaration_2()); 
@@ -12589,7 +12640,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperator"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4891:1: ruleOperator returns [Enumerator current=null] : ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4909:1: ruleOperator returns [Enumerator current=null] : ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) ) ;
     public final Enumerator ruleOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -12598,33 +12649,33 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4893:28: ( ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4894:1: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4911:28: ( ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4912:1: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4894:1: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) )
-            int alt96=2;
-            int LA96_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4912:1: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) )
+            int alt97=2;
+            int LA97_0 = input.LA(1);
 
-            if ( (LA96_0==92) ) {
-                alt96=1;
+            if ( (LA97_0==92) ) {
+                alt97=1;
             }
-            else if ( (LA96_0==93) ) {
-                alt96=2;
+            else if ( (LA97_0==93) ) {
+                alt97=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 96, 0, input);
+                    new NoViableAltException("", 97, 0, input);
 
                 throw nvae;
             }
-            switch (alt96) {
+            switch (alt97) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4894:2: (enumLiteral_0= '=' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4912:2: (enumLiteral_0= '=' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4894:2: (enumLiteral_0= '=' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4894:4: enumLiteral_0= '='
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4912:2: (enumLiteral_0= '=' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4912:4: enumLiteral_0= '='
                     {
-                    enumLiteral_0=(Token)match(input,92,FOLLOW_92_in_ruleOperator10932); 
+                    enumLiteral_0=(Token)match(input,92,FOLLOW_92_in_ruleOperator10954); 
 
                             current = grammarAccess.getOperatorAccess().getEQUALEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getOperatorAccess().getEQUALEnumLiteralDeclaration_0()); 
@@ -12636,12 +12687,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4900:6: (enumLiteral_1= '<>' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4918:6: (enumLiteral_1= '<>' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4900:6: (enumLiteral_1= '<>' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4900:8: enumLiteral_1= '<>'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4918:6: (enumLiteral_1= '<>' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4918:8: enumLiteral_1= '<>'
                     {
-                    enumLiteral_1=(Token)match(input,93,FOLLOW_93_in_ruleOperator10949); 
+                    enumLiteral_1=(Token)match(input,93,FOLLOW_93_in_ruleOperator10971); 
 
                             current = grammarAccess.getOperatorAccess().getDIFFERENTEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getOperatorAccess().getDIFFERENTEnumLiteralDeclaration_1()); 
@@ -12673,7 +12724,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBooleanLiteral"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4910:1: ruleBooleanLiteral returns [Enumerator current=null] : ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4928:1: ruleBooleanLiteral returns [Enumerator current=null] : ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) ;
     public final Enumerator ruleBooleanLiteral() throws RecognitionException {
         Enumerator current = null;
 
@@ -12682,33 +12733,33 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4912:28: ( ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4913:1: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4930:28: ( ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4931:1: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4913:1: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
-            int alt97=2;
-            int LA97_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4931:1: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
+            int alt98=2;
+            int LA98_0 = input.LA(1);
 
-            if ( (LA97_0==94) ) {
-                alt97=1;
+            if ( (LA98_0==94) ) {
+                alt98=1;
             }
-            else if ( (LA97_0==95) ) {
-                alt97=2;
+            else if ( (LA98_0==95) ) {
+                alt98=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 97, 0, input);
+                    new NoViableAltException("", 98, 0, input);
 
                 throw nvae;
             }
-            switch (alt97) {
+            switch (alt98) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4913:2: (enumLiteral_0= 'true' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4931:2: (enumLiteral_0= 'true' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4913:2: (enumLiteral_0= 'true' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4913:4: enumLiteral_0= 'true'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4931:2: (enumLiteral_0= 'true' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4931:4: enumLiteral_0= 'true'
                     {
-                    enumLiteral_0=(Token)match(input,94,FOLLOW_94_in_ruleBooleanLiteral10994); 
+                    enumLiteral_0=(Token)match(input,94,FOLLOW_94_in_ruleBooleanLiteral11016); 
 
                             current = grammarAccess.getBooleanLiteralAccess().getTRUEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getBooleanLiteralAccess().getTRUEEnumLiteralDeclaration_0()); 
@@ -12720,12 +12771,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4919:6: (enumLiteral_1= 'false' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4937:6: (enumLiteral_1= 'false' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4919:6: (enumLiteral_1= 'false' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4919:8: enumLiteral_1= 'false'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4937:6: (enumLiteral_1= 'false' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4937:8: enumLiteral_1= 'false'
                     {
-                    enumLiteral_1=(Token)match(input,95,FOLLOW_95_in_ruleBooleanLiteral11011); 
+                    enumLiteral_1=(Token)match(input,95,FOLLOW_95_in_ruleBooleanLiteral11033); 
 
                             current = grammarAccess.getBooleanLiteralAccess().getFALSEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getBooleanLiteralAccess().getFALSEEnumLiteralDeclaration_1()); 
@@ -12757,7 +12808,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFontFaceType"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4929:1: ruleFontFaceType returns [Enumerator current=null] : ( (enumLiteral_0= 'arial' ) | (enumLiteral_1= 'verdana' ) | (enumLiteral_2= 'times' ) | (enumLiteral_3= 'courier' ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4947:1: ruleFontFaceType returns [Enumerator current=null] : ( (enumLiteral_0= 'arial' ) | (enumLiteral_1= 'verdana' ) | (enumLiteral_2= 'times' ) | (enumLiteral_3= 'courier' ) ) ;
     public final Enumerator ruleFontFaceType() throws RecognitionException {
         Enumerator current = null;
 
@@ -12768,47 +12819,47 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4931:28: ( ( (enumLiteral_0= 'arial' ) | (enumLiteral_1= 'verdana' ) | (enumLiteral_2= 'times' ) | (enumLiteral_3= 'courier' ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4932:1: ( (enumLiteral_0= 'arial' ) | (enumLiteral_1= 'verdana' ) | (enumLiteral_2= 'times' ) | (enumLiteral_3= 'courier' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4949:28: ( ( (enumLiteral_0= 'arial' ) | (enumLiteral_1= 'verdana' ) | (enumLiteral_2= 'times' ) | (enumLiteral_3= 'courier' ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4950:1: ( (enumLiteral_0= 'arial' ) | (enumLiteral_1= 'verdana' ) | (enumLiteral_2= 'times' ) | (enumLiteral_3= 'courier' ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4932:1: ( (enumLiteral_0= 'arial' ) | (enumLiteral_1= 'verdana' ) | (enumLiteral_2= 'times' ) | (enumLiteral_3= 'courier' ) )
-            int alt98=4;
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4950:1: ( (enumLiteral_0= 'arial' ) | (enumLiteral_1= 'verdana' ) | (enumLiteral_2= 'times' ) | (enumLiteral_3= 'courier' ) )
+            int alt99=4;
             switch ( input.LA(1) ) {
             case 96:
                 {
-                alt98=1;
+                alt99=1;
                 }
                 break;
             case 97:
                 {
-                alt98=2;
+                alt99=2;
                 }
                 break;
             case 98:
                 {
-                alt98=3;
+                alt99=3;
                 }
                 break;
             case 99:
                 {
-                alt98=4;
+                alt99=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 98, 0, input);
+                    new NoViableAltException("", 99, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt98) {
+            switch (alt99) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4932:2: (enumLiteral_0= 'arial' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4950:2: (enumLiteral_0= 'arial' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4932:2: (enumLiteral_0= 'arial' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4932:4: enumLiteral_0= 'arial'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4950:2: (enumLiteral_0= 'arial' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4950:4: enumLiteral_0= 'arial'
                     {
-                    enumLiteral_0=(Token)match(input,96,FOLLOW_96_in_ruleFontFaceType11056); 
+                    enumLiteral_0=(Token)match(input,96,FOLLOW_96_in_ruleFontFaceType11078); 
 
                             current = grammarAccess.getFontFaceTypeAccess().getARIALEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getFontFaceTypeAccess().getARIALEnumLiteralDeclaration_0()); 
@@ -12820,12 +12871,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4938:6: (enumLiteral_1= 'verdana' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4956:6: (enumLiteral_1= 'verdana' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4938:6: (enumLiteral_1= 'verdana' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4938:8: enumLiteral_1= 'verdana'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4956:6: (enumLiteral_1= 'verdana' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4956:8: enumLiteral_1= 'verdana'
                     {
-                    enumLiteral_1=(Token)match(input,97,FOLLOW_97_in_ruleFontFaceType11073); 
+                    enumLiteral_1=(Token)match(input,97,FOLLOW_97_in_ruleFontFaceType11095); 
 
                             current = grammarAccess.getFontFaceTypeAccess().getVERDANAEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getFontFaceTypeAccess().getVERDANAEnumLiteralDeclaration_1()); 
@@ -12837,12 +12888,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4944:6: (enumLiteral_2= 'times' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4962:6: (enumLiteral_2= 'times' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4944:6: (enumLiteral_2= 'times' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4944:8: enumLiteral_2= 'times'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4962:6: (enumLiteral_2= 'times' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4962:8: enumLiteral_2= 'times'
                     {
-                    enumLiteral_2=(Token)match(input,98,FOLLOW_98_in_ruleFontFaceType11090); 
+                    enumLiteral_2=(Token)match(input,98,FOLLOW_98_in_ruleFontFaceType11112); 
 
                             current = grammarAccess.getFontFaceTypeAccess().getTIMESEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getFontFaceTypeAccess().getTIMESEnumLiteralDeclaration_2()); 
@@ -12854,12 +12905,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4950:6: (enumLiteral_3= 'courier' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4968:6: (enumLiteral_3= 'courier' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4950:6: (enumLiteral_3= 'courier' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4950:8: enumLiteral_3= 'courier'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4968:6: (enumLiteral_3= 'courier' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4968:8: enumLiteral_3= 'courier'
                     {
-                    enumLiteral_3=(Token)match(input,99,FOLLOW_99_in_ruleFontFaceType11107); 
+                    enumLiteral_3=(Token)match(input,99,FOLLOW_99_in_ruleFontFaceType11129); 
 
                             current = grammarAccess.getFontFaceTypeAccess().getCOURIEREnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getFontFaceTypeAccess().getCOURIEREnumLiteralDeclaration_3()); 
@@ -12891,7 +12942,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFontStyleType"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4960:1: ruleFontStyleType returns [Enumerator current=null] : ( (enumLiteral_0= 'italics' ) | (enumLiteral_1= 'bold' ) | (enumLiteral_2= 'underline' ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4978:1: ruleFontStyleType returns [Enumerator current=null] : ( (enumLiteral_0= 'italics' ) | (enumLiteral_1= 'bold' ) | (enumLiteral_2= 'underline' ) ) ;
     public final Enumerator ruleFontStyleType() throws RecognitionException {
         Enumerator current = null;
 
@@ -12901,42 +12952,42 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4962:28: ( ( (enumLiteral_0= 'italics' ) | (enumLiteral_1= 'bold' ) | (enumLiteral_2= 'underline' ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4963:1: ( (enumLiteral_0= 'italics' ) | (enumLiteral_1= 'bold' ) | (enumLiteral_2= 'underline' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4980:28: ( ( (enumLiteral_0= 'italics' ) | (enumLiteral_1= 'bold' ) | (enumLiteral_2= 'underline' ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4981:1: ( (enumLiteral_0= 'italics' ) | (enumLiteral_1= 'bold' ) | (enumLiteral_2= 'underline' ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4963:1: ( (enumLiteral_0= 'italics' ) | (enumLiteral_1= 'bold' ) | (enumLiteral_2= 'underline' ) )
-            int alt99=3;
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4981:1: ( (enumLiteral_0= 'italics' ) | (enumLiteral_1= 'bold' ) | (enumLiteral_2= 'underline' ) )
+            int alt100=3;
             switch ( input.LA(1) ) {
             case 100:
                 {
-                alt99=1;
+                alt100=1;
                 }
                 break;
             case 101:
                 {
-                alt99=2;
+                alt100=2;
                 }
                 break;
             case 102:
                 {
-                alt99=3;
+                alt100=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 99, 0, input);
+                    new NoViableAltException("", 100, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt99) {
+            switch (alt100) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4963:2: (enumLiteral_0= 'italics' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4981:2: (enumLiteral_0= 'italics' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4963:2: (enumLiteral_0= 'italics' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4963:4: enumLiteral_0= 'italics'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4981:2: (enumLiteral_0= 'italics' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4981:4: enumLiteral_0= 'italics'
                     {
-                    enumLiteral_0=(Token)match(input,100,FOLLOW_100_in_ruleFontStyleType11152); 
+                    enumLiteral_0=(Token)match(input,100,FOLLOW_100_in_ruleFontStyleType11174); 
 
                             current = grammarAccess.getFontStyleTypeAccess().getITALICSEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getFontStyleTypeAccess().getITALICSEnumLiteralDeclaration_0()); 
@@ -12948,12 +12999,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4969:6: (enumLiteral_1= 'bold' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4987:6: (enumLiteral_1= 'bold' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4969:6: (enumLiteral_1= 'bold' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4969:8: enumLiteral_1= 'bold'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4987:6: (enumLiteral_1= 'bold' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4987:8: enumLiteral_1= 'bold'
                     {
-                    enumLiteral_1=(Token)match(input,101,FOLLOW_101_in_ruleFontStyleType11169); 
+                    enumLiteral_1=(Token)match(input,101,FOLLOW_101_in_ruleFontStyleType11191); 
 
                             current = grammarAccess.getFontStyleTypeAccess().getBOLDEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getFontStyleTypeAccess().getBOLDEnumLiteralDeclaration_1()); 
@@ -12965,12 +13016,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4975:6: (enumLiteral_2= 'underline' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4993:6: (enumLiteral_2= 'underline' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4975:6: (enumLiteral_2= 'underline' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4975:8: enumLiteral_2= 'underline'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4993:6: (enumLiteral_2= 'underline' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4993:8: enumLiteral_2= 'underline'
                     {
-                    enumLiteral_2=(Token)match(input,102,FOLLOW_102_in_ruleFontStyleType11186); 
+                    enumLiteral_2=(Token)match(input,102,FOLLOW_102_in_ruleFontStyleType11208); 
 
                             current = grammarAccess.getFontStyleTypeAccess().getUNDERLINEEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getFontStyleTypeAccess().getUNDERLINEEnumLiteralDeclaration_2()); 
@@ -13002,7 +13053,7 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLineType"
-    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4985:1: ruleLineType returns [Enumerator current=null] : ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dash' ) ) ;
+    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:5003:1: ruleLineType returns [Enumerator current=null] : ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dash' ) ) ;
     public final Enumerator ruleLineType() throws RecognitionException {
         Enumerator current = null;
 
@@ -13011,33 +13062,33 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4987:28: ( ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dash' ) ) )
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4988:1: ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dash' ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:5005:28: ( ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dash' ) ) )
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:5006:1: ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dash' ) )
             {
-            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4988:1: ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dash' ) )
-            int alt100=2;
-            int LA100_0 = input.LA(1);
+            // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:5006:1: ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dash' ) )
+            int alt101=2;
+            int LA101_0 = input.LA(1);
 
-            if ( (LA100_0==103) ) {
-                alt100=1;
+            if ( (LA101_0==103) ) {
+                alt101=1;
             }
-            else if ( (LA100_0==104) ) {
-                alt100=2;
+            else if ( (LA101_0==104) ) {
+                alt101=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 100, 0, input);
+                    new NoViableAltException("", 101, 0, input);
 
                 throw nvae;
             }
-            switch (alt100) {
+            switch (alt101) {
                 case 1 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4988:2: (enumLiteral_0= 'solid' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:5006:2: (enumLiteral_0= 'solid' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4988:2: (enumLiteral_0= 'solid' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4988:4: enumLiteral_0= 'solid'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:5006:2: (enumLiteral_0= 'solid' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:5006:4: enumLiteral_0= 'solid'
                     {
-                    enumLiteral_0=(Token)match(input,103,FOLLOW_103_in_ruleLineType11231); 
+                    enumLiteral_0=(Token)match(input,103,FOLLOW_103_in_ruleLineType11253); 
 
                             current = grammarAccess.getLineTypeAccess().getSOLIDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getLineTypeAccess().getSOLIDEnumLiteralDeclaration_0()); 
@@ -13049,12 +13100,12 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4994:6: (enumLiteral_1= 'dash' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:5012:6: (enumLiteral_1= 'dash' )
                     {
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4994:6: (enumLiteral_1= 'dash' )
-                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:4994:8: enumLiteral_1= 'dash'
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:5012:6: (enumLiteral_1= 'dash' )
+                    // ../org.eclipselabs.xdiagram.dsl/src-gen/org/eclipselabs/xdiagram/parser/antlr/internal/InternalDsl.g:5012:8: enumLiteral_1= 'dash'
                     {
-                    enumLiteral_1=(Token)match(input,104,FOLLOW_104_in_ruleLineType11248); 
+                    enumLiteral_1=(Token)match(input,104,FOLLOW_104_in_ruleLineType11270); 
 
                             current = grammarAccess.getLineTypeAccess().getDASHEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getLineTypeAccess().getDASHEnumLiteralDeclaration_1()); 
@@ -13118,422 +13169,423 @@ public class InternalDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleDiagram741 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_16_in_ruleDiagram778 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_ruleQualifiedName_in_ruleDiagram801 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleDiagram813 = new BitSet(new long[]{0x0004000000040000L});
-    public static final BitSet FOLLOW_ruleContains_in_ruleDiagram834 = new BitSet(new long[]{0x0004000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleDiagram847 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGroup_in_entryRuleGroup883 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleGroup893 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_ruleGroup930 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleGroup947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDiagramElement_in_entryRuleDiagramElement988 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDiagramElement998 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNode_in_ruleDiagramElement1045 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLink_in_ruleDiagramElement1072 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStyle_in_entryRuleStyle1107 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStyle1117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleStyle1154 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleStyle1171 = new BitSet(new long[]{0x0000000000220000L});
-    public static final BitSet FOLLOW_21_in_ruleStyle1195 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleStyle1228 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleStyle1242 = new BitSet(new long[]{0xEF00000000040000L,0x000000000000003FL});
-    public static final BitSet FOLLOW_ruleStyleFeature_in_ruleStyle1263 = new BitSet(new long[]{0xEF00000000040000L,0x000000000000003FL});
-    public static final BitSet FOLLOW_18_in_ruleStyle1276 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLinkedFeature_in_entryRuleLinkedFeature1314 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLinkedFeature1324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContains_in_ruleLinkedFeature1371 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnchor_in_ruleLinkedFeature1398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStyleFeature_in_entryRuleStyleFeature1433 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStyleFeature1443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSize_in_ruleStyleFeature1490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePosition_in_ruleStyleFeature1517 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePoint_in_ruleStyleFeature1544 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCorner_in_ruleStyleFeature1571 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBackground_in_ruleStyleFeature1598 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleForeground_in_ruleStyleFeature1625 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransparency_in_ruleStyleFeature1652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFontFace_in_ruleStyleFeature1679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFontSize_in_ruleStyleFeature1706 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFontStyle_in_ruleStyleFeature1733 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTextValue_in_ruleStyleFeature1760 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLineStyle_in_ruleStyleFeature1787 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLineWidth_in_ruleStyleFeature1814 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFeatureConditional_in_entryRuleFeatureConditional1851 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFeatureConditional1861 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_ruleFeatureConditional1898 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleFeatureConditional1921 = new BitSet(new long[]{0x0000000000000000L,0x0000000030000000L});
-    public static final BitSet FOLLOW_ruleOperator_in_ruleFeatureConditional1942 = new BitSet(new long[]{0x0008000000000070L,0x00000000C0000000L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleFeatureConditional1963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNode_in_entryRuleNode1999 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNode2009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_ruleNode2046 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleNode2069 = new BitSet(new long[]{0x0000000003000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleNode2087 = new BitSet(new long[]{0x0000000003000000L});
-    public static final BitSet FOLLOW_24_in_ruleNode2105 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleNode2125 = new BitSet(new long[]{0x0000000003000000L});
-    public static final BitSet FOLLOW_25_in_ruleNode2142 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleNode2159 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_24_in_ruleNode2178 = new BitSet(new long[]{0x00D3F90000000000L});
-    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleNode2199 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLink_in_entryRuleLink2235 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLink2245 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleLink2282 = new BitSet(new long[]{0x0000000008000020L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleLink2306 = new BitSet(new long[]{0x0000000003000010L});
-    public static final BitSet FOLLOW_27_in_ruleLink2331 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleLink2367 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleLink2379 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleLink2402 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleLink2414 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleLink2437 = new BitSet(new long[]{0x0000000003000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleLink2457 = new BitSet(new long[]{0x0000000003000000L});
-    public static final BitSet FOLLOW_24_in_ruleLink2475 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLink2495 = new BitSet(new long[]{0x0000000003000000L});
-    public static final BitSet FOLLOW_25_in_ruleLink2512 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLink2529 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_24_in_ruleLink2548 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleLink2560 = new BitSet(new long[]{0x0000000000000000L,0x00000000000000C0L});
-    public static final BitSet FOLLOW_ruleConnectionType_in_ruleLink2581 = new BitSet(new long[]{0x0000000080020000L});
-    public static final BitSet FOLLOW_31_in_ruleLink2600 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLink2633 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleLink2647 = new BitSet(new long[]{0xEF00000100040000L,0x000000000000003FL});
-    public static final BitSet FOLLOW_ruleLinkFeature_in_ruleLink2668 = new BitSet(new long[]{0xEF00000100040000L,0x000000000000003FL});
-    public static final BitSet FOLLOW_32_in_ruleLink2682 = new BitSet(new long[]{0x0000000A30000000L});
-    public static final BitSet FOLLOW_ruleDecorator_in_ruleLink2703 = new BitSet(new long[]{0x0000000A30040000L});
-    public static final BitSet FOLLOW_18_in_ruleLink2718 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLinkFeature_in_entryRuleLinkFeature2754 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLinkFeature2764 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleForeground_in_ruleLinkFeature2811 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLineStyle_in_ruleLinkFeature2838 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLineWidth_in_ruleLinkFeature2865 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDecorator_in_entryRuleDecorator2900 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDecorator2910 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_ruleDecorator2949 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleDecorator2966 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_34_in_ruleDecorator2983 = new BitSet(new long[]{0x0013200000000002L});
-    public static final BitSet FOLLOW_28_in_ruleDecorator3008 = new BitSet(new long[]{0x0013200000000002L});
-    public static final BitSet FOLLOW_29_in_ruleDecorator3045 = new BitSet(new long[]{0x0013200000000002L});
-    public static final BitSet FOLLOW_35_in_ruleDecorator3082 = new BitSet(new long[]{0x0013200000000002L});
-    public static final BitSet FOLLOW_ruleStaticElement_in_ruleDecorator3118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLabel_in_ruleDecorator3145 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStaticElement_in_entryRuleStaticElement3183 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStaticElement3193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRhombus_in_ruleStaticElement3240 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePolyline_in_ruleStaticElement3267 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnchor_in_entryRuleAnchor3302 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAnchor3312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleAnchor3349 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000300L});
-    public static final BitSet FOLLOW_ruleAnchorDirection_in_ruleAnchor3370 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleAnchor3393 = new BitSet(new long[]{0x0000002000400000L});
-    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleAnchor3414 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleAnchor3427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCustomColor_in_entryRuleCustomColor3463 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCustomColor3473 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleCustomColor3510 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleCustomColor3527 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleCustomColor3549 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_ruleCustomColor3566 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleCustomColor3583 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_ruleCustomColor3600 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleCustomColor3617 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColor_in_entryRuleColor3658 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleColor3668 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefaultColor_in_ruleColor3714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleColor3740 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConnectableElement_in_entryRuleConnectableElement3776 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleConnectableElement3786 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRectangle_in_ruleConnectableElement3833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRhombus_in_ruleConnectableElement3860 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEllipse_in_ruleConnectableElement3887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePolyline_in_ruleConnectableElement3914 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLabel_in_ruleConnectableElement3941 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImage_in_ruleConnectableElement3968 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInvisible_in_ruleConnectableElement3995 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCustom_in_ruleConnectableElement4022 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConnectableElementFeature_in_entryRuleConnectableElementFeature4057 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleConnectableElementFeature4067 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePosition_in_ruleConnectableElementFeature4114 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSize_in_ruleConnectableElementFeature4141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColorFeature_in_ruleConnectableElementFeature4168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLineStyle_in_ruleConnectableElementFeature4195 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLineWidth_in_ruleConnectableElementFeature4222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContains_in_ruleConnectableElementFeature4249 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnchor_in_ruleConnectableElementFeature4276 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCustomFigure_in_entryRuleCustomFigure4311 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCustomFigure4321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleCustomFigure4358 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleCustomFigure4375 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_ruleCustomFigure4392 = new BitSet(new long[]{0x00D3F90000000000L});
-    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleCustomFigure4413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCustom_in_entryRuleCustom4449 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCustom4459 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleCustom4496 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleCustom4516 = new BitSet(new long[]{0x0000000080020000L});
-    public static final BitSet FOLLOW_31_in_ruleCustom4535 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleCustom4568 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleCustom4582 = new BitSet(new long[]{0x0004041000040000L});
-    public static final BitSet FOLLOW_ruleLinkedFeature_in_ruleCustom4603 = new BitSet(new long[]{0x0004041000040000L});
-    public static final BitSet FOLLOW_42_in_ruleCustom4623 = new BitSet(new long[]{0x00D3F90000000000L});
-    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleCustom4657 = new BitSet(new long[]{0x00D3F90000040000L});
-    public static final BitSet FOLLOW_18_in_ruleCustom4672 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRectangle_in_entryRuleRectangle4708 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRectangle4718 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_ruleRectangle4762 = new BitSet(new long[]{0x0000000080020000L});
-    public static final BitSet FOLLOW_44_in_ruleRectangle4799 = new BitSet(new long[]{0x0000000080020000L});
-    public static final BitSet FOLLOW_31_in_ruleRectangle4832 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRectangle4865 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleRectangle4879 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
-    public static final BitSet FOLLOW_ruleRectangleFeature_in_ruleRectangle4900 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
-    public static final BitSet FOLLOW_42_in_ruleRectangle4920 = new BitSet(new long[]{0x00D3F90000000000L});
-    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleRectangle4954 = new BitSet(new long[]{0x00D3F90000040000L});
-    public static final BitSet FOLLOW_18_in_ruleRectangle4969 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRectangleFeature_in_entryRuleRectangleFeature5005 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRectangleFeature5015 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConnectableElementFeature_in_ruleRectangleFeature5062 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCorner_in_ruleRectangleFeature5089 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRhombus_in_entryRuleRhombus5124 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRhombus5134 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_ruleRhombus5180 = new BitSet(new long[]{0x0000000080020000L});
-    public static final BitSet FOLLOW_31_in_ruleRhombus5199 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRhombus5232 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleRhombus5246 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
-    public static final BitSet FOLLOW_ruleConnectableElementFeature_in_ruleRhombus5267 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
-    public static final BitSet FOLLOW_42_in_ruleRhombus5287 = new BitSet(new long[]{0x00D3F90000000000L});
-    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleRhombus5321 = new BitSet(new long[]{0x00D3F90000040000L});
-    public static final BitSet FOLLOW_18_in_ruleRhombus5336 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEllipse_in_entryRuleEllipse5372 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEllipse5382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_ruleEllipse5426 = new BitSet(new long[]{0x0000000080020000L});
-    public static final BitSet FOLLOW_47_in_ruleEllipse5463 = new BitSet(new long[]{0x0000000080020000L});
-    public static final BitSet FOLLOW_31_in_ruleEllipse5496 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleEllipse5529 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleEllipse5543 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
-    public static final BitSet FOLLOW_ruleConnectableElementFeature_in_ruleEllipse5564 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
-    public static final BitSet FOLLOW_42_in_ruleEllipse5584 = new BitSet(new long[]{0x00D3F90000000000L});
-    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleEllipse5618 = new BitSet(new long[]{0x00D3F90000040000L});
-    public static final BitSet FOLLOW_18_in_ruleEllipse5633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePolyline_in_entryRulePolyline5669 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePolyline5679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_rulePolyline5723 = new BitSet(new long[]{0x0000000080020000L});
-    public static final BitSet FOLLOW_49_in_rulePolyline5760 = new BitSet(new long[]{0x0000000080020000L});
-    public static final BitSet FOLLOW_31_in_rulePolyline5793 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePolyline5826 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_rulePolyline5840 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_rulePoint_in_rulePolyline5861 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_rulePoint_in_rulePolyline5882 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
-    public static final BitSet FOLLOW_rulePoint_in_rulePolyline5903 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
-    public static final BitSet FOLLOW_ruleConnectableElementFeature_in_rulePolyline5925 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
-    public static final BitSet FOLLOW_42_in_rulePolyline5945 = new BitSet(new long[]{0x00D3F90000000000L});
-    public static final BitSet FOLLOW_ruleConnectableElement_in_rulePolyline5979 = new BitSet(new long[]{0x00D3F90000040000L});
-    public static final BitSet FOLLOW_18_in_rulePolyline5994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContains_in_entryRuleContains6030 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContains6040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_ruleContains6077 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContains6100 = new BitSet(new long[]{0x0000002000400000L,0x000000000C000040L});
-    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleContains6121 = new BitSet(new long[]{0x0000002000000000L,0x000000000C000040L});
-    public static final BitSet FOLLOW_ruleContainerLayout_in_ruleContains6143 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleContains6156 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_entryRuleValue6192 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleValue6202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIntValue_in_ruleValue6249 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDoubleValue_in_ruleValue6276 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringValue_in_ruleValue6303 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBooleanValue_in_ruleValue6330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEnumValue_in_ruleValue6357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIntValue_in_entryRuleIntValue6392 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIntValue6402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleIntValue6443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDoubleValue_in_entryRuleDoubleValue6483 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDoubleValue6493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleDoubleValue6535 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleDoubleValue6552 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleDoubleValue6569 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringValue_in_entryRuleStringValue6610 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStringValue6620 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_ruleStringValue6663 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleStringValue6699 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBooleanValue_in_entryRuleBooleanValue6740 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBooleanValue6750 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBooleanLiteral_in_ruleBooleanValue6795 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEnumValue_in_entryRuleEnumValue6830 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEnumValue6840 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleEnumValue6881 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLabel_in_entryRuleLabel6923 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLabel6933 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_ruleLabel6979 = new BitSet(new long[]{0x0020000080020000L});
-    public static final BitSet FOLLOW_53_in_ruleLabel6997 = new BitSet(new long[]{0x0000000080020000L});
-    public static final BitSet FOLLOW_31_in_ruleLabel7030 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLabel7063 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleLabel7077 = new BitSet(new long[]{0x4B00040000040000L,0x000000000000000FL});
-    public static final BitSet FOLLOW_ruleLabelFeature_in_ruleLabel7098 = new BitSet(new long[]{0x4B00040000040000L,0x000000000000000FL});
-    public static final BitSet FOLLOW_42_in_ruleLabel7118 = new BitSet(new long[]{0x00D3F90000000000L});
-    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleLabel7152 = new BitSet(new long[]{0x00D3F90000040000L});
-    public static final BitSet FOLLOW_18_in_ruleLabel7167 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLabelFeature_in_entryRuleLabelFeature7203 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLabelFeature7213 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTextValue_in_ruleLabelFeature7260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleForeground_in_ruleLabelFeature7287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBackground_in_ruleLabelFeature7314 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFontFace_in_ruleLabelFeature7341 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFontSize_in_ruleLabelFeature7368 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFontStyle_in_ruleLabelFeature7395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSize_in_ruleLabelFeature7422 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePosition_in_ruleLabelFeature7449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImage_in_entryRuleImage7484 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleImage7494 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_ruleImage7531 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleImage7548 = new BitSet(new long[]{0x0000000080020000L});
-    public static final BitSet FOLLOW_31_in_ruleImage7572 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleImage7605 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleImage7619 = new BitSet(new long[]{0x4C00040000040000L});
-    public static final BitSet FOLLOW_ruleImageFeature_in_ruleImage7640 = new BitSet(new long[]{0x4C00040000040000L});
-    public static final BitSet FOLLOW_42_in_ruleImage7660 = new BitSet(new long[]{0x00D3F90000000000L});
-    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleImage7694 = new BitSet(new long[]{0x00D3F90000040000L});
-    public static final BitSet FOLLOW_18_in_ruleImage7709 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImageFeature_in_entryRuleImageFeature7745 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleImageFeature7755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSize_in_ruleImageFeature7802 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePosition_in_ruleImageFeature7829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransparency_in_ruleImageFeature7856 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInvisible_in_entryRuleInvisible7891 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInvisible7901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_ruleInvisible7947 = new BitSet(new long[]{0x0000000080020000L});
-    public static final BitSet FOLLOW_31_in_ruleInvisible7966 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleInvisible7999 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleInvisible8013 = new BitSet(new long[]{0x4804041000040000L});
-    public static final BitSet FOLLOW_ruleInvisibleFeature_in_ruleInvisible8034 = new BitSet(new long[]{0x4804041000040000L});
-    public static final BitSet FOLLOW_42_in_ruleInvisible8054 = new BitSet(new long[]{0x00D3F90000000000L});
-    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleInvisible8088 = new BitSet(new long[]{0x00D3F90000040000L});
-    public static final BitSet FOLLOW_18_in_ruleInvisible8103 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInvisibleFeature_in_entryRuleInvisibleFeature8139 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInvisibleFeature8149 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSize_in_ruleInvisibleFeature8196 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePosition_in_ruleInvisibleFeature8223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLinkedFeature_in_ruleInvisibleFeature8250 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColorFeature_in_entryRuleColorFeature8285 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleColorFeature8295 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleForeground_in_ruleColorFeature8342 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBackground_in_ruleColorFeature8369 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleForeground_in_entryRuleForeground8404 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleForeground8414 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_ruleForeground8457 = new BitSet(new long[]{0x0000000000000020L,0x0000000003FFFC00L});
-    public static final BitSet FOLLOW_ruleColor_in_ruleForeground8491 = new BitSet(new long[]{0x0000002000400000L});
-    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleForeground8512 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleForeground8525 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBackground_in_entryRuleBackground8561 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBackground8571 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_ruleBackground8614 = new BitSet(new long[]{0x0000000000000020L,0x0000000003FFFC00L});
-    public static final BitSet FOLLOW_ruleColor_in_ruleBackground8648 = new BitSet(new long[]{0x0000002000400000L});
-    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleBackground8669 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleBackground8682 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransparency_in_entryRuleTransparency8718 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTransparency8728 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_ruleTransparency8765 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_PERCENT_in_ruleTransparency8782 = new BitSet(new long[]{0x0000002000400000L});
-    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleTransparency8808 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleTransparency8821 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSize_in_entryRuleSize8857 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSize8867 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_ruleSize8904 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleSize8921 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_60_in_ruleSize8938 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleSize8955 = new BitSet(new long[]{0x0000002000400000L});
-    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleSize8981 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleSize8994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePoint_in_entryRulePoint9030 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePoint9040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_61_in_rulePoint9077 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_rulePoint9094 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_rulePoint9111 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_rulePoint9128 = new BitSet(new long[]{0x0000002000400000L});
-    public static final BitSet FOLLOW_ruleFeatureConditional_in_rulePoint9154 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_rulePoint9167 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePosition_in_entryRulePosition9203 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePosition9213 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_62_in_rulePosition9250 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_rulePosition9267 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_rulePosition9284 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_rulePosition9301 = new BitSet(new long[]{0x0000002000400000L});
-    public static final BitSet FOLLOW_ruleFeatureConditional_in_rulePosition9327 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_rulePosition9340 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCorner_in_entryRuleCorner9376 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCorner9386 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_ruleCorner9423 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleCorner9440 = new BitSet(new long[]{0x0000002000400000L});
-    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleCorner9466 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleCorner9479 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTextValue_in_entryRuleTextValue9515 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTextValue9525 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_ruleTextValue9562 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleTextValue9580 = new BitSet(new long[]{0x0000002000400000L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleTextValue9614 = new BitSet(new long[]{0x0000002000400000L});
-    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleTextValue9636 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleTextValue9649 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFontFace_in_entryRuleFontFace9685 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFontFace9695 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_65_in_ruleFontFace9732 = new BitSet(new long[]{0x0000000000000000L,0x0000000F00000000L});
-    public static final BitSet FOLLOW_ruleFontFaceType_in_ruleFontFace9753 = new BitSet(new long[]{0x0000002000400000L});
-    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleFontFace9774 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleFontFace9787 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFontSize_in_entryRuleFontSize9823 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFontSize9833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_ruleFontSize9870 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleFontSize9887 = new BitSet(new long[]{0x0000002000400000L});
-    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleFontSize9913 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleFontSize9926 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFontStyle_in_entryRuleFontStyle9962 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFontStyle9972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_67_in_ruleFontStyle10009 = new BitSet(new long[]{0x0000000000000000L,0x0000007000000000L});
-    public static final BitSet FOLLOW_ruleFontStyleType_in_ruleFontStyle10030 = new BitSet(new long[]{0x000000A000400000L});
-    public static final BitSet FOLLOW_39_in_ruleFontStyle10043 = new BitSet(new long[]{0x0000000000000000L,0x0000007000000000L});
-    public static final BitSet FOLLOW_ruleFontStyleType_in_ruleFontStyle10064 = new BitSet(new long[]{0x000000A000400000L});
-    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleFontStyle10087 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleFontStyle10100 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLineStyle_in_entryRuleLineStyle10136 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLineStyle10146 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_ruleLineStyle10183 = new BitSet(new long[]{0x0000000000000000L,0x0000018000000000L});
-    public static final BitSet FOLLOW_ruleLineType_in_ruleLineStyle10204 = new BitSet(new long[]{0x0000002000400000L});
-    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleLineStyle10225 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleLineStyle10238 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLineWidth_in_entryRuleLineWidth10274 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLineWidth10284 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_ruleLineWidth10321 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleLineWidth10338 = new BitSet(new long[]{0x0000002000400000L});
-    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleLineWidth10364 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleLineWidth10377 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_ruleConnectionType10429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_ruleConnectionType10446 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_72_in_ruleAnchorDirection10491 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_ruleAnchorDirection10508 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_ruleDefaultColor10553 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_75_in_ruleDefaultColor10570 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_76_in_ruleDefaultColor10587 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_77_in_ruleDefaultColor10604 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_78_in_ruleDefaultColor10621 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_79_in_ruleDefaultColor10638 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_80_in_ruleDefaultColor10655 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_81_in_ruleDefaultColor10672 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_82_in_ruleDefaultColor10689 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_ruleDefaultColor10706 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_84_in_ruleDefaultColor10723 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_85_in_ruleDefaultColor10740 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_86_in_ruleDefaultColor10757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_87_in_ruleDefaultColor10774 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_88_in_ruleDefaultColor10791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_89_in_ruleDefaultColor10808 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_ruleContainerLayout10853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_90_in_ruleContainerLayout10870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_91_in_ruleContainerLayout10887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_92_in_ruleOperator10932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_93_in_ruleOperator10949 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_94_in_ruleBooleanLiteral10994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_95_in_ruleBooleanLiteral11011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_96_in_ruleFontFaceType11056 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_97_in_ruleFontFaceType11073 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_98_in_ruleFontFaceType11090 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_99_in_ruleFontFaceType11107 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_100_in_ruleFontStyleType11152 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_101_in_ruleFontStyleType11169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_102_in_ruleFontStyleType11186 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_103_in_ruleLineType11231 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_104_in_ruleLineType11248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleDiagram813 = new BitSet(new long[]{0x00D7F90000040000L});
+    public static final BitSet FOLLOW_ruleContains_in_ruleDiagram834 = new BitSet(new long[]{0x00D7F90000040000L});
+    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleDiagram856 = new BitSet(new long[]{0x00D3F90000040000L});
+    public static final BitSet FOLLOW_18_in_ruleDiagram869 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGroup_in_entryRuleGroup905 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleGroup915 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_ruleGroup952 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleGroup969 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDiagramElement_in_entryRuleDiagramElement1010 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDiagramElement1020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNode_in_ruleDiagramElement1067 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLink_in_ruleDiagramElement1094 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStyle_in_entryRuleStyle1129 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStyle1139 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_ruleStyle1176 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleStyle1193 = new BitSet(new long[]{0x0000000000220000L});
+    public static final BitSet FOLLOW_21_in_ruleStyle1217 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleStyle1250 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleStyle1264 = new BitSet(new long[]{0xEF00000000040000L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleStyleFeature_in_ruleStyle1285 = new BitSet(new long[]{0xEF00000000040000L,0x000000000000003FL});
+    public static final BitSet FOLLOW_18_in_ruleStyle1298 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLinkedFeature_in_entryRuleLinkedFeature1336 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLinkedFeature1346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContains_in_ruleLinkedFeature1393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnchor_in_ruleLinkedFeature1420 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStyleFeature_in_entryRuleStyleFeature1455 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStyleFeature1465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSize_in_ruleStyleFeature1512 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePosition_in_ruleStyleFeature1539 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePoint_in_ruleStyleFeature1566 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCorner_in_ruleStyleFeature1593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBackground_in_ruleStyleFeature1620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleForeground_in_ruleStyleFeature1647 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransparency_in_ruleStyleFeature1674 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFontFace_in_ruleStyleFeature1701 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFontSize_in_ruleStyleFeature1728 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFontStyle_in_ruleStyleFeature1755 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTextValue_in_ruleStyleFeature1782 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLineStyle_in_ruleStyleFeature1809 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLineWidth_in_ruleStyleFeature1836 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFeatureConditional_in_entryRuleFeatureConditional1873 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFeatureConditional1883 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_ruleFeatureConditional1920 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleFeatureConditional1943 = new BitSet(new long[]{0x0000000000000000L,0x0000000030000000L});
+    public static final BitSet FOLLOW_ruleOperator_in_ruleFeatureConditional1964 = new BitSet(new long[]{0x0008000000000070L,0x00000000C0000000L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleFeatureConditional1985 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNode_in_entryRuleNode2021 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNode2031 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_ruleNode2068 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleNode2091 = new BitSet(new long[]{0x0000000003000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleNode2109 = new BitSet(new long[]{0x0000000003000000L});
+    public static final BitSet FOLLOW_24_in_ruleNode2127 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleNode2147 = new BitSet(new long[]{0x0000000003000000L});
+    public static final BitSet FOLLOW_25_in_ruleNode2164 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleNode2181 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_ruleNode2200 = new BitSet(new long[]{0x00D3F90000000000L});
+    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleNode2221 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLink_in_entryRuleLink2257 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLink2267 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_ruleLink2304 = new BitSet(new long[]{0x0000000008000020L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleLink2328 = new BitSet(new long[]{0x0000000003000010L});
+    public static final BitSet FOLLOW_27_in_ruleLink2353 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleLink2389 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleLink2401 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleLink2424 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleLink2436 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleLink2459 = new BitSet(new long[]{0x0000000003000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleLink2479 = new BitSet(new long[]{0x0000000003000000L});
+    public static final BitSet FOLLOW_24_in_ruleLink2497 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleLink2517 = new BitSet(new long[]{0x0000000003000000L});
+    public static final BitSet FOLLOW_25_in_ruleLink2534 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleLink2551 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_ruleLink2570 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleLink2582 = new BitSet(new long[]{0x0000000000000000L,0x00000000000000C0L});
+    public static final BitSet FOLLOW_ruleConnectionType_in_ruleLink2603 = new BitSet(new long[]{0x0000000080020000L});
+    public static final BitSet FOLLOW_31_in_ruleLink2622 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleLink2655 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleLink2669 = new BitSet(new long[]{0xEF00000100040000L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleLinkFeature_in_ruleLink2690 = new BitSet(new long[]{0xEF00000100040000L,0x000000000000003FL});
+    public static final BitSet FOLLOW_32_in_ruleLink2704 = new BitSet(new long[]{0x0000000A30000000L});
+    public static final BitSet FOLLOW_ruleDecorator_in_ruleLink2725 = new BitSet(new long[]{0x0000000A30040000L});
+    public static final BitSet FOLLOW_18_in_ruleLink2740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLinkFeature_in_entryRuleLinkFeature2776 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLinkFeature2786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleForeground_in_ruleLinkFeature2833 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLineStyle_in_ruleLinkFeature2860 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLineWidth_in_ruleLinkFeature2887 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDecorator_in_entryRuleDecorator2922 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDecorator2932 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleDecorator2971 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleDecorator2988 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_34_in_ruleDecorator3005 = new BitSet(new long[]{0x0013200000000002L});
+    public static final BitSet FOLLOW_28_in_ruleDecorator3030 = new BitSet(new long[]{0x0013200000000002L});
+    public static final BitSet FOLLOW_29_in_ruleDecorator3067 = new BitSet(new long[]{0x0013200000000002L});
+    public static final BitSet FOLLOW_35_in_ruleDecorator3104 = new BitSet(new long[]{0x0013200000000002L});
+    public static final BitSet FOLLOW_ruleStaticElement_in_ruleDecorator3140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLabel_in_ruleDecorator3167 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStaticElement_in_entryRuleStaticElement3205 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStaticElement3215 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRhombus_in_ruleStaticElement3262 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePolyline_in_ruleStaticElement3289 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnchor_in_entryRuleAnchor3324 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAnchor3334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_ruleAnchor3371 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000300L});
+    public static final BitSet FOLLOW_ruleAnchorDirection_in_ruleAnchor3392 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleAnchor3415 = new BitSet(new long[]{0x0000002000400000L});
+    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleAnchor3436 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_ruleAnchor3449 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCustomColor_in_entryRuleCustomColor3485 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCustomColor3495 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleCustomColor3532 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleCustomColor3549 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleCustomColor3571 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_ruleCustomColor3588 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleCustomColor3605 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_ruleCustomColor3622 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleCustomColor3639 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColor_in_entryRuleColor3680 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleColor3690 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDefaultColor_in_ruleColor3736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleColor3762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConnectableElement_in_entryRuleConnectableElement3798 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleConnectableElement3808 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRectangle_in_ruleConnectableElement3855 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRhombus_in_ruleConnectableElement3882 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEllipse_in_ruleConnectableElement3909 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePolyline_in_ruleConnectableElement3936 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLabel_in_ruleConnectableElement3963 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImage_in_ruleConnectableElement3990 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInvisible_in_ruleConnectableElement4017 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCustom_in_ruleConnectableElement4044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConnectableElementFeature_in_entryRuleConnectableElementFeature4079 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleConnectableElementFeature4089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePosition_in_ruleConnectableElementFeature4136 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSize_in_ruleConnectableElementFeature4163 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColorFeature_in_ruleConnectableElementFeature4190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLineStyle_in_ruleConnectableElementFeature4217 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLineWidth_in_ruleConnectableElementFeature4244 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContains_in_ruleConnectableElementFeature4271 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnchor_in_ruleConnectableElementFeature4298 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCustomFigure_in_entryRuleCustomFigure4333 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCustomFigure4343 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleCustomFigure4380 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleCustomFigure4397 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_41_in_ruleCustomFigure4414 = new BitSet(new long[]{0x00D3F90000000000L});
+    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleCustomFigure4435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCustom_in_entryRuleCustom4471 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCustom4481 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleCustom4518 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleCustom4538 = new BitSet(new long[]{0x0000000080020000L});
+    public static final BitSet FOLLOW_31_in_ruleCustom4557 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleCustom4590 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleCustom4604 = new BitSet(new long[]{0x0004041000040000L});
+    public static final BitSet FOLLOW_ruleLinkedFeature_in_ruleCustom4625 = new BitSet(new long[]{0x0004041000040000L});
+    public static final BitSet FOLLOW_42_in_ruleCustom4645 = new BitSet(new long[]{0x00D3F90000000000L});
+    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleCustom4679 = new BitSet(new long[]{0x00D3F90000040000L});
+    public static final BitSet FOLLOW_18_in_ruleCustom4694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRectangle_in_entryRuleRectangle4730 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRectangle4740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_ruleRectangle4784 = new BitSet(new long[]{0x0000000080020000L});
+    public static final BitSet FOLLOW_44_in_ruleRectangle4821 = new BitSet(new long[]{0x0000000080020000L});
+    public static final BitSet FOLLOW_31_in_ruleRectangle4854 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRectangle4887 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleRectangle4901 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleRectangleFeature_in_ruleRectangle4922 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
+    public static final BitSet FOLLOW_42_in_ruleRectangle4942 = new BitSet(new long[]{0x00D3F90000000000L});
+    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleRectangle4976 = new BitSet(new long[]{0x00D3F90000040000L});
+    public static final BitSet FOLLOW_18_in_ruleRectangle4991 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRectangleFeature_in_entryRuleRectangleFeature5027 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRectangleFeature5037 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConnectableElementFeature_in_ruleRectangleFeature5084 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCorner_in_ruleRectangleFeature5111 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRhombus_in_entryRuleRhombus5146 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRhombus5156 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_ruleRhombus5202 = new BitSet(new long[]{0x0000000080020000L});
+    public static final BitSet FOLLOW_31_in_ruleRhombus5221 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRhombus5254 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleRhombus5268 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConnectableElementFeature_in_ruleRhombus5289 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
+    public static final BitSet FOLLOW_42_in_ruleRhombus5309 = new BitSet(new long[]{0x00D3F90000000000L});
+    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleRhombus5343 = new BitSet(new long[]{0x00D3F90000040000L});
+    public static final BitSet FOLLOW_18_in_ruleRhombus5358 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEllipse_in_entryRuleEllipse5394 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEllipse5404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_ruleEllipse5448 = new BitSet(new long[]{0x0000000080020000L});
+    public static final BitSet FOLLOW_47_in_ruleEllipse5485 = new BitSet(new long[]{0x0000000080020000L});
+    public static final BitSet FOLLOW_31_in_ruleEllipse5518 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleEllipse5551 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleEllipse5565 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConnectableElementFeature_in_ruleEllipse5586 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
+    public static final BitSet FOLLOW_42_in_ruleEllipse5606 = new BitSet(new long[]{0x00D3F90000000000L});
+    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleEllipse5640 = new BitSet(new long[]{0x00D3F90000040000L});
+    public static final BitSet FOLLOW_18_in_ruleEllipse5655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePolyline_in_entryRulePolyline5691 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePolyline5701 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_rulePolyline5745 = new BitSet(new long[]{0x0000000080020000L});
+    public static final BitSet FOLLOW_49_in_rulePolyline5782 = new BitSet(new long[]{0x0000000080020000L});
+    public static final BitSet FOLLOW_31_in_rulePolyline5815 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePolyline5848 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_rulePolyline5862 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_rulePoint_in_rulePolyline5883 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_rulePoint_in_rulePolyline5904 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
+    public static final BitSet FOLLOW_rulePoint_in_rulePolyline5925 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConnectableElementFeature_in_rulePolyline5947 = new BitSet(new long[]{0xEF04041000040000L,0x000000000000003FL});
+    public static final BitSet FOLLOW_42_in_rulePolyline5967 = new BitSet(new long[]{0x00D3F90000000000L});
+    public static final BitSet FOLLOW_ruleConnectableElement_in_rulePolyline6001 = new BitSet(new long[]{0x00D3F90000040000L});
+    public static final BitSet FOLLOW_18_in_rulePolyline6016 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContains_in_entryRuleContains6052 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContains6062 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_ruleContains6099 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContains6122 = new BitSet(new long[]{0x0000002000400000L,0x000000000C000040L});
+    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleContains6143 = new BitSet(new long[]{0x0000002000000000L,0x000000000C000040L});
+    public static final BitSet FOLLOW_ruleContainerLayout_in_ruleContains6165 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_ruleContains6178 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_entryRuleValue6214 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleValue6224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIntValue_in_ruleValue6271 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDoubleValue_in_ruleValue6298 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringValue_in_ruleValue6325 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBooleanValue_in_ruleValue6352 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEnumValue_in_ruleValue6379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIntValue_in_entryRuleIntValue6414 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIntValue6424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleIntValue6465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDoubleValue_in_entryRuleDoubleValue6505 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDoubleValue6515 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleDoubleValue6557 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleDoubleValue6574 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleDoubleValue6591 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringValue_in_entryRuleStringValue6632 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStringValue6642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_ruleStringValue6685 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleStringValue6721 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBooleanValue_in_entryRuleBooleanValue6762 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBooleanValue6772 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBooleanLiteral_in_ruleBooleanValue6817 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEnumValue_in_entryRuleEnumValue6852 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEnumValue6862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleEnumValue6903 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLabel_in_entryRuleLabel6945 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLabel6955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_ruleLabel7001 = new BitSet(new long[]{0x0020000080020000L});
+    public static final BitSet FOLLOW_53_in_ruleLabel7019 = new BitSet(new long[]{0x0000000080020000L});
+    public static final BitSet FOLLOW_31_in_ruleLabel7052 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleLabel7085 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleLabel7099 = new BitSet(new long[]{0x4B00040000040000L,0x000000000000000FL});
+    public static final BitSet FOLLOW_ruleLabelFeature_in_ruleLabel7120 = new BitSet(new long[]{0x4B00040000040000L,0x000000000000000FL});
+    public static final BitSet FOLLOW_42_in_ruleLabel7140 = new BitSet(new long[]{0x00D3F90000000000L});
+    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleLabel7174 = new BitSet(new long[]{0x00D3F90000040000L});
+    public static final BitSet FOLLOW_18_in_ruleLabel7189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLabelFeature_in_entryRuleLabelFeature7225 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLabelFeature7235 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTextValue_in_ruleLabelFeature7282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleForeground_in_ruleLabelFeature7309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBackground_in_ruleLabelFeature7336 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFontFace_in_ruleLabelFeature7363 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFontSize_in_ruleLabelFeature7390 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFontStyle_in_ruleLabelFeature7417 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSize_in_ruleLabelFeature7444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePosition_in_ruleLabelFeature7471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImage_in_entryRuleImage7506 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleImage7516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_ruleImage7553 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleImage7570 = new BitSet(new long[]{0x0000000080020000L});
+    public static final BitSet FOLLOW_31_in_ruleImage7594 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleImage7627 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleImage7641 = new BitSet(new long[]{0x4C00040000040000L});
+    public static final BitSet FOLLOW_ruleImageFeature_in_ruleImage7662 = new BitSet(new long[]{0x4C00040000040000L});
+    public static final BitSet FOLLOW_42_in_ruleImage7682 = new BitSet(new long[]{0x00D3F90000000000L});
+    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleImage7716 = new BitSet(new long[]{0x00D3F90000040000L});
+    public static final BitSet FOLLOW_18_in_ruleImage7731 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImageFeature_in_entryRuleImageFeature7767 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleImageFeature7777 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSize_in_ruleImageFeature7824 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePosition_in_ruleImageFeature7851 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransparency_in_ruleImageFeature7878 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInvisible_in_entryRuleInvisible7913 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInvisible7923 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_ruleInvisible7969 = new BitSet(new long[]{0x0000000080020000L});
+    public static final BitSet FOLLOW_31_in_ruleInvisible7988 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleInvisible8021 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleInvisible8035 = new BitSet(new long[]{0x4804041000040000L});
+    public static final BitSet FOLLOW_ruleInvisibleFeature_in_ruleInvisible8056 = new BitSet(new long[]{0x4804041000040000L});
+    public static final BitSet FOLLOW_42_in_ruleInvisible8076 = new BitSet(new long[]{0x00D3F90000000000L});
+    public static final BitSet FOLLOW_ruleConnectableElement_in_ruleInvisible8110 = new BitSet(new long[]{0x00D3F90000040000L});
+    public static final BitSet FOLLOW_18_in_ruleInvisible8125 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInvisibleFeature_in_entryRuleInvisibleFeature8161 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInvisibleFeature8171 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSize_in_ruleInvisibleFeature8218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePosition_in_ruleInvisibleFeature8245 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLinkedFeature_in_ruleInvisibleFeature8272 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColorFeature_in_entryRuleColorFeature8307 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleColorFeature8317 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleForeground_in_ruleColorFeature8364 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBackground_in_ruleColorFeature8391 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleForeground_in_entryRuleForeground8426 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleForeground8436 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_ruleForeground8479 = new BitSet(new long[]{0x0000000000000020L,0x0000000003FFFC00L});
+    public static final BitSet FOLLOW_ruleColor_in_ruleForeground8513 = new BitSet(new long[]{0x0000002000400000L});
+    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleForeground8534 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_ruleForeground8547 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBackground_in_entryRuleBackground8583 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBackground8593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_ruleBackground8636 = new BitSet(new long[]{0x0000000000000020L,0x0000000003FFFC00L});
+    public static final BitSet FOLLOW_ruleColor_in_ruleBackground8670 = new BitSet(new long[]{0x0000002000400000L});
+    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleBackground8691 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_ruleBackground8704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransparency_in_entryRuleTransparency8740 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTransparency8750 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_ruleTransparency8787 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_PERCENT_in_ruleTransparency8804 = new BitSet(new long[]{0x0000002000400000L});
+    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleTransparency8830 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_ruleTransparency8843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSize_in_entryRuleSize8879 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSize8889 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_ruleSize8926 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleSize8943 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_60_in_ruleSize8960 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleSize8977 = new BitSet(new long[]{0x0000002000400000L});
+    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleSize9003 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_ruleSize9016 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePoint_in_entryRulePoint9052 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePoint9062 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_rulePoint9099 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_rulePoint9116 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_rulePoint9133 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_rulePoint9150 = new BitSet(new long[]{0x0000002000400000L});
+    public static final BitSet FOLLOW_ruleFeatureConditional_in_rulePoint9176 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_rulePoint9189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePosition_in_entryRulePosition9225 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePosition9235 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_62_in_rulePosition9272 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_rulePosition9289 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_rulePosition9306 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_rulePosition9323 = new BitSet(new long[]{0x0000002000400000L});
+    public static final BitSet FOLLOW_ruleFeatureConditional_in_rulePosition9349 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_rulePosition9362 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCorner_in_entryRuleCorner9398 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCorner9408 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_ruleCorner9445 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleCorner9462 = new BitSet(new long[]{0x0000002000400000L});
+    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleCorner9488 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_ruleCorner9501 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTextValue_in_entryRuleTextValue9537 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTextValue9547 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_ruleTextValue9584 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleTextValue9602 = new BitSet(new long[]{0x0000002000400000L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleTextValue9636 = new BitSet(new long[]{0x0000002000400000L});
+    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleTextValue9658 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_ruleTextValue9671 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFontFace_in_entryRuleFontFace9707 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFontFace9717 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_ruleFontFace9754 = new BitSet(new long[]{0x0000000000000000L,0x0000000F00000000L});
+    public static final BitSet FOLLOW_ruleFontFaceType_in_ruleFontFace9775 = new BitSet(new long[]{0x0000002000400000L});
+    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleFontFace9796 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_ruleFontFace9809 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFontSize_in_entryRuleFontSize9845 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFontSize9855 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_ruleFontSize9892 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleFontSize9909 = new BitSet(new long[]{0x0000002000400000L});
+    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleFontSize9935 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_ruleFontSize9948 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFontStyle_in_entryRuleFontStyle9984 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFontStyle9994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_ruleFontStyle10031 = new BitSet(new long[]{0x0000000000000000L,0x0000007000000000L});
+    public static final BitSet FOLLOW_ruleFontStyleType_in_ruleFontStyle10052 = new BitSet(new long[]{0x000000A000400000L});
+    public static final BitSet FOLLOW_39_in_ruleFontStyle10065 = new BitSet(new long[]{0x0000000000000000L,0x0000007000000000L});
+    public static final BitSet FOLLOW_ruleFontStyleType_in_ruleFontStyle10086 = new BitSet(new long[]{0x000000A000400000L});
+    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleFontStyle10109 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_ruleFontStyle10122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLineStyle_in_entryRuleLineStyle10158 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLineStyle10168 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_ruleLineStyle10205 = new BitSet(new long[]{0x0000000000000000L,0x0000018000000000L});
+    public static final BitSet FOLLOW_ruleLineType_in_ruleLineStyle10226 = new BitSet(new long[]{0x0000002000400000L});
+    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleLineStyle10247 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_ruleLineStyle10260 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLineWidth_in_entryRuleLineWidth10296 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLineWidth10306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_ruleLineWidth10343 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleLineWidth10360 = new BitSet(new long[]{0x0000002000400000L});
+    public static final BitSet FOLLOW_ruleFeatureConditional_in_ruleLineWidth10386 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_ruleLineWidth10399 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_ruleConnectionType10451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_ruleConnectionType10468 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_72_in_ruleAnchorDirection10513 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_73_in_ruleAnchorDirection10530 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_ruleDefaultColor10575 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_75_in_ruleDefaultColor10592 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_76_in_ruleDefaultColor10609 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_77_in_ruleDefaultColor10626 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_78_in_ruleDefaultColor10643 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_79_in_ruleDefaultColor10660 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_80_in_ruleDefaultColor10677 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_81_in_ruleDefaultColor10694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_82_in_ruleDefaultColor10711 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_ruleDefaultColor10728 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_84_in_ruleDefaultColor10745 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_85_in_ruleDefaultColor10762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_86_in_ruleDefaultColor10779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_87_in_ruleDefaultColor10796 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_88_in_ruleDefaultColor10813 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_89_in_ruleDefaultColor10830 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_ruleContainerLayout10875 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_90_in_ruleContainerLayout10892 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_91_in_ruleContainerLayout10909 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_92_in_ruleOperator10954 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_93_in_ruleOperator10971 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_94_in_ruleBooleanLiteral11016 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_95_in_ruleBooleanLiteral11033 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_96_in_ruleFontFaceType11078 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_97_in_ruleFontFaceType11095 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_98_in_ruleFontFaceType11112 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_99_in_ruleFontFaceType11129 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_100_in_ruleFontStyleType11174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_101_in_ruleFontStyleType11191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_102_in_ruleFontStyleType11208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_103_in_ruleLineType11253 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_104_in_ruleLineType11270 = new BitSet(new long[]{0x0000000000000002L});
 
 }

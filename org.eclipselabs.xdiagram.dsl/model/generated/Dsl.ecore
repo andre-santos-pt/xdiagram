@@ -25,6 +25,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="modelClass" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
         eType="#//Contains" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="figures" upperBound="-1"
+        eType="#//ConnectableElement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Group">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
