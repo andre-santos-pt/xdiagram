@@ -2,23 +2,19 @@ package org.eclipselabs.xdiagram.provider.internal.handlers;
 
 import java.util.EnumMap;
 
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
-import org.eclipse.graphiti.mm.algorithms.AbstractText;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipse.graphiti.util.ColorConstant;
-import org.eclipse.graphiti.util.IColorConstant;
-import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 import org.eclipselabs.xdiagram.dsl.Color;
 import org.eclipselabs.xdiagram.dsl.ColorFeature;
 import org.eclipselabs.xdiagram.dsl.CustomColor;
 import org.eclipselabs.xdiagram.dsl.DefaultColor;
-import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.Feature;
+import org.eclipselabs.xdiagram.dsl.FeatureContainer;
+import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 
 public class ColorHandler implements FeatureHandler {
 

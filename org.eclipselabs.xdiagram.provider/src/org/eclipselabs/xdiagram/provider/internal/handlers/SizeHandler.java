@@ -5,13 +5,13 @@ import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.services.Graphiti;
-import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 import org.eclipselabs.xdiagram.dsl.ConnectableElement;
-import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.Ellipse;
 import org.eclipselabs.xdiagram.dsl.Feature;
+import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.Rectangle;
 import org.eclipselabs.xdiagram.dsl.Size;
+import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 
 public class SizeHandler implements FeatureHandler {
 
