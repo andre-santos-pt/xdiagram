@@ -45,7 +45,7 @@ public class TextValueHandler implements FeatureHandler {
 	
 
 	@Override
-	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
+	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram, GraphicsAlgorithmContainer container) {
 		if(figure instanceof AbstractText)
 			((AbstractText) figure).setValue("?");
 	}

@@ -32,10 +32,12 @@ import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipselabs.xdiagram.DslStandaloneSetup;
 import org.eclipselabs.xdiagram.dsl.ConnectableElement;
+import org.eclipselabs.xdiagram.dsl.ContainerLayout;
 import org.eclipselabs.xdiagram.dsl.Contains;
 import org.eclipselabs.xdiagram.dsl.Decorator;
 import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.FeatureConditional;
+import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.Label;
 import org.eclipselabs.xdiagram.dsl.Link;
 import org.eclipselabs.xdiagram.dsl.Node;
@@ -91,8 +93,8 @@ public class LanguageProvider implements GraphicsProvider {
 
 		featureChain = new FeatureHandlerChain()
 		.add(new ColorHandler())
+		.add(new PositionHandler(containsHandler))
 		.add(new SizeHandler())
-		.add(new PositionHandler())
 		.add(new LineWidthHandler())
 		.add(new PointHandler())
 		.add(new TextValueHandler())
@@ -347,7 +349,6 @@ public class LanguageProvider implements GraphicsProvider {
 
 	// TODO remove children?
 	private void updateElement(ConnectableElement e, EObject o, ContainerShape s, Diagram diagram) {
-		featureChain.update(e, o, diagram, s.getGraphicsAlgorithm(), s);
 		List<ConnectableElement> childrenElements = e.getChildren();
 		List<Shape> childrenShapes = ((ContainerShape) s).getChildren();
 
@@ -357,7 +358,7 @@ public class LanguageProvider implements GraphicsProvider {
 			else
 				updateElement(childrenElements.get(i), o, (ContainerShape) childrenShapes.get(i), diagram);
 		}
-
+		featureChain.update(e, o, diagram, s.getGraphicsAlgorithm(), s);
 	}
 
 	private void updateConnections(Connection conn, Diagram diagram) {
@@ -392,11 +393,12 @@ public class LanguageProvider implements GraphicsProvider {
 //		if(mainFig instanceof Custom)
 //			featureChain.update(((Custom) mainFig).getFigure().getElement(), eObject, diagram, nodeFigure, container);
 
-		featureChain.update(mainFig, eObject, diagram, nodeFigure, container);
-
 		for(ConnectableElement child : mainFig.getChildren())
 			addChildren(child, container, diagram, eObject);
 
+		// parent features after
+		featureChain.update(mainFig, eObject, diagram, nodeFigure, container);
+		
 		if(!hasFeature(mainFig, org.eclipselabs.xdiagram.dsl.Anchor.class, true)) {
 			Anchor anchor = Graphiti.getPeCreateService().createChopboxAnchor(container);
 			anchors.put(anchor, eObject);
@@ -434,13 +436,13 @@ public class LanguageProvider implements GraphicsProvider {
 
 
 
-	public static boolean hasFeature(ConnectableElement element, Class<? extends Feature> clazz, boolean recursive) {
+	public static boolean hasFeature(FeatureContainer element, Class<? extends Feature> clazz, boolean recursive) {
 		for(Feature f : element.getFeatures()) {
 			if(clazz.isInstance(f))
 				return true;
 
-			if(recursive)
-				for(ConnectableElement child : element.getChildren())
+			if(recursive && element instanceof ConnectableElement)
+				for(ConnectableElement child : ((ConnectableElement) element).getChildren())
 					hasFeature(child, clazz, recursive);
 		}
 
@@ -491,6 +493,8 @@ public class LanguageProvider implements GraphicsProvider {
 		//TODO can move
 		//		String value = FigureProperty.CAN_MOVE.get(figure);
 		//		return value==null || value.equals("1");
+		for(Contains c : containsHandler.getContainsFeature((ContainerShape)((ContainerShape) figure.eContainer()).eContainer()))
+			return c.getLayout().equals(ContainerLayout.FREE);
 		return true;
 	}
 

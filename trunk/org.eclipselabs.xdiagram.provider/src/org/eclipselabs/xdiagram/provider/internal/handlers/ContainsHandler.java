@@ -23,7 +23,7 @@ import com.google.common.collect.Multimap;
 
 public class ContainsHandler implements FeatureHandler {
 
-	private Multimap<GraphicsAlgorithmContainer, EReference> references;
+	private Multimap<GraphicsAlgorithmContainer, Contains> references;
 	private Map<GraphicsAlgorithmContainer, EObject> owners;
 	
 	public ContainsHandler() {
@@ -35,12 +35,20 @@ public class ContainsHandler implements FeatureHandler {
 		return references.containsKey(container);
 	}
 	
-	public Collection<EReference> getReferences(ContainerShape container) {
+	public Collection<Contains> getContainsFeature(ContainerShape container) {
 		return references.get(container); 
 	}
 	
+	public Collection<EReference> getReferences(ContainerShape container) {
+		List<EReference> list = new ArrayList<>();
+		for(Contains c : references.get(container))
+			list.add(c.getModelReference());
+		
+		return list; 
+	}
+	
 	public Collection<EReference> getReferences(ContainerShape container, EObject eObject) {
-		List<EReference> list = new ArrayList<>(references.get(container));
+		Collection<EReference> list = getReferences(container);
 		Iterator<EReference> it = list.iterator();
 		while(it.hasNext()) {
 			if(!it.next().getEReferenceType().isInstance(eObject))
@@ -69,13 +77,12 @@ public class ContainsHandler implements FeatureHandler {
 		Contains cont = (Contains) feature;
 	
 		owners.put(container, eObject);		
-		references.put(container, cont.getModelReference());
-		
-		System.out.println("CONT " + container + "  " + cont.getModelReference());
+		references.put(container, cont);
+		System.out.println("CONT " + container);
 	}
 
 	@Override
-	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
+	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram, GraphicsAlgorithmContainer container) {
 		
 	}
 }
