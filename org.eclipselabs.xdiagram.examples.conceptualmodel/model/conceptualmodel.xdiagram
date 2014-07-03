@@ -5,29 +5,45 @@ diagram ConceptualModel {
 	contains ConceptualModel.classes;
 }
 
+color grey 220, 220, 220
+
+
 node Class "class" :
 rectangle {
-	background gray;
-	size 100 x 50;
+	//background white;
+	//size 200 x 25;
 	
-	children:
+	children vstack:
 	label editable {
 		text Class.name;
-		position 5, 5;
+		size 90 x 25;
 	}
-	invisible {
-		contains Class.properties;	
+	
+	rectangle {
+		contains Class.properties hstack;
+		foreground black;	
+		background white;
+	}
+	
+	rectangle {
+		contains Class.properties vstack;
+		foreground black;
+		background red;
 	}
 }
+
+
 
 node Attribute :
 label {
 	text Attribute.name;
+	size 90 x 15;
+	//position 10, 10;
 }
 
 link Class.superclass :
 connection free {
-	
+
 }
 
 
