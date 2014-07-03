@@ -152,6 +152,7 @@ public class DslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getImportStatementAccess().getImportedNamespaceAssignment_1_1(), "rule__ImportStatement__ImportedNamespaceAssignment_1_1");
 					put(grammarAccess.getDiagramAccess().getModelClassAssignment_1(), "rule__Diagram__ModelClassAssignment_1");
 					put(grammarAccess.getDiagramAccess().getContainsAssignment_3(), "rule__Diagram__ContainsAssignment_3");
+					put(grammarAccess.getDiagramAccess().getFiguresAssignment_4(), "rule__Diagram__FiguresAssignment_4");
 					put(grammarAccess.getGroupAccess().getNameAssignment_1(), "rule__Group__NameAssignment_1");
 					put(grammarAccess.getStyleAccess().getNameAssignment_1(), "rule__Style__NameAssignment_1");
 					put(grammarAccess.getStyleAccess().getStyledAssignment_2_0(), "rule__Style__StyledAssignment_2_0");
