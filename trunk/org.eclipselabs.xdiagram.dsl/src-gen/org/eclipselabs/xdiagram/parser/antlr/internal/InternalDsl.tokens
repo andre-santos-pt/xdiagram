@@ -161,6 +161,7 @@ T__87=87
 'text'=64
 '<>'=93
 'purple'=89
+'children'=42
 'node'=23
 'corner'=63
 'connection'=30
@@ -182,7 +183,6 @@ T__87=87
 'fuchsia'=88
 'diagram'=16
 'size'=59
-'children:'=42
 '='=92
 '{'=17
 'editable'=53

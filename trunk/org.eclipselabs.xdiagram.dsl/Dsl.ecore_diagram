@@ -1271,7 +1271,7 @@
       <layoutConstraint xmi:type="notation:Location" xmi:id="_rUeo8XWyEeOOVt_BNdp8tA" y="40"/>
     </children>
     <children xmi:type="notation:DecorationNode" xmi:id="_rUeo8nWyEeOOVt_BNdp8tA" type="6004">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_rUeo83WyEeOOVt_BNdp8tA" y="60"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_rUeo83WyEeOOVt_BNdp8tA" x="-23" y="13"/>
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_rUeB4XWyEeOOVt_BNdp8tA" fontName="Lucida Grande" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="model/generated/Dsl.ecore#//CustomFigure/element"/>

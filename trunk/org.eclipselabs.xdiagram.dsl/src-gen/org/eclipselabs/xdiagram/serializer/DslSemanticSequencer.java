@@ -517,7 +517,12 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (figure=[CustomFigure|ID] (styled?='+' style=[Style|ID])? features+=LinkedFeature* (composite?='children:' children+=ConnectableElement+)?)
+	 *     (
+	 *         figure=[CustomFigure|ID] 
+	 *         (styled?='+' style=[Style|ID])? 
+	 *         features+=LinkedFeature* 
+	 *         (composite?='children' layout=ContainerLayout? children+=ConnectableElement+)?
+	 *     )
 	 */
 	protected void sequence_Custom(EObject context, Custom semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -567,7 +572,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (ellipse?='ellipse' | circle?='circle') 
 	 *         (styled?='+' style=[Style|ID])? 
 	 *         features+=ConnectableElementFeature* 
-	 *         (composite?='children:' children+=ConnectableElement+)?
+	 *         (composite?='children' layout=ContainerLayout? children+=ConnectableElement+)?
 	 *     )
 	 */
 	protected void sequence_Ellipse(EObject context, Ellipse semanticObject) {
@@ -667,7 +672,12 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (imageId=ID (styled?='+' style=[Style|ID])? features+=ImageFeature* (composite?='children:' children+=ConnectableElement+)?)
+	 *     (
+	 *         imageId=ID 
+	 *         (styled?='+' style=[Style|ID])? 
+	 *         features+=ImageFeature* 
+	 *         (composite?='children' layout=ContainerLayout? children+=ConnectableElement+)?
+	 *     )
 	 */
 	protected void sequence_Image(EObject context, Image semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -701,7 +711,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     ((styled?='+' style=[Style|ID])? features+=InvisibleFeature* (composite?='children:' children+=ConnectableElement+)?)
+	 *     ((styled?='+' style=[Style|ID])? features+=InvisibleFeature* (composite?='children' layout=ContainerLayout? children+=ConnectableElement+)?)
 	 */
 	protected void sequence_Invisible(EObject context, Invisible semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -710,7 +720,12 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (editable?='editable'? (styled?='+' style=[Style|ID])? features+=LabelFeature* (composite?='children:' children+=ConnectableElement+)?)
+	 *     (
+	 *         editable?='editable'? 
+	 *         (styled?='+' style=[Style|ID])? 
+	 *         features+=LabelFeature* 
+	 *         (composite?='children' layout=ContainerLayout? children+=ConnectableElement+)?
+	 *     )
 	 */
 	protected void sequence_Label(EObject context, Label semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -782,7 +797,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         features+=Point 
 	 *         features+=Point* 
 	 *         features+=ConnectableElementFeature* 
-	 *         (composite?='children:' children+=ConnectableElement+)?
+	 *         (composite?='children' layout=ContainerLayout? children+=ConnectableElement+)?
 	 *     )
 	 */
 	protected void sequence_Polyline(EObject context, Polyline semanticObject) {
@@ -805,7 +820,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (rectangle?='rectangle' | square?='square') 
 	 *         (styled?='+' style=[Style|ID])? 
 	 *         features+=RectangleFeature* 
-	 *         (composite?='children:' children+=ConnectableElement+)?
+	 *         (composite?='children' layout=ContainerLayout? children+=ConnectableElement+)?
 	 *     )
 	 */
 	protected void sequence_Rectangle(EObject context, Rectangle semanticObject) {
@@ -815,7 +830,11 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     ((styled?='+' style=[Style|ID])? features+=ConnectableElementFeature* (composite?='children:' children+=ConnectableElement+)?)
+	 *     (
+	 *         (styled?='+' style=[Style|ID])? 
+	 *         features+=ConnectableElementFeature* 
+	 *         (composite?='children' layout=ContainerLayout? children+=ConnectableElement+)?
+	 *     )
 	 */
 	protected void sequence_Rhombus(EObject context, Rhombus semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
