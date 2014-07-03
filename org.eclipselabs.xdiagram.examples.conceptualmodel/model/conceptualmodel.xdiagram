@@ -1,0 +1,34 @@
+metamodel "platform:/plugin/org.eclipselabs.xdiagram.examples.conceptualmodel/model/conceptualmodel.ecore"
+import conceptualmodel.*
+
+diagram ConceptualModel {
+	contains ConceptualModel.classes;
+}
+
+node Class "class" :
+rectangle {
+	background gray;
+	size 100 x 50;
+	
+	children:
+	label editable {
+		text Class.name;
+		position 5, 5;
+	}
+	invisible {
+		contains Class.properties;	
+	}
+}
+
+node Attribute :
+label {
+	text Attribute.name;
+}
+
+link Class.superclass :
+connection free {
+	
+}
+
+
+
