@@ -79,6 +79,8 @@ public class CreateEReferenceFeature extends AbstractCreateConnectionFeature {
 
 		return newConnection;
 	}
+	
+	
 
 	private EObject getEObject(Anchor anchor) {
 		if (anchor != null) {

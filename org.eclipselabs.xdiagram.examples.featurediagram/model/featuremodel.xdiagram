@@ -2,8 +2,8 @@ metamodel "platform:/plugin/org.eclipselabs.xdiagram.examples.featurediagram/mod
 import featuremodel.*
 
 diagram FeatureModel {
-	contains FeatureModel.features; // not working
-	contains FeatureModel.root; // not working
+	contains FeatureModel.features;
+	contains FeatureModel.root;
 }
 
 

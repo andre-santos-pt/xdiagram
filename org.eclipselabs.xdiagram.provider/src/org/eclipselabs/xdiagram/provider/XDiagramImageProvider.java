@@ -62,6 +62,9 @@ public class XDiagramImageProvider extends AbstractImageProvider {
 
 			Bundle bundle = Platform.getBundle(plugin.getName());
 			Enumeration<String> e = bundle.getEntryPaths("images");
+			if(e == null)
+				return;
+			
 			while(e.hasMoreElements()) {
 				String path = e.nextElement();
 				int i = path.indexOf(File.separatorChar);
