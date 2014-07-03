@@ -39,8 +39,9 @@ public interface FeatureHandler {
 	 * @param element
 	 * @param figure
 	 * @param diagram
+	 * @param container TODO
 	 */
-	void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram);
+	void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram, GraphicsAlgorithmContainer container);
 
 	
 //	boolean acceptDefaults(FeatureContainer element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container);

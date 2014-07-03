@@ -36,7 +36,7 @@ public class CornerHandler implements FeatureHandler {
 	 * quando nao ha defaults (pe. Point), fica vazio
 	 */
 	@Override
-	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram) {
+	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram, GraphicsAlgorithmContainer container) {
 		if(element instanceof Rectangle) {
 			RoundedRectangle r = (RoundedRectangle) figure;
 			r.setCornerWidth(0);

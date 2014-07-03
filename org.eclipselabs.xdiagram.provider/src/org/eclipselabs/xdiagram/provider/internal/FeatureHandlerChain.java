@@ -24,13 +24,15 @@ import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.IntValue;
 import org.eclipselabs.xdiagram.dsl.StringValue;
 import org.eclipselabs.xdiagram.dsl.Value;
+import org.eclipselabs.xdiagram.provider.LanguageProvider;
 
 import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.ListMultimap;
 import com.google.common.collect.Multimap;
 
 public class FeatureHandlerChain  {
 
-	private Multimap<Class<? extends Feature>,FeatureHandler> handlers;
+	private ListMultimap<Class<? extends Feature>,FeatureHandler> handlers;
 
 	public FeatureHandlerChain() {
 		handlers = ArrayListMultimap.create();
@@ -52,6 +54,13 @@ public class FeatureHandlerChain  {
 
 		boolean existsConditional = false;
 
+		// defaults are applied first
+		for(Class<? extends Feature> cf : handlers.keys()) {
+			if(!LanguageProvider.hasFeature(element, cf, false))
+				for(FeatureHandler fh : handlers.get(cf))
+					fh.applyDefaults(element, figure, diagram, container);
+		}
+			
 		for(Feature f : element.getFeatures()) {
 			if(f.getConditional() != null)
 				existsConditional = true;
@@ -72,9 +81,9 @@ public class FeatureHandlerChain  {
 		if(existsConditional)
 			addListener(element, diagram, eObject, figure, container);
 
-		for(FeatureHandler fh : handlers.values())
-			if(!defined.contains(fh))
-				fh.applyDefaults(element, figure, diagram);
+//		for(FeatureHandler fh : handlers.values())
+//			if(!defined.contains(fh))
+//				fh.applyDefaults(element, figure, diagram);
 	}
 
 	//	private boolean contains(Class<? extends Feature> type, List<Feature> list) {
