@@ -129,6 +129,7 @@
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//ConnectableElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//ConnectableElement/composite"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//ConnectableElement/layout"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//ConnectableElement/children"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//Anchor">

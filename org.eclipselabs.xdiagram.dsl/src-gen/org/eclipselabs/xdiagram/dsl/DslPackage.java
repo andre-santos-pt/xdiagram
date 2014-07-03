@@ -800,13 +800,22 @@ public interface DslPackage extends EPackage
   int CONNECTABLE_ELEMENT__COMPOSITE = FEATURE_CONTAINER_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Layout</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONNECTABLE_ELEMENT__LAYOUT = FEATURE_CONTAINER_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONNECTABLE_ELEMENT__CHILDREN = FEATURE_CONTAINER_FEATURE_COUNT + 1;
+  int CONNECTABLE_ELEMENT__CHILDREN = FEATURE_CONTAINER_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Connectable Element</em>' class.
@@ -815,7 +824,7 @@ public interface DslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONNECTABLE_ELEMENT_FEATURE_COUNT = FEATURE_CONTAINER_FEATURE_COUNT + 2;
+  int CONNECTABLE_ELEMENT_FEATURE_COUNT = FEATURE_CONTAINER_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.impl.AnchorImpl <em>Anchor</em>}' class.
@@ -1039,6 +1048,15 @@ public interface DslPackage extends EPackage
   int CUSTOM__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
 
   /**
+   * The feature id for the '<em><b>Layout</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CUSTOM__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
+
+  /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1110,6 +1128,15 @@ public interface DslPackage extends EPackage
    * @ordered
    */
   int RECTANGLE__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
+
+  /**
+   * The feature id for the '<em><b>Layout</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RECTANGLE__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
 
   /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -1194,6 +1221,15 @@ public interface DslPackage extends EPackage
   int RHOMBUS__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
 
   /**
+   * The feature id for the '<em><b>Layout</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RHOMBUS__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
+
+  /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1256,6 +1292,15 @@ public interface DslPackage extends EPackage
    * @ordered
    */
   int ELLIPSE__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
+
+  /**
+   * The feature id for the '<em><b>Layout</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELLIPSE__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
 
   /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -1338,6 +1383,15 @@ public interface DslPackage extends EPackage
    * @ordered
    */
   int POLYLINE__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
+
+  /**
+   * The feature id for the '<em><b>Layout</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POLYLINE__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
 
   /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -1645,6 +1699,15 @@ public interface DslPackage extends EPackage
   int LABEL__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
 
   /**
+   * The feature id for the '<em><b>Layout</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LABEL__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
+
+  /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1718,6 +1781,15 @@ public interface DslPackage extends EPackage
   int IMAGE__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
 
   /**
+   * The feature id for the '<em><b>Layout</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
+
+  /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1789,6 +1861,15 @@ public interface DslPackage extends EPackage
    * @ordered
    */
   int INVISIBLE__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
+
+  /**
+   * The feature id for the '<em><b>Layout</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INVISIBLE__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
 
   /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -2956,6 +3037,17 @@ public interface DslPackage extends EPackage
    * @generated
    */
   EAttribute getConnectableElement_Composite();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.dsl.ConnectableElement#getLayout <em>Layout</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Layout</em>'.
+   * @see org.eclipselabs.xdiagram.dsl.ConnectableElement#getLayout()
+   * @see #getConnectableElement()
+   * @generated
+   */
+  EAttribute getConnectableElement_Layout();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.dsl.ConnectableElement#getChildren <em>Children</em>}'.
@@ -4337,6 +4429,14 @@ public interface DslPackage extends EPackage
      * @generated
      */
     EAttribute CONNECTABLE_ELEMENT__COMPOSITE = eINSTANCE.getConnectableElement_Composite();
+
+    /**
+     * The meta object literal for the '<em><b>Layout</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONNECTABLE_ELEMENT__LAYOUT = eINSTANCE.getConnectableElement_Layout();
 
     /**
      * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.

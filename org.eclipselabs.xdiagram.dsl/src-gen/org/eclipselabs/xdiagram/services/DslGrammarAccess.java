@@ -1262,17 +1262,20 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Assignment cCompositeAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
 		private final Keyword cCompositeChildrenKeyword_5_0_0 = (Keyword)cCompositeAssignment_5_0.eContents().get(0);
-		private final Assignment cChildrenAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cChildrenConnectableElementParserRuleCall_5_1_0 = (RuleCall)cChildrenAssignment_5_1.eContents().get(0);
+		private final Assignment cLayoutAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cLayoutContainerLayoutEnumRuleCall_5_1_0 = (RuleCall)cLayoutAssignment_5_1.eContents().get(0);
+		private final Keyword cColonKeyword_5_2 = (Keyword)cGroup_5.eContents().get(2);
+		private final Assignment cChildrenAssignment_5_3 = (Assignment)cGroup_5.eContents().get(3);
+		private final RuleCall cChildrenConnectableElementParserRuleCall_5_3_0 = (RuleCall)cChildrenAssignment_5_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Custom:
-		//	"figure" figure=[CustomFigure] (styled?="+" style=[Style])? "{" features+=LinkedFeature* (composite?="children:"
-		//	children+=ConnectableElement+)? "}";
+		//	"figure" figure=[CustomFigure] (styled?="+" style=[Style])? "{" features+=LinkedFeature* (composite?="children"
+		//	layout=ContainerLayout? ":" children+=ConnectableElement+)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//"figure" figure=[CustomFigure] (styled?="+" style=[Style])? "{" features+=LinkedFeature* (composite?="children:"
-		//children+=ConnectableElement+)? "}"
+		//"figure" figure=[CustomFigure] (styled?="+" style=[Style])? "{" features+=LinkedFeature* (composite?="children"
+		//layout=ContainerLayout? ":" children+=ConnectableElement+)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//"figure"
@@ -1314,20 +1317,29 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//LinkedFeature
 		public RuleCall getFeaturesLinkedFeatureParserRuleCall_4_0() { return cFeaturesLinkedFeatureParserRuleCall_4_0; }
 
-		//(composite?="children:" children+=ConnectableElement+)?
+		//(composite?="children" layout=ContainerLayout? ":" children+=ConnectableElement+)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//composite?="children:"
+		//composite?="children"
 		public Assignment getCompositeAssignment_5_0() { return cCompositeAssignment_5_0; }
 
-		//"children:"
+		//"children"
 		public Keyword getCompositeChildrenKeyword_5_0_0() { return cCompositeChildrenKeyword_5_0_0; }
 
+		//layout=ContainerLayout?
+		public Assignment getLayoutAssignment_5_1() { return cLayoutAssignment_5_1; }
+
+		//ContainerLayout
+		public RuleCall getLayoutContainerLayoutEnumRuleCall_5_1_0() { return cLayoutContainerLayoutEnumRuleCall_5_1_0; }
+
+		//":"
+		public Keyword getColonKeyword_5_2() { return cColonKeyword_5_2; }
+
 		//children+=ConnectableElement+
-		public Assignment getChildrenAssignment_5_1() { return cChildrenAssignment_5_1; }
+		public Assignment getChildrenAssignment_5_3() { return cChildrenAssignment_5_3; }
 
 		//ConnectableElement
-		public RuleCall getChildrenConnectableElementParserRuleCall_5_1_0() { return cChildrenConnectableElementParserRuleCall_5_1_0; }
+		public RuleCall getChildrenConnectableElementParserRuleCall_5_3_0() { return cChildrenConnectableElementParserRuleCall_5_3_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
@@ -1353,17 +1365,20 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Assignment cCompositeAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
 		private final Keyword cCompositeChildrenKeyword_4_0_0 = (Keyword)cCompositeAssignment_4_0.eContents().get(0);
-		private final Assignment cChildrenAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cChildrenConnectableElementParserRuleCall_4_1_0 = (RuleCall)cChildrenAssignment_4_1.eContents().get(0);
+		private final Assignment cLayoutAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cLayoutContainerLayoutEnumRuleCall_4_1_0 = (RuleCall)cLayoutAssignment_4_1.eContents().get(0);
+		private final Keyword cColonKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
+		private final Assignment cChildrenAssignment_4_3 = (Assignment)cGroup_4.eContents().get(3);
+		private final RuleCall cChildrenConnectableElementParserRuleCall_4_3_0 = (RuleCall)cChildrenAssignment_4_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Rectangle:
 		//	(rectangle?="rectangle" | square?="square") (styled?="+" style=[Style])? "{" features+=RectangleFeature*
-		//	(composite?="children:" children+=ConnectableElement+)? "}";
+		//	(composite?="children" layout=ContainerLayout? ":" children+=ConnectableElement+)? "}";
 		public ParserRule getRule() { return rule; }
 
 		//(rectangle?="rectangle" | square?="square") (styled?="+" style=[Style])? "{" features+=RectangleFeature*
-		//(composite?="children:" children+=ConnectableElement+)? "}"
+		//(composite?="children" layout=ContainerLayout? ":" children+=ConnectableElement+)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//rectangle?="rectangle" | square?="square"
@@ -1408,20 +1423,29 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//RectangleFeature
 		public RuleCall getFeaturesRectangleFeatureParserRuleCall_3_0() { return cFeaturesRectangleFeatureParserRuleCall_3_0; }
 
-		//(composite?="children:" children+=ConnectableElement+)?
+		//(composite?="children" layout=ContainerLayout? ":" children+=ConnectableElement+)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//composite?="children:"
+		//composite?="children"
 		public Assignment getCompositeAssignment_4_0() { return cCompositeAssignment_4_0; }
 
-		//"children:"
+		//"children"
 		public Keyword getCompositeChildrenKeyword_4_0_0() { return cCompositeChildrenKeyword_4_0_0; }
 
+		//layout=ContainerLayout?
+		public Assignment getLayoutAssignment_4_1() { return cLayoutAssignment_4_1; }
+
+		//ContainerLayout
+		public RuleCall getLayoutContainerLayoutEnumRuleCall_4_1_0() { return cLayoutContainerLayoutEnumRuleCall_4_1_0; }
+
+		//":"
+		public Keyword getColonKeyword_4_2() { return cColonKeyword_4_2; }
+
 		//children+=ConnectableElement+
-		public Assignment getChildrenAssignment_4_1() { return cChildrenAssignment_4_1; }
+		public Assignment getChildrenAssignment_4_3() { return cChildrenAssignment_4_3; }
 
 		//ConnectableElement
-		public RuleCall getChildrenConnectableElementParserRuleCall_4_1_0() { return cChildrenConnectableElementParserRuleCall_4_1_0; }
+		public RuleCall getChildrenConnectableElementParserRuleCall_4_3_0() { return cChildrenConnectableElementParserRuleCall_4_3_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
@@ -1464,17 +1488,20 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Assignment cCompositeAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
 		private final Keyword cCompositeChildrenKeyword_5_0_0 = (Keyword)cCompositeAssignment_5_0.eContents().get(0);
-		private final Assignment cChildrenAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cChildrenConnectableElementParserRuleCall_5_1_0 = (RuleCall)cChildrenAssignment_5_1.eContents().get(0);
+		private final Assignment cLayoutAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cLayoutContainerLayoutEnumRuleCall_5_1_0 = (RuleCall)cLayoutAssignment_5_1.eContents().get(0);
+		private final Keyword cColonKeyword_5_2 = (Keyword)cGroup_5.eContents().get(2);
+		private final Assignment cChildrenAssignment_5_3 = (Assignment)cGroup_5.eContents().get(3);
+		private final RuleCall cChildrenConnectableElementParserRuleCall_5_3_0 = (RuleCall)cChildrenAssignment_5_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Rhombus:
-		//	{Rhombus} "rhombus" (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature* (composite?="children:"
-		//	children+=ConnectableElement+)? "}";
+		//	{Rhombus} "rhombus" (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature* (composite?="children"
+		//	layout=ContainerLayout? ":" children+=ConnectableElement+)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Rhombus} "rhombus" (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature* (composite?="children:"
-		//children+=ConnectableElement+)? "}"
+		//{Rhombus} "rhombus" (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature* (composite?="children"
+		//layout=ContainerLayout? ":" children+=ConnectableElement+)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{Rhombus}
@@ -1510,20 +1537,29 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ConnectableElementFeature
 		public RuleCall getFeaturesConnectableElementFeatureParserRuleCall_4_0() { return cFeaturesConnectableElementFeatureParserRuleCall_4_0; }
 
-		//(composite?="children:" children+=ConnectableElement+)?
+		//(composite?="children" layout=ContainerLayout? ":" children+=ConnectableElement+)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//composite?="children:"
+		//composite?="children"
 		public Assignment getCompositeAssignment_5_0() { return cCompositeAssignment_5_0; }
 
-		//"children:"
+		//"children"
 		public Keyword getCompositeChildrenKeyword_5_0_0() { return cCompositeChildrenKeyword_5_0_0; }
 
+		//layout=ContainerLayout?
+		public Assignment getLayoutAssignment_5_1() { return cLayoutAssignment_5_1; }
+
+		//ContainerLayout
+		public RuleCall getLayoutContainerLayoutEnumRuleCall_5_1_0() { return cLayoutContainerLayoutEnumRuleCall_5_1_0; }
+
+		//":"
+		public Keyword getColonKeyword_5_2() { return cColonKeyword_5_2; }
+
 		//children+=ConnectableElement+
-		public Assignment getChildrenAssignment_5_1() { return cChildrenAssignment_5_1; }
+		public Assignment getChildrenAssignment_5_3() { return cChildrenAssignment_5_3; }
 
 		//ConnectableElement
-		public RuleCall getChildrenConnectableElementParserRuleCall_5_1_0() { return cChildrenConnectableElementParserRuleCall_5_1_0; }
+		public RuleCall getChildrenConnectableElementParserRuleCall_5_3_0() { return cChildrenConnectableElementParserRuleCall_5_3_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
@@ -1549,17 +1585,20 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Assignment cCompositeAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
 		private final Keyword cCompositeChildrenKeyword_4_0_0 = (Keyword)cCompositeAssignment_4_0.eContents().get(0);
-		private final Assignment cChildrenAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cChildrenConnectableElementParserRuleCall_4_1_0 = (RuleCall)cChildrenAssignment_4_1.eContents().get(0);
+		private final Assignment cLayoutAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cLayoutContainerLayoutEnumRuleCall_4_1_0 = (RuleCall)cLayoutAssignment_4_1.eContents().get(0);
+		private final Keyword cColonKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
+		private final Assignment cChildrenAssignment_4_3 = (Assignment)cGroup_4.eContents().get(3);
+		private final RuleCall cChildrenConnectableElementParserRuleCall_4_3_0 = (RuleCall)cChildrenAssignment_4_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Ellipse:
 		//	(ellipse?="ellipse" | circle?="circle") (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature*
-		//	(composite?="children:" children+=ConnectableElement+)? "}";
+		//	(composite?="children" layout=ContainerLayout? ":" children+=ConnectableElement+)? "}";
 		public ParserRule getRule() { return rule; }
 
 		//(ellipse?="ellipse" | circle?="circle") (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature*
-		//(composite?="children:" children+=ConnectableElement+)? "}"
+		//(composite?="children" layout=ContainerLayout? ":" children+=ConnectableElement+)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//ellipse?="ellipse" | circle?="circle"
@@ -1604,20 +1643,29 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ConnectableElementFeature
 		public RuleCall getFeaturesConnectableElementFeatureParserRuleCall_3_0() { return cFeaturesConnectableElementFeatureParserRuleCall_3_0; }
 
-		//(composite?="children:" children+=ConnectableElement+)?
+		//(composite?="children" layout=ContainerLayout? ":" children+=ConnectableElement+)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//composite?="children:"
+		//composite?="children"
 		public Assignment getCompositeAssignment_4_0() { return cCompositeAssignment_4_0; }
 
-		//"children:"
+		//"children"
 		public Keyword getCompositeChildrenKeyword_4_0_0() { return cCompositeChildrenKeyword_4_0_0; }
 
+		//layout=ContainerLayout?
+		public Assignment getLayoutAssignment_4_1() { return cLayoutAssignment_4_1; }
+
+		//ContainerLayout
+		public RuleCall getLayoutContainerLayoutEnumRuleCall_4_1_0() { return cLayoutContainerLayoutEnumRuleCall_4_1_0; }
+
+		//":"
+		public Keyword getColonKeyword_4_2() { return cColonKeyword_4_2; }
+
 		//children+=ConnectableElement+
-		public Assignment getChildrenAssignment_4_1() { return cChildrenAssignment_4_1; }
+		public Assignment getChildrenAssignment_4_3() { return cChildrenAssignment_4_3; }
 
 		//ConnectableElement
-		public RuleCall getChildrenConnectableElementParserRuleCall_4_1_0() { return cChildrenConnectableElementParserRuleCall_4_1_0; }
+		public RuleCall getChildrenConnectableElementParserRuleCall_4_3_0() { return cChildrenConnectableElementParserRuleCall_4_3_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
@@ -1649,17 +1697,22 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Assignment cCompositeAssignment_7_0 = (Assignment)cGroup_7.eContents().get(0);
 		private final Keyword cCompositeChildrenKeyword_7_0_0 = (Keyword)cCompositeAssignment_7_0.eContents().get(0);
-		private final Assignment cChildrenAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cChildrenConnectableElementParserRuleCall_7_1_0 = (RuleCall)cChildrenAssignment_7_1.eContents().get(0);
+		private final Assignment cLayoutAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cLayoutContainerLayoutEnumRuleCall_7_1_0 = (RuleCall)cLayoutAssignment_7_1.eContents().get(0);
+		private final Keyword cColonKeyword_7_2 = (Keyword)cGroup_7.eContents().get(2);
+		private final Assignment cChildrenAssignment_7_3 = (Assignment)cGroup_7.eContents().get(3);
+		private final RuleCall cChildrenConnectableElementParserRuleCall_7_3_0 = (RuleCall)cChildrenAssignment_7_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//Polyline:
 		//	(polygon?="polygon" | polyline?="polyline") (styled?="+" style=[Style])? "{" features+=Point features+=Point
-		//	features+=Point* features+=ConnectableElementFeature* (composite?="children:" children+=ConnectableElement+)? "}";
+		//	features+=Point* features+=ConnectableElementFeature* (composite?="children" layout=ContainerLayout? ":"
+		//	children+=ConnectableElement+)? "}";
 		public ParserRule getRule() { return rule; }
 
 		//(polygon?="polygon" | polyline?="polyline") (styled?="+" style=[Style])? "{" features+=Point features+=Point
-		//features+=Point* features+=ConnectableElementFeature* (composite?="children:" children+=ConnectableElement+)? "}"
+		//features+=Point* features+=ConnectableElementFeature* (composite?="children" layout=ContainerLayout? ":"
+		//children+=ConnectableElement+)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//polygon?="polygon" | polyline?="polyline"
@@ -1722,20 +1775,29 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ConnectableElementFeature
 		public RuleCall getFeaturesConnectableElementFeatureParserRuleCall_6_0() { return cFeaturesConnectableElementFeatureParserRuleCall_6_0; }
 
-		//(composite?="children:" children+=ConnectableElement+)?
+		//(composite?="children" layout=ContainerLayout? ":" children+=ConnectableElement+)?
 		public Group getGroup_7() { return cGroup_7; }
 
-		//composite?="children:"
+		//composite?="children"
 		public Assignment getCompositeAssignment_7_0() { return cCompositeAssignment_7_0; }
 
-		//"children:"
+		//"children"
 		public Keyword getCompositeChildrenKeyword_7_0_0() { return cCompositeChildrenKeyword_7_0_0; }
 
+		//layout=ContainerLayout?
+		public Assignment getLayoutAssignment_7_1() { return cLayoutAssignment_7_1; }
+
+		//ContainerLayout
+		public RuleCall getLayoutContainerLayoutEnumRuleCall_7_1_0() { return cLayoutContainerLayoutEnumRuleCall_7_1_0; }
+
+		//":"
+		public Keyword getColonKeyword_7_2() { return cColonKeyword_7_2; }
+
 		//children+=ConnectableElement+
-		public Assignment getChildrenAssignment_7_1() { return cChildrenAssignment_7_1; }
+		public Assignment getChildrenAssignment_7_3() { return cChildrenAssignment_7_3; }
 
 		//ConnectableElement
-		public RuleCall getChildrenConnectableElementParserRuleCall_7_1_0() { return cChildrenConnectableElementParserRuleCall_7_1_0; }
+		public RuleCall getChildrenConnectableElementParserRuleCall_7_3_0() { return cChildrenConnectableElementParserRuleCall_7_3_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
@@ -1984,18 +2046,21 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
 		private final Assignment cCompositeAssignment_6_0 = (Assignment)cGroup_6.eContents().get(0);
 		private final Keyword cCompositeChildrenKeyword_6_0_0 = (Keyword)cCompositeAssignment_6_0.eContents().get(0);
-		private final Assignment cChildrenAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cChildrenConnectableElementParserRuleCall_6_1_0 = (RuleCall)cChildrenAssignment_6_1.eContents().get(0);
+		private final Assignment cLayoutAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cLayoutContainerLayoutEnumRuleCall_6_1_0 = (RuleCall)cLayoutAssignment_6_1.eContents().get(0);
+		private final Keyword cColonKeyword_6_2 = (Keyword)cGroup_6.eContents().get(2);
+		private final Assignment cChildrenAssignment_6_3 = (Assignment)cGroup_6.eContents().get(3);
+		private final RuleCall cChildrenConnectableElementParserRuleCall_6_3_0 = (RuleCall)cChildrenAssignment_6_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//// TODO: validation  at most one editable
 		//Label:
-		//	{Label} "label" editable?="editable"? (styled?="+" style=[Style])? "{" features+=LabelFeature* (composite?="children:"
-		//	children+=ConnectableElement+)? "}";
+		//	{Label} "label" editable?="editable"? (styled?="+" style=[Style])? "{" features+=LabelFeature* (composite?="children"
+		//	layout=ContainerLayout? ":" children+=ConnectableElement+)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Label} "label" editable?="editable"? (styled?="+" style=[Style])? "{" features+=LabelFeature* (composite?="children:"
-		//children+=ConnectableElement+)? "}"
+		//{Label} "label" editable?="editable"? (styled?="+" style=[Style])? "{" features+=LabelFeature* (composite?="children"
+		//layout=ContainerLayout? ":" children+=ConnectableElement+)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{Label}
@@ -2037,20 +2102,29 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//LabelFeature
 		public RuleCall getFeaturesLabelFeatureParserRuleCall_5_0() { return cFeaturesLabelFeatureParserRuleCall_5_0; }
 
-		//(composite?="children:" children+=ConnectableElement+)?
+		//(composite?="children" layout=ContainerLayout? ":" children+=ConnectableElement+)?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//composite?="children:"
+		//composite?="children"
 		public Assignment getCompositeAssignment_6_0() { return cCompositeAssignment_6_0; }
 
-		//"children:"
+		//"children"
 		public Keyword getCompositeChildrenKeyword_6_0_0() { return cCompositeChildrenKeyword_6_0_0; }
 
+		//layout=ContainerLayout?
+		public Assignment getLayoutAssignment_6_1() { return cLayoutAssignment_6_1; }
+
+		//ContainerLayout
+		public RuleCall getLayoutContainerLayoutEnumRuleCall_6_1_0() { return cLayoutContainerLayoutEnumRuleCall_6_1_0; }
+
+		//":"
+		public Keyword getColonKeyword_6_2() { return cColonKeyword_6_2; }
+
 		//children+=ConnectableElement+
-		public Assignment getChildrenAssignment_6_1() { return cChildrenAssignment_6_1; }
+		public Assignment getChildrenAssignment_6_3() { return cChildrenAssignment_6_3; }
 
 		//ConnectableElement
-		public RuleCall getChildrenConnectableElementParserRuleCall_6_1_0() { return cChildrenConnectableElementParserRuleCall_6_1_0; }
+		public RuleCall getChildrenConnectableElementParserRuleCall_6_3_0() { return cChildrenConnectableElementParserRuleCall_6_3_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
@@ -2118,17 +2192,20 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Assignment cCompositeAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
 		private final Keyword cCompositeChildrenKeyword_5_0_0 = (Keyword)cCompositeAssignment_5_0.eContents().get(0);
-		private final Assignment cChildrenAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cChildrenConnectableElementParserRuleCall_5_1_0 = (RuleCall)cChildrenAssignment_5_1.eContents().get(0);
+		private final Assignment cLayoutAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cLayoutContainerLayoutEnumRuleCall_5_1_0 = (RuleCall)cLayoutAssignment_5_1.eContents().get(0);
+		private final Keyword cColonKeyword_5_2 = (Keyword)cGroup_5.eContents().get(2);
+		private final Assignment cChildrenAssignment_5_3 = (Assignment)cGroup_5.eContents().get(3);
+		private final RuleCall cChildrenConnectableElementParserRuleCall_5_3_0 = (RuleCall)cChildrenAssignment_5_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Image:
-		//	"image" imageId=ID (styled?="+" style=[Style])? "{" features+=ImageFeature* (composite?="children:"
-		//	children+=ConnectableElement+)? "}";
+		//	"image" imageId=ID (styled?="+" style=[Style])? "{" features+=ImageFeature* (composite?="children"
+		//	layout=ContainerLayout? ":" children+=ConnectableElement+)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//"image" imageId=ID (styled?="+" style=[Style])? "{" features+=ImageFeature* (composite?="children:"
-		//children+=ConnectableElement+)? "}"
+		//"image" imageId=ID (styled?="+" style=[Style])? "{" features+=ImageFeature* (composite?="children"
+		//layout=ContainerLayout? ":" children+=ConnectableElement+)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//"image"
@@ -2167,20 +2244,29 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ImageFeature
 		public RuleCall getFeaturesImageFeatureParserRuleCall_4_0() { return cFeaturesImageFeatureParserRuleCall_4_0; }
 
-		//(composite?="children:" children+=ConnectableElement+)?
+		//(composite?="children" layout=ContainerLayout? ":" children+=ConnectableElement+)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//composite?="children:"
+		//composite?="children"
 		public Assignment getCompositeAssignment_5_0() { return cCompositeAssignment_5_0; }
 
-		//"children:"
+		//"children"
 		public Keyword getCompositeChildrenKeyword_5_0_0() { return cCompositeChildrenKeyword_5_0_0; }
 
+		//layout=ContainerLayout?
+		public Assignment getLayoutAssignment_5_1() { return cLayoutAssignment_5_1; }
+
+		//ContainerLayout
+		public RuleCall getLayoutContainerLayoutEnumRuleCall_5_1_0() { return cLayoutContainerLayoutEnumRuleCall_5_1_0; }
+
+		//":"
+		public Keyword getColonKeyword_5_2() { return cColonKeyword_5_2; }
+
 		//children+=ConnectableElement+
-		public Assignment getChildrenAssignment_5_1() { return cChildrenAssignment_5_1; }
+		public Assignment getChildrenAssignment_5_3() { return cChildrenAssignment_5_3; }
 
 		//ConnectableElement
-		public RuleCall getChildrenConnectableElementParserRuleCall_5_1_0() { return cChildrenConnectableElementParserRuleCall_5_1_0; }
+		public RuleCall getChildrenConnectableElementParserRuleCall_5_3_0() { return cChildrenConnectableElementParserRuleCall_5_3_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
@@ -2227,17 +2313,20 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Assignment cCompositeAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
 		private final Keyword cCompositeChildrenKeyword_5_0_0 = (Keyword)cCompositeAssignment_5_0.eContents().get(0);
-		private final Assignment cChildrenAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cChildrenConnectableElementParserRuleCall_5_1_0 = (RuleCall)cChildrenAssignment_5_1.eContents().get(0);
+		private final Assignment cLayoutAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cLayoutContainerLayoutEnumRuleCall_5_1_0 = (RuleCall)cLayoutAssignment_5_1.eContents().get(0);
+		private final Keyword cColonKeyword_5_2 = (Keyword)cGroup_5.eContents().get(2);
+		private final Assignment cChildrenAssignment_5_3 = (Assignment)cGroup_5.eContents().get(3);
+		private final RuleCall cChildrenConnectableElementParserRuleCall_5_3_0 = (RuleCall)cChildrenAssignment_5_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Invisible:
-		//	{Invisible} "invisible" (styled?="+" style=[Style])? "{" features+=InvisibleFeature* (composite?="children:"
-		//	children+=ConnectableElement+)? "}";
+		//	{Invisible} "invisible" (styled?="+" style=[Style])? "{" features+=InvisibleFeature* (composite?="children"
+		//	layout=ContainerLayout? ":" children+=ConnectableElement+)? "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Invisible} "invisible" (styled?="+" style=[Style])? "{" features+=InvisibleFeature* (composite?="children:"
-		//children+=ConnectableElement+)? "}"
+		//{Invisible} "invisible" (styled?="+" style=[Style])? "{" features+=InvisibleFeature* (composite?="children"
+		//layout=ContainerLayout? ":" children+=ConnectableElement+)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{Invisible}
@@ -2273,20 +2362,29 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//InvisibleFeature
 		public RuleCall getFeaturesInvisibleFeatureParserRuleCall_4_0() { return cFeaturesInvisibleFeatureParserRuleCall_4_0; }
 
-		//(composite?="children:" children+=ConnectableElement+)?
+		//(composite?="children" layout=ContainerLayout? ":" children+=ConnectableElement+)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//composite?="children:"
+		//composite?="children"
 		public Assignment getCompositeAssignment_5_0() { return cCompositeAssignment_5_0; }
 
-		//"children:"
+		//"children"
 		public Keyword getCompositeChildrenKeyword_5_0_0() { return cCompositeChildrenKeyword_5_0_0; }
 
+		//layout=ContainerLayout?
+		public Assignment getLayoutAssignment_5_1() { return cLayoutAssignment_5_1; }
+
+		//ContainerLayout
+		public RuleCall getLayoutContainerLayoutEnumRuleCall_5_1_0() { return cLayoutContainerLayoutEnumRuleCall_5_1_0; }
+
+		//":"
+		public Keyword getColonKeyword_5_2() { return cColonKeyword_5_2; }
+
 		//children+=ConnectableElement+
-		public Assignment getChildrenAssignment_5_1() { return cChildrenAssignment_5_1; }
+		public Assignment getChildrenAssignment_5_3() { return cChildrenAssignment_5_3; }
 
 		//ConnectableElement
-		public RuleCall getChildrenConnectableElementParserRuleCall_5_1_0() { return cChildrenConnectableElementParserRuleCall_5_1_0; }
+		public RuleCall getChildrenConnectableElementParserRuleCall_5_3_0() { return cChildrenConnectableElementParserRuleCall_5_3_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
@@ -3737,8 +3835,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Custom:
-	//	"figure" figure=[CustomFigure] (styled?="+" style=[Style])? "{" features+=LinkedFeature* (composite?="children:"
-	//	children+=ConnectableElement+)? "}";
+	//	"figure" figure=[CustomFigure] (styled?="+" style=[Style])? "{" features+=LinkedFeature* (composite?="children"
+	//	layout=ContainerLayout? ":" children+=ConnectableElement+)? "}";
 	public CustomElements getCustomAccess() {
 		return (pCustom != null) ? pCustom : (pCustom = new CustomElements());
 	}
@@ -3749,7 +3847,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Rectangle:
 	//	(rectangle?="rectangle" | square?="square") (styled?="+" style=[Style])? "{" features+=RectangleFeature*
-	//	(composite?="children:" children+=ConnectableElement+)? "}";
+	//	(composite?="children" layout=ContainerLayout? ":" children+=ConnectableElement+)? "}";
 	public RectangleElements getRectangleAccess() {
 		return (pRectangle != null) ? pRectangle : (pRectangle = new RectangleElements());
 	}
@@ -3769,8 +3867,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Rhombus:
-	//	{Rhombus} "rhombus" (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature* (composite?="children:"
-	//	children+=ConnectableElement+)? "}";
+	//	{Rhombus} "rhombus" (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature* (composite?="children"
+	//	layout=ContainerLayout? ":" children+=ConnectableElement+)? "}";
 	public RhombusElements getRhombusAccess() {
 		return (pRhombus != null) ? pRhombus : (pRhombus = new RhombusElements());
 	}
@@ -3781,7 +3879,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Ellipse:
 	//	(ellipse?="ellipse" | circle?="circle") (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature*
-	//	(composite?="children:" children+=ConnectableElement+)? "}";
+	//	(composite?="children" layout=ContainerLayout? ":" children+=ConnectableElement+)? "}";
 	public EllipseElements getEllipseAccess() {
 		return (pEllipse != null) ? pEllipse : (pEllipse = new EllipseElements());
 	}
@@ -3792,7 +3890,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Polyline:
 	//	(polygon?="polygon" | polyline?="polyline") (styled?="+" style=[Style])? "{" features+=Point features+=Point
-	//	features+=Point* features+=ConnectableElementFeature* (composite?="children:" children+=ConnectableElement+)? "}";
+	//	features+=Point* features+=ConnectableElementFeature* (composite?="children" layout=ContainerLayout? ":"
+	//	children+=ConnectableElement+)? "}";
 	public PolylineElements getPolylineAccess() {
 		return (pPolyline != null) ? pPolyline : (pPolyline = new PolylineElements());
 	}
@@ -3918,8 +4017,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// TODO: validation  at most one editable
 	//Label:
-	//	{Label} "label" editable?="editable"? (styled?="+" style=[Style])? "{" features+=LabelFeature* (composite?="children:"
-	//	children+=ConnectableElement+)? "}";
+	//	{Label} "label" editable?="editable"? (styled?="+" style=[Style])? "{" features+=LabelFeature* (composite?="children"
+	//	layout=ContainerLayout? ":" children+=ConnectableElement+)? "}";
 	public LabelElements getLabelAccess() {
 		return (pLabel != null) ? pLabel : (pLabel = new LabelElements());
 	}
@@ -3939,8 +4038,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Image:
-	//	"image" imageId=ID (styled?="+" style=[Style])? "{" features+=ImageFeature* (composite?="children:"
-	//	children+=ConnectableElement+)? "}";
+	//	"image" imageId=ID (styled?="+" style=[Style])? "{" features+=ImageFeature* (composite?="children"
+	//	layout=ContainerLayout? ":" children+=ConnectableElement+)? "}";
 	public ImageElements getImageAccess() {
 		return (pImage != null) ? pImage : (pImage = new ImageElements());
 	}
@@ -3960,8 +4059,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Invisible:
-	//	{Invisible} "invisible" (styled?="+" style=[Style])? "{" features+=InvisibleFeature* (composite?="children:"
-	//	children+=ConnectableElement+)? "}";
+	//	{Invisible} "invisible" (styled?="+" style=[Style])? "{" features+=InvisibleFeature* (composite?="children"
+	//	layout=ContainerLayout? ":" children+=ConnectableElement+)? "}";
 	public InvisibleElements getInvisibleAccess() {
 		return (pInvisible != null) ? pInvisible : (pInvisible = new InvisibleElements());
 	}

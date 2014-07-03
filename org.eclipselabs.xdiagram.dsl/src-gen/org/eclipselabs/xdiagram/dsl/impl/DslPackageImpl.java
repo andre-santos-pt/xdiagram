@@ -1041,9 +1041,19 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getConnectableElement_Layout()
+  {
+    return (EAttribute)connectableElementEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getConnectableElement_Children()
   {
-    return (EReference)connectableElementEClass.getEStructuralFeatures().get(1);
+    return (EReference)connectableElementEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2000,6 +2010,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
 
     connectableElementEClass = createEClass(CONNECTABLE_ELEMENT);
     createEAttribute(connectableElementEClass, CONNECTABLE_ELEMENT__COMPOSITE);
+    createEAttribute(connectableElementEClass, CONNECTABLE_ELEMENT__LAYOUT);
     createEReference(connectableElementEClass, CONNECTABLE_ELEMENT__CHILDREN);
 
     anchorEClass = createEClass(ANCHOR);
@@ -2249,6 +2260,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
 
     initEClass(connectableElementEClass, ConnectableElement.class, "ConnectableElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getConnectableElement_Composite(), ecorePackage.getEBoolean(), "composite", null, 0, 1, ConnectableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getConnectableElement_Layout(), this.getContainerLayout(), "layout", null, 0, 1, ConnectableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getConnectableElement_Children(), this.getConnectableElement(), null, "children", null, 0, -1, ConnectableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(anchorEClass, Anchor.class, "Anchor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

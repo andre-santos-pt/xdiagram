@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipselabs.xdiagram.dsl.ConnectableElement;
+import org.eclipselabs.xdiagram.dsl.ContainerLayout;
 import org.eclipselabs.xdiagram.dsl.DslPackage;
 
 /**
@@ -28,6 +29,7 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ConnectableElementImpl#isComposite <em>Composite</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ConnectableElementImpl#getLayout <em>Layout</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ConnectableElementImpl#getChildren <em>Children</em>}</li>
  * </ul>
  * </p>
@@ -55,6 +57,26 @@ public class ConnectableElementImpl extends FeatureContainerImpl implements Conn
    * @ordered
    */
   protected boolean composite = COMPOSITE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getLayout() <em>Layout</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLayout()
+   * @generated
+   * @ordered
+   */
+  protected static final ContainerLayout LAYOUT_EDEFAULT = ContainerLayout.FREE;
+
+  /**
+   * The cached value of the '{@link #getLayout() <em>Layout</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLayout()
+   * @generated
+   * @ordered
+   */
+  protected ContainerLayout layout = LAYOUT_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getChildren() <em>Children</em>}' containment reference list.
@@ -115,6 +137,29 @@ public class ConnectableElementImpl extends FeatureContainerImpl implements Conn
    * <!-- end-user-doc -->
    * @generated
    */
+  public ContainerLayout getLayout()
+  {
+    return layout;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLayout(ContainerLayout newLayout)
+  {
+    ContainerLayout oldLayout = layout;
+    layout = newLayout == null ? LAYOUT_EDEFAULT : newLayout;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.CONNECTABLE_ELEMENT__LAYOUT, oldLayout, layout));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<ConnectableElement> getChildren()
   {
     if (children == null)
@@ -152,6 +197,8 @@ public class ConnectableElementImpl extends FeatureContainerImpl implements Conn
     {
       case DslPackage.CONNECTABLE_ELEMENT__COMPOSITE:
         return isComposite();
+      case DslPackage.CONNECTABLE_ELEMENT__LAYOUT:
+        return getLayout();
       case DslPackage.CONNECTABLE_ELEMENT__CHILDREN:
         return getChildren();
     }
@@ -171,6 +218,9 @@ public class ConnectableElementImpl extends FeatureContainerImpl implements Conn
     {
       case DslPackage.CONNECTABLE_ELEMENT__COMPOSITE:
         setComposite((Boolean)newValue);
+        return;
+      case DslPackage.CONNECTABLE_ELEMENT__LAYOUT:
+        setLayout((ContainerLayout)newValue);
         return;
       case DslPackage.CONNECTABLE_ELEMENT__CHILDREN:
         getChildren().clear();
@@ -193,6 +243,9 @@ public class ConnectableElementImpl extends FeatureContainerImpl implements Conn
       case DslPackage.CONNECTABLE_ELEMENT__COMPOSITE:
         setComposite(COMPOSITE_EDEFAULT);
         return;
+      case DslPackage.CONNECTABLE_ELEMENT__LAYOUT:
+        setLayout(LAYOUT_EDEFAULT);
+        return;
       case DslPackage.CONNECTABLE_ELEMENT__CHILDREN:
         getChildren().clear();
         return;
@@ -212,6 +265,8 @@ public class ConnectableElementImpl extends FeatureContainerImpl implements Conn
     {
       case DslPackage.CONNECTABLE_ELEMENT__COMPOSITE:
         return composite != COMPOSITE_EDEFAULT;
+      case DslPackage.CONNECTABLE_ELEMENT__LAYOUT:
+        return layout != LAYOUT_EDEFAULT;
       case DslPackage.CONNECTABLE_ELEMENT__CHILDREN:
         return children != null && !children.isEmpty();
     }
@@ -231,6 +286,8 @@ public class ConnectableElementImpl extends FeatureContainerImpl implements Conn
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (composite: ");
     result.append(composite);
+    result.append(", layout: ");
+    result.append(layout);
     result.append(')');
     return result.toString();
   }

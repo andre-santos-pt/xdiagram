@@ -247,17 +247,19 @@ CustomFigure:
 
 
 
+
+
 Custom:
 	'figure' figure=[CustomFigure] (styled?='+' style=[Style])? '{'
 		features+=LinkedFeature*
-		(composite?='children:' children+=ConnectableElement+)?
+		(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
 	'}'
 ;
 
 Rectangle:
 	(rectangle?='rectangle' | square?='square') (styled?='+' style=[Style])? '{'
 		features+=RectangleFeature*
-		(composite?='children:' children+=ConnectableElement+)?
+		(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
 	'}'
 ;
 
@@ -269,14 +271,14 @@ Rhombus:
 	{Rhombus}
 	'rhombus' (styled?='+' style=[Style])? '{'
 		features+=ConnectableElementFeature*
-		(composite?='children:' children+=ConnectableElement+)?
+		(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
 	'}'
 ;
 
 Ellipse:
 	(ellipse?='ellipse' | circle?='circle') (styled?='+' style=[Style])? '{'
 		features+=ConnectableElementFeature*
-		(composite?='children:' children+=ConnectableElement+)?
+		(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
 	'}'
 ;
 
@@ -287,7 +289,7 @@ Polyline:
 		features+=Point
 		features+=Point*
 		features+=ConnectableElementFeature*
-		(composite?='children:' children+=ConnectableElement+)?
+		(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
 	'}'
 ;
 
@@ -301,7 +303,7 @@ Polyline:
 
 
 
-
+// TODO validation: contains of conflict types
 Contains:
 'contains' modelReference=[ecore::EReference|QualifiedName] 
 (conditional=FeatureConditional)? (layout=ContainerLayout)?
@@ -368,7 +370,7 @@ Label:
 	{Label}
 	'label' (editable?='editable')? (styled?='+' style=[Style])? '{'
 	features+=LabelFeature*
-	(composite?='children:' children+=ConnectableElement+)?
+	(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
 	'}'
 ;
 
@@ -381,7 +383,7 @@ LabelFeature returns Feature:
 Image:
 	'image' imageId=ID (styled?='+' style=[Style])? '{'
 	features+=ImageFeature*
-	(composite?='children:' children+=ConnectableElement+)?
+	(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
 	'}'
 ;
 
@@ -394,7 +396,7 @@ Invisible:
 	{Invisible}
 	'invisible' (styled?='+' style=[Style])? '{'
 	features+=InvisibleFeature*
-	(composite?='children:' children+=ConnectableElement+)?
+	(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
 	'}'
 ;
 
@@ -449,6 +451,7 @@ Point:
 	';'
 ;
 
+// TODO validation: no Position when vstack hstack
 Position:
 	'position' x=INT ',' y=INT
 	(conditional=FeatureConditional)?
