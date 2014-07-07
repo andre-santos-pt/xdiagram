@@ -10,26 +10,31 @@ color grey 220, 220, 220
 
 node Class "class" :
 rectangle {
-	//background white;
-	//size 200 x 25;
+	line-width 1;
+	size 50 x 60;
+	line-type dashed if Class.abstract = true;
+	line-type solid if Class.abstract = false;
+	children free:
 	
-	children vstack:
+//	label {
+//		text "<<abstract>>";
+//		size 100 x 20;
+//		position 50 %, 0;
+//	}
+	
 	label editable {
 		text Class.name;
-		size 90 x 25;
+		size 50 x 20;
+		position 50 %, 0;
 	}
-	
-	rectangle {
-		contains Class.properties hstack;
-		foreground black;	
-		background white;
-	}
-	
 	rectangle {
 		contains Class.properties vstack;
-		foreground black;
-		background red;
+//		foreground black;
+//		background white;
+		line-width 1;
+		position 5, 30;
 	}
+	
 }
 
 
@@ -41,10 +46,31 @@ label {
 	//position 10, 10;
 }
 
+
 link Class.superclass :
 connection free {
-
+foreground black;
+	 line-type dashed;
+	 decorator 100% triangle {
+	 	foreground black;
+	 	background white;
+	 	size 20 x 25;
+	 }	 
 }
+
+link object Composite source Class.composites target Composite.end:
+connection manhattan {
+	decorator 0% rhombus {
+		size 15 x 15;
+		background black if Composite.aggregation = false;
+		background white if Composite.aggregation = true;
+	}
+	decorator 95% label {
+		text "1..*";
+	}
+	
+}
+
 
 
 

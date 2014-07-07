@@ -90,7 +90,7 @@ public interface Class extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Properties</em>' containment reference list.
 	 * @see conceptualmodel.ConceptualmodelPackage#getClass_Properties()
-	 * @model containment="true"
+	 * @model containment="true" upper="3"
 	 * @generated
 	 */
 	EList<Attribute> getProperties();

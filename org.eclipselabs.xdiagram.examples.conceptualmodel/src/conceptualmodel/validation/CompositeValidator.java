@@ -15,4 +15,8 @@ public interface CompositeValidator {
 	boolean validate();
 
 	boolean validateEnd(conceptualmodel.Class value);
+
+	boolean validateAggregation(boolean value);
+
+	boolean validateName(String value);
 }
