@@ -24,6 +24,7 @@ import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.services.Graphiti;
+import org.eclipse.graphiti.util.ILocationInfo;
 
 
 public class CreateNodeFeature extends AbstractAddShapeFeature {
@@ -56,12 +57,6 @@ public class CreateNodeFeature extends AbstractAddShapeFeature {
 		
 		ContainerShape container = context.getTargetContainer();
 
-//		ILocationInfo loc = Graphiti.getPeLayoutService().getLocationInfo(container, context.getX(), context.getY());
-//		Shape child = loc.getShape();
-//		if(child instanceof ContainerShape)
-//			container = (ContainerShape) child;
-		
-		
 		final ContainerShape containerShape =  Graphiti.getPeCreateService().createContainerShape(container, true);
 
 		GraphicsAlgorithm fig = provider.getGraphicsProvider().createNodeFigure(getDiagram(), context, containerShape, eObject);
@@ -74,6 +69,8 @@ public class CreateNodeFeature extends AbstractAddShapeFeature {
 		directEditingInfo.setPictogramElement(containerShape);
 
 		layoutPictogramElement(containerShape);
+		
+		
 		return containerShape;
 	}
 }

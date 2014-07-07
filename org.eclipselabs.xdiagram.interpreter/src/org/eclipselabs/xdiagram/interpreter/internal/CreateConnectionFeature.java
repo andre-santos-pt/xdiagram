@@ -37,7 +37,7 @@ public class CreateConnectionFeature extends AbstractAddFeature {
 		IAddConnectionContext addConContext = (IAddConnectionContext) context;
 		EObject eObject = (EObject) context.getNewObject();
 
-		Connection connection = provider.getGraphicsProvider().getConnectionFigure(getDiagram(), 
+		Connection connection = provider.getGraphicsProvider().createConnectionFigure(getDiagram(), 
 				addConContext.getSourceAnchor(), 
 				addConContext.getTargetAnchor(), 
 				eObject);

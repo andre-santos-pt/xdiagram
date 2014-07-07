@@ -4,6 +4,7 @@ import static org.eclipselabs.xdiagram.interpreter.ExtensionPointIds.BINDINGS_EP
 import static org.eclipselabs.xdiagram.interpreter.ExtensionPointIds.XDIAGRAM_PROVIDERS_EXT;
 import static org.eclipselabs.xdiagram.interpreter.ExtensionPointIds.XDIAGRAM_PROVIDERS_PROVIDER;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,16 +20,37 @@ import org.osgi.framework.BundleContext;
 public class Activator implements BundleActivator {
 	
 	static class LanguageDescription {
-		final GraphicsProvider provider;
-		final String ecoreURI;
-		final Map<String, String> properties;
-		final Bundle bundle;
+		private final IConfigurationElement providerConf;
+		private final String ecoreURI;
+		private final Map<String, String> properties;
+		private final Bundle bundle;
 		
-		LanguageDescription(GraphicsProvider provider, String ecoreURI, Map<String, String> properties, Bundle bundle) {
-			this.provider = provider;
+		LanguageDescription(IConfigurationElement providerConf, String ecoreURI, Map<String, String> properties, Bundle bundle) {
+			this.providerConf = providerConf;
 			this.ecoreURI = ecoreURI;
 			this.properties = properties;
 			this.bundle = bundle;
+		}
+		
+		String getEcoreURI () {
+			return ecoreURI;
+		}
+		
+		Map<String, String> getProperties() {
+			return Collections.unmodifiableMap(properties);
+		}
+		
+		Bundle getBundle() {
+			return bundle;
+		}
+		
+		GraphicsProvider createProvider() {
+			try {
+				return (GraphicsProvider) providerConf.createExecutableExtension(XDIAGRAM_PROVIDERS_PROVIDER);
+			} catch (CoreException e) {
+				e.printStackTrace();
+				return null;
+			}	
 		}
 	}
 	
@@ -53,18 +75,18 @@ public class Activator implements BundleActivator {
 		for(IConfigurationElement reg : Platform.getExtensionRegistry().getConfigurationElementsFor(XDIAGRAM_PROVIDERS_EXT)) {
 			Bundle bundle = Platform.getBundle(reg.getContributor().getName());
 			String uri = reg.getAttribute(BINDINGS_EPACKAGE_URI);
-			GraphicsProvider provider = null;
-			try {
-				provider = (GraphicsProvider) reg.createExecutableExtension(XDIAGRAM_PROVIDERS_PROVIDER);
-			} catch (CoreException e) {
-				e.printStackTrace();
-			}	
+//			GraphicsProvider provider = null;
+//			try {
+//				provider = (GraphicsProvider) reg.createExecutableExtension(XDIAGRAM_PROVIDERS_PROVIDER);
+//			} catch (CoreException e) {
+//				e.printStackTrace();
+//			}	
 			Map<String, String> properties = new HashMap<String, String>();
 			IConfigurationElement[] props = reg.getChildren("property");
 			for(IConfigurationElement p : props) {
 				properties.put(p.getAttribute("id"), p.getAttribute("value"));
 			}
-			LanguageDescription desc = new LanguageDescription(provider, uri, properties, bundle);
+			LanguageDescription desc = new LanguageDescription(reg, uri, properties, bundle);
 			
 			providers.put(reg.getAttribute(ExtensionPointIds.BINDINGS_DIAGRAM_TYPE), desc);
 		}			
@@ -78,7 +100,7 @@ public class Activator implements BundleActivator {
 		return providers.containsKey(diagramType);
 	}
 	
-	public LanguageDescription getLanguageProvider(String diagramType) {
+	public LanguageDescription getLanguageDescription(String diagramType) {
 		return providers.get(diagramType);
 	}
 

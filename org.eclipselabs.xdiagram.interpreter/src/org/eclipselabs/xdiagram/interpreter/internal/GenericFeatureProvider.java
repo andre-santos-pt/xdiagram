@@ -54,15 +54,15 @@ public class GenericFeatureProvider extends DefaultFeatureProvider {
 	public void init() {
 		String diagramType = getDiagramTypeProvider().getDiagram().getDiagramTypeId();
 
-		LanguageDescription desc = Activator.getInstance().getLanguageProvider(diagramType);
-		graphicsProvider = desc.provider;
+		LanguageDescription desc = Activator.getInstance().getLanguageDescription(diagramType);
+		graphicsProvider = desc.createProvider();
 
-		ePackage = EPackage.Registry.INSTANCE.getEPackage(desc.ecoreURI);
+		ePackage = EPackage.Registry.INSTANCE.getEPackage(desc.getEcoreURI());
 		if(ePackage == null)
 			System.err.println("Could not bind an EPackage for diagram type '" + diagramType + "'");
 
 		try {
-			graphicsProvider.setup(desc.bundle, desc.properties, ePackage);
+			graphicsProvider.setup(desc.getBundle(), desc.getProperties(), ePackage);
 		} catch (ProviderException e) {
 			System.err.println("Problem in graphics provider '" + graphicsProvider.getClass().getName() + "' :" + e.getMessage());
 		}

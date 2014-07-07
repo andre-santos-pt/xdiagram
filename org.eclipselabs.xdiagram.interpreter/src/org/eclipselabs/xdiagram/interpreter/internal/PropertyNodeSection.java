@@ -54,11 +54,9 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 
 	private TabbedPropertySheetWidgetFactory factory;
 	private Composite composite;
-	//	private Text nameText;
 	private List<Control> attValues;
 	private List<Label> attLabels;
 
-	//	private GraphicsProvider graphicsProvider;
 
 	@Override
 	public void createControls(Composite parent, TabbedPropertySheetPage tabbedPropertySheetPage) {
@@ -67,32 +65,19 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 		factory = getWidgetFactory();
 		composite = factory.createPlainComposite(parent, SWT.NONE);
 		composite.setLayout(new GridLayout(2, false));
+		
+		attLabels = new ArrayList<Label>();
+		attValues = new ArrayList<Control>();
 	}
 
 	@Override
 	public void refresh() {
 		PictogramElement pe = getSelectedPictogramElement();
-		if (pe != null) {
+		if (pe != null && pe.getLink() != null) {
 			EObject eObject = (EObject) Graphiti.getLinkService().getBusinessObjectForLinkedPictogramElement(pe);
 
-			if (eObject == null)
-				return;
-
 			EClass eClass = eObject.eClass();
-			if(attLabels == null) {
-				attLabels = new ArrayList<Label>();
-				attValues = new ArrayList<Control>();
-			}
-			else {
-				for(Label label : attLabels)
-					label.dispose();
-
-				for(Control control : attValues)
-					control.dispose();
-
-				attLabels.clear();
-				attValues.clear();
-			}
+			clear();
 
 			String name = eObject.toString();
 
@@ -111,11 +96,28 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 				attLabels.add(l);
 				createControl(eObject, att);
 			}
-
-			composite.redraw();
-			composite.layout();
-			composite.getParent().layout();
 		}
+		else {
+			clear();
+		}
+		composite.redraw();
+		composite.layout();
+		composite.update();
+		
+		composite.getParent().redraw();
+		composite.getParent().layout();
+		composite.getParent().update();
+	}
+
+	private void clear() {
+		for(Label label : attLabels)
+			label.dispose();
+
+		for(Control control : attValues)
+			control.dispose();
+
+		attLabels.clear();
+		attValues.clear();
 	}
 
 	private void createControl(final EObject eObject, final EAttribute att) {

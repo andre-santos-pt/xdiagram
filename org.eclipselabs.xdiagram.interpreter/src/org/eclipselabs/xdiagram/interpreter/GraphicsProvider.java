@@ -115,7 +115,7 @@ public interface GraphicsProvider {
 	 * @param eObject
 	 * @return
 	 */
-	Connection getConnectionFigure(Diagram diagram, Anchor source, Anchor target, EObject eObject);
+	Connection createConnectionFigure(Diagram diagram, Anchor source, Anchor target, EObject eObject);
 	
 //	void updateLinkFigure(Diagram diagram, Connection connection);
 
