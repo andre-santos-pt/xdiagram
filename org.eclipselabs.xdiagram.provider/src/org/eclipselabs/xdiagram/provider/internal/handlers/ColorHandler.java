@@ -67,8 +67,14 @@ public class ColorHandler implements FeatureHandler {
 	}
 
 	@Override
-	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram, GraphicsAlgorithmContainer container) {
+	public void applyDefaults(FeatureContainer element, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
 		figure.setBackground(Graphiti.getGaService().manageColor(diagram, map.get(DefaultColor.WHITE)));
 		figure.setForeground(Graphiti.getGaService().manageColor(diagram, map.get(DefaultColor.BLACK)));
+	}
+
+
+	@Override
+	public boolean accept(FeatureContainer element) {
+		return true;
 	}
 }

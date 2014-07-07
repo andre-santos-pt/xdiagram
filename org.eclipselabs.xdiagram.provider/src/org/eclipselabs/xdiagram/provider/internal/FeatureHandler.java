@@ -20,7 +20,7 @@ public interface FeatureHandler {
 	 * Accepts the element?
 	 * @param element
 	 */
-//	boolean accept(FeatureContainer element);
+	boolean accept(FeatureContainer element);
 		
 	/**
 	 * 
@@ -37,11 +37,12 @@ public interface FeatureHandler {
 	/**
 	 * Apply default values for the feature
 	 * @param element
-	 * @param figure
+	 * @param eObject TODO
 	 * @param diagram
 	 * @param container TODO
+	 * @param figure
 	 */
-	void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram, GraphicsAlgorithmContainer container);
+	void applyDefaults(FeatureContainer element, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure);
 
 	
 //	boolean acceptDefaults(FeatureContainer element, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container);

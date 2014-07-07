@@ -43,14 +43,12 @@ public class FeatureHandlerChain  {
 		return this;
 	}
 
-	public void update(FeatureContainer element, EObject eObject, Diagram diagram, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
-		update(element, eObject, diagram, figure, container, new HashSet<FeatureHandler>());
-	}
+	
 
-	private void update(FeatureContainer element, EObject eObject, Diagram diagram, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container, Set<FeatureHandler> defined) {
+	public void update(FeatureContainer element, EObject eObject, Diagram diagram, GraphicsAlgorithm figure, GraphicsAlgorithmContainer container) {
 
 		if(element instanceof Custom)
-			update(((Custom) element).getFigure().getElement(), eObject, diagram, figure, container, defined);
+			update(((Custom) element).getFigure().getElement(), eObject, diagram, figure, container);
 
 		boolean existsConditional = false;
 
@@ -58,42 +56,35 @@ public class FeatureHandlerChain  {
 		for(Class<? extends Feature> cf : handlers.keys()) {
 			if(!LanguageProvider.hasFeature(element, cf, false))
 				for(FeatureHandler fh : handlers.get(cf))
-					fh.applyDefaults(element, figure, diagram, container);
+					if(fh.accept(element))
+						fh.applyDefaults(element, eObject, diagram, container, figure);
 		}
 			
 		for(Feature f : element.getFeatures()) {
 			if(f.getConditional() != null)
 				existsConditional = true;
 
-			Collection<FeatureHandler> compatible = handlers.get((Class<? extends Feature>) f.getClass().getInterfaces()[0]);
+			Collection<FeatureHandler> compatible = handlers.get(matchFeature(f));
 			if(compatible.isEmpty())
 				System.err.println("not supported: " + f);
 			else {
 				for(FeatureHandler fh : compatible) {
-					if(evaluate(eObject, f.getConditional())) {
+					if(fh.accept(element) && FeatureConditionals.evaluate(eObject, f.getConditional())) {
 						fh.handle(element, f, eObject, diagram, container, figure);
-						defined.add(fh);
 					}
 				}
 			}
 		}
 
-		if(existsConditional)
+		if(existsConditional && eObject != null)
 			addListener(element, diagram, eObject, figure, container);
 
-//		for(FeatureHandler fh : handlers.values())
-//			if(!defined.contains(fh))
-//				fh.applyDefaults(element, figure, diagram);
 	}
 
-	//	private boolean contains(Class<? extends Feature> type, List<Feature> list) {
-	//		for(Feature f : list) {
-	//			if(f.getClass().equals(type))
-	//				return true;
-	//		}
-	//		return false;
-	//	}
-
+	private Class<? extends Feature> matchFeature(Feature f) {
+		return (Class<? extends Feature>) f.getClass().getInterfaces()[0];
+	}
+	
 	private void addListener(final FeatureContainer element,
 			final Diagram diagram, final EObject eObject,
 			final GraphicsAlgorithm figure, final GraphicsAlgorithmContainer container) {
@@ -102,8 +93,8 @@ public class FeatureHandlerChain  {
 			@Override
 			public void notifyChanged(Notification notification) {
 				for(Feature f : element.getFeatures()) {
-					for(FeatureHandler fh : handlers.get(f.getClass())) {
-						if(evaluate(eObject, f.getConditional()))
+					for(FeatureHandler fh : handlers.get(matchFeature(f))) {
+						if(fh.accept(element) && FeatureConditionals.evaluate(eObject, f.getConditional()))
 							fh.handle(element, f, eObject, diagram, container, figure);
 					}
 				}
@@ -112,36 +103,5 @@ public class FeatureHandlerChain  {
 	}
 
 
-	private boolean evaluate(EObject eObject, FeatureConditional cond) {
-		if(cond == null)
-			return true;
-
-		EAttribute att = cond.getModelAttribute();
-
-		Object obj = eObject.eGet(cond.getModelAttribute());
-
-		if(obj == null)
-			return false;
-
-		Object v = getValue(cond.getValue(), att);
-		switch(cond.getOperator()) {
-		case EQUAL: return obj.equals(v);
-		case DIFFERENT: return !obj.equals(v);
-		default: return false;
-		}
-	}
-
-
-	private Object getValue(Value v, EAttribute attribute) {
-		if(v instanceof IntValue) return ((IntValue) v).getValue();
-		if(v instanceof StringValue) return ((StringValue) v).getValue();
-		if(v instanceof BooleanValue) return Boolean.parseBoolean(((BooleanValue) v).getValue().name().toLowerCase());
-		if(v instanceof EnumValue) {
-			String enumLit = ((EnumValue) v).getName();
-			EEnum e = (EEnum) attribute.getEAttributeType();
-			EEnumLiteral lit = e.getEEnumLiteral(enumLit);
-			return lit;
-		}
-		return null;
-	}
+	
 }

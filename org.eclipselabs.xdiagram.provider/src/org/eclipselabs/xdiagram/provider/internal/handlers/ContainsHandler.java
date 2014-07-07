@@ -12,6 +12,7 @@ import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
+import org.eclipselabs.xdiagram.dsl.ConnectableElement;
 import org.eclipselabs.xdiagram.dsl.Contains;
 import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.FeatureContainer;
@@ -78,11 +79,15 @@ public class ContainsHandler implements FeatureHandler {
 	
 		owners.put(container, eObject);		
 		references.put(container, cont);
-		System.out.println("CONT " + container);
 	}
 
 	@Override
-	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram, GraphicsAlgorithmContainer container) {
+	public void applyDefaults(FeatureContainer element, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
 		
+	}
+
+	@Override
+	public boolean accept(FeatureContainer element) {
+		return element instanceof ConnectableElement;
 	}
 }

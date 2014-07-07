@@ -7,6 +7,7 @@ import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.LineWidth;
+import org.eclipselabs.xdiagram.dsl.Link;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 
 public class LineWidthHandler implements FeatureHandler {
@@ -23,8 +24,13 @@ public class LineWidthHandler implements FeatureHandler {
 	}
 	
 	@Override
-	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram, GraphicsAlgorithmContainer container) {
+	public void applyDefaults(FeatureContainer element, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
 		figure.setLineWidth(1);
+	}
+
+	@Override
+	public boolean accept(FeatureContainer element) {
+		return true;
 	}
 
 	
