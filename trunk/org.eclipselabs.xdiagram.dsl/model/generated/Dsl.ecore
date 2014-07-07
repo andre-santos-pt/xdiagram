@@ -70,21 +70,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceReference" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetReference" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ConnectionType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="decorators" upperBound="-1"
-        eType="#//Decorator" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ConnectionType">
     <eLiterals name="FREE" literal="free"/>
     <eLiterals name="MANHATTAN" value="1" literal="manhattan"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Decorator">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="target" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="middle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="staticElement" eType="#//ConnectableElement"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="label" eType="#//Label"
+  <eClassifiers xsi:type="ecore:EClass" name="Decorator" eSuperTypes="#//Feature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//ConnectableElement"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConnectableElement" eSuperTypes="#//FeatureContainer">
@@ -150,6 +143,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="polygon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="polyline" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Triangle" eSuperTypes="#//ConnectableElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Line" eSuperTypes="#//ConnectableElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Contains" eSuperTypes="#//Feature">
     <eStructuralFeatures xsi:type="ecore:EReference" name="modelReference" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout" eType="#//ContainerLayout"/>
@@ -210,7 +205,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Position" eSuperTypes="#//Feature">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="xRelative" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="yRelative" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Corner" eSuperTypes="#//Feature">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="angle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -245,7 +242,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="LineType">
     <eLiterals name="SOLID" literal="solid"/>
-    <eLiterals name="DASH" value="1" literal="dash"/>
+    <eLiterals name="DASH" value="1" literal="dashed"/>
+    <eLiterals name="DOT" value="2" literal="dotted"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LineWidth" eSuperTypes="#//Feature">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

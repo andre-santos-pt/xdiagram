@@ -37,7 +37,17 @@ public enum LineType implements Enumerator
    * @generated
    * @ordered
    */
-  DASH(1, "DASH", "dash");
+  DASH(1, "DASH", "dashed"),
+
+  /**
+   * The '<em><b>DOT</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #DOT_VALUE
+   * @generated
+   * @ordered
+   */
+  DOT(2, "DOT", "dotted");
 
   /**
    * The '<em><b>SOLID</b></em>' literal value.
@@ -63,11 +73,26 @@ public enum LineType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #DASH
-   * @model literal="dash"
+   * @model literal="dashed"
    * @generated
    * @ordered
    */
   public static final int DASH_VALUE = 1;
+
+  /**
+   * The '<em><b>DOT</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>DOT</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #DOT
+   * @model literal="dotted"
+   * @generated
+   * @ordered
+   */
+  public static final int DOT_VALUE = 2;
 
   /**
    * An array of all the '<em><b>Line Type</b></em>' enumerators.
@@ -80,6 +105,7 @@ public enum LineType implements Enumerator
     {
       SOLID,
       DASH,
+      DOT,
     };
 
   /**
@@ -140,6 +166,7 @@ public enum LineType implements Enumerator
     {
       case SOLID_VALUE: return SOLID;
       case DASH_VALUE: return DASH;
+      case DOT_VALUE: return DOT;
     }
     return null;
   }

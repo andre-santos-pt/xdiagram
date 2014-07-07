@@ -157,6 +157,7 @@ public class DslSwitch<T> extends Switch<T>
       {
         Decorator decorator = (Decorator)theEObject;
         T result = caseDecorator(decorator);
+        if (result == null) result = caseFeature(decorator);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -239,6 +240,24 @@ public class DslSwitch<T> extends Switch<T>
         T result = casePolyline(polyline);
         if (result == null) result = caseConnectableElement(polyline);
         if (result == null) result = caseFeatureContainer(polyline);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DslPackage.TRIANGLE:
+      {
+        Triangle triangle = (Triangle)theEObject;
+        T result = caseTriangle(triangle);
+        if (result == null) result = caseConnectableElement(triangle);
+        if (result == null) result = caseFeatureContainer(triangle);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DslPackage.LINE:
+      {
+        Line line = (Line)theEObject;
+        T result = caseLine(line);
+        if (result == null) result = caseConnectableElement(line);
+        if (result == null) result = caseFeatureContainer(line);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -772,6 +791,38 @@ public class DslSwitch<T> extends Switch<T>
    * @generated
    */
   public T casePolyline(Polyline object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Triangle</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Triangle</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTriangle(Triangle object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Line</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Line</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLine(Line object)
   {
     return null;
   }

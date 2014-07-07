@@ -221,6 +221,24 @@ public interface DslFactory extends EFactory
   Polyline createPolyline();
 
   /**
+   * Returns a new object of class '<em>Triangle</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Triangle</em>'.
+   * @generated
+   */
+  Triangle createTriangle();
+
+  /**
+   * Returns a new object of class '<em>Line</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Line</em>'.
+   * @generated
+   */
+  Line createLine();
+
+  /**
    * Returns a new object of class '<em>Contains</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -19,7 +19,9 @@ import org.eclipselabs.xdiagram.dsl.Position;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.PositionImpl#getX <em>X</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.PositionImpl#isXRelative <em>XRelative</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.PositionImpl#getY <em>Y</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.PositionImpl#isYRelative <em>YRelative</em>}</li>
  * </ul>
  * </p>
  *
@@ -48,6 +50,26 @@ public class PositionImpl extends FeatureImpl implements Position
   protected int x = X_EDEFAULT;
 
   /**
+   * The default value of the '{@link #isXRelative() <em>XRelative</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isXRelative()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean XRELATIVE_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isXRelative() <em>XRelative</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isXRelative()
+   * @generated
+   * @ordered
+   */
+  protected boolean xRelative = XRELATIVE_EDEFAULT;
+
+  /**
    * The default value of the '{@link #getY() <em>Y</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -66,6 +88,26 @@ public class PositionImpl extends FeatureImpl implements Position
    * @ordered
    */
   protected int y = Y_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isYRelative() <em>YRelative</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isYRelative()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean YRELATIVE_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isYRelative() <em>YRelative</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isYRelative()
+   * @generated
+   * @ordered
+   */
+  protected boolean yRelative = YRELATIVE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -116,6 +158,29 @@ public class PositionImpl extends FeatureImpl implements Position
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isXRelative()
+  {
+    return xRelative;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setXRelative(boolean newXRelative)
+  {
+    boolean oldXRelative = xRelative;
+    xRelative = newXRelative;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.POSITION__XRELATIVE, oldXRelative, xRelative));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public int getY()
   {
     return y;
@@ -139,6 +204,29 @@ public class PositionImpl extends FeatureImpl implements Position
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isYRelative()
+  {
+    return yRelative;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setYRelative(boolean newYRelative)
+  {
+    boolean oldYRelative = yRelative;
+    yRelative = newYRelative;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.POSITION__YRELATIVE, oldYRelative, yRelative));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -146,8 +234,12 @@ public class PositionImpl extends FeatureImpl implements Position
     {
       case DslPackage.POSITION__X:
         return getX();
+      case DslPackage.POSITION__XRELATIVE:
+        return isXRelative();
       case DslPackage.POSITION__Y:
         return getY();
+      case DslPackage.POSITION__YRELATIVE:
+        return isYRelative();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -165,8 +257,14 @@ public class PositionImpl extends FeatureImpl implements Position
       case DslPackage.POSITION__X:
         setX((Integer)newValue);
         return;
+      case DslPackage.POSITION__XRELATIVE:
+        setXRelative((Boolean)newValue);
+        return;
       case DslPackage.POSITION__Y:
         setY((Integer)newValue);
+        return;
+      case DslPackage.POSITION__YRELATIVE:
+        setYRelative((Boolean)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -185,8 +283,14 @@ public class PositionImpl extends FeatureImpl implements Position
       case DslPackage.POSITION__X:
         setX(X_EDEFAULT);
         return;
+      case DslPackage.POSITION__XRELATIVE:
+        setXRelative(XRELATIVE_EDEFAULT);
+        return;
       case DslPackage.POSITION__Y:
         setY(Y_EDEFAULT);
+        return;
+      case DslPackage.POSITION__YRELATIVE:
+        setYRelative(YRELATIVE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -204,8 +308,12 @@ public class PositionImpl extends FeatureImpl implements Position
     {
       case DslPackage.POSITION__X:
         return x != X_EDEFAULT;
+      case DslPackage.POSITION__XRELATIVE:
+        return xRelative != XRELATIVE_EDEFAULT;
       case DslPackage.POSITION__Y:
         return y != Y_EDEFAULT;
+      case DslPackage.POSITION__YRELATIVE:
+        return yRelative != YRELATIVE_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -223,8 +331,12 @@ public class PositionImpl extends FeatureImpl implements Position
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (x: ");
     result.append(x);
+    result.append(", xRelative: ");
+    result.append(xRelative);
     result.append(", y: ");
     result.append(y);
+    result.append(", yRelative: ");
+    result.append(yRelative);
     result.append(')');
     return result.toString();
   }

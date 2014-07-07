@@ -9,12 +9,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipselabs.xdiagram.dsl.ConnectableElement;
 import org.eclipselabs.xdiagram.dsl.Decorator;
 import org.eclipselabs.xdiagram.dsl.DslPackage;
-import org.eclipselabs.xdiagram.dsl.Label;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,17 +22,13 @@ import org.eclipselabs.xdiagram.dsl.Label;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DecoratorImpl#getPosition <em>Position</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DecoratorImpl#isSource <em>Source</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DecoratorImpl#isTarget <em>Target</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DecoratorImpl#isMiddle <em>Middle</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DecoratorImpl#getStaticElement <em>Static Element</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DecoratorImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DecoratorImpl#getElement <em>Element</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decorator
+public class DecoratorImpl extends FeatureImpl implements Decorator
 {
   /**
    * The default value of the '{@link #getPosition() <em>Position</em>}' attribute.
@@ -44,7 +38,7 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
    * @generated
    * @ordered
    */
-  protected static final int POSITION_EDEFAULT = 0;
+  protected static final String POSITION_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getPosition() <em>Position</em>}' attribute.
@@ -54,87 +48,17 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
    * @generated
    * @ordered
    */
-  protected int position = POSITION_EDEFAULT;
+  protected String position = POSITION_EDEFAULT;
 
   /**
-   * The default value of the '{@link #isSource() <em>Source</em>}' attribute.
+   * The cached value of the '{@link #getElement() <em>Element</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isSource()
+   * @see #getElement()
    * @generated
    * @ordered
    */
-  protected static final boolean SOURCE_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isSource() <em>Source</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isSource()
-   * @generated
-   * @ordered
-   */
-  protected boolean source = SOURCE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isTarget() <em>Target</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isTarget()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean TARGET_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isTarget() <em>Target</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isTarget()
-   * @generated
-   * @ordered
-   */
-  protected boolean target = TARGET_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isMiddle() <em>Middle</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isMiddle()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean MIDDLE_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isMiddle() <em>Middle</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isMiddle()
-   * @generated
-   * @ordered
-   */
-  protected boolean middle = MIDDLE_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getStaticElement() <em>Static Element</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getStaticElement()
-   * @generated
-   * @ordered
-   */
-  protected ConnectableElement staticElement;
-
-  /**
-   * The cached value of the '{@link #getLabel() <em>Label</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLabel()
-   * @generated
-   * @ordered
-   */
-  protected Label label;
+  protected ConnectableElement element;
 
   /**
    * <!-- begin-user-doc -->
@@ -162,7 +86,7 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getPosition()
+  public String getPosition()
   {
     return position;
   }
@@ -172,9 +96,9 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPosition(int newPosition)
+  public void setPosition(String newPosition)
   {
-    int oldPosition = position;
+    String oldPosition = position;
     position = newPosition;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.DECORATOR__POSITION, oldPosition, position));
@@ -185,9 +109,9 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
    * <!-- end-user-doc -->
    * @generated
    */
-  public boolean isSource()
+  public ConnectableElement getElement()
   {
-    return source;
+    return element;
   }
 
   /**
@@ -195,82 +119,13 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSource(boolean newSource)
+  public NotificationChain basicSetElement(ConnectableElement newElement, NotificationChain msgs)
   {
-    boolean oldSource = source;
-    source = newSource;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.DECORATOR__SOURCE, oldSource, source));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isTarget()
-  {
-    return target;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTarget(boolean newTarget)
-  {
-    boolean oldTarget = target;
-    target = newTarget;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.DECORATOR__TARGET, oldTarget, target));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isMiddle()
-  {
-    return middle;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setMiddle(boolean newMiddle)
-  {
-    boolean oldMiddle = middle;
-    middle = newMiddle;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.DECORATOR__MIDDLE, oldMiddle, middle));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ConnectableElement getStaticElement()
-  {
-    return staticElement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetStaticElement(ConnectableElement newStaticElement, NotificationChain msgs)
-  {
-    ConnectableElement oldStaticElement = staticElement;
-    staticElement = newStaticElement;
+    ConnectableElement oldElement = element;
+    element = newElement;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DslPackage.DECORATOR__STATIC_ELEMENT, oldStaticElement, newStaticElement);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DslPackage.DECORATOR__ELEMENT, oldElement, newElement);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -281,68 +136,20 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setStaticElement(ConnectableElement newStaticElement)
+  public void setElement(ConnectableElement newElement)
   {
-    if (newStaticElement != staticElement)
+    if (newElement != element)
     {
       NotificationChain msgs = null;
-      if (staticElement != null)
-        msgs = ((InternalEObject)staticElement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DslPackage.DECORATOR__STATIC_ELEMENT, null, msgs);
-      if (newStaticElement != null)
-        msgs = ((InternalEObject)newStaticElement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DslPackage.DECORATOR__STATIC_ELEMENT, null, msgs);
-      msgs = basicSetStaticElement(newStaticElement, msgs);
+      if (element != null)
+        msgs = ((InternalEObject)element).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DslPackage.DECORATOR__ELEMENT, null, msgs);
+      if (newElement != null)
+        msgs = ((InternalEObject)newElement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DslPackage.DECORATOR__ELEMENT, null, msgs);
+      msgs = basicSetElement(newElement, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.DECORATOR__STATIC_ELEMENT, newStaticElement, newStaticElement));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Label getLabel()
-  {
-    return label;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetLabel(Label newLabel, NotificationChain msgs)
-  {
-    Label oldLabel = label;
-    label = newLabel;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DslPackage.DECORATOR__LABEL, oldLabel, newLabel);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setLabel(Label newLabel)
-  {
-    if (newLabel != label)
-    {
-      NotificationChain msgs = null;
-      if (label != null)
-        msgs = ((InternalEObject)label).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DslPackage.DECORATOR__LABEL, null, msgs);
-      if (newLabel != null)
-        msgs = ((InternalEObject)newLabel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DslPackage.DECORATOR__LABEL, null, msgs);
-      msgs = basicSetLabel(newLabel, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.DECORATOR__LABEL, newLabel, newLabel));
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.DECORATOR__ELEMENT, newElement, newElement));
   }
 
   /**
@@ -355,10 +162,8 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
   {
     switch (featureID)
     {
-      case DslPackage.DECORATOR__STATIC_ELEMENT:
-        return basicSetStaticElement(null, msgs);
-      case DslPackage.DECORATOR__LABEL:
-        return basicSetLabel(null, msgs);
+      case DslPackage.DECORATOR__ELEMENT:
+        return basicSetElement(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -375,16 +180,8 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
     {
       case DslPackage.DECORATOR__POSITION:
         return getPosition();
-      case DslPackage.DECORATOR__SOURCE:
-        return isSource();
-      case DslPackage.DECORATOR__TARGET:
-        return isTarget();
-      case DslPackage.DECORATOR__MIDDLE:
-        return isMiddle();
-      case DslPackage.DECORATOR__STATIC_ELEMENT:
-        return getStaticElement();
-      case DslPackage.DECORATOR__LABEL:
-        return getLabel();
+      case DslPackage.DECORATOR__ELEMENT:
+        return getElement();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -400,22 +197,10 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
     switch (featureID)
     {
       case DslPackage.DECORATOR__POSITION:
-        setPosition((Integer)newValue);
+        setPosition((String)newValue);
         return;
-      case DslPackage.DECORATOR__SOURCE:
-        setSource((Boolean)newValue);
-        return;
-      case DslPackage.DECORATOR__TARGET:
-        setTarget((Boolean)newValue);
-        return;
-      case DslPackage.DECORATOR__MIDDLE:
-        setMiddle((Boolean)newValue);
-        return;
-      case DslPackage.DECORATOR__STATIC_ELEMENT:
-        setStaticElement((ConnectableElement)newValue);
-        return;
-      case DslPackage.DECORATOR__LABEL:
-        setLabel((Label)newValue);
+      case DslPackage.DECORATOR__ELEMENT:
+        setElement((ConnectableElement)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -434,20 +219,8 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
       case DslPackage.DECORATOR__POSITION:
         setPosition(POSITION_EDEFAULT);
         return;
-      case DslPackage.DECORATOR__SOURCE:
-        setSource(SOURCE_EDEFAULT);
-        return;
-      case DslPackage.DECORATOR__TARGET:
-        setTarget(TARGET_EDEFAULT);
-        return;
-      case DslPackage.DECORATOR__MIDDLE:
-        setMiddle(MIDDLE_EDEFAULT);
-        return;
-      case DslPackage.DECORATOR__STATIC_ELEMENT:
-        setStaticElement((ConnectableElement)null);
-        return;
-      case DslPackage.DECORATOR__LABEL:
-        setLabel((Label)null);
+      case DslPackage.DECORATOR__ELEMENT:
+        setElement((ConnectableElement)null);
         return;
     }
     super.eUnset(featureID);
@@ -464,17 +237,9 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
     switch (featureID)
     {
       case DslPackage.DECORATOR__POSITION:
-        return position != POSITION_EDEFAULT;
-      case DslPackage.DECORATOR__SOURCE:
-        return source != SOURCE_EDEFAULT;
-      case DslPackage.DECORATOR__TARGET:
-        return target != TARGET_EDEFAULT;
-      case DslPackage.DECORATOR__MIDDLE:
-        return middle != MIDDLE_EDEFAULT;
-      case DslPackage.DECORATOR__STATIC_ELEMENT:
-        return staticElement != null;
-      case DslPackage.DECORATOR__LABEL:
-        return label != null;
+        return POSITION_EDEFAULT == null ? position != null : !POSITION_EDEFAULT.equals(position);
+      case DslPackage.DECORATOR__ELEMENT:
+        return element != null;
     }
     return super.eIsSet(featureID);
   }
@@ -492,12 +257,6 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (position: ");
     result.append(position);
-    result.append(", source: ");
-    result.append(source);
-    result.append(", target: ");
-    result.append(target);
-    result.append(", middle: ");
-    result.append(middle);
     result.append(')');
     return result.toString();
   }
