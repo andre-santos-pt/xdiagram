@@ -186,13 +186,31 @@ public interface ConceptualmodelPackage extends EPackage {
 	int COMPOSITE__END = 0;
 
 	/**
+	 * The feature id for the '<em><b>Aggregation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE__AGGREGATION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE__NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>Composite</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_FEATURE_COUNT = 1;
+	int COMPOSITE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Composite</em>' class.
@@ -350,6 +368,28 @@ public interface ConceptualmodelPackage extends EPackage {
 	EReference getComposite_End();
 
 	/**
+	 * Returns the meta object for the attribute '{@link conceptualmodel.Composite#isAggregation <em>Aggregation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Aggregation</em>'.
+	 * @see conceptualmodel.Composite#isAggregation()
+	 * @see #getComposite()
+	 * @generated
+	 */
+	EAttribute getComposite_Aggregation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link conceptualmodel.Composite#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see conceptualmodel.Composite#getName()
+	 * @see #getComposite()
+	 * @generated
+	 */
+	EAttribute getComposite_Name();
+
+	/**
 	 * Returns the meta object for class '{@link conceptualmodel.ConceptualModel <em>Conceptual Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -478,6 +518,22 @@ public interface ConceptualmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPOSITE__END = eINSTANCE.getComposite_End();
+
+		/**
+		 * The meta object literal for the '<em><b>Aggregation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPOSITE__AGGREGATION = eINSTANCE.getComposite_Aggregation();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPOSITE__NAME = eINSTANCE.getComposite_Name();
 
 		/**
 		 * The meta object literal for the '{@link conceptualmodel.impl.ConceptualModelImpl <em>Conceptual Model</em>}' class.
