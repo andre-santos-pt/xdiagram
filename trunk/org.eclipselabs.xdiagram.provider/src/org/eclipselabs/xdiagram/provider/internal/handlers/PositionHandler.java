@@ -25,6 +25,8 @@ import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 
 public class PositionHandler implements FeatureHandler {
 
+	private static final int DEFAULT_MARGIN = 0;
+	
 	private ContainsHandler containsHandler;
 
 	public PositionHandler(ContainsHandler containsHandler) {
@@ -39,13 +41,22 @@ public class PositionHandler implements FeatureHandler {
 	@Override
 	public void handle(FeatureContainer element, Feature feature, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
 		Position p = (Position) feature;
-		Graphiti.getGaService().setLocation(figure, p.getX(), p.getY());
+		int x = p.getX();
+		int y = p.getY();
+		if(p.isXRelative()) {
+			ContainerShape parent = (ContainerShape) container.eContainer();
+			IDimension dim = Graphiti.getGaLayoutService().calculateSize(figure);
+			IDimension pdim = Graphiti.getGaLayoutService().calculateSize(parent.getGraphicsAlgorithm());
+			x = (pdim.getWidth()/2) - (dim.getWidth()/2);
+		}
+			
+		Graphiti.getGaService().setLocation(figure, x, y);
 	}
 
 
 
 	@Override
-	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram, GraphicsAlgorithmContainer container) {
+	public void applyDefaults(FeatureContainer element, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
 		//		if(accept(element, figure.getPictogramElement())) {
 
 		EObject parent = element.eContainer();
@@ -78,20 +89,20 @@ public class PositionHandler implements FeatureHandler {
 			}
 
 			if(layout.equals(ContainerLayout.VSTACK))
-				Graphiti.getGaService().setLocation(figure, 2, y);
+				Graphiti.getGaService().setLocation(figure, DEFAULT_MARGIN, y);
 			else
-				Graphiti.getGaService().setLocation(figure, x, 2);
+				Graphiti.getGaService().setLocation(figure, x, DEFAULT_MARGIN);
 		}
 		else if(!(parent instanceof Node)) {
-			Graphiti.getGaService().setLocation(figure, 5, 5);
+			Graphiti.getGaService().setLocation(figure, DEFAULT_MARGIN, DEFAULT_MARGIN);
 		}
 	}
 
-	// TODO review
-	private boolean accept(FeatureContainer element, GraphicsAlgorithmContainer container) {
-		return element instanceof ConnectableElement &&
-				!(container instanceof ContainerShape && ((ContainerShape) container).getContainer() instanceof Diagram) && 
-				(!(container instanceof ContainerShape && ((ContainerShape) container).isActive()) ||
-						LanguageProvider.hasFeature((ConnectableElement) element, Contains.class, false));
+
+
+	@Override
+	public boolean accept(FeatureContainer element) {
+		return element instanceof ConnectableElement && 
+				(element.eContainer() instanceof ConnectableElement || element.eContainer() instanceof Node);
 	}
 }

@@ -2,8 +2,12 @@ package org.eclipselabs.xdiagram.provider.internal;
 
 
 
+import java.util.List;
+
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
+import org.eclipse.graphiti.mm.algorithms.Polygon;
+import org.eclipse.graphiti.mm.algorithms.styles.Point;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.services.Graphiti;
@@ -12,6 +16,7 @@ import org.eclipselabs.xdiagram.dsl.Custom;
 import org.eclipselabs.xdiagram.dsl.CustomFigure;
 import org.eclipselabs.xdiagram.dsl.Image;
 import org.eclipselabs.xdiagram.dsl.Polyline;
+import org.eclipselabs.xdiagram.dsl.Size;
 
 public enum ElementCreation {
 
@@ -35,7 +40,27 @@ public enum ElementCreation {
 	},
 	
 	
-	// TODO: Rhombus
+	
+	TRIANGLE {
+		protected GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
+			return Graphiti.getGaService().createPolygon(container, new int[] { 0, 0, -15, -10, -15, 10,  });
+		}
+		
+		
+	},
+	
+	RHOMBUS {
+		protected GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
+			return Graphiti.getGaService().createPolygon(container, new int[] { 0, 0, -10, -10, -20, 0, -10, 10 });
+		}
+	},
+	
+	LINE {
+		protected GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
+			return Graphiti.getGaService().createPolyline(container, new int[] { 0, 0, 20, 0});
+		}
+	},
+	
 	
 	LABEL {
 		protected GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
@@ -77,4 +102,25 @@ public enum ElementCreation {
 			return INVISIBLE.create(element, diagram, container);
 		}
 	}	
+	
+	public static void updateTriangleSize(Polygon triangle, Size size) {
+		List<Point> points = triangle.getPoints();
+		points.remove(1);
+		points.remove(1);
+		points.add(Graphiti.getGaCreateService().createPoint(-size.getHeight(), -size.getWidth()/2));
+		points.add(Graphiti.getGaCreateService().createPoint(-size.getHeight(), size.getWidth()/2));
+	}
+	
+	
+	public static void updateRhombusSize(Polygon triangle, Size size) {
+		List<Point> points = triangle.getPoints();
+		points.remove(1);
+		points.remove(1);
+		points.remove(1);
+		
+		points.add(Graphiti.getGaCreateService().createPoint(-size.getHeight()/2, -size.getWidth()/2));
+		points.add(Graphiti.getGaCreateService().createPoint(-size.getHeight(), 0));
+		points.add(Graphiti.getGaCreateService().createPoint(-size.getHeight()/2, size.getWidth()/2));
+		
+	}
 }

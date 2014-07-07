@@ -20,18 +20,21 @@ public class PointHandler implements FeatureHandler {
 
 	@Override
 	public void handle(FeatureContainer element, Feature feature, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
-		if(figure instanceof Polyline) {
-			Point point = (Point) feature;
-			org.eclipse.graphiti.mm.algorithms.styles.Point p = StylesFactory.eINSTANCE.createPoint();
-			p.setX(point.getX());
-			p.setY(point.getY());
-			((Polyline) figure).getPoints().add(p);
-		}
+		Point point = (Point) feature;
+		org.eclipse.graphiti.mm.algorithms.styles.Point p = StylesFactory.eINSTANCE.createPoint();
+		p.setX(point.getX());
+		p.setY(point.getY());
+		((Polyline) figure).getPoints().add(p);
 	}
-	
+
 
 	@Override
-	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram, GraphicsAlgorithmContainer container) {
+	public void applyDefaults(FeatureContainer element, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
 
+	}
+
+	@Override
+	public boolean accept(FeatureContainer element) {
+		return element instanceof Polyline;
 	}
 }

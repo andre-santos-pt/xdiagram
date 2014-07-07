@@ -1,19 +1,31 @@
 package org.eclipselabs.xdiagram.provider.internal.handlers;
 
+import java.util.Map;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
+import org.eclipse.graphiti.mm.pictograms.AnchorContainer;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipselabs.xdiagram.dsl.Anchor;
 import org.eclipselabs.xdiagram.dsl.ConnectableElement;
 import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.FeatureContainer;
+import org.eclipselabs.xdiagram.dsl.Node;
 import org.eclipselabs.xdiagram.dsl.Position;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 
+import com.google.common.collect.Maps;
+
 public class AnchorHandler implements FeatureHandler {
 
+	private Map<org.eclipse.graphiti.mm.pictograms.Anchor, EObject> anchors;
+	
+	public AnchorHandler() {
+		anchors = Maps.newHashMap();
+	}
+	
 	@Override
 	public Class<? extends Feature> getTargetFeature() {
 		return Anchor.class;
@@ -33,8 +45,25 @@ public class AnchorHandler implements FeatureHandler {
 	}
 
 	@Override
-	public void applyDefaults(FeatureContainer element, GraphicsAlgorithm figure, Diagram diagram, GraphicsAlgorithmContainer container) {
+	public void applyDefaults(FeatureContainer element, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
+		AnchorContainer anchorContainer = (AnchorContainer) container;
 		
+		org.eclipse.graphiti.mm.pictograms.Anchor gAnchor = null;
+		if(anchorContainer.getAnchors().isEmpty())
+			gAnchor = Graphiti.getPeCreateService().createChopboxAnchor(anchorContainer);
+		else
+			gAnchor = anchorContainer.getAnchors().get(0);
+		
+		anchors.put(gAnchor, eObject);
+	}
+
+	public EObject get(org.eclipse.graphiti.mm.pictograms.Anchor a) {
+		return anchors.get(a);
+	}
+
+	@Override
+	public boolean accept(FeatureContainer element) {
+		return element instanceof ConnectableElement && element.eContainer() instanceof Node;
 	}
 	
 }
