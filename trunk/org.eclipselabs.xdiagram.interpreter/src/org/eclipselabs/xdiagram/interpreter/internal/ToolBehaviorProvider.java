@@ -139,7 +139,7 @@ public class ToolBehaviorProvider extends DefaultToolBehaviorProvider {
 		List<IPaletteCompartmentEntry> ret = new ArrayList<IPaletteCompartmentEntry>();
 
 		// add new compartment at the end of the existing compartments
-		PaletteCompartmentEntry nodesEntry = new PaletteCompartmentEntry("Default", null); //$NON-NLS-1$
+		PaletteCompartmentEntry nodesEntry = new PaletteCompartmentEntry("Nodes", null); //$NON-NLS-1$
 		ret.add(nodesEntry);
 		
 

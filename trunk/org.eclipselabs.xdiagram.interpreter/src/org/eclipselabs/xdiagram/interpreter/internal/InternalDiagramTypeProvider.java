@@ -53,10 +53,10 @@ public class InternalDiagramTypeProvider extends AbstractDiagramTypeProvider {
 	@Override
 	public final IToolBehaviorProvider[] getAvailableToolBehaviorProviders() {
 		String diagramType = getDiagram().getDiagramTypeId();
-		LanguageDescription desc = Activator.getInstance().getLanguageProvider(diagramType);
+		LanguageDescription desc = Activator.getInstance().getLanguageDescription(diagramType);
 
 		if (providers == null)
-			providers = new IToolBehaviorProvider[] { new ToolBehaviorProvider(this, desc.provider) };
+			providers = new IToolBehaviorProvider[] { new ToolBehaviorProvider(this, desc.createProvider()) };
 
 		return providers;
 	}
