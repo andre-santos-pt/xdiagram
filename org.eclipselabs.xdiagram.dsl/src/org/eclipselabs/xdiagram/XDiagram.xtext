@@ -129,10 +129,7 @@ Link:
     ':'
     'connection' type=ConnectionType (styled?='+' style=[Style])? '{'
     	features += LinkFeature*
-    	(
-    	'decorators:'
-    	 decorators += Decorator+	
-    	)?
+    	//decorators += Decorator*	
     '}'
 ;
     
@@ -143,7 +140,7 @@ enum ConnectionType:
 ;	
 
 LinkFeature returns Feature:
-	Foreground | LineStyle | LineWidth
+	Foreground | LineStyle | LineWidth | Decorator
 ;
     
     
@@ -152,15 +149,20 @@ LinkFeature returns Feature:
 
 // % opcional? ou considerar pixeis?
 // ter "constantes" para origem destino
+// TODO validation %
+// TODO validation children of decorator
 Decorator:
-	 (('at' position=INT '%')|(source?='source')|(target?='target')|(middle?='middle')) ((staticElement = StaticElement) | (label = Label))?
-		
-	
+	'decorator' position=PERCENT (conditional=FeatureConditional)? element = DecoratorElement
 ;
 
-StaticElement returns ConnectableElement:
-	 Rhombus | Polyline //| Arrow | Triangle
+// circle?
+DecoratorElement returns ConnectableElement:
+	Ellipse | Rhombus | Polyline | Triangle | Label//| Arrow | Triangle
 ;
+
+
+
+
 
 
 // TODO validation
@@ -233,7 +235,7 @@ enum DefaultColor:
  * (styled?='+' style=[Style])?
  */
 ConnectableElement:
-	Rectangle | Rhombus | Ellipse | Polyline | Label | Image | Invisible | Custom
+	Rectangle | Rhombus | Ellipse | Polyline | Label | Image | Invisible | Custom | Triangle | Line
 ;
 
 
@@ -293,7 +295,23 @@ Polyline:
 	'}'
 ;
 
-//TODO line
+Triangle:
+	{Triangle}
+	'triangle' 	(styled?='+' style=[Style])? '{'
+		features+=ConnectableElementFeature*
+		(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
+	'}'
+;
+
+Line:
+	{Line}
+	'line' (styled?='+' style=[Style])? '{'
+		features+=ConnectableElementFeature*
+		(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
+	'}'
+;
+
+
 
 
 
@@ -368,14 +386,14 @@ FigureFeature returns Feature:
 // TODO: validation  at most one editable
 Label:
 	{Label}
-	'label' (editable?='editable')? (styled?='+' style=[Style])? '{'
+	'label' (styled?='+' style=[Style])? '{'
 	features+=LabelFeature*
 	(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
 	'}'
 ;
 
 LabelFeature returns Feature:
-	TextValue | Foreground | Background | FontFace | FontSize | FontStyle | Size | Position
+	TextValue | Foreground | FontFace | FontSize | FontStyle | Size | Position
 ;
 
 
@@ -440,7 +458,7 @@ Transparency:
 
 
 Size:
-	'size' width=INT 'x' height=INT
+	'size' width=INT ('x' height=INT)?
 	(conditional=FeatureConditional)?
 	';'
 ;
@@ -453,7 +471,7 @@ Point:
 
 // TODO validation: no Position when vstack hstack
 Position:
-	'position' x=INT ',' y=INT
+	'position' x=INT (xRelative?='%')? ',' y=INT (yRelative?='%')?
 	(conditional=FeatureConditional)?
 	';'
 ;
@@ -531,7 +549,8 @@ LineStyle:
 
 enum LineType:
 	SOLID='solid' |
-	DASH='dash' 
+	DASH='dashed' |
+	DOT='dotted' 
 ;
 
 LineWidth:

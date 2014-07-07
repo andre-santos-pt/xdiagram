@@ -87,6 +87,8 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
       case DslPackage.RHOMBUS: return createRhombus();
       case DslPackage.ELLIPSE: return createEllipse();
       case DslPackage.POLYLINE: return createPolyline();
+      case DslPackage.TRIANGLE: return createTriangle();
+      case DslPackage.LINE: return createLine();
       case DslPackage.CONTAINS: return createContains();
       case DslPackage.VALUE: return createValue();
       case DslPackage.INT_VALUE: return createIntValue();
@@ -424,6 +426,28 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     PolylineImpl polyline = new PolylineImpl();
     return polyline;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Triangle createTriangle()
+  {
+    TriangleImpl triangle = new TriangleImpl();
+    return triangle;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Line createLine()
+  {
+    LineImpl line = new LineImpl();
+    return line;
   }
 
   /**

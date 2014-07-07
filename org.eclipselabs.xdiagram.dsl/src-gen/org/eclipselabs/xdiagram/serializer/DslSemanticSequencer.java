@@ -38,6 +38,7 @@ import org.eclipselabs.xdiagram.dsl.ImportStatement;
 import org.eclipselabs.xdiagram.dsl.IntValue;
 import org.eclipselabs.xdiagram.dsl.Invisible;
 import org.eclipselabs.xdiagram.dsl.Label;
+import org.eclipselabs.xdiagram.dsl.Line;
 import org.eclipselabs.xdiagram.dsl.LineStyle;
 import org.eclipselabs.xdiagram.dsl.LineWidth;
 import org.eclipselabs.xdiagram.dsl.Link;
@@ -52,6 +53,7 @@ import org.eclipselabs.xdiagram.dsl.StringValue;
 import org.eclipselabs.xdiagram.dsl.Style;
 import org.eclipselabs.xdiagram.dsl.TextValue;
 import org.eclipselabs.xdiagram.dsl.Transparency;
+import org.eclipselabs.xdiagram.dsl.Triangle;
 import org.eclipselabs.xdiagram.dsl.XDiagram;
 import org.eclipselabs.xdiagram.services.DslGrammarAccess;
 
@@ -149,7 +151,8 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case DslPackage.DECORATOR:
-				if(context == grammarAccess.getDecoratorRule()) {
+				if(context == grammarAccess.getDecoratorRule() ||
+				   context == grammarAccess.getLinkFeatureRule()) {
 					sequence_Decorator(context, (Decorator) semanticObject); 
 					return; 
 				}
@@ -169,6 +172,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case DslPackage.ELLIPSE:
 				if(context == grammarAccess.getConnectableElementRule() ||
+				   context == grammarAccess.getDecoratorElementRule() ||
 				   context == grammarAccess.getEllipseRule() ||
 				   context == grammarAccess.getFeatureContainerRule()) {
 					sequence_Ellipse(context, (Ellipse) semanticObject); 
@@ -252,9 +256,18 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case DslPackage.LABEL:
 				if(context == grammarAccess.getConnectableElementRule() ||
+				   context == grammarAccess.getDecoratorElementRule() ||
 				   context == grammarAccess.getFeatureContainerRule() ||
 				   context == grammarAccess.getLabelRule()) {
 					sequence_Label(context, (Label) semanticObject); 
+					return; 
+				}
+				else break;
+			case DslPackage.LINE:
+				if(context == grammarAccess.getConnectableElementRule() ||
+				   context == grammarAccess.getFeatureContainerRule() ||
+				   context == grammarAccess.getLineRule()) {
+					sequence_Line(context, (Line) semanticObject); 
 					return; 
 				}
 				else break;
@@ -307,9 +320,9 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case DslPackage.POLYLINE:
 				if(context == grammarAccess.getConnectableElementRule() ||
+				   context == grammarAccess.getDecoratorElementRule() ||
 				   context == grammarAccess.getFeatureContainerRule() ||
-				   context == grammarAccess.getPolylineRule() ||
-				   context == grammarAccess.getStaticElementRule()) {
+				   context == grammarAccess.getPolylineRule()) {
 					sequence_Polyline(context, (Polyline) semanticObject); 
 					return; 
 				}
@@ -338,9 +351,9 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case DslPackage.RHOMBUS:
 				if(context == grammarAccess.getConnectableElementRule() ||
+				   context == grammarAccess.getDecoratorElementRule() ||
 				   context == grammarAccess.getFeatureContainerRule() ||
-				   context == grammarAccess.getRhombusRule() ||
-				   context == grammarAccess.getStaticElementRule()) {
+				   context == grammarAccess.getRhombusRule()) {
 					sequence_Rhombus(context, (Rhombus) semanticObject); 
 					return; 
 				}
@@ -388,6 +401,15 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				   context == grammarAccess.getStyleFeatureRule() ||
 				   context == grammarAccess.getTransparencyRule()) {
 					sequence_Transparency(context, (Transparency) semanticObject); 
+					return; 
+				}
+				else break;
+			case DslPackage.TRIANGLE:
+				if(context == grammarAccess.getConnectableElementRule() ||
+				   context == grammarAccess.getDecoratorElementRule() ||
+				   context == grammarAccess.getFeatureContainerRule() ||
+				   context == grammarAccess.getTriangleRule()) {
+					sequence_Triangle(context, (Triangle) semanticObject); 
 					return; 
 				}
 				else break;
@@ -531,7 +553,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     ((position=INT | source?='source' | target?='target' | middle?='middle') (staticElement=StaticElement | label=Label)?)
+	 *     (position=PERCENT conditional=FeatureConditional? element=DecoratorElement)
 	 */
 	protected void sequence_Decorator(EObject context, Decorator semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -753,6 +775,19 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * Constraint:
 	 *     (
+	 *         (styled?='+' style=[Style|ID])? 
+	 *         features+=ConnectableElementFeature* 
+	 *         (composite?='children' layout=ContainerLayout? children+=ConnectableElement+)?
+	 *     )
+	 */
+	protected void sequence_Line(EObject context, Line semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
 	 *         (
 	 *             modelReference=[EReference|QualifiedName] | 
 	 *             (complex?='object' modelClass=[EClass|QualifiedName] sourceReference=[EReference|QualifiedName] targetReference=[EReference|QualifiedName])
@@ -761,8 +796,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         imageId=ID? 
 	 *         type=ConnectionType 
 	 *         (styled?='+' style=[Style|ID])? 
-	 *         features+=LinkFeature* 
-	 *         decorators+=Decorator*
+	 *         features+=LinkFeature*
 	 *     )
 	 */
 	protected void sequence_Link(EObject context, Link semanticObject) {
@@ -807,7 +841,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (x=INT y=INT conditional=FeatureConditional?)
+	 *     (x=INT xRelative?='%'? y=INT yRelative?='%'? conditional=FeatureConditional?)
 	 */
 	protected void sequence_Position(EObject context, Position semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -882,6 +916,19 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (percent=PERCENT conditional=FeatureConditional?)
 	 */
 	protected void sequence_Transparency(EObject context, Transparency semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         (styled?='+' style=[Style|ID])? 
+	 *         features+=ConnectableElementFeature* 
+	 *         (composite?='children' layout=ContainerLayout? children+=ConnectableElement+)?
+	 *     )
+	 */
+	protected void sequence_Triangle(EObject context, Triangle semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

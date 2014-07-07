@@ -185,6 +185,16 @@ public class DslAdapterFactory extends AdapterFactoryImpl
         return createPolylineAdapter();
       }
       @Override
+      public Adapter caseTriangle(Triangle object)
+      {
+        return createTriangleAdapter();
+      }
+      @Override
+      public Adapter caseLine(Line object)
+      {
+        return createLineAdapter();
+      }
+      @Override
       public Adapter caseContains(Contains object)
       {
         return createContainsAdapter();
@@ -642,6 +652,36 @@ public class DslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createPolylineAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Triangle <em>Triangle</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.dsl.Triangle
+   * @generated
+   */
+  public Adapter createTriangleAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Line <em>Line</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.dsl.Line
+   * @generated
+   */
+  public Adapter createLineAdapter()
   {
     return null;
   }

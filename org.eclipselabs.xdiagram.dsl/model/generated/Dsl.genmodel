@@ -64,6 +64,7 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//LineType">
       <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//LineType/SOLID"/>
       <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//LineType/DASH"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//LineType/DOT"/>
     </genEnums>
     <genClasses ecoreClass="Dsl.ecore#//XDiagram">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//XDiagram/importURI"/>
@@ -117,15 +118,10 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Link/sourceReference"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Link/targetReference"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Link/type"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Link/decorators"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//Decorator">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Decorator/position"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Decorator/source"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Decorator/target"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Decorator/middle"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Decorator/staticElement"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Decorator/label"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Decorator/element"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//ConnectableElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//ConnectableElement/composite"/>
@@ -166,6 +162,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Polyline/polygon"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Polyline/polyline"/>
     </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Triangle"/>
+    <genClasses ecoreClass="Dsl.ecore#//Line"/>
     <genClasses ecoreClass="Dsl.ecore#//Contains">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Contains/modelReference"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Contains/layout"/>
@@ -212,7 +210,9 @@
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//Position">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Position/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Position/xRelative"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Position/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Position/yRelative"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//Corner">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Corner/angle"/>
