@@ -11,8 +11,6 @@ XDiagram:
     'metamodel' importURI=STRING
     imports+=ImportStatement   
      
-//    'diagram' modelClass=[ecore::EClass|QualifiedName] ':'
-//    
     diagram=Diagram
     
     groups+=Group*
@@ -108,8 +106,10 @@ FeatureConditional:
 // TODO validation: unique nodes
 // notation inheritance?
 Node:
-    'node' modelClass=[ecore::EClass|QualifiedName]  (toolName=STRING (':' group=[Group])?)?  ('icon' imageId=ID)? ':'
+    'node' modelClass=[ecore::EClass|QualifiedName]  '{'
+     ('toolname' toolName=STRING (':' group=[Group])?)?  ('icon' imageId=ID)?
     	rootFigure = ConnectableElement
+    '}'
 ;
     
    
@@ -119,17 +119,18 @@ Node:
 // TODO text / icon
 Link:
     'link'(
-    	modelReference=[ecore::EReference|QualifiedName] | 
+    	(reference?='reference' modelReference=[ecore::EReference|QualifiedName]) | 
     	
     	(complex?='object' modelClass=[ecore::EClass|QualifiedName] 
     	'source' sourceReference=[ecore::EReference|QualifiedName] 
     	'target' targetReference=[ecore::EReference|QualifiedName]
     	)
     )  (toolName=STRING (':' group=[Group])?)?  ('icon' imageId=ID)? 
-    ':'
+    '{'
     'connection' type=ConnectionType (styled?='+' style=[Style])? '{'
     	features += LinkFeature*
     	//decorators += Decorator*	
+    '}'
     '}'
 ;
     
@@ -169,7 +170,6 @@ DecoratorElement returns ConnectableElement:
 Anchor:
 	'anchor' direction=AnchorDirection modelReference=[ecore::EReference|QualifiedName] 
 	(conditional=FeatureConditional)?
-	';'
 ;
 
 
@@ -325,7 +325,6 @@ Line:
 Contains:
 'contains' modelReference=[ecore::EReference|QualifiedName] 
 (conditional=FeatureConditional)? (layout=ContainerLayout)?
-';'
 ;
 
 
@@ -437,20 +436,17 @@ ColorFeature:
 Foreground returns ColorFeature:
 	type='foreground' color=Color
 	(conditional=FeatureConditional)?
-	';'
 ;
 
 Background returns ColorFeature:
 	type='background' color=Color
 	(conditional=FeatureConditional)?
-	';'
 ;
 
 
 Transparency:
 	'transparency' percent=PERCENT
 	(conditional=FeatureConditional)?
-	';'
 ;
 
 
@@ -460,26 +456,22 @@ Transparency:
 Size:
 	'size' width=INT ('x' height=INT)?
 	(conditional=FeatureConditional)?
-	';'
 ;
 
 Point:
 	'point' x=INT ',' y=INT
 	(conditional=FeatureConditional)?
-	';'
 ;
 
 // TODO validation: no Position when vstack hstack
 Position:
 	'position' x=INT (xRelative?='%')? ',' y=INT (yRelative?='%')?
 	(conditional=FeatureConditional)?
-	';'
 ;
 
 Corner:
 	'corner' angle=INT
 	(conditional=FeatureConditional)?
-	';'
 ;
 
 
@@ -495,25 +487,21 @@ Corner:
 TextValue:
 	'text' (text=STRING | modelAttribute=[ecore::EAttribute|QualifiedName])
 	(conditional=FeatureConditional)?
-	';'
 ;
 
 FontFace:
 	'font-face' face=FontFaceType
 	(conditional=FeatureConditional)?
-	';'
 ;
 
 FontSize:
 	'font-size' size=INT
 	(conditional=FeatureConditional)?
-	';'
 ;
 
 FontStyle:
 	'font-style' styles+=FontStyleType (',' styles+=FontStyleType)*
 	(conditional=FeatureConditional)?
-	';'
 ;
 
 
@@ -544,7 +532,6 @@ enum FontStyleType:
 LineStyle:
 	'line-type' style=LineType  
 	(conditional=FeatureConditional)?
-	';'
 ;
 
 enum LineType:
@@ -556,7 +543,6 @@ enum LineType:
 LineWidth:
 	'line-width' width=INT
 	(conditional=FeatureConditional)?
-	';'
 ;
 
 
@@ -570,3 +556,7 @@ terminal PERCENT: ('0'|('1'..'9')(('0'..'9'))?|'100') '%';
 
 //terminal S: (' '|'\t')+;
 
+//terminal NEWLINE:
+// New line on DOS or Unix 
+//   '\r'? '\n';
+    
