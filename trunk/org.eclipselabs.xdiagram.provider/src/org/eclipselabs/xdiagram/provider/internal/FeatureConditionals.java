@@ -24,10 +24,12 @@ public class FeatureConditionals {
 		if(obj == null)
 			return false;
 
-		Object v = getValue(cond.getValue(), att);
+		String objToString = obj.toString();
+		
+		String v = getValue(cond.getValue(), att) + "";
 		switch(cond.getOperator()) {
-		case EQUAL: return obj.equals(v);
-		case DIFFERENT: return !obj.equals(v);
+		case EQUAL: return objToString.equals(v);
+		case DIFFERENT: return !objToString.equals(v);
 		default: return false;
 		}
 	}

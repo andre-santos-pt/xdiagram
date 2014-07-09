@@ -1,36 +1,29 @@
 package org.eclipselabs.xdiagram.provider.internal.handlers;
 
-import java.util.Iterator;
-import java.util.List;
-
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EReference;
 import org.eclipse.graphiti.datatypes.IDimension;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
-import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipselabs.xdiagram.dsl.ConnectableElement;
 import org.eclipselabs.xdiagram.dsl.ContainerLayout;
-import org.eclipselabs.xdiagram.dsl.Contains;
 import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.Node;
 import org.eclipselabs.xdiagram.dsl.Position;
-import org.eclipselabs.xdiagram.provider.LanguageProvider;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 
 public class PositionHandler implements FeatureHandler {
 
-	private static final int DEFAULT_MARGIN = 0;
+	static final int DEFAULT_MARGIN = 2;
 	
-	private ContainsHandler containsHandler;
+	private LayoutHandler layoutHandler;
 
-	public PositionHandler(ContainsHandler containsHandler) {
-		this.containsHandler = containsHandler;
+	public PositionHandler(LayoutHandler layoutHandler) {
+		this.layoutHandler = layoutHandler;
 	}
 
 	@Override
@@ -57,21 +50,21 @@ public class PositionHandler implements FeatureHandler {
 
 	@Override
 	public void applyDefaults(FeatureContainer element, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
-		//		if(accept(element, figure.getPictogramElement())) {
-
 		EObject parent = element.eContainer();
-		ContainerShape parentContainer = (ContainerShape) container.eContainer();
-		ContainerLayout layout = ContainerLayout.FREE;
-		if(parent instanceof ConnectableElement) {
-			layout = ((ConnectableElement)parent).getLayout();
-		}
-		else if(parent instanceof Node && containsHandler.isContainer(parentContainer)) {
-
-			// TODO multiple contains
-			for(Contains c : containsHandler.getContainsFeature(parentContainer)) {
-				layout = c.getLayout();
-			}
-		}
+//		ContainerShape parentContainer = (ContainerShape) container.eContainer();
+//		ContainerLayout layout = ContainerLayout.FREE;
+//		if(parent instanceof ConnectableElement) {
+//			layout = ((ConnectableElement)parent).getLayout();
+//		}
+//		else if(parent instanceof Node && containsHandler.isContainer(parentContainer)) {
+//
+//			// TODO multiple contains
+//			for(Contains c : containsHandler.getContainsFeature(parentContainer)) {
+//				layout = c.getLayout();
+//			}
+//		}
+		
+		ContainerLayout layout = layoutHandler.getLayout(parent);
 
 		if(!layout.equals(ContainerLayout.FREE)) {
 			ContainerShape cs = ((ContainerShape) figure.eContainer()).getContainer();
@@ -102,7 +95,7 @@ public class PositionHandler implements FeatureHandler {
 
 	@Override
 	public boolean accept(FeatureContainer element) {
-		return element instanceof ConnectableElement && 
-				(element.eContainer() instanceof ConnectableElement || element.eContainer() instanceof Node);
+		return //element instanceof ConnectableElement && 
+				(element.eContainer() instanceof FeatureContainer || element.eContainer() instanceof Node);
 	}
 }

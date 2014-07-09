@@ -7,8 +7,6 @@ import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.LineStyle;
-import org.eclipselabs.xdiagram.dsl.LineWidth;
-import org.eclipselabs.xdiagram.dsl.Link;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 
 public class LineStyleHandler implements FeatureHandler {

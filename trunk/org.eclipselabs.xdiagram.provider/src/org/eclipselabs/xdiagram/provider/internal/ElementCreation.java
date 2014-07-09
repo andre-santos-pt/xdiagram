@@ -14,24 +14,26 @@ import org.eclipse.graphiti.services.Graphiti;
 import org.eclipselabs.xdiagram.dsl.ConnectableElement;
 import org.eclipselabs.xdiagram.dsl.Custom;
 import org.eclipselabs.xdiagram.dsl.CustomFigure;
+import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.Image;
+import org.eclipselabs.xdiagram.dsl.Line;
 import org.eclipselabs.xdiagram.dsl.Polyline;
 import org.eclipselabs.xdiagram.dsl.Size;
 
 public enum ElementCreation {
 
 	RECTANGLE {
-		protected GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
 			return Graphiti.getGaService().createPlainRoundedRectangle(container, 0, 0);
 		}
 	}, 
 	ELLIPSE {
-		protected GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
 			return Graphiti.getGaService().createEllipse(container);
 		}
 	},
 	POLYLINE {
-		protected GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
 			Polyline p = (Polyline) element;
 			return p.isPolygon() ?
 					Graphiti.getGaService().createPolygon(container) :
@@ -42,56 +44,66 @@ public enum ElementCreation {
 	
 	
 	TRIANGLE {
-		protected GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
-			return Graphiti.getGaService().createPolygon(container, new int[] { 0, 0, -15, -10, -15, 10,  });
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
+			return Graphiti.getGaService().createPolygon(container, new int[] { 1, 0, -15, -10, -15, 10 });
 		}
 		
 		
 	},
 	
 	RHOMBUS {
-		protected GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
-			return Graphiti.getGaService().createPolygon(container, new int[] { 0, 0, -10, -10, -20, 0, -10, 10 });
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
+			return Graphiti.getGaService().createPolygon(container, new int[] { 1, 0, -10, -10, -20, 0, -10, 10 });
 		}
 	},
 	
 	LINE {
-		protected GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
-			return Graphiti.getGaService().createPolyline(container, new int[] { 0, 0, 20, 0});
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
+			Line line = (Line) element;
+			int[] points = line.isHorizontal() ?
+					new int[] { 0, 0, 10, 0} : new int[] { 0, 0, 0, 10};
+					
+			return Graphiti.getGaService().createPolyline(container, points);
+		}
+	},
+	
+	ARROW {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
+			return Graphiti.getGaService().createPolyline(container, new int[] { -10, 10, 1, 0, -10, -10 });
 		}
 	},
 	
 	
 	LABEL {
-		protected GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
 			return Graphiti.getGaService().createText(container);
 		}
 	},
 	
 	IMAGE {
-		protected GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
 			Image image = (Image) element;
 			return Graphiti.getGaService().createImage(container, image.getImageId());			
 		}
 	},
 	
 	INVISIBLE {
-		protected GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
 			return Graphiti.getGaService().createInvisibleRectangle((PictogramElement) container);
 		}
 	},
 	
 	CUSTOM {
-		protected GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
 			CustomFigure fig = ((Custom) element).getFigure();
 			return createNodeFigure(fig.getElement(), diagram, container);			
 		}
 	}
 	;
 
-	protected abstract GraphicsAlgorithm create(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container);
+	protected abstract GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container);
 
-	public static GraphicsAlgorithm createNodeFigure(ConnectableElement element, Diagram diagram, GraphicsAlgorithmContainer container) {
+	public static GraphicsAlgorithm createNodeFigure(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
 		String type = element.getClass().getInterfaces()[0].getSimpleName();
 		try	{
 			ElementCreation v = valueOf(type.toUpperCase());
@@ -103,24 +115,42 @@ public enum ElementCreation {
 		}
 	}	
 	
-	public static void updateTriangleSize(Polygon triangle, Size size) {
-		List<Point> points = triangle.getPoints();
+	
+	public static void updateLineSize(org.eclipse.graphiti.mm.algorithms.Polyline line, int length, boolean horizontal) {
+		List<Point> points = line.getPoints();
 		points.remove(1);
-		points.remove(1);
-		points.add(Graphiti.getGaCreateService().createPoint(-size.getHeight(), -size.getWidth()/2));
-		points.add(Graphiti.getGaCreateService().createPoint(-size.getHeight(), size.getWidth()/2));
+		int w = horizontal ? length : 0;
+		int h = horizontal ? 0 : length;
+		points.add(Graphiti.getGaCreateService().createPoint(w, h));
+	}
+	
+	public static void updateArrowSize(org.eclipse.graphiti.mm.algorithms.Polyline line, int width, int height) {
+		List<Point> points = line.getPoints();
+		points.clear();
+		points.add(Graphiti.getGaCreateService().createPoint(-width, width));
+		points.add(Graphiti.getGaCreateService().createPoint(1, 0));
+		points.add(Graphiti.getGaCreateService().createPoint(-height, -height));
+		
 	}
 	
 	
-	public static void updateRhombusSize(Polygon triangle, Size size) {
+	public static void updateTriangleSize(Polygon triangle, int width, int height) {
+		List<Point> points = triangle.getPoints();
+		points.remove(1);
+		points.remove(1);
+		points.add(Graphiti.getGaCreateService().createPoint(-height, -width/2));
+		points.add(Graphiti.getGaCreateService().createPoint(-height, width/2));
+	}
+	
+	
+	public static void updateRhombusSize(Polygon triangle, int width, int height) {
 		List<Point> points = triangle.getPoints();
 		points.remove(1);
 		points.remove(1);
 		points.remove(1);
-		
-		points.add(Graphiti.getGaCreateService().createPoint(-size.getHeight()/2, -size.getWidth()/2));
-		points.add(Graphiti.getGaCreateService().createPoint(-size.getHeight(), 0));
-		points.add(Graphiti.getGaCreateService().createPoint(-size.getHeight()/2, size.getWidth()/2));
+		points.add(Graphiti.getGaCreateService().createPoint(-height/2, -width/2));
+		points.add(Graphiti.getGaCreateService().createPoint(-height, 0));
+		points.add(Graphiti.getGaCreateService().createPoint(-height/2, width/2));
 		
 	}
 }

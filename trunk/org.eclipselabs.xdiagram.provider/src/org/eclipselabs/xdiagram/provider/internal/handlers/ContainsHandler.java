@@ -36,9 +36,9 @@ public class ContainsHandler implements FeatureHandler {
 		return references.containsKey(container);
 	}
 	
-	public Collection<Contains> getContainsFeature(ContainerShape container) {
-		return references.get(container); 
-	}
+//	public Collection<Contains> getContainsFeature(ContainerShape container) {
+//		return references.get(container); 
+//	}
 	
 	public Collection<EReference> getReferences(ContainerShape container) {
 		List<EReference> list = new ArrayList<>();
