@@ -69,28 +69,18 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 		attLabels = new ArrayList<Label>();
 		attValues = new ArrayList<Control>();
 	}
+	
 
 	@Override
 	public void refresh() {
 		PictogramElement pe = getSelectedPictogramElement();
 		if (pe != null && pe.getLink() != null) {
 			EObject eObject = (EObject) Graphiti.getLinkService().getBusinessObjectForLinkedPictogramElement(pe);
-
 			EClass eClass = eObject.eClass();
 			clear();
-
-			String name = eObject.toString();
-
-			Label toStringLabel =  new Label(composite, SWT.NONE);
-			toStringLabel.setText("To String:");
-			attLabels.add(toStringLabel);
-
-			Text toStringText = new Text(composite, SWT.BORDER | SWT.READ_ONLY);
-			toStringText.setText(name == null ? "" : name);
-			attValues.add(toStringText);
+//			addToStringDebug(eObject);
 
 			for(EAttribute att : eClass.getEAllAttributes()) {
-				//				attLabels.add(factory.createCLabel(composite, att.getName() + ":"));
 				Label l = new Label(composite, SWT.NONE);
 				l.setText(att.getName() + ":");
 				attLabels.add(l);
@@ -109,6 +99,19 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 		composite.getParent().update();
 	}
 
+
+	
+	private void addToStringDebug(EObject eObject) {
+		String name = eObject.toString();
+		Label toStringLabel =  new Label(composite, SWT.NONE);
+		toStringLabel.setText("To String:");
+		attLabels.add(toStringLabel);
+
+		Text toStringText = new Text(composite, SWT.BORDER | SWT.READ_ONLY);
+		toStringText.setText(name == null ? "" : name);
+		attValues.add(toStringText);
+	}
+
 	private void clear() {
 		for(Label label : attLabels)
 			label.dispose();
@@ -120,21 +123,20 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 		attValues.clear();
 	}
 
+	// TODO number support
 	private void createControl(final EObject eObject, final EAttribute att) {
 		Control control = null;
-
 		Object obj = eObject.eGet(att);
 		
-		if(att.getEAttributeType().getInstanceClass().equals(boolean.class)) {
+		if(att.getEAttributeType().getInstanceClass().equals(boolean.class))
 			control = handleBooleanElement(eObject, att, obj);
-		}
-		else if(att.getEAttributeType() instanceof EEnum) {
-			// TODO: listener
+		
+		else if(att.getEAttributeType() instanceof EEnum)
 			control = handleEnumElement(eObject, att, obj);
-		}
-		else if(att.getEAttributeType().getInstanceClass().equals(String.class)) {
+		
+		else if(att.getEAttributeType().getInstanceClass().equals(String.class))
 			control = handleStringElement(eObject, att, obj);
-		}
+		
 		attValues.add(control);		
 	}
 
