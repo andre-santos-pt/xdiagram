@@ -12,8 +12,6 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.ConnectableElement#isComposite <em>Composite</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.ConnectableElement#getLayout <em>Layout</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.ConnectableElement#getChildren <em>Children</em>}</li>
  * </ul>
  * </p>
@@ -25,63 +23,8 @@ import org.eclipse.emf.common.util.EList;
 public interface ConnectableElement extends FeatureContainer
 {
   /**
-   * Returns the value of the '<em><b>Composite</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Composite</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Composite</em>' attribute.
-   * @see #setComposite(boolean)
-   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getConnectableElement_Composite()
-   * @model
-   * @generated
-   */
-  boolean isComposite();
-
-  /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.ConnectableElement#isComposite <em>Composite</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Composite</em>' attribute.
-   * @see #isComposite()
-   * @generated
-   */
-  void setComposite(boolean value);
-
-  /**
-   * Returns the value of the '<em><b>Layout</b></em>' attribute.
-   * The literals are from the enumeration {@link org.eclipselabs.xdiagram.dsl.ContainerLayout}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Layout</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Layout</em>' attribute.
-   * @see org.eclipselabs.xdiagram.dsl.ContainerLayout
-   * @see #setLayout(ContainerLayout)
-   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getConnectableElement_Layout()
-   * @model
-   * @generated
-   */
-  ContainerLayout getLayout();
-
-  /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.ConnectableElement#getLayout <em>Layout</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Layout</em>' attribute.
-   * @see org.eclipselabs.xdiagram.dsl.ContainerLayout
-   * @see #getLayout()
-   * @generated
-   */
-  void setLayout(ContainerLayout value);
-
-  /**
    * Returns the value of the '<em><b>Children</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.dsl.ConnectableElement}.
+   * The list contents are of type {@link org.eclipselabs.xdiagram.dsl.FeatureContainer}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Children</em>' containment reference list isn't clear,
@@ -93,6 +36,6 @@ public interface ConnectableElement extends FeatureContainer
    * @model containment="true"
    * @generated
    */
-  EList<ConnectableElement> getChildren();
+  EList<FeatureContainer> getChildren();
 
 } // ConnectableElement

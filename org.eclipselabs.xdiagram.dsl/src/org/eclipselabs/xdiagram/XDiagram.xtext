@@ -61,11 +61,6 @@ Style:
 
 
 
-enum FigureType:
-	RECTANGLE='rectangle' |
-	ELLIPSE='ellipse'
-;
-
 
 /**
  * Every feature has to be added here, and have:
@@ -89,7 +84,11 @@ StyleFeature returns Feature:
 ;
 
 FeatureContainer:
-	ConnectableElement | Link | Style
+	ConnectableElement | DecoratorElement | Link | Style
+;
+
+ChildElement returns FeatureContainer:
+	ConnectableElement | Line | Arrow
 ;
 
 // validate ATT / Value
@@ -153,13 +152,10 @@ LinkFeature returns Feature:
 // TODO validation %
 // TODO validation children of decorator
 Decorator:
-	'decorator' position=PERCENT (conditional=FeatureConditional)? element = DecoratorElement
+	'decorator' position=INT '%' (conditional=FeatureConditional)? element = DecoratorElement
 ;
 
-// circle?
-DecoratorElement returns ConnectableElement:
-	Ellipse | Rhombus | Polyline | Triangle | Label//| Arrow | Triangle
-;
+
 
 
 
@@ -232,16 +228,37 @@ enum DefaultColor:
 /*
  * Every connectable element must be included here, and have:
  * (composite?='children:' children+=ConnectableElement+)?
+ * children+=ChildElement*
  * (styled?='+' style=[Style])?
  */
 ConnectableElement:
-	Rectangle | Rhombus | Ellipse | Polyline | Label | Image | Invisible | Custom | Triangle | Line
+	Rectangle | Rhombus | Ellipse | Polyline | Label | Image | Invisible | Custom | Triangle
 ;
+
+DecoratorElement returns FeatureContainer:
+	Ellipse | Rhombus | Polyline | Triangle | Label | Image | Arrow | Line
+;
+
+
+//LineElement returns Element:
+//	Arrow | Line
+//;
 
 
 ConnectableElementFeature returns Feature:
-	Position | Size | ColorFeature | LineStyle | LineWidth | Contains | Anchor
+	Position | Size | ColorFeature | LineStyle | LineWidth | Contains | Anchor | Layout | Visible
 ;
+
+
+Layout:
+	'layout' layout=ContainerLayout
+	(conditional=FeatureConditional)?	
+;
+
+Visible:
+	'invisible' conditional=FeatureConditional
+;
+
 
 CustomFigure:
 	'figure' name=ID 'as' element=ConnectableElement
@@ -254,14 +271,14 @@ CustomFigure:
 Custom:
 	'figure' figure=[CustomFigure] (styled?='+' style=[Style])? '{'
 		features+=LinkedFeature*
-		(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
+		children+=ChildElement*
 	'}'
 ;
 
 Rectangle:
 	(rectangle?='rectangle' | square?='square') (styled?='+' style=[Style])? '{'
 		features+=RectangleFeature*
-		(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
+		children+=ChildElement*
 	'}'
 ;
 
@@ -273,14 +290,14 @@ Rhombus:
 	{Rhombus}
 	'rhombus' (styled?='+' style=[Style])? '{'
 		features+=ConnectableElementFeature*
-		(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
+		children+=ChildElement*
 	'}'
 ;
 
 Ellipse:
 	(ellipse?='ellipse' | circle?='circle') (styled?='+' style=[Style])? '{'
 		features+=ConnectableElementFeature*
-		(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
+		children+=ChildElement*
 	'}'
 ;
 
@@ -291,7 +308,7 @@ Polyline:
 		features+=Point
 		features+=Point*
 		features+=ConnectableElementFeature*
-		(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
+		children+=ChildElement*
 	'}'
 ;
 
@@ -299,18 +316,29 @@ Triangle:
 	{Triangle}
 	'triangle' 	(styled?='+' style=[Style])? '{'
 		features+=ConnectableElementFeature*
-		(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
+		children+=ChildElement*
 	'}'
 ;
+
+
 
 Line:
 	{Line}
-	'line' (styled?='+' style=[Style])? '{'
-		features+=ConnectableElementFeature*
-		(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
+	(horizontal?='hline' | vertical?='vline') (styled?='+' style=[Style])? '{'
+		features+=LineFeature*
 	'}'
 ;
 
+LineFeature returns Feature:
+	LineWidth | Foreground | Position | Size | Visible
+;
+
+Arrow:
+	{Arrow}
+	'arrow' (styled?='+' style=[Style])? '{'
+		features+=LineFeature*
+	'}'
+;
 
 
 
@@ -323,15 +351,15 @@ Line:
 
 // TODO validation: contains of conflict types
 Contains:
-'contains' modelReference=[ecore::EReference|QualifiedName] 
-(conditional=FeatureConditional)? (layout=ContainerLayout)?
+'container' modelReference=[ecore::EReference|QualifiedName] 
+(conditional=FeatureConditional)?
 ;
 
 
 enum ContainerLayout:
 	FREE='free' |
-	VSTACK='vstack' |
-	HSTACK='hstack'
+	VSTACK='vertical' |
+	HSTACK='horizontal'
 ;
 
 //TODO < > <= =>
@@ -387,12 +415,12 @@ Label:
 	{Label}
 	'label' (styled?='+' style=[Style])? '{'
 	features+=LabelFeature*
-	(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
+	children+=ChildElement*
 	'}'
 ;
 
 LabelFeature returns Feature:
-	TextValue | Foreground | FontFace | FontSize | FontStyle | Size | Position
+	TextValue | Foreground | FontFace | FontSize | FontStyle | Size | Position | Visible
 ;
 
 
@@ -400,7 +428,7 @@ LabelFeature returns Feature:
 Image:
 	'image' imageId=ID (styled?='+' style=[Style])? '{'
 	features+=ImageFeature*
-	(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
+	children+=ChildElement*
 	'}'
 ;
 
@@ -413,12 +441,12 @@ Invisible:
 	{Invisible}
 	'invisible' (styled?='+' style=[Style])? '{'
 	features+=InvisibleFeature*
-	(composite?='children' (layout=ContainerLayout)? ':' children+=ConnectableElement+)?
+	children+=ChildElement*
 	'}'
 ;
 
 InvisibleFeature returns Feature:
-	Size | Position | LinkedFeature
+	Size | Position | LinkedFeature | Layout
 ;
 
 
@@ -445,7 +473,7 @@ Background returns ColorFeature:
 
 
 Transparency:
-	'transparency' percent=PERCENT
+	'transparency' percent=INT '%'
 	(conditional=FeatureConditional)?
 ;
 
@@ -454,7 +482,7 @@ Transparency:
 
 
 Size:
-	'size' width=INT ('x' height=INT)?
+	'size' width=INT (widthRelative?='%')? ('x' height=INT (heightRelative?='%')?)?
 	(conditional=FeatureConditional)?
 ;
 
@@ -485,8 +513,13 @@ Corner:
 
 // TODO: validation of owned attribute
 TextValue:
-	'text' (text=STRING | modelAttribute=[ecore::EAttribute|QualifiedName])
+	{TextValue}
+	'text' parts+=TextPart*
 	(conditional=FeatureConditional)?
+;
+
+TextPart:
+	text=STRING | modelAttribute=[ecore::EAttribute|QualifiedName]
 ;
 
 FontFace:
@@ -552,7 +585,7 @@ LineWidth:
 //---------------------------------
 // Terminals
 
-terminal PERCENT: ('0'|('1'..'9')(('0'..'9'))?|'100') '%';
+//terminal PERCENT: ('0'|('1'..'9')(('0'..'9'))?|'100');
 
 //terminal S: (' '|'\t')+;
 

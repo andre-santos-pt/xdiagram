@@ -5,25 +5,25 @@ package org.eclipselabs.xdiagram.dsl.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipselabs.xdiagram.dsl.DslPackage;
-import org.eclipselabs.xdiagram.dsl.Label;
+import org.eclipselabs.xdiagram.dsl.Visible;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Label</b></em>'.
+ * An implementation of the model object '<em><b>Visible</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class LabelImpl extends ConnectableElementImpl implements Label
+public class VisibleImpl extends FeatureImpl implements Visible
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected LabelImpl()
+  protected VisibleImpl()
   {
     super();
   }
@@ -36,7 +36,7 @@ public class LabelImpl extends ConnectableElementImpl implements Label
   @Override
   protected EClass eStaticClass()
   {
-    return DslPackage.Literals.LABEL;
+    return DslPackage.Literals.VISIBLE;
   }
 
-} //LabelImpl
+} //VisibleImpl

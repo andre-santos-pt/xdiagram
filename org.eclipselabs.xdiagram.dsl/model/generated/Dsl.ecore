@@ -40,10 +40,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Style" eSuperTypes="#//FeatureContainer">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="FigureType">
-    <eLiterals name="RECTANGLE" literal="rectangle"/>
-    <eLiterals name="ELLIPSE" value="1" literal="ellipse"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Feature">
     <eStructuralFeatures xsi:type="ecore:EReference" name="conditional" eType="#//FeatureConditional"
         containment="true"/>
@@ -65,6 +61,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//DiagramElement #//FeatureContainer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reference" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modelReference" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="complex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceReference" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
@@ -76,15 +73,9 @@
     <eLiterals name="MANHATTAN" value="1" literal="manhattan"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Decorator" eSuperTypes="#//Feature">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//ConnectableElement"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//FeatureContainer"
         containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConnectableElement" eSuperTypes="#//FeatureContainer">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="composite" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout" eType="#//ContainerLayout"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
-        eType="#//ConnectableElement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Anchor" eSuperTypes="#//Feature">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="#//AnchorDirection"/>
@@ -122,6 +113,14 @@
     <eLiterals name="FUCHSIA" value="14" literal="fuchsia"/>
     <eLiterals name="PURPLE" value="15" literal="purple"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectableElement" eSuperTypes="#//FeatureContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//FeatureContainer" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Layout" eSuperTypes="#//Feature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout" eType="#//ContainerLayout"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Visible" eSuperTypes="#//Feature"/>
   <eClassifiers xsi:type="ecore:EClass" name="CustomFigure">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//ConnectableElement"
@@ -144,15 +143,18 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="polyline" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Triangle" eSuperTypes="#//ConnectableElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Line" eSuperTypes="#//ConnectableElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Line" eSuperTypes="#//FeatureContainer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="horizontal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vertical" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Arrow" eSuperTypes="#//FeatureContainer"/>
   <eClassifiers xsi:type="ecore:EClass" name="Contains" eSuperTypes="#//Feature">
     <eStructuralFeatures xsi:type="ecore:EReference" name="modelReference" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout" eType="#//ContainerLayout"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ContainerLayout">
     <eLiterals name="FREE" literal="free"/>
-    <eLiterals name="VSTACK" value="1" literal="vstack"/>
-    <eLiterals name="HSTACK" value="2" literal="hstack"/>
+    <eLiterals name="VSTACK" value="1" literal="vertical"/>
+    <eLiterals name="HSTACK" value="2" literal="horizontal"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Operator">
     <eLiterals name="EQUAL" literal="="/>
@@ -180,9 +182,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="EnumValue" eSuperTypes="#//Value">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Label" eSuperTypes="#//ConnectableElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="editable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Label" eSuperTypes="#//ConnectableElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//ConnectableElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="imageId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -193,11 +193,13 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transparency" eSuperTypes="#//Feature">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Size" eSuperTypes="#//Feature">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="widthRelative" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="heightRelative" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Point" eSuperTypes="#//Feature">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -213,6 +215,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="angle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TextValue" eSuperTypes="#//Feature">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parts" upperBound="-1"
+        eType="#//TextPart" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TextPart">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modelAttribute" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
   </eClassifiers>

@@ -135,11 +135,6 @@ public class DslAdapterFactory extends AdapterFactoryImpl
         return createDecoratorAdapter();
       }
       @Override
-      public Adapter caseConnectableElement(ConnectableElement object)
-      {
-        return createConnectableElementAdapter();
-      }
-      @Override
       public Adapter caseAnchor(Anchor object)
       {
         return createAnchorAdapter();
@@ -153,6 +148,21 @@ public class DslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseColor(Color object)
       {
         return createColorAdapter();
+      }
+      @Override
+      public Adapter caseConnectableElement(ConnectableElement object)
+      {
+        return createConnectableElementAdapter();
+      }
+      @Override
+      public Adapter caseLayout(Layout object)
+      {
+        return createLayoutAdapter();
+      }
+      @Override
+      public Adapter caseVisible(Visible object)
+      {
+        return createVisibleAdapter();
       }
       @Override
       public Adapter caseCustomFigure(CustomFigure object)
@@ -193,6 +203,11 @@ public class DslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseLine(Line object)
       {
         return createLineAdapter();
+      }
+      @Override
+      public Adapter caseArrow(Arrow object)
+      {
+        return createArrowAdapter();
       }
       @Override
       public Adapter caseContains(Contains object)
@@ -278,6 +293,11 @@ public class DslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseTextValue(TextValue object)
       {
         return createTextValueAdapter();
+      }
+      @Override
+      public Adapter caseTextPart(TextPart object)
+      {
+        return createTextPartAdapter();
       }
       @Override
       public Adapter caseFontFace(FontFace object)
@@ -507,21 +527,6 @@ public class DslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.ConnectableElement <em>Connectable Element</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.dsl.ConnectableElement
-   * @generated
-   */
-  public Adapter createConnectableElementAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Anchor <em>Anchor</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -562,6 +567,51 @@ public class DslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createColorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.ConnectableElement <em>Connectable Element</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.dsl.ConnectableElement
+   * @generated
+   */
+  public Adapter createConnectableElementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Layout <em>Layout</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.dsl.Layout
+   * @generated
+   */
+  public Adapter createLayoutAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Visible <em>Visible</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.dsl.Visible
+   * @generated
+   */
+  public Adapter createVisibleAdapter()
   {
     return null;
   }
@@ -682,6 +732,21 @@ public class DslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createLineAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Arrow <em>Arrow</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.dsl.Arrow
+   * @generated
+   */
+  public Adapter createArrowAdapter()
   {
     return null;
   }
@@ -937,6 +1002,21 @@ public class DslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTextValueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.TextPart <em>Text Part</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.dsl.TextPart
+   * @generated
+   */
+  public Adapter createTextPartAdapter()
   {
     return null;
   }

@@ -161,14 +161,6 @@ public class DslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DslPackage.CONNECTABLE_ELEMENT:
-      {
-        ConnectableElement connectableElement = (ConnectableElement)theEObject;
-        T result = caseConnectableElement(connectableElement);
-        if (result == null) result = caseFeatureContainer(connectableElement);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case DslPackage.ANCHOR:
       {
         Anchor anchor = (Anchor)theEObject;
@@ -188,6 +180,30 @@ public class DslSwitch<T> extends Switch<T>
       {
         Color color = (Color)theEObject;
         T result = caseColor(color);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DslPackage.CONNECTABLE_ELEMENT:
+      {
+        ConnectableElement connectableElement = (ConnectableElement)theEObject;
+        T result = caseConnectableElement(connectableElement);
+        if (result == null) result = caseFeatureContainer(connectableElement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DslPackage.LAYOUT:
+      {
+        Layout layout = (Layout)theEObject;
+        T result = caseLayout(layout);
+        if (result == null) result = caseFeature(layout);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DslPackage.VISIBLE:
+      {
+        Visible visible = (Visible)theEObject;
+        T result = caseVisible(visible);
+        if (result == null) result = caseFeature(visible);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -256,8 +272,15 @@ public class DslSwitch<T> extends Switch<T>
       {
         Line line = (Line)theEObject;
         T result = caseLine(line);
-        if (result == null) result = caseConnectableElement(line);
         if (result == null) result = caseFeatureContainer(line);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DslPackage.ARROW:
+      {
+        Arrow arrow = (Arrow)theEObject;
+        T result = caseArrow(arrow);
+        if (result == null) result = caseFeatureContainer(arrow);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -396,6 +419,13 @@ public class DslSwitch<T> extends Switch<T>
         TextValue textValue = (TextValue)theEObject;
         T result = caseTextValue(textValue);
         if (result == null) result = caseFeature(textValue);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DslPackage.TEXT_PART:
+      {
+        TextPart textPart = (TextPart)theEObject;
+        T result = caseTextPart(textPart);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -636,22 +666,6 @@ public class DslSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Connectable Element</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Connectable Element</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseConnectableElement(ConnectableElement object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Anchor</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -695,6 +709,54 @@ public class DslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseColor(Color object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Connectable Element</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Connectable Element</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseConnectableElement(ConnectableElement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Layout</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Layout</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLayout(Layout object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Visible</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Visible</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVisible(Visible object)
   {
     return null;
   }
@@ -823,6 +885,22 @@ public class DslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseLine(Line object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Arrow</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Arrow</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseArrow(Arrow object)
   {
     return null;
   }
@@ -1095,6 +1173,22 @@ public class DslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTextValue(TextValue object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Text Part</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Text Part</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTextPart(TextPart object)
   {
     return null;
   }

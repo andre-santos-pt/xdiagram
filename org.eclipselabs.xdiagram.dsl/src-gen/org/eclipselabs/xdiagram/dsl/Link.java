@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EReference;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#isReference <em>Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#getModelReference <em>Model Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#isComplex <em>Complex</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#getSourceReference <em>Source Reference</em>}</li>
@@ -26,6 +27,32 @@ import org.eclipse.emf.ecore.EReference;
  */
 public interface Link extends DiagramElement, FeatureContainer
 {
+  /**
+   * Returns the value of the '<em><b>Reference</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Reference</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Reference</em>' attribute.
+   * @see #setReference(boolean)
+   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getLink_Reference()
+   * @model
+   * @generated
+   */
+  boolean isReference();
+
+  /**
+   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.Link#isReference <em>Reference</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Reference</em>' attribute.
+   * @see #isReference()
+   * @generated
+   */
+  void setReference(boolean value);
+
   /**
    * Returns the value of the '<em><b>Model Reference</b></em>' reference.
    * <!-- begin-user-doc -->

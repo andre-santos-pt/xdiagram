@@ -2,15 +2,20 @@
  */
 package org.eclipselabs.xdiagram.dsl.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
 
-import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipselabs.xdiagram.dsl.DslPackage;
+import org.eclipselabs.xdiagram.dsl.TextPart;
 import org.eclipselabs.xdiagram.dsl.TextValue;
 
 /**
@@ -20,8 +25,7 @@ import org.eclipselabs.xdiagram.dsl.TextValue;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.TextValueImpl#getText <em>Text</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.TextValueImpl#getModelAttribute <em>Model Attribute</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.TextValueImpl#getParts <em>Parts</em>}</li>
  * </ul>
  * </p>
  *
@@ -30,34 +34,14 @@ import org.eclipselabs.xdiagram.dsl.TextValue;
 public class TextValueImpl extends FeatureImpl implements TextValue
 {
   /**
-   * The default value of the '{@link #getText() <em>Text</em>}' attribute.
+   * The cached value of the '{@link #getParts() <em>Parts</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getText()
+   * @see #getParts()
    * @generated
    * @ordered
    */
-  protected static final String TEXT_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getText()
-   * @generated
-   * @ordered
-   */
-  protected String text = TEXT_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getModelAttribute() <em>Model Attribute</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getModelAttribute()
-   * @generated
-   * @ordered
-   */
-  protected EAttribute modelAttribute;
+  protected EList<TextPart> parts;
 
   /**
    * <!-- begin-user-doc -->
@@ -85,42 +69,13 @@ public class TextValueImpl extends FeatureImpl implements TextValue
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getText()
+  public EList<TextPart> getParts()
   {
-    return text;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setText(String newText)
-  {
-    String oldText = text;
-    text = newText;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.TEXT_VALUE__TEXT, oldText, text));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getModelAttribute()
-  {
-    if (modelAttribute != null && modelAttribute.eIsProxy())
+    if (parts == null)
     {
-      InternalEObject oldModelAttribute = (InternalEObject)modelAttribute;
-      modelAttribute = (EAttribute)eResolveProxy(oldModelAttribute);
-      if (modelAttribute != oldModelAttribute)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, DslPackage.TEXT_VALUE__MODEL_ATTRIBUTE, oldModelAttribute, modelAttribute));
-      }
+      parts = new EObjectContainmentEList<TextPart>(TextPart.class, this, DslPackage.TEXT_VALUE__PARTS);
     }
-    return modelAttribute;
+    return parts;
   }
 
   /**
@@ -128,22 +83,15 @@ public class TextValueImpl extends FeatureImpl implements TextValue
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute basicGetModelAttribute()
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    return modelAttribute;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setModelAttribute(EAttribute newModelAttribute)
-  {
-    EAttribute oldModelAttribute = modelAttribute;
-    modelAttribute = newModelAttribute;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.TEXT_VALUE__MODEL_ATTRIBUTE, oldModelAttribute, modelAttribute));
+    switch (featureID)
+    {
+      case DslPackage.TEXT_VALUE__PARTS:
+        return ((InternalEList<?>)getParts()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -156,11 +104,8 @@ public class TextValueImpl extends FeatureImpl implements TextValue
   {
     switch (featureID)
     {
-      case DslPackage.TEXT_VALUE__TEXT:
-        return getText();
-      case DslPackage.TEXT_VALUE__MODEL_ATTRIBUTE:
-        if (resolve) return getModelAttribute();
-        return basicGetModelAttribute();
+      case DslPackage.TEXT_VALUE__PARTS:
+        return getParts();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -170,16 +115,15 @@ public class TextValueImpl extends FeatureImpl implements TextValue
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case DslPackage.TEXT_VALUE__TEXT:
-        setText((String)newValue);
-        return;
-      case DslPackage.TEXT_VALUE__MODEL_ATTRIBUTE:
-        setModelAttribute((EAttribute)newValue);
+      case DslPackage.TEXT_VALUE__PARTS:
+        getParts().clear();
+        getParts().addAll((Collection<? extends TextPart>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -195,11 +139,8 @@ public class TextValueImpl extends FeatureImpl implements TextValue
   {
     switch (featureID)
     {
-      case DslPackage.TEXT_VALUE__TEXT:
-        setText(TEXT_EDEFAULT);
-        return;
-      case DslPackage.TEXT_VALUE__MODEL_ATTRIBUTE:
-        setModelAttribute((EAttribute)null);
+      case DslPackage.TEXT_VALUE__PARTS:
+        getParts().clear();
         return;
     }
     super.eUnset(featureID);
@@ -215,29 +156,10 @@ public class TextValueImpl extends FeatureImpl implements TextValue
   {
     switch (featureID)
     {
-      case DslPackage.TEXT_VALUE__TEXT:
-        return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
-      case DslPackage.TEXT_VALUE__MODEL_ATTRIBUTE:
-        return modelAttribute != null;
+      case DslPackage.TEXT_VALUE__PARTS:
+        return parts != null && !parts.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (text: ");
-    result.append(text);
-    result.append(')');
-    return result.toString();
   }
 
 } //TextValueImpl

@@ -31,12 +31,12 @@ public interface Decorator extends Feature
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Position</em>' attribute.
-   * @see #setPosition(String)
+   * @see #setPosition(int)
    * @see org.eclipselabs.xdiagram.dsl.DslPackage#getDecorator_Position()
    * @model
    * @generated
    */
-  String getPosition();
+  int getPosition();
 
   /**
    * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.Decorator#getPosition <em>Position</em>}' attribute.
@@ -46,7 +46,7 @@ public interface Decorator extends Feature
    * @see #getPosition()
    * @generated
    */
-  void setPosition(String value);
+  void setPosition(int value);
 
   /**
    * Returns the value of the '<em><b>Element</b></em>' containment reference.
@@ -57,12 +57,12 @@ public interface Decorator extends Feature
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Element</em>' containment reference.
-   * @see #setElement(ConnectableElement)
+   * @see #setElement(FeatureContainer)
    * @see org.eclipselabs.xdiagram.dsl.DslPackage#getDecorator_Element()
    * @model containment="true"
    * @generated
    */
-  ConnectableElement getElement();
+  FeatureContainer getElement();
 
   /**
    * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.Decorator#getElement <em>Element</em>}' containment reference.
@@ -72,6 +72,6 @@ public interface Decorator extends Feature
    * @see #getElement()
    * @generated
    */
-  void setElement(ConnectableElement value);
+  void setElement(FeatureContainer value);
 
 } // Decorator

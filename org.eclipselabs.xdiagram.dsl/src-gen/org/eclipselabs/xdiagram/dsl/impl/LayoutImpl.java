@@ -8,50 +8,51 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipselabs.xdiagram.dsl.ContainerLayout;
 import org.eclipselabs.xdiagram.dsl.DslPackage;
-import org.eclipselabs.xdiagram.dsl.Transparency;
+import org.eclipselabs.xdiagram.dsl.Layout;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Transparency</b></em>'.
+ * An implementation of the model object '<em><b>Layout</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.TransparencyImpl#getPercent <em>Percent</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LayoutImpl#getLayout <em>Layout</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class TransparencyImpl extends FeatureImpl implements Transparency
+public class LayoutImpl extends FeatureImpl implements Layout
 {
   /**
-   * The default value of the '{@link #getPercent() <em>Percent</em>}' attribute.
+   * The default value of the '{@link #getLayout() <em>Layout</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPercent()
+   * @see #getLayout()
    * @generated
    * @ordered
    */
-  protected static final int PERCENT_EDEFAULT = 0;
+  protected static final ContainerLayout LAYOUT_EDEFAULT = ContainerLayout.FREE;
 
   /**
-   * The cached value of the '{@link #getPercent() <em>Percent</em>}' attribute.
+   * The cached value of the '{@link #getLayout() <em>Layout</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPercent()
+   * @see #getLayout()
    * @generated
    * @ordered
    */
-  protected int percent = PERCENT_EDEFAULT;
+  protected ContainerLayout layout = LAYOUT_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected TransparencyImpl()
+  protected LayoutImpl()
   {
     super();
   }
@@ -64,7 +65,7 @@ public class TransparencyImpl extends FeatureImpl implements Transparency
   @Override
   protected EClass eStaticClass()
   {
-    return DslPackage.Literals.TRANSPARENCY;
+    return DslPackage.Literals.LAYOUT;
   }
 
   /**
@@ -72,9 +73,9 @@ public class TransparencyImpl extends FeatureImpl implements Transparency
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getPercent()
+  public ContainerLayout getLayout()
   {
-    return percent;
+    return layout;
   }
 
   /**
@@ -82,12 +83,12 @@ public class TransparencyImpl extends FeatureImpl implements Transparency
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPercent(int newPercent)
+  public void setLayout(ContainerLayout newLayout)
   {
-    int oldPercent = percent;
-    percent = newPercent;
+    ContainerLayout oldLayout = layout;
+    layout = newLayout == null ? LAYOUT_EDEFAULT : newLayout;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.TRANSPARENCY__PERCENT, oldPercent, percent));
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.LAYOUT__LAYOUT, oldLayout, layout));
   }
 
   /**
@@ -100,8 +101,8 @@ public class TransparencyImpl extends FeatureImpl implements Transparency
   {
     switch (featureID)
     {
-      case DslPackage.TRANSPARENCY__PERCENT:
-        return getPercent();
+      case DslPackage.LAYOUT__LAYOUT:
+        return getLayout();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -116,8 +117,8 @@ public class TransparencyImpl extends FeatureImpl implements Transparency
   {
     switch (featureID)
     {
-      case DslPackage.TRANSPARENCY__PERCENT:
-        setPercent((Integer)newValue);
+      case DslPackage.LAYOUT__LAYOUT:
+        setLayout((ContainerLayout)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -133,8 +134,8 @@ public class TransparencyImpl extends FeatureImpl implements Transparency
   {
     switch (featureID)
     {
-      case DslPackage.TRANSPARENCY__PERCENT:
-        setPercent(PERCENT_EDEFAULT);
+      case DslPackage.LAYOUT__LAYOUT:
+        setLayout(LAYOUT_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -150,8 +151,8 @@ public class TransparencyImpl extends FeatureImpl implements Transparency
   {
     switch (featureID)
     {
-      case DslPackage.TRANSPARENCY__PERCENT:
-        return percent != PERCENT_EDEFAULT;
+      case DslPackage.LAYOUT__LAYOUT:
+        return layout != LAYOUT_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -167,10 +168,10 @@ public class TransparencyImpl extends FeatureImpl implements Transparency
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (percent: ");
-    result.append(percent);
+    result.append(" (layout: ");
+    result.append(layout);
     result.append(')');
     return result.toString();
   }
 
-} //TransparencyImpl
+} //LayoutImpl

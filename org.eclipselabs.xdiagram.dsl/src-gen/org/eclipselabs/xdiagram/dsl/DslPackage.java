@@ -618,13 +618,22 @@ public interface DslPackage extends EPackage
   int LINK__FEATURES = DIAGRAM_ELEMENT_FEATURE_COUNT + 2;
 
   /**
+   * The feature id for the '<em><b>Reference</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LINK__REFERENCE = DIAGRAM_ELEMENT_FEATURE_COUNT + 3;
+
+  /**
    * The feature id for the '<em><b>Model Reference</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LINK__MODEL_REFERENCE = DIAGRAM_ELEMENT_FEATURE_COUNT + 3;
+  int LINK__MODEL_REFERENCE = DIAGRAM_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Complex</b></em>' attribute.
@@ -633,7 +642,7 @@ public interface DslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINK__COMPLEX = DIAGRAM_ELEMENT_FEATURE_COUNT + 4;
+  int LINK__COMPLEX = DIAGRAM_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Source Reference</b></em>' reference.
@@ -642,7 +651,7 @@ public interface DslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINK__SOURCE_REFERENCE = DIAGRAM_ELEMENT_FEATURE_COUNT + 5;
+  int LINK__SOURCE_REFERENCE = DIAGRAM_ELEMENT_FEATURE_COUNT + 6;
 
   /**
    * The feature id for the '<em><b>Target Reference</b></em>' reference.
@@ -651,7 +660,7 @@ public interface DslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINK__TARGET_REFERENCE = DIAGRAM_ELEMENT_FEATURE_COUNT + 6;
+  int LINK__TARGET_REFERENCE = DIAGRAM_ELEMENT_FEATURE_COUNT + 7;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -660,7 +669,7 @@ public interface DslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINK__TYPE = DIAGRAM_ELEMENT_FEATURE_COUNT + 7;
+  int LINK__TYPE = DIAGRAM_ELEMENT_FEATURE_COUNT + 8;
 
   /**
    * The number of structural features of the '<em>Link</em>' class.
@@ -669,7 +678,7 @@ public interface DslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINK_FEATURE_COUNT = DIAGRAM_ELEMENT_FEATURE_COUNT + 8;
+  int LINK_FEATURE_COUNT = DIAGRAM_ELEMENT_FEATURE_COUNT + 9;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.impl.DecoratorImpl <em>Decorator</em>}' class.
@@ -718,79 +727,6 @@ public interface DslPackage extends EPackage
   int DECORATOR_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.impl.ConnectableElementImpl <em>Connectable Element</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.dsl.impl.ConnectableElementImpl
-   * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getConnectableElement()
-   * @generated
-   */
-  int CONNECTABLE_ELEMENT = 12;
-
-  /**
-   * The feature id for the '<em><b>Styled</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONNECTABLE_ELEMENT__STYLED = FEATURE_CONTAINER__STYLED;
-
-  /**
-   * The feature id for the '<em><b>Style</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONNECTABLE_ELEMENT__STYLE = FEATURE_CONTAINER__STYLE;
-
-  /**
-   * The feature id for the '<em><b>Features</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONNECTABLE_ELEMENT__FEATURES = FEATURE_CONTAINER__FEATURES;
-
-  /**
-   * The feature id for the '<em><b>Composite</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONNECTABLE_ELEMENT__COMPOSITE = FEATURE_CONTAINER_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Layout</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONNECTABLE_ELEMENT__LAYOUT = FEATURE_CONTAINER_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Children</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONNECTABLE_ELEMENT__CHILDREN = FEATURE_CONTAINER_FEATURE_COUNT + 2;
-
-  /**
-   * The number of structural features of the '<em>Connectable Element</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONNECTABLE_ELEMENT_FEATURE_COUNT = FEATURE_CONTAINER_FEATURE_COUNT + 3;
-
-  /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.impl.AnchorImpl <em>Anchor</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -798,7 +734,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getAnchor()
    * @generated
    */
-  int ANCHOR = 13;
+  int ANCHOR = 12;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -844,7 +780,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getCustomColor()
    * @generated
    */
-  int CUSTOM_COLOR = 14;
+  int CUSTOM_COLOR = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -899,7 +835,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getColor()
    * @generated
    */
-  int COLOR = 15;
+  int COLOR = 14;
 
   /**
    * The feature id for the '<em><b>Default</b></em>' attribute.
@@ -929,6 +865,126 @@ public interface DslPackage extends EPackage
   int COLOR_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.impl.ConnectableElementImpl <em>Connectable Element</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.dsl.impl.ConnectableElementImpl
+   * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getConnectableElement()
+   * @generated
+   */
+  int CONNECTABLE_ELEMENT = 15;
+
+  /**
+   * The feature id for the '<em><b>Styled</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONNECTABLE_ELEMENT__STYLED = FEATURE_CONTAINER__STYLED;
+
+  /**
+   * The feature id for the '<em><b>Style</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONNECTABLE_ELEMENT__STYLE = FEATURE_CONTAINER__STYLE;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONNECTABLE_ELEMENT__FEATURES = FEATURE_CONTAINER__FEATURES;
+
+  /**
+   * The feature id for the '<em><b>Children</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONNECTABLE_ELEMENT__CHILDREN = FEATURE_CONTAINER_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Connectable Element</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONNECTABLE_ELEMENT_FEATURE_COUNT = FEATURE_CONTAINER_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.impl.LayoutImpl <em>Layout</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.dsl.impl.LayoutImpl
+   * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getLayout()
+   * @generated
+   */
+  int LAYOUT = 16;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LAYOUT__CONDITIONAL = FEATURE__CONDITIONAL;
+
+  /**
+   * The feature id for the '<em><b>Layout</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LAYOUT__LAYOUT = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Layout</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LAYOUT_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.impl.VisibleImpl <em>Visible</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.dsl.impl.VisibleImpl
+   * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getVisible()
+   * @generated
+   */
+  int VISIBLE = 17;
+
+  /**
+   * The feature id for the '<em><b>Conditional</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VISIBLE__CONDITIONAL = FEATURE__CONDITIONAL;
+
+  /**
+   * The number of structural features of the '<em>Visible</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VISIBLE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.impl.CustomFigureImpl <em>Custom Figure</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -936,7 +992,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getCustomFigure()
    * @generated
    */
-  int CUSTOM_FIGURE = 16;
+  int CUSTOM_FIGURE = 18;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -973,7 +1029,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getCustom()
    * @generated
    */
-  int CUSTOM = 17;
+  int CUSTOM = 19;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1001,24 +1057,6 @@ public interface DslPackage extends EPackage
    * @ordered
    */
   int CUSTOM__FEATURES = CONNECTABLE_ELEMENT__FEATURES;
-
-  /**
-   * The feature id for the '<em><b>Composite</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CUSTOM__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
-
-  /**
-   * The feature id for the '<em><b>Layout</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CUSTOM__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
 
   /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -1055,7 +1093,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getRectangle()
    * @generated
    */
-  int RECTANGLE = 18;
+  int RECTANGLE = 20;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1083,24 +1121,6 @@ public interface DslPackage extends EPackage
    * @ordered
    */
   int RECTANGLE__FEATURES = CONNECTABLE_ELEMENT__FEATURES;
-
-  /**
-   * The feature id for the '<em><b>Composite</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RECTANGLE__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
-
-  /**
-   * The feature id for the '<em><b>Layout</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RECTANGLE__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
 
   /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -1146,7 +1166,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getRhombus()
    * @generated
    */
-  int RHOMBUS = 19;
+  int RHOMBUS = 21;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1176,24 +1196,6 @@ public interface DslPackage extends EPackage
   int RHOMBUS__FEATURES = CONNECTABLE_ELEMENT__FEATURES;
 
   /**
-   * The feature id for the '<em><b>Composite</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RHOMBUS__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
-
-  /**
-   * The feature id for the '<em><b>Layout</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RHOMBUS__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
-
-  /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1219,7 +1221,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getEllipse()
    * @generated
    */
-  int ELLIPSE = 20;
+  int ELLIPSE = 22;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1247,24 +1249,6 @@ public interface DslPackage extends EPackage
    * @ordered
    */
   int ELLIPSE__FEATURES = CONNECTABLE_ELEMENT__FEATURES;
-
-  /**
-   * The feature id for the '<em><b>Composite</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ELLIPSE__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
-
-  /**
-   * The feature id for the '<em><b>Layout</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ELLIPSE__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
 
   /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -1310,7 +1294,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getPolyline()
    * @generated
    */
-  int POLYLINE = 21;
+  int POLYLINE = 23;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1338,24 +1322,6 @@ public interface DslPackage extends EPackage
    * @ordered
    */
   int POLYLINE__FEATURES = CONNECTABLE_ELEMENT__FEATURES;
-
-  /**
-   * The feature id for the '<em><b>Composite</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POLYLINE__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
-
-  /**
-   * The feature id for the '<em><b>Layout</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POLYLINE__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
 
   /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -1401,7 +1367,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getTriangle()
    * @generated
    */
-  int TRIANGLE = 22;
+  int TRIANGLE = 24;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1431,24 +1397,6 @@ public interface DslPackage extends EPackage
   int TRIANGLE__FEATURES = CONNECTABLE_ELEMENT__FEATURES;
 
   /**
-   * The feature id for the '<em><b>Composite</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TRIANGLE__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
-
-  /**
-   * The feature id for the '<em><b>Layout</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TRIANGLE__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
-
-  /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1474,7 +1422,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getLine()
    * @generated
    */
-  int LINE = 23;
+  int LINE = 25;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1483,7 +1431,7 @@ public interface DslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINE__STYLED = CONNECTABLE_ELEMENT__STYLED;
+  int LINE__STYLED = FEATURE_CONTAINER__STYLED;
 
   /**
    * The feature id for the '<em><b>Style</b></em>' reference.
@@ -1492,7 +1440,7 @@ public interface DslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINE__STYLE = CONNECTABLE_ELEMENT__STYLE;
+  int LINE__STYLE = FEATURE_CONTAINER__STYLE;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -1501,34 +1449,25 @@ public interface DslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINE__FEATURES = CONNECTABLE_ELEMENT__FEATURES;
+  int LINE__FEATURES = FEATURE_CONTAINER__FEATURES;
 
   /**
-   * The feature id for the '<em><b>Composite</b></em>' attribute.
+   * The feature id for the '<em><b>Horizontal</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LINE__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
+  int LINE__HORIZONTAL = FEATURE_CONTAINER_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Layout</b></em>' attribute.
+   * The feature id for the '<em><b>Vertical</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LINE__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
-
-  /**
-   * The feature id for the '<em><b>Children</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LINE__CHILDREN = CONNECTABLE_ELEMENT__CHILDREN;
+  int LINE__VERTICAL = FEATURE_CONTAINER_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Line</em>' class.
@@ -1537,7 +1476,53 @@ public interface DslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINE_FEATURE_COUNT = CONNECTABLE_ELEMENT_FEATURE_COUNT + 0;
+  int LINE_FEATURE_COUNT = FEATURE_CONTAINER_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.impl.ArrowImpl <em>Arrow</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.dsl.impl.ArrowImpl
+   * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getArrow()
+   * @generated
+   */
+  int ARROW = 26;
+
+  /**
+   * The feature id for the '<em><b>Styled</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARROW__STYLED = FEATURE_CONTAINER__STYLED;
+
+  /**
+   * The feature id for the '<em><b>Style</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARROW__STYLE = FEATURE_CONTAINER__STYLE;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARROW__FEATURES = FEATURE_CONTAINER__FEATURES;
+
+  /**
+   * The number of structural features of the '<em>Arrow</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARROW_FEATURE_COUNT = FEATURE_CONTAINER_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.impl.ContainsImpl <em>Contains</em>}' class.
@@ -1547,7 +1532,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getContains()
    * @generated
    */
-  int CONTAINS = 24;
+  int CONTAINS = 27;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -1568,22 +1553,13 @@ public interface DslPackage extends EPackage
   int CONTAINS__MODEL_REFERENCE = FEATURE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Layout</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONTAINS__LAYOUT = FEATURE_FEATURE_COUNT + 1;
-
-  /**
    * The number of structural features of the '<em>Contains</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONTAINS_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 2;
+  int CONTAINS_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.impl.ValueImpl <em>Value</em>}' class.
@@ -1593,7 +1569,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getValue()
    * @generated
    */
-  int VALUE = 25;
+  int VALUE = 28;
 
   /**
    * The number of structural features of the '<em>Value</em>' class.
@@ -1612,7 +1588,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getIntValue()
    * @generated
    */
-  int INT_VALUE = 26;
+  int INT_VALUE = 29;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1640,7 +1616,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getDoubleValue()
    * @generated
    */
-  int DOUBLE_VALUE = 27;
+  int DOUBLE_VALUE = 30;
 
   /**
    * The feature id for the '<em><b>Value Int</b></em>' attribute.
@@ -1677,7 +1653,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getStringValue()
    * @generated
    */
-  int STRING_VALUE = 28;
+  int STRING_VALUE = 31;
 
   /**
    * The feature id for the '<em><b>Null</b></em>' attribute.
@@ -1714,7 +1690,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getBooleanValue()
    * @generated
    */
-  int BOOLEAN_VALUE = 29;
+  int BOOLEAN_VALUE = 32;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1742,7 +1718,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getEnumValue()
    * @generated
    */
-  int ENUM_VALUE = 30;
+  int ENUM_VALUE = 33;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1770,7 +1746,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getLabel()
    * @generated
    */
-  int LABEL = 31;
+  int LABEL = 34;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1800,24 +1776,6 @@ public interface DslPackage extends EPackage
   int LABEL__FEATURES = CONNECTABLE_ELEMENT__FEATURES;
 
   /**
-   * The feature id for the '<em><b>Composite</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LABEL__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
-
-  /**
-   * The feature id for the '<em><b>Layout</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LABEL__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
-
-  /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1827,22 +1785,13 @@ public interface DslPackage extends EPackage
   int LABEL__CHILDREN = CONNECTABLE_ELEMENT__CHILDREN;
 
   /**
-   * The feature id for the '<em><b>Editable</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LABEL__EDITABLE = CONNECTABLE_ELEMENT_FEATURE_COUNT + 0;
-
-  /**
    * The number of structural features of the '<em>Label</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LABEL_FEATURE_COUNT = CONNECTABLE_ELEMENT_FEATURE_COUNT + 1;
+  int LABEL_FEATURE_COUNT = CONNECTABLE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.impl.ImageImpl <em>Image</em>}' class.
@@ -1852,7 +1801,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getImage()
    * @generated
    */
-  int IMAGE = 32;
+  int IMAGE = 35;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1880,24 +1829,6 @@ public interface DslPackage extends EPackage
    * @ordered
    */
   int IMAGE__FEATURES = CONNECTABLE_ELEMENT__FEATURES;
-
-  /**
-   * The feature id for the '<em><b>Composite</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IMAGE__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
-
-  /**
-   * The feature id for the '<em><b>Layout</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IMAGE__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
 
   /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -1934,7 +1865,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getInvisible()
    * @generated
    */
-  int INVISIBLE = 33;
+  int INVISIBLE = 36;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1964,24 +1895,6 @@ public interface DslPackage extends EPackage
   int INVISIBLE__FEATURES = CONNECTABLE_ELEMENT__FEATURES;
 
   /**
-   * The feature id for the '<em><b>Composite</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INVISIBLE__COMPOSITE = CONNECTABLE_ELEMENT__COMPOSITE;
-
-  /**
-   * The feature id for the '<em><b>Layout</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INVISIBLE__LAYOUT = CONNECTABLE_ELEMENT__LAYOUT;
-
-  /**
    * The feature id for the '<em><b>Children</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2007,7 +1920,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getColorFeature()
    * @generated
    */
-  int COLOR_FEATURE = 34;
+  int COLOR_FEATURE = 37;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2053,7 +1966,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getTransparency()
    * @generated
    */
-  int TRANSPARENCY = 35;
+  int TRANSPARENCY = 38;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2090,7 +2003,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getSize()
    * @generated
    */
-  int SIZE = 36;
+  int SIZE = 39;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2111,13 +2024,31 @@ public interface DslPackage extends EPackage
   int SIZE__WIDTH = FEATURE_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Width Relative</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIZE__WIDTH_RELATIVE = FEATURE_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Height</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SIZE__HEIGHT = FEATURE_FEATURE_COUNT + 1;
+  int SIZE__HEIGHT = FEATURE_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Height Relative</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIZE__HEIGHT_RELATIVE = FEATURE_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Size</em>' class.
@@ -2126,7 +2057,7 @@ public interface DslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SIZE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 2;
+  int SIZE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.impl.PointImpl <em>Point</em>}' class.
@@ -2136,7 +2067,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getPoint()
    * @generated
    */
-  int POINT = 37;
+  int POINT = 40;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2182,7 +2113,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getPosition()
    * @generated
    */
-  int POSITION = 38;
+  int POSITION = 41;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2246,7 +2177,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getCorner()
    * @generated
    */
-  int CORNER = 39;
+  int CORNER = 42;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2283,7 +2214,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getTextValue()
    * @generated
    */
-  int TEXT_VALUE = 40;
+  int TEXT_VALUE = 43;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2295,22 +2226,13 @@ public interface DslPackage extends EPackage
   int TEXT_VALUE__CONDITIONAL = FEATURE__CONDITIONAL;
 
   /**
-   * The feature id for the '<em><b>Text</b></em>' attribute.
+   * The feature id for the '<em><b>Parts</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TEXT_VALUE__TEXT = FEATURE_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Model Attribute</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TEXT_VALUE__MODEL_ATTRIBUTE = FEATURE_FEATURE_COUNT + 1;
+  int TEXT_VALUE__PARTS = FEATURE_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Text Value</em>' class.
@@ -2319,7 +2241,44 @@ public interface DslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_VALUE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 2;
+  int TEXT_VALUE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.impl.TextPartImpl <em>Text Part</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.xdiagram.dsl.impl.TextPartImpl
+   * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getTextPart()
+   * @generated
+   */
+  int TEXT_PART = 44;
+
+  /**
+   * The feature id for the '<em><b>Text</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_PART__TEXT = 0;
+
+  /**
+   * The feature id for the '<em><b>Model Attribute</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_PART__MODEL_ATTRIBUTE = 1;
+
+  /**
+   * The number of structural features of the '<em>Text Part</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_PART_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.impl.FontFaceImpl <em>Font Face</em>}' class.
@@ -2329,7 +2288,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getFontFace()
    * @generated
    */
-  int FONT_FACE = 41;
+  int FONT_FACE = 45;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2366,7 +2325,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getFontSize()
    * @generated
    */
-  int FONT_SIZE = 42;
+  int FONT_SIZE = 46;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2403,7 +2362,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getFontStyle()
    * @generated
    */
-  int FONT_STYLE = 43;
+  int FONT_STYLE = 47;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2440,7 +2399,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getLineStyle()
    * @generated
    */
-  int LINE_STYLE = 44;
+  int LINE_STYLE = 48;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2477,7 +2436,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getLineWidth()
    * @generated
    */
-  int LINE_WIDTH = 45;
+  int LINE_WIDTH = 49;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2507,16 +2466,6 @@ public interface DslPackage extends EPackage
   int LINE_WIDTH_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.FigureType <em>Figure Type</em>}' enum.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.xdiagram.dsl.FigureType
-   * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getFigureType()
-   * @generated
-   */
-  int FIGURE_TYPE = 46;
-
-  /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.ConnectionType <em>Connection Type</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2524,7 +2473,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getConnectionType()
    * @generated
    */
-  int CONNECTION_TYPE = 47;
+  int CONNECTION_TYPE = 50;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.AnchorDirection <em>Anchor Direction</em>}' enum.
@@ -2534,7 +2483,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getAnchorDirection()
    * @generated
    */
-  int ANCHOR_DIRECTION = 48;
+  int ANCHOR_DIRECTION = 51;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.DefaultColor <em>Default Color</em>}' enum.
@@ -2544,7 +2493,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getDefaultColor()
    * @generated
    */
-  int DEFAULT_COLOR = 49;
+  int DEFAULT_COLOR = 52;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.ContainerLayout <em>Container Layout</em>}' enum.
@@ -2554,7 +2503,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getContainerLayout()
    * @generated
    */
-  int CONTAINER_LAYOUT = 50;
+  int CONTAINER_LAYOUT = 53;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.Operator <em>Operator</em>}' enum.
@@ -2564,7 +2513,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getOperator()
    * @generated
    */
-  int OPERATOR = 51;
+  int OPERATOR = 54;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.BooleanLiteral <em>Boolean Literal</em>}' enum.
@@ -2574,7 +2523,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getBooleanLiteral()
    * @generated
    */
-  int BOOLEAN_LITERAL = 52;
+  int BOOLEAN_LITERAL = 55;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.FontFaceType <em>Font Face Type</em>}' enum.
@@ -2584,7 +2533,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getFontFaceType()
    * @generated
    */
-  int FONT_FACE_TYPE = 53;
+  int FONT_FACE_TYPE = 56;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.FontStyleType <em>Font Style Type</em>}' enum.
@@ -2594,7 +2543,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getFontStyleType()
    * @generated
    */
-  int FONT_STYLE_TYPE = 54;
+  int FONT_STYLE_TYPE = 57;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.LineType <em>Line Type</em>}' enum.
@@ -2604,7 +2553,7 @@ public interface DslPackage extends EPackage
    * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getLineType()
    * @generated
    */
-  int LINE_TYPE = 55;
+  int LINE_TYPE = 58;
 
 
   /**
@@ -3004,6 +2953,17 @@ public interface DslPackage extends EPackage
   EClass getLink();
 
   /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.dsl.Link#isReference <em>Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Reference</em>'.
+   * @see org.eclipselabs.xdiagram.dsl.Link#isReference()
+   * @see #getLink()
+   * @generated
+   */
+  EAttribute getLink_Reference();
+
+  /**
    * Returns the meta object for the reference '{@link org.eclipselabs.xdiagram.dsl.Link#getModelReference <em>Model Reference</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3089,49 +3049,6 @@ public interface DslPackage extends EPackage
    * @generated
    */
   EReference getDecorator_Element();
-
-  /**
-   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.dsl.ConnectableElement <em>Connectable Element</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Connectable Element</em>'.
-   * @see org.eclipselabs.xdiagram.dsl.ConnectableElement
-   * @generated
-   */
-  EClass getConnectableElement();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.dsl.ConnectableElement#isComposite <em>Composite</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Composite</em>'.
-   * @see org.eclipselabs.xdiagram.dsl.ConnectableElement#isComposite()
-   * @see #getConnectableElement()
-   * @generated
-   */
-  EAttribute getConnectableElement_Composite();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.dsl.ConnectableElement#getLayout <em>Layout</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Layout</em>'.
-   * @see org.eclipselabs.xdiagram.dsl.ConnectableElement#getLayout()
-   * @see #getConnectableElement()
-   * @generated
-   */
-  EAttribute getConnectableElement_Layout();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.dsl.ConnectableElement#getChildren <em>Children</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Children</em>'.
-   * @see org.eclipselabs.xdiagram.dsl.ConnectableElement#getChildren()
-   * @see #getConnectableElement()
-   * @generated
-   */
-  EReference getConnectableElement_Children();
 
   /**
    * Returns the meta object for class '{@link org.eclipselabs.xdiagram.dsl.Anchor <em>Anchor</em>}'.
@@ -3250,6 +3167,58 @@ public interface DslPackage extends EPackage
    * @generated
    */
   EReference getColor_Custom();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.dsl.ConnectableElement <em>Connectable Element</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Connectable Element</em>'.
+   * @see org.eclipselabs.xdiagram.dsl.ConnectableElement
+   * @generated
+   */
+  EClass getConnectableElement();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.dsl.ConnectableElement#getChildren <em>Children</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Children</em>'.
+   * @see org.eclipselabs.xdiagram.dsl.ConnectableElement#getChildren()
+   * @see #getConnectableElement()
+   * @generated
+   */
+  EReference getConnectableElement_Children();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.dsl.Layout <em>Layout</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Layout</em>'.
+   * @see org.eclipselabs.xdiagram.dsl.Layout
+   * @generated
+   */
+  EClass getLayout();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.dsl.Layout#getLayout <em>Layout</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Layout</em>'.
+   * @see org.eclipselabs.xdiagram.dsl.Layout#getLayout()
+   * @see #getLayout()
+   * @generated
+   */
+  EAttribute getLayout_Layout();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.dsl.Visible <em>Visible</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Visible</em>'.
+   * @see org.eclipselabs.xdiagram.dsl.Visible
+   * @generated
+   */
+  EClass getVisible();
 
   /**
    * Returns the meta object for class '{@link org.eclipselabs.xdiagram.dsl.CustomFigure <em>Custom Figure</em>}'.
@@ -3431,6 +3400,38 @@ public interface DslPackage extends EPackage
   EClass getLine();
 
   /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.dsl.Line#isHorizontal <em>Horizontal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Horizontal</em>'.
+   * @see org.eclipselabs.xdiagram.dsl.Line#isHorizontal()
+   * @see #getLine()
+   * @generated
+   */
+  EAttribute getLine_Horizontal();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.dsl.Line#isVertical <em>Vertical</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Vertical</em>'.
+   * @see org.eclipselabs.xdiagram.dsl.Line#isVertical()
+   * @see #getLine()
+   * @generated
+   */
+  EAttribute getLine_Vertical();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.dsl.Arrow <em>Arrow</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Arrow</em>'.
+   * @see org.eclipselabs.xdiagram.dsl.Arrow
+   * @generated
+   */
+  EClass getArrow();
+
+  /**
    * Returns the meta object for class '{@link org.eclipselabs.xdiagram.dsl.Contains <em>Contains</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3450,17 +3451,6 @@ public interface DslPackage extends EPackage
    * @generated
    */
   EReference getContains_ModelReference();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.dsl.Contains#getLayout <em>Layout</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Layout</em>'.
-   * @see org.eclipselabs.xdiagram.dsl.Contains#getLayout()
-   * @see #getContains()
-   * @generated
-   */
-  EAttribute getContains_Layout();
 
   /**
    * Returns the meta object for class '{@link org.eclipselabs.xdiagram.dsl.Value <em>Value</em>}'.
@@ -3610,17 +3600,6 @@ public interface DslPackage extends EPackage
   EClass getLabel();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.dsl.Label#isEditable <em>Editable</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Editable</em>'.
-   * @see org.eclipselabs.xdiagram.dsl.Label#isEditable()
-   * @see #getLabel()
-   * @generated
-   */
-  EAttribute getLabel_Editable();
-
-  /**
    * Returns the meta object for class '{@link org.eclipselabs.xdiagram.dsl.Image <em>Image</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3726,6 +3705,17 @@ public interface DslPackage extends EPackage
   EAttribute getSize_Width();
 
   /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.dsl.Size#isWidthRelative <em>Width Relative</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Width Relative</em>'.
+   * @see org.eclipselabs.xdiagram.dsl.Size#isWidthRelative()
+   * @see #getSize()
+   * @generated
+   */
+  EAttribute getSize_WidthRelative();
+
+  /**
    * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.dsl.Size#getHeight <em>Height</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3735,6 +3725,17 @@ public interface DslPackage extends EPackage
    * @generated
    */
   EAttribute getSize_Height();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.dsl.Size#isHeightRelative <em>Height Relative</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Height Relative</em>'.
+   * @see org.eclipselabs.xdiagram.dsl.Size#isHeightRelative()
+   * @see #getSize()
+   * @generated
+   */
+  EAttribute getSize_HeightRelative();
 
   /**
    * Returns the meta object for class '{@link org.eclipselabs.xdiagram.dsl.Point <em>Point</em>}'.
@@ -3854,26 +3855,47 @@ public interface DslPackage extends EPackage
   EClass getTextValue();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.dsl.TextValue#getText <em>Text</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.eclipselabs.xdiagram.dsl.TextValue#getParts <em>Parts</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Parts</em>'.
+   * @see org.eclipselabs.xdiagram.dsl.TextValue#getParts()
+   * @see #getTextValue()
+   * @generated
+   */
+  EReference getTextValue_Parts();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.xdiagram.dsl.TextPart <em>Text Part</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Text Part</em>'.
+   * @see org.eclipselabs.xdiagram.dsl.TextPart
+   * @generated
+   */
+  EClass getTextPart();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.dsl.TextPart#getText <em>Text</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Text</em>'.
-   * @see org.eclipselabs.xdiagram.dsl.TextValue#getText()
-   * @see #getTextValue()
+   * @see org.eclipselabs.xdiagram.dsl.TextPart#getText()
+   * @see #getTextPart()
    * @generated
    */
-  EAttribute getTextValue_Text();
+  EAttribute getTextPart_Text();
 
   /**
-   * Returns the meta object for the reference '{@link org.eclipselabs.xdiagram.dsl.TextValue#getModelAttribute <em>Model Attribute</em>}'.
+   * Returns the meta object for the reference '{@link org.eclipselabs.xdiagram.dsl.TextPart#getModelAttribute <em>Model Attribute</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the reference '<em>Model Attribute</em>'.
-   * @see org.eclipselabs.xdiagram.dsl.TextValue#getModelAttribute()
-   * @see #getTextValue()
+   * @see org.eclipselabs.xdiagram.dsl.TextPart#getModelAttribute()
+   * @see #getTextPart()
    * @generated
    */
-  EReference getTextValue_ModelAttribute();
+  EReference getTextPart_ModelAttribute();
 
   /**
    * Returns the meta object for class '{@link org.eclipselabs.xdiagram.dsl.FontFace <em>Font Face</em>}'.
@@ -3979,16 +4001,6 @@ public interface DslPackage extends EPackage
    * @generated
    */
   EAttribute getLineWidth_Width();
-
-  /**
-   * Returns the meta object for enum '{@link org.eclipselabs.xdiagram.dsl.FigureType <em>Figure Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Figure Type</em>'.
-   * @see org.eclipselabs.xdiagram.dsl.FigureType
-   * @generated
-   */
-  EEnum getFigureType();
 
   /**
    * Returns the meta object for enum '{@link org.eclipselabs.xdiagram.dsl.ConnectionType <em>Connection Type</em>}'.
@@ -4422,6 +4434,14 @@ public interface DslPackage extends EPackage
     EClass LINK = eINSTANCE.getLink();
 
     /**
+     * The meta object literal for the '<em><b>Reference</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LINK__REFERENCE = eINSTANCE.getLink_Reference();
+
+    /**
      * The meta object literal for the '<em><b>Model Reference</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4486,40 +4506,6 @@ public interface DslPackage extends EPackage
      * @generated
      */
     EReference DECORATOR__ELEMENT = eINSTANCE.getDecorator_Element();
-
-    /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.dsl.impl.ConnectableElementImpl <em>Connectable Element</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.dsl.impl.ConnectableElementImpl
-     * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getConnectableElement()
-     * @generated
-     */
-    EClass CONNECTABLE_ELEMENT = eINSTANCE.getConnectableElement();
-
-    /**
-     * The meta object literal for the '<em><b>Composite</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CONNECTABLE_ELEMENT__COMPOSITE = eINSTANCE.getConnectableElement_Composite();
-
-    /**
-     * The meta object literal for the '<em><b>Layout</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CONNECTABLE_ELEMENT__LAYOUT = eINSTANCE.getConnectableElement_Layout();
-
-    /**
-     * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference CONNECTABLE_ELEMENT__CHILDREN = eINSTANCE.getConnectableElement_Children();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.xdiagram.dsl.impl.AnchorImpl <em>Anchor</em>}' class.
@@ -4614,6 +4600,52 @@ public interface DslPackage extends EPackage
      * @generated
      */
     EReference COLOR__CUSTOM = eINSTANCE.getColor_Custom();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.dsl.impl.ConnectableElementImpl <em>Connectable Element</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.dsl.impl.ConnectableElementImpl
+     * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getConnectableElement()
+     * @generated
+     */
+    EClass CONNECTABLE_ELEMENT = eINSTANCE.getConnectableElement();
+
+    /**
+     * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONNECTABLE_ELEMENT__CHILDREN = eINSTANCE.getConnectableElement_Children();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.dsl.impl.LayoutImpl <em>Layout</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.dsl.impl.LayoutImpl
+     * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getLayout()
+     * @generated
+     */
+    EClass LAYOUT = eINSTANCE.getLayout();
+
+    /**
+     * The meta object literal for the '<em><b>Layout</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LAYOUT__LAYOUT = eINSTANCE.getLayout_Layout();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.dsl.impl.VisibleImpl <em>Visible</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.dsl.impl.VisibleImpl
+     * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getVisible()
+     * @generated
+     */
+    EClass VISIBLE = eINSTANCE.getVisible();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.xdiagram.dsl.impl.CustomFigureImpl <em>Custom Figure</em>}' class.
@@ -4768,6 +4800,32 @@ public interface DslPackage extends EPackage
     EClass LINE = eINSTANCE.getLine();
 
     /**
+     * The meta object literal for the '<em><b>Horizontal</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LINE__HORIZONTAL = eINSTANCE.getLine_Horizontal();
+
+    /**
+     * The meta object literal for the '<em><b>Vertical</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LINE__VERTICAL = eINSTANCE.getLine_Vertical();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.dsl.impl.ArrowImpl <em>Arrow</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.dsl.impl.ArrowImpl
+     * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getArrow()
+     * @generated
+     */
+    EClass ARROW = eINSTANCE.getArrow();
+
+    /**
      * The meta object literal for the '{@link org.eclipselabs.xdiagram.dsl.impl.ContainsImpl <em>Contains</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4784,14 +4842,6 @@ public interface DslPackage extends EPackage
      * @generated
      */
     EReference CONTAINS__MODEL_REFERENCE = eINSTANCE.getContains_ModelReference();
-
-    /**
-     * The meta object literal for the '<em><b>Layout</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CONTAINS__LAYOUT = eINSTANCE.getContains_Layout();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.xdiagram.dsl.impl.ValueImpl <em>Value</em>}' class.
@@ -4920,14 +4970,6 @@ public interface DslPackage extends EPackage
     EClass LABEL = eINSTANCE.getLabel();
 
     /**
-     * The meta object literal for the '<em><b>Editable</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute LABEL__EDITABLE = eINSTANCE.getLabel_Editable();
-
-    /**
      * The meta object literal for the '{@link org.eclipselabs.xdiagram.dsl.impl.ImageImpl <em>Image</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5018,12 +5060,28 @@ public interface DslPackage extends EPackage
     EAttribute SIZE__WIDTH = eINSTANCE.getSize_Width();
 
     /**
+     * The meta object literal for the '<em><b>Width Relative</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SIZE__WIDTH_RELATIVE = eINSTANCE.getSize_WidthRelative();
+
+    /**
      * The meta object literal for the '<em><b>Height</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute SIZE__HEIGHT = eINSTANCE.getSize_Height();
+
+    /**
+     * The meta object literal for the '<em><b>Height Relative</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SIZE__HEIGHT_RELATIVE = eINSTANCE.getSize_HeightRelative();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.xdiagram.dsl.impl.PointImpl <em>Point</em>}' class.
@@ -5122,12 +5180,30 @@ public interface DslPackage extends EPackage
     EClass TEXT_VALUE = eINSTANCE.getTextValue();
 
     /**
+     * The meta object literal for the '<em><b>Parts</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TEXT_VALUE__PARTS = eINSTANCE.getTextValue_Parts();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.xdiagram.dsl.impl.TextPartImpl <em>Text Part</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.xdiagram.dsl.impl.TextPartImpl
+     * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getTextPart()
+     * @generated
+     */
+    EClass TEXT_PART = eINSTANCE.getTextPart();
+
+    /**
      * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TEXT_VALUE__TEXT = eINSTANCE.getTextValue_Text();
+    EAttribute TEXT_PART__TEXT = eINSTANCE.getTextPart_Text();
 
     /**
      * The meta object literal for the '<em><b>Model Attribute</b></em>' reference feature.
@@ -5135,7 +5211,7 @@ public interface DslPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TEXT_VALUE__MODEL_ATTRIBUTE = eINSTANCE.getTextValue_ModelAttribute();
+    EReference TEXT_PART__MODEL_ATTRIBUTE = eINSTANCE.getTextPart_ModelAttribute();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.xdiagram.dsl.impl.FontFaceImpl <em>Font Face</em>}' class.
@@ -5226,16 +5302,6 @@ public interface DslPackage extends EPackage
      * @generated
      */
     EAttribute LINE_WIDTH__WIDTH = eINSTANCE.getLineWidth_Width();
-
-    /**
-     * The meta object literal for the '{@link org.eclipselabs.xdiagram.dsl.FigureType <em>Figure Type</em>}' enum.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.xdiagram.dsl.FigureType
-     * @see org.eclipselabs.xdiagram.dsl.impl.DslPackageImpl#getFigureType()
-     * @generated
-     */
-    EEnum FIGURE_TYPE = eINSTANCE.getFigureType();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.xdiagram.dsl.ConnectionType <em>Connection Type</em>}' enum.
