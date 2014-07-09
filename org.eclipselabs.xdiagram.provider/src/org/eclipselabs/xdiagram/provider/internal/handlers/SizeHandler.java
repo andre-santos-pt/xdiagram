@@ -1,28 +1,26 @@
 package org.eclipselabs.xdiagram.provider.internal.handlers;
 
-import java.util.List;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.util.EContentAdapter;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.graphiti.datatypes.IDimension;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
+import org.eclipse.graphiti.mm.algorithms.AlgorithmsPackage;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.algorithms.Polygon;
-import org.eclipse.graphiti.mm.algorithms.styles.Point;
+import org.eclipse.graphiti.mm.algorithms.Polyline;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
+import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipse.graphiti.services.Graphiti;
+import org.eclipselabs.xdiagram.dsl.Arrow;
 import org.eclipselabs.xdiagram.dsl.ConnectableElement;
 import org.eclipselabs.xdiagram.dsl.Ellipse;
 import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.FeatureContainer;
+import org.eclipselabs.xdiagram.dsl.Line;
 import org.eclipselabs.xdiagram.dsl.Rectangle;
 import org.eclipselabs.xdiagram.dsl.Rhombus;
 import org.eclipselabs.xdiagram.dsl.Size;
@@ -55,7 +53,6 @@ public class SizeHandler implements FeatureHandler {
 
 		@Override
 		public void notifyChanged(Notification notification) {
-			System.out.println(element.getClass() + " --- " + notification);
 			setSize(element, figure, eObject, dim);
 		}
 	}
@@ -88,31 +85,84 @@ public class SizeHandler implements FeatureHandler {
 	}
 
 
+	// TODO validation decorator no relative dimension
+
 	@Override
 	public void handle(final FeatureContainer element, final Feature feature, final EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, final GraphicsAlgorithm figure) {
 		final Size size = (Size) feature;
 
-		if(element instanceof Triangle) {
-			ElementCreation.updateTriangleSize((Polygon)figure, size);
+		final Dim dimension = new Dim(size);
+
+		if(figure.eContainer() instanceof ContainerShape) {
+			final ContainerShape parent = (ContainerShape) figure.eContainer();
+			GraphicsAlgorithm parentFig = ((ContainerShape) parent.eContainer()).getGraphicsAlgorithm();
+
+			if(size.isWidthRelative()) {
+				parentFig.eAdapters().add(new AdapterImpl() {
+					@Override
+					public void notifyChanged(Notification msg) {
+						if(msg.getFeature().equals(AlgorithmsPackage.eINSTANCE.getGraphicsAlgorithm_Width())) {
+							int w = (int) (msg.getNewIntValue() * (size.getWidth()/100.0)) - PositionHandler.DEFAULT_MARGIN*2;
+							setSize(element, figure, eObject, new Dim(w,-1));
+						}
+					}
+				});
+			}
+
+			if(size.isHeightRelative()){
+				parentFig.eAdapters().add(new AdapterImpl() {
+					@Override
+					public void notifyChanged(Notification msg) {
+						if(msg.getFeature().equals(AlgorithmsPackage.eINSTANCE.getGraphicsAlgorithm_Height())) {
+							int h = (int) (msg.getNewIntValue() * (size.getHeight()/100.0)) - PositionHandler.DEFAULT_MARGIN*2;
+							setSize(element, figure, eObject, new Dim(-1,h));
+						}
+					}
+				});
+			}
 		}
-		else if(element instanceof Rhombus) {
-			ElementCreation.updateRhombusSize((Polygon)figure, size);
-		}
-		else {
-			setSize(element, figure, eObject, new Dim(size));
-			handleSizeListener(eObject, element, figure, new Dim(size));
-		}
+
+		setSize(element, figure, eObject, dimension);
+		handleSizeListener(eObject, element, figure, dimension);
+	}
+
+
+	private void setSizeRelative(final FeatureContainer element,
+			final EObject eObject, final GraphicsAlgorithm figure,
+			final Size size, Dim dimension, ContainerShape parent) {
+		//		IDimension dim = Graphiti.getGaService().calculateSize(parent.getGraphicsAlgorithm(), true);
+		int w = size.isWidthRelative() ? (int) (dimension.width * (size.getWidth()/100.0)) : size.getWidth();
+		int h = size.isHeightRelative() ? (int) (dimension.height *(size.getHeight()/100.0)) : size.getHeight();
+		setSize(element, figure, eObject, new Dim(w, h));
 	}
 
 
 	private void setSize(final FeatureContainer element, final GraphicsAlgorithm figure, final EObject eObject, final Dim dim) {
-		if(element instanceof Rectangle && ((Rectangle) element).isSquare() ||
-				element instanceof Ellipse && ((Ellipse) element).isCircle()) {
-			dim.setDimToMax();
+		if(element instanceof Line) {
+			ElementCreation.updateLineSize((Polyline)figure, dim.width, ((Line) element).isHorizontal());
 		}
+		else if(element instanceof Arrow) {
+			ElementCreation.updateArrowSize((Polyline)figure, dim.width, dim.height);
+		}
+		else if(element instanceof Triangle) {
+			ElementCreation.updateTriangleSize((Polygon)figure, dim.width, dim.height);
+		}
+		else if(element instanceof Rhombus) {
+			ElementCreation.updateRhombusSize((Polygon)figure, dim.width, dim.height);
+		}
+		else {
+			if(element instanceof Rectangle && ((Rectangle) element).isSquare() ||
+					element instanceof Ellipse && ((Ellipse) element).isCircle()) {
+				dim.setDimToMax();
+			}
+			maximize(figure, dim);
 
-		maximize(figure, dim);
-		Graphiti.getGaService().setSize(figure, dim.width, dim.height);
+			if(dim.width != -1)
+				Graphiti.getGaService().setWidth(figure, dim.width);
+
+			if(dim.height != -1)
+				Graphiti.getGaService().setHeight(figure, dim.height);
+		}
 	}
 
 	private void handleSizeListener(EObject eObject, FeatureContainer element, GraphicsAlgorithm figure, Dim dim) {
@@ -135,7 +185,7 @@ public class SizeHandler implements FeatureHandler {
 
 		for(Shape child : cont.getChildren()) {
 			GraphicsAlgorithm ga = child.getGraphicsAlgorithm();
-			IDimension dim = Graphiti.getGaService().calculateSize(ga);
+			IDimension dim = Graphiti.getGaService().calculateSize(ga, true);
 			int x = ga.getX() + dim.getWidth();
 			int y = ga.getY() + dim.getHeight();
 			dimension.expandTo(x, y);
@@ -154,7 +204,7 @@ public class SizeHandler implements FeatureHandler {
 
 	@Override
 	public boolean accept(FeatureContainer element) {
-		return element instanceof ConnectableElement;
+		return true;
 	}
 
 

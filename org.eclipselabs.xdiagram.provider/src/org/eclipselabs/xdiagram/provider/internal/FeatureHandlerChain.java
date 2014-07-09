@@ -3,32 +3,21 @@ package org.eclipselabs.xdiagram.provider.internal;
 
 
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
-import org.eclipselabs.xdiagram.dsl.BooleanValue;
 import org.eclipselabs.xdiagram.dsl.Custom;
-import org.eclipselabs.xdiagram.dsl.EnumValue;
 import org.eclipselabs.xdiagram.dsl.Feature;
-import org.eclipselabs.xdiagram.dsl.FeatureConditional;
 import org.eclipselabs.xdiagram.dsl.FeatureContainer;
-import org.eclipselabs.xdiagram.dsl.IntValue;
-import org.eclipselabs.xdiagram.dsl.StringValue;
-import org.eclipselabs.xdiagram.dsl.Value;
+import org.eclipselabs.xdiagram.dsl.Visible;
 import org.eclipselabs.xdiagram.provider.LanguageProvider;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.ListMultimap;
-import com.google.common.collect.Multimap;
 
 public class FeatureHandlerChain  {
 
@@ -54,7 +43,7 @@ public class FeatureHandlerChain  {
 
 		// defaults are applied first
 		for(Class<? extends Feature> cf : handlers.keys()) {
-			if(!LanguageProvider.hasFeature(element, cf, false))
+			if(cf.equals(Visible.class) || !LanguageProvider.hasFeature(element, cf, false))
 				for(FeatureHandler fh : handlers.get(cf))
 					if(fh.accept(element))
 						fh.applyDefaults(element, eObject, diagram, container, figure);

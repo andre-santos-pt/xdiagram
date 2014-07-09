@@ -5,6 +5,7 @@ import java.util.EnumMap;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
+import org.eclipse.graphiti.mm.algorithms.Polyline;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipse.graphiti.util.ColorConstant;
@@ -61,8 +62,10 @@ public class ColorHandler implements FeatureHandler {
 		}
 
 		switch(colorFeature.getType()) {
-		case "background": figure.setBackground(cg); break;
-		case "foreground": figure.setForeground(cg); break;
+		case "background": 
+			figure.setBackground(cg); break;
+		case "foreground": 
+			figure.setForeground(cg); break;
 		}
 	}
 
