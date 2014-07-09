@@ -88,7 +88,7 @@ public interface GraphicsProvider {
 	
 	boolean canResizeNodeFigure(EObject object);
 	
-	boolean canMoveNodeFigure(GraphicsAlgorithm figure);
+	boolean canMoveNode(EObject eObject);
 	
 	boolean canEditFigureLabel(GraphicsAlgorithm figure, EObject eObject);
 	
