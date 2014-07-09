@@ -7,10 +7,6 @@
     editorPluginID="org.eclipselabs.xdiagram.dsl.editor" runtimeVersion="2.10">
   <genPackages prefix="Dsl" basePackage="org.eclipselabs.xdiagram" disposableProviderFactory="true"
       fileExtensions="xdiagram" ecorePackage="Dsl.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//FigureType">
-      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FigureType/RECTANGLE"/>
-      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FigureType/ELLIPSE"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//ConnectionType">
       <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//ConnectionType/FREE"/>
       <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//ConnectionType/MANHATTAN"/>
@@ -113,6 +109,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Node/rootFigure"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Link/reference"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Link/modelReference"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Link/complex"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Link/sourceReference"/>
@@ -122,11 +119,6 @@
     <genClasses ecoreClass="Dsl.ecore#//Decorator">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Decorator/position"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Decorator/element"/>
-    </genClasses>
-    <genClasses ecoreClass="Dsl.ecore#//ConnectableElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//ConnectableElement/composite"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//ConnectableElement/layout"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//ConnectableElement/children"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//Anchor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Anchor/direction"/>
@@ -142,6 +134,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Color/default"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Color/custom"/>
     </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//ConnectableElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//ConnectableElement/children"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Layout">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Layout/layout"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Visible"/>
     <genClasses ecoreClass="Dsl.ecore#//CustomFigure">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//CustomFigure/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//CustomFigure/element"/>
@@ -163,10 +162,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Polyline/polyline"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//Triangle"/>
-    <genClasses ecoreClass="Dsl.ecore#//Line"/>
+    <genClasses ecoreClass="Dsl.ecore#//Line">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Line/horizontal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Line/vertical"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Arrow"/>
     <genClasses ecoreClass="Dsl.ecore#//Contains">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Contains/modelReference"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Contains/layout"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//Value"/>
     <genClasses ecoreClass="Dsl.ecore#//IntValue">
@@ -186,9 +188,7 @@
     <genClasses ecoreClass="Dsl.ecore#//EnumValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//EnumValue/name"/>
     </genClasses>
-    <genClasses ecoreClass="Dsl.ecore#//Label">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Label/editable"/>
-    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Label"/>
     <genClasses ecoreClass="Dsl.ecore#//Image">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Image/imageId"/>
     </genClasses>
@@ -202,7 +202,9 @@
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//Size">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Size/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Size/widthRelative"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Size/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Size/heightRelative"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//Point">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Point/x"/>
@@ -218,8 +220,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Corner/angle"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//TextValue">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//TextValue/text"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//TextValue/modelAttribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//TextValue/parts"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//TextPart">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//TextPart/text"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//TextPart/modelAttribute"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//FontFace">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//FontFace/face"/>

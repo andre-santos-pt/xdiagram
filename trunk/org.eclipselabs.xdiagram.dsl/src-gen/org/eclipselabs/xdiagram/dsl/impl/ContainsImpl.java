@@ -10,7 +10,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipselabs.xdiagram.dsl.ContainerLayout;
 import org.eclipselabs.xdiagram.dsl.Contains;
 import org.eclipselabs.xdiagram.dsl.DslPackage;
 
@@ -22,7 +21,6 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ContainsImpl#getModelReference <em>Model Reference</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ContainsImpl#getLayout <em>Layout</em>}</li>
  * </ul>
  * </p>
  *
@@ -39,26 +37,6 @@ public class ContainsImpl extends FeatureImpl implements Contains
    * @ordered
    */
   protected EReference modelReference;
-
-  /**
-   * The default value of the '{@link #getLayout() <em>Layout</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLayout()
-   * @generated
-   * @ordered
-   */
-  protected static final ContainerLayout LAYOUT_EDEFAULT = ContainerLayout.FREE;
-
-  /**
-   * The cached value of the '{@link #getLayout() <em>Layout</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLayout()
-   * @generated
-   * @ordered
-   */
-  protected ContainerLayout layout = LAYOUT_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -129,29 +107,6 @@ public class ContainsImpl extends FeatureImpl implements Contains
    * <!-- end-user-doc -->
    * @generated
    */
-  public ContainerLayout getLayout()
-  {
-    return layout;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setLayout(ContainerLayout newLayout)
-  {
-    ContainerLayout oldLayout = layout;
-    layout = newLayout == null ? LAYOUT_EDEFAULT : newLayout;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.CONTAINS__LAYOUT, oldLayout, layout));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -160,8 +115,6 @@ public class ContainsImpl extends FeatureImpl implements Contains
       case DslPackage.CONTAINS__MODEL_REFERENCE:
         if (resolve) return getModelReference();
         return basicGetModelReference();
-      case DslPackage.CONTAINS__LAYOUT:
-        return getLayout();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -178,9 +131,6 @@ public class ContainsImpl extends FeatureImpl implements Contains
     {
       case DslPackage.CONTAINS__MODEL_REFERENCE:
         setModelReference((EReference)newValue);
-        return;
-      case DslPackage.CONTAINS__LAYOUT:
-        setLayout((ContainerLayout)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -199,9 +149,6 @@ public class ContainsImpl extends FeatureImpl implements Contains
       case DslPackage.CONTAINS__MODEL_REFERENCE:
         setModelReference((EReference)null);
         return;
-      case DslPackage.CONTAINS__LAYOUT:
-        setLayout(LAYOUT_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -218,27 +165,8 @@ public class ContainsImpl extends FeatureImpl implements Contains
     {
       case DslPackage.CONTAINS__MODEL_REFERENCE:
         return modelReference != null;
-      case DslPackage.CONTAINS__LAYOUT:
-        return layout != LAYOUT_EDEFAULT;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (layout: ");
-    result.append(layout);
-    result.append(')');
-    return result.toString();
   }
 
 } //ContainsImpl

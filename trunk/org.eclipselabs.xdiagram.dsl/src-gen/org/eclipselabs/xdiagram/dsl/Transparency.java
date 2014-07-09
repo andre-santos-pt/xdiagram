@@ -30,12 +30,12 @@ public interface Transparency extends Feature
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Percent</em>' attribute.
-   * @see #setPercent(String)
+   * @see #setPercent(int)
    * @see org.eclipselabs.xdiagram.dsl.DslPackage#getTransparency_Percent()
    * @model
    * @generated
    */
-  String getPercent();
+  int getPercent();
 
   /**
    * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.Transparency#getPercent <em>Percent</em>}' attribute.
@@ -45,6 +45,6 @@ public interface Transparency extends Feature
    * @see #getPercent()
    * @generated
    */
-  void setPercent(String value);
+  void setPercent(int value);
 
 } // Transparency

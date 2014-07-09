@@ -77,10 +77,12 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
       case DslPackage.NODE: return createNode();
       case DslPackage.LINK: return createLink();
       case DslPackage.DECORATOR: return createDecorator();
-      case DslPackage.CONNECTABLE_ELEMENT: return createConnectableElement();
       case DslPackage.ANCHOR: return createAnchor();
       case DslPackage.CUSTOM_COLOR: return createCustomColor();
       case DslPackage.COLOR: return createColor();
+      case DslPackage.CONNECTABLE_ELEMENT: return createConnectableElement();
+      case DslPackage.LAYOUT: return createLayout();
+      case DslPackage.VISIBLE: return createVisible();
       case DslPackage.CUSTOM_FIGURE: return createCustomFigure();
       case DslPackage.CUSTOM: return createCustom();
       case DslPackage.RECTANGLE: return createRectangle();
@@ -89,6 +91,7 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
       case DslPackage.POLYLINE: return createPolyline();
       case DslPackage.TRIANGLE: return createTriangle();
       case DslPackage.LINE: return createLine();
+      case DslPackage.ARROW: return createArrow();
       case DslPackage.CONTAINS: return createContains();
       case DslPackage.VALUE: return createValue();
       case DslPackage.INT_VALUE: return createIntValue();
@@ -106,6 +109,7 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
       case DslPackage.POSITION: return createPosition();
       case DslPackage.CORNER: return createCorner();
       case DslPackage.TEXT_VALUE: return createTextValue();
+      case DslPackage.TEXT_PART: return createTextPart();
       case DslPackage.FONT_FACE: return createFontFace();
       case DslPackage.FONT_SIZE: return createFontSize();
       case DslPackage.FONT_STYLE: return createFontStyle();
@@ -126,8 +130,6 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     switch (eDataType.getClassifierID())
     {
-      case DslPackage.FIGURE_TYPE:
-        return createFigureTypeFromString(eDataType, initialValue);
       case DslPackage.CONNECTION_TYPE:
         return createConnectionTypeFromString(eDataType, initialValue);
       case DslPackage.ANCHOR_DIRECTION:
@@ -161,8 +163,6 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     switch (eDataType.getClassifierID())
     {
-      case DslPackage.FIGURE_TYPE:
-        return convertFigureTypeToString(eDataType, instanceValue);
       case DslPackage.CONNECTION_TYPE:
         return convertConnectionTypeToString(eDataType, instanceValue);
       case DslPackage.ANCHOR_DIRECTION:
@@ -323,17 +323,6 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ConnectableElement createConnectableElement()
-  {
-    ConnectableElementImpl connectableElement = new ConnectableElementImpl();
-    return connectableElement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Anchor createAnchor()
   {
     AnchorImpl anchor = new AnchorImpl();
@@ -360,6 +349,39 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     ColorImpl color = new ColorImpl();
     return color;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ConnectableElement createConnectableElement()
+  {
+    ConnectableElementImpl connectableElement = new ConnectableElementImpl();
+    return connectableElement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Layout createLayout()
+  {
+    LayoutImpl layout = new LayoutImpl();
+    return layout;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Visible createVisible()
+  {
+    VisibleImpl visible = new VisibleImpl();
+    return visible;
   }
 
   /**
@@ -448,6 +470,17 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     LineImpl line = new LineImpl();
     return line;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Arrow createArrow()
+  {
+    ArrowImpl arrow = new ArrowImpl();
+    return arrow;
   }
 
   /**
@@ -642,6 +675,17 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public TextPart createTextPart()
+  {
+    TextPartImpl textPart = new TextPartImpl();
+    return textPart;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public FontFace createFontFace()
   {
     FontFaceImpl fontFace = new FontFaceImpl();
@@ -690,28 +734,6 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     LineWidthImpl lineWidth = new LineWidthImpl();
     return lineWidth;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FigureType createFigureTypeFromString(EDataType eDataType, String initialValue)
-  {
-    FigureType result = FigureType.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertFigureTypeToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**

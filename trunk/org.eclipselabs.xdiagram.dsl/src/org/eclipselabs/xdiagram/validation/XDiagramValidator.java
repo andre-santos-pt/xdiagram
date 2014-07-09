@@ -14,6 +14,7 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
 import org.eclipselabs.xdiagram.dsl.Label;
 import org.eclipselabs.xdiagram.dsl.Link;
 import org.eclipselabs.xdiagram.dsl.Node;
+import org.eclipselabs.xdiagram.dsl.TextPart;
 import org.eclipselabs.xdiagram.dsl.TextValue;
 import org.eclipselabs.xdiagram.dsl.XDiagram;
 
@@ -34,32 +35,34 @@ public class XDiagramValidator extends DslValidator {
 
 	//?
 	public void validateUniqueNodes(XDiagram diagram) {
-		
+
 	}
 
 	@Check
 	public void checkTextValue(TextValue v) {
-		if(v.getModelAttribute() != null) {
-			Label label = (Label) v.eContainer();
-			EObject labelContainer = label.eContainer();
-			if(labelContainer instanceof Node) {
-				EObject parent = labelContainer.eContainer();
-//				if(parent instanceof NodeContainer)
-//					parent = parent.eContainer();
+		for(TextPart part : v.getParts()) {
+			if(part.getModelAttribute() != null) {
+				Label label = (Label) v.eContainer();
+				EObject labelContainer = label.eContainer();
+				if(labelContainer instanceof Node) {
+					EObject parent = labelContainer.eContainer();
+					//				if(parent instanceof NodeContainer)
+					//					parent = parent.eContainer();
 
-				// TODO: crawl up
-//				if(!((Node) parent).getModelClass().getEAllAttributes().contains(v.getModelAttribute()))
-//					error("attribute must be owned by node model class", XdiagramPackage.Literals.TEXT_VALUE__TEXT);
-			}
-			else if(labelContainer instanceof Decorator) {
-				Link link = (Link) labelContainer.eContainer();
-				if(link.isComplex()) {
-					if(!link.getModelClass().getEAllAttributes().contains(v.getModelAttribute()))
-						error("attribute must be owned by link model class", DslPackage.Literals.TEXT_VALUE__TEXT);
+					// TODO: crawl up
+					//				if(!((Node) parent).getModelClass().getEAllAttributes().contains(v.getModelAttribute()))
+					//					error("attribute must be owned by node model class", XdiagramPackage.Literals.TEXT_VALUE__TEXT);
 				}
-				else {
-//					if(!((EClass) link.getModelReference().eContainer()).getEAllAttributes().contains(v.getModelAttribute()))
-					error("dynamic labels in simple links are not supported", DslPackage.Literals.TEXT_VALUE__TEXT);
+				else if(labelContainer instanceof Decorator) {
+					Link link = (Link) labelContainer.eContainer();
+					if(link.isComplex()) {
+						if(!link.getModelClass().getEAllAttributes().contains(part.getModelAttribute()))
+							error("attribute must be owned by link model class", DslPackage.Literals.TEXT_PART__MODEL_ATTRIBUTE);
+					}
+					else {
+						//					if(!((EClass) link.getModelReference().eContainer()).getEAllAttributes().contains(v.getModelAttribute()))
+						error("dynamic labels in simple links are not supported", DslPackage.Literals.TEXT_PART__MODEL_ATTRIBUTE);
+					}
 				}
 			}
 		}
@@ -75,18 +78,18 @@ public class XDiagramValidator extends DslValidator {
 	}
 
 
-//	@Check
-//	public void checkContainer(NodeContainer container) {
-//		Node parent = (Node) container.eContainer();
-//		EReference ref = container.getModelReference();
-//		if(!ref.getEContainingClass().equals(parent.getModelClass()))
-//			error("reference must be owned by the node model class", XdiagramPackage.Literals.NODE_CONTAINER__MODEL_REFERENCE);
-//
-//		if(!ref.isContainment())
-//			error("reference must be containment", XdiagramPackage.Literals.NODE_CONTAINER__MODEL_REFERENCE);
-//
-//
-//	}
+	//	@Check
+	//	public void checkContainer(NodeContainer container) {
+	//		Node parent = (Node) container.eContainer();
+	//		EReference ref = container.getModelReference();
+	//		if(!ref.getEContainingClass().equals(parent.getModelClass()))
+	//			error("reference must be owned by the node model class", XdiagramPackage.Literals.NODE_CONTAINER__MODEL_REFERENCE);
+	//
+	//		if(!ref.isContainment())
+	//			error("reference must be containment", XdiagramPackage.Literals.NODE_CONTAINER__MODEL_REFERENCE);
+	//
+	//
+	//	}
 
 	@Check
 	public void checkGreetingStartsWithCapital(Link link) {

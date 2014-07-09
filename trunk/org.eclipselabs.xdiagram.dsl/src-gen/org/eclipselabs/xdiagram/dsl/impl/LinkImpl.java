@@ -35,6 +35,7 @@ import org.eclipselabs.xdiagram.dsl.Style;
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#isStyled <em>Styled</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getStyle <em>Style</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getFeatures <em>Features</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#isReference <em>Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getModelReference <em>Model Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#isComplex <em>Complex</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getSourceReference <em>Source Reference</em>}</li>
@@ -86,6 +87,26 @@ public class LinkImpl extends DiagramElementImpl implements Link
    * @ordered
    */
   protected EList<Feature> features;
+
+  /**
+   * The default value of the '{@link #isReference() <em>Reference</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isReference()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean REFERENCE_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isReference() <em>Reference</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isReference()
+   * @generated
+   * @ordered
+   */
+  protected boolean reference = REFERENCE_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getModelReference() <em>Model Reference</em>}' reference.
@@ -256,6 +277,29 @@ public class LinkImpl extends DiagramElementImpl implements Link
       features = new EObjectContainmentEList<Feature>(Feature.class, this, DslPackage.LINK__FEATURES);
     }
     return features;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isReference()
+  {
+    return reference;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setReference(boolean newReference)
+  {
+    boolean oldReference = reference;
+    reference = newReference;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.LINK__REFERENCE, oldReference, reference));
   }
 
   /**
@@ -466,6 +510,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
         return basicGetStyle();
       case DslPackage.LINK__FEATURES:
         return getFeatures();
+      case DslPackage.LINK__REFERENCE:
+        return isReference();
       case DslPackage.LINK__MODEL_REFERENCE:
         if (resolve) return getModelReference();
         return basicGetModelReference();
@@ -503,6 +549,9 @@ public class LinkImpl extends DiagramElementImpl implements Link
       case DslPackage.LINK__FEATURES:
         getFeatures().clear();
         getFeatures().addAll((Collection<? extends Feature>)newValue);
+        return;
+      case DslPackage.LINK__REFERENCE:
+        setReference((Boolean)newValue);
         return;
       case DslPackage.LINK__MODEL_REFERENCE:
         setModelReference((EReference)newValue);
@@ -542,6 +591,9 @@ public class LinkImpl extends DiagramElementImpl implements Link
       case DslPackage.LINK__FEATURES:
         getFeatures().clear();
         return;
+      case DslPackage.LINK__REFERENCE:
+        setReference(REFERENCE_EDEFAULT);
+        return;
       case DslPackage.LINK__MODEL_REFERENCE:
         setModelReference((EReference)null);
         return;
@@ -577,6 +629,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
         return style != null;
       case DslPackage.LINK__FEATURES:
         return features != null && !features.isEmpty();
+      case DslPackage.LINK__REFERENCE:
+        return reference != REFERENCE_EDEFAULT;
       case DslPackage.LINK__MODEL_REFERENCE:
         return modelReference != null;
       case DslPackage.LINK__COMPLEX:
@@ -646,6 +700,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (styled: ");
     result.append(styled);
+    result.append(", reference: ");
+    result.append(reference);
     result.append(", complex: ");
     result.append(complex);
     result.append(", type: ");

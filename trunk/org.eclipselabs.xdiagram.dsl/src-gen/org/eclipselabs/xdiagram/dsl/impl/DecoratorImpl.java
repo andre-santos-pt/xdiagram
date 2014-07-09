@@ -10,9 +10,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipselabs.xdiagram.dsl.ConnectableElement;
 import org.eclipselabs.xdiagram.dsl.Decorator;
 import org.eclipselabs.xdiagram.dsl.DslPackage;
+import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +38,7 @@ public class DecoratorImpl extends FeatureImpl implements Decorator
    * @generated
    * @ordered
    */
-  protected static final String POSITION_EDEFAULT = null;
+  protected static final int POSITION_EDEFAULT = 0;
 
   /**
    * The cached value of the '{@link #getPosition() <em>Position</em>}' attribute.
@@ -48,7 +48,7 @@ public class DecoratorImpl extends FeatureImpl implements Decorator
    * @generated
    * @ordered
    */
-  protected String position = POSITION_EDEFAULT;
+  protected int position = POSITION_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getElement() <em>Element</em>}' containment reference.
@@ -58,7 +58,7 @@ public class DecoratorImpl extends FeatureImpl implements Decorator
    * @generated
    * @ordered
    */
-  protected ConnectableElement element;
+  protected FeatureContainer element;
 
   /**
    * <!-- begin-user-doc -->
@@ -86,7 +86,7 @@ public class DecoratorImpl extends FeatureImpl implements Decorator
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getPosition()
+  public int getPosition()
   {
     return position;
   }
@@ -96,9 +96,9 @@ public class DecoratorImpl extends FeatureImpl implements Decorator
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPosition(String newPosition)
+  public void setPosition(int newPosition)
   {
-    String oldPosition = position;
+    int oldPosition = position;
     position = newPosition;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.DECORATOR__POSITION, oldPosition, position));
@@ -109,7 +109,7 @@ public class DecoratorImpl extends FeatureImpl implements Decorator
    * <!-- end-user-doc -->
    * @generated
    */
-  public ConnectableElement getElement()
+  public FeatureContainer getElement()
   {
     return element;
   }
@@ -119,9 +119,9 @@ public class DecoratorImpl extends FeatureImpl implements Decorator
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetElement(ConnectableElement newElement, NotificationChain msgs)
+  public NotificationChain basicSetElement(FeatureContainer newElement, NotificationChain msgs)
   {
-    ConnectableElement oldElement = element;
+    FeatureContainer oldElement = element;
     element = newElement;
     if (eNotificationRequired())
     {
@@ -136,7 +136,7 @@ public class DecoratorImpl extends FeatureImpl implements Decorator
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setElement(ConnectableElement newElement)
+  public void setElement(FeatureContainer newElement)
   {
     if (newElement != element)
     {
@@ -197,10 +197,10 @@ public class DecoratorImpl extends FeatureImpl implements Decorator
     switch (featureID)
     {
       case DslPackage.DECORATOR__POSITION:
-        setPosition((String)newValue);
+        setPosition((Integer)newValue);
         return;
       case DslPackage.DECORATOR__ELEMENT:
-        setElement((ConnectableElement)newValue);
+        setElement((FeatureContainer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -220,7 +220,7 @@ public class DecoratorImpl extends FeatureImpl implements Decorator
         setPosition(POSITION_EDEFAULT);
         return;
       case DslPackage.DECORATOR__ELEMENT:
-        setElement((ConnectableElement)null);
+        setElement((FeatureContainer)null);
         return;
     }
     super.eUnset(featureID);
@@ -237,7 +237,7 @@ public class DecoratorImpl extends FeatureImpl implements Decorator
     switch (featureID)
     {
       case DslPackage.DECORATOR__POSITION:
-        return POSITION_EDEFAULT == null ? position != null : !POSITION_EDEFAULT.equals(position);
+        return position != POSITION_EDEFAULT;
       case DslPackage.DECORATOR__ELEMENT:
         return element != null;
     }

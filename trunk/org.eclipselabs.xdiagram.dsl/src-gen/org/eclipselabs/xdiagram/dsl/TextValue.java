@@ -2,7 +2,7 @@
  */
 package org.eclipselabs.xdiagram.dsl;
 
-import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,8 +12,7 @@ import org.eclipse.emf.ecore.EAttribute;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.TextValue#getText <em>Text</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.TextValue#getModelAttribute <em>Model Attribute</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.TextValue#getParts <em>Parts</em>}</li>
  * </ul>
  * </p>
  *
@@ -24,55 +23,19 @@ import org.eclipse.emf.ecore.EAttribute;
 public interface TextValue extends Feature
 {
   /**
-   * Returns the value of the '<em><b>Text</b></em>' attribute.
+   * Returns the value of the '<em><b>Parts</b></em>' containment reference list.
+   * The list contents are of type {@link org.eclipselabs.xdiagram.dsl.TextPart}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Text</em>' attribute isn't clear,
+   * If the meaning of the '<em>Parts</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Text</em>' attribute.
-   * @see #setText(String)
-   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getTextValue_Text()
-   * @model
+   * @return the value of the '<em>Parts</em>' containment reference list.
+   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getTextValue_Parts()
+   * @model containment="true"
    * @generated
    */
-  String getText();
-
-  /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.TextValue#getText <em>Text</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Text</em>' attribute.
-   * @see #getText()
-   * @generated
-   */
-  void setText(String value);
-
-  /**
-   * Returns the value of the '<em><b>Model Attribute</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Model Attribute</em>' reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Model Attribute</em>' reference.
-   * @see #setModelAttribute(EAttribute)
-   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getTextValue_ModelAttribute()
-   * @model
-   * @generated
-   */
-  EAttribute getModelAttribute();
-
-  /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.TextValue#getModelAttribute <em>Model Attribute</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Model Attribute</em>' reference.
-   * @see #getModelAttribute()
-   * @generated
-   */
-  void setModelAttribute(EAttribute value);
+  EList<TextPart> getParts();
 
 } // TextValue

@@ -131,15 +131,6 @@ public interface DslFactory extends EFactory
   Decorator createDecorator();
 
   /**
-   * Returns a new object of class '<em>Connectable Element</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Connectable Element</em>'.
-   * @generated
-   */
-  ConnectableElement createConnectableElement();
-
-  /**
    * Returns a new object of class '<em>Anchor</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -165,6 +156,33 @@ public interface DslFactory extends EFactory
    * @generated
    */
   Color createColor();
+
+  /**
+   * Returns a new object of class '<em>Connectable Element</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Connectable Element</em>'.
+   * @generated
+   */
+  ConnectableElement createConnectableElement();
+
+  /**
+   * Returns a new object of class '<em>Layout</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Layout</em>'.
+   * @generated
+   */
+  Layout createLayout();
+
+  /**
+   * Returns a new object of class '<em>Visible</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Visible</em>'.
+   * @generated
+   */
+  Visible createVisible();
 
   /**
    * Returns a new object of class '<em>Custom Figure</em>'.
@@ -237,6 +255,15 @@ public interface DslFactory extends EFactory
    * @generated
    */
   Line createLine();
+
+  /**
+   * Returns a new object of class '<em>Arrow</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Arrow</em>'.
+   * @generated
+   */
+  Arrow createArrow();
 
   /**
    * Returns a new object of class '<em>Contains</em>'.
@@ -390,6 +417,15 @@ public interface DslFactory extends EFactory
    * @generated
    */
   TextValue createTextValue();
+
+  /**
+   * Returns a new object of class '<em>Text Part</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Text Part</em>'.
+   * @generated
+   */
+  TextPart createTextPart();
 
   /**
    * Returns a new object of class '<em>Font Face</em>'.

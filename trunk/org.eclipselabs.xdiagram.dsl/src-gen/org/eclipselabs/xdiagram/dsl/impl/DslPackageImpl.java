@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipselabs.xdiagram.dsl.Anchor;
 import org.eclipselabs.xdiagram.dsl.AnchorDirection;
+import org.eclipselabs.xdiagram.dsl.Arrow;
 import org.eclipselabs.xdiagram.dsl.BooleanLiteral;
 import org.eclipselabs.xdiagram.dsl.BooleanValue;
 import org.eclipselabs.xdiagram.dsl.Color;
@@ -36,7 +37,6 @@ import org.eclipselabs.xdiagram.dsl.EnumValue;
 import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.FeatureConditional;
 import org.eclipselabs.xdiagram.dsl.FeatureContainer;
-import org.eclipselabs.xdiagram.dsl.FigureType;
 import org.eclipselabs.xdiagram.dsl.FontFace;
 import org.eclipselabs.xdiagram.dsl.FontFaceType;
 import org.eclipselabs.xdiagram.dsl.FontSize;
@@ -48,6 +48,7 @@ import org.eclipselabs.xdiagram.dsl.ImportStatement;
 import org.eclipselabs.xdiagram.dsl.IntValue;
 import org.eclipselabs.xdiagram.dsl.Invisible;
 import org.eclipselabs.xdiagram.dsl.Label;
+import org.eclipselabs.xdiagram.dsl.Layout;
 import org.eclipselabs.xdiagram.dsl.Line;
 import org.eclipselabs.xdiagram.dsl.LineStyle;
 import org.eclipselabs.xdiagram.dsl.LineType;
@@ -63,10 +64,12 @@ import org.eclipselabs.xdiagram.dsl.Rhombus;
 import org.eclipselabs.xdiagram.dsl.Size;
 import org.eclipselabs.xdiagram.dsl.StringValue;
 import org.eclipselabs.xdiagram.dsl.Style;
+import org.eclipselabs.xdiagram.dsl.TextPart;
 import org.eclipselabs.xdiagram.dsl.TextValue;
 import org.eclipselabs.xdiagram.dsl.Transparency;
 import org.eclipselabs.xdiagram.dsl.Triangle;
 import org.eclipselabs.xdiagram.dsl.Value;
+import org.eclipselabs.xdiagram.dsl.Visible;
 import org.eclipselabs.xdiagram.dsl.XDiagram;
 
 /**
@@ -166,13 +169,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass connectableElementEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass anchorEClass = null;
 
   /**
@@ -188,6 +184,27 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * @generated
    */
   private EClass colorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass connectableElementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass layoutEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass visibleEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -244,6 +261,13 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * @generated
    */
   private EClass lineEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass arrowEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -369,6 +393,13 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass textPartEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass fontFaceEClass = null;
 
   /**
@@ -398,13 +429,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * @generated
    */
   private EClass lineWidthEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EEnum figureTypeEEnum = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -907,9 +931,19 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getLink_Reference()
+  {
+    return (EAttribute)linkEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getLink_ModelReference()
   {
-    return (EReference)linkEClass.getEStructuralFeatures().get(0);
+    return (EReference)linkEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -919,7 +953,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    */
   public EAttribute getLink_Complex()
   {
-    return (EAttribute)linkEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)linkEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -929,7 +963,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    */
   public EReference getLink_SourceReference()
   {
-    return (EReference)linkEClass.getEStructuralFeatures().get(2);
+    return (EReference)linkEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -939,7 +973,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    */
   public EReference getLink_TargetReference()
   {
-    return (EReference)linkEClass.getEStructuralFeatures().get(3);
+    return (EReference)linkEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -949,7 +983,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    */
   public EAttribute getLink_Type()
   {
-    return (EAttribute)linkEClass.getEStructuralFeatures().get(4);
+    return (EAttribute)linkEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -980,46 +1014,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
   public EReference getDecorator_Element()
   {
     return (EReference)decoratorEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getConnectableElement()
-  {
-    return connectableElementEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getConnectableElement_Composite()
-  {
-    return (EAttribute)connectableElementEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getConnectableElement_Layout()
-  {
-    return (EAttribute)connectableElementEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getConnectableElement_Children()
-  {
-    return (EReference)connectableElementEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1130,6 +1124,56 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
   public EReference getColor_Custom()
   {
     return (EReference)colorEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getConnectableElement()
+  {
+    return connectableElementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getConnectableElement_Children()
+  {
+    return (EReference)connectableElementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLayout()
+  {
+    return layoutEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLayout_Layout()
+  {
+    return (EAttribute)layoutEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getVisible()
+  {
+    return visibleEClass;
   }
 
   /**
@@ -1307,6 +1351,36 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getLine_Horizontal()
+  {
+    return (EAttribute)lineEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLine_Vertical()
+  {
+    return (EAttribute)lineEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getArrow()
+  {
+    return arrowEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getContains()
   {
     return containsEClass;
@@ -1320,16 +1394,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
   public EReference getContains_ModelReference()
   {
     return (EReference)containsEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getContains_Layout()
-  {
-    return (EAttribute)containsEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1477,16 +1541,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getLabel_Editable()
-  {
-    return (EAttribute)labelEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getImage()
   {
     return imageEClass;
@@ -1587,9 +1641,29 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getSize_Height()
+  public EAttribute getSize_WidthRelative()
   {
     return (EAttribute)sizeEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSize_Height()
+  {
+    return (EAttribute)sizeEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSize_HeightRelative()
+  {
+    return (EAttribute)sizeEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1707,9 +1781,9 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTextValue_Text()
+  public EReference getTextValue_Parts()
   {
-    return (EAttribute)textValueEClass.getEStructuralFeatures().get(0);
+    return (EReference)textValueEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1717,9 +1791,29 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTextValue_ModelAttribute()
+  public EClass getTextPart()
   {
-    return (EReference)textValueEClass.getEStructuralFeatures().get(1);
+    return textPartEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTextPart_Text()
+  {
+    return (EAttribute)textPartEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTextPart_ModelAttribute()
+  {
+    return (EReference)textPartEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1820,16 +1914,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
   public EAttribute getLineWidth_Width()
   {
     return (EAttribute)lineWidthEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EEnum getFigureType()
-  {
-    return figureTypeEEnum;
   }
 
   /**
@@ -1999,6 +2083,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     createEReference(nodeEClass, NODE__ROOT_FIGURE);
 
     linkEClass = createEClass(LINK);
+    createEAttribute(linkEClass, LINK__REFERENCE);
     createEReference(linkEClass, LINK__MODEL_REFERENCE);
     createEAttribute(linkEClass, LINK__COMPLEX);
     createEReference(linkEClass, LINK__SOURCE_REFERENCE);
@@ -2008,11 +2093,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     decoratorEClass = createEClass(DECORATOR);
     createEAttribute(decoratorEClass, DECORATOR__POSITION);
     createEReference(decoratorEClass, DECORATOR__ELEMENT);
-
-    connectableElementEClass = createEClass(CONNECTABLE_ELEMENT);
-    createEAttribute(connectableElementEClass, CONNECTABLE_ELEMENT__COMPOSITE);
-    createEAttribute(connectableElementEClass, CONNECTABLE_ELEMENT__LAYOUT);
-    createEReference(connectableElementEClass, CONNECTABLE_ELEMENT__CHILDREN);
 
     anchorEClass = createEClass(ANCHOR);
     createEAttribute(anchorEClass, ANCHOR__DIRECTION);
@@ -2027,6 +2107,14 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     colorEClass = createEClass(COLOR);
     createEAttribute(colorEClass, COLOR__DEFAULT);
     createEReference(colorEClass, COLOR__CUSTOM);
+
+    connectableElementEClass = createEClass(CONNECTABLE_ELEMENT);
+    createEReference(connectableElementEClass, CONNECTABLE_ELEMENT__CHILDREN);
+
+    layoutEClass = createEClass(LAYOUT);
+    createEAttribute(layoutEClass, LAYOUT__LAYOUT);
+
+    visibleEClass = createEClass(VISIBLE);
 
     customFigureEClass = createEClass(CUSTOM_FIGURE);
     createEAttribute(customFigureEClass, CUSTOM_FIGURE__NAME);
@@ -2052,10 +2140,13 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     triangleEClass = createEClass(TRIANGLE);
 
     lineEClass = createEClass(LINE);
+    createEAttribute(lineEClass, LINE__HORIZONTAL);
+    createEAttribute(lineEClass, LINE__VERTICAL);
+
+    arrowEClass = createEClass(ARROW);
 
     containsEClass = createEClass(CONTAINS);
     createEReference(containsEClass, CONTAINS__MODEL_REFERENCE);
-    createEAttribute(containsEClass, CONTAINS__LAYOUT);
 
     valueEClass = createEClass(VALUE);
 
@@ -2077,7 +2168,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     createEAttribute(enumValueEClass, ENUM_VALUE__NAME);
 
     labelEClass = createEClass(LABEL);
-    createEAttribute(labelEClass, LABEL__EDITABLE);
 
     imageEClass = createEClass(IMAGE);
     createEAttribute(imageEClass, IMAGE__IMAGE_ID);
@@ -2093,7 +2183,9 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
 
     sizeEClass = createEClass(SIZE);
     createEAttribute(sizeEClass, SIZE__WIDTH);
+    createEAttribute(sizeEClass, SIZE__WIDTH_RELATIVE);
     createEAttribute(sizeEClass, SIZE__HEIGHT);
+    createEAttribute(sizeEClass, SIZE__HEIGHT_RELATIVE);
 
     pointEClass = createEClass(POINT);
     createEAttribute(pointEClass, POINT__X);
@@ -2109,8 +2201,11 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     createEAttribute(cornerEClass, CORNER__ANGLE);
 
     textValueEClass = createEClass(TEXT_VALUE);
-    createEAttribute(textValueEClass, TEXT_VALUE__TEXT);
-    createEReference(textValueEClass, TEXT_VALUE__MODEL_ATTRIBUTE);
+    createEReference(textValueEClass, TEXT_VALUE__PARTS);
+
+    textPartEClass = createEClass(TEXT_PART);
+    createEAttribute(textPartEClass, TEXT_PART__TEXT);
+    createEReference(textPartEClass, TEXT_PART__MODEL_ATTRIBUTE);
 
     fontFaceEClass = createEClass(FONT_FACE);
     createEAttribute(fontFaceEClass, FONT_FACE__FACE);
@@ -2128,7 +2223,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     createEAttribute(lineWidthEClass, LINE_WIDTH__WIDTH);
 
     // Create enums
-    figureTypeEEnum = createEEnum(FIGURE_TYPE);
     connectionTypeEEnum = createEEnum(CONNECTION_TYPE);
     anchorDirectionEEnum = createEEnum(ANCHOR_DIRECTION);
     defaultColorEEnum = createEEnum(DEFAULT_COLOR);
@@ -2174,15 +2268,18 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     linkEClass.getESuperTypes().add(this.getDiagramElement());
     linkEClass.getESuperTypes().add(this.getFeatureContainer());
     decoratorEClass.getESuperTypes().add(this.getFeature());
-    connectableElementEClass.getESuperTypes().add(this.getFeatureContainer());
     anchorEClass.getESuperTypes().add(this.getFeature());
+    connectableElementEClass.getESuperTypes().add(this.getFeatureContainer());
+    layoutEClass.getESuperTypes().add(this.getFeature());
+    visibleEClass.getESuperTypes().add(this.getFeature());
     customEClass.getESuperTypes().add(this.getConnectableElement());
     rectangleEClass.getESuperTypes().add(this.getConnectableElement());
     rhombusEClass.getESuperTypes().add(this.getConnectableElement());
     ellipseEClass.getESuperTypes().add(this.getConnectableElement());
     polylineEClass.getESuperTypes().add(this.getConnectableElement());
     triangleEClass.getESuperTypes().add(this.getConnectableElement());
-    lineEClass.getESuperTypes().add(this.getConnectableElement());
+    lineEClass.getESuperTypes().add(this.getFeatureContainer());
+    arrowEClass.getESuperTypes().add(this.getFeatureContainer());
     containsEClass.getESuperTypes().add(this.getFeature());
     intValueEClass.getESuperTypes().add(this.getValue());
     doubleValueEClass.getESuperTypes().add(this.getValue());
@@ -2253,6 +2350,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEReference(getNode_RootFigure(), this.getConnectableElement(), null, "rootFigure", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLink_Reference(), ecorePackage.getEBoolean(), "reference", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getLink_ModelReference(), ecorePackage.getEReference(), null, "modelReference", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getLink_Complex(), ecorePackage.getEBoolean(), "complex", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getLink_SourceReference(), ecorePackage.getEReference(), null, "sourceReference", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2260,13 +2358,8 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEAttribute(getLink_Type(), this.getConnectionType(), "type", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(decoratorEClass, Decorator.class, "Decorator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDecorator_Position(), ecorePackage.getEString(), "position", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDecorator_Element(), this.getConnectableElement(), null, "element", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(connectableElementEClass, ConnectableElement.class, "ConnectableElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getConnectableElement_Composite(), ecorePackage.getEBoolean(), "composite", null, 0, 1, ConnectableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getConnectableElement_Layout(), this.getContainerLayout(), "layout", null, 0, 1, ConnectableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConnectableElement_Children(), this.getConnectableElement(), null, "children", null, 0, -1, ConnectableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDecorator_Position(), ecorePackage.getEInt(), "position", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDecorator_Element(), this.getFeatureContainer(), null, "element", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(anchorEClass, Anchor.class, "Anchor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAnchor_Direction(), this.getAnchorDirection(), "direction", null, 0, 1, Anchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2281,6 +2374,14 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEClass(colorEClass, Color.class, "Color", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getColor_Default(), this.getDefaultColor(), "default", null, 0, 1, Color.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getColor_Custom(), this.getCustomColor(), null, "custom", null, 0, 1, Color.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(connectableElementEClass, ConnectableElement.class, "ConnectableElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getConnectableElement_Children(), this.getFeatureContainer(), null, "children", null, 0, -1, ConnectableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(layoutEClass, Layout.class, "Layout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLayout_Layout(), this.getContainerLayout(), "layout", null, 0, 1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(visibleEClass, Visible.class, "Visible", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(customFigureEClass, CustomFigure.class, "CustomFigure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCustomFigure_Name(), ecorePackage.getEString(), "name", null, 0, 1, CustomFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2306,10 +2407,13 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEClass(triangleEClass, Triangle.class, "Triangle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(lineEClass, Line.class, "Line", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLine_Horizontal(), ecorePackage.getEBoolean(), "horizontal", null, 0, 1, Line.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLine_Vertical(), ecorePackage.getEBoolean(), "vertical", null, 0, 1, Line.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(arrowEClass, Arrow.class, "Arrow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(containsEClass, Contains.class, "Contains", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getContains_ModelReference(), ecorePackage.getEReference(), null, "modelReference", null, 0, 1, Contains.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getContains_Layout(), this.getContainerLayout(), "layout", null, 0, 1, Contains.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(valueEClass, Value.class, "Value", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2331,7 +2435,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEAttribute(getEnumValue_Name(), ecorePackage.getEString(), "name", null, 0, 1, EnumValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(labelEClass, Label.class, "Label", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLabel_Editable(), ecorePackage.getEBoolean(), "editable", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(imageEClass, Image.class, "Image", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getImage_ImageId(), ecorePackage.getEString(), "imageId", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2343,11 +2446,13 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEReference(getColorFeature_Color(), this.getColor(), null, "color", null, 0, 1, ColorFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(transparencyEClass, Transparency.class, "Transparency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTransparency_Percent(), ecorePackage.getEString(), "percent", null, 0, 1, Transparency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTransparency_Percent(), ecorePackage.getEInt(), "percent", null, 0, 1, Transparency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(sizeEClass, Size.class, "Size", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSize_Width(), ecorePackage.getEInt(), "width", null, 0, 1, Size.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSize_WidthRelative(), ecorePackage.getEBoolean(), "widthRelative", null, 0, 1, Size.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSize_Height(), ecorePackage.getEInt(), "height", null, 0, 1, Size.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSize_HeightRelative(), ecorePackage.getEBoolean(), "heightRelative", null, 0, 1, Size.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(pointEClass, Point.class, "Point", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPoint_X(), ecorePackage.getEInt(), "x", null, 0, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2363,8 +2468,11 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEAttribute(getCorner_Angle(), ecorePackage.getEInt(), "angle", null, 0, 1, Corner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(textValueEClass, TextValue.class, "TextValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTextValue_Text(), ecorePackage.getEString(), "text", null, 0, 1, TextValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTextValue_ModelAttribute(), ecorePackage.getEAttribute(), null, "modelAttribute", null, 0, 1, TextValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTextValue_Parts(), this.getTextPart(), null, "parts", null, 0, -1, TextValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(textPartEClass, TextPart.class, "TextPart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTextPart_Text(), ecorePackage.getEString(), "text", null, 0, 1, TextPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTextPart_ModelAttribute(), ecorePackage.getEAttribute(), null, "modelAttribute", null, 0, 1, TextPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fontFaceEClass, FontFace.class, "FontFace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFontFace_Face(), this.getFontFaceType(), "face", null, 0, 1, FontFace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2382,10 +2490,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEAttribute(getLineWidth_Width(), ecorePackage.getEInt(), "width", null, 0, 1, LineWidth.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
-    initEEnum(figureTypeEEnum, FigureType.class, "FigureType");
-    addEEnumLiteral(figureTypeEEnum, FigureType.RECTANGLE);
-    addEEnumLiteral(figureTypeEEnum, FigureType.ELLIPSE);
-
     initEEnum(connectionTypeEEnum, ConnectionType.class, "ConnectionType");
     addEEnumLiteral(connectionTypeEEnum, ConnectionType.FREE);
     addEEnumLiteral(connectionTypeEEnum, ConnectionType.MANHATTAN);

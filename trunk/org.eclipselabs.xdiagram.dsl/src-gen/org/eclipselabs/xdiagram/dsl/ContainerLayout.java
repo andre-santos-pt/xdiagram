@@ -37,7 +37,7 @@ public enum ContainerLayout implements Enumerator
    * @generated
    * @ordered
    */
-  VSTACK(1, "VSTACK", "vstack"),
+  VSTACK(1, "VSTACK", "vertical"),
 
   /**
    * The '<em><b>HSTACK</b></em>' literal object.
@@ -47,7 +47,7 @@ public enum ContainerLayout implements Enumerator
    * @generated
    * @ordered
    */
-  HSTACK(2, "HSTACK", "hstack");
+  HSTACK(2, "HSTACK", "horizontal");
 
   /**
    * The '<em><b>FREE</b></em>' literal value.
@@ -73,7 +73,7 @@ public enum ContainerLayout implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #VSTACK
-   * @model literal="vstack"
+   * @model literal="vertical"
    * @generated
    * @ordered
    */
@@ -88,7 +88,7 @@ public enum ContainerLayout implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #HSTACK
-   * @model literal="hstack"
+   * @model literal="horizontal"
    * @generated
    * @ordered
    */
