@@ -5,8 +5,6 @@ package org.eclipselabs.xdiagram;
 
 import org.eclipse.xtext.scoping.impl.ImportUriGlobalScopeProvider;
 import org.eclipse.xtext.scoping.impl.ImportedNamespaceAwareLocalScopeProvider;
-import org.eclipselabs.xdiagram.validation.DslValidator;
-import org.eclipselabs.xdiagram.validation.XDiagramValidator;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
@@ -21,8 +19,4 @@ public class DslRuntimeModule extends org.eclipselabs.xdiagram.AbstractDslRuntim
 		return ImportUriGlobalScopeProvider.class;
 	}
 	
-	@Override
-	public Class<? extends DslValidator> bindDslValidator() {
-		return XDiagramValidator.class;
-	}
 }

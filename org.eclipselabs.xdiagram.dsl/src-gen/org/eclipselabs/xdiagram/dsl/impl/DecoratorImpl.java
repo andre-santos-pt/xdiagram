@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipselabs.xdiagram.dsl.Decorator;
 import org.eclipselabs.xdiagram.dsl.DslPackage;
@@ -28,7 +29,7 @@ import org.eclipselabs.xdiagram.dsl.FeatureContainer;
  *
  * @generated
  */
-public class DecoratorImpl extends FeatureImpl implements Decorator
+public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decorator
 {
   /**
    * The default value of the '{@link #getPosition() <em>Position</em>}' attribute.

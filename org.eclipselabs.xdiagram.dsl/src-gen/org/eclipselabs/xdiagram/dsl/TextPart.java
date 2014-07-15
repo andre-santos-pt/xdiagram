@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.TextPart#getText <em>Text</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.TextPart#isEditable <em>Editable</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.TextPart#getModelAttribute <em>Model Attribute</em>}</li>
  * </ul>
  * </p>
@@ -49,6 +50,32 @@ public interface TextPart extends EObject
    * @generated
    */
   void setText(String value);
+
+  /**
+   * Returns the value of the '<em><b>Editable</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Editable</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Editable</em>' attribute.
+   * @see #setEditable(boolean)
+   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getTextPart_Editable()
+   * @model
+   * @generated
+   */
+  boolean isEditable();
+
+  /**
+   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.TextPart#isEditable <em>Editable</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Editable</em>' attribute.
+   * @see #isEditable()
+   * @generated
+   */
+  void setEditable(boolean value);
 
   /**
    * Returns the value of the '<em><b>Model Attribute</b></em>' reference.

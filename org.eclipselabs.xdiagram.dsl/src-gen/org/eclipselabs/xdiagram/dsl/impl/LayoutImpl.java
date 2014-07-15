@@ -8,7 +8,6 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipselabs.xdiagram.dsl.ContainerLayout;
 import org.eclipselabs.xdiagram.dsl.DslPackage;
 import org.eclipselabs.xdiagram.dsl.Layout;
 
@@ -19,7 +18,9 @@ import org.eclipselabs.xdiagram.dsl.Layout;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LayoutImpl#getLayout <em>Layout</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LayoutImpl#isVertical <em>Vertical</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LayoutImpl#isHorizontal <em>Horizontal</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LayoutImpl#getMargin <em>Margin</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,24 +29,64 @@ import org.eclipselabs.xdiagram.dsl.Layout;
 public class LayoutImpl extends FeatureImpl implements Layout
 {
   /**
-   * The default value of the '{@link #getLayout() <em>Layout</em>}' attribute.
+   * The default value of the '{@link #isVertical() <em>Vertical</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLayout()
+   * @see #isVertical()
    * @generated
    * @ordered
    */
-  protected static final ContainerLayout LAYOUT_EDEFAULT = ContainerLayout.FREE;
+  protected static final boolean VERTICAL_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #getLayout() <em>Layout</em>}' attribute.
+   * The cached value of the '{@link #isVertical() <em>Vertical</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLayout()
+   * @see #isVertical()
    * @generated
    * @ordered
    */
-  protected ContainerLayout layout = LAYOUT_EDEFAULT;
+  protected boolean vertical = VERTICAL_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isHorizontal() <em>Horizontal</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isHorizontal()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean HORIZONTAL_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isHorizontal() <em>Horizontal</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isHorizontal()
+   * @generated
+   * @ordered
+   */
+  protected boolean horizontal = HORIZONTAL_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getMargin() <em>Margin</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMargin()
+   * @generated
+   * @ordered
+   */
+  protected static final int MARGIN_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getMargin() <em>Margin</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMargin()
+   * @generated
+   * @ordered
+   */
+  protected int margin = MARGIN_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,9 +114,9 @@ public class LayoutImpl extends FeatureImpl implements Layout
    * <!-- end-user-doc -->
    * @generated
    */
-  public ContainerLayout getLayout()
+  public boolean isVertical()
   {
-    return layout;
+    return vertical;
   }
 
   /**
@@ -83,12 +124,58 @@ public class LayoutImpl extends FeatureImpl implements Layout
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLayout(ContainerLayout newLayout)
+  public void setVertical(boolean newVertical)
   {
-    ContainerLayout oldLayout = layout;
-    layout = newLayout == null ? LAYOUT_EDEFAULT : newLayout;
+    boolean oldVertical = vertical;
+    vertical = newVertical;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.LAYOUT__LAYOUT, oldLayout, layout));
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.LAYOUT__VERTICAL, oldVertical, vertical));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isHorizontal()
+  {
+    return horizontal;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setHorizontal(boolean newHorizontal)
+  {
+    boolean oldHorizontal = horizontal;
+    horizontal = newHorizontal;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.LAYOUT__HORIZONTAL, oldHorizontal, horizontal));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public int getMargin()
+  {
+    return margin;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setMargin(int newMargin)
+  {
+    int oldMargin = margin;
+    margin = newMargin;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.LAYOUT__MARGIN, oldMargin, margin));
   }
 
   /**
@@ -101,8 +188,12 @@ public class LayoutImpl extends FeatureImpl implements Layout
   {
     switch (featureID)
     {
-      case DslPackage.LAYOUT__LAYOUT:
-        return getLayout();
+      case DslPackage.LAYOUT__VERTICAL:
+        return isVertical();
+      case DslPackage.LAYOUT__HORIZONTAL:
+        return isHorizontal();
+      case DslPackage.LAYOUT__MARGIN:
+        return getMargin();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +208,14 @@ public class LayoutImpl extends FeatureImpl implements Layout
   {
     switch (featureID)
     {
-      case DslPackage.LAYOUT__LAYOUT:
-        setLayout((ContainerLayout)newValue);
+      case DslPackage.LAYOUT__VERTICAL:
+        setVertical((Boolean)newValue);
+        return;
+      case DslPackage.LAYOUT__HORIZONTAL:
+        setHorizontal((Boolean)newValue);
+        return;
+      case DslPackage.LAYOUT__MARGIN:
+        setMargin((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +231,14 @@ public class LayoutImpl extends FeatureImpl implements Layout
   {
     switch (featureID)
     {
-      case DslPackage.LAYOUT__LAYOUT:
-        setLayout(LAYOUT_EDEFAULT);
+      case DslPackage.LAYOUT__VERTICAL:
+        setVertical(VERTICAL_EDEFAULT);
+        return;
+      case DslPackage.LAYOUT__HORIZONTAL:
+        setHorizontal(HORIZONTAL_EDEFAULT);
+        return;
+      case DslPackage.LAYOUT__MARGIN:
+        setMargin(MARGIN_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -151,8 +254,12 @@ public class LayoutImpl extends FeatureImpl implements Layout
   {
     switch (featureID)
     {
-      case DslPackage.LAYOUT__LAYOUT:
-        return layout != LAYOUT_EDEFAULT;
+      case DslPackage.LAYOUT__VERTICAL:
+        return vertical != VERTICAL_EDEFAULT;
+      case DslPackage.LAYOUT__HORIZONTAL:
+        return horizontal != HORIZONTAL_EDEFAULT;
+      case DslPackage.LAYOUT__MARGIN:
+        return margin != MARGIN_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -168,8 +275,12 @@ public class LayoutImpl extends FeatureImpl implements Layout
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (layout: ");
-    result.append(layout);
+    result.append(" (vertical: ");
+    result.append(vertical);
+    result.append(", horizontal: ");
+    result.append(horizontal);
+    result.append(", margin: ");
+    result.append(margin);
     result.append(')');
     return result.toString();
   }

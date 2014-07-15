@@ -7,73 +7,73 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipselabs.xdiagram.dsl.DslPackage;
-import org.eclipselabs.xdiagram.dsl.LineStyle;
-import org.eclipselabs.xdiagram.dsl.LineType;
+import org.eclipselabs.xdiagram.dsl.ToolGroup;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Line Style</b></em>'.
+ * An implementation of the model object '<em><b>Tool Group</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LineStyleImpl#getStyle <em>Style</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LineStyleImpl#isManhattan <em>Manhattan</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ToolGroupImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ToolGroupImpl#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class LineStyleImpl extends FeatureImpl implements LineStyle
+public class ToolGroupImpl extends MinimalEObjectImpl.Container implements ToolGroup
 {
   /**
-   * The default value of the '{@link #getStyle() <em>Style</em>}' attribute.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getStyle()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final LineType STYLE_EDEFAULT = LineType.SOLID;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getStyle() <em>Style</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getStyle()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected LineType style = STYLE_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #isManhattan() <em>Manhattan</em>}' attribute.
+   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isManhattan()
+   * @see #getDescription()
    * @generated
    * @ordered
    */
-  protected static final boolean MANHATTAN_EDEFAULT = false;
+  protected static final String DESCRIPTION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #isManhattan() <em>Manhattan</em>}' attribute.
+   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isManhattan()
+   * @see #getDescription()
    * @generated
    * @ordered
    */
-  protected boolean manhattan = MANHATTAN_EDEFAULT;
+  protected String description = DESCRIPTION_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected LineStyleImpl()
+  protected ToolGroupImpl()
   {
     super();
   }
@@ -86,7 +86,7 @@ public class LineStyleImpl extends FeatureImpl implements LineStyle
   @Override
   protected EClass eStaticClass()
   {
-    return DslPackage.Literals.LINE_STYLE;
+    return DslPackage.Literals.TOOL_GROUP;
   }
 
   /**
@@ -94,9 +94,9 @@ public class LineStyleImpl extends FeatureImpl implements LineStyle
    * <!-- end-user-doc -->
    * @generated
    */
-  public LineType getStyle()
+  public String getName()
   {
-    return style;
+    return name;
   }
 
   /**
@@ -104,12 +104,12 @@ public class LineStyleImpl extends FeatureImpl implements LineStyle
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setStyle(LineType newStyle)
+  public void setName(String newName)
   {
-    LineType oldStyle = style;
-    style = newStyle == null ? STYLE_EDEFAULT : newStyle;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.LINE_STYLE__STYLE, oldStyle, style));
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.TOOL_GROUP__NAME, oldName, name));
   }
 
   /**
@@ -117,9 +117,9 @@ public class LineStyleImpl extends FeatureImpl implements LineStyle
    * <!-- end-user-doc -->
    * @generated
    */
-  public boolean isManhattan()
+  public String getDescription()
   {
-    return manhattan;
+    return description;
   }
 
   /**
@@ -127,12 +127,12 @@ public class LineStyleImpl extends FeatureImpl implements LineStyle
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setManhattan(boolean newManhattan)
+  public void setDescription(String newDescription)
   {
-    boolean oldManhattan = manhattan;
-    manhattan = newManhattan;
+    String oldDescription = description;
+    description = newDescription;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.LINE_STYLE__MANHATTAN, oldManhattan, manhattan));
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.TOOL_GROUP__DESCRIPTION, oldDescription, description));
   }
 
   /**
@@ -145,10 +145,10 @@ public class LineStyleImpl extends FeatureImpl implements LineStyle
   {
     switch (featureID)
     {
-      case DslPackage.LINE_STYLE__STYLE:
-        return getStyle();
-      case DslPackage.LINE_STYLE__MANHATTAN:
-        return isManhattan();
+      case DslPackage.TOOL_GROUP__NAME:
+        return getName();
+      case DslPackage.TOOL_GROUP__DESCRIPTION:
+        return getDescription();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -163,11 +163,11 @@ public class LineStyleImpl extends FeatureImpl implements LineStyle
   {
     switch (featureID)
     {
-      case DslPackage.LINE_STYLE__STYLE:
-        setStyle((LineType)newValue);
+      case DslPackage.TOOL_GROUP__NAME:
+        setName((String)newValue);
         return;
-      case DslPackage.LINE_STYLE__MANHATTAN:
-        setManhattan((Boolean)newValue);
+      case DslPackage.TOOL_GROUP__DESCRIPTION:
+        setDescription((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -183,11 +183,11 @@ public class LineStyleImpl extends FeatureImpl implements LineStyle
   {
     switch (featureID)
     {
-      case DslPackage.LINE_STYLE__STYLE:
-        setStyle(STYLE_EDEFAULT);
+      case DslPackage.TOOL_GROUP__NAME:
+        setName(NAME_EDEFAULT);
         return;
-      case DslPackage.LINE_STYLE__MANHATTAN:
-        setManhattan(MANHATTAN_EDEFAULT);
+      case DslPackage.TOOL_GROUP__DESCRIPTION:
+        setDescription(DESCRIPTION_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -203,10 +203,10 @@ public class LineStyleImpl extends FeatureImpl implements LineStyle
   {
     switch (featureID)
     {
-      case DslPackage.LINE_STYLE__STYLE:
-        return style != STYLE_EDEFAULT;
-      case DslPackage.LINE_STYLE__MANHATTAN:
-        return manhattan != MANHATTAN_EDEFAULT;
+      case DslPackage.TOOL_GROUP__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case DslPackage.TOOL_GROUP__DESCRIPTION:
+        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
     }
     return super.eIsSet(featureID);
   }
@@ -222,12 +222,12 @@ public class LineStyleImpl extends FeatureImpl implements LineStyle
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (style: ");
-    result.append(style);
-    result.append(", manhattan: ");
-    result.append(manhattan);
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", description: ");
+    result.append(description);
     result.append(')');
     return result.toString();
   }
 
-} //LineStyleImpl
+} //ToolGroupImpl

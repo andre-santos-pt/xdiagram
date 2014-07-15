@@ -50,13 +50,13 @@ public interface DslFactory extends EFactory
   Diagram createDiagram();
 
   /**
-   * Returns a new object of class '<em>Group</em>'.
+   * Returns a new object of class '<em>Tool Group</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Group</em>'.
+   * @return a new object of class '<em>Tool Group</em>'.
    * @generated
    */
-  Group createGroup();
+  ToolGroup createToolGroup();
 
   /**
    * Returns a new object of class '<em>Diagram Element</em>'.
@@ -165,24 +165,6 @@ public interface DslFactory extends EFactory
    * @generated
    */
   ConnectableElement createConnectableElement();
-
-  /**
-   * Returns a new object of class '<em>Layout</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Layout</em>'.
-   * @generated
-   */
-  Layout createLayout();
-
-  /**
-   * Returns a new object of class '<em>Visible</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Visible</em>'.
-   * @generated
-   */
-  Visible createVisible();
 
   /**
    * Returns a new object of class '<em>Custom Figure</em>'.
@@ -410,6 +392,24 @@ public interface DslFactory extends EFactory
   Corner createCorner();
 
   /**
+   * Returns a new object of class '<em>Layout</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Layout</em>'.
+   * @generated
+   */
+  Layout createLayout();
+
+  /**
+   * Returns a new object of class '<em>Visible</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Visible</em>'.
+   * @generated
+   */
+  Visible createVisible();
+
+  /**
    * Returns a new object of class '<em>Text Value</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -428,31 +428,22 @@ public interface DslFactory extends EFactory
   TextPart createTextPart();
 
   /**
-   * Returns a new object of class '<em>Font Face</em>'.
+   * Returns a new object of class '<em>Font Properties</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Font Face</em>'.
+   * @return a new object of class '<em>Font Properties</em>'.
    * @generated
    */
-  FontFace createFontFace();
+  FontProperties createFontProperties();
 
   /**
-   * Returns a new object of class '<em>Font Size</em>'.
+   * Returns a new object of class '<em>Text Align</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Font Size</em>'.
+   * @return a new object of class '<em>Text Align</em>'.
    * @generated
    */
-  FontSize createFontSize();
-
-  /**
-   * Returns a new object of class '<em>Font Style</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Font Style</em>'.
-   * @generated
-   */
-  FontStyle createFontStyle();
+  TextAlign createTextAlign();
 
   /**
    * Returns a new object of class '<em>Line Style</em>'.

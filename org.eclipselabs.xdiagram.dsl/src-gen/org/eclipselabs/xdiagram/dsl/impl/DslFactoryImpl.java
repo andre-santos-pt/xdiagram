@@ -68,7 +68,7 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
       case DslPackage.XDIAGRAM: return createXDiagram();
       case DslPackage.IMPORT_STATEMENT: return createImportStatement();
       case DslPackage.DIAGRAM: return createDiagram();
-      case DslPackage.GROUP: return createGroup();
+      case DslPackage.TOOL_GROUP: return createToolGroup();
       case DslPackage.DIAGRAM_ELEMENT: return createDiagramElement();
       case DslPackage.STYLE: return createStyle();
       case DslPackage.FEATURE: return createFeature();
@@ -81,8 +81,6 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
       case DslPackage.CUSTOM_COLOR: return createCustomColor();
       case DslPackage.COLOR: return createColor();
       case DslPackage.CONNECTABLE_ELEMENT: return createConnectableElement();
-      case DslPackage.LAYOUT: return createLayout();
-      case DslPackage.VISIBLE: return createVisible();
       case DslPackage.CUSTOM_FIGURE: return createCustomFigure();
       case DslPackage.CUSTOM: return createCustom();
       case DslPackage.RECTANGLE: return createRectangle();
@@ -108,11 +106,12 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
       case DslPackage.POINT: return createPoint();
       case DslPackage.POSITION: return createPosition();
       case DslPackage.CORNER: return createCorner();
+      case DslPackage.LAYOUT: return createLayout();
+      case DslPackage.VISIBLE: return createVisible();
       case DslPackage.TEXT_VALUE: return createTextValue();
       case DslPackage.TEXT_PART: return createTextPart();
-      case DslPackage.FONT_FACE: return createFontFace();
-      case DslPackage.FONT_SIZE: return createFontSize();
-      case DslPackage.FONT_STYLE: return createFontStyle();
+      case DslPackage.FONT_PROPERTIES: return createFontProperties();
+      case DslPackage.TEXT_ALIGN: return createTextAlign();
       case DslPackage.LINE_STYLE: return createLineStyle();
       case DslPackage.LINE_WIDTH: return createLineWidth();
       default:
@@ -130,22 +129,16 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     switch (eDataType.getClassifierID())
     {
-      case DslPackage.CONNECTION_TYPE:
-        return createConnectionTypeFromString(eDataType, initialValue);
       case DslPackage.ANCHOR_DIRECTION:
         return createAnchorDirectionFromString(eDataType, initialValue);
       case DslPackage.DEFAULT_COLOR:
         return createDefaultColorFromString(eDataType, initialValue);
-      case DslPackage.CONTAINER_LAYOUT:
-        return createContainerLayoutFromString(eDataType, initialValue);
       case DslPackage.OPERATOR:
         return createOperatorFromString(eDataType, initialValue);
       case DslPackage.BOOLEAN_LITERAL:
         return createBooleanLiteralFromString(eDataType, initialValue);
-      case DslPackage.FONT_FACE_TYPE:
-        return createFontFaceTypeFromString(eDataType, initialValue);
-      case DslPackage.FONT_STYLE_TYPE:
-        return createFontStyleTypeFromString(eDataType, initialValue);
+      case DslPackage.TEXT_ALIGN_VALUE:
+        return createTextAlignValueFromString(eDataType, initialValue);
       case DslPackage.LINE_TYPE:
         return createLineTypeFromString(eDataType, initialValue);
       default:
@@ -163,22 +156,16 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     switch (eDataType.getClassifierID())
     {
-      case DslPackage.CONNECTION_TYPE:
-        return convertConnectionTypeToString(eDataType, instanceValue);
       case DslPackage.ANCHOR_DIRECTION:
         return convertAnchorDirectionToString(eDataType, instanceValue);
       case DslPackage.DEFAULT_COLOR:
         return convertDefaultColorToString(eDataType, instanceValue);
-      case DslPackage.CONTAINER_LAYOUT:
-        return convertContainerLayoutToString(eDataType, instanceValue);
       case DslPackage.OPERATOR:
         return convertOperatorToString(eDataType, instanceValue);
       case DslPackage.BOOLEAN_LITERAL:
         return convertBooleanLiteralToString(eDataType, instanceValue);
-      case DslPackage.FONT_FACE_TYPE:
-        return convertFontFaceTypeToString(eDataType, instanceValue);
-      case DslPackage.FONT_STYLE_TYPE:
-        return convertFontStyleTypeToString(eDataType, instanceValue);
+      case DslPackage.TEXT_ALIGN_VALUE:
+        return convertTextAlignValueToString(eDataType, instanceValue);
       case DslPackage.LINE_TYPE:
         return convertLineTypeToString(eDataType, instanceValue);
       default:
@@ -224,10 +211,10 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Group createGroup()
+  public ToolGroup createToolGroup()
   {
-    GroupImpl group = new GroupImpl();
-    return group;
+    ToolGroupImpl toolGroup = new ToolGroupImpl();
+    return toolGroup;
   }
 
   /**
@@ -360,28 +347,6 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     ConnectableElementImpl connectableElement = new ConnectableElementImpl();
     return connectableElement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Layout createLayout()
-  {
-    LayoutImpl layout = new LayoutImpl();
-    return layout;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Visible createVisible()
-  {
-    VisibleImpl visible = new VisibleImpl();
-    return visible;
   }
 
   /**
@@ -664,6 +629,28 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Layout createLayout()
+  {
+    LayoutImpl layout = new LayoutImpl();
+    return layout;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Visible createVisible()
+  {
+    VisibleImpl visible = new VisibleImpl();
+    return visible;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public TextValue createTextValue()
   {
     TextValueImpl textValue = new TextValueImpl();
@@ -686,10 +673,10 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public FontFace createFontFace()
+  public FontProperties createFontProperties()
   {
-    FontFaceImpl fontFace = new FontFaceImpl();
-    return fontFace;
+    FontPropertiesImpl fontProperties = new FontPropertiesImpl();
+    return fontProperties;
   }
 
   /**
@@ -697,21 +684,10 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public FontSize createFontSize()
+  public TextAlign createTextAlign()
   {
-    FontSizeImpl fontSize = new FontSizeImpl();
-    return fontSize;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FontStyle createFontStyle()
-  {
-    FontStyleImpl fontStyle = new FontStyleImpl();
-    return fontStyle;
+    TextAlignImpl textAlign = new TextAlignImpl();
+    return textAlign;
   }
 
   /**
@@ -734,28 +710,6 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
   {
     LineWidthImpl lineWidth = new LineWidthImpl();
     return lineWidth;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ConnectionType createConnectionTypeFromString(EDataType eDataType, String initialValue)
-  {
-    ConnectionType result = ConnectionType.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertConnectionTypeToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**
@@ -798,28 +752,6 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
    * @generated
    */
   public String convertDefaultColorToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ContainerLayout createContainerLayoutFromString(EDataType eDataType, String initialValue)
-  {
-    ContainerLayout result = ContainerLayout.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertContainerLayoutToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }
@@ -873,9 +805,9 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public FontFaceType createFontFaceTypeFromString(EDataType eDataType, String initialValue)
+  public TextAlignValue createTextAlignValueFromString(EDataType eDataType, String initialValue)
   {
-    FontFaceType result = FontFaceType.get(initialValue);
+    TextAlignValue result = TextAlignValue.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -885,29 +817,7 @@ public class DslFactoryImpl extends EFactoryImpl implements DslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertFontFaceTypeToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FontStyleType createFontStyleTypeFromString(EDataType eDataType, String initialValue)
-  {
-    FontStyleType result = FontStyleType.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertFontStyleTypeToString(EDataType eDataType, Object instanceValue)
+  public String convertTextAlignValueToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

@@ -101,7 +101,7 @@ public interface XDiagram extends EObject
 
   /**
    * Returns the value of the '<em><b>Groups</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipselabs.xdiagram.dsl.Group}.
+   * The list contents are of type {@link org.eclipselabs.xdiagram.dsl.ToolGroup}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Groups</em>' containment reference list isn't clear,
@@ -113,7 +113,7 @@ public interface XDiagram extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Group> getGroups();
+  EList<ToolGroup> getGroups();
 
   /**
    * Returns the value of the '<em><b>Elements</b></em>' containment reference list.

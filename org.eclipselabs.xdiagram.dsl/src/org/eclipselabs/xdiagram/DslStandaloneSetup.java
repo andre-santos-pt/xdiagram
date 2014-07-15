@@ -12,5 +12,6 @@ public class DslStandaloneSetup extends DslStandaloneSetupGenerated{
 	public static void doSetup() {
 		new DslStandaloneSetup().createInjectorAndDoEMFRegistration();
 	}
+	
 }
 

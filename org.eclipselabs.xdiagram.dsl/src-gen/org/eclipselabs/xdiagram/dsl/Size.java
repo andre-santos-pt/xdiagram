@@ -15,6 +15,7 @@ package org.eclipselabs.xdiagram.dsl;
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Size#isWidthRelative <em>Width Relative</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Size#getHeight <em>Height</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Size#isHeightRelative <em>Height Relative</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.Size#isResizable <em>Resizable</em>}</li>
  * </ul>
  * </p>
  *
@@ -127,5 +128,31 @@ public interface Size extends Feature
    * @generated
    */
   void setHeightRelative(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Resizable</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Resizable</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Resizable</em>' attribute.
+   * @see #setResizable(boolean)
+   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getSize_Resizable()
+   * @model
+   * @generated
+   */
+  boolean isResizable();
+
+  /**
+   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.Size#isResizable <em>Resizable</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Resizable</em>' attribute.
+   * @see #isResizable()
+   * @generated
+   */
+  void setResizable(boolean value);
 
 } // Size

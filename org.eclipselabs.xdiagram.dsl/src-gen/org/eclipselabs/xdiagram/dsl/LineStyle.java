@@ -12,6 +12,7 @@ package org.eclipselabs.xdiagram.dsl;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.LineStyle#getStyle <em>Style</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.LineStyle#isManhattan <em>Manhattan</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,5 +50,31 @@ public interface LineStyle extends Feature
    * @generated
    */
   void setStyle(LineType value);
+
+  /**
+   * Returns the value of the '<em><b>Manhattan</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Manhattan</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Manhattan</em>' attribute.
+   * @see #setManhattan(boolean)
+   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getLineStyle_Manhattan()
+   * @model
+   * @generated
+   */
+  boolean isManhattan();
+
+  /**
+   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.LineStyle#isManhattan <em>Manhattan</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Manhattan</em>' attribute.
+   * @see #isManhattan()
+   * @generated
+   */
+  void setManhattan(boolean value);
 
 } // LineStyle
