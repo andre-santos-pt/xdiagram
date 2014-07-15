@@ -22,13 +22,16 @@ import org.eclipse.graphiti.features.IRemoveFeature;
 import org.eclipse.graphiti.features.IResizeShapeFeature;
 import org.eclipse.graphiti.features.IUpdateFeature;
 import org.eclipse.graphiti.features.context.IAddContext;
+import org.eclipse.graphiti.features.context.ICustomContext;
 import org.eclipse.graphiti.features.context.IDirectEditingContext;
 import org.eclipse.graphiti.features.context.IMoveShapeContext;
 import org.eclipse.graphiti.features.context.IPictogramElementContext;
 import org.eclipse.graphiti.features.context.IRemoveContext;
 import org.eclipse.graphiti.features.context.IResizeShapeContext;
 import org.eclipse.graphiti.features.context.IUpdateContext;
+import org.eclipse.graphiti.features.custom.ICustomFeature;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
+import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.ui.features.DefaultFeatureProvider;
 import org.eclipselabs.xdiagram.interpreter.GraphicsProvider;
 import org.eclipselabs.xdiagram.interpreter.ProviderException;
@@ -37,6 +40,8 @@ import org.eclipselabs.xdiagram.interpreter.internal.features.DirectEditingFeatu
 import org.eclipselabs.xdiagram.interpreter.internal.features.MoveNodeFeature;
 import org.eclipselabs.xdiagram.interpreter.internal.features.RemoveNodeFeature;
 import org.eclipselabs.xdiagram.interpreter.internal.features.ResizeNodeFeature;
+import org.eclipselabs.xdiagram.interpreter.internal.features.TutorialLayoutDiagramFeature;
+import org.eclipselabs.xdiagram.interpreter.internal.features.UpdateDiagramFeature;
 import org.eclipselabs.xdiagram.interpreter.internal.features.UpdateNodeFeature;
 
 
@@ -166,8 +171,12 @@ public class GenericFeatureProvider extends DefaultFeatureProvider {
 
 	@Override
 	public IUpdateFeature getUpdateFeature(IUpdateContext context) {
-		return context.getPictogramElement() instanceof Diagram ?
-			new UpdateNodeFeature(this, graphicsProvider) : null;
+		if(context.getPictogramElement() instanceof Diagram)
+			return new UpdateDiagramFeature(this, graphicsProvider);
+		else if(context.getPictogramElement() instanceof PictogramElement)
+			return new UpdateNodeFeature(this, graphicsProvider);
+		
+		return null;
 	}
 
 	@Override
@@ -199,4 +208,9 @@ public class GenericFeatureProvider extends DefaultFeatureProvider {
 //	public ILayoutFeature getLayoutFeature(ILayoutContext context) {
 //		return new LayoutFeature(this);
 //	}
+	
+	@Override
+	public ICustomFeature[] getCustomFeatures(ICustomContext context) {
+		return new ICustomFeature[] { new TutorialLayoutDiagramFeature(this) };
+	}
 }

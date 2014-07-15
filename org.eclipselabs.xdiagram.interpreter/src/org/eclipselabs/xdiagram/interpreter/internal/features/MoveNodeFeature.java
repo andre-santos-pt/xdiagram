@@ -1,6 +1,5 @@
 package org.eclipselabs.xdiagram.interpreter.internal.features;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.graphiti.features.context.IMoveShapeContext;
 import org.eclipse.graphiti.features.impl.DefaultMoveShapeFeature;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
@@ -23,10 +22,7 @@ public class MoveNodeFeature extends DefaultMoveShapeFeature {
     	if(link == null)
     		return false;
     	
-//        GraphicsAlgorithm figure = context.getPictogramElement().getGraphicsAlgorithm();
-        EObject eObject = link.getBusinessObjects().get(0);
-      
-        return super.canMoveShape(context) && provider.getGraphicsProvider().canMoveNode(eObject);        
+        return super.canMoveShape(context) && provider.getGraphicsProvider().canMoveNode(context.getPictogramElement());        
     }
     
     @Override

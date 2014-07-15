@@ -8,18 +8,18 @@ import org.eclipse.graphiti.features.impl.Reason;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipselabs.xdiagram.interpreter.GraphicsProvider;
 
-public class UpdateNodeFeature extends AbstractUpdateFeature {
+public class UpdateDiagramFeature extends AbstractUpdateFeature {
  
 private GraphicsProvider provider;
 	
-	public UpdateNodeFeature(IFeatureProvider fp, GraphicsProvider provider) {
+	public UpdateDiagramFeature(IFeatureProvider fp, GraphicsProvider provider) {
 		super(fp);
 		this.provider = provider;
 	}
 
 	@Override
 	public boolean canUpdate(IUpdateContext context) {
-		return true;
+		return context.getPictogramElement() instanceof Diagram;
 	}
 
 	@Override
@@ -33,7 +33,8 @@ private GraphicsProvider provider;
 
 	@Override
 	public boolean update(IUpdateContext context) {
-		provider.update(context.getPictogramElement());
+		Diagram diagram = (Diagram) context.getPictogramElement();
+		provider.update(diagram);
 		return true;
 	}
 } 

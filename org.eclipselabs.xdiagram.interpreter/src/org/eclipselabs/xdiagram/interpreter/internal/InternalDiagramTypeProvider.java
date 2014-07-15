@@ -26,11 +26,8 @@ import org.eclipse.emf.transaction.RecordingCommand;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.emf.transaction.util.TransactionUtil;
 import org.eclipse.graphiti.dt.AbstractDiagramTypeProvider;
-import org.eclipse.graphiti.mm.pictograms.Anchor;
-import org.eclipse.graphiti.mm.pictograms.AnchorContainer;
 import org.eclipse.graphiti.mm.pictograms.Connection;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
-import org.eclipse.graphiti.mm.pictograms.FreeFormConnection;
 import org.eclipse.graphiti.mm.pictograms.PictogramLink;
 import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipse.graphiti.platform.IDiagramBehavior;
@@ -99,8 +96,7 @@ public class InternalDiagramTypeProvider extends AbstractDiagramTypeProvider {
 
 		removeUnlinkedShapes(diagram, domain);
 		// TODO add shapes?
-
-		featureProvider.getGraphicsProvider().loadDiagram(diagram, root);
+		featureProvider.getGraphicsProvider().loadDiagram(diagram, root, featureProvider);
 	}
 
 

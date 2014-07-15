@@ -71,7 +71,7 @@ public class CreateEObjectFeature extends AbstractCreateFeature {
 					
 		// TODO: enough upper bound
 		
-		return provider.getGraphicsProvider().canAddChild(container, eClass, context.getX(), context.getY());
+		return provider.getGraphicsProvider().canAddChild(container, eClass);
 	}
 
 	public Object[] create(ICreateContext context) {
