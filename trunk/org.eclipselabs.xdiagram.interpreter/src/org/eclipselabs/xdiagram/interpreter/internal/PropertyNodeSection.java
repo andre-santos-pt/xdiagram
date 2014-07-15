@@ -40,6 +40,7 @@ import org.eclipse.swt.events.KeyAdapter;
 import org.eclipse.swt.events.KeyEvent;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
@@ -54,6 +55,7 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 
 	private TabbedPropertySheetWidgetFactory factory;
 	private Composite composite;
+	private Label label;
 	private List<Control> attValues;
 	private List<Label> attLabels;
 
@@ -63,13 +65,17 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 		super.createControls(parent, tabbedPropertySheetPage);
 
 		factory = getWidgetFactory();
+		
 		composite = factory.createPlainComposite(parent, SWT.NONE);
 		composite.setLayout(new GridLayout(2, false));
+
+		label = new Label(composite, SWT.NONE);
+		new Label(composite,SWT.HORIZONTAL);
 		
 		attLabels = new ArrayList<Label>();
 		attValues = new ArrayList<Control>();
 	}
-	
+
 
 	@Override
 	public void refresh() {
@@ -77,12 +83,15 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 		if (pe != null && pe.getLink() != null) {
 			EObject eObject = (EObject) Graphiti.getLinkService().getBusinessObjectForLinkedPictogramElement(pe);
 			EClass eClass = eObject.eClass();
+			
 			clear();
-//			addToStringDebug(eObject);
+			label.setText(eClass.getName());
+			//			addToStringDebug(eObject);
 
 			for(EAttribute att : eClass.getEAllAttributes()) {
 				Label l = new Label(composite, SWT.NONE);
-				l.setText(att.getName() + ":");
+				l.setText(att.getName());
+				l.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false));
 				attLabels.add(l);
 				createControl(eObject, att);
 			}
@@ -90,17 +99,15 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 		else {
 			clear();
 		}
-		composite.redraw();
 		composite.layout();
-		composite.update();
-		
-		composite.getParent().redraw();
+		composite.update();		
 		composite.getParent().layout();
-		composite.getParent().update();
+		composite.getParent().pack();
+
 	}
 
 
-	
+
 	private void addToStringDebug(EObject eObject) {
 		String name = eObject.toString();
 		Label toStringLabel =  new Label(composite, SWT.NONE);
@@ -113,6 +120,7 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 	}
 
 	private void clear() {
+		label.setText("");
 		for(Label label : attLabels)
 			label.dispose();
 
@@ -127,20 +135,20 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 	private void createControl(final EObject eObject, final EAttribute att) {
 		Control control = null;
 		Object obj = eObject.eGet(att);
-		
+
 		if(att.getEAttributeType().getInstanceClass().equals(boolean.class))
 			control = handleBooleanElement(eObject, att, obj);
-		
+
 		else if(att.getEAttributeType() instanceof EEnum)
 			control = handleEnumElement(eObject, att, obj);
-		
+
 		else if(att.getEAttributeType().getInstanceClass().equals(String.class))
 			control = handleStringElement(eObject, att, obj);
-		
+
 		attValues.add(control);		
 	}
 
-	
+
 	private Control handleEnumElement(final EObject eObject,
 			final EAttribute att, Object obj) {
 		Control control;
@@ -204,7 +212,12 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 				}
 			});
 		}
-		
+//		GridData data = new GridData(SWT.FILL, SWT.CENTER, true, true);
+//		data.horizontalAlignment = GridData.FILL;
+
+//		text.setLayoutData(data);
+//		data.horizontalAlignment = GridData.FILL;
+
 		final Adapter adapter = new AdapterImpl() {
 			@Override
 			public void notifyChanged(Notification notification) {
@@ -212,7 +225,7 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 					text.setText(notification.getNewStringValue());
 			}
 		};
-		
+
 		addDisposeListener(eObject, control, adapter);
 		return control;
 	}
@@ -220,7 +233,7 @@ public class PropertyNodeSection extends GFPropertySection implements ITabbedPro
 	private void addDisposeListener(final EObject eObject, final Control control, final Adapter adapter) {
 		eObject.eAdapters().add(adapter);
 		control.addDisposeListener(new DisposeListener() {
-			
+
 			@Override
 			public void widgetDisposed(DisposeEvent e) {
 				eObject.eAdapters().remove(adapter);

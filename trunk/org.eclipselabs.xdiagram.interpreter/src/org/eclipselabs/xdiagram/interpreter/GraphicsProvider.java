@@ -9,12 +9,15 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.graphiti.features.IFeatureProvider;
 import org.eclipse.graphiti.features.context.IAddContext;
+import org.eclipse.graphiti.mm.algorithms.AbstractText;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.Anchor;
 import org.eclipse.graphiti.mm.pictograms.Connection;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
+import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.osgi.framework.Bundle;
 
 public interface GraphicsProvider {
@@ -35,7 +38,7 @@ public interface GraphicsProvider {
 	 */
 	EClass getRoot();
 	
-	void loadDiagram(Diagram diagram, EObject rootObject);
+	void loadDiagram(Diagram diagram, EObject rootObject, IFeatureProvider featureProvider);
 	
 	/**
 	 * Returns true if the given EClass should have a corresponding node creation tool.
@@ -69,6 +72,16 @@ public interface GraphicsProvider {
 	EReference getLinkTarget(EClass eClass);
 	
 	
+	boolean canAddChild(ContainerShape container, EClass eClass);
+	
+	EObject getContainerObject(ContainerShape container);
+
+	Collection<EReference> getContainerReferences(ContainerShape container);
+
+	Collection<EReference> getCompatibleContainerReferences(ContainerShape targetContainer, EObject eObject);
+	
+	
+	
 	/**
 	 * Creates a figure for a given node object (eObject). 
 	 * Should be invoked only in cases that hasTool(eObject.eClass()) is true.
@@ -82,23 +95,27 @@ public interface GraphicsProvider {
 	
 	void resizeNodeFigure(Diagram diagram, ContainerShape container, int width, int height);
 	
-//	void updateNodeFigure(Diagram diagram, ContainerShape container, GraphicsAlgorithm figure, EObject eObject);
+	boolean canResizeNodeFigure(GraphicsAlgorithm element);
 	
 	void removeNodeFigure(Diagram diagram, GraphicsAlgorithm figure);
 	
-	boolean canResizeNodeFigure(EObject object);
-	
-	boolean canMoveNode(EObject eObject);
-	
-	boolean canEditFigureLabel(GraphicsAlgorithm figure, EObject eObject);
 	
 	
 	
-//	String getFigureLabelValue(GraphicsAlgorithm figure);
 	
-//	GraphicsAlgorithm getFigureLabel(Diagram diagram, ContainerShape container);
 	
-//	void updateFigureLabel(Diagram diagram, GraphicsAlgorithm figure, String value);
+	boolean canMoveNode(PictogramElement element);
+	
+	
+	
+	boolean canEditFigureLabel(AbstractText text);
+	
+	AbstractText getFigureLabel(ContainerShape container);
+	
+	EAttribute getTextEditableAttribute(AbstractText text);
+	
+	EObject getLabelEObject(AbstractText text);
+
 	
 	
 	/**
@@ -117,7 +134,6 @@ public interface GraphicsProvider {
 	 */
 	Connection createConnectionFigure(Diagram diagram, Anchor source, Anchor target, EObject eObject);
 	
-//	void updateLinkFigure(Diagram diagram, Connection connection);
 
 	
 	/**
@@ -139,30 +155,26 @@ public interface GraphicsProvider {
 	boolean isValidIncomingConnection(Anchor anchor, EReference eReference);
 	
 	
-	EAttribute getTextEditableAttribute(EClass eClass);
 	
-	
-	// TODO remove x,y
-	boolean canAddChild(ContainerShape container, EClass eClass, int x, int y);
 	
 	
 
 	
 	// FUTURE:
-	/**
-	 * Returns true if the given feature (EReference or EAttribute) should be treated as a property (Properties view).
-	 */
-	boolean isProperty(EStructuralFeature feature);
+//	/**
+//	 * Returns true if the given feature (EReference or EAttribute) should be treated as a property (Properties view).
+//	 */
+//	boolean isProperty(EStructuralFeature feature);
 
-	EObject getContainerObject(ContainerShape container);
 
 	void update(Diagram diagram);
+	
+	void update(PictogramElement element);
 
 	
-	Collection<EReference> getContainerReferences(ContainerShape container);
+	
 
-	Collection<EReference> getCompatibleContainerReferences(ContainerShape targetContainer, EObject eObject);
-
+	
 	
 	
 }
