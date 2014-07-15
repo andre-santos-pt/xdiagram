@@ -23,9 +23,9 @@ import org.eclipselabs.xdiagram.dsl.CustomFigure;
 import org.eclipselabs.xdiagram.dsl.Diagram;
 import org.eclipselabs.xdiagram.dsl.DiagramElement;
 import org.eclipselabs.xdiagram.dsl.DslPackage;
-import org.eclipselabs.xdiagram.dsl.Group;
 import org.eclipselabs.xdiagram.dsl.ImportStatement;
 import org.eclipselabs.xdiagram.dsl.Style;
+import org.eclipselabs.xdiagram.dsl.ToolGroup;
 import org.eclipselabs.xdiagram.dsl.XDiagram;
 
 /**
@@ -98,7 +98,7 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * @generated
    * @ordered
    */
-  protected EList<Group> groups;
+  protected EList<ToolGroup> groups;
 
   /**
    * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
@@ -251,11 +251,11 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Group> getGroups()
+  public EList<ToolGroup> getGroups()
   {
     if (groups == null)
     {
-      groups = new EObjectContainmentEList<Group>(Group.class, this, DslPackage.XDIAGRAM__GROUPS);
+      groups = new EObjectContainmentEList<ToolGroup>(ToolGroup.class, this, DslPackage.XDIAGRAM__GROUPS);
     }
     return groups;
   }
@@ -397,7 +397,7 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         return;
       case DslPackage.XDIAGRAM__GROUPS:
         getGroups().clear();
-        getGroups().addAll((Collection<? extends Group>)newValue);
+        getGroups().addAll((Collection<? extends ToolGroup>)newValue);
         return;
       case DslPackage.XDIAGRAM__ELEMENTS:
         getElements().clear();

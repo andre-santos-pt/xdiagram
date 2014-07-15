@@ -18,8 +18,6 @@ import org.eclipselabs.xdiagram.dsl.BooleanValue;
 import org.eclipselabs.xdiagram.dsl.Color;
 import org.eclipselabs.xdiagram.dsl.ColorFeature;
 import org.eclipselabs.xdiagram.dsl.ConnectableElement;
-import org.eclipselabs.xdiagram.dsl.ConnectionType;
-import org.eclipselabs.xdiagram.dsl.ContainerLayout;
 import org.eclipselabs.xdiagram.dsl.Contains;
 import org.eclipselabs.xdiagram.dsl.Corner;
 import org.eclipselabs.xdiagram.dsl.Custom;
@@ -37,12 +35,7 @@ import org.eclipselabs.xdiagram.dsl.EnumValue;
 import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.FeatureConditional;
 import org.eclipselabs.xdiagram.dsl.FeatureContainer;
-import org.eclipselabs.xdiagram.dsl.FontFace;
-import org.eclipselabs.xdiagram.dsl.FontFaceType;
-import org.eclipselabs.xdiagram.dsl.FontSize;
-import org.eclipselabs.xdiagram.dsl.FontStyle;
-import org.eclipselabs.xdiagram.dsl.FontStyleType;
-import org.eclipselabs.xdiagram.dsl.Group;
+import org.eclipselabs.xdiagram.dsl.FontProperties;
 import org.eclipselabs.xdiagram.dsl.Image;
 import org.eclipselabs.xdiagram.dsl.ImportStatement;
 import org.eclipselabs.xdiagram.dsl.IntValue;
@@ -64,8 +57,11 @@ import org.eclipselabs.xdiagram.dsl.Rhombus;
 import org.eclipselabs.xdiagram.dsl.Size;
 import org.eclipselabs.xdiagram.dsl.StringValue;
 import org.eclipselabs.xdiagram.dsl.Style;
+import org.eclipselabs.xdiagram.dsl.TextAlign;
+import org.eclipselabs.xdiagram.dsl.TextAlignValue;
 import org.eclipselabs.xdiagram.dsl.TextPart;
 import org.eclipselabs.xdiagram.dsl.TextValue;
+import org.eclipselabs.xdiagram.dsl.ToolGroup;
 import org.eclipselabs.xdiagram.dsl.Transparency;
 import org.eclipselabs.xdiagram.dsl.Triangle;
 import org.eclipselabs.xdiagram.dsl.Value;
@@ -106,7 +102,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass groupEClass = null;
+  private EClass toolGroupEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -191,20 +187,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * @generated
    */
   private EClass connectableElementEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass layoutEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass visibleEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -386,6 +368,20 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass layoutEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass visibleEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass textValueEClass = null;
 
   /**
@@ -400,21 +396,14 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass fontFaceEClass = null;
+  private EClass fontPropertiesEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass fontSizeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass fontStyleEClass = null;
+  private EClass textAlignEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -435,13 +424,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EEnum connectionTypeEEnum = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EEnum anchorDirectionEEnum = null;
 
   /**
@@ -450,13 +432,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * @generated
    */
   private EEnum defaultColorEEnum = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EEnum containerLayoutEEnum = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -477,14 +452,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EEnum fontFaceTypeEEnum = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EEnum fontStyleTypeEEnum = null;
+  private EEnum textAlignValueEEnum = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -701,9 +669,9 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDiagram_Figures()
+  public EClass getToolGroup()
   {
-    return (EReference)diagramEClass.getEStructuralFeatures().get(2);
+    return toolGroupEClass;
   }
 
   /**
@@ -711,9 +679,9 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getGroup()
+  public EAttribute getToolGroup_Name()
   {
-    return groupEClass;
+    return (EAttribute)toolGroupEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -721,9 +689,9 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGroup_Name()
+  public EAttribute getToolGroup_Description()
   {
-    return (EAttribute)groupEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)toolGroupEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -741,9 +709,9 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDiagramElement_ModelClass()
+  public EAttribute getDiagramElement_Tool()
   {
-    return (EReference)diagramElementEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -761,9 +729,29 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDiagramElement_Group()
+  public EAttribute getDiagramElement_Group()
   {
-    return (EReference)diagramElementEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDiagramElement_GroupId()
+  {
+    return (EReference)diagramElementEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDiagramElement_Icon()
+  {
+    return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -773,7 +761,17 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    */
   public EAttribute getDiagramElement_ImageId()
   {
-    return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDiagramElement_ModelClass()
+  {
+    return (EReference)diagramElementEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -981,9 +979,9 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getLink_Type()
+  public EReference getLink_Decorators()
   {
-    return (EAttribute)linkEClass.getEStructuralFeatures().get(5);
+    return (EReference)linkEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1144,36 +1142,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
   public EReference getConnectableElement_Children()
   {
     return (EReference)connectableElementEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getLayout()
-  {
-    return layoutEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getLayout_Layout()
-  {
-    return (EAttribute)layoutEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getVisible()
-  {
-    return visibleEClass;
   }
 
   /**
@@ -1671,6 +1639,16 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getSize_Resizable()
+  {
+    return (EAttribute)sizeEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getPoint()
   {
     return pointEClass;
@@ -1771,6 +1749,56 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getLayout()
+  {
+    return layoutEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLayout_Vertical()
+  {
+    return (EAttribute)layoutEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLayout_Horizontal()
+  {
+    return (EAttribute)layoutEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLayout_Margin()
+  {
+    return (EAttribute)layoutEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getVisible()
+  {
+    return visibleEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getTextValue()
   {
     return textValueEClass;
@@ -1811,9 +1839,19 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getTextPart_Editable()
+  {
+    return (EAttribute)textPartEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getTextPart_ModelAttribute()
   {
-    return (EReference)textPartEClass.getEStructuralFeatures().get(1);
+    return (EReference)textPartEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1821,9 +1859,9 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getFontFace()
+  public EClass getFontProperties()
   {
-    return fontFaceEClass;
+    return fontPropertiesEClass;
   }
 
   /**
@@ -1831,9 +1869,9 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFontFace_Face()
+  public EAttribute getFontProperties_Face()
   {
-    return (EAttribute)fontFaceEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)fontPropertiesEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1841,9 +1879,9 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getFontSize()
+  public EAttribute getFontProperties_Size()
   {
-    return fontSizeEClass;
+    return (EAttribute)fontPropertiesEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1851,9 +1889,9 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFontSize_Size()
+  public EAttribute getFontProperties_Bold()
   {
-    return (EAttribute)fontSizeEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)fontPropertiesEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1861,9 +1899,9 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getFontStyle()
+  public EAttribute getFontProperties_Italics()
   {
-    return fontStyleEClass;
+    return (EAttribute)fontPropertiesEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1871,9 +1909,19 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFontStyle_Styles()
+  public EClass getTextAlign()
   {
-    return (EAttribute)fontStyleEClass.getEStructuralFeatures().get(0);
+    return textAlignEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTextAlign_Value()
+  {
+    return (EAttribute)textAlignEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1901,6 +1949,16 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getLineStyle_Manhattan()
+  {
+    return (EAttribute)lineStyleEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getLineWidth()
   {
     return lineWidthEClass;
@@ -1914,16 +1972,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
   public EAttribute getLineWidth_Width()
   {
     return (EAttribute)lineWidthEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EEnum getConnectionType()
-  {
-    return connectionTypeEEnum;
   }
 
   /**
@@ -1951,16 +1999,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EEnum getContainerLayout()
-  {
-    return containerLayoutEEnum;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EEnum getOperator()
   {
     return operatorEEnum;
@@ -1981,19 +2019,9 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EEnum getFontFaceType()
+  public EEnum getTextAlignValue()
   {
-    return fontFaceTypeEEnum;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EEnum getFontStyleType()
-  {
-    return fontStyleTypeEEnum;
+    return textAlignValueEEnum;
   }
 
   /**
@@ -2052,16 +2080,19 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     diagramEClass = createEClass(DIAGRAM);
     createEReference(diagramEClass, DIAGRAM__MODEL_CLASS);
     createEReference(diagramEClass, DIAGRAM__CONTAINS);
-    createEReference(diagramEClass, DIAGRAM__FIGURES);
 
-    groupEClass = createEClass(GROUP);
-    createEAttribute(groupEClass, GROUP__NAME);
+    toolGroupEClass = createEClass(TOOL_GROUP);
+    createEAttribute(toolGroupEClass, TOOL_GROUP__NAME);
+    createEAttribute(toolGroupEClass, TOOL_GROUP__DESCRIPTION);
 
     diagramElementEClass = createEClass(DIAGRAM_ELEMENT);
-    createEReference(diagramElementEClass, DIAGRAM_ELEMENT__MODEL_CLASS);
+    createEAttribute(diagramElementEClass, DIAGRAM_ELEMENT__TOOL);
     createEAttribute(diagramElementEClass, DIAGRAM_ELEMENT__TOOL_NAME);
-    createEReference(diagramElementEClass, DIAGRAM_ELEMENT__GROUP);
+    createEAttribute(diagramElementEClass, DIAGRAM_ELEMENT__GROUP);
+    createEReference(diagramElementEClass, DIAGRAM_ELEMENT__GROUP_ID);
+    createEAttribute(diagramElementEClass, DIAGRAM_ELEMENT__ICON);
     createEAttribute(diagramElementEClass, DIAGRAM_ELEMENT__IMAGE_ID);
+    createEReference(diagramElementEClass, DIAGRAM_ELEMENT__MODEL_CLASS);
 
     styleEClass = createEClass(STYLE);
     createEAttribute(styleEClass, STYLE__NAME);
@@ -2088,7 +2119,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     createEAttribute(linkEClass, LINK__COMPLEX);
     createEReference(linkEClass, LINK__SOURCE_REFERENCE);
     createEReference(linkEClass, LINK__TARGET_REFERENCE);
-    createEAttribute(linkEClass, LINK__TYPE);
+    createEReference(linkEClass, LINK__DECORATORS);
 
     decoratorEClass = createEClass(DECORATOR);
     createEAttribute(decoratorEClass, DECORATOR__POSITION);
@@ -2110,11 +2141,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
 
     connectableElementEClass = createEClass(CONNECTABLE_ELEMENT);
     createEReference(connectableElementEClass, CONNECTABLE_ELEMENT__CHILDREN);
-
-    layoutEClass = createEClass(LAYOUT);
-    createEAttribute(layoutEClass, LAYOUT__LAYOUT);
-
-    visibleEClass = createEClass(VISIBLE);
 
     customFigureEClass = createEClass(CUSTOM_FIGURE);
     createEAttribute(customFigureEClass, CUSTOM_FIGURE__NAME);
@@ -2186,6 +2212,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     createEAttribute(sizeEClass, SIZE__WIDTH_RELATIVE);
     createEAttribute(sizeEClass, SIZE__HEIGHT);
     createEAttribute(sizeEClass, SIZE__HEIGHT_RELATIVE);
+    createEAttribute(sizeEClass, SIZE__RESIZABLE);
 
     pointEClass = createEClass(POINT);
     createEAttribute(pointEClass, POINT__X);
@@ -2200,37 +2227,43 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     cornerEClass = createEClass(CORNER);
     createEAttribute(cornerEClass, CORNER__ANGLE);
 
+    layoutEClass = createEClass(LAYOUT);
+    createEAttribute(layoutEClass, LAYOUT__VERTICAL);
+    createEAttribute(layoutEClass, LAYOUT__HORIZONTAL);
+    createEAttribute(layoutEClass, LAYOUT__MARGIN);
+
+    visibleEClass = createEClass(VISIBLE);
+
     textValueEClass = createEClass(TEXT_VALUE);
     createEReference(textValueEClass, TEXT_VALUE__PARTS);
 
     textPartEClass = createEClass(TEXT_PART);
     createEAttribute(textPartEClass, TEXT_PART__TEXT);
+    createEAttribute(textPartEClass, TEXT_PART__EDITABLE);
     createEReference(textPartEClass, TEXT_PART__MODEL_ATTRIBUTE);
 
-    fontFaceEClass = createEClass(FONT_FACE);
-    createEAttribute(fontFaceEClass, FONT_FACE__FACE);
+    fontPropertiesEClass = createEClass(FONT_PROPERTIES);
+    createEAttribute(fontPropertiesEClass, FONT_PROPERTIES__FACE);
+    createEAttribute(fontPropertiesEClass, FONT_PROPERTIES__SIZE);
+    createEAttribute(fontPropertiesEClass, FONT_PROPERTIES__BOLD);
+    createEAttribute(fontPropertiesEClass, FONT_PROPERTIES__ITALICS);
 
-    fontSizeEClass = createEClass(FONT_SIZE);
-    createEAttribute(fontSizeEClass, FONT_SIZE__SIZE);
-
-    fontStyleEClass = createEClass(FONT_STYLE);
-    createEAttribute(fontStyleEClass, FONT_STYLE__STYLES);
+    textAlignEClass = createEClass(TEXT_ALIGN);
+    createEAttribute(textAlignEClass, TEXT_ALIGN__VALUE);
 
     lineStyleEClass = createEClass(LINE_STYLE);
     createEAttribute(lineStyleEClass, LINE_STYLE__STYLE);
+    createEAttribute(lineStyleEClass, LINE_STYLE__MANHATTAN);
 
     lineWidthEClass = createEClass(LINE_WIDTH);
     createEAttribute(lineWidthEClass, LINE_WIDTH__WIDTH);
 
     // Create enums
-    connectionTypeEEnum = createEEnum(CONNECTION_TYPE);
     anchorDirectionEEnum = createEEnum(ANCHOR_DIRECTION);
     defaultColorEEnum = createEEnum(DEFAULT_COLOR);
-    containerLayoutEEnum = createEEnum(CONTAINER_LAYOUT);
     operatorEEnum = createEEnum(OPERATOR);
     booleanLiteralEEnum = createEEnum(BOOLEAN_LITERAL);
-    fontFaceTypeEEnum = createEEnum(FONT_FACE_TYPE);
-    fontStyleTypeEEnum = createEEnum(FONT_STYLE_TYPE);
+    textAlignValueEEnum = createEEnum(TEXT_ALIGN_VALUE);
     lineTypeEEnum = createEEnum(LINE_TYPE);
   }
 
@@ -2267,11 +2300,8 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     nodeEClass.getESuperTypes().add(this.getDiagramElement());
     linkEClass.getESuperTypes().add(this.getDiagramElement());
     linkEClass.getESuperTypes().add(this.getFeatureContainer());
-    decoratorEClass.getESuperTypes().add(this.getFeature());
     anchorEClass.getESuperTypes().add(this.getFeature());
     connectableElementEClass.getESuperTypes().add(this.getFeatureContainer());
-    layoutEClass.getESuperTypes().add(this.getFeature());
-    visibleEClass.getESuperTypes().add(this.getFeature());
     customEClass.getESuperTypes().add(this.getConnectableElement());
     rectangleEClass.getESuperTypes().add(this.getConnectableElement());
     rhombusEClass.getESuperTypes().add(this.getConnectableElement());
@@ -2295,10 +2325,11 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     pointEClass.getESuperTypes().add(this.getFeature());
     positionEClass.getESuperTypes().add(this.getFeature());
     cornerEClass.getESuperTypes().add(this.getFeature());
+    layoutEClass.getESuperTypes().add(this.getFeature());
+    visibleEClass.getESuperTypes().add(this.getFeature());
     textValueEClass.getESuperTypes().add(this.getFeature());
-    fontFaceEClass.getESuperTypes().add(this.getFeature());
-    fontSizeEClass.getESuperTypes().add(this.getFeature());
-    fontStyleEClass.getESuperTypes().add(this.getFeature());
+    fontPropertiesEClass.getESuperTypes().add(this.getFeature());
+    textAlignEClass.getESuperTypes().add(this.getFeature());
     lineStyleEClass.getESuperTypes().add(this.getFeature());
     lineWidthEClass.getESuperTypes().add(this.getFeature());
 
@@ -2307,7 +2338,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEAttribute(getXDiagram_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Imports(), this.getImportStatement(), null, "imports", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Diagram(), this.getDiagram(), null, "diagram", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getXDiagram_Groups(), this.getGroup(), null, "groups", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getXDiagram_Groups(), this.getToolGroup(), null, "groups", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Elements(), this.getDiagramElement(), null, "elements", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Styles(), this.getStyle(), null, "styles", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Colors(), this.getCustomColor(), null, "colors", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2319,16 +2350,19 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEClass(diagramEClass, Diagram.class, "Diagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDiagram_ModelClass(), ecorePackage.getEClass(), null, "modelClass", null, 0, 1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDiagram_Contains(), this.getContains(), null, "contains", null, 0, -1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDiagram_Figures(), this.getConnectableElement(), null, "figures", null, 0, -1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(groupEClass, Group.class, "Group", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGroup_Name(), ecorePackage.getEString(), "name", null, 0, 1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(toolGroupEClass, ToolGroup.class, "ToolGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getToolGroup_Name(), ecorePackage.getEString(), "name", null, 0, 1, ToolGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getToolGroup_Description(), ecorePackage.getEString(), "description", null, 0, 1, ToolGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(diagramElementEClass, DiagramElement.class, "DiagramElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDiagramElement_ModelClass(), ecorePackage.getEClass(), null, "modelClass", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDiagramElement_Tool(), ecorePackage.getEBoolean(), "tool", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDiagramElement_ToolName(), ecorePackage.getEString(), "toolName", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDiagramElement_Group(), this.getGroup(), null, "group", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDiagramElement_Group(), ecorePackage.getEBoolean(), "group", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDiagramElement_GroupId(), this.getToolGroup(), null, "groupId", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDiagramElement_Icon(), ecorePackage.getEBoolean(), "icon", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDiagramElement_ImageId(), ecorePackage.getEString(), "imageId", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDiagramElement_ModelClass(), ecorePackage.getEClass(), null, "modelClass", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(styleEClass, Style.class, "Style", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getStyle_Name(), ecorePackage.getEString(), "name", null, 0, 1, Style.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2355,7 +2389,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEAttribute(getLink_Complex(), ecorePackage.getEBoolean(), "complex", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getLink_SourceReference(), ecorePackage.getEReference(), null, "sourceReference", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getLink_TargetReference(), ecorePackage.getEReference(), null, "targetReference", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getLink_Type(), this.getConnectionType(), "type", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLink_Decorators(), this.getDecorator(), null, "decorators", null, 0, -1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(decoratorEClass, Decorator.class, "Decorator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDecorator_Position(), ecorePackage.getEInt(), "position", null, 0, 1, Decorator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2377,11 +2411,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
 
     initEClass(connectableElementEClass, ConnectableElement.class, "ConnectableElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getConnectableElement_Children(), this.getFeatureContainer(), null, "children", null, 0, -1, ConnectableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(layoutEClass, Layout.class, "Layout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLayout_Layout(), this.getContainerLayout(), "layout", null, 0, 1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(visibleEClass, Visible.class, "Visible", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(customFigureEClass, CustomFigure.class, "CustomFigure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCustomFigure_Name(), ecorePackage.getEString(), "name", null, 0, 1, CustomFigure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2453,6 +2482,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEAttribute(getSize_WidthRelative(), ecorePackage.getEBoolean(), "widthRelative", null, 0, 1, Size.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSize_Height(), ecorePackage.getEInt(), "height", null, 0, 1, Size.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSize_HeightRelative(), ecorePackage.getEBoolean(), "heightRelative", null, 0, 1, Size.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSize_Resizable(), ecorePackage.getEBoolean(), "resizable", null, 0, 1, Size.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(pointEClass, Point.class, "Point", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPoint_X(), ecorePackage.getEInt(), "x", null, 0, 1, Point.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2467,33 +2497,38 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEClass(cornerEClass, Corner.class, "Corner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCorner_Angle(), ecorePackage.getEInt(), "angle", null, 0, 1, Corner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(layoutEClass, Layout.class, "Layout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLayout_Vertical(), ecorePackage.getEBoolean(), "vertical", null, 0, 1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLayout_Horizontal(), ecorePackage.getEBoolean(), "horizontal", null, 0, 1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLayout_Margin(), ecorePackage.getEInt(), "margin", null, 0, 1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(visibleEClass, Visible.class, "Visible", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
     initEClass(textValueEClass, TextValue.class, "TextValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTextValue_Parts(), this.getTextPart(), null, "parts", null, 0, -1, TextValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(textPartEClass, TextPart.class, "TextPart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTextPart_Text(), ecorePackage.getEString(), "text", null, 0, 1, TextPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTextPart_Editable(), ecorePackage.getEBoolean(), "editable", null, 0, 1, TextPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTextPart_ModelAttribute(), ecorePackage.getEAttribute(), null, "modelAttribute", null, 0, 1, TextPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(fontFaceEClass, FontFace.class, "FontFace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFontFace_Face(), this.getFontFaceType(), "face", null, 0, 1, FontFace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(fontPropertiesEClass, FontProperties.class, "FontProperties", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFontProperties_Face(), ecorePackage.getEString(), "face", null, 0, 1, FontProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFontProperties_Size(), ecorePackage.getEInt(), "size", null, 0, 1, FontProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFontProperties_Bold(), ecorePackage.getEBoolean(), "bold", null, 0, 1, FontProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFontProperties_Italics(), ecorePackage.getEBoolean(), "italics", null, 0, 1, FontProperties.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(fontSizeEClass, FontSize.class, "FontSize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFontSize_Size(), ecorePackage.getEInt(), "size", null, 0, 1, FontSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(fontStyleEClass, FontStyle.class, "FontStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFontStyle_Styles(), this.getFontStyleType(), "styles", null, 0, -1, FontStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(textAlignEClass, TextAlign.class, "TextAlign", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTextAlign_Value(), this.getTextAlignValue(), "value", null, 0, 1, TextAlign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(lineStyleEClass, LineStyle.class, "LineStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getLineStyle_Style(), this.getLineType(), "style", null, 0, 1, LineStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLineStyle_Manhattan(), ecorePackage.getEBoolean(), "manhattan", null, 0, 1, LineStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(lineWidthEClass, LineWidth.class, "LineWidth", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getLineWidth_Width(), ecorePackage.getEInt(), "width", null, 0, 1, LineWidth.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
-    initEEnum(connectionTypeEEnum, ConnectionType.class, "ConnectionType");
-    addEEnumLiteral(connectionTypeEEnum, ConnectionType.FREE);
-    addEEnumLiteral(connectionTypeEEnum, ConnectionType.MANHATTAN);
-
     initEEnum(anchorDirectionEEnum, AnchorDirection.class, "AnchorDirection");
     addEEnumLiteral(anchorDirectionEEnum, AnchorDirection.INCOMING);
     addEEnumLiteral(anchorDirectionEEnum, AnchorDirection.OUTGOING);
@@ -2516,11 +2551,6 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     addEEnumLiteral(defaultColorEEnum, DefaultColor.FUCHSIA);
     addEEnumLiteral(defaultColorEEnum, DefaultColor.PURPLE);
 
-    initEEnum(containerLayoutEEnum, ContainerLayout.class, "ContainerLayout");
-    addEEnumLiteral(containerLayoutEEnum, ContainerLayout.FREE);
-    addEEnumLiteral(containerLayoutEEnum, ContainerLayout.VSTACK);
-    addEEnumLiteral(containerLayoutEEnum, ContainerLayout.HSTACK);
-
     initEEnum(operatorEEnum, Operator.class, "Operator");
     addEEnumLiteral(operatorEEnum, Operator.EQUAL);
     addEEnumLiteral(operatorEEnum, Operator.DIFFERENT);
@@ -2529,16 +2559,10 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     addEEnumLiteral(booleanLiteralEEnum, BooleanLiteral.TRUE);
     addEEnumLiteral(booleanLiteralEEnum, BooleanLiteral.FALSE);
 
-    initEEnum(fontFaceTypeEEnum, FontFaceType.class, "FontFaceType");
-    addEEnumLiteral(fontFaceTypeEEnum, FontFaceType.ARIAL);
-    addEEnumLiteral(fontFaceTypeEEnum, FontFaceType.VERDANA);
-    addEEnumLiteral(fontFaceTypeEEnum, FontFaceType.TIMES);
-    addEEnumLiteral(fontFaceTypeEEnum, FontFaceType.COURIER);
-
-    initEEnum(fontStyleTypeEEnum, FontStyleType.class, "FontStyleType");
-    addEEnumLiteral(fontStyleTypeEEnum, FontStyleType.ITALICS);
-    addEEnumLiteral(fontStyleTypeEEnum, FontStyleType.BOLD);
-    addEEnumLiteral(fontStyleTypeEEnum, FontStyleType.UNDERLINE);
+    initEEnum(textAlignValueEEnum, TextAlignValue.class, "TextAlignValue");
+    addEEnumLiteral(textAlignValueEEnum, TextAlignValue.LEFT);
+    addEEnumLiteral(textAlignValueEEnum, TextAlignValue.CENTER);
+    addEEnumLiteral(textAlignValueEEnum, TextAlignValue.RIGHT);
 
     initEEnum(lineTypeEEnum, LineType.class, "LineType");
     addEEnumLiteral(lineTypeEEnum, LineType.SOLID);

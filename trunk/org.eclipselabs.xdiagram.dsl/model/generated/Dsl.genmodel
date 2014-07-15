@@ -7,10 +7,6 @@
     editorPluginID="org.eclipselabs.xdiagram.dsl.editor" runtimeVersion="2.10">
   <genPackages prefix="Dsl" basePackage="org.eclipselabs.xdiagram" disposableProviderFactory="true"
       fileExtensions="xdiagram" ecorePackage="Dsl.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//ConnectionType">
-      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//ConnectionType/FREE"/>
-      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//ConnectionType/MANHATTAN"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//AnchorDirection">
       <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//AnchorDirection/INCOMING"/>
       <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//AnchorDirection/OUTGOING"/>
@@ -33,11 +29,6 @@
       <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/FUCHSIA"/>
       <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//DefaultColor/PURPLE"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//ContainerLayout">
-      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//ContainerLayout/FREE"/>
-      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//ContainerLayout/VSTACK"/>
-      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//ContainerLayout/HSTACK"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//Operator">
       <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//Operator/EQUAL"/>
       <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//Operator/DIFFERENT"/>
@@ -46,16 +37,10 @@
       <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//BooleanLiteral/TRUE"/>
       <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//BooleanLiteral/FALSE"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//FontFaceType">
-      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FontFaceType/ARIAL"/>
-      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FontFaceType/VERDANA"/>
-      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FontFaceType/TIMES"/>
-      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FontFaceType/COURIER"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//FontStyleType">
-      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FontStyleType/ITALICS"/>
-      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FontStyleType/BOLD"/>
-      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//FontStyleType/UNDERLINE"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//TextAlignValue">
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//TextAlignValue/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//TextAlignValue/CENTER"/>
+      <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//TextAlignValue/RIGHT"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dsl.ecore#//LineType">
       <genEnumLiterals ecoreEnumLiteral="Dsl.ecore#//LineType/SOLID"/>
@@ -78,16 +63,19 @@
     <genClasses ecoreClass="Dsl.ecore#//Diagram">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Diagram/modelClass"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Diagram/contains"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Diagram/figures"/>
     </genClasses>
-    <genClasses ecoreClass="Dsl.ecore#//Group">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Group/name"/>
+    <genClasses ecoreClass="Dsl.ecore#//ToolGroup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//ToolGroup/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//ToolGroup/description"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//DiagramElement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//DiagramElement/modelClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//DiagramElement/tool"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//DiagramElement/toolName"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//DiagramElement/group"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//DiagramElement/group"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//DiagramElement/groupId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//DiagramElement/icon"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//DiagramElement/imageId"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//DiagramElement/modelClass"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//Style">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Style/name"/>
@@ -114,7 +102,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Link/complex"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Link/sourceReference"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Link/targetReference"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Link/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Link/decorators"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//Decorator">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Decorator/position"/>
@@ -137,10 +125,6 @@
     <genClasses ecoreClass="Dsl.ecore#//ConnectableElement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//ConnectableElement/children"/>
     </genClasses>
-    <genClasses ecoreClass="Dsl.ecore#//Layout">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Layout/layout"/>
-    </genClasses>
-    <genClasses ecoreClass="Dsl.ecore#//Visible"/>
     <genClasses ecoreClass="Dsl.ecore#//CustomFigure">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//CustomFigure/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//CustomFigure/element"/>
@@ -205,6 +189,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Size/widthRelative"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Size/height"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Size/heightRelative"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Size/resizable"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//Point">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Point/x"/>
@@ -219,24 +204,32 @@
     <genClasses ecoreClass="Dsl.ecore#//Corner">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Corner/angle"/>
     </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Layout">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Layout/vertical"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Layout/horizontal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Layout/margin"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Visible"/>
     <genClasses ecoreClass="Dsl.ecore#//TextValue">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//TextValue/parts"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//TextPart">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//TextPart/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//TextPart/editable"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//TextPart/modelAttribute"/>
     </genClasses>
-    <genClasses ecoreClass="Dsl.ecore#//FontFace">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//FontFace/face"/>
+    <genClasses ecoreClass="Dsl.ecore#//FontProperties">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//FontProperties/face"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//FontProperties/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//FontProperties/bold"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//FontProperties/italics"/>
     </genClasses>
-    <genClasses ecoreClass="Dsl.ecore#//FontSize">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//FontSize/size"/>
-    </genClasses>
-    <genClasses ecoreClass="Dsl.ecore#//FontStyle">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//FontStyle/styles"/>
+    <genClasses ecoreClass="Dsl.ecore#//TextAlign">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//TextAlign/value"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//LineStyle">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//LineStyle/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//LineStyle/manhattan"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//LineWidth">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//LineWidth/width"/>

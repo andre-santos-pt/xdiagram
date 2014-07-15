@@ -89,11 +89,6 @@ public abstract class AbstractDslRuntimeModule extends DefaultRuntimeModule {
 		return org.eclipse.xtext.parser.antlr.AntlrTokenDefProvider.class;
 	}
 
-	// contributed by org.eclipse.xtext.generator.validation.ValidatorFragment
-	@org.eclipse.xtext.service.SingletonBinding(eager=true)	public Class<? extends org.eclipselabs.xdiagram.validation.DslValidator> bindDslValidator() {
-		return org.eclipselabs.xdiagram.validation.DslValidator.class;
-	}
-
 	// contributed by org.eclipse.xtext.generator.scoping.AbstractScopingFragment
 	public Class<? extends org.eclipse.xtext.scoping.IScopeProvider> bindIScopeProvider() {
 		return org.eclipselabs.xdiagram.scoping.DslScopeProvider.class;
@@ -162,6 +157,11 @@ public abstract class AbstractDslRuntimeModule extends DefaultRuntimeModule {
 	// contributed by org.eclipse.xtext.generator.types.TypesGeneratorFragment
 	public Class<? extends org.eclipse.xtext.scoping.IGlobalScopeProvider> bindIGlobalScopeProvider() {
 		return org.eclipse.xtext.common.types.xtext.TypesAwareDefaultGlobalScopeProvider.class;
+	}
+
+	// contributed by org.eclipse.xtext.generator.validation.JavaValidatorFragment
+	@org.eclipse.xtext.service.SingletonBinding(eager=true)	public Class<? extends org.eclipselabs.xdiagram.validation.DslJavaValidator> bindDslJavaValidator() {
+		return org.eclipselabs.xdiagram.validation.DslJavaValidator.class;
 	}
 
 }

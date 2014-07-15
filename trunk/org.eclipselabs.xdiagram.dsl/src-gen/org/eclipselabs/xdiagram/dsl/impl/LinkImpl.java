@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.eclipselabs.xdiagram.dsl.ConnectionType;
+import org.eclipselabs.xdiagram.dsl.Decorator;
 import org.eclipselabs.xdiagram.dsl.DslPackage;
 import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.FeatureContainer;
@@ -40,7 +40,7 @@ import org.eclipselabs.xdiagram.dsl.Style;
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#isComplex <em>Complex</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getSourceReference <em>Source Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getTargetReference <em>Target Reference</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getDecorators <em>Decorators</em>}</li>
  * </ul>
  * </p>
  *
@@ -159,24 +159,14 @@ public class LinkImpl extends DiagramElementImpl implements Link
   protected EReference targetReference;
 
   /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The cached value of the '{@link #getDecorators() <em>Decorators</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getDecorators()
    * @generated
    * @ordered
    */
-  protected static final ConnectionType TYPE_EDEFAULT = ConnectionType.FREE;
-
-  /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
-  protected ConnectionType type = TYPE_EDEFAULT;
+  protected EList<Decorator> decorators;
 
   /**
    * <!-- begin-user-doc -->
@@ -459,22 +449,13 @@ public class LinkImpl extends DiagramElementImpl implements Link
    * <!-- end-user-doc -->
    * @generated
    */
-  public ConnectionType getType()
+  public EList<Decorator> getDecorators()
   {
-    return type;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setType(ConnectionType newType)
-  {
-    ConnectionType oldType = type;
-    type = newType == null ? TYPE_EDEFAULT : newType;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.LINK__TYPE, oldType, type));
+    if (decorators == null)
+    {
+      decorators = new EObjectContainmentEList<Decorator>(Decorator.class, this, DslPackage.LINK__DECORATORS);
+    }
+    return decorators;
   }
 
   /**
@@ -489,6 +470,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
     {
       case DslPackage.LINK__FEATURES:
         return ((InternalEList<?>)getFeatures()).basicRemove(otherEnd, msgs);
+      case DslPackage.LINK__DECORATORS:
+        return ((InternalEList<?>)getDecorators()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -523,8 +506,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
       case DslPackage.LINK__TARGET_REFERENCE:
         if (resolve) return getTargetReference();
         return basicGetTargetReference();
-      case DslPackage.LINK__TYPE:
-        return getType();
+      case DslPackage.LINK__DECORATORS:
+        return getDecorators();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -565,8 +548,9 @@ public class LinkImpl extends DiagramElementImpl implements Link
       case DslPackage.LINK__TARGET_REFERENCE:
         setTargetReference((EReference)newValue);
         return;
-      case DslPackage.LINK__TYPE:
-        setType((ConnectionType)newValue);
+      case DslPackage.LINK__DECORATORS:
+        getDecorators().clear();
+        getDecorators().addAll((Collection<? extends Decorator>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -606,8 +590,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
       case DslPackage.LINK__TARGET_REFERENCE:
         setTargetReference((EReference)null);
         return;
-      case DslPackage.LINK__TYPE:
-        setType(TYPE_EDEFAULT);
+      case DslPackage.LINK__DECORATORS:
+        getDecorators().clear();
         return;
     }
     super.eUnset(featureID);
@@ -639,8 +623,8 @@ public class LinkImpl extends DiagramElementImpl implements Link
         return sourceReference != null;
       case DslPackage.LINK__TARGET_REFERENCE:
         return targetReference != null;
-      case DslPackage.LINK__TYPE:
-        return type != TYPE_EDEFAULT;
+      case DslPackage.LINK__DECORATORS:
+        return decorators != null && !decorators.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -704,8 +688,6 @@ public class LinkImpl extends DiagramElementImpl implements Link
     result.append(reference);
     result.append(", complex: ");
     result.append(complex);
-    result.append(", type: ");
-    result.append(type);
     result.append(')');
     return result.toString();
   }

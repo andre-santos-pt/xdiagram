@@ -71,10 +71,10 @@ Workflow {
     		}
     
     		// Xtend-based API for validation
-    		fragment = validation.ValidatorFragment auto-inject {
+    		//fragment = validation.ValidatorFragment auto-inject {
     		//    composedCheck = "org.eclipse.xtext.validation.ImportUriValidator"
     		//    composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
-    		}
+    		//}
     
     		// old scoping and exporting API
     		// fragment = scoping.ImportURIScopingFragment auto-inject {}
@@ -124,6 +124,10 @@ Workflow {
     
     		// provides a compare view
     		fragment = compare.CompareFragment auto-inject {}
+    		
+    		
+    		
+    		fragment = org.eclipse.xtext.generator.validation.JavaValidatorFragment {}
     	}
     }
 }

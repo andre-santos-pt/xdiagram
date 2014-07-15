@@ -90,9 +90,9 @@ public class DslAdapterFactory extends AdapterFactoryImpl
         return createDiagramAdapter();
       }
       @Override
-      public Adapter caseGroup(Group object)
+      public Adapter caseToolGroup(ToolGroup object)
       {
-        return createGroupAdapter();
+        return createToolGroupAdapter();
       }
       @Override
       public Adapter caseDiagramElement(DiagramElement object)
@@ -153,16 +153,6 @@ public class DslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseConnectableElement(ConnectableElement object)
       {
         return createConnectableElementAdapter();
-      }
-      @Override
-      public Adapter caseLayout(Layout object)
-      {
-        return createLayoutAdapter();
-      }
-      @Override
-      public Adapter caseVisible(Visible object)
-      {
-        return createVisibleAdapter();
       }
       @Override
       public Adapter caseCustomFigure(CustomFigure object)
@@ -290,6 +280,16 @@ public class DslAdapterFactory extends AdapterFactoryImpl
         return createCornerAdapter();
       }
       @Override
+      public Adapter caseLayout(Layout object)
+      {
+        return createLayoutAdapter();
+      }
+      @Override
+      public Adapter caseVisible(Visible object)
+      {
+        return createVisibleAdapter();
+      }
+      @Override
       public Adapter caseTextValue(TextValue object)
       {
         return createTextValueAdapter();
@@ -300,19 +300,14 @@ public class DslAdapterFactory extends AdapterFactoryImpl
         return createTextPartAdapter();
       }
       @Override
-      public Adapter caseFontFace(FontFace object)
+      public Adapter caseFontProperties(FontProperties object)
       {
-        return createFontFaceAdapter();
+        return createFontPropertiesAdapter();
       }
       @Override
-      public Adapter caseFontSize(FontSize object)
+      public Adapter caseTextAlign(TextAlign object)
       {
-        return createFontSizeAdapter();
-      }
-      @Override
-      public Adapter caseFontStyle(FontStyle object)
-      {
-        return createFontStyleAdapter();
+        return createTextAlignAdapter();
       }
       @Override
       public Adapter caseLineStyle(LineStyle object)
@@ -392,16 +387,16 @@ public class DslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Group <em>Group</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.ToolGroup <em>Tool Group</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.dsl.Group
+   * @see org.eclipselabs.xdiagram.dsl.ToolGroup
    * @generated
    */
-  public Adapter createGroupAdapter()
+  public Adapter createToolGroupAdapter()
   {
     return null;
   }
@@ -582,36 +577,6 @@ public class DslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createConnectableElementAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Layout <em>Layout</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.dsl.Layout
-   * @generated
-   */
-  public Adapter createLayoutAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Visible <em>Visible</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.dsl.Visible
-   * @generated
-   */
-  public Adapter createVisibleAdapter()
   {
     return null;
   }
@@ -992,6 +957,36 @@ public class DslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Layout <em>Layout</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.dsl.Layout
+   * @generated
+   */
+  public Adapter createLayoutAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.Visible <em>Visible</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.xdiagram.dsl.Visible
+   * @generated
+   */
+  public Adapter createVisibleAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.TextValue <em>Text Value</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -1022,46 +1017,31 @@ public class DslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.FontFace <em>Font Face</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.FontProperties <em>Font Properties</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.dsl.FontFace
+   * @see org.eclipselabs.xdiagram.dsl.FontProperties
    * @generated
    */
-  public Adapter createFontFaceAdapter()
+  public Adapter createFontPropertiesAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.FontSize <em>Font Size</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.TextAlign <em>Text Align</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.dsl.FontSize
+   * @see org.eclipselabs.xdiagram.dsl.TextAlign
    * @generated
    */
-  public Adapter createFontSizeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.xdiagram.dsl.FontStyle <em>Font Style</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.xdiagram.dsl.FontStyle
-   * @generated
-   */
-  public Adapter createFontStyleAdapter()
+  public Adapter createTextAlignAdapter()
   {
     return null;
   }

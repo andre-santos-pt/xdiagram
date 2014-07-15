@@ -13,7 +13,7 @@ XDiagram:
      
     diagram=Diagram
     
-    groups+=Group*
+    groups+=ToolGroup*
     
     (
     	(elements += DiagramElement) |
@@ -40,21 +40,20 @@ QualifiedNameWithWildCard returns ecore::EString :
 Diagram:
 	'diagram' modelClass=[ecore::EClass|QualifiedName] '{'
 	contains+=Contains*
-	figures+=ConnectableElement*
 	'}'
 ;
 
-Group:
-	'group' name=ID
+ToolGroup:
+	'toolgroup' name=ID (description=STRING)? ';'
 ;
 
 DiagramElement:
-	Node | Link
+	(Node | Link)
 ;
 
 
 Style:
-	'style' name=ID (styled?='extends' style=[Style])? '{'
+	'style' name=ID  (styled?='+' style=[Style])? '{'
 	      features+=StyleFeature*
 	'}'
 ;
@@ -79,7 +78,7 @@ LinkedFeature returns Feature:
 StyleFeature returns Feature:
 	Size | Position | Point | Corner |
 	Background | Foreground | Transparency |
-	FontFace | FontSize | FontStyle | TextValue |
+	FontProperties |TextValue | TextAlign |
 	LineStyle | LineWidth
 ;
 
@@ -105,10 +104,11 @@ FeatureConditional:
 // TODO validation: unique nodes
 // notation inheritance?
 Node:
-    'node' modelClass=[ecore::EClass|QualifiedName]  '{'
-     ('toolname' toolName=STRING (':' group=[Group])?)?  ('icon' imageId=ID)?
-    	rootFigure = ConnectableElement
-    '}'
+	(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
+    'node' modelClass=[ecore::EClass|QualifiedName] rootFigure = ConnectableElement
+     
+
+   // ('toolname' toolName=STRING (':' group=[Group])?)?  ('icon' imageId=ID)?
 ;
     
    
@@ -117,30 +117,33 @@ Node:
 // TODO: validation - complex requires source e target, complex structure
 // TODO text / icon
 Link:
+	(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
     'link'(
     	(reference?='reference' modelReference=[ecore::EReference|QualifiedName]) | 
     	
-    	(complex?='object' modelClass=[ecore::EClass|QualifiedName] 
+    	(complex?='class' modelClass=[ecore::EClass|QualifiedName] 
     	'source' sourceReference=[ecore::EReference|QualifiedName] 
     	'target' targetReference=[ecore::EReference|QualifiedName]
     	)
-    )  (toolName=STRING (':' group=[Group])?)?  ('icon' imageId=ID)? 
+    	
+    )
+    (styled?='+' style=[Style])?
+     
+    // (toolName=STRING (':' group=[Group])?)?  ('icon' imageId=ID)? 
     '{'
-    'connection' type=ConnectionType (styled?='+' style=[Style])? '{'
     	features += LinkFeature*
-    	//decorators += Decorator*	
-    '}'
+    	decorators += Decorator*	
     '}'
 ;
     
  
-enum ConnectionType:
-	FREE='free' |
-	MANHATTAN='manhattan'	
-;	
+//enum ConnectionType:
+//	FREE='free' |
+//	MANHATTAN='manhattan'	
+//;	
 
 LinkFeature returns Feature:
-	Foreground | LineStyle | LineWidth | Decorator
+	Foreground | LineStyle | LineWidth
 ;
     
     
@@ -152,7 +155,7 @@ LinkFeature returns Feature:
 // TODO validation %
 // TODO validation children of decorator
 Decorator:
-	'decorator' position=INT '%' (conditional=FeatureConditional)? element = DecoratorElement
+	'decorator' position=INT '%' element = DecoratorElement
 ;
 
 
@@ -191,7 +194,7 @@ enum AnchorDirection:
 
 
 CustomColor:
-	'color' name=ID R=INT ',' G=INT ',' B=INT
+	'color' name=ID R=INT G=INT B=INT ';'
 ;
 
 Color:
@@ -223,12 +226,15 @@ enum DefaultColor:
 
 
 
+
+
+
+
 //---------------------------------------
 // Connectable Elements
 /*
  * Every connectable element must be included here, and have:
- * (composite?='children:' children+=ConnectableElement+)?
- * children+=ChildElement*
+ * ('child' children+=ChildElement)*
  * (styled?='+' style=[Style])?
  */
 ConnectableElement:
@@ -246,18 +252,11 @@ DecoratorElement returns FeatureContainer:
 
 
 ConnectableElementFeature returns Feature:
-	Position | Size | ColorFeature | LineStyle | LineWidth | Contains | Anchor | Layout | Visible
+	Position | Size | ColorFeature | Transparency | LineStyle | LineWidth | Contains | Anchor | Layout | Visible
 ;
 
 
-Layout:
-	'layout' layout=ContainerLayout
-	(conditional=FeatureConditional)?	
-;
 
-Visible:
-	'invisible' conditional=FeatureConditional
-;
 
 
 CustomFigure:
@@ -271,14 +270,14 @@ CustomFigure:
 Custom:
 	'figure' figure=[CustomFigure] (styled?='+' style=[Style])? '{'
 		features+=LinkedFeature*
-		children+=ChildElement*
+		('child' children+=ChildElement)*
 	'}'
 ;
 
 Rectangle:
 	(rectangle?='rectangle' | square?='square') (styled?='+' style=[Style])? '{'
 		features+=RectangleFeature*
-		children+=ChildElement*
+		('child' children+=ChildElement)*
 	'}'
 ;
 
@@ -290,14 +289,14 @@ Rhombus:
 	{Rhombus}
 	'rhombus' (styled?='+' style=[Style])? '{'
 		features+=ConnectableElementFeature*
-		children+=ChildElement*
+		('child' children+=ChildElement)*
 	'}'
 ;
 
 Ellipse:
 	(ellipse?='ellipse' | circle?='circle') (styled?='+' style=[Style])? '{'
 		features+=ConnectableElementFeature*
-		children+=ChildElement*
+		('child' children+=ChildElement)*
 	'}'
 ;
 
@@ -308,7 +307,7 @@ Polyline:
 		features+=Point
 		features+=Point*
 		features+=ConnectableElementFeature*
-		children+=ChildElement*
+		('child' children+=ChildElement)*
 	'}'
 ;
 
@@ -316,7 +315,7 @@ Triangle:
 	{Triangle}
 	'triangle' 	(styled?='+' style=[Style])? '{'
 		features+=ConnectableElementFeature*
-		children+=ChildElement*
+		('child' children+=ChildElement)*
 	'}'
 ;
 
@@ -351,16 +350,17 @@ Arrow:
 
 // TODO validation: contains of conflict types
 Contains:
-'container' modelReference=[ecore::EReference|QualifiedName] 
+'contains' modelReference=[ecore::EReference|QualifiedName] 
 (conditional=FeatureConditional)?
+';'
 ;
 
 
-enum ContainerLayout:
-	FREE='free' |
-	VSTACK='vertical' |
-	HSTACK='horizontal'
-;
+//enum ContainerLayout:
+//	FREE='free' |
+//	VSTACK='vertical' |
+//	HSTACK='horizontal'
+//;
 
 //TODO < > <= =>
 enum Operator:
@@ -415,12 +415,12 @@ Label:
 	{Label}
 	'label' (styled?='+' style=[Style])? '{'
 	features+=LabelFeature*
-	children+=ChildElement*
+	('child' children+=ChildElement)*
 	'}'
 ;
 
 LabelFeature returns Feature:
-	TextValue | Foreground | FontFace | FontSize | FontStyle | Size | Position | Visible
+	TextValue | Foreground | FontProperties | Size | Position | Visible | TextAlign
 ;
 
 
@@ -428,7 +428,7 @@ LabelFeature returns Feature:
 Image:
 	'image' imageId=ID (styled?='+' style=[Style])? '{'
 	features+=ImageFeature*
-	children+=ChildElement*
+	('child' children+=ChildElement)*
 	'}'
 ;
 
@@ -441,7 +441,7 @@ Invisible:
 	{Invisible}
 	'invisible' (styled?='+' style=[Style])? '{'
 	features+=InvisibleFeature*
-	children+=ChildElement*
+	('child' children+=ChildElement)*
 	'}'
 ;
 
@@ -464,17 +464,20 @@ ColorFeature:
 Foreground returns ColorFeature:
 	type='foreground' color=Color
 	(conditional=FeatureConditional)?
+	';'
 ;
 
 Background returns ColorFeature:
 	type='background' color=Color
 	(conditional=FeatureConditional)?
+	';'
 ;
 
-
+// TODO validation percent
 Transparency:
 	'transparency' percent=INT '%'
 	(conditional=FeatureConditional)?
+	';'
 ;
 
 
@@ -482,27 +485,45 @@ Transparency:
 
 
 Size:
-	'size' width=INT (widthRelative?='%')? ('x' height=INT (heightRelative?='%')?)?
+	'size' width=INT (widthRelative?=']')? (height=INT (heightRelative?=']')?)? (resizable?='resizable')?
 	(conditional=FeatureConditional)?
+	';'
 ;
 
 Point:
-	'point' x=INT ',' y=INT
+	'point' x=INT y=INT
 	(conditional=FeatureConditional)?
+	';'
 ;
 
 // TODO validation: no Position when vstack hstack
 Position:
-	'position' x=INT (xRelative?='%')? ',' y=INT (yRelative?='%')?
+	'position' x=INT (xRelative?='%')? y=INT (yRelative?='%')?
 	(conditional=FeatureConditional)?
+	';'
 ;
+
 
 Corner:
 	'corner' angle=INT
 	(conditional=FeatureConditional)?
+	';'
 ;
 
 
+
+Layout:
+	'layout' (vertical?='vertical' | horizontal?='horizontal') ('margin' margin=INT)?
+	(conditional=FeatureConditional)?	
+	';'
+;
+
+
+
+Visible:
+	'invisible' conditional=FeatureConditional
+	';'
+;
 
 
 
@@ -516,43 +537,31 @@ TextValue:
 	{TextValue}
 	'text' parts+=TextPart*
 	(conditional=FeatureConditional)?
+	';'
 ;
 
 TextPart:
-	text=STRING | modelAttribute=[ecore::EAttribute|QualifiedName]
+	text=STRING | ((editable?='edit:')? modelAttribute=[ecore::EAttribute|QualifiedName] )
 ;
 
-FontFace:
-	'font-face' face=FontFaceType
+FontProperties:
+	{FontProperties}
+	'font' (face='arial'|'verdana'|'courier'|'times')? (size=INT)? (bold?='bold')? (italics?='italics')?
 	(conditional=FeatureConditional)?
+	';'
 ;
 
-FontSize:
-	'font-size' size=INT
+TextAlign:
+	'align' value=TextAlignValue
 	(conditional=FeatureConditional)?
+	';'	
 ;
 
-FontStyle:
-	'font-style' styles+=FontStyleType (',' styles+=FontStyleType)*
-	(conditional=FeatureConditional)?
+enum TextAlignValue:
+	LEFT='left' |
+	CENTER='center' |
+	RIGHT='right'
 ;
-
-
-
-enum FontFaceType:
-	ARIAL='arial' |
-	VERDANA='verdana' |
-	TIMES='times' |
-	COURIER='courier'
-;
-
-enum FontStyleType:
-	ITALICS='italics' |
-	BOLD='bold' |
-	UNDERLINE='underline'
-;
-
-
 
 
 
@@ -563,8 +572,10 @@ enum FontStyleType:
 
 
 LineStyle:
-	'line-type' style=LineType  
+	{LineStyle}
+	'linestyle' (style=LineType)? (manhattan?='manhattan')?
 	(conditional=FeatureConditional)?
+	';'
 ;
 
 enum LineType:
@@ -574,8 +585,9 @@ enum LineType:
 ;
 
 LineWidth:
-	'line-width' width=INT
+	'linewidth' width=INT
 	(conditional=FeatureConditional)?
+	';'
 ;
 
 

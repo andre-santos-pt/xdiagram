@@ -22,6 +22,7 @@ import org.eclipselabs.xdiagram.dsl.Size;
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.SizeImpl#isWidthRelative <em>Width Relative</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.SizeImpl#getHeight <em>Height</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.SizeImpl#isHeightRelative <em>Height Relative</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.SizeImpl#isResizable <em>Resizable</em>}</li>
  * </ul>
  * </p>
  *
@@ -108,6 +109,26 @@ public class SizeImpl extends FeatureImpl implements Size
    * @ordered
    */
   protected boolean heightRelative = HEIGHT_RELATIVE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isResizable() <em>Resizable</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isResizable()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean RESIZABLE_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isResizable() <em>Resizable</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isResizable()
+   * @generated
+   * @ordered
+   */
+  protected boolean resizable = RESIZABLE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -227,6 +248,29 @@ public class SizeImpl extends FeatureImpl implements Size
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isResizable()
+  {
+    return resizable;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setResizable(boolean newResizable)
+  {
+    boolean oldResizable = resizable;
+    resizable = newResizable;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.SIZE__RESIZABLE, oldResizable, resizable));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -240,6 +284,8 @@ public class SizeImpl extends FeatureImpl implements Size
         return getHeight();
       case DslPackage.SIZE__HEIGHT_RELATIVE:
         return isHeightRelative();
+      case DslPackage.SIZE__RESIZABLE:
+        return isResizable();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -265,6 +311,9 @@ public class SizeImpl extends FeatureImpl implements Size
         return;
       case DslPackage.SIZE__HEIGHT_RELATIVE:
         setHeightRelative((Boolean)newValue);
+        return;
+      case DslPackage.SIZE__RESIZABLE:
+        setResizable((Boolean)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -292,6 +341,9 @@ public class SizeImpl extends FeatureImpl implements Size
       case DslPackage.SIZE__HEIGHT_RELATIVE:
         setHeightRelative(HEIGHT_RELATIVE_EDEFAULT);
         return;
+      case DslPackage.SIZE__RESIZABLE:
+        setResizable(RESIZABLE_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -314,6 +366,8 @@ public class SizeImpl extends FeatureImpl implements Size
         return height != HEIGHT_EDEFAULT;
       case DslPackage.SIZE__HEIGHT_RELATIVE:
         return heightRelative != HEIGHT_RELATIVE_EDEFAULT;
+      case DslPackage.SIZE__RESIZABLE:
+        return resizable != RESIZABLE_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -337,6 +391,8 @@ public class SizeImpl extends FeatureImpl implements Size
     result.append(height);
     result.append(", heightRelative: ");
     result.append(heightRelative);
+    result.append(", resizable: ");
+    result.append(resizable);
     result.append(')');
     return result.toString();
   }

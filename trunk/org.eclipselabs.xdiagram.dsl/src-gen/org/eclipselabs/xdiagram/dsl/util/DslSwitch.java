@@ -93,10 +93,10 @@ public class DslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DslPackage.GROUP:
+      case DslPackage.TOOL_GROUP:
       {
-        Group group = (Group)theEObject;
-        T result = caseGroup(group);
+        ToolGroup toolGroup = (ToolGroup)theEObject;
+        T result = caseToolGroup(toolGroup);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -157,7 +157,6 @@ public class DslSwitch<T> extends Switch<T>
       {
         Decorator decorator = (Decorator)theEObject;
         T result = caseDecorator(decorator);
-        if (result == null) result = caseFeature(decorator);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -188,22 +187,6 @@ public class DslSwitch<T> extends Switch<T>
         ConnectableElement connectableElement = (ConnectableElement)theEObject;
         T result = caseConnectableElement(connectableElement);
         if (result == null) result = caseFeatureContainer(connectableElement);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DslPackage.LAYOUT:
-      {
-        Layout layout = (Layout)theEObject;
-        T result = caseLayout(layout);
-        if (result == null) result = caseFeature(layout);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DslPackage.VISIBLE:
-      {
-        Visible visible = (Visible)theEObject;
-        T result = caseVisible(visible);
-        if (result == null) result = caseFeature(visible);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -414,6 +397,22 @@ public class DslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case DslPackage.LAYOUT:
+      {
+        Layout layout = (Layout)theEObject;
+        T result = caseLayout(layout);
+        if (result == null) result = caseFeature(layout);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DslPackage.VISIBLE:
+      {
+        Visible visible = (Visible)theEObject;
+        T result = caseVisible(visible);
+        if (result == null) result = caseFeature(visible);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case DslPackage.TEXT_VALUE:
       {
         TextValue textValue = (TextValue)theEObject;
@@ -429,27 +428,19 @@ public class DslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DslPackage.FONT_FACE:
+      case DslPackage.FONT_PROPERTIES:
       {
-        FontFace fontFace = (FontFace)theEObject;
-        T result = caseFontFace(fontFace);
-        if (result == null) result = caseFeature(fontFace);
+        FontProperties fontProperties = (FontProperties)theEObject;
+        T result = caseFontProperties(fontProperties);
+        if (result == null) result = caseFeature(fontProperties);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DslPackage.FONT_SIZE:
+      case DslPackage.TEXT_ALIGN:
       {
-        FontSize fontSize = (FontSize)theEObject;
-        T result = caseFontSize(fontSize);
-        if (result == null) result = caseFeature(fontSize);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DslPackage.FONT_STYLE:
-      {
-        FontStyle fontStyle = (FontStyle)theEObject;
-        T result = caseFontStyle(fontStyle);
-        if (result == null) result = caseFeature(fontStyle);
+        TextAlign textAlign = (TextAlign)theEObject;
+        T result = caseTextAlign(textAlign);
+        if (result == null) result = caseFeature(textAlign);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -522,17 +513,17 @@ public class DslSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Group</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Tool Group</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Group</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Tool Group</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseGroup(Group object)
+  public T caseToolGroup(ToolGroup object)
   {
     return null;
   }
@@ -725,38 +716,6 @@ public class DslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseConnectableElement(ConnectableElement object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Layout</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Layout</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseLayout(Layout object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Visible</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Visible</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseVisible(Visible object)
   {
     return null;
   }
@@ -1162,6 +1121,38 @@ public class DslSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Layout</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Layout</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLayout(Layout object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Visible</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Visible</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVisible(Visible object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Text Value</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1194,49 +1185,33 @@ public class DslSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Font Face</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Font Properties</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Font Face</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Font Properties</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseFontFace(FontFace object)
+  public T caseFontProperties(FontProperties object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Font Size</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Text Align</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Font Size</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Text Align</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseFontSize(FontSize object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Font Style</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Font Style</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseFontStyle(FontStyle object)
+  public T caseTextAlign(TextAlign object)
   {
     return null;
   }

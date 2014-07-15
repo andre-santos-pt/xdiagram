@@ -2,6 +2,7 @@
  */
 package org.eclipselabs.xdiagram.dsl;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +21,7 @@ package org.eclipselabs.xdiagram.dsl;
  * @model
  * @generated
  */
-public interface Decorator extends Feature
+public interface Decorator extends EObject
 {
   /**
    * Returns the value of the '<em><b>Position</b></em>' attribute.

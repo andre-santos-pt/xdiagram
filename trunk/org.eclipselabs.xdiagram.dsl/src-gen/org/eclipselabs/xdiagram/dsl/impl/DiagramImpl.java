@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.eclipselabs.xdiagram.dsl.ConnectableElement;
 import org.eclipselabs.xdiagram.dsl.Contains;
 import org.eclipselabs.xdiagram.dsl.Diagram;
 import org.eclipselabs.xdiagram.dsl.DslPackage;
@@ -32,7 +31,6 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DiagramImpl#getModelClass <em>Model Class</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DiagramImpl#getContains <em>Contains</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DiagramImpl#getFigures <em>Figures</em>}</li>
  * </ul>
  * </p>
  *
@@ -59,16 +57,6 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
    * @ordered
    */
   protected EList<Contains> contains;
-
-  /**
-   * The cached value of the '{@link #getFigures() <em>Figures</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getFigures()
-   * @generated
-   * @ordered
-   */
-  protected EList<ConnectableElement> figures;
 
   /**
    * <!-- begin-user-doc -->
@@ -153,20 +141,6 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ConnectableElement> getFigures()
-  {
-    if (figures == null)
-    {
-      figures = new EObjectContainmentEList<ConnectableElement>(ConnectableElement.class, this, DslPackage.DIAGRAM__FIGURES);
-    }
-    return figures;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -174,8 +148,6 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
     {
       case DslPackage.DIAGRAM__CONTAINS:
         return ((InternalEList<?>)getContains()).basicRemove(otherEnd, msgs);
-      case DslPackage.DIAGRAM__FIGURES:
-        return ((InternalEList<?>)getFigures()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -195,8 +167,6 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
         return basicGetModelClass();
       case DslPackage.DIAGRAM__CONTAINS:
         return getContains();
-      case DslPackage.DIAGRAM__FIGURES:
-        return getFigures();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -219,10 +189,6 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
         getContains().clear();
         getContains().addAll((Collection<? extends Contains>)newValue);
         return;
-      case DslPackage.DIAGRAM__FIGURES:
-        getFigures().clear();
-        getFigures().addAll((Collection<? extends ConnectableElement>)newValue);
-        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -243,9 +209,6 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
       case DslPackage.DIAGRAM__CONTAINS:
         getContains().clear();
         return;
-      case DslPackage.DIAGRAM__FIGURES:
-        getFigures().clear();
-        return;
     }
     super.eUnset(featureID);
   }
@@ -264,8 +227,6 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
         return modelClass != null;
       case DslPackage.DIAGRAM__CONTAINS:
         return contains != null && !contains.isEmpty();
-      case DslPackage.DIAGRAM__FIGURES:
-        return figures != null && !figures.isEmpty();
     }
     return super.eIsSet(featureID);
   }

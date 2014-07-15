@@ -22,6 +22,7 @@ import org.eclipselabs.xdiagram.dsl.TextPart;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.TextPartImpl#getText <em>Text</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.TextPartImpl#isEditable <em>Editable</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.TextPartImpl#getModelAttribute <em>Model Attribute</em>}</li>
  * </ul>
  * </p>
@@ -49,6 +50,26 @@ public class TextPartImpl extends MinimalEObjectImpl.Container implements TextPa
    * @ordered
    */
   protected String text = TEXT_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isEditable() <em>Editable</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isEditable()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean EDITABLE_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isEditable() <em>Editable</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isEditable()
+   * @generated
+   * @ordered
+   */
+  protected boolean editable = EDITABLE_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getModelAttribute() <em>Model Attribute</em>}' reference.
@@ -109,6 +130,29 @@ public class TextPartImpl extends MinimalEObjectImpl.Container implements TextPa
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isEditable()
+  {
+    return editable;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setEditable(boolean newEditable)
+  {
+    boolean oldEditable = editable;
+    editable = newEditable;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.TEXT_PART__EDITABLE, oldEditable, editable));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getModelAttribute()
   {
     if (modelAttribute != null && modelAttribute.eIsProxy())
@@ -159,6 +203,8 @@ public class TextPartImpl extends MinimalEObjectImpl.Container implements TextPa
     {
       case DslPackage.TEXT_PART__TEXT:
         return getText();
+      case DslPackage.TEXT_PART__EDITABLE:
+        return isEditable();
       case DslPackage.TEXT_PART__MODEL_ATTRIBUTE:
         if (resolve) return getModelAttribute();
         return basicGetModelAttribute();
@@ -178,6 +224,9 @@ public class TextPartImpl extends MinimalEObjectImpl.Container implements TextPa
     {
       case DslPackage.TEXT_PART__TEXT:
         setText((String)newValue);
+        return;
+      case DslPackage.TEXT_PART__EDITABLE:
+        setEditable((Boolean)newValue);
         return;
       case DslPackage.TEXT_PART__MODEL_ATTRIBUTE:
         setModelAttribute((EAttribute)newValue);
@@ -199,6 +248,9 @@ public class TextPartImpl extends MinimalEObjectImpl.Container implements TextPa
       case DslPackage.TEXT_PART__TEXT:
         setText(TEXT_EDEFAULT);
         return;
+      case DslPackage.TEXT_PART__EDITABLE:
+        setEditable(EDITABLE_EDEFAULT);
+        return;
       case DslPackage.TEXT_PART__MODEL_ATTRIBUTE:
         setModelAttribute((EAttribute)null);
         return;
@@ -218,6 +270,8 @@ public class TextPartImpl extends MinimalEObjectImpl.Container implements TextPa
     {
       case DslPackage.TEXT_PART__TEXT:
         return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
+      case DslPackage.TEXT_PART__EDITABLE:
+        return editable != EDITABLE_EDEFAULT;
       case DslPackage.TEXT_PART__MODEL_ATTRIBUTE:
         return modelAttribute != null;
     }
@@ -237,6 +291,8 @@ public class TextPartImpl extends MinimalEObjectImpl.Container implements TextPa
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (text: ");
     result.append(text);
+    result.append(", editable: ");
+    result.append(editable);
     result.append(')');
     return result.toString();
   }

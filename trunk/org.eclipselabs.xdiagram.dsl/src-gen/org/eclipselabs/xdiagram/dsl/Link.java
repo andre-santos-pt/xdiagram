@@ -2,6 +2,8 @@
  */
 package org.eclipselabs.xdiagram.dsl;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EReference;
 
 /**
@@ -17,7 +19,7 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#isComplex <em>Complex</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#getSourceReference <em>Source Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#getTargetReference <em>Target Reference</em>}</li>
- *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#getDecorators <em>Decorators</em>}</li>
  * </ul>
  * </p>
  *
@@ -158,32 +160,19 @@ public interface Link extends DiagramElement, FeatureContainer
   void setTargetReference(EReference value);
 
   /**
-   * Returns the value of the '<em><b>Type</b></em>' attribute.
-   * The literals are from the enumeration {@link org.eclipselabs.xdiagram.dsl.ConnectionType}.
+   * Returns the value of the '<em><b>Decorators</b></em>' containment reference list.
+   * The list contents are of type {@link org.eclipselabs.xdiagram.dsl.Decorator}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Type</em>' attribute isn't clear,
+   * If the meaning of the '<em>Decorators</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Type</em>' attribute.
-   * @see org.eclipselabs.xdiagram.dsl.ConnectionType
-   * @see #setType(ConnectionType)
-   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getLink_Type()
-   * @model
+   * @return the value of the '<em>Decorators</em>' containment reference list.
+   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getLink_Decorators()
+   * @model containment="true"
    * @generated
    */
-  ConnectionType getType();
-
-  /**
-   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.Link#getType <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' attribute.
-   * @see org.eclipselabs.xdiagram.dsl.ConnectionType
-   * @see #getType()
-   * @generated
-   */
-  void setType(ConnectionType value);
+  EList<Decorator> getDecorators();
 
 } // Link
