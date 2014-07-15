@@ -18,10 +18,14 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.graphiti.features.IFeatureProvider;
+import org.eclipse.graphiti.features.IUpdateFeature;
 import org.eclipse.graphiti.features.context.IAddContext;
+import org.eclipse.graphiti.features.context.impl.UpdateContext;
+import org.eclipse.graphiti.internal.command.GenericFeatureCommandWithContext;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
+import org.eclipse.graphiti.mm.algorithms.AbstractText;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
-import org.eclipse.graphiti.mm.algorithms.Polygon;
 import org.eclipse.graphiti.mm.algorithms.Polyline;
 import org.eclipse.graphiti.mm.pictograms.Anchor;
 import org.eclipse.graphiti.mm.pictograms.BoxRelativeAnchor;
@@ -29,34 +33,35 @@ import org.eclipse.graphiti.mm.pictograms.Connection;
 import org.eclipse.graphiti.mm.pictograms.ConnectionDecorator;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
+import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.mm.pictograms.PictogramLink;
 import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipse.graphiti.services.Graphiti;
-import org.eclipse.graphiti.services.IGaService;
 import org.eclipselabs.xdiagram.DslStandaloneSetup;
 import org.eclipselabs.xdiagram.dsl.ConnectableElement;
-import org.eclipselabs.xdiagram.dsl.ConnectionType;
-import org.eclipselabs.xdiagram.dsl.ContainerLayout;
 import org.eclipselabs.xdiagram.dsl.Contains;
 import org.eclipselabs.xdiagram.dsl.Decorator;
 import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.FeatureConditional;
 import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.Label;
+import org.eclipselabs.xdiagram.dsl.Layout;
+import org.eclipselabs.xdiagram.dsl.LineStyle;
 import org.eclipselabs.xdiagram.dsl.Link;
 import org.eclipselabs.xdiagram.dsl.Node;
 import org.eclipselabs.xdiagram.dsl.TextPart;
-import org.eclipselabs.xdiagram.dsl.TextValue;
 import org.eclipselabs.xdiagram.dsl.XDiagram;
 import org.eclipselabs.xdiagram.dsl.util.DslSwitch;
 import org.eclipselabs.xdiagram.interpreter.GraphicsProvider;
 import org.eclipselabs.xdiagram.interpreter.ProviderException;
 import org.eclipselabs.xdiagram.provider.internal.ElementCreation;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandlerChain;
+import org.eclipselabs.xdiagram.provider.internal.handlers.AlignHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.AnchorHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.ColorHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.ContainsHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.CornerHandler;
+import org.eclipselabs.xdiagram.provider.internal.handlers.FontHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.LayoutHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.LineStyleHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.LineWidthHandler;
@@ -64,6 +69,7 @@ import org.eclipselabs.xdiagram.provider.internal.handlers.PointHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.PositionHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.SizeHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.TextValueHandler;
+import org.eclipselabs.xdiagram.provider.internal.handlers.TransparencyHandler;
 import org.eclipselabs.xdiagram.provider.internal.handlers.VisibleHandler;
 import org.osgi.framework.Bundle;
 
@@ -71,18 +77,24 @@ import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
 
-public class LanguageProvider implements GraphicsProvider {
+public final class LanguageProvider implements GraphicsProvider {
 
 	private URI modelLocation;
 	private XDiagram model;
 	private EPackage ePackage;
 
+	private Diagram diagram;
+
 	private FeatureHandlerChain featureChain;
+
+	private IFeatureProvider gFeatureProvider;
 
 	private ContainsHandler containsHandler;
 	private AnchorHandler anchorHandler;
 	private LayoutHandler layoutHandler;
-
+	private SizeHandler sizeHandler;
+	private TextValueHandler textHandler;
+	
 	private Map<EClass, Node> nodes;
 	private Map<EClass, Link> complexLinks;
 	private Map<EReference, Link> links;
@@ -92,31 +104,36 @@ public class LanguageProvider implements GraphicsProvider {
 
 
 
+
 	public LanguageProvider() {
 		containsHandler = new ContainsHandler();
-
 		anchorHandler = new AnchorHandler();
-
 		layoutHandler = new LayoutHandler();
+		sizeHandler = new SizeHandler();
+		textHandler = new TextValueHandler();
+		
+		featureChain = new FeatureHandlerChain(this)
 
-		featureChain = new FeatureHandlerChain()
-		.add(layoutHandler)
 		.add(new VisibleHandler())
 		.add(new ColorHandler())
+		.add(new TransparencyHandler())
 		.add(new PositionHandler(layoutHandler))
-		.add(new SizeHandler())
+		.add(new FontHandler())
+		.add(textHandler)
+		.add(new AlignHandler())
+		.add(sizeHandler)
 		.add(new LineWidthHandler())
 		.add(new PointHandler())
-		.add(new TextValueHandler())
+		
 		.add(new CornerHandler())
 		.add(new LineStyleHandler())
 
 		//.add(new DecoratorHandler())
 
-
-
 		.add(containsHandler)
-		.add(anchorHandler);
+		.add(anchorHandler)
+
+		.add(layoutHandler);
 	}
 
 
@@ -126,12 +143,6 @@ public class LanguageProvider implements GraphicsProvider {
 		this.ePackage = ePackage;
 		modelLocation = URI.createPlatformPluginURI(bundle.getSymbolicName() + "/" + properties.get("file"), false);
 		loadModel();
-	}
-
-	@Override
-	public void loadDiagram(Diagram diagram, EObject rootObject) {
-		for(Contains c : model.getDiagram().getContains())
-			containsHandler.handle(null, c, rootObject, diagram, diagram, diagram.getGraphicsAlgorithm());
 	}
 
 	private void loadModel() throws ProviderException {
@@ -152,6 +163,22 @@ public class LanguageProvider implements GraphicsProvider {
 			throw new ProviderException("Could not load language model: " + e.getMessage());
 		}
 	}
+
+
+	private void loadModelData() {
+		nodes = Maps.newHashMap();
+		links = Maps.newHashMap();
+		complexLinks = Maps.newHashMap();
+
+		incomming = ArrayListMultimap.create();
+		outgoing = ArrayListMultimap.create();
+
+		LoadModelData doSwitch = new LoadModelData();
+
+		for(TreeIterator<EObject> iterator = EcoreUtil.getAllContents(model.eResource(), false); iterator.hasNext();)
+			doSwitch.doSwitch(iterator.next());
+	}		
+
 
 	private class LoadModelData extends DslSwitch<Object> {
 
@@ -236,19 +263,20 @@ public class LanguageProvider implements GraphicsProvider {
 
 
 
-	private void loadModelData() {
-		nodes = Maps.newHashMap();
-		links = Maps.newHashMap();
-		complexLinks = Maps.newHashMap();
 
-		incomming = ArrayListMultimap.create();
-		outgoing = ArrayListMultimap.create();
 
-		LoadModelData doSwitch = new LoadModelData();
 
-		for(TreeIterator<EObject> iterator = EcoreUtil.getAllContents(model.eResource(), false); iterator.hasNext();)
-			doSwitch.doSwitch(iterator.next());
-	}		
+	@Override
+	public void loadDiagram(Diagram diagram, EObject rootObject, IFeatureProvider gFeatureProvider) {
+		assert diagram != null;
+		assert rootObject != null;
+		this.diagram = diagram;
+		this.gFeatureProvider = gFeatureProvider;
+
+		for(Contains c : model.getDiagram().getContains())
+			containsHandler.handle(null, c, rootObject, diagram, diagram, diagram.getGraphicsAlgorithm());
+	}
+
 
 	private boolean isNode(EClass c) {
 		assert c != null;
@@ -297,10 +325,10 @@ public class LanguageProvider implements GraphicsProvider {
 		return isComplexLink(eClass);
 	}
 
-	@Override
-	public boolean isProperty(EStructuralFeature feature) {
-		return true;
-	}
+//	@Override
+//	public boolean isProperty(EStructuralFeature feature) {
+//		return true;
+//	}
 
 	@Override
 	public EClass getRoot() {
@@ -309,7 +337,7 @@ public class LanguageProvider implements GraphicsProvider {
 
 
 	@Override
-	public boolean canAddChild(ContainerShape container, EClass eClass, int x, int y) {
+	public boolean canAddChild(ContainerShape container, EClass eClass) {
 		if(!containsHandler.isContainer( container)) {
 			return false;
 		}
@@ -343,6 +371,7 @@ public class LanguageProvider implements GraphicsProvider {
 
 	@Override
 	public void update(Diagram diagram) {
+		assert diagram != null;
 		try {
 			loadModel();
 		}
@@ -351,7 +380,7 @@ public class LanguageProvider implements GraphicsProvider {
 		}
 
 		for(Shape shape : diagram.getChildren())
-			updateLinked((ContainerShape) shape, diagram);
+			update((ContainerShape) shape);
 
 		for(Connection conn : diagram.getConnections())
 			updateConnection(conn, diagram);
@@ -360,12 +389,24 @@ public class LanguageProvider implements GraphicsProvider {
 
 
 
-	private void updateLinked(ContainerShape shape, Diagram diagram) {
-		PictogramLink link = shape.getLink();
-		EObject eObject = (EObject) link.getBusinessObjects().get(0);
-		Node node = getNode(eObject.eClass());
-		updateElement(node.getRootFigure(), eObject, shape, diagram);
+	@Override
+	public void update(PictogramElement element) {
+		assert element != null;
+
+		PictogramLink link = element.getLink();
+		EObject eObject = link != null ? (EObject) link.getBusinessObjects().get(0) : null;
+		
+		if(element instanceof ContainerShape) {
+			Node node = getNode(eObject.eClass());
+			if(node != null) {
+				updateElement(node.getRootFigure(), eObject, (ContainerShape) element, diagram);
+				return;
+			}
+		}
+		else 
+			updateConnection((Connection) element, diagram);
 	}
+
 
 	// TODO remove children?
 	private void updateElement(FeatureContainer e, EObject o, ContainerShape s, Diagram diagram) {
@@ -376,7 +417,7 @@ public class LanguageProvider implements GraphicsProvider {
 
 			for(int i = 0; i < childrenShapes.size() && i < childrenElements.size(); i++) {
 				if(childrenShapes.get(i).getLink() != null)
-					updateLinked((ContainerShape) childrenShapes.get(i), diagram);
+					update((ContainerShape) childrenShapes.get(i));
 				else
 					updateElement(childrenElements.get(i), o, (ContainerShape) childrenShapes.get(i), diagram);
 			}
@@ -403,14 +444,11 @@ public class LanguageProvider implements GraphicsProvider {
 
 		Iterator<ConnectionDecorator> it = conn.getConnectionDecorators().iterator();
 
-		for(Feature f : link.getFeatures()) {
-			if(f instanceof Decorator) {
-				Decorator decorator = (Decorator) f;
-				FeatureContainer el = decorator.getElement();
-				if(it.hasNext()) {
-					ConnectionDecorator dec = it.next();
-					featureChain.update(el, eObject, diagram, dec.getGraphicsAlgorithm(), dec);
-				}
+		for(Decorator d : link.getDecorators()) {
+			FeatureContainer el = d.getElement();
+			if(it.hasNext()) {
+				ConnectionDecorator dec = it.next();
+				featureChain.update(el, eObject, diagram, dec.getGraphicsAlgorithm(), dec);
 			}
 		}
 	}
@@ -488,6 +526,13 @@ public class LanguageProvider implements GraphicsProvider {
 	}
 
 
+	public static <T extends Feature> T getFeature(FeatureContainer element, Class<T> clazz) {
+		for(Feature f : element.getFeatures()) {
+			if(clazz.isInstance(f))
+				return clazz.cast(f);
+		}
+		return null;
+	}
 
 
 
@@ -501,74 +546,60 @@ public class LanguageProvider implements GraphicsProvider {
 
 	@Override
 	public void resizeNodeFigure(Diagram diagram, ContainerShape container, int width, int height) {
-		// TODO: Eduardo
+		// TODO: figuras especiais
 		Graphiti.getLayoutService().setSize(container.getGraphicsAlgorithm(), width, height);
-
-		//		nodeHandler.resizeNodeFigure(null, diagram, container, new Dimension(width, height));
 	}
 
 	@Override
 	public void removeNodeFigure(Diagram diagram, GraphicsAlgorithm figure) {
-
-		//TODO: remove container refs
-		//nodeHandler.removeContainerFigures(null, diagram, figure);
+		//TODO: ???
 	}
 
 	@Override
-	public boolean canResizeNodeFigure(EObject eObject) {
-
-		//		for(Node node : model.getNodes())
-		//			if (equals(node.getModelClass(), eObject.eClass()) && node.isResizable())
-		//				return true;
-		//
-		//		return false;
-		// TODO can resize
-		return true;
+	public boolean canResizeNodeFigure(GraphicsAlgorithm element) {
+		return sizeHandler.isResizable(element);
 	}
 
 	@Override
-	public boolean canMoveNode(EObject eObject) {
-//		ContainerShape parent = (ContainerShape) ((ContainerShape) eObject.eContainer()).eContainer();
-		  EObject parent = eObject.eContainer();
-		ContainerLayout layout = layoutHandler.getLayout(parent);
-		
-//		for(Contains c : containsHandler.getContainsFeature()
-//			return c.getLayout().equals(ContainerLayout.FREE);
-		return layout.equals(ContainerLayout.FREE);
+	public boolean canMoveNode(PictogramElement element) {
+		GraphicsAlgorithm parentFig = ((ContainerShape) element).getContainer().getGraphicsAlgorithm();
+		return !layoutHandler.hasLayout(parentFig);
 	}
 
 
 
+	
+	
+	
+	
 	@Override
-	public boolean canEditFigureLabel(GraphicsAlgorithm figure, EObject eObject) {
-		Node node = getNode(eObject.eClass());
-		ConnectableElement element  = node.getRootFigure();
-
-		// TODO can edit figure label
-
-		//	for(NodeFigure f : node.getFigures()) {
-		//		if(f.getElement() instanceof Label && ((Label) f.getElement()).isEditable()) {
-		//			return true;
-		//		}
-
-		return element instanceof Label; //&& ((Label) element).isEditable();
+	public boolean canEditFigureLabel(AbstractText text) {
+		return textHandler.isLabelEditable((AbstractText) text);
 	}	
 
-	@Override
-	public EAttribute getTextEditableAttribute(EClass eClass) {
-		Node node = getNode(eClass);
 
-		//TODO recover editable label
-		//		ConnectableElement element  = node.getRootFigure();
-		//		for(Feature f : element.getFeatures()) {
-		//			if(f instanceof TextValue) {
-		//				TextValue v = (TextValue) f;
-		//				if(v.getModelAttribute() != null)
-		//					return v.getModelAttribute();
-		//			}
-		//		}
+
+	@Override
+	public AbstractText getFigureLabel(ContainerShape container) {
 		return null;
+//		return textHandler.getEditableLabel(container);
 	}
+
+
+	@Override
+	public EObject getLabelEObject(AbstractText text) {
+		return textHandler.getLabelEObject(text);
+	}
+
+	@Override
+	public EAttribute getTextEditableAttribute(AbstractText text) {
+		return textHandler.getEditableEAttribute(text);
+	}
+
+
+
+
+
 
 
 
@@ -593,9 +624,12 @@ public class LanguageProvider implements GraphicsProvider {
 
 		assert link != null;
 
-		connection = link.getType().equals(ConnectionType.FREE) ?
-				Graphiti.getPeCreateService().createFreeFormConnection(diagram):
-					Graphiti.getPeCreateService().createManhattanConnection(diagram);
+		LineStyle style = getFeature(link, LineStyle.class);
+
+		connection = style != null && style.isManhattan() ?
+				Graphiti.getPeCreateService().createManhattanConnection(diagram) :
+					Graphiti.getPeCreateService().createFreeFormConnection(diagram);
+
 
 				GraphicsAlgorithm connectionLink = createLinkConnection(link, diagram, connection, eObject);
 
@@ -615,49 +649,16 @@ public class LanguageProvider implements GraphicsProvider {
 	}
 
 	private void handleDecorators(Link link, Connection connection, EObject eObject, Diagram diagram, GraphicsAlgorithm connectionLink) {
+		for(Decorator decorator : link.getDecorators()) {
+			double perc = decorator.getPosition(); // TODO: validation percent
+			double position = perc/100.0;
+			boolean active = decorator.getElement() instanceof Label;
+			ConnectionDecorator dec = 
+					Graphiti.getPeCreateService().createConnectionDecorator(connection, active, position, true);
 
-		for(Feature f : link.getFeatures()) {
-			if(f instanceof Decorator) {
-				Decorator decorator = (Decorator) f;
-				double perc = decorator.getPosition(); // TODO: validation percent
-				double position = perc/100.0;
-				boolean active = decorator.getElement() instanceof Label;
-				ConnectionDecorator dec = 
-						Graphiti.getPeCreateService().createConnectionDecorator(connection, active, position, true);
-
-				GraphicsAlgorithm decFig = ElementCreation.createNodeFigure(decorator.getElement(), diagram, dec);
-				featureChain.update(decorator.getElement(), eObject, diagram, decFig, dec);
-			}
+			GraphicsAlgorithm decFig = ElementCreation.createNodeFigure(decorator.getElement(), diagram, dec);
+			featureChain.update(decorator.getElement(), eObject, diagram, decFig, dec);
 		}
-	}
-
-	//	private void handleDecorators(Diagram diagram, EObject eObject,
-	//			Connection connection, Link link, GraphicsAlgorithm connectionLink) {
-	//		
-	//		for (Decorator decorator: link.getDecorators()) {
-	//			double perc = Double.parseDouble(decorator.getPosition().substring(0, decorator.getPosition().length()-1));
-	//			double position = perc/100.0;
-	//			boolean active = decorator.getElement() instanceof Label;
-	//			ConnectionDecorator dec = Graphiti.getPeCreateService().createConnectionDecorator(connection, 
-	//					active, position, true);
-	//			
-	//			GraphicsAlgorithm decFig = ElementCreation.createNodeFigure(decorator.getElement(), diagram, dec);
-	////			GraphicsAlgorithm decFig = createArrow(dec);
-	////					GraphicsAlgorithm decFig = Graphiti.getGaService().createEllipse(dec);
-	//							
-	//			featureChain.update(decorator.getElement(), eObject, diagram, decFig, connectionLink);
-	//		}
-	//	}
-
-	private Polyline createArrow(GraphicsAlgorithmContainer gaContainer) {
-
-		IGaService gaService = Graphiti.getGaService();
-		Polygon polygon = gaService.createPolygon(gaContainer, new int[] { -15, 10, 1, 0, -15, -10 });
-		//        polygon.setForeground(manageColor(IColorConstant.BLACK));
-		//        polygon.setBackground(manageColor(IColorConstant.BLACK));
-		polygon.setLineWidth(2);
-		polygon.setFilled(true);
-		return polygon;
 	}
 
 
@@ -706,4 +707,19 @@ public class LanguageProvider implements GraphicsProvider {
 		return getComplexLink(eClass).getTargetReference();
 	}
 
+
+	public IUpdateFeature getUpdateFeature(UpdateContext updateContext) {
+		return gFeatureProvider.getUpdateFeature(updateContext);
+	}
+
+
+	public void internalUpdate(PictogramElement element) {
+		while(!(element.eContainer() instanceof Diagram))
+			element = (PictogramElement) element.eContainer();
+		
+		UpdateContext updateContext = new UpdateContext(element);
+		IUpdateFeature updateFeature = gFeatureProvider.getUpdateFeature(updateContext);
+		if(updateFeature != null)
+			updateFeature.update(updateContext);
+	}
 }

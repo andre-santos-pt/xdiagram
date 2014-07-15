@@ -1,25 +1,26 @@
 package org.eclipselabs.xdiagram.provider.internal.handlers;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.graphiti.datatypes.IDimension;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
-import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipse.graphiti.services.Graphiti;
-import org.eclipselabs.xdiagram.dsl.ConnectableElement;
-import org.eclipselabs.xdiagram.dsl.ContainerLayout;
 import org.eclipselabs.xdiagram.dsl.Feature;
 import org.eclipselabs.xdiagram.dsl.FeatureContainer;
+import org.eclipselabs.xdiagram.dsl.Layout;
 import org.eclipselabs.xdiagram.dsl.Node;
 import org.eclipselabs.xdiagram.dsl.Position;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 
 public class PositionHandler implements FeatureHandler {
 
-	static final int DEFAULT_MARGIN = 2;
-	
+	private static final int DEFAULT_MARGIN = 0;
+
 	private LayoutHandler layoutHandler;
 
 	public PositionHandler(LayoutHandler layoutHandler) {
@@ -32,63 +33,77 @@ public class PositionHandler implements FeatureHandler {
 	}
 
 	@Override
-	public void handle(FeatureContainer element, Feature feature, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
-		Position p = (Position) feature;
-		int x = p.getX();
-		int y = p.getY();
+	public void handle(FeatureContainer element, Feature feature, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, final GraphicsAlgorithm figure) {
+		final Position p = (Position) feature;
+		ContainerShape cparent = (ContainerShape) container.eContainer();
+
+		// TODO: memory leak listeners
 		if(p.isXRelative()) {
-			ContainerShape parent = (ContainerShape) container.eContainer();
-			IDimension dim = Graphiti.getGaLayoutService().calculateSize(figure);
-			IDimension pdim = Graphiti.getGaLayoutService().calculateSize(parent.getGraphicsAlgorithm());
-			x = (pdim.getWidth()/2) - (dim.getWidth()/2);
+			cparent.getGraphicsAlgorithm().eAdapters().add(new AdapterImpl() {
+				@Override
+				public void notifyChanged(Notification msg) {
+					if(msg.getFeature() instanceof EAttribute) {
+						if(((EAttribute) msg.getFeature()).getName().equals("width")) {
+							int width = msg.getNewIntValue();
+							IDimension d = Graphiti.getGaLayoutService().calculateSize(figure);
+							int newX = (int) (width*(p.getX()/100.0)) - (d.getWidth()/2);
+							Graphiti.getGaService().setLocation(figure, newX, figure.getY());
+						}
+					}
+				}	
+			});
 		}
-			
-		Graphiti.getGaService().setLocation(figure, x, y);
+		
+		if(p.isYRelative()) {
+			cparent.getGraphicsAlgorithm().eAdapters().add(new AdapterImpl() {
+				@Override
+				public void notifyChanged(Notification msg) {
+					if(msg.getFeature() instanceof EAttribute) {
+						if(((EAttribute) msg.getFeature()).getName().equals("height")) {
+							int height = msg.getNewIntValue();
+							IDimension d = Graphiti.getGaLayoutService().calculateSize(figure);
+							int newY = (height/2) - (d.getHeight()/2);
+							Graphiti.getGaService().setLocation(figure, figure.getX(), newY);
+						}
+					}
+				}	
+			});
+		}
+
+		if(!(p.isXRelative() && p.isYRelative()))
+			Graphiti.getGaService().setLocation(figure, p.getX(), p.getY());
 	}
 
 
 
 	@Override
 	public void applyDefaults(FeatureContainer element, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
-		EObject parent = element.eContainer();
-//		ContainerShape parentContainer = (ContainerShape) container.eContainer();
-//		ContainerLayout layout = ContainerLayout.FREE;
-//		if(parent instanceof ConnectableElement) {
-//			layout = ((ConnectableElement)parent).getLayout();
-//		}
-//		else if(parent instanceof Node && containsHandler.isContainer(parentContainer)) {
-//
-//			// TODO multiple contains
-//			for(Contains c : containsHandler.getContainsFeature(parentContainer)) {
-//				layout = c.getLayout();
-//			}
-//		}
-		
-		ContainerLayout layout = layoutHandler.getLayout(parent);
+		ContainerShape parent = ((ContainerShape) figure.eContainer()).getContainer();
 
-		if(!layout.equals(ContainerLayout.FREE)) {
-			ContainerShape cs = ((ContainerShape) figure.eContainer()).getContainer();
-			element.eContainer();
-			int x = 0;
-			int y = 0;
+		Layout layout = layoutHandler.getLayout(parent.getGraphicsAlgorithm());
 
-			for(Shape s : cs.getChildren()) {
-				if(s.getGraphicsAlgorithm() == figure)
-					break;
-
-				IDimension size = Graphiti.getGaService().calculateSize(s.getGraphicsAlgorithm());
-				x += size.getWidth();
-				y += size.getHeight();
-			}
-
-			if(layout.equals(ContainerLayout.VSTACK))
-				Graphiti.getGaService().setLocation(figure, DEFAULT_MARGIN, y);
-			else
-				Graphiti.getGaService().setLocation(figure, x, DEFAULT_MARGIN);
-		}
-		else if(!(parent instanceof Node)) {
+		if(layout == null && !(element.eContainer() instanceof Node)) {
 			Graphiti.getGaService().setLocation(figure, DEFAULT_MARGIN, DEFAULT_MARGIN);
 		}
+		//		else if(layout != null){
+		//			element.eContainer();
+		//			int x = 0;
+		//			int y = 0;
+		//
+		//			for(Shape s : parent.getChildren()) {
+		//				if(s.getGraphicsAlgorithm() == figure)
+		//					break;
+		//
+		//				IDimension size = Graphiti.getGaService().calculateSize(s.getGraphicsAlgorithm());
+		//				x += size.getWidth();
+		//				y += size.getHeight();
+		//			}
+		//
+		//			if(layout.isVertical())
+		//				Graphiti.getGaService().setLocation(figure, layout.getMargin(), y);
+		//			else
+		//				Graphiti.getGaService().setLocation(figure, x, layout.getMargin());
+		//		}
 	}
 
 
