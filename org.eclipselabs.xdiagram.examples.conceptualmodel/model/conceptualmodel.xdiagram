@@ -2,70 +2,88 @@ metamodel "platform:/plugin/org.eclipselabs.xdiagram.examples.conceptualmodel/mo
 import conceptualmodel.*
 
 diagram ConceptualModel {
-	container ConceptualModel.classes
+	contains ConceptualModel.entities;
 }
 
-node Class {
-	rectangle {
-		layout vertical
-		size 200 x 100
-		label {
-			text "<<abstract>>"
-			size 100% x 15
-			invisible if Class.abstract = false
-		}
-		label {
-			text Class.name
-			size 100% x 30 if Class.abstract = true
-			size 100% x 15 if Class.abstract = false
-		}
-		hline {
-			size 100%
-		}
-		invisible {
-			container Class.attributes
-			size 100% x 100
-			layout vertical
-		}
+toolgroup A "Description";
+
+
+node Entity rectangle {
+	size 200 100 resizable;
+	corner 10;
+		
+	child label {
+		text "<<abstract>>";
+		position 50% 0;
+		size 150 15;
+		invisible if Entity.abstract = false;	
+	}
+	
+	child label {
+		position 50% 15;
+		text edit:Entity.name;
+		size 150 15;
+		
+		font 16;
+	}
+	
+	child hline {
+		position 0 30;
+		size 0];
+	}		
+	
+	child invisible {
+		contains Entity.attributes;
+		size 5] 5];
+		position 5 35;
+		layout vertical;
 	}
 }
 
-node Attribute {
-	label {
-		text "- " Attribute.name " : " Attribute.type
-		size 75 x 15
-	}
+
+node Attribute label {
+	size 150 20;
+	text "- " edit: Attribute.name " : " Attribute.type;
+	font 14;
+	align left;
 }
 
-link reference Class.superclass {
-	connection free {
-		foreground black
-	 	decorator 100% triangle {
-	 		foreground black
-	 		background white
-	 		size 20 x 20
-	 	}	 
-	}
+
+
+
+link reference Entity.extends {
+	foreground black;
+	decorator 100% triangle {
+ 		foreground black;
+ 		background white;
+		size 20 20;
+	}	 
 }
 
-link object Relationship source Class.relations target Relationship.to {
-	connection manhattan {
-		decorator 0% rhombus {
-			size 25 x 25
-			background black if Relationship.type = COMPOSITION
-			background white if Relationship.type = AGGREGATION
-			invisible if Relationship.type = REFERENCE
-		}
-		decorator 85% label {
-			text Relationship.cardinality
-		}
-		decorator 100% arrow {
-			invisible if Relationship.type <> REFERENCE
-			size 15 x 15
-		}
-		decorator 50% label {
-			text Relationship.name
-		}
-	}
-}
+//link class Association source Entity.associations target Association.to {
+//	decorator 0% rhombus {
+//		size 20 20;
+//		background black if Association.type = COMPOSITION;
+//		background white if Association.type = AGGREGATION;
+//		invisible if Association.type = REFERENCE;
+//	}
+//	
+//	decorator 50% label {
+//		text Association.name;
+//	}
+//	
+//	decorator 85% label {
+//		text Association.cardinality;
+//		font 16;
+//	}
+//		
+//	decorator 100% arrow {
+//		invisible if Association.type <> REFERENCE;
+//		size 10 10;
+//	}
+//}
+
+
+
+
 
