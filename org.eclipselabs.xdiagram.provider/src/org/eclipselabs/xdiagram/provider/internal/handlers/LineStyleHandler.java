@@ -15,21 +15,22 @@ public class LineStyleHandler implements FeatureHandler {
 	public Class<? extends Feature> getTargetFeature() {
 		return LineStyle.class;
 	}
-	
+
 	@Override
 	public void handle(FeatureContainer element, Feature feature, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
 		LineStyle lineStyle = (LineStyle) feature;
-		org.eclipse.graphiti.mm.algorithms.styles.LineStyle s = null;
-		
-		switch(lineStyle.getStyle()) {
-		case SOLID: s = org.eclipse.graphiti.mm.algorithms.styles.LineStyle.SOLID; break;
-		case DASH: s =  org.eclipse.graphiti.mm.algorithms.styles.LineStyle.DASH; break;
-		case DOT: s = org.eclipse.graphiti.mm.algorithms.styles.LineStyle.DOT; break;
+		org.eclipse.graphiti.mm.algorithms.styles.LineStyle s = org.eclipse.graphiti.mm.algorithms.styles.LineStyle.SOLID;
+
+		if(lineStyle.getStyle() != null) {
+			switch(lineStyle.getStyle()) {
+			case SOLID: s = org.eclipse.graphiti.mm.algorithms.styles.LineStyle.SOLID; break;
+			case DASH: s =  org.eclipse.graphiti.mm.algorithms.styles.LineStyle.DASH; break;
+			case DOT: s = org.eclipse.graphiti.mm.algorithms.styles.LineStyle.DOT; break;
+			}
 		}
-		
 		figure.setLineStyle(s);
 	}
-	
+
 	@Override
 	public void applyDefaults(FeatureContainer element, EObject eObject, Diagram diagram, GraphicsAlgorithmContainer container, GraphicsAlgorithm figure) {
 		figure.setLineStyle(org.eclipse.graphiti.mm.algorithms.styles.LineStyle.SOLID);
@@ -40,5 +41,5 @@ public class LineStyleHandler implements FeatureHandler {
 		return true;
 	}
 
-	
+
 }
