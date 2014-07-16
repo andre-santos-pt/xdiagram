@@ -18,6 +18,8 @@ public interface ExtensionPointIds {
 	public static final String BINDINGS_DIAGRAM_TYPE = "diagramType";
 	public static final String BINDINGS_EPACKAGE_URI = "ePackageURI";
 	
+
+	
 	
 	
 }

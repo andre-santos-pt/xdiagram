@@ -25,70 +25,22 @@ import org.eclipse.graphiti.mm.pictograms.Anchor;
 import org.eclipse.graphiti.mm.pictograms.Connection;
 import org.eclipselabs.xdiagram.interpreter.GraphicsProvider;
 
-public class CreateEReferenceFeature extends AbstractCreateConnectionFeature {
-	private EReference eReference;
-	private EClass sourceType;
-	private EClass targetType;
-	private GraphicsProvider provider;
+public class CreateEReferenceFeature extends AbstractCreateEReferenceFeature {
 	
 	public CreateEReferenceFeature(GenericFeatureProvider fp, EReference eReference) {
-		super(fp, eReference.getName(), tooltip(eReference));
-		this.eReference = eReference;
-		sourceType = (EClass) eReference.eContainer();
-		targetType = eReference.getEReferenceType();
-		provider = fp.getGraphicsProvider();
-	}
-
-	private static String tooltip(EReference eReference) {
-		return "Connect " + ((EClass) eReference.eContainer()).getName() + " to " + eReference.getEReferenceType().getName();
-	}
-	
-	public boolean canCreate(ICreateConnectionContext context) {
-		Anchor sourceAnchor = context.getSourceAnchor();
-		Anchor targetAnchor = context.getTargetAnchor();
-		EObject source = getEObject(sourceAnchor);
-		return 
-				sourceAnchor != null && 
-				targetAnchor != null &&
-				provider.isValidOutgoingConnection(sourceAnchor, eReference) &&
-				provider.isValidIncomingConnection(targetAnchor, eReference) &&
-				ECoreUtil.enoughUpperBound(eReference, source);
-	}
-
-	
-
-	public boolean canStartConnection(ICreateConnectionContext context) {
-		Anchor anchor = context.getSourceAnchor();
-		EObject source = getEObject(anchor);
-		return 
-				sourceType.isInstance(source) &&
-				provider.isValidOutgoingConnection(anchor, eReference) &&
-				ECoreUtil.enoughUpperBound(eReference, source);
+		super(fp, eReference, (EClass) eReference.eContainer(), eReference.getEReferenceType());
 	}
 
 	public Connection create(ICreateConnectionContext context) {
 		Connection newConnection = null;
 		EObject source = getEObject(context.getSourceAnchor());
 		EObject target = getEObject(context.getTargetAnchor());
-	
-		if (sourceType.isInstance(source) && targetType.isInstance(target)) {	
-			ECoreUtil.setReference(source, eReference, target);
-			AddConnectionContext addContext = new AddConnectionContext(context.getSourceAnchor(), context.getTargetAnchor());
-			newConnection = (Connection) getFeatureProvider().addIfPossible(addContext);
-		}
+
+		ECoreUtil.setReference(source, eReference, target);
+		AddConnectionContext addContext = new AddConnectionContext(context.getSourceAnchor(), context.getTargetAnchor());
+		newConnection = (Connection) getFeatureProvider().addIfPossible(addContext);
 
 		return newConnection;
 	}
 	
-	
-
-	private EObject getEObject(Anchor anchor) {
-		if (anchor != null) {
-			Object obj = getBusinessObjectForPictogramElement(anchor.getParent());
-			if (obj instanceof EObject) {
-				return (EObject) obj;
-			}
-		}
-		return null;
-	}
 }
