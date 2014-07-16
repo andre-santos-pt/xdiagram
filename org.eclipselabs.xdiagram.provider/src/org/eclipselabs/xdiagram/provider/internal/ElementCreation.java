@@ -19,21 +19,22 @@ import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.dsl.Image;
 import org.eclipselabs.xdiagram.dsl.Line;
 import org.eclipselabs.xdiagram.dsl.Polyline;
+import org.osgi.framework.Bundle;
 
 public enum ElementCreation {
 
 	RECTANGLE {
-		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container, Bundle bundle) {
 			return Graphiti.getGaService().createPlainRoundedRectangle(container, 0, 0);
 		}
 	}, 
 	ELLIPSE {
-		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container, Bundle bundle) {
 			return Graphiti.getGaService().createEllipse(container);
 		}
 	},
 	POLYLINE {
-		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container, Bundle bundle) {
 			Polyline p = (Polyline) element;
 			return p.isPolygon() ?
 					Graphiti.getGaService().createPolygon(container) :
@@ -44,7 +45,7 @@ public enum ElementCreation {
 	
 	
 	TRIANGLE {
-		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container, Bundle bundle) {
 			return Graphiti.getGaService().createPolygon(container, new int[] { 1, 0, -15, -10, -15, 10 });
 		}
 		
@@ -52,13 +53,13 @@ public enum ElementCreation {
 	},
 	
 	RHOMBUS {
-		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container, Bundle bundle) {
 			return Graphiti.getGaService().createPolygon(container, new int[] { 1, 0, -10, -10, -20, 0, -10, 10 });
 		}
 	},
 	
 	LINE {
-		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container, Bundle bundle) {
 			Line line = (Line) element;
 			int[] points = line.isHorizontal() ?
 					new int[] { 0, 0, 10, 0} : new int[] { 0, 0, 0, 10};
@@ -68,50 +69,51 @@ public enum ElementCreation {
 	},
 	
 	ARROW {
-		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container, Bundle bundle) {
 			return Graphiti.getGaService().createPolyline(container, new int[] { -10, 10, 1, 0, -10, -10 });
 		}
 	},
 	
 	
 	LABEL {
-		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container, Bundle bundle) {
 			return Graphiti.getGaService().createText(container);
 		}
 	},
 	
 	IMAGE {
-		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container, Bundle bundle) {
 			Image image = (Image) element;
-			return Graphiti.getGaService().createImage(container, image.getImageId());			
+			String key = bundle.getSymbolicName() + ":" + image.getImageId();
+			return Graphiti.getGaService().createImage(container, key);			
 		}
 	},
 	
 	INVISIBLE {
-		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container, Bundle bundle) {
 			return Graphiti.getGaService().createInvisibleRectangle((PictogramElement) container);
 		}
 	},
 	
 	CUSTOM {
-		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
+		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container, Bundle bundle) {
 			CustomFigure fig = ((Custom) element).getFigure();
-			return createNodeFigure(fig.getElement(), diagram, container);			
+			return createNodeFigure(fig.getElement(), diagram, container, bundle);			
 		}
 	}
 	;
 
-	protected abstract GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container);
+	protected abstract GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container, Bundle bundle);
 
-	public static GraphicsAlgorithm createNodeFigure(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container) {
+	public static GraphicsAlgorithm createNodeFigure(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container, Bundle bundle) {
 		String type = element.getClass().getInterfaces()[0].getSimpleName();
 		try	{
 			ElementCreation v = valueOf(type.toUpperCase());
-			return v.create(element, diagram, container);
+			return v.create(element, diagram, container, bundle);
 		}
 		catch(IllegalArgumentException e) {
 			System.err.println("Not supported: " + type);
-			return INVISIBLE.create(element, diagram, container);
+			return INVISIBLE.create(element, diagram, container, bundle);
 		}
 	}	
 	

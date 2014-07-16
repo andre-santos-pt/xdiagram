@@ -62,7 +62,7 @@ public class PositionHandler implements FeatureHandler {
 						if(((EAttribute) msg.getFeature()).getName().equals("height")) {
 							int height = msg.getNewIntValue();
 							IDimension d = Graphiti.getGaLayoutService().calculateSize(figure);
-							int newY = (height/2) - (d.getHeight()/2);
+							int newY = (int) (height*(p.getY()/100.0)) - (d.getHeight()/2);
 							Graphiti.getGaService().setLocation(figure, figure.getX(), newY);
 						}
 					}
@@ -70,8 +70,11 @@ public class PositionHandler implements FeatureHandler {
 			});
 		}
 
-		if(!(p.isXRelative() && p.isYRelative()))
-			Graphiti.getGaService().setLocation(figure, p.getX(), p.getY());
+		if(!p.isXRelative())
+			Graphiti.getGaService().setLocation(figure, p.getX(), figure.getY());
+		
+		if(!p.isYRelative())
+			Graphiti.getGaService().setLocation(figure, figure.getX(), p.getY());
 	}
 
 

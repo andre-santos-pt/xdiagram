@@ -33,6 +33,7 @@ import org.eclipselabs.xdiagram.dsl.Size;
 import org.eclipselabs.xdiagram.dsl.Triangle;
 import org.eclipselabs.xdiagram.provider.internal.ElementCreation;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
+import org.eclipselabs.xdiagram.validation.DslJavaValidator;
 
 public class SizeHandler implements FeatureHandler {
 
@@ -172,16 +173,13 @@ public class SizeHandler implements FeatureHandler {
 		}
 		
 		else {
-//			if(element instanceof Rectangle && ((Rectangle) element).isSquare() ||
-//					element instanceof Ellipse && ((Ellipse) element).isCircle()) {
-//				dim.setDimToMax();
-//			}
-//			maximize(figure, dim);
-
-			if(dim.width != -1)
+			if(dim.width != -1) {
 				Graphiti.getGaService().setWidth(figure, dim.width);
+				if(DslJavaValidator.isSingleDimension(element))
+					Graphiti.getGaService().setHeight(figure, dim.width);
+			}
 
-			if(dim.height != -1)
+			if(dim.height != -1 && !DslJavaValidator.isSingleDimension(element))
 				Graphiti.getGaService().setHeight(figure, dim.height);
 		}
 	}
@@ -226,6 +224,9 @@ public class SizeHandler implements FeatureHandler {
 			if(tDim != null)
 				dim = new Dim(tDim.getWidth(), tDim.getHeight());
 		}
+		else if(element instanceof Arrow) {
+			dim = new Dim(15, 15);
+		}
 		setSize(element, figure, eObject, dim);		
 	}
 
@@ -239,6 +240,8 @@ public class SizeHandler implements FeatureHandler {
 	public boolean isResizable(GraphicsAlgorithm element) {
 		return !noresize.containsKey(element);
 	}
+	
+	
 
 
 }
