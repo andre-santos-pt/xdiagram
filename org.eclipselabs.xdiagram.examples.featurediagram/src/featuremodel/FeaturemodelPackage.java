@@ -252,13 +252,13 @@ public interface FeaturemodelPackage extends EPackage {
 	int CONSTRAINT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Annotation</b></em>' attribute.
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT__ANNOTATION = 0;
+	int CONSTRAINT__TYPE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Feature</b></em>' reference.
@@ -393,15 +393,15 @@ public interface FeaturemodelPackage extends EPackage {
 	EClass getConstraint();
 
 	/**
-	 * Returns the meta object for the attribute '{@link featuremodel.Constraint#getAnnotation <em>Annotation</em>}'.
+	 * Returns the meta object for the attribute '{@link featuremodel.Constraint#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Annotation</em>'.
-	 * @see featuremodel.Constraint#getAnnotation()
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see featuremodel.Constraint#getType()
 	 * @see #getConstraint()
 	 * @generated
 	 */
-	EAttribute getConstraint_Annotation();
+	EAttribute getConstraint_Type();
 
 	/**
 	 * Returns the meta object for the reference '{@link featuremodel.Constraint#getFeature <em>Feature</em>}'.
@@ -549,12 +549,12 @@ public interface FeaturemodelPackage extends EPackage {
 		EClass CONSTRAINT = eINSTANCE.getConstraint();
 
 		/**
-		 * The meta object literal for the '<em><b>Annotation</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONSTRAINT__ANNOTATION = eINSTANCE.getConstraint_Annotation();
+		EAttribute CONSTRAINT__TYPE = eINSTANCE.getConstraint_Type();
 
 		/**
 		 * The meta object literal for the '<em><b>Feature</b></em>' reference feature.

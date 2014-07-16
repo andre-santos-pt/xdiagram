@@ -213,7 +213,7 @@ public class FeaturemodelPackageImpl extends EPackageImpl implements Featuremode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConstraint_Annotation() {
+	public EAttribute getConstraint_Type() {
 		return (EAttribute)constraintEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -293,7 +293,7 @@ public class FeaturemodelPackageImpl extends EPackageImpl implements Featuremode
 		createEReference(featureModelEClass, FEATURE_MODEL__ROOT);
 
 		constraintEClass = createEClass(CONSTRAINT);
-		createEAttribute(constraintEClass, CONSTRAINT__ANNOTATION);
+		createEAttribute(constraintEClass, CONSTRAINT__TYPE);
 		createEReference(constraintEClass, CONSTRAINT__FEATURE);
 
 		abstractFeatureEClass = createEClass(ABSTRACT_FEATURE);
@@ -347,7 +347,7 @@ public class FeaturemodelPackageImpl extends EPackageImpl implements Featuremode
 		initEReference(getFeatureModel_Root(), this.getRootFeature(), null, "root", null, 1, 1, FeatureModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constraintEClass, Constraint.class, "Constraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getConstraint_Annotation(), this.getConstraintType(), "annotation", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConstraint_Type(), this.getConstraintType(), "type", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConstraint_Feature(), this.getFeature(), null, "feature", null, 1, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractFeatureEClass, AbstractFeature.class, "AbstractFeature", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

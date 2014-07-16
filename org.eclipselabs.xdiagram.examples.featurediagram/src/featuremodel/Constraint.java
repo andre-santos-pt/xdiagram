@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link featuremodel.Constraint#getAnnotation <em>Annotation</em>}</li>
+ *   <li>{@link featuremodel.Constraint#getType <em>Type</em>}</li>
  *   <li>{@link featuremodel.Constraint#getFeature <em>Feature</em>}</li>
  * </ul>
  * </p>
@@ -23,33 +23,33 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Constraint extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Annotation</b></em>' attribute.
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link featuremodel.ConstraintType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Annotation</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Annotation</em>' attribute.
+	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see featuremodel.ConstraintType
-	 * @see #setAnnotation(ConstraintType)
-	 * @see featuremodel.FeaturemodelPackage#getConstraint_Annotation()
+	 * @see #setType(ConstraintType)
+	 * @see featuremodel.FeaturemodelPackage#getConstraint_Type()
 	 * @model
 	 * @generated
 	 */
-	ConstraintType getAnnotation();
+	ConstraintType getType();
 
 	/**
-	 * Sets the value of the '{@link featuremodel.Constraint#getAnnotation <em>Annotation</em>}' attribute.
+	 * Sets the value of the '{@link featuremodel.Constraint#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Annotation</em>' attribute.
+	 * @param value the new value of the '<em>Type</em>' attribute.
 	 * @see featuremodel.ConstraintType
-	 * @see #getAnnotation()
+	 * @see #getType()
 	 * @generated
 	 */
-	void setAnnotation(ConstraintType value);
+	void setType(ConstraintType value);
 
 	/**
 	 * Returns the value of the '<em><b>Feature</b></em>' reference.
