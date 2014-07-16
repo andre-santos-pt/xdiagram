@@ -1,64 +1,79 @@
 metamodel "platform:/plugin/org.eclipselabs.xdiagram.examples.featurediagram/model/featuremodel.ecore"
 import featuremodel.*
 
+
+
 diagram FeatureModel {
 	contains FeatureModel.features;
 	contains FeatureModel.root;
 }
 
 
-node RootFeature "toolName" icon imageId:
-rectangle {
-	size 100 x 50;
-	children:
-	label editable {
-		text AbstractFeature.name;
-		position 15,15;
-		foreground blue;
-		//font-size 40;
-		//font-face courier;
-	}
+
+//node RootFeature rectangle {
+//	size 100 50 resizable;
+//	
+//	child label {
+//		text edit: AbstractFeature.name;
+//		position 50% 50%;
+//		foreground blue;
+//		font 16;
+//		size 100 50;
+//	}
+//}
+
+node RootFeature image "class.png" {
+	size 60 60;
 }
 
 
-node Feature:
-invisible {
-	size 100 x 50;
-	children:
-	rectangle {
-		size 100 x 40;
-		position 0, 10;
+node Feature invisible {
+	size 100 50 resizable;
+	
+	child rectangle {
+		size 0] 0];
+		position 0 10;
+		child label {
+			text edit: AbstractFeature.name;
+			position 50% 50%;
+			size 100 20;
+		}
 	}
-	label {
-		text AbstractFeature.name;
-		position 50, 10;
+
+	child circle {
+		size 5;
+		position 50 50;
+		background red;
+//		anchor incoming Feature.parent;
 	}
-	invisible {
-		size 5 x 5;
-		position 45, 45;
-		//anchor incoming Feature.parent;
+	
+		
+	child circle {
+		size 10;
+		position 50% 0;
+		background black if Feature.optional = false;
+		background white if Feature.optional = true;
+//		anchor outgoing Feature.parent;
 	}
-	ellipse {
-		size 10 x 10;
-		position 45, 0;
-		background black if Feature.optional = true;
-		background white if Feature.optional = false;
-		anchor outgoing Feature.parent;
-	}
+	
+	
 }
 
 
-link Feature.parent:
-connection free {
-	line-width 3;
+link reference Feature.parent {
+	linestyle solid;
+		
 }
 
-link object Constraint 
-source Feature.constraints
-target Constraint.feature:
-connection free {
-	foreground blue;
-	line-width 6;
-	line-type dash;
+
+
+
+link class Constraint source Feature.constraints target Constraint.feature {
+	linestyle dotted manhattan;
+	decorator 100% arrow {
+		
+	}
+	
+	
 }
 

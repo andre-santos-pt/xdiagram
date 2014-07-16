@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link featuremodel.impl.ConstraintImpl#getAnnotation <em>Annotation</em>}</li>
+ *   <li>{@link featuremodel.impl.ConstraintImpl#getType <em>Type</em>}</li>
  *   <li>{@link featuremodel.impl.ConstraintImpl#getFeature <em>Feature</em>}</li>
  * </ul>
  * </p>
@@ -31,24 +31,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class ConstraintImpl extends MinimalEObjectImpl.Container implements Constraint {
 	/**
-	 * The default value of the '{@link #getAnnotation() <em>Annotation</em>}' attribute.
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnnotation()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ConstraintType ANNOTATION_EDEFAULT = ConstraintType.REQUIRES;
+	protected static final ConstraintType TYPE_EDEFAULT = ConstraintType.REQUIRES;
 
 	/**
-	 * The cached value of the '{@link #getAnnotation() <em>Annotation</em>}' attribute.
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnnotation()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected ConstraintType annotation = ANNOTATION_EDEFAULT;
+	protected ConstraintType type = TYPE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getFeature() <em>Feature</em>}' reference.
@@ -84,8 +84,8 @@ public class ConstraintImpl extends MinimalEObjectImpl.Container implements Cons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConstraintType getAnnotation() {
-		return annotation;
+	public ConstraintType getType() {
+		return type;
 	}
 
 	/**
@@ -93,11 +93,11 @@ public class ConstraintImpl extends MinimalEObjectImpl.Container implements Cons
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAnnotation(ConstraintType newAnnotation) {
-		ConstraintType oldAnnotation = annotation;
-		annotation = newAnnotation == null ? ANNOTATION_EDEFAULT : newAnnotation;
+	public void setType(ConstraintType newType) {
+		ConstraintType oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FeaturemodelPackage.CONSTRAINT__ANNOTATION, oldAnnotation, annotation));
+			eNotify(new ENotificationImpl(this, Notification.SET, FeaturemodelPackage.CONSTRAINT__TYPE, oldType, type));
 	}
 
 	/**
@@ -146,8 +146,8 @@ public class ConstraintImpl extends MinimalEObjectImpl.Container implements Cons
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FeaturemodelPackage.CONSTRAINT__ANNOTATION:
-				return getAnnotation();
+			case FeaturemodelPackage.CONSTRAINT__TYPE:
+				return getType();
 			case FeaturemodelPackage.CONSTRAINT__FEATURE:
 				if (resolve) return getFeature();
 				return basicGetFeature();
@@ -163,8 +163,8 @@ public class ConstraintImpl extends MinimalEObjectImpl.Container implements Cons
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FeaturemodelPackage.CONSTRAINT__ANNOTATION:
-				setAnnotation((ConstraintType)newValue);
+			case FeaturemodelPackage.CONSTRAINT__TYPE:
+				setType((ConstraintType)newValue);
 				return;
 			case FeaturemodelPackage.CONSTRAINT__FEATURE:
 				setFeature((Feature)newValue);
@@ -181,8 +181,8 @@ public class ConstraintImpl extends MinimalEObjectImpl.Container implements Cons
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FeaturemodelPackage.CONSTRAINT__ANNOTATION:
-				setAnnotation(ANNOTATION_EDEFAULT);
+			case FeaturemodelPackage.CONSTRAINT__TYPE:
+				setType(TYPE_EDEFAULT);
 				return;
 			case FeaturemodelPackage.CONSTRAINT__FEATURE:
 				setFeature((Feature)null);
@@ -199,8 +199,8 @@ public class ConstraintImpl extends MinimalEObjectImpl.Container implements Cons
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FeaturemodelPackage.CONSTRAINT__ANNOTATION:
-				return annotation != ANNOTATION_EDEFAULT;
+			case FeaturemodelPackage.CONSTRAINT__TYPE:
+				return type != TYPE_EDEFAULT;
 			case FeaturemodelPackage.CONSTRAINT__FEATURE:
 				return feature != null;
 		}
@@ -217,8 +217,8 @@ public class ConstraintImpl extends MinimalEObjectImpl.Container implements Cons
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (annotation: ");
-		result.append(annotation);
+		result.append(" (type: ");
+		result.append(type);
 		result.append(')');
 		return result.toString();
 	}
