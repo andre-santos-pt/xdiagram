@@ -43,13 +43,6 @@
 
 
    
-   <extension
-         point="org.eclipse.graphiti.ui.imageProviders">
-      <imageProvider
-            class="org.eclipselabs.xdiagram.provider.XDiagramImageProvider"
-            id="org.eclipselabs.xdiagram.examples.conceptualmodel.imageProvider">
-      </imageProvider>
-   </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated conceptualmodel -->
@@ -57,6 +50,13 @@
             uri="http://org.eclipselabs.xdiagram.examples/ConceptualModel"
             class="conceptualmodel.ConceptualmodelPackage"
             genModel="model/conceptualmodel.genmodel"/>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.imageProviders">
+      <imageProvider
+            class="org.eclipselabs.xdiagram.interpreter.XDiagramImageProvider"
+            id="org.eclipselabs.xdiagram.examples.conceptualmodel.imageProvider">
+      </imageProvider>
    </extension>
 
 </plugin>

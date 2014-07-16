@@ -5,13 +5,16 @@ diagram ConceptualModel {
 	contains ConceptualModel.entities;
 }
 
-toolgroup A "Description";
-
-
 node Entity rectangle {
 	size 200 100 resizable;
 	corner 10;
 		
+	child image "class_icon.gif" {
+		size 32 32;
+		position 50% 0;
+	}
+	
+	
 	child label {
 		text "<<abstract>>";
 		position 50% 0;
@@ -19,19 +22,17 @@ node Entity rectangle {
 		invisible if Entity.abstract = false;	
 	}
 	
+	
 	child label {
 		position 50% 15;
 		text edit:Entity.name;
 		size 150 15;
-		
 		font 16;
 	}
-	
 	child hline {
 		position 0 30;
 		size 0];
-	}		
-	
+	}			
 	child invisible {
 		contains Entity.attributes;
 		size 5] 5];
@@ -41,14 +42,13 @@ node Entity rectangle {
 }
 
 
+
 node Attribute label {
 	size 150 20;
 	text "- " edit: Attribute.name " : " Attribute.type;
 	font 14;
 	align left;
 }
-
-
 
 
 link reference Entity.extends {
@@ -60,30 +60,25 @@ link reference Entity.extends {
 	}	 
 }
 
-//link class Association source Entity.associations target Association.to {
-//	decorator 0% rhombus {
-//		size 20 20;
-//		background black if Association.type = COMPOSITION;
-//		background white if Association.type = AGGREGATION;
-//		invisible if Association.type = REFERENCE;
-//	}
-//	
-//	decorator 50% label {
-//		text Association.name;
-//	}
-//	
-//	decorator 85% label {
-//		text Association.cardinality;
-//		font 16;
-//	}
-//		
-//	decorator 100% arrow {
-//		invisible if Association.type <> REFERENCE;
-//		size 10 10;
-//	}
-//}
-
-
-
-
-
+link class Association source Entity.associations target Association.to {
+	decorator 0% rhombus {
+		size 20 20;
+		background black if Association.type = COMPOSITION;
+		background white if Association.type = AGGREGATION;
+		invisible if Association.type = REFERENCE;
+	}
+	
+	decorator 50% label {
+		text Association.name;
+	}
+	
+	decorator 85% label {
+		text Association.cardinality;
+		font 16;
+	}
+		
+	decorator 100% arrow {
+		invisible if Association.type <> REFERENCE;
+		size 10 10;
+	}
+}
