@@ -1556,25 +1556,51 @@ ruleAnchor returns [EObject current=null]
 	    }
 
 )
-)(
+)(	otherlv_3='max' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getAnchorAccess().getMaxKeyword_3_0());
+    }
+(
+(
+		lv_max_4_0=RULE_INT
+		{
+			newLeafNode(lv_max_4_0, grammarAccess.getAnchorAccess().getMaxINTTerminalRuleCall_3_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getAnchorRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"max",
+        		lv_max_4_0, 
+        		"INT");
+	    }
+
+)
+))?(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getAnchorAccess().getConditionalFeatureConditionalParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getAnchorAccess().getConditionalFeatureConditionalParserRuleCall_4_0()); 
 	    }
-		lv_conditional_3_0=ruleFeatureConditional		{
+		lv_conditional_5_0=ruleFeatureConditional		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getAnchorRule());
 	        }
        		set(
        			$current, 
        			"conditional",
-        		lv_conditional_3_0, 
+        		lv_conditional_5_0, 
         		"FeatureConditional");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)?)
+)?	otherlv_6=';' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getAnchorAccess().getSemicolonKeyword_5());
+    }
+)
 ;
 
 
@@ -3074,41 +3100,51 @@ ruleLineFeature returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getLineFeatureAccess().getForegroundParserRuleCall_1()); 
+        newCompositeNode(grammarAccess.getLineFeatureAccess().getLineStyleParserRuleCall_1()); 
     }
-    this_Foreground_1=ruleForeground
+    this_LineStyle_1=ruleLineStyle
     { 
-        $current = $this_Foreground_1.current; 
+        $current = $this_LineStyle_1.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getLineFeatureAccess().getPositionParserRuleCall_2()); 
+        newCompositeNode(grammarAccess.getLineFeatureAccess().getForegroundParserRuleCall_2()); 
     }
-    this_Position_2=rulePosition
+    this_Foreground_2=ruleForeground
     { 
-        $current = $this_Position_2.current; 
+        $current = $this_Foreground_2.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getLineFeatureAccess().getSizeParserRuleCall_3()); 
+        newCompositeNode(grammarAccess.getLineFeatureAccess().getPositionParserRuleCall_3()); 
     }
-    this_Size_3=ruleSize
+    this_Position_3=rulePosition
     { 
-        $current = $this_Size_3.current; 
+        $current = $this_Position_3.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getLineFeatureAccess().getVisibleParserRuleCall_4()); 
+        newCompositeNode(grammarAccess.getLineFeatureAccess().getSizeParserRuleCall_4()); 
     }
-    this_Visible_4=ruleVisible
+    this_Size_4=ruleSize
     { 
-        $current = $this_Visible_4.current; 
+        $current = $this_Size_4.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getLineFeatureAccess().getVisibleParserRuleCall_5()); 
+    }
+    this_Visible_5=ruleVisible
+    { 
+        $current = $this_Visible_5.current; 
         afterParserOrEnumRuleCall();
     }
 )
@@ -3787,9 +3823,9 @@ ruleImage returns [EObject current=null]
     }
 (
 (
-		lv_imageId_1_0=RULE_ID
+		lv_imageId_1_0=RULE_STRING
 		{
-			newLeafNode(lv_imageId_1_0, grammarAccess.getImageAccess().getImageIdIDTerminalRuleCall_1_0()); 
+			newLeafNode(lv_imageId_1_0, grammarAccess.getImageAccess().getImageIdSTRINGTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -3799,7 +3835,7 @@ ruleImage returns [EObject current=null]
        			$current, 
        			"imageId",
         		lv_imageId_1_0, 
-        		"ID");
+        		"STRING");
 	    }
 
 )

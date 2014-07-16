@@ -23,6 +23,7 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.AnchorImpl#getDirection <em>Direction</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.AnchorImpl#getModelReference <em>Model Reference</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.AnchorImpl#getMax <em>Max</em>}</li>
  * </ul>
  * </p>
  *
@@ -59,6 +60,26 @@ public class AnchorImpl extends FeatureImpl implements Anchor
    * @ordered
    */
   protected EReference modelReference;
+
+  /**
+   * The default value of the '{@link #getMax() <em>Max</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMax()
+   * @generated
+   * @ordered
+   */
+  protected static final int MAX_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getMax() <em>Max</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMax()
+   * @generated
+   * @ordered
+   */
+  protected int max = MAX_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -152,6 +173,29 @@ public class AnchorImpl extends FeatureImpl implements Anchor
    * <!-- end-user-doc -->
    * @generated
    */
+  public int getMax()
+  {
+    return max;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setMax(int newMax)
+  {
+    int oldMax = max;
+    max = newMax;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DslPackage.ANCHOR__MAX, oldMax, max));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -162,6 +206,8 @@ public class AnchorImpl extends FeatureImpl implements Anchor
       case DslPackage.ANCHOR__MODEL_REFERENCE:
         if (resolve) return getModelReference();
         return basicGetModelReference();
+      case DslPackage.ANCHOR__MAX:
+        return getMax();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -181,6 +227,9 @@ public class AnchorImpl extends FeatureImpl implements Anchor
         return;
       case DslPackage.ANCHOR__MODEL_REFERENCE:
         setModelReference((EReference)newValue);
+        return;
+      case DslPackage.ANCHOR__MAX:
+        setMax((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -202,6 +251,9 @@ public class AnchorImpl extends FeatureImpl implements Anchor
       case DslPackage.ANCHOR__MODEL_REFERENCE:
         setModelReference((EReference)null);
         return;
+      case DslPackage.ANCHOR__MAX:
+        setMax(MAX_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -220,6 +272,8 @@ public class AnchorImpl extends FeatureImpl implements Anchor
         return direction != DIRECTION_EDEFAULT;
       case DslPackage.ANCHOR__MODEL_REFERENCE:
         return modelReference != null;
+      case DslPackage.ANCHOR__MAX:
+        return max != MAX_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -237,6 +291,8 @@ public class AnchorImpl extends FeatureImpl implements Anchor
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (direction: ");
     result.append(direction);
+    result.append(", max: ");
+    result.append(max);
     result.append(')');
     return result.toString();
   }

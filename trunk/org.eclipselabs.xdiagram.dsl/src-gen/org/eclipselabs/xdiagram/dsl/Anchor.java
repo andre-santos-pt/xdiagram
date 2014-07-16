@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EReference;
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Anchor#getDirection <em>Direction</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Anchor#getModelReference <em>Model Reference</em>}</li>
+ *   <li>{@link org.eclipselabs.xdiagram.dsl.Anchor#getMax <em>Max</em>}</li>
  * </ul>
  * </p>
  *
@@ -77,5 +78,31 @@ public interface Anchor extends Feature
    * @generated
    */
   void setModelReference(EReference value);
+
+  /**
+   * Returns the value of the '<em><b>Max</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Max</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Max</em>' attribute.
+   * @see #setMax(int)
+   * @see org.eclipselabs.xdiagram.dsl.DslPackage#getAnchor_Max()
+   * @model
+   * @generated
+   */
+  int getMax();
+
+  /**
+   * Sets the value of the '{@link org.eclipselabs.xdiagram.dsl.Anchor#getMax <em>Max</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Max</em>' attribute.
+   * @see #getMax()
+   * @generated
+   */
+  void setMax(int value);
 
 } // Anchor

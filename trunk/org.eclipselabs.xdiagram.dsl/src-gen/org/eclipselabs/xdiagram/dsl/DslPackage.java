@@ -836,13 +836,22 @@ public interface DslPackage extends EPackage
   int ANCHOR__MODEL_REFERENCE = FEATURE_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Max</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANCHOR__MAX = FEATURE_FEATURE_COUNT + 2;
+
+  /**
    * The number of structural features of the '<em>Anchor</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ANCHOR_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 2;
+  int ANCHOR_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.xdiagram.dsl.impl.CustomColorImpl <em>Custom Color</em>}' class.
@@ -3193,6 +3202,17 @@ public interface DslPackage extends EPackage
   EReference getAnchor_ModelReference();
 
   /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.xdiagram.dsl.Anchor#getMax <em>Max</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Max</em>'.
+   * @see org.eclipselabs.xdiagram.dsl.Anchor#getMax()
+   * @see #getAnchor()
+   * @generated
+   */
+  EAttribute getAnchor_Max();
+
+  /**
    * Returns the meta object for class '{@link org.eclipselabs.xdiagram.dsl.CustomColor <em>Custom Color</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -4703,6 +4723,14 @@ public interface DslPackage extends EPackage
      * @generated
      */
     EReference ANCHOR__MODEL_REFERENCE = eINSTANCE.getAnchor_ModelReference();
+
+    /**
+     * The meta object literal for the '<em><b>Max</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ANCHOR__MAX = eINSTANCE.getAnchor_Max();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.xdiagram.dsl.impl.CustomColorImpl <em>Custom Color</em>}' class.

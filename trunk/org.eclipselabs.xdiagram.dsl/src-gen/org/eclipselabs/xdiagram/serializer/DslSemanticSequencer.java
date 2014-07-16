@@ -279,6 +279,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				if(context == grammarAccess.getConnectableElementFeatureRule() ||
 				   context == grammarAccess.getFeatureRule() ||
 				   context == grammarAccess.getFigureFeatureRule() ||
+				   context == grammarAccess.getLineFeatureRule() ||
 				   context == grammarAccess.getLineStyleRule() ||
 				   context == grammarAccess.getLinkFeatureRule() ||
 				   context == grammarAccess.getRectangleFeatureRule() ||
@@ -469,7 +470,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (direction=AnchorDirection modelReference=[EReference|QualifiedName] conditional=FeatureConditional?)
+	 *     (direction=AnchorDirection modelReference=[EReference|QualifiedName] max=INT? conditional=FeatureConditional?)
 	 */
 	protected void sequence_Anchor(EObject context, Anchor semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -713,7 +714,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (imageId=ID (styled?='+' style=[Style|ID])? features+=ImageFeature* children+=ChildElement*)
+	 *     (imageId=STRING (styled?='+' style=[Style|ID])? features+=ImageFeature* children+=ChildElement*)
 	 */
 	protected void sequence_Image(EObject context, Image semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
