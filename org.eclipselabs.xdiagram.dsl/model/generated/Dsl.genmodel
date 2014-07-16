@@ -111,6 +111,7 @@
     <genClasses ecoreClass="Dsl.ecore#//Anchor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Anchor/direction"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dsl.ecore#//Anchor/modelReference"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Anchor/max"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//CustomColor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//CustomColor/name"/>

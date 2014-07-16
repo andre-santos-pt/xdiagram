@@ -1049,6 +1049,16 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getAnchor_Max()
+  {
+    return (EAttribute)anchorEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getCustomColor()
   {
     return customColorEClass;
@@ -2128,6 +2138,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     anchorEClass = createEClass(ANCHOR);
     createEAttribute(anchorEClass, ANCHOR__DIRECTION);
     createEReference(anchorEClass, ANCHOR__MODEL_REFERENCE);
+    createEAttribute(anchorEClass, ANCHOR__MAX);
 
     customColorEClass = createEClass(CUSTOM_COLOR);
     createEAttribute(customColorEClass, CUSTOM_COLOR__NAME);
@@ -2398,6 +2409,7 @@ public class DslPackageImpl extends EPackageImpl implements DslPackage
     initEClass(anchorEClass, Anchor.class, "Anchor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAnchor_Direction(), this.getAnchorDirection(), "direction", null, 0, 1, Anchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAnchor_ModelReference(), ecorePackage.getEReference(), null, "modelReference", null, 0, 1, Anchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAnchor_Max(), ecorePackage.getEInt(), "max", null, 0, 1, Anchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(customColorEClass, CustomColor.class, "CustomColor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCustomColor_Name(), ecorePackage.getEString(), "name", null, 0, 1, CustomColor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -90,7 +90,7 @@ ChildElement returns FeatureContainer:
 	ConnectableElement | Line | Arrow
 ;
 
-// validate ATT / Value
+// TODO validate ATT / Value 
 FeatureConditional:
 	'if' modelAttribute=[ecore::EAttribute|QualifiedName] operator=Operator value=Value
 ;
@@ -101,46 +101,33 @@ FeatureConditional:
 
 
 
-// TODO validation: unique nodes
-// notation inheritance?
 Node:
 	(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
     'node' modelClass=[ecore::EClass|QualifiedName] rootFigure = ConnectableElement
-     
-
-   // ('toolname' toolName=STRING (':' group=[Group])?)?  ('icon' imageId=ID)?
 ;
     
    
 
-
-// TODO: validation - complex requires source e target, complex structure
-// TODO text / icon
 Link:
 	(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
     'link'(
-    	(reference?='reference' modelReference=[ecore::EReference|QualifiedName]) | 
-    	
-    	(complex?='class' modelClass=[ecore::EClass|QualifiedName] 
-    	'source' sourceReference=[ecore::EReference|QualifiedName] 
-    	'target' targetReference=[ecore::EReference|QualifiedName]
+    	(
+    		reference?='reference' modelReference=[ecore::EReference|QualifiedName]
+    	) 
+    	| 
+    	(
+    		complex?='class' modelClass=[ecore::EClass|QualifiedName] 
+    		'source' sourceReference=[ecore::EReference|QualifiedName] 
+    		'target' targetReference=[ecore::EReference|QualifiedName]
     	)
-    	
     )
     (styled?='+' style=[Style])?
-     
-    // (toolName=STRING (':' group=[Group])?)?  ('icon' imageId=ID)? 
     '{'
     	features += LinkFeature*
     	decorators += Decorator*	
     '}'
 ;
     
- 
-//enum ConnectionType:
-//	FREE='free' |
-//	MANHATTAN='manhattan'	
-//;	
 
 LinkFeature returns Feature:
 	Foreground | LineStyle | LineWidth
@@ -150,10 +137,6 @@ LinkFeature returns Feature:
     
 
 
-// % opcional? ou considerar pixeis?
-// ter "constantes" para origem destino
-// TODO validation %
-// TODO validation children of decorator
 Decorator:
 	'decorator' position=INT '%' element = DecoratorElement
 ;
@@ -167,8 +150,9 @@ Decorator:
 
 // TODO validation
 Anchor:
-	'anchor' direction=AnchorDirection modelReference=[ecore::EReference|QualifiedName] 
+	'anchor' direction=AnchorDirection modelReference=[ecore::EReference|QualifiedName] ('max' max=INT)?
 	(conditional=FeatureConditional)?
+	';'
 ;
 
 
@@ -246,9 +230,6 @@ DecoratorElement returns FeatureContainer:
 ;
 
 
-//LineElement returns Element:
-//	Arrow | Line
-//;
 
 
 ConnectableElementFeature returns Feature:
@@ -329,7 +310,7 @@ Line:
 ;
 
 LineFeature returns Feature:
-	LineWidth | Foreground | Position | Size | Visible
+	LineWidth | LineStyle | Foreground | Position | Size | Visible
 ;
 
 Arrow:
@@ -345,22 +326,12 @@ Arrow:
 
 
 
-
-
-
-// TODO validation: contains of conflict types
 Contains:
-'contains' modelReference=[ecore::EReference|QualifiedName] 
-(conditional=FeatureConditional)?
-';'
+	'contains' modelReference=[ecore::EReference|QualifiedName] 
+	(conditional=FeatureConditional)?
+	';'
 ;
 
-
-//enum ContainerLayout:
-//	FREE='free' |
-//	VSTACK='vertical' |
-//	HSTACK='horizontal'
-//;
 
 //TODO < > <= =>
 enum Operator:
@@ -368,7 +339,8 @@ enum Operator:
 	DIFFERENT='<>'
 ;
 
-// TODO include object type?
+
+
 Value:
 	IntValue | DoubleValue | StringValue | BooleanValue | EnumValue
 ;
@@ -410,7 +382,6 @@ FigureFeature returns Feature:
 ;
 
 
-// TODO: validation  at most one editable
 Label:
 	{Label}
 	'label' (styled?='+' style=[Style])? '{'
@@ -425,8 +396,9 @@ LabelFeature returns Feature:
 
 
 
+// TODO image provider problem
 Image:
-	'image' imageId=ID (styled?='+' style=[Style])? '{'
+	'image' imageId=STRING (styled?='+' style=[Style])? '{'
 	features+=ImageFeature*
 	('child' children+=ChildElement)*
 	'}'
@@ -496,7 +468,6 @@ Point:
 	';'
 ;
 
-// TODO validation: no Position when vstack hstack
 Position:
 	'position' x=INT (xRelative?='%')? y=INT (yRelative?='%')?
 	(conditional=FeatureConditional)?

@@ -19,4 +19,5 @@ public class DslRuntimeModule extends org.eclipselabs.xdiagram.AbstractDslRuntim
 		return ImportUriGlobalScopeProvider.class;
 	}
 	
+	
 }

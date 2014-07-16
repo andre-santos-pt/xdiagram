@@ -46,7 +46,7 @@ public class DslSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Syntax:
-	 *     ('verdana' | 'times' | 'courier')?
+	 *     ('courier' | 'verdana' | 'times')?
 	 */
 	protected void emit_FontProperties___CourierKeyword_2_2_or_TimesKeyword_2_3_or_VerdanaKeyword_2_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
