@@ -19,5 +19,6 @@ Bundle-ActivationPolicy: lazy
 Bundle-Name: XDiagram Interperter Component
 Bundle-ManifestVersion: 2
 Bundle-Activator: org.eclipselabs.xdiagram.interpreter.internal.Activator
+Import-Package: org.eclipselabs.xdiagram
 
 
