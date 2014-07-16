@@ -80,6 +80,7 @@ import com.google.common.collect.Multimap;
 public final class LanguageProvider implements GraphicsProvider {
 
 	private URI modelLocation;
+	private Bundle bundle;
 	private XDiagram model;
 	private EPackage ePackage;
 
@@ -141,6 +142,7 @@ public final class LanguageProvider implements GraphicsProvider {
 	public void setup(Bundle bundle, Map<String, String> properties, EPackage ePackage) throws ProviderException {		
 		new DslStandaloneSetup().createInjectorAndDoEMFRegistration();
 		this.ePackage = ePackage;
+		this.bundle = bundle;
 		modelLocation = URI.createPlatformPluginURI(bundle.getSymbolicName() + "/" + properties.get("file"), false);
 		loadModel();
 	}
@@ -462,7 +464,7 @@ public final class LanguageProvider implements GraphicsProvider {
 
 		Node node = getNode(eObject.eClass());
 		ConnectableElement mainFig = node.getRootFigure();
-		nodeFigure = ElementCreation.createNodeFigure(mainFig, diagram, container);
+		nodeFigure = ElementCreation.createNodeFigure(mainFig, diagram, container, bundle);
 
 		//		if(mainFig instanceof Custom)
 		//			featureChain.update(((Custom) mainFig).getFigure().getElement(), eObject, diagram, nodeFigure, container);
@@ -500,7 +502,7 @@ public final class LanguageProvider implements GraphicsProvider {
 			childContainer = Graphiti.getPeCreateService().createContainerShape((ContainerShape) container, isActive);
 		}
 
-		GraphicsAlgorithm childFigure =  ElementCreation.createNodeFigure(element, diagram, childContainer);
+		GraphicsAlgorithm childFigure =  ElementCreation.createNodeFigure(element, diagram, childContainer, bundle);
 		featureChain.update(element, eObject, diagram, childFigure, childContainer);
 
 		// anchors cannot have children
@@ -656,7 +658,7 @@ public final class LanguageProvider implements GraphicsProvider {
 			ConnectionDecorator dec = 
 					Graphiti.getPeCreateService().createConnectionDecorator(connection, active, position, true);
 
-			GraphicsAlgorithm decFig = ElementCreation.createNodeFigure(decorator.getElement(), diagram, dec);
+			GraphicsAlgorithm decFig = ElementCreation.createNodeFigure(decorator.getElement(), diagram, dec, bundle);
 			featureChain.update(decorator.getElement(), eObject, diagram, decFig, dec);
 		}
 	}

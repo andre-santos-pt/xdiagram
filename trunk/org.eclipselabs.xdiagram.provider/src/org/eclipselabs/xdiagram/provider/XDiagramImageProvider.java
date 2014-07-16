@@ -12,6 +12,7 @@ import org.eclipse.graphiti.ui.platform.AbstractImageProvider;
 import org.eclipselabs.xdiagram.interpreter.ExtensionPointIds;
 import org.osgi.framework.Bundle;
 
+//TODO to remove
 public class XDiagramImageProvider extends AbstractImageProvider {			
 	//	private String providerId;
 	//	private Map<String, String> mapping;
@@ -55,27 +56,30 @@ public class XDiagramImageProvider extends AbstractImageProvider {
 
 	}
 
+	@Override
 	protected void addAvailableImages() {
-		IContributor plugin = findPlugin();
-
-		if(plugin != null) {
-
-			Bundle bundle = Platform.getBundle(plugin.getName());
-			Enumeration<String> e = bundle.getEntryPaths("images");
-			if(e == null)
-				return;
-			
-			while(e.hasMoreElements()) {
-				String path = e.nextElement();
-				int i = path.indexOf(File.separatorChar);
-				if(i != -1 && i+1 < path.length()) {
-					String id = path.substring(i+1);
-					id = id.substring(0, id.indexOf('.'));
-					if(isValidJavaIdentifier(id))
-						addImageFilePath(id, path);
-				}
-			}
-		}
+//		IContributor plugin = findPlugin();
+//		if(plugin != null) {
+//			Bundle bundle = Platform.getBundle(plugin.getName());
+//			Enumeration<String> e = bundle.getEntryPaths("images");
+//			if(e == null)
+//				return;
+//
+//			while(e.hasMoreElements()) {
+//				String path = e.nextElement();
+//				int i = path.indexOf(File.separatorChar);
+//				if(i != -1 && i+1 < path.length()) {
+//					String id = path.substring(i+1);
+//					id = id.substring(0, id.indexOf('.'));
+//					if(isValidJavaIdentifier(id))
+//						addImageFilePath(id, path);
+//				}
+//			}
+//		}
+		
+		
+		test();
+		
 		//		try{			
 		//			ResourceSet rs = new ResourceSetImpl();
 		//			//"/Users/andre/Documents/EclipseWS/runtime-XDiagramFeature/Test/new.xdiagram")
@@ -90,6 +94,35 @@ public class XDiagramImageProvider extends AbstractImageProvider {
 		//		catch(Exception e){
 		//			e.printStackTrace();
 		//		}
+	}
+
+
+	private void test() {
+		IExtensionRegistry reg = Platform.getExtensionRegistry();
+
+		for(IConfigurationElement a : reg.getConfigurationElementsFor(ExtensionPointIds.GRAPHITI_IMAGE_PROVIDERS_EXT)) {
+			IContributor contributor = a.getContributor();
+
+			if(a.getName().equals("imageProvider") && a.getAttribute("class").equals(XDiagramImageProvider.class.getName())) {
+				Bundle bundle = Platform.getBundle(contributor.getName());
+				Enumeration<String> e = bundle.getEntryPaths("images");
+				if(e == null)
+					return;
+
+				while(e.hasMoreElements()) {
+					String path = e.nextElement();
+					int i = path.indexOf(File.separatorChar);
+					if(i != -1 && i+1 < path.length()) {
+						String id = path.substring(i+1);
+//						id = id.substring(0, id.indexOf('.'));
+//						if(isValidJavaIdentifier(id)) {
+							addImageFilePath(bundle.getSymbolicName() + ":" + id, path);
+							System.out.println(bundle.getSymbolicName() + ":" + id + " ---- " + path);
+//						}
+					}
+				}
+			}
+		}
 	}
 
 	private IContributor findPlugin() {

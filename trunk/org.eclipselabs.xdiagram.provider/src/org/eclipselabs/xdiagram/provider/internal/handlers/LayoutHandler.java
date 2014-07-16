@@ -29,6 +29,10 @@ public class LayoutHandler implements FeatureHandler {
 
 	private Map<GraphicsAlgorithm, Layout> layouts;
 	
+	public LayoutHandler() {
+		layouts = new WeakHashMap<>();
+	}
+	
 	@Override
 	public Class<? extends Feature> getTargetFeature() {
 		return Layout.class;
