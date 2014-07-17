@@ -313,13 +313,13 @@ public final class LanguageProvider implements GraphicsProvider {
 
 
 	@Override
-	public boolean hasTool(EClass eClass) {
+	public boolean hasNodeTool(EClass eClass) {
 		return isNode(eClass);
 	}
 
 	@Override
-	public boolean hasTool(EReference eReference) {	
-		return isLink(eReference);
+	public boolean hasLinkTool(EReference eReference) {	
+		return isLink(eReference) && !eReference.isContainment();
 	}
 
 	@Override
@@ -340,18 +340,29 @@ public final class LanguageProvider implements GraphicsProvider {
 
 	@Override
 	public boolean canAddChild(ContainerShape container, EClass eClass) {
-		if(!containsHandler.isContainer( container)) {
-			return false;
-		}
+//		if(!containsHandler.isContainer( container)) {
+//			return false;
+//		}
+//		
+//		
+//
+//		for(EReference r: containsHandler.getReferences(container))
+//			if(r.getEReferenceType().isSuperTypeOf(eClass))
+//				return true;
 
-		for(EReference r: containsHandler.getReferences(container))
-			if(r.getEReferenceType().isSuperTypeOf(eClass))
-				return true;
-
-		return false;
+//		return false;
+		
+		// codigo repetido do interpreter?
+		
+		return true;
 	}
 
 
+	@Override
+	public EObject getContainerObject(ContainerShape container) {
+		return containsHandler.isContainer(container) ? containsHandler.getOwner(container) : null;
+	}
+	
 	@Override
 	public Collection<EReference> getContainerReferences(ContainerShape container) {
 		return containsHandler.getReferences(container);
@@ -361,10 +372,7 @@ public final class LanguageProvider implements GraphicsProvider {
 		return containsHandler.getReferences(container, eObject);
 	}
 
-	@Override
-	public EObject getContainerObject(ContainerShape container) {
-		return containsHandler.isContainer(container) ? containsHandler.getOwner(container) : null;
-	}
+	
 
 
 
