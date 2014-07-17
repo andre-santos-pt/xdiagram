@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypes">
+      <diagramType
+            description="Component model type"
+            id="ComponentModelType"
+            name="Component Model Type"
+            type="ComponentModelDiagram">
+      </diagramType>
+   </extension>
+   
+   
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypeProviders">
+      <diagramTypeProvider
+            class="org.eclipselabs.xdiagram.interpreter.XDiagramTypeProvider"
+            description="Component model editor"
+            id="ComponentsTypeProvider"
+            name="Components Type Provider">
+         <diagramType
+               id="ComponentModelType">
+         </diagramType>
+         <imageProvider
+               id="org.eclipselabs.xdiagram.examples.components.imageProvider">
+         </imageProvider>
+      </diagramTypeProvider>
+   </extension>
+   
+   <extension
+         point="org.eclipselabs.xdiagram.interpreter.providers">
+      <provider
+            diagramType="ComponentModelDiagram"
+            ePackageURI="http://org.eclipselabs.xdiagram.examples/Components"
+            provider="org.eclipselabs.xdiagram.provider.LanguageProvider">
+         <property
+               id="file"
+               value="model/components.xdiagram">
+         </property>
+      </provider>
+   </extension>
+
+
+   
+
+   <extension
+         point="org.eclipse.graphiti.ui.imageProviders">
+      <imageProvider
+            class="org.eclipselabs.xdiagram.interpreter.XDiagramImageProvider"
+            id="org.eclipselabs.xdiagram.examples.components.imageProvider">
+      </imageProvider>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated components -->
+      <package
+            uri="http://org.eclipselabs.xdiagram.examples/Components"
+            class="components.ComponentsPackage"
+            genModel="model/components.genmodel"/>
+   </extension>
+
+</plugin>
