@@ -1,0 +1,86 @@
+metamodel "platform:/plugin/org.eclipselabs.xdiagram.examples.components/model/components.ecore"
+import components.*
+
+diagram System {
+	contains System.components;
+}
+
+figure interface as invisible {
+
+	child circle {
+		position 0 0;
+		size 30;
+		foreground black;
+		background blue;
+	}
+	child hline {
+		size 60;
+		foreground black;
+	}
+}
+
+//node Interface invisible {
+//	size 50 20;
+//	child hline {
+//		size 30;
+//		position 0 10;
+//	}
+//	child circle {
+//		size 20;
+//		position 30 0;
+//	}
+//}
+
+node Interface invisible {
+	size 100 40;
+	child label {
+		text Interface.name;
+		font 12 bold;
+		size 100 20;
+		position 50% 0;	
+	}
+	child circle {
+		size 20;
+		position 50% 20;
+	}
+}
+
+link reference Component.interfaces {
+	linestyle manhattan;
+}
+
+node Component invisible {
+	size 300 200 resizable;
+	
+	child square {
+		size 10;
+		position 100% 0;
+	}
+	
+	child rectangle {
+		position 50 50;
+		size 50] 50];
+
+		child label {
+			position 50% 50%;
+			text Component.id;
+		}
+	}
+	
+	child invisible {
+		position 250 50;
+		size 50 50];
+		contains Component.interfaces; 
+		layout vertical;
+	}
+}
+
+
+
+link reference Component.dependencies {
+	linestyle dashed manhattan;
+	decorator 100% arrow {
+		size 20 20;
+		linestyle dashed;
+	}
+}
