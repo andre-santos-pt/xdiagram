@@ -45,14 +45,14 @@ public interface GraphicsProvider {
 	 * @param eClass
 	 * @return
 	 */
-	boolean hasTool(EClass eClass);
+	boolean hasNodeTool(EClass eClass);
 	
 	/**
 	 * Returns true if the given EReference should have a corresponding link creation tool.
 	 * @param eReference
 	 * @return
 	 */
-	boolean hasTool(EReference eReference);
+	boolean hasLinkTool(EReference eReference);
 	
 	/**
 	 * Returns true if the given EClass should be treated as a link in the context of the given EReference.

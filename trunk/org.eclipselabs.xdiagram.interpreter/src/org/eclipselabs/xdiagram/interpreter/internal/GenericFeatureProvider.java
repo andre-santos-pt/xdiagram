@@ -131,7 +131,7 @@ public class GenericFeatureProvider extends DefaultFeatureProvider {
 		return 
 				!c.isAbstract() &&
 				!rootClass.equals(c) &&
-				graphicsProvider.hasTool(c);
+				graphicsProvider.hasNodeTool(c);
 	}
 
 	@Override
@@ -149,7 +149,7 @@ public class GenericFeatureProvider extends DefaultFeatureProvider {
 				EClass eClass = (EClass) c;
 
 				for(EReference ref : eClass.getEReferences()) {
-					if(!ref.isContainment() && graphicsProvider.hasTool(ref)) {
+					if(!ref.isContainment() && graphicsProvider.hasLinkTool(ref)) {
 						list.add(new CreateEReferenceFeature(this, ref));
 					}
 					else {
