@@ -3,6 +3,7 @@ import conceptualmodel.*
 
 diagram ConceptualModel {
 	contains ConceptualModel.entities;
+	contains ConceptualModel.packages;
 }
 
 node Entity rectangle {
@@ -11,8 +12,9 @@ node Entity rectangle {
 		
 	child image "class_icon.gif" {
 		size 32 32;
-		position 50% 0;
+		position 10% 0;
 	}
+	
 	
 	
 	child label {
@@ -44,7 +46,7 @@ node Entity rectangle {
 
 
 node Attribute label {
-	size 150 20;
+	size 10] 20;
 	text "- " edit: Attribute.name " : " Attribute.type;
 	font 14;
 	align left;
