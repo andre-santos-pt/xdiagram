@@ -24,8 +24,10 @@ Package conceptualmodel <http://org.eclipselabs.xdiagram.examples/ConceptualMode
     Attribute name : EString<<1..1>>
     Attribute cardinality : EString<<1..1>>
 
-  Class ConceptualModel
+  Class Package
+    Attribute namespace : EString<<1..1>>
     Reference entities : Entity<<0..*>>
+    Reference packages : Package<<0..*>>
 
   Enum AssociationType
     Literal AGGREGATION = 0
