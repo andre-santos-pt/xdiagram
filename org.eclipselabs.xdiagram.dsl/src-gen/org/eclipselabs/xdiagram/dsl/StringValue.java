@@ -10,11 +10,11 @@ package org.eclipselabs.xdiagram.dsl;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.StringValue#isNull <em>Null</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.StringValue#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipselabs.xdiagram.dsl.DslPackage#getStringValue()
  * @model

@@ -18,11 +18,11 @@ import org.eclipselabs.xdiagram.dsl.ToolGroup;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ToolGroupImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ToolGroupImpl#getDescription <em>Description</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Color#getDefault <em>Default</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Color#getCustom <em>Custom</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipselabs.xdiagram.dsl.DslPackage#getColor()
  * @model

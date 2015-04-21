@@ -17,13 +17,13 @@ import org.eclipselabs.xdiagram.dsl.FontProperties;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.FontPropertiesImpl#getFace <em>Face</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.FontPropertiesImpl#getSize <em>Size</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.FontPropertiesImpl#isBold <em>Bold</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.FontPropertiesImpl#isItalics <em>Italics</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

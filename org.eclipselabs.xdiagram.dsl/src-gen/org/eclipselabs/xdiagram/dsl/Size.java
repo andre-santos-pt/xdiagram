@@ -10,6 +10,7 @@ package org.eclipselabs.xdiagram.dsl;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Size#getWidth <em>Width</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Size#isWidthRelative <em>Width Relative</em>}</li>
@@ -17,7 +18,6 @@ package org.eclipselabs.xdiagram.dsl;
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Size#isHeightRelative <em>Height Relative</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Size#isResizable <em>Resizable</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipselabs.xdiagram.dsl.DslPackage#getSize()
  * @model

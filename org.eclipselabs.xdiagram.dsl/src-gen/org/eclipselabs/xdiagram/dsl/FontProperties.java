@@ -10,13 +10,13 @@ package org.eclipselabs.xdiagram.dsl;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.FontProperties#getFace <em>Face</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.FontProperties#getSize <em>Size</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.FontProperties#isBold <em>Bold</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.FontProperties#isItalics <em>Italics</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipselabs.xdiagram.dsl.DslPackage#getFontProperties()
  * @model

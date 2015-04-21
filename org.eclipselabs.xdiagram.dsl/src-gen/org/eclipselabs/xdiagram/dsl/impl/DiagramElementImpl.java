@@ -20,6 +20,7 @@ import org.eclipselabs.xdiagram.dsl.ToolGroup;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DiagramElementImpl#isTool <em>Tool</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DiagramElementImpl#getToolName <em>Tool Name</em>}</li>
@@ -29,7 +30,6 @@ import org.eclipselabs.xdiagram.dsl.ToolGroup;
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DiagramElementImpl#getImageId <em>Image Id</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DiagramElementImpl#getModelClass <em>Model Class</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

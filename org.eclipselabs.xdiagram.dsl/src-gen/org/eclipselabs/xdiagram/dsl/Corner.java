@@ -10,10 +10,10 @@ package org.eclipselabs.xdiagram.dsl;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Corner#getAngle <em>Angle</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipselabs.xdiagram.dsl.DslPackage#getCorner()
  * @model

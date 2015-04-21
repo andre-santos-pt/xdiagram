@@ -19,10 +19,10 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ContainsImpl#getModelReference <em>Model Reference</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

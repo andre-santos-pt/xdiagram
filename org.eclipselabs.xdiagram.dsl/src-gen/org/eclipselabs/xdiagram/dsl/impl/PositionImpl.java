@@ -17,13 +17,13 @@ import org.eclipselabs.xdiagram.dsl.Position;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.PositionImpl#getX <em>X</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.PositionImpl#isXRelative <em>XRelative</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.PositionImpl#getY <em>Y</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.PositionImpl#isYRelative <em>YRelative</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

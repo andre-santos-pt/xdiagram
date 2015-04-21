@@ -17,12 +17,12 @@ import org.eclipselabs.xdiagram.dsl.Layout;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LayoutImpl#isVertical <em>Vertical</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LayoutImpl#isHorizontal <em>Horizontal</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LayoutImpl#getMargin <em>Margin</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

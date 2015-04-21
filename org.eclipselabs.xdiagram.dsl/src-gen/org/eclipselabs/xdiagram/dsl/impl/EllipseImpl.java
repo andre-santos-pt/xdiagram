@@ -17,11 +17,11 @@ import org.eclipselabs.xdiagram.dsl.Ellipse;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.EllipseImpl#isEllipse <em>Ellipse</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.EllipseImpl#isCircle <em>Circle</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

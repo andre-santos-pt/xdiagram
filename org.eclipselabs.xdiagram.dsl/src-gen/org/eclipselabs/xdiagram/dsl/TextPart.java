@@ -12,12 +12,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.TextPart#getText <em>Text</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.TextPart#isEditable <em>Editable</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.TextPart#getModelAttribute <em>Model Attribute</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipselabs.xdiagram.dsl.DslPackage#getTextPart()
  * @model

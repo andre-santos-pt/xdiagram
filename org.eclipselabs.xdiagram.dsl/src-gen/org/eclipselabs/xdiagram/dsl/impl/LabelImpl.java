@@ -11,8 +11,6 @@ import org.eclipselabs.xdiagram.dsl.Label;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Label</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

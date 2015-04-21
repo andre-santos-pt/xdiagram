@@ -11,8 +11,6 @@ import org.eclipselabs.xdiagram.dsl.Rhombus;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Rhombus</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

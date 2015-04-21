@@ -18,11 +18,11 @@ import org.eclipselabs.xdiagram.dsl.LineType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LineStyleImpl#getStyle <em>Style</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LineStyleImpl#isManhattan <em>Manhattan</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

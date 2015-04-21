@@ -17,10 +17,10 @@ import org.eclipselabs.xdiagram.dsl.Transparency;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.TransparencyImpl#getPercent <em>Percent</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

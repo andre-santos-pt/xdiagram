@@ -18,13 +18,13 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.CustomColorImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.CustomColorImpl#getR <em>R</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.CustomColorImpl#getG <em>G</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.CustomColorImpl#getB <em>B</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

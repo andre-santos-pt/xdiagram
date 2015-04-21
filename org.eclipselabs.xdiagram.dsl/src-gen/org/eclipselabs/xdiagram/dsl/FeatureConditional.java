@@ -12,12 +12,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.FeatureConditional#getModelAttribute <em>Model Attribute</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.FeatureConditional#getOperator <em>Operator</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.FeatureConditional#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipselabs.xdiagram.dsl.DslPackage#getFeatureConditional()
  * @model

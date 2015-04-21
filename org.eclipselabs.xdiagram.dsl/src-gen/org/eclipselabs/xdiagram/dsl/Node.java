@@ -10,10 +10,10 @@ package org.eclipselabs.xdiagram.dsl;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Node#getRootFigure <em>Root Figure</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipselabs.xdiagram.dsl.DslPackage#getNode()
  * @model

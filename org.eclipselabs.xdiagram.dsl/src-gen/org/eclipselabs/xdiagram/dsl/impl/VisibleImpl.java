@@ -11,8 +11,6 @@ import org.eclipselabs.xdiagram.dsl.Visible;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Visible</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

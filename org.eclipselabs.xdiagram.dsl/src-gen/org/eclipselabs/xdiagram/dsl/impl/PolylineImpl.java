@@ -17,11 +17,11 @@ import org.eclipselabs.xdiagram.dsl.Polyline;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.PolylineImpl#isPolygon <em>Polygon</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.PolylineImpl#isPolyline <em>Polyline</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

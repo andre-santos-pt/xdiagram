@@ -21,11 +21,11 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ColorImpl#getDefault <em>Default</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.ColorImpl#getCustom <em>Custom</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

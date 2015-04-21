@@ -31,6 +31,7 @@ import org.eclipselabs.xdiagram.dsl.Style;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#isStyled <em>Styled</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getStyle <em>Style</em>}</li>
@@ -42,7 +43,6 @@ import org.eclipselabs.xdiagram.dsl.Style;
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getTargetReference <em>Target Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LinkImpl#getDecorators <em>Decorators</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

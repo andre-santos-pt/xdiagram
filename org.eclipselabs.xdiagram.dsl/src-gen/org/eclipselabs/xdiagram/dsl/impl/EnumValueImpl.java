@@ -17,10 +17,10 @@ import org.eclipselabs.xdiagram.dsl.EnumValue;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.EnumValueImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

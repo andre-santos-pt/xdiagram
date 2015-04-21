@@ -17,10 +17,10 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.CornerImpl#getAngle <em>Angle</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -34,6 +34,7 @@ import org.eclipselabs.xdiagram.dsl.XDiagram;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getImportURI <em>Import URI</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getImports <em>Imports</em>}</li>
@@ -44,7 +45,6 @@ import org.eclipselabs.xdiagram.dsl.XDiagram;
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getColors <em>Colors</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.XDiagramImpl#getFigures <em>Figures</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

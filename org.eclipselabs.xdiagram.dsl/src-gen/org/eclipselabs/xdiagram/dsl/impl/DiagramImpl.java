@@ -28,11 +28,11 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DiagramImpl#getModelClass <em>Model Class</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DiagramImpl#getContains <em>Contains</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

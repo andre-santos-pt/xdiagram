@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.EReference;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Anchor#getDirection <em>Direction</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Anchor#getModelReference <em>Model Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Anchor#getMax <em>Max</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipselabs.xdiagram.dsl.DslPackage#getAnchor()
  * @model

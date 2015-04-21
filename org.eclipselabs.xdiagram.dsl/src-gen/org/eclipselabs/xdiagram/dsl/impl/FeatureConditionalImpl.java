@@ -23,12 +23,12 @@ import org.eclipselabs.xdiagram.dsl.Value;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.FeatureConditionalImpl#getModelAttribute <em>Model Attribute</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.FeatureConditionalImpl#getOperator <em>Operator</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.FeatureConditionalImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -10,13 +10,13 @@ package org.eclipselabs.xdiagram.dsl;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Position#getX <em>X</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Position#isXRelative <em>XRelative</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Position#getY <em>Y</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Position#isYRelative <em>YRelative</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipselabs.xdiagram.dsl.DslPackage#getPosition()
  * @model

@@ -17,11 +17,11 @@ import org.eclipselabs.xdiagram.dsl.Rectangle;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.RectangleImpl#isRectangle <em>Rectangle</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.RectangleImpl#isSquare <em>Square</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -17,6 +17,7 @@ import org.eclipselabs.xdiagram.dsl.Size;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.SizeImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.SizeImpl#isWidthRelative <em>Width Relative</em>}</li>
@@ -24,7 +25,6 @@ import org.eclipselabs.xdiagram.dsl.Size;
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.SizeImpl#isHeightRelative <em>Height Relative</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.SizeImpl#isResizable <em>Resizable</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

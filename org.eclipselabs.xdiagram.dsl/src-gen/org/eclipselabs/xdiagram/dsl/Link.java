@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EReference;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#isReference <em>Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#getModelReference <em>Model Reference</em>}</li>
@@ -21,7 +22,6 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#getTargetReference <em>Target Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.Link#getDecorators <em>Decorators</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.eclipselabs.xdiagram.dsl.DslPackage#getLink()
  * @model

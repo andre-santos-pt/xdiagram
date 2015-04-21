@@ -24,10 +24,10 @@ import org.eclipselabs.xdiagram.dsl.TextValue;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.TextValueImpl#getParts <em>Parts</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

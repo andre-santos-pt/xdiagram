@@ -11,8 +11,6 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Arrow</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

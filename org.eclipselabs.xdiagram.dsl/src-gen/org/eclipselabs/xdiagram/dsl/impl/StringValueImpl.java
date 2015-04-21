@@ -17,11 +17,11 @@ import org.eclipselabs.xdiagram.dsl.StringValue;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.StringValueImpl#isNull <em>Null</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.StringValueImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

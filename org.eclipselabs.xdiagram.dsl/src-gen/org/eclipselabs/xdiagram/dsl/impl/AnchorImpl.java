@@ -20,12 +20,12 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.AnchorImpl#getDirection <em>Direction</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.AnchorImpl#getModelReference <em>Model Reference</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.AnchorImpl#getMax <em>Max</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

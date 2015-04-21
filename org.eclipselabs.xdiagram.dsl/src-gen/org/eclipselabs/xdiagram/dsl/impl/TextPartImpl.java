@@ -20,12 +20,12 @@ import org.eclipselabs.xdiagram.dsl.TextPart;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.TextPartImpl#getText <em>Text</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.TextPartImpl#isEditable <em>Editable</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.TextPartImpl#getModelAttribute <em>Model Attribute</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

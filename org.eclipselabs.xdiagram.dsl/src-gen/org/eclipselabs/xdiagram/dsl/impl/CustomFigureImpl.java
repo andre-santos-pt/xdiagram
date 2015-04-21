@@ -21,11 +21,11 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.CustomFigureImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.CustomFigureImpl#getElement <em>Element</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

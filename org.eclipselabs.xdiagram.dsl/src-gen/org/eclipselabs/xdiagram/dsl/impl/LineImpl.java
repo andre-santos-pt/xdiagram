@@ -17,11 +17,11 @@ import org.eclipselabs.xdiagram.dsl.Line;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LineImpl#isHorizontal <em>Horizontal</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.LineImpl#isVertical <em>Vertical</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

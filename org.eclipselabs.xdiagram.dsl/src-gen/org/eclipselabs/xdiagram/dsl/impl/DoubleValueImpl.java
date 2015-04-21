@@ -17,11 +17,11 @@ import org.eclipselabs.xdiagram.dsl.DslPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DoubleValueImpl#getValueInt <em>Value Int</em>}</li>
  *   <li>{@link org.eclipselabs.xdiagram.dsl.impl.DoubleValueImpl#getValueDecimal <em>Value Decimal</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
