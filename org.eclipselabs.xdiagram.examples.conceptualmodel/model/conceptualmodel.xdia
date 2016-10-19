@@ -9,7 +9,7 @@ diagram Package {
 node Entity rectangle {
 	size 200 100 resizable;
 	corner 10;
-	background red;
+	background blue;
 	child image "class_icon.gif" {
 		size 32 32;
 		position 10% 0;
@@ -38,10 +38,6 @@ node Entity rectangle {
 		position 5 35;
 		layout vertical;
 	}
-}
-
-node Package circle {
-	
 }
 
 node Attribute label {
