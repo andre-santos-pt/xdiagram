@@ -130,7 +130,8 @@ public class GenericFeatureProvider extends DefaultFeatureProvider {
 	private boolean isNode(EClass c) {
 		return 
 				!c.isAbstract() &&
-				!rootClass.equals(c) &&
+				// for disallowing the root object type to be a node
+				//				!rootClass.equals(c) &&
 				graphicsProvider.hasNodeTool(c);
 	}
 

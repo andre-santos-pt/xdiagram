@@ -19,14 +19,21 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipselabs.xdiagram.dsl"
+         id="pt.iscte.xdiagram.dsl"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipselabs.xdiagram.dsl.ui"
+         id="pt.iscte.xdiagram.dsl.ide"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="pt.iscte.xdiagram.dsl.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"

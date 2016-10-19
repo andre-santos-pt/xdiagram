@@ -6,10 +6,13 @@ diagram Package {
 	contains Package.packages;
 }
 
+color lightgray 240 240 240;
+
 node Entity rectangle {
 	size 200 100 resizable;
-	corner 10;
-	background blue;
+	corner 20;
+	foreground red;
+	background lightgray;
 	child image "class_icon.gif" {
 		size 32 32;
 		position 10% 0;
@@ -31,7 +34,7 @@ node Entity rectangle {
 	child hline {
 		position 0 30;
 		size 0];
-	}			
+	}	
 	child invisible {
 		contains Entity.attributes;
 		size 5] 5];
@@ -48,8 +51,11 @@ node Attribute label {
 }
 
 node Package rectangle {
-	contains  Package.entities;
-	background maroon;
+	contains Package.entities;
+	contains Package.packages;
+	background yellow;
+	size 500 500;
+	layout horizontal margin 5;
 }
 
 link reference Entity.extends {
@@ -85,6 +91,3 @@ link class Association source Entity.associations target Association.to {
 	}
 }
 
-node Package rectangle {
-	size 200 200;
-}
