@@ -96,7 +96,7 @@ ruleXDiagram returns [EObject current=null]
        			$current, 
        			"importURI",
         		lv_importURI_1_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -113,7 +113,7 @@ ruleXDiagram returns [EObject current=null]
        			$current, 
        			"imports",
         		lv_imports_2_0, 
-        		"ImportStatement");
+        		"org.eclipselabs.xdiagram.Dsl.ImportStatement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -131,7 +131,7 @@ ruleXDiagram returns [EObject current=null]
        			$current, 
        			"diagram",
         		lv_diagram_3_0, 
-        		"Diagram");
+        		"org.eclipselabs.xdiagram.Dsl.Diagram");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -149,7 +149,7 @@ ruleXDiagram returns [EObject current=null]
        			$current, 
        			"groups",
         		lv_groups_4_0, 
-        		"ToolGroup");
+        		"org.eclipselabs.xdiagram.Dsl.ToolGroup");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -167,7 +167,7 @@ ruleXDiagram returns [EObject current=null]
        			$current, 
        			"elements",
         		lv_elements_5_0, 
-        		"DiagramElement");
+        		"org.eclipselabs.xdiagram.Dsl.DiagramElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -186,7 +186,7 @@ ruleXDiagram returns [EObject current=null]
        			$current, 
        			"styles",
         		lv_styles_6_0, 
-        		"Style");
+        		"org.eclipselabs.xdiagram.Dsl.Style");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -205,7 +205,7 @@ ruleXDiagram returns [EObject current=null]
        			$current, 
        			"colors",
         		lv_colors_7_0, 
-        		"CustomColor");
+        		"org.eclipselabs.xdiagram.Dsl.CustomColor");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -224,7 +224,7 @@ ruleXDiagram returns [EObject current=null]
        			$current, 
        			"figures",
         		lv_figures_8_0, 
-        		"CustomFigure");
+        		"org.eclipselabs.xdiagram.Dsl.CustomFigure");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -273,7 +273,7 @@ ruleImportStatement returns [EObject current=null]
        			$current, 
        			"importedNamespace",
         		lv_importedNamespace_2_0, 
-        		"QualifiedNameWithWildCard");
+        		"org.eclipselabs.xdiagram.Dsl.QualifiedNameWithWildCard");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -420,7 +420,7 @@ ruleDiagram returns [EObject current=null]
        			$current, 
        			"contains",
         		lv_contains_3_0, 
-        		"Contains");
+        		"org.eclipselabs.xdiagram.Dsl.Contains");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -468,7 +468,7 @@ ruleToolGroup returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -486,7 +486,7 @@ ruleToolGroup returns [EObject current=null]
        			$current, 
        			"description",
         		lv_description_2_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -573,7 +573,7 @@ ruleStyle returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -622,7 +622,7 @@ ruleStyle returns [EObject current=null]
        			$current, 
        			"features",
         		lv_features_5_0, 
-        		"StyleFeature");
+        		"org.eclipselabs.xdiagram.Dsl.StyleFeature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -918,7 +918,7 @@ ruleFeatureConditional returns [EObject current=null]
        			$current, 
        			"operator",
         		lv_operator_2_0, 
-        		"Operator");
+        		"org.eclipselabs.xdiagram.Dsl.Operator");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -936,7 +936,7 @@ ruleFeatureConditional returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_3_0, 
-        		"Value");
+        		"org.eclipselabs.xdiagram.Dsl.Value");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -991,7 +991,7 @@ ruleNode returns [EObject current=null]
        			$current, 
        			"toolName",
         		lv_toolName_1_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1052,7 +1052,7 @@ ruleNode returns [EObject current=null]
        			$current, 
        			"imageId",
         		lv_imageId_5_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -1088,7 +1088,7 @@ ruleNode returns [EObject current=null]
        			$current, 
        			"rootFigure",
         		lv_rootFigure_8_0, 
-        		"ConnectableElement");
+        		"org.eclipselabs.xdiagram.Dsl.ConnectableElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1143,7 +1143,7 @@ ruleLink returns [EObject current=null]
        			$current, 
        			"toolName",
         		lv_toolName_1_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1204,7 +1204,7 @@ ruleLink returns [EObject current=null]
        			$current, 
        			"imageId",
         		lv_imageId_5_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -1356,7 +1356,7 @@ ruleLink returns [EObject current=null]
        			$current, 
        			"features",
         		lv_features_18_0, 
-        		"LinkFeature");
+        		"org.eclipselabs.xdiagram.Dsl.LinkFeature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1374,7 +1374,7 @@ ruleLink returns [EObject current=null]
        			$current, 
        			"decorators",
         		lv_decorators_19_0, 
-        		"Decorator");
+        		"org.eclipselabs.xdiagram.Dsl.Decorator");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1472,7 +1472,7 @@ ruleDecorator returns [EObject current=null]
        			$current, 
        			"position",
         		lv_position_1_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -1493,7 +1493,7 @@ ruleDecorator returns [EObject current=null]
        			$current, 
        			"element",
         		lv_element_3_0, 
-        		"DecoratorElement");
+        		"org.eclipselabs.xdiagram.Dsl.DecoratorElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1536,7 +1536,7 @@ ruleAnchor returns [EObject current=null]
        			$current, 
        			"direction",
         		lv_direction_1_0, 
-        		"AnchorDirection");
+        		"org.eclipselabs.xdiagram.Dsl.AnchorDirection");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1574,7 +1574,7 @@ ruleAnchor returns [EObject current=null]
        			$current, 
        			"max",
         		lv_max_4_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -1591,7 +1591,7 @@ ruleAnchor returns [EObject current=null]
        			$current, 
        			"conditional",
         		lv_conditional_5_0, 
-        		"FeatureConditional");
+        		"org.eclipselabs.xdiagram.Dsl.FeatureConditional");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1639,7 +1639,7 @@ ruleCustomColor returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -1657,7 +1657,7 @@ ruleCustomColor returns [EObject current=null]
        			$current, 
        			"R",
         		lv_R_2_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -1675,7 +1675,7 @@ ruleCustomColor returns [EObject current=null]
        			$current, 
        			"G",
         		lv_G_3_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -1693,7 +1693,7 @@ ruleCustomColor returns [EObject current=null]
        			$current, 
        			"B",
         		lv_B_4_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -1735,7 +1735,7 @@ ruleColor returns [EObject current=null]
        			$current, 
        			"default",
         		lv_default_0_0, 
-        		"DefaultColor");
+        		"org.eclipselabs.xdiagram.Dsl.DefaultColor");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2123,7 +2123,7 @@ ruleCustomFigure returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -2144,7 +2144,7 @@ ruleCustomFigure returns [EObject current=null]
        			$current, 
        			"element",
         		lv_element_3_0, 
-        		"ConnectableElement");
+        		"org.eclipselabs.xdiagram.Dsl.ConnectableElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2232,7 +2232,7 @@ ruleCustom returns [EObject current=null]
        			$current, 
        			"features",
         		lv_features_5_0, 
-        		"LinkedFeature");
+        		"org.eclipselabs.xdiagram.Dsl.LinkedFeature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2254,7 +2254,7 @@ ruleCustom returns [EObject current=null]
        			$current, 
        			"children",
         		lv_children_7_0, 
-        		"ChildElement");
+        		"org.eclipselabs.xdiagram.Dsl.ChildElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2360,7 +2360,7 @@ ruleRectangle returns [EObject current=null]
        			$current, 
        			"features",
         		lv_features_5_0, 
-        		"RectangleFeature");
+        		"org.eclipselabs.xdiagram.Dsl.RectangleFeature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2382,7 +2382,7 @@ ruleRectangle returns [EObject current=null]
        			$current, 
        			"children",
         		lv_children_7_0, 
-        		"ChildElement");
+        		"org.eclipselabs.xdiagram.Dsl.ChildElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2507,7 +2507,7 @@ ruleRhombus returns [EObject current=null]
        			$current, 
        			"features",
         		lv_features_5_0, 
-        		"ConnectableElementFeature");
+        		"org.eclipselabs.xdiagram.Dsl.ConnectableElementFeature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2529,7 +2529,7 @@ ruleRhombus returns [EObject current=null]
        			$current, 
        			"children",
         		lv_children_7_0, 
-        		"ChildElement");
+        		"org.eclipselabs.xdiagram.Dsl.ChildElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2635,7 +2635,7 @@ ruleEllipse returns [EObject current=null]
        			$current, 
        			"features",
         		lv_features_5_0, 
-        		"ConnectableElementFeature");
+        		"org.eclipselabs.xdiagram.Dsl.ConnectableElementFeature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2657,7 +2657,7 @@ ruleEllipse returns [EObject current=null]
        			$current, 
        			"children",
         		lv_children_7_0, 
-        		"ChildElement");
+        		"org.eclipselabs.xdiagram.Dsl.ChildElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2763,7 +2763,7 @@ rulePolyline returns [EObject current=null]
        			$current, 
        			"features",
         		lv_features_5_0, 
-        		"Point");
+        		"org.eclipselabs.xdiagram.Dsl.Point");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2781,7 +2781,7 @@ rulePolyline returns [EObject current=null]
        			$current, 
        			"features",
         		lv_features_6_0, 
-        		"Point");
+        		"org.eclipselabs.xdiagram.Dsl.Point");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2799,7 +2799,7 @@ rulePolyline returns [EObject current=null]
        			$current, 
        			"features",
         		lv_features_7_0, 
-        		"Point");
+        		"org.eclipselabs.xdiagram.Dsl.Point");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2817,7 +2817,7 @@ rulePolyline returns [EObject current=null]
        			$current, 
        			"features",
         		lv_features_8_0, 
-        		"ConnectableElementFeature");
+        		"org.eclipselabs.xdiagram.Dsl.ConnectableElementFeature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2839,7 +2839,7 @@ rulePolyline returns [EObject current=null]
        			$current, 
        			"children",
         		lv_children_10_0, 
-        		"ChildElement");
+        		"org.eclipselabs.xdiagram.Dsl.ChildElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2924,7 +2924,7 @@ ruleTriangle returns [EObject current=null]
        			$current, 
        			"features",
         		lv_features_5_0, 
-        		"ConnectableElementFeature");
+        		"org.eclipselabs.xdiagram.Dsl.ConnectableElementFeature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2946,7 +2946,7 @@ ruleTriangle returns [EObject current=null]
        			$current, 
        			"children",
         		lv_children_7_0, 
-        		"ChildElement");
+        		"org.eclipselabs.xdiagram.Dsl.ChildElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3058,7 +3058,7 @@ ruleLine returns [EObject current=null]
        			$current, 
        			"features",
         		lv_features_6_0, 
-        		"LineFeature");
+        		"org.eclipselabs.xdiagram.Dsl.LineFeature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3223,7 +3223,7 @@ ruleArrow returns [EObject current=null]
        			$current, 
        			"features",
         		lv_features_5_0, 
-        		"LineFeature");
+        		"org.eclipselabs.xdiagram.Dsl.LineFeature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3285,7 +3285,7 @@ ruleContains returns [EObject current=null]
        			$current, 
        			"conditional",
         		lv_conditional_2_0, 
-        		"FeatureConditional");
+        		"org.eclipselabs.xdiagram.Dsl.FeatureConditional");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3399,7 +3399,7 @@ ruleIntValue returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_0_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -3438,7 +3438,7 @@ ruleDoubleValue returns [EObject current=null]
        			$current, 
        			"valueInt",
         		lv_valueInt_0_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -3460,7 +3460,7 @@ ruleDoubleValue returns [EObject current=null]
        			$current, 
        			"valueDecimal",
         		lv_valueDecimal_2_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -3515,7 +3515,7 @@ ruleStringValue returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_1_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -3553,7 +3553,7 @@ ruleBooleanValue returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_0_0, 
-        		"BooleanLiteral");
+        		"org.eclipselabs.xdiagram.Dsl.BooleanLiteral");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3593,7 +3593,7 @@ ruleEnumValue returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_0_0, 
-        		"ID");
+        		"org.eclipse.xtext.common.Terminals.ID");
 	    }
 
 )
@@ -3675,7 +3675,7 @@ ruleLabel returns [EObject current=null]
        			$current, 
        			"features",
         		lv_features_5_0, 
-        		"LabelFeature");
+        		"org.eclipselabs.xdiagram.Dsl.LabelFeature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3697,7 +3697,7 @@ ruleLabel returns [EObject current=null]
        			$current, 
        			"children",
         		lv_children_7_0, 
-        		"ChildElement");
+        		"org.eclipselabs.xdiagram.Dsl.ChildElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3835,7 +3835,7 @@ ruleImage returns [EObject current=null]
        			$current, 
        			"imageId",
         		lv_imageId_1_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -3884,7 +3884,7 @@ ruleImage returns [EObject current=null]
        			$current, 
        			"features",
         		lv_features_5_0, 
-        		"ImageFeature");
+        		"org.eclipselabs.xdiagram.Dsl.ImageFeature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3906,7 +3906,7 @@ ruleImage returns [EObject current=null]
        			$current, 
        			"children",
         		lv_children_7_0, 
-        		"ChildElement");
+        		"org.eclipselabs.xdiagram.Dsl.ChildElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4041,7 +4041,7 @@ ruleInvisible returns [EObject current=null]
        			$current, 
        			"features",
         		lv_features_5_0, 
-        		"InvisibleFeature");
+        		"org.eclipselabs.xdiagram.Dsl.InvisibleFeature");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4063,7 +4063,7 @@ ruleInvisible returns [EObject current=null]
        			$current, 
        			"children",
         		lv_children_7_0, 
-        		"ChildElement");
+        		"org.eclipselabs.xdiagram.Dsl.ChildElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4221,7 +4221,7 @@ ruleForeground returns [EObject current=null]
        			$current, 
        			"color",
         		lv_color_1_0, 
-        		"Color");
+        		"org.eclipselabs.xdiagram.Dsl.Color");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4239,7 +4239,7 @@ ruleForeground returns [EObject current=null]
        			$current, 
        			"conditional",
         		lv_conditional_2_0, 
-        		"FeatureConditional");
+        		"org.eclipselabs.xdiagram.Dsl.FeatureConditional");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4297,7 +4297,7 @@ ruleBackground returns [EObject current=null]
        			$current, 
        			"color",
         		lv_color_1_0, 
-        		"Color");
+        		"org.eclipselabs.xdiagram.Dsl.Color");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4315,7 +4315,7 @@ ruleBackground returns [EObject current=null]
        			$current, 
        			"conditional",
         		lv_conditional_2_0, 
-        		"FeatureConditional");
+        		"org.eclipselabs.xdiagram.Dsl.FeatureConditional");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4363,7 +4363,7 @@ ruleTransparency returns [EObject current=null]
        			$current, 
        			"percent",
         		lv_percent_1_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -4384,7 +4384,7 @@ ruleTransparency returns [EObject current=null]
        			$current, 
        			"conditional",
         		lv_conditional_3_0, 
-        		"FeatureConditional");
+        		"org.eclipselabs.xdiagram.Dsl.FeatureConditional");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4432,7 +4432,7 @@ ruleSize returns [EObject current=null]
        			$current, 
        			"width",
         		lv_width_1_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -4465,7 +4465,7 @@ ruleSize returns [EObject current=null]
        			$current, 
        			"height",
         		lv_height_3_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -4512,7 +4512,7 @@ ruleSize returns [EObject current=null]
        			$current, 
        			"conditional",
         		lv_conditional_6_0, 
-        		"FeatureConditional");
+        		"org.eclipselabs.xdiagram.Dsl.FeatureConditional");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4560,7 +4560,7 @@ rulePoint returns [EObject current=null]
        			$current, 
        			"x",
         		lv_x_1_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -4578,7 +4578,7 @@ rulePoint returns [EObject current=null]
        			$current, 
        			"y",
         		lv_y_2_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -4595,7 +4595,7 @@ rulePoint returns [EObject current=null]
        			$current, 
        			"conditional",
         		lv_conditional_3_0, 
-        		"FeatureConditional");
+        		"org.eclipselabs.xdiagram.Dsl.FeatureConditional");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4643,7 +4643,7 @@ rulePosition returns [EObject current=null]
        			$current, 
        			"x",
         		lv_x_1_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -4676,7 +4676,7 @@ rulePosition returns [EObject current=null]
        			$current, 
        			"y",
         		lv_y_3_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -4708,7 +4708,7 @@ rulePosition returns [EObject current=null]
        			$current, 
        			"conditional",
         		lv_conditional_5_0, 
-        		"FeatureConditional");
+        		"org.eclipselabs.xdiagram.Dsl.FeatureConditional");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4756,7 +4756,7 @@ ruleCorner returns [EObject current=null]
        			$current, 
        			"angle",
         		lv_angle_1_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -4773,7 +4773,7 @@ ruleCorner returns [EObject current=null]
        			$current, 
        			"conditional",
         		lv_conditional_2_0, 
-        		"FeatureConditional");
+        		"org.eclipselabs.xdiagram.Dsl.FeatureConditional");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4856,7 +4856,7 @@ ruleLayout returns [EObject current=null]
        			$current, 
        			"margin",
         		lv_margin_4_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -4873,7 +4873,7 @@ ruleLayout returns [EObject current=null]
        			$current, 
        			"conditional",
         		lv_conditional_5_0, 
-        		"FeatureConditional");
+        		"org.eclipselabs.xdiagram.Dsl.FeatureConditional");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4920,7 +4920,7 @@ ruleVisible returns [EObject current=null]
        			$current, 
        			"conditional",
         		lv_conditional_1_0, 
-        		"FeatureConditional");
+        		"org.eclipselabs.xdiagram.Dsl.FeatureConditional");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4973,7 +4973,7 @@ ruleTextValue returns [EObject current=null]
        			$current, 
        			"parts",
         		lv_parts_2_0, 
-        		"TextPart");
+        		"org.eclipselabs.xdiagram.Dsl.TextPart");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -4991,7 +4991,7 @@ ruleTextValue returns [EObject current=null]
        			$current, 
        			"conditional",
         		lv_conditional_3_0, 
-        		"FeatureConditional");
+        		"org.eclipselabs.xdiagram.Dsl.FeatureConditional");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5035,7 +5035,7 @@ ruleTextPart returns [EObject current=null]
        			$current, 
        			"text",
         		lv_text_0_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -5145,7 +5145,7 @@ ruleFontProperties returns [EObject current=null]
        			$current, 
        			"size",
         		lv_size_6_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -5192,7 +5192,7 @@ ruleFontProperties returns [EObject current=null]
        			$current, 
        			"conditional",
         		lv_conditional_9_0, 
-        		"FeatureConditional");
+        		"org.eclipselabs.xdiagram.Dsl.FeatureConditional");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5239,7 +5239,7 @@ ruleTextAlign returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_1_0, 
-        		"TextAlignValue");
+        		"org.eclipselabs.xdiagram.Dsl.TextAlignValue");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5257,7 +5257,7 @@ ruleTextAlign returns [EObject current=null]
        			$current, 
        			"conditional",
         		lv_conditional_2_0, 
-        		"FeatureConditional");
+        		"org.eclipselabs.xdiagram.Dsl.FeatureConditional");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5310,7 +5310,7 @@ ruleLineStyle returns [EObject current=null]
        			$current, 
        			"style",
         		lv_style_2_0, 
-        		"LineType");
+        		"org.eclipselabs.xdiagram.Dsl.LineType");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5343,7 +5343,7 @@ ruleLineStyle returns [EObject current=null]
        			$current, 
        			"conditional",
         		lv_conditional_4_0, 
-        		"FeatureConditional");
+        		"org.eclipselabs.xdiagram.Dsl.FeatureConditional");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -5391,7 +5391,7 @@ ruleLineWidth returns [EObject current=null]
        			$current, 
        			"width",
         		lv_width_1_0, 
-        		"INT");
+        		"org.eclipse.xtext.common.Terminals.INT");
 	    }
 
 )
@@ -5408,7 +5408,7 @@ ruleLineWidth returns [EObject current=null]
        			$current, 
        			"conditional",
         		lv_conditional_2_0, 
-        		"FeatureConditional");
+        		"org.eclipselabs.xdiagram.Dsl.FeatureConditional");
 	        afterParserOrEnumRuleCall();
 	    }
 

@@ -8,24 +8,17 @@ diagram FeatureModel {
 	contains FeatureModel.root;
 }
 
-
-
-//node RootFeature rectangle {
-//	size 100 50 resizable;
-//	
-//	child label {
-//		text edit: AbstractFeature.name;
-//		position 50% 50%;
-//		foreground blue;
-//		font 16;
-//		size 100 50;
-//	}
-//}
-
-node RootFeature image "class.png" {
-	size 60 60;
+node RootFeature rectangle {
+	size 100 50 resizable;
+	
+	child label {
+		text edit: AbstractFeature.name;
+		position 50% 50%;
+		foreground blue;
+		font 16;
+		size 100 50;
+	}
 }
-
 
 node Feature invisible {
 	size 100 50 resizable;
@@ -40,40 +33,27 @@ node Feature invisible {
 		}
 	}
 
-	child circle {
-		size 5;
-		position 50 50;
-		background red;
-//		anchor incoming Feature.parent;
+	child invisible {
+		size 3 3;
+		position 50% 50;
+		anchor incoming Feature.parent;
 	}
 	
-		
 	child circle {
 		size 10;
 		position 50% 0;
 		background black if Feature.optional = false;
 		background white if Feature.optional = true;
-//		anchor outgoing Feature.parent;
+		anchor outgoing Feature.parent;
 	}
-	
-	
 }
-
 
 link reference Feature.parent {
-	linestyle solid;
-		
+	linestyle solid;	
 }
-
-
-
 
 link class Constraint source Feature.constraints target Constraint.feature {
 	linestyle dotted manhattan;
-	decorator 100% arrow {
-		
-	}
-	
-	
+	decorator 100% arrow { }
 }
 

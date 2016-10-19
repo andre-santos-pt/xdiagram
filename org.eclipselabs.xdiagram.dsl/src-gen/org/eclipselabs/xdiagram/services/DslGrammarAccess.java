@@ -19,7 +19,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	public class XDiagramElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "XDiagram");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.XDiagram");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cMetamodelKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cImportURIAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -41,15 +41,17 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFiguresCustomFigureParserRuleCall_5_3_0 = (RuleCall)cFiguresAssignment_5_3.eContents().get(0);
 		
 		//XDiagram:
-		//	"metamodel" importURI=STRING imports+=ImportStatement diagram=Diagram groups+=ToolGroup* (elements+=DiagramElement |
-		//	styles+=Style | colors+=CustomColor | figures+=CustomFigure)*;
+		//	'metamodel' importURI=STRING
+		//	imports+=ImportStatement
+		//	diagram=Diagram
+		//	groups+=ToolGroup* (elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"metamodel" importURI=STRING imports+=ImportStatement diagram=Diagram groups+=ToolGroup* (elements+=DiagramElement |
+		//'metamodel' importURI=STRING imports+=ImportStatement diagram=Diagram groups+=ToolGroup* (elements+=DiagramElement |
 		//styles+=Style | colors+=CustomColor | figures+=CustomFigure)*
 		public Group getGroup() { return cGroup; }
 
-		//"metamodel"
+		//'metamodel'
 		public Keyword getMetamodelKeyword_0() { return cMetamodelKeyword_0; }
 
 		//importURI=STRING
@@ -105,7 +107,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ImportStatementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ImportStatement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.ImportStatement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cImportStatementAction_0 = (Action)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
@@ -115,19 +117,19 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// importedNamespace apparently cannot be on the root element
 		//ImportStatement:
-		//	{ImportStatement} ("import" importedNamespace=QualifiedNameWithWildCard)?;
+		//	{ImportStatement} ('import' importedNamespace=QualifiedNameWithWildCard)?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//{ImportStatement} ("import" importedNamespace=QualifiedNameWithWildCard)?
+		//{ImportStatement} ('import' importedNamespace=QualifiedNameWithWildCard)?
 		public Group getGroup() { return cGroup; }
 
 		//{ImportStatement}
 		public Action getImportStatementAction_0() { return cImportStatementAction_0; }
 
-		//("import" importedNamespace=QualifiedNameWithWildCard)?
+		//('import' importedNamespace=QualifiedNameWithWildCard)?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//"import"
+		//'import'
 		public Keyword getImportKeyword_1_0() { return cImportKeyword_1_0; }
 
 		//importedNamespace=QualifiedNameWithWildCard
@@ -138,7 +140,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QualifiedName");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.QualifiedName");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
@@ -146,19 +148,19 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
 		
 		//QualifiedName:
-		//	ID ("." ID)*;
+		//	ID ('.' ID)*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//ID ("." ID)*
+		//ID ('.' ID)*
 		public Group getGroup() { return cGroup; }
 
 		//ID
 		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
 
-		//("." ID)*
+		//('.' ID)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//"."
+		//'.'
 		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
 
 		//ID
@@ -166,35 +168,35 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class QualifiedNameWithWildCardElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QualifiedNameWithWildCard");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.QualifiedNameWithWildCard");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final RuleCall cQualifiedNameParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Keyword cAsteriskKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
 		
-		//QualifiedNameWithWildCard returns ecore::EString:
-		//	QualifiedName ("." "*")?;
+		//QualifiedNameWithWildCard:
+		//	QualifiedName ('.' '*')?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//QualifiedName ("." "*")?
+		//QualifiedName ('.' '*')?
 		public Group getGroup() { return cGroup; }
 
 		//QualifiedName
 		public RuleCall getQualifiedNameParserRuleCall_0() { return cQualifiedNameParserRuleCall_0; }
 
-		//("." "*")?
+		//('.' '*')?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//"."
+		//'.'
 		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
 
-		//"*"
+		//'*'
 		public Keyword getAsteriskKeyword_1_1() { return cAsteriskKeyword_1_1; }
 	}
 
 	public class DiagramElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Diagram");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Diagram");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDiagramKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cModelClassAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -206,13 +208,15 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Diagram:
-		//	"diagram" modelClass=[ecore::EClass|QualifiedName] "{" contains+=Contains* "}";
+		//	'diagram' modelClass=[ecore::EClass|QualifiedName] '{'
+		//	contains+=Contains*
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"diagram" modelClass=[ecore::EClass|QualifiedName] "{" contains+=Contains* "}"
+		//'diagram' modelClass=[ecore::EClass|QualifiedName] '{' contains+=Contains* '}'
 		public Group getGroup() { return cGroup; }
 
-		//"diagram"
+		//'diagram'
 		public Keyword getDiagramKeyword_0() { return cDiagramKeyword_0; }
 
 		//modelClass=[ecore::EClass|QualifiedName]
@@ -224,7 +228,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//QualifiedName
 		public RuleCall getModelClassEClassQualifiedNameParserRuleCall_1_0_1() { return cModelClassEClassQualifiedNameParserRuleCall_1_0_1; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
 		//contains+=Contains*
@@ -233,12 +237,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//Contains
 		public RuleCall getContainsContainsParserRuleCall_3_0() { return cContainsContainsParserRuleCall_3_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class ToolGroupElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ToolGroup");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.ToolGroup");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cToolgroupKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -248,13 +252,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//ToolGroup:
-		//	"toolgroup" name=ID description=STRING? ";";
+		//	'toolgroup' name=ID description=STRING? ';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"toolgroup" name=ID description=STRING? ";"
+		//'toolgroup' name=ID description=STRING? ';'
 		public Group getGroup() { return cGroup; }
 
-		//"toolgroup"
+		//'toolgroup'
 		public Keyword getToolgroupKeyword_0() { return cToolgroupKeyword_0; }
 
 		//name=ID
@@ -269,12 +273,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getDescriptionSTRINGTerminalRuleCall_2_0() { return cDescriptionSTRINGTerminalRuleCall_2_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
 	public class DiagramElementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DiagramElement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.DiagramElement");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cNodeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cLinkParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -294,7 +298,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class StyleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Style");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Style");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cStyleKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -311,13 +315,15 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Style:
-		//	"style" name=ID (styled?="+" style=[Style])? "{" features+=StyleFeature* "}";
+		//	'style' name=ID (styled?='+' style=[Style])? '{'
+		//	features+=StyleFeature*
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"style" name=ID (styled?="+" style=[Style])? "{" features+=StyleFeature* "}"
+		//'style' name=ID (styled?='+' style=[Style])? '{' features+=StyleFeature* '}'
 		public Group getGroup() { return cGroup; }
 
-		//"style"
+		//'style'
 		public Keyword getStyleKeyword_0() { return cStyleKeyword_0; }
 
 		//name=ID
@@ -326,13 +332,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//(styled?="+" style=[Style])?
+		//(styled?='+' style=[Style])?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//styled?="+"
+		//styled?='+'
 		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
 
-		//"+"
+		//'+'
 		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
 
 		//style=[Style]
@@ -344,7 +350,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//features+=StyleFeature*
@@ -353,12 +359,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//StyleFeature
 		public RuleCall getFeaturesStyleFeatureParserRuleCall_4_0() { return cFeaturesStyleFeatureParserRuleCall_4_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class FeatureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Feature");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Feature");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cStyleFeatureParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cLinkedFeatureParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -381,13 +387,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class LinkedFeatureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LinkedFeature");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.LinkedFeature");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cContainsParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cAnchorParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//LinkedFeature returns Feature:
-		//	Contains | Anchor;
+		//LinkedFeature Feature:
+		//	Contains | Anchor
 		@Override public ParserRule getRule() { return rule; }
 
 		//Contains | Anchor
@@ -401,7 +407,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class StyleFeatureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "StyleFeature");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.StyleFeature");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cSizeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cPositionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -416,9 +422,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLineStyleParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
 		private final RuleCall cLineWidthParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
 		
-		//StyleFeature returns Feature:
+		//StyleFeature Feature:
 		//	Size | Position | Point | Corner | Background | Foreground | Transparency | FontProperties | TextValue | TextAlign |
-		//	LineStyle | LineWidth;
+		//	LineStyle | LineWidth
 		@Override public ParserRule getRule() { return rule; }
 
 		//Size | Position | Point | Corner | Background | Foreground | Transparency | FontProperties | TextValue | TextAlign |
@@ -463,7 +469,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class FeatureContainerElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FeatureContainer");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.FeatureContainer");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cConnectableElementParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cDecoratorElementParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -491,14 +497,14 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ChildElementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ChildElement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.ChildElement");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cConnectableElementParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cLineParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cArrowParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
-		//ChildElement returns FeatureContainer:
-		//	ConnectableElement | Line | Arrow;
+		//ChildElement FeatureContainer:
+		//	ConnectableElement | Line | Arrow
 		@Override public ParserRule getRule() { return rule; }
 
 		//ConnectableElement | Line | Arrow
@@ -515,7 +521,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class FeatureConditionalElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FeatureConditional");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.FeatureConditional");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cIfKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cModelAttributeAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -528,13 +534,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// TODO validate ATT / Value 
 		//FeatureConditional:
-		//	"if" modelAttribute=[ecore::EAttribute|QualifiedName] operator=Operator value=Value;
+		//	'if' modelAttribute=[ecore::EAttribute|QualifiedName] operator=Operator value=Value;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"if" modelAttribute=[ecore::EAttribute|QualifiedName] operator=Operator value=Value
+		//'if' modelAttribute=[ecore::EAttribute|QualifiedName] operator=Operator value=Value
 		public Group getGroup() { return cGroup; }
 
-		//"if"
+		//'if'
 		public Keyword getIfKeyword_0() { return cIfKeyword_0; }
 
 		//modelAttribute=[ecore::EAttribute|QualifiedName]
@@ -560,7 +566,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class NodeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Node");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Node");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
 		private final Assignment cToolAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
@@ -586,21 +592,21 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRootFigureConnectableElementParserRuleCall_3_0 = (RuleCall)cRootFigureAssignment_3.eContents().get(0);
 		
 		//Node:
-		//	(tool?="tool" toolName=STRING (group?="group" groupId=[ToolGroup])? (icon?="icon" imageId=ID)?)? "node"
-		//	modelClass=[ecore::EClass|QualifiedName] rootFigure=ConnectableElement;
+		//	(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
+		//	'node' modelClass=[ecore::EClass|QualifiedName] rootFigure=ConnectableElement;
 		@Override public ParserRule getRule() { return rule; }
 
-		//(tool?="tool" toolName=STRING (group?="group" groupId=[ToolGroup])? (icon?="icon" imageId=ID)?)? "node"
+		//(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)? 'node'
 		//modelClass=[ecore::EClass|QualifiedName] rootFigure=ConnectableElement
 		public Group getGroup() { return cGroup; }
 
-		//(tool?="tool" toolName=STRING (group?="group" groupId=[ToolGroup])? (icon?="icon" imageId=ID)?)?
+		//(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
 		public Group getGroup_0() { return cGroup_0; }
 
-		//tool?="tool"
+		//tool?='tool'
 		public Assignment getToolAssignment_0_0() { return cToolAssignment_0_0; }
 
-		//"tool"
+		//'tool'
 		public Keyword getToolToolKeyword_0_0_0() { return cToolToolKeyword_0_0_0; }
 
 		//toolName=STRING
@@ -609,13 +615,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getToolNameSTRINGTerminalRuleCall_0_1_0() { return cToolNameSTRINGTerminalRuleCall_0_1_0; }
 
-		//(group?="group" groupId=[ToolGroup])?
+		//(group?='group' groupId=[ToolGroup])?
 		public Group getGroup_0_2() { return cGroup_0_2; }
 
-		//group?="group"
+		//group?='group'
 		public Assignment getGroupAssignment_0_2_0() { return cGroupAssignment_0_2_0; }
 
-		//"group"
+		//'group'
 		public Keyword getGroupGroupKeyword_0_2_0_0() { return cGroupGroupKeyword_0_2_0_0; }
 
 		//groupId=[ToolGroup]
@@ -627,13 +633,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getGroupIdToolGroupIDTerminalRuleCall_0_2_1_0_1() { return cGroupIdToolGroupIDTerminalRuleCall_0_2_1_0_1; }
 
-		//(icon?="icon" imageId=ID)?
+		//(icon?='icon' imageId=ID)?
 		public Group getGroup_0_3() { return cGroup_0_3; }
 
-		//icon?="icon"
+		//icon?='icon'
 		public Assignment getIconAssignment_0_3_0() { return cIconAssignment_0_3_0; }
 
-		//"icon"
+		//'icon'
 		public Keyword getIconIconKeyword_0_3_0_0() { return cIconIconKeyword_0_3_0_0; }
 
 		//imageId=ID
@@ -642,7 +648,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getImageIdIDTerminalRuleCall_0_3_1_0() { return cImageIdIDTerminalRuleCall_0_3_1_0; }
 
-		//"node"
+		//'node'
 		public Keyword getNodeKeyword_1() { return cNodeKeyword_1; }
 
 		//modelClass=[ecore::EClass|QualifiedName]
@@ -662,7 +668,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class LinkElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Link");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Link");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
 		private final Assignment cToolAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
@@ -716,27 +722,31 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//Link:
-		//	(tool?="tool" toolName=STRING (group?="group" groupId=[ToolGroup])? (icon?="icon" imageId=ID)?)? "link"
-		//	(reference?="reference" modelReference=[ecore::EReference|QualifiedName] | complex?="class"
-		//	modelClass=[ecore::EClass|QualifiedName] "source" sourceReference=[ecore::EReference|QualifiedName] "target"
-		//	targetReference=[ecore::EReference|QualifiedName]) (styled?="+" style=[Style])? "{" features+=LinkFeature*
-		//	decorators+=Decorator* "}";
+		//	(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
+		//	'link' (reference?='reference' modelReference=[ecore::EReference|QualifiedName] | complex?='class'
+		//	modelClass=[ecore::EClass|QualifiedName]
+		//	'source' sourceReference=[ecore::EReference|QualifiedName]
+		//	'target' targetReference=[ecore::EReference|QualifiedName]) (styled?='+' style=[Style])?
+		//	'{'
+		//	features+=LinkFeature*
+		//	decorators+=Decorator*
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//(tool?="tool" toolName=STRING (group?="group" groupId=[ToolGroup])? (icon?="icon" imageId=ID)?)? "link"
-		//(reference?="reference" modelReference=[ecore::EReference|QualifiedName] | complex?="class"
-		//modelClass=[ecore::EClass|QualifiedName] "source" sourceReference=[ecore::EReference|QualifiedName] "target"
-		//targetReference=[ecore::EReference|QualifiedName]) (styled?="+" style=[Style])? "{" features+=LinkFeature*
-		//decorators+=Decorator* "}"
+		//(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)? 'link'
+		//(reference?='reference' modelReference=[ecore::EReference|QualifiedName] | complex?='class'
+		//modelClass=[ecore::EClass|QualifiedName] 'source' sourceReference=[ecore::EReference|QualifiedName] 'target'
+		//targetReference=[ecore::EReference|QualifiedName]) (styled?='+' style=[Style])? '{' features+=LinkFeature*
+		//decorators+=Decorator* '}'
 		public Group getGroup() { return cGroup; }
 
-		//(tool?="tool" toolName=STRING (group?="group" groupId=[ToolGroup])? (icon?="icon" imageId=ID)?)?
+		//(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
 		public Group getGroup_0() { return cGroup_0; }
 
-		//tool?="tool"
+		//tool?='tool'
 		public Assignment getToolAssignment_0_0() { return cToolAssignment_0_0; }
 
-		//"tool"
+		//'tool'
 		public Keyword getToolToolKeyword_0_0_0() { return cToolToolKeyword_0_0_0; }
 
 		//toolName=STRING
@@ -745,13 +755,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getToolNameSTRINGTerminalRuleCall_0_1_0() { return cToolNameSTRINGTerminalRuleCall_0_1_0; }
 
-		//(group?="group" groupId=[ToolGroup])?
+		//(group?='group' groupId=[ToolGroup])?
 		public Group getGroup_0_2() { return cGroup_0_2; }
 
-		//group?="group"
+		//group?='group'
 		public Assignment getGroupAssignment_0_2_0() { return cGroupAssignment_0_2_0; }
 
-		//"group"
+		//'group'
 		public Keyword getGroupGroupKeyword_0_2_0_0() { return cGroupGroupKeyword_0_2_0_0; }
 
 		//groupId=[ToolGroup]
@@ -763,13 +773,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getGroupIdToolGroupIDTerminalRuleCall_0_2_1_0_1() { return cGroupIdToolGroupIDTerminalRuleCall_0_2_1_0_1; }
 
-		//(icon?="icon" imageId=ID)?
+		//(icon?='icon' imageId=ID)?
 		public Group getGroup_0_3() { return cGroup_0_3; }
 
-		//icon?="icon"
+		//icon?='icon'
 		public Assignment getIconAssignment_0_3_0() { return cIconAssignment_0_3_0; }
 
-		//"icon"
+		//'icon'
 		public Keyword getIconIconKeyword_0_3_0_0() { return cIconIconKeyword_0_3_0_0; }
 
 		//imageId=ID
@@ -778,21 +788,21 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getImageIdIDTerminalRuleCall_0_3_1_0() { return cImageIdIDTerminalRuleCall_0_3_1_0; }
 
-		//"link"
+		//'link'
 		public Keyword getLinkKeyword_1() { return cLinkKeyword_1; }
 
-		//reference?="reference" modelReference=[ecore::EReference|QualifiedName] | complex?="class"
-		//modelClass=[ecore::EClass|QualifiedName] "source" sourceReference=[ecore::EReference|QualifiedName] "target"
-		//targetReference=[ecore::EReference|QualifiedName]
+		//(reference?='reference' modelReference=[ecore::EReference|QualifiedName] | complex?='class'
+		//modelClass=[ecore::EClass|QualifiedName] 'source' sourceReference=[ecore::EReference|QualifiedName] 'target'
+		//targetReference=[ecore::EReference|QualifiedName])
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
-		//reference?="reference" modelReference=[ecore::EReference|QualifiedName]
+		//reference?='reference' modelReference=[ecore::EReference|QualifiedName]
 		public Group getGroup_2_0() { return cGroup_2_0; }
 
-		//reference?="reference"
+		//reference?='reference'
 		public Assignment getReferenceAssignment_2_0_0() { return cReferenceAssignment_2_0_0; }
 
-		//"reference"
+		//'reference'
 		public Keyword getReferenceReferenceKeyword_2_0_0_0() { return cReferenceReferenceKeyword_2_0_0_0; }
 
 		//modelReference=[ecore::EReference|QualifiedName]
@@ -804,14 +814,14 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//QualifiedName
 		public RuleCall getModelReferenceEReferenceQualifiedNameParserRuleCall_2_0_1_0_1() { return cModelReferenceEReferenceQualifiedNameParserRuleCall_2_0_1_0_1; }
 
-		//complex?="class" modelClass=[ecore::EClass|QualifiedName] "source" sourceReference=[ecore::EReference|QualifiedName]
-		//"target" targetReference=[ecore::EReference|QualifiedName]
+		//complex?='class' modelClass=[ecore::EClass|QualifiedName] 'source' sourceReference=[ecore::EReference|QualifiedName]
+		//'target' targetReference=[ecore::EReference|QualifiedName]
 		public Group getGroup_2_1() { return cGroup_2_1; }
 
-		//complex?="class"
+		//complex?='class'
 		public Assignment getComplexAssignment_2_1_0() { return cComplexAssignment_2_1_0; }
 
-		//"class"
+		//'class'
 		public Keyword getComplexClassKeyword_2_1_0_0() { return cComplexClassKeyword_2_1_0_0; }
 
 		//modelClass=[ecore::EClass|QualifiedName]
@@ -823,7 +833,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//QualifiedName
 		public RuleCall getModelClassEClassQualifiedNameParserRuleCall_2_1_1_0_1() { return cModelClassEClassQualifiedNameParserRuleCall_2_1_1_0_1; }
 
-		//"source"
+		//'source'
 		public Keyword getSourceKeyword_2_1_2() { return cSourceKeyword_2_1_2; }
 
 		//sourceReference=[ecore::EReference|QualifiedName]
@@ -835,7 +845,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//QualifiedName
 		public RuleCall getSourceReferenceEReferenceQualifiedNameParserRuleCall_2_1_3_0_1() { return cSourceReferenceEReferenceQualifiedNameParserRuleCall_2_1_3_0_1; }
 
-		//"target"
+		//'target'
 		public Keyword getTargetKeyword_2_1_4() { return cTargetKeyword_2_1_4; }
 
 		//targetReference=[ecore::EReference|QualifiedName]
@@ -847,13 +857,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//QualifiedName
 		public RuleCall getTargetReferenceEReferenceQualifiedNameParserRuleCall_2_1_5_0_1() { return cTargetReferenceEReferenceQualifiedNameParserRuleCall_2_1_5_0_1; }
 
-		//(styled?="+" style=[Style])?
+		//(styled?='+' style=[Style])?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//styled?="+"
+		//styled?='+'
 		public Assignment getStyledAssignment_3_0() { return cStyledAssignment_3_0; }
 
-		//"+"
+		//'+'
 		public Keyword getStyledPlusSignKeyword_3_0_0() { return cStyledPlusSignKeyword_3_0_0; }
 
 		//style=[Style]
@@ -865,7 +875,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getStyleStyleIDTerminalRuleCall_3_1_0_1() { return cStyleStyleIDTerminalRuleCall_3_1_0_1; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
 		//features+=LinkFeature*
@@ -880,19 +890,19 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//Decorator
 		public RuleCall getDecoratorsDecoratorParserRuleCall_6_0() { return cDecoratorsDecoratorParserRuleCall_6_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class LinkFeatureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LinkFeature");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.LinkFeature");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cForegroundParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cLineStyleParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cLineWidthParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
-		//LinkFeature returns Feature:
-		//	Foreground | LineStyle | LineWidth;
+		//LinkFeature Feature:
+		//	Foreground | LineStyle | LineWidth
 		@Override public ParserRule getRule() { return rule; }
 
 		//Foreground | LineStyle | LineWidth
@@ -909,7 +919,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class DecoratorElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Decorator");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Decorator");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDecoratorKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cPositionAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -919,13 +929,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cElementDecoratorElementParserRuleCall_3_0 = (RuleCall)cElementAssignment_3.eContents().get(0);
 		
 		//Decorator:
-		//	"decorator" position=INT "%" element=DecoratorElement;
+		//	'decorator' position=INT '%' element=DecoratorElement;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"decorator" position=INT "%" element=DecoratorElement
+		//'decorator' position=INT '%' element=DecoratorElement
 		public Group getGroup() { return cGroup; }
 
-		//"decorator"
+		//'decorator'
 		public Keyword getDecoratorKeyword_0() { return cDecoratorKeyword_0; }
 
 		//position=INT
@@ -934,7 +944,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getPositionINTTerminalRuleCall_1_0() { return cPositionINTTerminalRuleCall_1_0; }
 
-		//"%"
+		//'%'
 		public Keyword getPercentSignKeyword_2() { return cPercentSignKeyword_2; }
 
 		//element=DecoratorElement
@@ -945,7 +955,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class AnchorElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Anchor");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Anchor");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cAnchorKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cDirectionAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -963,15 +973,16 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// TODO validation
 		//Anchor:
-		//	"anchor" direction=AnchorDirection modelReference=[ecore::EReference|QualifiedName] ("max" max=INT)?
-		//	conditional=FeatureConditional? ";";
+		//	'anchor' direction=AnchorDirection modelReference=[ecore::EReference|QualifiedName] ('max' max=INT)?
+		//	conditional=FeatureConditional?
+		//	';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"anchor" direction=AnchorDirection modelReference=[ecore::EReference|QualifiedName] ("max" max=INT)?
-		//conditional=FeatureConditional? ";"
+		//'anchor' direction=AnchorDirection modelReference=[ecore::EReference|QualifiedName] ('max' max=INT)?
+		//conditional=FeatureConditional? ';'
 		public Group getGroup() { return cGroup; }
 
-		//"anchor"
+		//'anchor'
 		public Keyword getAnchorKeyword_0() { return cAnchorKeyword_0; }
 
 		//direction=AnchorDirection
@@ -989,10 +1000,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//QualifiedName
 		public RuleCall getModelReferenceEReferenceQualifiedNameParserRuleCall_2_0_1() { return cModelReferenceEReferenceQualifiedNameParserRuleCall_2_0_1; }
 
-		//("max" max=INT)?
+		//('max' max=INT)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//"max"
+		//'max'
 		public Keyword getMaxKeyword_3_0() { return cMaxKeyword_3_0; }
 
 		//max=INT
@@ -1007,12 +1018,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatureConditional
 		public RuleCall getConditionalFeatureConditionalParserRuleCall_4_0() { return cConditionalFeatureConditionalParserRuleCall_4_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 	}
 
 	public class CustomColorElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CustomColor");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.CustomColor");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cColorKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1028,13 +1039,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		////---------------------------------------
 		//// Colors
 		//CustomColor:
-		//	"color" name=ID R=INT G=INT B=INT ";";
+		//	'color' name=ID R=INT G=INT B=INT ';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"color" name=ID R=INT G=INT B=INT ";"
+		//'color' name=ID R=INT G=INT B=INT ';'
 		public Group getGroup() { return cGroup; }
 
-		//"color"
+		//'color'
 		public Keyword getColorKeyword_0() { return cColorKeyword_0; }
 
 		//name=ID
@@ -1061,12 +1072,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getBINTTerminalRuleCall_4_0() { return cBINTTerminalRuleCall_4_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 	}
 
 	public class ColorElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Color");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Color");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Assignment cDefaultAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
 		private final RuleCall cDefaultDefaultColorEnumRuleCall_0_0 = (RuleCall)cDefaultAssignment_0.eContents().get(0);
@@ -1098,7 +1109,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ConnectableElementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ConnectableElement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.ConnectableElement");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cRectangleParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cRhombusParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -1152,7 +1163,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class DecoratorElementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DecoratorElement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.DecoratorElement");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cEllipseParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cRhombusParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -1163,8 +1174,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cArrowParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
 		private final RuleCall cLineParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		
-		//DecoratorElement returns FeatureContainer:
-		//	Ellipse | Rhombus | Polyline | Triangle | Label | Image | Arrow | Line;
+		//DecoratorElement FeatureContainer:
+		//	Ellipse | Rhombus | Polyline | Triangle | Label | Image | Arrow | Line
 		@Override public ParserRule getRule() { return rule; }
 
 		//Ellipse | Rhombus | Polyline | Triangle | Label | Image | Arrow | Line
@@ -1196,7 +1207,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ConnectableElementFeatureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ConnectableElementFeature");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.ConnectableElementFeature");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cPositionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cSizeParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -1209,8 +1220,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLayoutParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		private final RuleCall cVisibleParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
 		
-		//ConnectableElementFeature returns Feature:
-		//	Position | Size | ColorFeature | Transparency | LineStyle | LineWidth | Contains | Anchor | Layout | Visible;
+		//ConnectableElementFeature Feature:
+		//	Position | Size | ColorFeature | Transparency | LineStyle | LineWidth | Contains | Anchor | Layout | Visible
 		@Override public ParserRule getRule() { return rule; }
 
 		//Position | Size | ColorFeature | Transparency | LineStyle | LineWidth | Contains | Anchor | Layout | Visible
@@ -1248,7 +1259,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class CustomFigureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CustomFigure");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.CustomFigure");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cFigureKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1258,13 +1269,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cElementConnectableElementParserRuleCall_3_0 = (RuleCall)cElementAssignment_3.eContents().get(0);
 		
 		//CustomFigure:
-		//	"figure" name=ID "as" element=ConnectableElement;
+		//	'figure' name=ID 'as' element=ConnectableElement;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"figure" name=ID "as" element=ConnectableElement
+		//'figure' name=ID 'as' element=ConnectableElement
 		public Group getGroup() { return cGroup; }
 
-		//"figure"
+		//'figure'
 		public Keyword getFigureKeyword_0() { return cFigureKeyword_0; }
 
 		//name=ID
@@ -1273,7 +1284,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"as"
+		//'as'
 		public Keyword getAsKeyword_2() { return cAsKeyword_2; }
 
 		//element=ConnectableElement
@@ -1284,7 +1295,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class CustomElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Custom");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Custom");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cFigureKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cFigureAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1306,15 +1317,16 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Custom:
-		//	"figure" figure=[CustomFigure] (styled?="+" style=[Style])? "{" features+=LinkedFeature* ("child"
-		//	children+=ChildElement)* "}";
+		//	'figure' figure=[CustomFigure] (styled?='+' style=[Style])? '{'
+		//	features+=LinkedFeature* ('child' children+=ChildElement)*
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"figure" figure=[CustomFigure] (styled?="+" style=[Style])? "{" features+=LinkedFeature* ("child"
-		//children+=ChildElement)* "}"
+		//'figure' figure=[CustomFigure] (styled?='+' style=[Style])? '{' features+=LinkedFeature* ('child'
+		//children+=ChildElement)* '}'
 		public Group getGroup() { return cGroup; }
 
-		//"figure"
+		//'figure'
 		public Keyword getFigureKeyword_0() { return cFigureKeyword_0; }
 
 		//figure=[CustomFigure]
@@ -1326,13 +1338,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getFigureCustomFigureIDTerminalRuleCall_1_0_1() { return cFigureCustomFigureIDTerminalRuleCall_1_0_1; }
 
-		//(styled?="+" style=[Style])?
+		//(styled?='+' style=[Style])?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//styled?="+"
+		//styled?='+'
 		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
 
-		//"+"
+		//'+'
 		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
 
 		//style=[Style]
@@ -1344,7 +1356,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//features+=LinkedFeature*
@@ -1353,10 +1365,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//LinkedFeature
 		public RuleCall getFeaturesLinkedFeatureParserRuleCall_4_0() { return cFeaturesLinkedFeatureParserRuleCall_4_0; }
 
-		//("child" children+=ChildElement)*
+		//('child' children+=ChildElement)*
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"child"
+		//'child'
 		public Keyword getChildKeyword_5_0() { return cChildKeyword_5_0; }
 
 		//children+=ChildElement
@@ -1365,12 +1377,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChildElement
 		public RuleCall getChildrenChildElementParserRuleCall_5_1_0() { return cChildrenChildElementParserRuleCall_5_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class RectangleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Rectangle");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Rectangle");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
 		private final Assignment cRectangleAssignment_0_0 = (Assignment)cAlternatives_0.eContents().get(0);
@@ -1393,36 +1405,37 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Rectangle:
-		//	(rectangle?="rectangle" | square?="square") (styled?="+" style=[Style])? "{" features+=RectangleFeature* ("child"
-		//	children+=ChildElement)* "}";
+		//	(rectangle?='rectangle' | square?='square') (styled?='+' style=[Style])? '{'
+		//	features+=RectangleFeature* ('child' children+=ChildElement)*
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//(rectangle?="rectangle" | square?="square") (styled?="+" style=[Style])? "{" features+=RectangleFeature* ("child"
-		//children+=ChildElement)* "}"
+		//(rectangle?='rectangle' | square?='square') (styled?='+' style=[Style])? '{' features+=RectangleFeature* ('child'
+		//children+=ChildElement)* '}'
 		public Group getGroup() { return cGroup; }
 
-		//rectangle?="rectangle" | square?="square"
+		//(rectangle?='rectangle' | square?='square')
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
-		//rectangle?="rectangle"
+		//rectangle?='rectangle'
 		public Assignment getRectangleAssignment_0_0() { return cRectangleAssignment_0_0; }
 
-		//"rectangle"
+		//'rectangle'
 		public Keyword getRectangleRectangleKeyword_0_0_0() { return cRectangleRectangleKeyword_0_0_0; }
 
-		//square?="square"
+		//square?='square'
 		public Assignment getSquareAssignment_0_1() { return cSquareAssignment_0_1; }
 
-		//"square"
+		//'square'
 		public Keyword getSquareSquareKeyword_0_1_0() { return cSquareSquareKeyword_0_1_0; }
 
-		//(styled?="+" style=[Style])?
+		//(styled?='+' style=[Style])?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//styled?="+"
+		//styled?='+'
 		public Assignment getStyledAssignment_1_0() { return cStyledAssignment_1_0; }
 
-		//"+"
+		//'+'
 		public Keyword getStyledPlusSignKeyword_1_0_0() { return cStyledPlusSignKeyword_1_0_0; }
 
 		//style=[Style]
@@ -1434,7 +1447,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getStyleStyleIDTerminalRuleCall_1_1_0_1() { return cStyleStyleIDTerminalRuleCall_1_1_0_1; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
 		//features+=RectangleFeature*
@@ -1443,10 +1456,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//RectangleFeature
 		public RuleCall getFeaturesRectangleFeatureParserRuleCall_3_0() { return cFeaturesRectangleFeatureParserRuleCall_3_0; }
 
-		//("child" children+=ChildElement)*
+		//('child' children+=ChildElement)*
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"child"
+		//'child'
 		public Keyword getChildKeyword_4_0() { return cChildKeyword_4_0; }
 
 		//children+=ChildElement
@@ -1455,18 +1468,18 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChildElement
 		public RuleCall getChildrenChildElementParserRuleCall_4_1_0() { return cChildrenChildElementParserRuleCall_4_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class RectangleFeatureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RectangleFeature");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.RectangleFeature");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cConnectableElementFeatureParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cCornerParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//RectangleFeature returns Feature:
-		//	ConnectableElementFeature | Corner;
+		//RectangleFeature Feature:
+		//	ConnectableElementFeature | Corner
 		@Override public ParserRule getRule() { return rule; }
 
 		//ConnectableElementFeature | Corner
@@ -1480,7 +1493,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class RhombusElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Rhombus");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Rhombus");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cRhombusAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cRhombusKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -1500,27 +1513,29 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Rhombus:
-		//	{Rhombus} "rhombus" (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature* ("child"
-		//	children+=ChildElement)* "}";
+		//	{Rhombus}
+		//	'rhombus' (styled?='+' style=[Style])? '{'
+		//	features+=ConnectableElementFeature* ('child' children+=ChildElement)*
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//{Rhombus} "rhombus" (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature* ("child"
-		//children+=ChildElement)* "}"
+		//{Rhombus} 'rhombus' (styled?='+' style=[Style])? '{' features+=ConnectableElementFeature* ('child'
+		//children+=ChildElement)* '}'
 		public Group getGroup() { return cGroup; }
 
 		//{Rhombus}
 		public Action getRhombusAction_0() { return cRhombusAction_0; }
 
-		//"rhombus"
+		//'rhombus'
 		public Keyword getRhombusKeyword_1() { return cRhombusKeyword_1; }
 
-		//(styled?="+" style=[Style])?
+		//(styled?='+' style=[Style])?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//styled?="+"
+		//styled?='+'
 		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
 
-		//"+"
+		//'+'
 		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
 
 		//style=[Style]
@@ -1532,7 +1547,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//features+=ConnectableElementFeature*
@@ -1541,10 +1556,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ConnectableElementFeature
 		public RuleCall getFeaturesConnectableElementFeatureParserRuleCall_4_0() { return cFeaturesConnectableElementFeatureParserRuleCall_4_0; }
 
-		//("child" children+=ChildElement)*
+		//('child' children+=ChildElement)*
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"child"
+		//'child'
 		public Keyword getChildKeyword_5_0() { return cChildKeyword_5_0; }
 
 		//children+=ChildElement
@@ -1553,12 +1568,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChildElement
 		public RuleCall getChildrenChildElementParserRuleCall_5_1_0() { return cChildrenChildElementParserRuleCall_5_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class EllipseElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Ellipse");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Ellipse");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
 		private final Assignment cEllipseAssignment_0_0 = (Assignment)cAlternatives_0.eContents().get(0);
@@ -1581,36 +1596,37 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Ellipse:
-		//	(ellipse?="ellipse" | circle?="circle") (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature* ("child"
-		//	children+=ChildElement)* "}";
+		//	(ellipse?='ellipse' | circle?='circle') (styled?='+' style=[Style])? '{'
+		//	features+=ConnectableElementFeature* ('child' children+=ChildElement)*
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//(ellipse?="ellipse" | circle?="circle") (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature* ("child"
-		//children+=ChildElement)* "}"
+		//(ellipse?='ellipse' | circle?='circle') (styled?='+' style=[Style])? '{' features+=ConnectableElementFeature* ('child'
+		//children+=ChildElement)* '}'
 		public Group getGroup() { return cGroup; }
 
-		//ellipse?="ellipse" | circle?="circle"
+		//(ellipse?='ellipse' | circle?='circle')
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
-		//ellipse?="ellipse"
+		//ellipse?='ellipse'
 		public Assignment getEllipseAssignment_0_0() { return cEllipseAssignment_0_0; }
 
-		//"ellipse"
+		//'ellipse'
 		public Keyword getEllipseEllipseKeyword_0_0_0() { return cEllipseEllipseKeyword_0_0_0; }
 
-		//circle?="circle"
+		//circle?='circle'
 		public Assignment getCircleAssignment_0_1() { return cCircleAssignment_0_1; }
 
-		//"circle"
+		//'circle'
 		public Keyword getCircleCircleKeyword_0_1_0() { return cCircleCircleKeyword_0_1_0; }
 
-		//(styled?="+" style=[Style])?
+		//(styled?='+' style=[Style])?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//styled?="+"
+		//styled?='+'
 		public Assignment getStyledAssignment_1_0() { return cStyledAssignment_1_0; }
 
-		//"+"
+		//'+'
 		public Keyword getStyledPlusSignKeyword_1_0_0() { return cStyledPlusSignKeyword_1_0_0; }
 
 		//style=[Style]
@@ -1622,7 +1638,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getStyleStyleIDTerminalRuleCall_1_1_0_1() { return cStyleStyleIDTerminalRuleCall_1_1_0_1; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
 		//features+=ConnectableElementFeature*
@@ -1631,10 +1647,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ConnectableElementFeature
 		public RuleCall getFeaturesConnectableElementFeatureParserRuleCall_3_0() { return cFeaturesConnectableElementFeatureParserRuleCall_3_0; }
 
-		//("child" children+=ChildElement)*
+		//('child' children+=ChildElement)*
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"child"
+		//'child'
 		public Keyword getChildKeyword_4_0() { return cChildKeyword_4_0; }
 
 		//children+=ChildElement
@@ -1643,12 +1659,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChildElement
 		public RuleCall getChildrenChildElementParserRuleCall_4_1_0() { return cChildrenChildElementParserRuleCall_4_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class PolylineElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Polyline");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Polyline");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
 		private final Assignment cPolygonAssignment_0_0 = (Assignment)cAlternatives_0.eContents().get(0);
@@ -1677,36 +1693,40 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//Polyline:
-		//	(polygon?="polygon" | polyline?="polyline") (styled?="+" style=[Style])? "{" features+=Point features+=Point
-		//	features+=Point* features+=ConnectableElementFeature* ("child" children+=ChildElement)* "}";
+		//	(polygon?='polygon' | polyline?='polyline') (styled?='+' style=[Style])? '{'
+		//	features+=Point
+		//	features+=Point
+		//	features+=Point*
+		//	features+=ConnectableElementFeature* ('child' children+=ChildElement)*
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//(polygon?="polygon" | polyline?="polyline") (styled?="+" style=[Style])? "{" features+=Point features+=Point
-		//features+=Point* features+=ConnectableElementFeature* ("child" children+=ChildElement)* "}"
+		//(polygon?='polygon' | polyline?='polyline') (styled?='+' style=[Style])? '{' features+=Point features+=Point
+		//features+=Point* features+=ConnectableElementFeature* ('child' children+=ChildElement)* '}'
 		public Group getGroup() { return cGroup; }
 
-		//polygon?="polygon" | polyline?="polyline"
+		//(polygon?='polygon' | polyline?='polyline')
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
-		//polygon?="polygon"
+		//polygon?='polygon'
 		public Assignment getPolygonAssignment_0_0() { return cPolygonAssignment_0_0; }
 
-		//"polygon"
+		//'polygon'
 		public Keyword getPolygonPolygonKeyword_0_0_0() { return cPolygonPolygonKeyword_0_0_0; }
 
-		//polyline?="polyline"
+		//polyline?='polyline'
 		public Assignment getPolylineAssignment_0_1() { return cPolylineAssignment_0_1; }
 
-		//"polyline"
+		//'polyline'
 		public Keyword getPolylinePolylineKeyword_0_1_0() { return cPolylinePolylineKeyword_0_1_0; }
 
-		//(styled?="+" style=[Style])?
+		//(styled?='+' style=[Style])?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//styled?="+"
+		//styled?='+'
 		public Assignment getStyledAssignment_1_0() { return cStyledAssignment_1_0; }
 
-		//"+"
+		//'+'
 		public Keyword getStyledPlusSignKeyword_1_0_0() { return cStyledPlusSignKeyword_1_0_0; }
 
 		//style=[Style]
@@ -1718,7 +1738,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getStyleStyleIDTerminalRuleCall_1_1_0_1() { return cStyleStyleIDTerminalRuleCall_1_1_0_1; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
 		//features+=Point
@@ -1745,10 +1765,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ConnectableElementFeature
 		public RuleCall getFeaturesConnectableElementFeatureParserRuleCall_6_0() { return cFeaturesConnectableElementFeatureParserRuleCall_6_0; }
 
-		//("child" children+=ChildElement)*
+		//('child' children+=ChildElement)*
 		public Group getGroup_7() { return cGroup_7; }
 
-		//"child"
+		//'child'
 		public Keyword getChildKeyword_7_0() { return cChildKeyword_7_0; }
 
 		//children+=ChildElement
@@ -1757,12 +1777,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChildElement
 		public RuleCall getChildrenChildElementParserRuleCall_7_1_0() { return cChildrenChildElementParserRuleCall_7_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class TriangleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Triangle");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Triangle");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cTriangleAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cTriangleKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -1782,27 +1802,29 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Triangle:
-		//	{Triangle} "triangle" (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature* ("child"
-		//	children+=ChildElement)* "}";
+		//	{Triangle}
+		//	'triangle' (styled?='+' style=[Style])? '{'
+		//	features+=ConnectableElementFeature* ('child' children+=ChildElement)*
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//{Triangle} "triangle" (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature* ("child"
-		//children+=ChildElement)* "}"
+		//{Triangle} 'triangle' (styled?='+' style=[Style])? '{' features+=ConnectableElementFeature* ('child'
+		//children+=ChildElement)* '}'
 		public Group getGroup() { return cGroup; }
 
 		//{Triangle}
 		public Action getTriangleAction_0() { return cTriangleAction_0; }
 
-		//"triangle"
+		//'triangle'
 		public Keyword getTriangleKeyword_1() { return cTriangleKeyword_1; }
 
-		//(styled?="+" style=[Style])?
+		//(styled?='+' style=[Style])?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//styled?="+"
+		//styled?='+'
 		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
 
-		//"+"
+		//'+'
 		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
 
 		//style=[Style]
@@ -1814,7 +1836,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//features+=ConnectableElementFeature*
@@ -1823,10 +1845,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ConnectableElementFeature
 		public RuleCall getFeaturesConnectableElementFeatureParserRuleCall_4_0() { return cFeaturesConnectableElementFeatureParserRuleCall_4_0; }
 
-		//("child" children+=ChildElement)*
+		//('child' children+=ChildElement)*
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"child"
+		//'child'
 		public Keyword getChildKeyword_5_0() { return cChildKeyword_5_0; }
 
 		//children+=ChildElement
@@ -1835,12 +1857,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChildElement
 		public RuleCall getChildrenChildElementParserRuleCall_5_1_0() { return cChildrenChildElementParserRuleCall_5_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class LineElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Line");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Line");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cLineAction_0 = (Action)cGroup.eContents().get(0);
 		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
@@ -1860,37 +1882,39 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Line:
-		//	{Line} (horizontal?="hline" | vertical?="vline") (styled?="+" style=[Style])? "{" features+=LineFeature* "}";
+		//	{Line} (horizontal?='hline' | vertical?='vline') (styled?='+' style=[Style])? '{'
+		//	features+=LineFeature*
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//{Line} (horizontal?="hline" | vertical?="vline") (styled?="+" style=[Style])? "{" features+=LineFeature* "}"
+		//{Line} (horizontal?='hline' | vertical?='vline') (styled?='+' style=[Style])? '{' features+=LineFeature* '}'
 		public Group getGroup() { return cGroup; }
 
 		//{Line}
 		public Action getLineAction_0() { return cLineAction_0; }
 
-		//horizontal?="hline" | vertical?="vline"
+		//(horizontal?='hline' | vertical?='vline')
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
-		//horizontal?="hline"
+		//horizontal?='hline'
 		public Assignment getHorizontalAssignment_1_0() { return cHorizontalAssignment_1_0; }
 
-		//"hline"
+		//'hline'
 		public Keyword getHorizontalHlineKeyword_1_0_0() { return cHorizontalHlineKeyword_1_0_0; }
 
-		//vertical?="vline"
+		//vertical?='vline'
 		public Assignment getVerticalAssignment_1_1() { return cVerticalAssignment_1_1; }
 
-		//"vline"
+		//'vline'
 		public Keyword getVerticalVlineKeyword_1_1_0() { return cVerticalVlineKeyword_1_1_0; }
 
-		//(styled?="+" style=[Style])?
+		//(styled?='+' style=[Style])?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//styled?="+"
+		//styled?='+'
 		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
 
-		//"+"
+		//'+'
 		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
 
 		//style=[Style]
@@ -1902,7 +1926,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//features+=LineFeature*
@@ -1911,12 +1935,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//LineFeature
 		public RuleCall getFeaturesLineFeatureParserRuleCall_4_0() { return cFeaturesLineFeatureParserRuleCall_4_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class LineFeatureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LineFeature");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.LineFeature");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cLineWidthParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cLineStyleParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -1925,8 +1949,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSizeParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cVisibleParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		
-		//LineFeature returns Feature:
-		//	LineWidth | LineStyle | Foreground | Position | Size | Visible;
+		//LineFeature Feature:
+		//	LineWidth | LineStyle | Foreground | Position | Size | Visible
 		@Override public ParserRule getRule() { return rule; }
 
 		//LineWidth | LineStyle | Foreground | Position | Size | Visible
@@ -1952,7 +1976,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ArrowElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Arrow");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Arrow");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cArrowAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cArrowKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -1968,25 +1992,28 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Arrow:
-		//	{Arrow} "arrow" (styled?="+" style=[Style])? "{" features+=LineFeature* "}";
+		//	{Arrow}
+		//	'arrow' (styled?='+' style=[Style])? '{'
+		//	features+=LineFeature*
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//{Arrow} "arrow" (styled?="+" style=[Style])? "{" features+=LineFeature* "}"
+		//{Arrow} 'arrow' (styled?='+' style=[Style])? '{' features+=LineFeature* '}'
 		public Group getGroup() { return cGroup; }
 
 		//{Arrow}
 		public Action getArrowAction_0() { return cArrowAction_0; }
 
-		//"arrow"
+		//'arrow'
 		public Keyword getArrowKeyword_1() { return cArrowKeyword_1; }
 
-		//(styled?="+" style=[Style])?
+		//(styled?='+' style=[Style])?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//styled?="+"
+		//styled?='+'
 		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
 
-		//"+"
+		//'+'
 		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
 
 		//style=[Style]
@@ -1998,7 +2025,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//features+=LineFeature*
@@ -2007,12 +2034,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//LineFeature
 		public RuleCall getFeaturesLineFeatureParserRuleCall_4_0() { return cFeaturesLineFeatureParserRuleCall_4_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class ContainsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Contains");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Contains");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cContainsKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cModelReferenceAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -2023,13 +2050,14 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Contains:
-		//	"contains" modelReference=[ecore::EReference|QualifiedName] conditional=FeatureConditional? ";";
+		//	'contains' modelReference=[ecore::EReference|QualifiedName] conditional=FeatureConditional?
+		//	';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"contains" modelReference=[ecore::EReference|QualifiedName] conditional=FeatureConditional? ";"
+		//'contains' modelReference=[ecore::EReference|QualifiedName] conditional=FeatureConditional? ';'
 		public Group getGroup() { return cGroup; }
 
-		//"contains"
+		//'contains'
 		public Keyword getContainsKeyword_0() { return cContainsKeyword_0; }
 
 		//modelReference=[ecore::EReference|QualifiedName]
@@ -2047,12 +2075,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatureConditional
 		public RuleCall getConditionalFeatureConditionalParserRuleCall_2_0() { return cConditionalFeatureConditionalParserRuleCall_2_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
 	public class ValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Value");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Value");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cIntValueParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cDoubleValueParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -2084,7 +2112,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class IntValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "IntValue");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.IntValue");
 		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
 		private final RuleCall cValueINTTerminalRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
 		
@@ -2100,7 +2128,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class DoubleValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DoubleValue");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.DoubleValue");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cValueIntAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cValueIntINTTerminalRuleCall_0_0 = (RuleCall)cValueIntAssignment_0.eContents().get(0);
@@ -2109,10 +2137,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValueDecimalINTTerminalRuleCall_2_0 = (RuleCall)cValueDecimalAssignment_2.eContents().get(0);
 		
 		//DoubleValue:
-		//	valueInt=INT "." valueDecimal=INT;
+		//	valueInt=INT '.' valueDecimal=INT;
 		@Override public ParserRule getRule() { return rule; }
 
-		//valueInt=INT "." valueDecimal=INT
+		//valueInt=INT '.' valueDecimal=INT
 		public Group getGroup() { return cGroup; }
 
 		//valueInt=INT
@@ -2121,7 +2149,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getValueIntINTTerminalRuleCall_0_0() { return cValueIntINTTerminalRuleCall_0_0; }
 
-		//"."
+		//'.'
 		public Keyword getFullStopKeyword_1() { return cFullStopKeyword_1; }
 
 		//valueDecimal=INT
@@ -2132,7 +2160,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class StringValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "StringValue");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.StringValue");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Assignment cNullAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
 		private final Keyword cNullNullKeyword_0_0 = (Keyword)cNullAssignment_0.eContents().get(0);
@@ -2140,16 +2168,16 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValueSTRINGTerminalRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		
 		//StringValue:
-		//	null?="null" | value=STRING;
+		//	null?='null' | value=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
-		//null?="null" | value=STRING
+		//null?='null' | value=STRING
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//null?="null"
+		//null?='null'
 		public Assignment getNullAssignment_0() { return cNullAssignment_0; }
 
-		//"null"
+		//'null'
 		public Keyword getNullNullKeyword_0_0() { return cNullNullKeyword_0_0; }
 
 		//value=STRING
@@ -2160,7 +2188,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class BooleanValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BooleanValue");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.BooleanValue");
 		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
 		private final RuleCall cValueBooleanLiteralEnumRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
 		
@@ -2176,7 +2204,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class EnumValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EnumValue");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.EnumValue");
 		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
 		
@@ -2193,7 +2221,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class FigureFeatureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FigureFeature");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.FigureFeature");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cColorFeatureParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cSizeParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -2201,8 +2229,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPointParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cLineStyleParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		
-		//FigureFeature returns Feature:
-		//	ColorFeature | Size | Position | Point | LineStyle;
+		//FigureFeature Feature:
+		//	ColorFeature | Size | Position | Point | LineStyle
 		@Override public ParserRule getRule() { return rule; }
 
 		//ColorFeature | Size | Position | Point | LineStyle
@@ -2225,7 +2253,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class LabelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Label");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Label");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cLabelAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cLabelKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -2245,25 +2273,28 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Label:
-		//	{Label} "label" (styled?="+" style=[Style])? "{" features+=LabelFeature* ("child" children+=ChildElement)* "}";
+		//	{Label}
+		//	'label' (styled?='+' style=[Style])? '{'
+		//	features+=LabelFeature* ('child' children+=ChildElement)*
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//{Label} "label" (styled?="+" style=[Style])? "{" features+=LabelFeature* ("child" children+=ChildElement)* "}"
+		//{Label} 'label' (styled?='+' style=[Style])? '{' features+=LabelFeature* ('child' children+=ChildElement)* '}'
 		public Group getGroup() { return cGroup; }
 
 		//{Label}
 		public Action getLabelAction_0() { return cLabelAction_0; }
 
-		//"label"
+		//'label'
 		public Keyword getLabelKeyword_1() { return cLabelKeyword_1; }
 
-		//(styled?="+" style=[Style])?
+		//(styled?='+' style=[Style])?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//styled?="+"
+		//styled?='+'
 		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
 
-		//"+"
+		//'+'
 		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
 
 		//style=[Style]
@@ -2275,7 +2306,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//features+=LabelFeature*
@@ -2284,10 +2315,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//LabelFeature
 		public RuleCall getFeaturesLabelFeatureParserRuleCall_4_0() { return cFeaturesLabelFeatureParserRuleCall_4_0; }
 
-		//("child" children+=ChildElement)*
+		//('child' children+=ChildElement)*
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"child"
+		//'child'
 		public Keyword getChildKeyword_5_0() { return cChildKeyword_5_0; }
 
 		//children+=ChildElement
@@ -2296,12 +2327,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChildElement
 		public RuleCall getChildrenChildElementParserRuleCall_5_1_0() { return cChildrenChildElementParserRuleCall_5_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class LabelFeatureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LabelFeature");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.LabelFeature");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cTextValueParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cForegroundParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -2311,8 +2342,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cVisibleParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		private final RuleCall cTextAlignParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
 		
-		//LabelFeature returns Feature:
-		//	TextValue | Foreground | FontProperties | Size | Position | Visible | TextAlign;
+		//LabelFeature Feature:
+		//	TextValue | Foreground | FontProperties | Size | Position | Visible | TextAlign
 		@Override public ParserRule getRule() { return rule; }
 
 		//TextValue | Foreground | FontProperties | Size | Position | Visible | TextAlign
@@ -2341,7 +2372,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ImageElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Image");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Image");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cImageKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cImageIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -2363,13 +2394,15 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// TODO image provider problem
 		//Image:
-		//	"image" imageId=STRING (styled?="+" style=[Style])? "{" features+=ImageFeature* ("child" children+=ChildElement)* "}";
+		//	'image' imageId=STRING (styled?='+' style=[Style])? '{'
+		//	features+=ImageFeature* ('child' children+=ChildElement)*
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"image" imageId=STRING (styled?="+" style=[Style])? "{" features+=ImageFeature* ("child" children+=ChildElement)* "}"
+		//'image' imageId=STRING (styled?='+' style=[Style])? '{' features+=ImageFeature* ('child' children+=ChildElement)* '}'
 		public Group getGroup() { return cGroup; }
 
-		//"image"
+		//'image'
 		public Keyword getImageKeyword_0() { return cImageKeyword_0; }
 
 		//imageId=STRING
@@ -2378,13 +2411,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getImageIdSTRINGTerminalRuleCall_1_0() { return cImageIdSTRINGTerminalRuleCall_1_0; }
 
-		//(styled?="+" style=[Style])?
+		//(styled?='+' style=[Style])?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//styled?="+"
+		//styled?='+'
 		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
 
-		//"+"
+		//'+'
 		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
 
 		//style=[Style]
@@ -2396,7 +2429,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//features+=ImageFeature*
@@ -2405,10 +2438,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ImageFeature
 		public RuleCall getFeaturesImageFeatureParserRuleCall_4_0() { return cFeaturesImageFeatureParserRuleCall_4_0; }
 
-		//("child" children+=ChildElement)*
+		//('child' children+=ChildElement)*
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"child"
+		//'child'
 		public Keyword getChildKeyword_5_0() { return cChildKeyword_5_0; }
 
 		//children+=ChildElement
@@ -2417,19 +2450,19 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChildElement
 		public RuleCall getChildrenChildElementParserRuleCall_5_1_0() { return cChildrenChildElementParserRuleCall_5_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class ImageFeatureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ImageFeature");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.ImageFeature");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cSizeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cPositionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cTransparencyParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
-		//ImageFeature returns Feature:
-		//	Size | Position | Transparency;
+		//ImageFeature Feature:
+		//	Size | Position | Transparency
 		@Override public ParserRule getRule() { return rule; }
 
 		//Size | Position | Transparency
@@ -2446,7 +2479,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class InvisibleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Invisible");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Invisible");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cInvisibleAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cInvisibleKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -2466,27 +2499,29 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Invisible:
-		//	{Invisible} "invisible" (styled?="+" style=[Style])? "{" features+=InvisibleFeature* ("child" children+=ChildElement)*
-		//	"}";
+		//	{Invisible}
+		//	'invisible' (styled?='+' style=[Style])? '{'
+		//	features+=InvisibleFeature* ('child' children+=ChildElement)*
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//{Invisible} "invisible" (styled?="+" style=[Style])? "{" features+=InvisibleFeature* ("child" children+=ChildElement)*
-		//"}"
+		//{Invisible} 'invisible' (styled?='+' style=[Style])? '{' features+=InvisibleFeature* ('child' children+=ChildElement)*
+		//'}'
 		public Group getGroup() { return cGroup; }
 
 		//{Invisible}
 		public Action getInvisibleAction_0() { return cInvisibleAction_0; }
 
-		//"invisible"
+		//'invisible'
 		public Keyword getInvisibleKeyword_1() { return cInvisibleKeyword_1; }
 
-		//(styled?="+" style=[Style])?
+		//(styled?='+' style=[Style])?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//styled?="+"
+		//styled?='+'
 		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
 
-		//"+"
+		//'+'
 		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
 
 		//style=[Style]
@@ -2498,7 +2533,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
 
-		//"{"
+		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//features+=InvisibleFeature*
@@ -2507,10 +2542,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//InvisibleFeature
 		public RuleCall getFeaturesInvisibleFeatureParserRuleCall_4_0() { return cFeaturesInvisibleFeatureParserRuleCall_4_0; }
 
-		//("child" children+=ChildElement)*
+		//('child' children+=ChildElement)*
 		public Group getGroup_5() { return cGroup_5; }
 
-		//"child"
+		//'child'
 		public Keyword getChildKeyword_5_0() { return cChildKeyword_5_0; }
 
 		//children+=ChildElement
@@ -2519,20 +2554,20 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChildElement
 		public RuleCall getChildrenChildElementParserRuleCall_5_1_0() { return cChildrenChildElementParserRuleCall_5_1_0; }
 
-		//"}"
+		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class InvisibleFeatureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InvisibleFeature");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.InvisibleFeature");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cSizeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cPositionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cLinkedFeatureParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cLayoutParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
-		//InvisibleFeature returns Feature:
-		//	Size | Position | LinkedFeature | Layout;
+		//InvisibleFeature Feature:
+		//	Size | Position | LinkedFeature | Layout
 		@Override public ParserRule getRule() { return rule; }
 
 		//Size | Position | LinkedFeature | Layout
@@ -2552,7 +2587,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ColorFeatureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ColorFeature");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.ColorFeature");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cForegroundParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cBackgroundParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -2572,7 +2607,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ForegroundElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Foreground");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Foreground");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cTypeForegroundKeyword_0_0 = (Keyword)cTypeAssignment_0.eContents().get(0);
@@ -2582,17 +2617,19 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cConditionalFeatureConditionalParserRuleCall_2_0 = (RuleCall)cConditionalAssignment_2.eContents().get(0);
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		//Foreground returns ColorFeature:
-		//	type="foreground" color=Color conditional=FeatureConditional? ";";
+		//Foreground ColorFeature:
+		//	type='foreground' color=Color
+		//	conditional=FeatureConditional?
+		//	';'
 		@Override public ParserRule getRule() { return rule; }
 
-		//type="foreground" color=Color conditional=FeatureConditional? ";"
+		//type='foreground' color=Color conditional=FeatureConditional? ';'
 		public Group getGroup() { return cGroup; }
 
-		//type="foreground"
+		//type='foreground'
 		public Assignment getTypeAssignment_0() { return cTypeAssignment_0; }
 
-		//"foreground"
+		//'foreground'
 		public Keyword getTypeForegroundKeyword_0_0() { return cTypeForegroundKeyword_0_0; }
 
 		//color=Color
@@ -2607,12 +2644,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatureConditional
 		public RuleCall getConditionalFeatureConditionalParserRuleCall_2_0() { return cConditionalFeatureConditionalParserRuleCall_2_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
 	public class BackgroundElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Background");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Background");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cTypeBackgroundKeyword_0_0 = (Keyword)cTypeAssignment_0.eContents().get(0);
@@ -2622,17 +2659,19 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cConditionalFeatureConditionalParserRuleCall_2_0 = (RuleCall)cConditionalAssignment_2.eContents().get(0);
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		//Background returns ColorFeature:
-		//	type="background" color=Color conditional=FeatureConditional? ";";
+		//Background ColorFeature:
+		//	type='background' color=Color
+		//	conditional=FeatureConditional?
+		//	';'
 		@Override public ParserRule getRule() { return rule; }
 
-		//type="background" color=Color conditional=FeatureConditional? ";"
+		//type='background' color=Color conditional=FeatureConditional? ';'
 		public Group getGroup() { return cGroup; }
 
-		//type="background"
+		//type='background'
 		public Assignment getTypeAssignment_0() { return cTypeAssignment_0; }
 
-		//"background"
+		//'background'
 		public Keyword getTypeBackgroundKeyword_0_0() { return cTypeBackgroundKeyword_0_0; }
 
 		//color=Color
@@ -2647,12 +2686,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatureConditional
 		public RuleCall getConditionalFeatureConditionalParserRuleCall_2_0() { return cConditionalFeatureConditionalParserRuleCall_2_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
 	public class TransparencyElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Transparency");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Transparency");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cTransparencyKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cPercentAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -2664,13 +2703,15 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// TODO validation percent
 		//Transparency:
-		//	"transparency" percent=INT "%" conditional=FeatureConditional? ";";
+		//	'transparency' percent=INT '%'
+		//	conditional=FeatureConditional?
+		//	';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"transparency" percent=INT "%" conditional=FeatureConditional? ";"
+		//'transparency' percent=INT '%' conditional=FeatureConditional? ';'
 		public Group getGroup() { return cGroup; }
 
-		//"transparency"
+		//'transparency'
 		public Keyword getTransparencyKeyword_0() { return cTransparencyKeyword_0; }
 
 		//percent=INT
@@ -2679,7 +2720,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getPercentINTTerminalRuleCall_1_0() { return cPercentINTTerminalRuleCall_1_0; }
 
-		//"%"
+		//'%'
 		public Keyword getPercentSignKeyword_2() { return cPercentSignKeyword_2; }
 
 		//conditional=FeatureConditional?
@@ -2688,12 +2729,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatureConditional
 		public RuleCall getConditionalFeatureConditionalParserRuleCall_3_0() { return cConditionalFeatureConditionalParserRuleCall_3_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
 	}
 
 	public class SizeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Size");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Size");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSizeKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cWidthAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -2712,15 +2753,16 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Size:
-		//	"size" width=INT widthRelative?="]"? (height=INT heightRelative?="]"?)? resizable?="resizable"?
-		//	conditional=FeatureConditional? ";";
+		//	'size' width=INT widthRelative?=']'? (height=INT heightRelative?=']'?)? resizable?='resizable'?
+		//	conditional=FeatureConditional?
+		//	';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"size" width=INT widthRelative?="]"? (height=INT heightRelative?="]"?)? resizable?="resizable"?
-		//conditional=FeatureConditional? ";"
+		//'size' width=INT widthRelative?=']'? (height=INT heightRelative?=']'?)? resizable?='resizable'?
+		//conditional=FeatureConditional? ';'
 		public Group getGroup() { return cGroup; }
 
-		//"size"
+		//'size'
 		public Keyword getSizeKeyword_0() { return cSizeKeyword_0; }
 
 		//width=INT
@@ -2729,13 +2771,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getWidthINTTerminalRuleCall_1_0() { return cWidthINTTerminalRuleCall_1_0; }
 
-		//widthRelative?="]"?
+		//widthRelative?=']'?
 		public Assignment getWidthRelativeAssignment_2() { return cWidthRelativeAssignment_2; }
 
-		//"]"
+		//']'
 		public Keyword getWidthRelativeRightSquareBracketKeyword_2_0() { return cWidthRelativeRightSquareBracketKeyword_2_0; }
 
-		//(height=INT heightRelative?="]"?)?
+		//(height=INT heightRelative?=']'?)?
 		public Group getGroup_3() { return cGroup_3; }
 
 		//height=INT
@@ -2744,16 +2786,16 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getHeightINTTerminalRuleCall_3_0_0() { return cHeightINTTerminalRuleCall_3_0_0; }
 
-		//heightRelative?="]"?
+		//heightRelative?=']'?
 		public Assignment getHeightRelativeAssignment_3_1() { return cHeightRelativeAssignment_3_1; }
 
-		//"]"
+		//']'
 		public Keyword getHeightRelativeRightSquareBracketKeyword_3_1_0() { return cHeightRelativeRightSquareBracketKeyword_3_1_0; }
 
-		//resizable?="resizable"?
+		//resizable?='resizable'?
 		public Assignment getResizableAssignment_4() { return cResizableAssignment_4; }
 
-		//"resizable"
+		//'resizable'
 		public Keyword getResizableResizableKeyword_4_0() { return cResizableResizableKeyword_4_0; }
 
 		//conditional=FeatureConditional?
@@ -2762,12 +2804,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatureConditional
 		public RuleCall getConditionalFeatureConditionalParserRuleCall_5_0() { return cConditionalFeatureConditionalParserRuleCall_5_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
 	}
 
 	public class PointElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Point");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Point");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPointKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cXAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -2779,13 +2821,15 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Point:
-		//	"point" x=INT y=INT conditional=FeatureConditional? ";";
+		//	'point' x=INT y=INT
+		//	conditional=FeatureConditional?
+		//	';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"point" x=INT y=INT conditional=FeatureConditional? ";"
+		//'point' x=INT y=INT conditional=FeatureConditional? ';'
 		public Group getGroup() { return cGroup; }
 
-		//"point"
+		//'point'
 		public Keyword getPointKeyword_0() { return cPointKeyword_0; }
 
 		//x=INT
@@ -2806,12 +2850,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatureConditional
 		public RuleCall getConditionalFeatureConditionalParserRuleCall_3_0() { return cConditionalFeatureConditionalParserRuleCall_3_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
 	}
 
 	public class PositionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Position");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Position");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPositionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cXAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -2827,13 +2871,15 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Position:
-		//	"position" x=INT xRelative?="%"? y=INT yRelative?="%"? conditional=FeatureConditional? ";";
+		//	'position' x=INT xRelative?='%'? y=INT yRelative?='%'?
+		//	conditional=FeatureConditional?
+		//	';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"position" x=INT xRelative?="%"? y=INT yRelative?="%"? conditional=FeatureConditional? ";"
+		//'position' x=INT xRelative?='%'? y=INT yRelative?='%'? conditional=FeatureConditional? ';'
 		public Group getGroup() { return cGroup; }
 
-		//"position"
+		//'position'
 		public Keyword getPositionKeyword_0() { return cPositionKeyword_0; }
 
 		//x=INT
@@ -2842,10 +2888,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getXINTTerminalRuleCall_1_0() { return cXINTTerminalRuleCall_1_0; }
 
-		//xRelative?="%"?
+		//xRelative?='%'?
 		public Assignment getXRelativeAssignment_2() { return cXRelativeAssignment_2; }
 
-		//"%"
+		//'%'
 		public Keyword getXRelativePercentSignKeyword_2_0() { return cXRelativePercentSignKeyword_2_0; }
 
 		//y=INT
@@ -2854,10 +2900,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getYINTTerminalRuleCall_3_0() { return cYINTTerminalRuleCall_3_0; }
 
-		//yRelative?="%"?
+		//yRelative?='%'?
 		public Assignment getYRelativeAssignment_4() { return cYRelativeAssignment_4; }
 
-		//"%"
+		//'%'
 		public Keyword getYRelativePercentSignKeyword_4_0() { return cYRelativePercentSignKeyword_4_0; }
 
 		//conditional=FeatureConditional?
@@ -2866,12 +2912,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatureConditional
 		public RuleCall getConditionalFeatureConditionalParserRuleCall_5_0() { return cConditionalFeatureConditionalParserRuleCall_5_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
 	}
 
 	public class CornerElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Corner");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Corner");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCornerKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cAngleAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -2881,13 +2927,15 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Corner:
-		//	"corner" angle=INT conditional=FeatureConditional? ";";
+		//	'corner' angle=INT
+		//	conditional=FeatureConditional?
+		//	';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"corner" angle=INT conditional=FeatureConditional? ";"
+		//'corner' angle=INT conditional=FeatureConditional? ';'
 		public Group getGroup() { return cGroup; }
 
-		//"corner"
+		//'corner'
 		public Keyword getCornerKeyword_0() { return cCornerKeyword_0; }
 
 		//angle=INT
@@ -2902,12 +2950,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatureConditional
 		public RuleCall getConditionalFeatureConditionalParserRuleCall_2_0() { return cConditionalFeatureConditionalParserRuleCall_2_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
 	public class LayoutElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Layout");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Layout");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cLayoutKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
@@ -2924,34 +2972,36 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Layout:
-		//	"layout" (vertical?="vertical" | horizontal?="horizontal") ("margin" margin=INT)? conditional=FeatureConditional? ";";
+		//	'layout' (vertical?='vertical' | horizontal?='horizontal') ('margin' margin=INT)?
+		//	conditional=FeatureConditional?
+		//	';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"layout" (vertical?="vertical" | horizontal?="horizontal") ("margin" margin=INT)? conditional=FeatureConditional? ";"
+		//'layout' (vertical?='vertical' | horizontal?='horizontal') ('margin' margin=INT)? conditional=FeatureConditional? ';'
 		public Group getGroup() { return cGroup; }
 
-		//"layout"
+		//'layout'
 		public Keyword getLayoutKeyword_0() { return cLayoutKeyword_0; }
 
-		//vertical?="vertical" | horizontal?="horizontal"
+		//(vertical?='vertical' | horizontal?='horizontal')
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
-		//vertical?="vertical"
+		//vertical?='vertical'
 		public Assignment getVerticalAssignment_1_0() { return cVerticalAssignment_1_0; }
 
-		//"vertical"
+		//'vertical'
 		public Keyword getVerticalVerticalKeyword_1_0_0() { return cVerticalVerticalKeyword_1_0_0; }
 
-		//horizontal?="horizontal"
+		//horizontal?='horizontal'
 		public Assignment getHorizontalAssignment_1_1() { return cHorizontalAssignment_1_1; }
 
-		//"horizontal"
+		//'horizontal'
 		public Keyword getHorizontalHorizontalKeyword_1_1_0() { return cHorizontalHorizontalKeyword_1_1_0; }
 
-		//("margin" margin=INT)?
+		//('margin' margin=INT)?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//"margin"
+		//'margin'
 		public Keyword getMarginKeyword_2_0() { return cMarginKeyword_2_0; }
 
 		//margin=INT
@@ -2966,12 +3016,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatureConditional
 		public RuleCall getConditionalFeatureConditionalParserRuleCall_3_0() { return cConditionalFeatureConditionalParserRuleCall_3_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
 	}
 
 	public class VisibleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Visible");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Visible");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cInvisibleKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cConditionalAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -2979,13 +3029,14 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//Visible:
-		//	"invisible" conditional=FeatureConditional ";";
+		//	'invisible' conditional=FeatureConditional
+		//	';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"invisible" conditional=FeatureConditional ";"
+		//'invisible' conditional=FeatureConditional ';'
 		public Group getGroup() { return cGroup; }
 
-		//"invisible"
+		//'invisible'
 		public Keyword getInvisibleKeyword_0() { return cInvisibleKeyword_0; }
 
 		//conditional=FeatureConditional
@@ -2994,12 +3045,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatureConditional
 		public RuleCall getConditionalFeatureConditionalParserRuleCall_1_0() { return cConditionalFeatureConditionalParserRuleCall_1_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 
 	public class TextValueElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TextValue");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.TextValue");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cTextValueAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cTextKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -3013,16 +3064,19 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//// Text
 		//// TODO: validation of owned attribute
 		//TextValue:
-		//	{TextValue} "text" parts+=TextPart* conditional=FeatureConditional? ";";
+		//	{TextValue}
+		//	'text' parts+=TextPart*
+		//	conditional=FeatureConditional?
+		//	';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//{TextValue} "text" parts+=TextPart* conditional=FeatureConditional? ";"
+		//{TextValue} 'text' parts+=TextPart* conditional=FeatureConditional? ';'
 		public Group getGroup() { return cGroup; }
 
 		//{TextValue}
 		public Action getTextValueAction_0() { return cTextValueAction_0; }
 
-		//"text"
+		//'text'
 		public Keyword getTextKeyword_1() { return cTextKeyword_1; }
 
 		//parts+=TextPart*
@@ -3037,12 +3091,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatureConditional
 		public RuleCall getConditionalFeatureConditionalParserRuleCall_3_0() { return cConditionalFeatureConditionalParserRuleCall_3_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
 	}
 
 	public class TextPartElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TextPart");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.TextPart");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Assignment cTextAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
 		private final RuleCall cTextSTRINGTerminalRuleCall_0_0 = (RuleCall)cTextAssignment_0.eContents().get(0);
@@ -3054,10 +3108,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cModelAttributeEAttributeQualifiedNameParserRuleCall_1_1_0_1 = (RuleCall)cModelAttributeEAttributeCrossReference_1_1_0.eContents().get(1);
 		
 		//TextPart:
-		//	text=STRING | editable?="edit:"? modelAttribute=[ecore::EAttribute|QualifiedName];
+		//	text=STRING | editable?='edit:'? modelAttribute=[ecore::EAttribute|QualifiedName];
 		@Override public ParserRule getRule() { return rule; }
 
-		//text=STRING | editable?="edit:"? modelAttribute=[ecore::EAttribute|QualifiedName]
+		//text=STRING | editable?='edit:'? modelAttribute=[ecore::EAttribute|QualifiedName]
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//text=STRING
@@ -3066,13 +3120,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getTextSTRINGTerminalRuleCall_0_0() { return cTextSTRINGTerminalRuleCall_0_0; }
 
-		//editable?="edit:"? modelAttribute=[ecore::EAttribute|QualifiedName]
+		//editable?='edit:'? modelAttribute=[ecore::EAttribute|QualifiedName]
 		public Group getGroup_1() { return cGroup_1; }
 
-		//editable?="edit:"?
+		//editable?='edit:'?
 		public Assignment getEditableAssignment_1_0() { return cEditableAssignment_1_0; }
 
-		//"edit:"
+		//'edit:'
 		public Keyword getEditableEditKeyword_1_0_0() { return cEditableEditKeyword_1_0_0; }
 
 		//modelAttribute=[ecore::EAttribute|QualifiedName]
@@ -3086,7 +3140,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class FontPropertiesElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FontProperties");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.FontProperties");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cFontPropertiesAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cFontKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -3107,36 +3161,38 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//FontProperties:
-		//	{FontProperties} "font" (face="arial" | "verdana" | "courier" | "times")? size=INT? bold?="bold"? italics?="italics"?
-		//	conditional=FeatureConditional? ";";
+		//	{FontProperties}
+		//	'font' (face='arial' | 'verdana' | 'courier' | 'times')? size=INT? bold?='bold'? italics?='italics'?
+		//	conditional=FeatureConditional?
+		//	';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//{FontProperties} "font" (face="arial" | "verdana" | "courier" | "times")? size=INT? bold?="bold"? italics?="italics"?
-		//conditional=FeatureConditional? ";"
+		//{FontProperties} 'font' (face='arial' | 'verdana' | 'courier' | 'times')? size=INT? bold?='bold'? italics?='italics'?
+		//conditional=FeatureConditional? ';'
 		public Group getGroup() { return cGroup; }
 
 		//{FontProperties}
 		public Action getFontPropertiesAction_0() { return cFontPropertiesAction_0; }
 
-		//"font"
+		//'font'
 		public Keyword getFontKeyword_1() { return cFontKeyword_1; }
 
-		//(face="arial" | "verdana" | "courier" | "times")?
+		//(face='arial' | 'verdana' | 'courier' | 'times')?
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
-		//face="arial"
+		//face='arial'
 		public Assignment getFaceAssignment_2_0() { return cFaceAssignment_2_0; }
 
-		//"arial"
+		//'arial'
 		public Keyword getFaceArialKeyword_2_0_0() { return cFaceArialKeyword_2_0_0; }
 
-		//"verdana"
+		//'verdana'
 		public Keyword getVerdanaKeyword_2_1() { return cVerdanaKeyword_2_1; }
 
-		//"courier"
+		//'courier'
 		public Keyword getCourierKeyword_2_2() { return cCourierKeyword_2_2; }
 
-		//"times"
+		//'times'
 		public Keyword getTimesKeyword_2_3() { return cTimesKeyword_2_3; }
 
 		//size=INT?
@@ -3145,16 +3201,16 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getSizeINTTerminalRuleCall_3_0() { return cSizeINTTerminalRuleCall_3_0; }
 
-		//bold?="bold"?
+		//bold?='bold'?
 		public Assignment getBoldAssignment_4() { return cBoldAssignment_4; }
 
-		//"bold"
+		//'bold'
 		public Keyword getBoldBoldKeyword_4_0() { return cBoldBoldKeyword_4_0; }
 
-		//italics?="italics"?
+		//italics?='italics'?
 		public Assignment getItalicsAssignment_5() { return cItalicsAssignment_5; }
 
-		//"italics"
+		//'italics'
 		public Keyword getItalicsItalicsKeyword_5_0() { return cItalicsItalicsKeyword_5_0; }
 
 		//conditional=FeatureConditional?
@@ -3163,12 +3219,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatureConditional
 		public RuleCall getConditionalFeatureConditionalParserRuleCall_6_0() { return cConditionalFeatureConditionalParserRuleCall_6_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_7() { return cSemicolonKeyword_7; }
 	}
 
 	public class TextAlignElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TextAlign");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.TextAlign");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cAlignKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -3178,13 +3234,15 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//TextAlign:
-		//	"align" value=TextAlignValue conditional=FeatureConditional? ";";
+		//	'align' value=TextAlignValue
+		//	conditional=FeatureConditional?
+		//	';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"align" value=TextAlignValue conditional=FeatureConditional? ";"
+		//'align' value=TextAlignValue conditional=FeatureConditional? ';'
 		public Group getGroup() { return cGroup; }
 
-		//"align"
+		//'align'
 		public Keyword getAlignKeyword_0() { return cAlignKeyword_0; }
 
 		//value=TextAlignValue
@@ -3199,12 +3257,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatureConditional
 		public RuleCall getConditionalFeatureConditionalParserRuleCall_2_0() { return cConditionalFeatureConditionalParserRuleCall_2_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
 	public class LineStyleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LineStyle");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.LineStyle");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cLineStyleAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cLinestyleKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -3219,16 +3277,19 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		////-------------------------------
 		//// Lines
 		//LineStyle:
-		//	{LineStyle} "linestyle" style=LineType? manhattan?="manhattan"? conditional=FeatureConditional? ";";
+		//	{LineStyle}
+		//	'linestyle' style=LineType? manhattan?='manhattan'?
+		//	conditional=FeatureConditional?
+		//	';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//{LineStyle} "linestyle" style=LineType? manhattan?="manhattan"? conditional=FeatureConditional? ";"
+		//{LineStyle} 'linestyle' style=LineType? manhattan?='manhattan'? conditional=FeatureConditional? ';'
 		public Group getGroup() { return cGroup; }
 
 		//{LineStyle}
 		public Action getLineStyleAction_0() { return cLineStyleAction_0; }
 
-		//"linestyle"
+		//'linestyle'
 		public Keyword getLinestyleKeyword_1() { return cLinestyleKeyword_1; }
 
 		//style=LineType?
@@ -3237,10 +3298,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//LineType
 		public RuleCall getStyleLineTypeEnumRuleCall_2_0() { return cStyleLineTypeEnumRuleCall_2_0; }
 
-		//manhattan?="manhattan"?
+		//manhattan?='manhattan'?
 		public Assignment getManhattanAssignment_3() { return cManhattanAssignment_3; }
 
-		//"manhattan"
+		//'manhattan'
 		public Keyword getManhattanManhattanKeyword_3_0() { return cManhattanManhattanKeyword_3_0; }
 
 		//conditional=FeatureConditional?
@@ -3249,12 +3310,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatureConditional
 		public RuleCall getConditionalFeatureConditionalParserRuleCall_4_0() { return cConditionalFeatureConditionalParserRuleCall_4_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 	}
 
 	public class LineWidthElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LineWidth");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.LineWidth");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cLinewidthKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cWidthAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -3263,21 +3324,16 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cConditionalFeatureConditionalParserRuleCall_2_0 = (RuleCall)cConditionalAssignment_2.eContents().get(0);
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		////---------------------------------
-		//// Terminals
-		////terminal PERCENT: ('0'|('1'..'9')(('0'..'9'))?|'100');
-		////terminal S: (' '|'\t')+;
-		////terminal NEWLINE:
-		//// New line on DOS or Unix 
-		////   '\r'? '\n';
 		//LineWidth:
-		//	"linewidth" width=INT conditional=FeatureConditional? ";";
+		//	'linewidth' width=INT
+		//	conditional=FeatureConditional?
+		//	';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//"linewidth" width=INT conditional=FeatureConditional? ";"
+		//'linewidth' width=INT conditional=FeatureConditional? ';'
 		public Group getGroup() { return cGroup; }
 
-		//"linewidth"
+		//'linewidth'
 		public Keyword getLinewidthKeyword_0() { return cLinewidthKeyword_0; }
 
 		//width=INT
@@ -3292,13 +3348,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//FeatureConditional
 		public RuleCall getConditionalFeatureConditionalParserRuleCall_2_0() { return cConditionalFeatureConditionalParserRuleCall_2_0; }
 
-		//";"
+		//';'
 		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 	
 	
 	public class AnchorDirectionElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "AnchorDirection");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.AnchorDirection");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cINCOMINGEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cINCOMINGIncomingKeyword_0_0 = (Keyword)cINCOMINGEnumLiteralDeclaration_0.eContents().get(0);
@@ -3306,27 +3362,28 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cOUTGOINGOutgoingKeyword_1_0 = (Keyword)cOUTGOINGEnumLiteralDeclaration_1.eContents().get(0);
 		
 		//enum AnchorDirection:
-		//	INCOMING="incoming" | OUTGOING="outgoing";
+		//	INCOMING='incoming' |
+		//	OUTGOING='outgoing';
 		public EnumRule getRule() { return rule; }
 
-		//INCOMING="incoming" | OUTGOING="outgoing"
+		//INCOMING='incoming' | OUTGOING='outgoing'
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//INCOMING="incoming"
+		//INCOMING='incoming'
 		public EnumLiteralDeclaration getINCOMINGEnumLiteralDeclaration_0() { return cINCOMINGEnumLiteralDeclaration_0; }
 
-		//"incoming"
+		//'incoming'
 		public Keyword getINCOMINGIncomingKeyword_0_0() { return cINCOMINGIncomingKeyword_0_0; }
 
-		//OUTGOING="outgoing"
+		//OUTGOING='outgoing'
 		public EnumLiteralDeclaration getOUTGOINGEnumLiteralDeclaration_1() { return cOUTGOINGEnumLiteralDeclaration_1; }
 
-		//"outgoing"
+		//'outgoing'
 		public Keyword getOUTGOINGOutgoingKeyword_1_0() { return cOUTGOINGOutgoingKeyword_1_0; }
 	}
 
 	public class DefaultColorElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "DefaultColor");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.DefaultColor");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cWHITEEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cWHITEWhiteKeyword_0_0 = (Keyword)cWHITEEnumLiteralDeclaration_0.eContents().get(0);
@@ -3362,144 +3419,157 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cPURPLEPurpleKeyword_15_0 = (Keyword)cPURPLEEnumLiteralDeclaration_15.eContents().get(0);
 		
 		//enum DefaultColor:
-		//	WHITE="white" | SILVER="silver" | GRAY="gray" | BLACK="black" | RED="red" | MAROON="maroon" | YELLOW="yellow" |
-		//	OLIVE="olive" | LIME="lime" | GREEN="green" | AQUA="aqua" | TEAL="teal" | BLUE="blue" | NAVY="navy" |
-		//	FUCHSIA="fuchsia" | PURPLE="purple";
+		//	WHITE='white' |
+		//	SILVER='silver' |
+		//	GRAY='gray' |
+		//	BLACK='black' |
+		//	RED='red' |
+		//	MAROON='maroon' |
+		//	YELLOW='yellow' |
+		//	OLIVE='olive' |
+		//	LIME='lime' |
+		//	GREEN='green' |
+		//	AQUA='aqua' |
+		//	TEAL='teal' |
+		//	BLUE='blue' |
+		//	NAVY='navy' |
+		//	FUCHSIA='fuchsia' |
+		//	PURPLE='purple';
 		public EnumRule getRule() { return rule; }
 
-		//WHITE="white" | SILVER="silver" | GRAY="gray" | BLACK="black" | RED="red" | MAROON="maroon" | YELLOW="yellow" |
-		//OLIVE="olive" | LIME="lime" | GREEN="green" | AQUA="aqua" | TEAL="teal" | BLUE="blue" | NAVY="navy" | FUCHSIA="fuchsia"
-		//| PURPLE="purple"
+		//WHITE='white' | SILVER='silver' | GRAY='gray' | BLACK='black' | RED='red' | MAROON='maroon' | YELLOW='yellow' |
+		//OLIVE='olive' | LIME='lime' | GREEN='green' | AQUA='aqua' | TEAL='teal' | BLUE='blue' | NAVY='navy' | FUCHSIA='fuchsia'
+		//| PURPLE='purple'
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//WHITE="white"
+		//WHITE='white'
 		public EnumLiteralDeclaration getWHITEEnumLiteralDeclaration_0() { return cWHITEEnumLiteralDeclaration_0; }
 
-		//"white"
+		//'white'
 		public Keyword getWHITEWhiteKeyword_0_0() { return cWHITEWhiteKeyword_0_0; }
 
-		//SILVER="silver"
+		//SILVER='silver'
 		public EnumLiteralDeclaration getSILVEREnumLiteralDeclaration_1() { return cSILVEREnumLiteralDeclaration_1; }
 
-		//"silver"
+		//'silver'
 		public Keyword getSILVERSilverKeyword_1_0() { return cSILVERSilverKeyword_1_0; }
 
-		//GRAY="gray"
+		//GRAY='gray'
 		public EnumLiteralDeclaration getGRAYEnumLiteralDeclaration_2() { return cGRAYEnumLiteralDeclaration_2; }
 
-		//"gray"
+		//'gray'
 		public Keyword getGRAYGrayKeyword_2_0() { return cGRAYGrayKeyword_2_0; }
 
-		//BLACK="black"
+		//BLACK='black'
 		public EnumLiteralDeclaration getBLACKEnumLiteralDeclaration_3() { return cBLACKEnumLiteralDeclaration_3; }
 
-		//"black"
+		//'black'
 		public Keyword getBLACKBlackKeyword_3_0() { return cBLACKBlackKeyword_3_0; }
 
-		//RED="red"
+		//RED='red'
 		public EnumLiteralDeclaration getREDEnumLiteralDeclaration_4() { return cREDEnumLiteralDeclaration_4; }
 
-		//"red"
+		//'red'
 		public Keyword getREDRedKeyword_4_0() { return cREDRedKeyword_4_0; }
 
-		//MAROON="maroon"
+		//MAROON='maroon'
 		public EnumLiteralDeclaration getMAROONEnumLiteralDeclaration_5() { return cMAROONEnumLiteralDeclaration_5; }
 
-		//"maroon"
+		//'maroon'
 		public Keyword getMAROONMaroonKeyword_5_0() { return cMAROONMaroonKeyword_5_0; }
 
-		//YELLOW="yellow"
+		//YELLOW='yellow'
 		public EnumLiteralDeclaration getYELLOWEnumLiteralDeclaration_6() { return cYELLOWEnumLiteralDeclaration_6; }
 
-		//"yellow"
+		//'yellow'
 		public Keyword getYELLOWYellowKeyword_6_0() { return cYELLOWYellowKeyword_6_0; }
 
-		//OLIVE="olive"
+		//OLIVE='olive'
 		public EnumLiteralDeclaration getOLIVEEnumLiteralDeclaration_7() { return cOLIVEEnumLiteralDeclaration_7; }
 
-		//"olive"
+		//'olive'
 		public Keyword getOLIVEOliveKeyword_7_0() { return cOLIVEOliveKeyword_7_0; }
 
-		//LIME="lime"
+		//LIME='lime'
 		public EnumLiteralDeclaration getLIMEEnumLiteralDeclaration_8() { return cLIMEEnumLiteralDeclaration_8; }
 
-		//"lime"
+		//'lime'
 		public Keyword getLIMELimeKeyword_8_0() { return cLIMELimeKeyword_8_0; }
 
-		//GREEN="green"
+		//GREEN='green'
 		public EnumLiteralDeclaration getGREENEnumLiteralDeclaration_9() { return cGREENEnumLiteralDeclaration_9; }
 
-		//"green"
+		//'green'
 		public Keyword getGREENGreenKeyword_9_0() { return cGREENGreenKeyword_9_0; }
 
-		//AQUA="aqua"
+		//AQUA='aqua'
 		public EnumLiteralDeclaration getAQUAEnumLiteralDeclaration_10() { return cAQUAEnumLiteralDeclaration_10; }
 
-		//"aqua"
+		//'aqua'
 		public Keyword getAQUAAquaKeyword_10_0() { return cAQUAAquaKeyword_10_0; }
 
-		//TEAL="teal"
+		//TEAL='teal'
 		public EnumLiteralDeclaration getTEALEnumLiteralDeclaration_11() { return cTEALEnumLiteralDeclaration_11; }
 
-		//"teal"
+		//'teal'
 		public Keyword getTEALTealKeyword_11_0() { return cTEALTealKeyword_11_0; }
 
-		//BLUE="blue"
+		//BLUE='blue'
 		public EnumLiteralDeclaration getBLUEEnumLiteralDeclaration_12() { return cBLUEEnumLiteralDeclaration_12; }
 
-		//"blue"
+		//'blue'
 		public Keyword getBLUEBlueKeyword_12_0() { return cBLUEBlueKeyword_12_0; }
 
-		//NAVY="navy"
+		//NAVY='navy'
 		public EnumLiteralDeclaration getNAVYEnumLiteralDeclaration_13() { return cNAVYEnumLiteralDeclaration_13; }
 
-		//"navy"
+		//'navy'
 		public Keyword getNAVYNavyKeyword_13_0() { return cNAVYNavyKeyword_13_0; }
 
-		//FUCHSIA="fuchsia"
+		//FUCHSIA='fuchsia'
 		public EnumLiteralDeclaration getFUCHSIAEnumLiteralDeclaration_14() { return cFUCHSIAEnumLiteralDeclaration_14; }
 
-		//"fuchsia"
+		//'fuchsia'
 		public Keyword getFUCHSIAFuchsiaKeyword_14_0() { return cFUCHSIAFuchsiaKeyword_14_0; }
 
-		//PURPLE="purple"
+		//PURPLE='purple'
 		public EnumLiteralDeclaration getPURPLEEnumLiteralDeclaration_15() { return cPURPLEEnumLiteralDeclaration_15; }
 
-		//"purple"
+		//'purple'
 		public Keyword getPURPLEPurpleKeyword_15_0() { return cPURPLEPurpleKeyword_15_0; }
 	}
 
 	public class OperatorElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "Operator");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.Operator");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cEQUALEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cEQUALEqualsSignKeyword_0_0 = (Keyword)cEQUALEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cDIFFERENTEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
 		private final Keyword cDIFFERENTLessThanSignGreaterThanSignKeyword_1_0 = (Keyword)cDIFFERENTEnumLiteralDeclaration_1.eContents().get(0);
 		
-		////TODO < > <= =>
 		//enum Operator:
-		//	EQUAL="=" | DIFFERENT="<>";
+		//	EQUAL='=' |
+		//	DIFFERENT='<>';
 		public EnumRule getRule() { return rule; }
 
-		//EQUAL="=" | DIFFERENT="<>"
+		//EQUAL='=' | DIFFERENT='<>'
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//EQUAL="="
+		//EQUAL='='
 		public EnumLiteralDeclaration getEQUALEnumLiteralDeclaration_0() { return cEQUALEnumLiteralDeclaration_0; }
 
-		//"="
+		//'='
 		public Keyword getEQUALEqualsSignKeyword_0_0() { return cEQUALEqualsSignKeyword_0_0; }
 
-		//DIFFERENT="<>"
+		//DIFFERENT='<>'
 		public EnumLiteralDeclaration getDIFFERENTEnumLiteralDeclaration_1() { return cDIFFERENTEnumLiteralDeclaration_1; }
 
-		//"<>"
+		//'<>'
 		public Keyword getDIFFERENTLessThanSignGreaterThanSignKeyword_1_0() { return cDIFFERENTLessThanSignGreaterThanSignKeyword_1_0; }
 	}
 
 	public class BooleanLiteralElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "BooleanLiteral");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.BooleanLiteral");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cTRUEEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cTRUETrueKeyword_0_0 = (Keyword)cTRUEEnumLiteralDeclaration_0.eContents().get(0);
@@ -3507,27 +3577,28 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cFALSEFalseKeyword_1_0 = (Keyword)cFALSEEnumLiteralDeclaration_1.eContents().get(0);
 		
 		//enum BooleanLiteral:
-		//	TRUE="true" | FALSE="false";
+		//	TRUE='true' |
+		//	FALSE='false';
 		public EnumRule getRule() { return rule; }
 
-		//TRUE="true" | FALSE="false"
+		//TRUE='true' | FALSE='false'
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//TRUE="true"
+		//TRUE='true'
 		public EnumLiteralDeclaration getTRUEEnumLiteralDeclaration_0() { return cTRUEEnumLiteralDeclaration_0; }
 
-		//"true"
+		//'true'
 		public Keyword getTRUETrueKeyword_0_0() { return cTRUETrueKeyword_0_0; }
 
-		//FALSE="false"
+		//FALSE='false'
 		public EnumLiteralDeclaration getFALSEEnumLiteralDeclaration_1() { return cFALSEEnumLiteralDeclaration_1; }
 
-		//"false"
+		//'false'
 		public Keyword getFALSEFalseKeyword_1_0() { return cFALSEFalseKeyword_1_0; }
 	}
 
 	public class TextAlignValueElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "TextAlignValue");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.TextAlignValue");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cLEFTEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cLEFTLeftKeyword_0_0 = (Keyword)cLEFTEnumLiteralDeclaration_0.eContents().get(0);
@@ -3537,33 +3608,35 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRIGHTRightKeyword_2_0 = (Keyword)cRIGHTEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum TextAlignValue:
-		//	LEFT="left" | CENTER="center" | RIGHT="right";
+		//	LEFT='left' |
+		//	CENTER='center' |
+		//	RIGHT='right';
 		public EnumRule getRule() { return rule; }
 
-		//LEFT="left" | CENTER="center" | RIGHT="right"
+		//LEFT='left' | CENTER='center' | RIGHT='right'
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//LEFT="left"
+		//LEFT='left'
 		public EnumLiteralDeclaration getLEFTEnumLiteralDeclaration_0() { return cLEFTEnumLiteralDeclaration_0; }
 
-		//"left"
+		//'left'
 		public Keyword getLEFTLeftKeyword_0_0() { return cLEFTLeftKeyword_0_0; }
 
-		//CENTER="center"
+		//CENTER='center'
 		public EnumLiteralDeclaration getCENTEREnumLiteralDeclaration_1() { return cCENTEREnumLiteralDeclaration_1; }
 
-		//"center"
+		//'center'
 		public Keyword getCENTERCenterKeyword_1_0() { return cCENTERCenterKeyword_1_0; }
 
-		//RIGHT="right"
+		//RIGHT='right'
 		public EnumLiteralDeclaration getRIGHTEnumLiteralDeclaration_2() { return cRIGHTEnumLiteralDeclaration_2; }
 
-		//"right"
+		//'right'
 		public Keyword getRIGHTRightKeyword_2_0() { return cRIGHTRightKeyword_2_0; }
 	}
 
 	public class LineTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "LineType");
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipselabs.xdiagram.Dsl.LineType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cSOLIDEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cSOLIDSolidKeyword_0_0 = (Keyword)cSOLIDEnumLiteralDeclaration_0.eContents().get(0);
@@ -3573,28 +3646,30 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDOTDottedKeyword_2_0 = (Keyword)cDOTEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum LineType:
-		//	SOLID="solid" | DASH="dashed" | DOT="dotted";
+		//	SOLID='solid' |
+		//	DASH='dashed' |
+		//	DOT='dotted';
 		public EnumRule getRule() { return rule; }
 
-		//SOLID="solid" | DASH="dashed" | DOT="dotted"
+		//SOLID='solid' | DASH='dashed' | DOT='dotted'
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//SOLID="solid"
+		//SOLID='solid'
 		public EnumLiteralDeclaration getSOLIDEnumLiteralDeclaration_0() { return cSOLIDEnumLiteralDeclaration_0; }
 
-		//"solid"
+		//'solid'
 		public Keyword getSOLIDSolidKeyword_0_0() { return cSOLIDSolidKeyword_0_0; }
 
-		//DASH="dashed"
+		//DASH='dashed'
 		public EnumLiteralDeclaration getDASHEnumLiteralDeclaration_1() { return cDASHEnumLiteralDeclaration_1; }
 
-		//"dashed"
+		//'dashed'
 		public Keyword getDASHDashedKeyword_1_0() { return cDASHDashedKeyword_1_0; }
 
-		//DOT="dotted"
+		//DOT='dotted'
 		public EnumLiteralDeclaration getDOTEnumLiteralDeclaration_2() { return cDOTEnumLiteralDeclaration_2; }
 
-		//"dotted"
+		//'dotted'
 		public Keyword getDOTDottedKeyword_2_0() { return cDOTDottedKeyword_2_0; }
 	}
 	
@@ -3617,10 +3692,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	private final LinkFeatureElements pLinkFeature;
 	private final DecoratorElements pDecorator;
 	private final AnchorElements pAnchor;
-	private final AnchorDirectionElements unknownRuleAnchorDirection;
+	private final AnchorDirectionElements eAnchorDirection;
 	private final CustomColorElements pCustomColor;
 	private final ColorElements pColor;
-	private final DefaultColorElements unknownRuleDefaultColor;
+	private final DefaultColorElements eDefaultColor;
 	private final ConnectableElementElements pConnectableElement;
 	private final DecoratorElementElements pDecoratorElement;
 	private final ConnectableElementFeatureElements pConnectableElementFeature;
@@ -3636,13 +3711,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	private final LineFeatureElements pLineFeature;
 	private final ArrowElements pArrow;
 	private final ContainsElements pContains;
-	private final OperatorElements unknownRuleOperator;
+	private final OperatorElements eOperator;
 	private final ValueElements pValue;
 	private final IntValueElements pIntValue;
 	private final DoubleValueElements pDoubleValue;
 	private final StringValueElements pStringValue;
 	private final BooleanValueElements pBooleanValue;
-	private final BooleanLiteralElements unknownRuleBooleanLiteral;
+	private final BooleanLiteralElements eBooleanLiteral;
 	private final EnumValueElements pEnumValue;
 	private final FigureFeatureElements pFigureFeature;
 	private final LabelElements pLabel;
@@ -3665,9 +3740,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	private final TextPartElements pTextPart;
 	private final FontPropertiesElements pFontProperties;
 	private final TextAlignElements pTextAlign;
-	private final TextAlignValueElements unknownRuleTextAlignValue;
+	private final TextAlignValueElements eTextAlignValue;
 	private final LineStyleElements pLineStyle;
-	private final LineTypeElements unknownRuleLineType;
+	private final LineTypeElements eLineType;
 	private final LineWidthElements pLineWidth;
 	
 	private final Grammar grammar;
@@ -3698,10 +3773,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pLinkFeature = new LinkFeatureElements();
 		this.pDecorator = new DecoratorElements();
 		this.pAnchor = new AnchorElements();
-		this.unknownRuleAnchorDirection = new AnchorDirectionElements();
+		this.eAnchorDirection = new AnchorDirectionElements();
 		this.pCustomColor = new CustomColorElements();
 		this.pColor = new ColorElements();
-		this.unknownRuleDefaultColor = new DefaultColorElements();
+		this.eDefaultColor = new DefaultColorElements();
 		this.pConnectableElement = new ConnectableElementElements();
 		this.pDecoratorElement = new DecoratorElementElements();
 		this.pConnectableElementFeature = new ConnectableElementFeatureElements();
@@ -3717,13 +3792,13 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pLineFeature = new LineFeatureElements();
 		this.pArrow = new ArrowElements();
 		this.pContains = new ContainsElements();
-		this.unknownRuleOperator = new OperatorElements();
+		this.eOperator = new OperatorElements();
 		this.pValue = new ValueElements();
 		this.pIntValue = new IntValueElements();
 		this.pDoubleValue = new DoubleValueElements();
 		this.pStringValue = new StringValueElements();
 		this.pBooleanValue = new BooleanValueElements();
-		this.unknownRuleBooleanLiteral = new BooleanLiteralElements();
+		this.eBooleanLiteral = new BooleanLiteralElements();
 		this.pEnumValue = new EnumValueElements();
 		this.pFigureFeature = new FigureFeatureElements();
 		this.pLabel = new LabelElements();
@@ -3746,9 +3821,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pTextPart = new TextPartElements();
 		this.pFontProperties = new FontPropertiesElements();
 		this.pTextAlign = new TextAlignElements();
-		this.unknownRuleTextAlignValue = new TextAlignValueElements();
+		this.eTextAlignValue = new TextAlignValueElements();
 		this.pLineStyle = new LineStyleElements();
-		this.unknownRuleLineType = new LineTypeElements();
+		this.eLineType = new LineTypeElements();
 		this.pLineWidth = new LineWidthElements();
 	}
 	
@@ -3780,8 +3855,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//XDiagram:
-	//	"metamodel" importURI=STRING imports+=ImportStatement diagram=Diagram groups+=ToolGroup* (elements+=DiagramElement |
-	//	styles+=Style | colors+=CustomColor | figures+=CustomFigure)*;
+	//	'metamodel' importURI=STRING
+	//	imports+=ImportStatement
+	//	diagram=Diagram
+	//	groups+=ToolGroup* (elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*;
 	public XDiagramElements getXDiagramAccess() {
 		return pXDiagram;
 	}
@@ -3792,7 +3869,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// importedNamespace apparently cannot be on the root element
 	//ImportStatement:
-	//	{ImportStatement} ("import" importedNamespace=QualifiedNameWithWildCard)?;
+	//	{ImportStatement} ('import' importedNamespace=QualifiedNameWithWildCard)?;
 	public ImportStatementElements getImportStatementAccess() {
 		return pImportStatement;
 	}
@@ -3802,7 +3879,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//QualifiedName:
-	//	ID ("." ID)*;
+	//	ID ('.' ID)*;
 	public QualifiedNameElements getQualifiedNameAccess() {
 		return pQualifiedName;
 	}
@@ -3811,8 +3888,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getQualifiedNameAccess().getRule();
 	}
 
-	//QualifiedNameWithWildCard returns ecore::EString:
-	//	QualifiedName ("." "*")?;
+	//QualifiedNameWithWildCard:
+	//	QualifiedName ('.' '*')?;
 	public QualifiedNameWithWildCardElements getQualifiedNameWithWildCardAccess() {
 		return pQualifiedNameWithWildCard;
 	}
@@ -3822,7 +3899,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Diagram:
-	//	"diagram" modelClass=[ecore::EClass|QualifiedName] "{" contains+=Contains* "}";
+	//	'diagram' modelClass=[ecore::EClass|QualifiedName] '{'
+	//	contains+=Contains*
+	//	'}';
 	public DiagramElements getDiagramAccess() {
 		return pDiagram;
 	}
@@ -3832,7 +3911,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ToolGroup:
-	//	"toolgroup" name=ID description=STRING? ";";
+	//	'toolgroup' name=ID description=STRING? ';';
 	public ToolGroupElements getToolGroupAccess() {
 		return pToolGroup;
 	}
@@ -3852,7 +3931,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Style:
-	//	"style" name=ID (styled?="+" style=[Style])? "{" features+=StyleFeature* "}";
+	//	'style' name=ID (styled?='+' style=[Style])? '{'
+	//	features+=StyleFeature*
+	//	'}';
 	public StyleElements getStyleAccess() {
 		return pStyle;
 	}
@@ -3874,8 +3955,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getFeatureAccess().getRule();
 	}
 
-	//LinkedFeature returns Feature:
-	//	Contains | Anchor;
+	//LinkedFeature Feature:
+	//	Contains | Anchor
 	public LinkedFeatureElements getLinkedFeatureAccess() {
 		return pLinkedFeature;
 	}
@@ -3884,9 +3965,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getLinkedFeatureAccess().getRule();
 	}
 
-	//StyleFeature returns Feature:
+	//StyleFeature Feature:
 	//	Size | Position | Point | Corner | Background | Foreground | Transparency | FontProperties | TextValue | TextAlign |
-	//	LineStyle | LineWidth;
+	//	LineStyle | LineWidth
 	public StyleFeatureElements getStyleFeatureAccess() {
 		return pStyleFeature;
 	}
@@ -3905,8 +3986,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getFeatureContainerAccess().getRule();
 	}
 
-	//ChildElement returns FeatureContainer:
-	//	ConnectableElement | Line | Arrow;
+	//ChildElement FeatureContainer:
+	//	ConnectableElement | Line | Arrow
 	public ChildElementElements getChildElementAccess() {
 		return pChildElement;
 	}
@@ -3917,7 +3998,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// TODO validate ATT / Value 
 	//FeatureConditional:
-	//	"if" modelAttribute=[ecore::EAttribute|QualifiedName] operator=Operator value=Value;
+	//	'if' modelAttribute=[ecore::EAttribute|QualifiedName] operator=Operator value=Value;
 	public FeatureConditionalElements getFeatureConditionalAccess() {
 		return pFeatureConditional;
 	}
@@ -3927,8 +4008,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Node:
-	//	(tool?="tool" toolName=STRING (group?="group" groupId=[ToolGroup])? (icon?="icon" imageId=ID)?)? "node"
-	//	modelClass=[ecore::EClass|QualifiedName] rootFigure=ConnectableElement;
+	//	(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
+	//	'node' modelClass=[ecore::EClass|QualifiedName] rootFigure=ConnectableElement;
 	public NodeElements getNodeAccess() {
 		return pNode;
 	}
@@ -3938,11 +4019,15 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Link:
-	//	(tool?="tool" toolName=STRING (group?="group" groupId=[ToolGroup])? (icon?="icon" imageId=ID)?)? "link"
-	//	(reference?="reference" modelReference=[ecore::EReference|QualifiedName] | complex?="class"
-	//	modelClass=[ecore::EClass|QualifiedName] "source" sourceReference=[ecore::EReference|QualifiedName] "target"
-	//	targetReference=[ecore::EReference|QualifiedName]) (styled?="+" style=[Style])? "{" features+=LinkFeature*
-	//	decorators+=Decorator* "}";
+	//	(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
+	//	'link' (reference?='reference' modelReference=[ecore::EReference|QualifiedName] | complex?='class'
+	//	modelClass=[ecore::EClass|QualifiedName]
+	//	'source' sourceReference=[ecore::EReference|QualifiedName]
+	//	'target' targetReference=[ecore::EReference|QualifiedName]) (styled?='+' style=[Style])?
+	//	'{'
+	//	features+=LinkFeature*
+	//	decorators+=Decorator*
+	//	'}';
 	public LinkElements getLinkAccess() {
 		return pLink;
 	}
@@ -3951,8 +4036,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getLinkAccess().getRule();
 	}
 
-	//LinkFeature returns Feature:
-	//	Foreground | LineStyle | LineWidth;
+	//LinkFeature Feature:
+	//	Foreground | LineStyle | LineWidth
 	public LinkFeatureElements getLinkFeatureAccess() {
 		return pLinkFeature;
 	}
@@ -3962,7 +4047,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Decorator:
-	//	"decorator" position=INT "%" element=DecoratorElement;
+	//	'decorator' position=INT '%' element=DecoratorElement;
 	public DecoratorElements getDecoratorAccess() {
 		return pDecorator;
 	}
@@ -3973,8 +4058,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// TODO validation
 	//Anchor:
-	//	"anchor" direction=AnchorDirection modelReference=[ecore::EReference|QualifiedName] ("max" max=INT)?
-	//	conditional=FeatureConditional? ";";
+	//	'anchor' direction=AnchorDirection modelReference=[ecore::EReference|QualifiedName] ('max' max=INT)?
+	//	conditional=FeatureConditional?
+	//	';';
 	public AnchorElements getAnchorAccess() {
 		return pAnchor;
 	}
@@ -3984,9 +4070,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum AnchorDirection:
-	//	INCOMING="incoming" | OUTGOING="outgoing";
+	//	INCOMING='incoming' |
+	//	OUTGOING='outgoing';
 	public AnchorDirectionElements getAnchorDirectionAccess() {
-		return unknownRuleAnchorDirection;
+		return eAnchorDirection;
 	}
 	
 	public EnumRule getAnchorDirectionRule() {
@@ -3996,7 +4083,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	////---------------------------------------
 	//// Colors
 	//CustomColor:
-	//	"color" name=ID R=INT G=INT B=INT ";";
+	//	'color' name=ID R=INT G=INT B=INT ';';
 	public CustomColorElements getCustomColorAccess() {
 		return pCustomColor;
 	}
@@ -4016,11 +4103,24 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum DefaultColor:
-	//	WHITE="white" | SILVER="silver" | GRAY="gray" | BLACK="black" | RED="red" | MAROON="maroon" | YELLOW="yellow" |
-	//	OLIVE="olive" | LIME="lime" | GREEN="green" | AQUA="aqua" | TEAL="teal" | BLUE="blue" | NAVY="navy" |
-	//	FUCHSIA="fuchsia" | PURPLE="purple";
+	//	WHITE='white' |
+	//	SILVER='silver' |
+	//	GRAY='gray' |
+	//	BLACK='black' |
+	//	RED='red' |
+	//	MAROON='maroon' |
+	//	YELLOW='yellow' |
+	//	OLIVE='olive' |
+	//	LIME='lime' |
+	//	GREEN='green' |
+	//	AQUA='aqua' |
+	//	TEAL='teal' |
+	//	BLUE='blue' |
+	//	NAVY='navy' |
+	//	FUCHSIA='fuchsia' |
+	//	PURPLE='purple';
 	public DefaultColorElements getDefaultColorAccess() {
-		return unknownRuleDefaultColor;
+		return eDefaultColor;
 	}
 	
 	public EnumRule getDefaultColorRule() {
@@ -4043,8 +4143,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getConnectableElementAccess().getRule();
 	}
 
-	//DecoratorElement returns FeatureContainer:
-	//	Ellipse | Rhombus | Polyline | Triangle | Label | Image | Arrow | Line;
+	//DecoratorElement FeatureContainer:
+	//	Ellipse | Rhombus | Polyline | Triangle | Label | Image | Arrow | Line
 	public DecoratorElementElements getDecoratorElementAccess() {
 		return pDecoratorElement;
 	}
@@ -4053,8 +4153,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getDecoratorElementAccess().getRule();
 	}
 
-	//ConnectableElementFeature returns Feature:
-	//	Position | Size | ColorFeature | Transparency | LineStyle | LineWidth | Contains | Anchor | Layout | Visible;
+	//ConnectableElementFeature Feature:
+	//	Position | Size | ColorFeature | Transparency | LineStyle | LineWidth | Contains | Anchor | Layout | Visible
 	public ConnectableElementFeatureElements getConnectableElementFeatureAccess() {
 		return pConnectableElementFeature;
 	}
@@ -4064,7 +4164,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//CustomFigure:
-	//	"figure" name=ID "as" element=ConnectableElement;
+	//	'figure' name=ID 'as' element=ConnectableElement;
 	public CustomFigureElements getCustomFigureAccess() {
 		return pCustomFigure;
 	}
@@ -4074,8 +4174,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Custom:
-	//	"figure" figure=[CustomFigure] (styled?="+" style=[Style])? "{" features+=LinkedFeature* ("child"
-	//	children+=ChildElement)* "}";
+	//	'figure' figure=[CustomFigure] (styled?='+' style=[Style])? '{'
+	//	features+=LinkedFeature* ('child' children+=ChildElement)*
+	//	'}';
 	public CustomElements getCustomAccess() {
 		return pCustom;
 	}
@@ -4085,8 +4186,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Rectangle:
-	//	(rectangle?="rectangle" | square?="square") (styled?="+" style=[Style])? "{" features+=RectangleFeature* ("child"
-	//	children+=ChildElement)* "}";
+	//	(rectangle?='rectangle' | square?='square') (styled?='+' style=[Style])? '{'
+	//	features+=RectangleFeature* ('child' children+=ChildElement)*
+	//	'}';
 	public RectangleElements getRectangleAccess() {
 		return pRectangle;
 	}
@@ -4095,8 +4197,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getRectangleAccess().getRule();
 	}
 
-	//RectangleFeature returns Feature:
-	//	ConnectableElementFeature | Corner;
+	//RectangleFeature Feature:
+	//	ConnectableElementFeature | Corner
 	public RectangleFeatureElements getRectangleFeatureAccess() {
 		return pRectangleFeature;
 	}
@@ -4106,8 +4208,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Rhombus:
-	//	{Rhombus} "rhombus" (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature* ("child"
-	//	children+=ChildElement)* "}";
+	//	{Rhombus}
+	//	'rhombus' (styled?='+' style=[Style])? '{'
+	//	features+=ConnectableElementFeature* ('child' children+=ChildElement)*
+	//	'}';
 	public RhombusElements getRhombusAccess() {
 		return pRhombus;
 	}
@@ -4117,8 +4221,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Ellipse:
-	//	(ellipse?="ellipse" | circle?="circle") (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature* ("child"
-	//	children+=ChildElement)* "}";
+	//	(ellipse?='ellipse' | circle?='circle') (styled?='+' style=[Style])? '{'
+	//	features+=ConnectableElementFeature* ('child' children+=ChildElement)*
+	//	'}';
 	public EllipseElements getEllipseAccess() {
 		return pEllipse;
 	}
@@ -4128,8 +4233,12 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Polyline:
-	//	(polygon?="polygon" | polyline?="polyline") (styled?="+" style=[Style])? "{" features+=Point features+=Point
-	//	features+=Point* features+=ConnectableElementFeature* ("child" children+=ChildElement)* "}";
+	//	(polygon?='polygon' | polyline?='polyline') (styled?='+' style=[Style])? '{'
+	//	features+=Point
+	//	features+=Point
+	//	features+=Point*
+	//	features+=ConnectableElementFeature* ('child' children+=ChildElement)*
+	//	'}';
 	public PolylineElements getPolylineAccess() {
 		return pPolyline;
 	}
@@ -4139,8 +4248,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Triangle:
-	//	{Triangle} "triangle" (styled?="+" style=[Style])? "{" features+=ConnectableElementFeature* ("child"
-	//	children+=ChildElement)* "}";
+	//	{Triangle}
+	//	'triangle' (styled?='+' style=[Style])? '{'
+	//	features+=ConnectableElementFeature* ('child' children+=ChildElement)*
+	//	'}';
 	public TriangleElements getTriangleAccess() {
 		return pTriangle;
 	}
@@ -4150,7 +4261,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Line:
-	//	{Line} (horizontal?="hline" | vertical?="vline") (styled?="+" style=[Style])? "{" features+=LineFeature* "}";
+	//	{Line} (horizontal?='hline' | vertical?='vline') (styled?='+' style=[Style])? '{'
+	//	features+=LineFeature*
+	//	'}';
 	public LineElements getLineAccess() {
 		return pLine;
 	}
@@ -4159,8 +4272,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getLineAccess().getRule();
 	}
 
-	//LineFeature returns Feature:
-	//	LineWidth | LineStyle | Foreground | Position | Size | Visible;
+	//LineFeature Feature:
+	//	LineWidth | LineStyle | Foreground | Position | Size | Visible
 	public LineFeatureElements getLineFeatureAccess() {
 		return pLineFeature;
 	}
@@ -4170,7 +4283,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Arrow:
-	//	{Arrow} "arrow" (styled?="+" style=[Style])? "{" features+=LineFeature* "}";
+	//	{Arrow}
+	//	'arrow' (styled?='+' style=[Style])? '{'
+	//	features+=LineFeature*
+	//	'}';
 	public ArrowElements getArrowAccess() {
 		return pArrow;
 	}
@@ -4180,7 +4296,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Contains:
-	//	"contains" modelReference=[ecore::EReference|QualifiedName] conditional=FeatureConditional? ";";
+	//	'contains' modelReference=[ecore::EReference|QualifiedName] conditional=FeatureConditional?
+	//	';';
 	public ContainsElements getContainsAccess() {
 		return pContains;
 	}
@@ -4189,11 +4306,11 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getContainsAccess().getRule();
 	}
 
-	////TODO < > <= =>
 	//enum Operator:
-	//	EQUAL="=" | DIFFERENT="<>";
+	//	EQUAL='=' |
+	//	DIFFERENT='<>';
 	public OperatorElements getOperatorAccess() {
-		return unknownRuleOperator;
+		return eOperator;
 	}
 	
 	public EnumRule getOperatorRule() {
@@ -4221,7 +4338,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DoubleValue:
-	//	valueInt=INT "." valueDecimal=INT;
+	//	valueInt=INT '.' valueDecimal=INT;
 	public DoubleValueElements getDoubleValueAccess() {
 		return pDoubleValue;
 	}
@@ -4231,7 +4348,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//StringValue:
-	//	null?="null" | value=STRING;
+	//	null?='null' | value=STRING;
 	public StringValueElements getStringValueAccess() {
 		return pStringValue;
 	}
@@ -4251,9 +4368,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum BooleanLiteral:
-	//	TRUE="true" | FALSE="false";
+	//	TRUE='true' |
+	//	FALSE='false';
 	public BooleanLiteralElements getBooleanLiteralAccess() {
-		return unknownRuleBooleanLiteral;
+		return eBooleanLiteral;
 	}
 	
 	public EnumRule getBooleanLiteralRule() {
@@ -4271,8 +4389,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getEnumValueAccess().getRule();
 	}
 
-	//FigureFeature returns Feature:
-	//	ColorFeature | Size | Position | Point | LineStyle;
+	//FigureFeature Feature:
+	//	ColorFeature | Size | Position | Point | LineStyle
 	public FigureFeatureElements getFigureFeatureAccess() {
 		return pFigureFeature;
 	}
@@ -4282,7 +4400,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Label:
-	//	{Label} "label" (styled?="+" style=[Style])? "{" features+=LabelFeature* ("child" children+=ChildElement)* "}";
+	//	{Label}
+	//	'label' (styled?='+' style=[Style])? '{'
+	//	features+=LabelFeature* ('child' children+=ChildElement)*
+	//	'}';
 	public LabelElements getLabelAccess() {
 		return pLabel;
 	}
@@ -4291,8 +4412,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getLabelAccess().getRule();
 	}
 
-	//LabelFeature returns Feature:
-	//	TextValue | Foreground | FontProperties | Size | Position | Visible | TextAlign;
+	//LabelFeature Feature:
+	//	TextValue | Foreground | FontProperties | Size | Position | Visible | TextAlign
 	public LabelFeatureElements getLabelFeatureAccess() {
 		return pLabelFeature;
 	}
@@ -4303,7 +4424,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// TODO image provider problem
 	//Image:
-	//	"image" imageId=STRING (styled?="+" style=[Style])? "{" features+=ImageFeature* ("child" children+=ChildElement)* "}";
+	//	'image' imageId=STRING (styled?='+' style=[Style])? '{'
+	//	features+=ImageFeature* ('child' children+=ChildElement)*
+	//	'}';
 	public ImageElements getImageAccess() {
 		return pImage;
 	}
@@ -4312,8 +4435,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getImageAccess().getRule();
 	}
 
-	//ImageFeature returns Feature:
-	//	Size | Position | Transparency;
+	//ImageFeature Feature:
+	//	Size | Position | Transparency
 	public ImageFeatureElements getImageFeatureAccess() {
 		return pImageFeature;
 	}
@@ -4323,8 +4446,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Invisible:
-	//	{Invisible} "invisible" (styled?="+" style=[Style])? "{" features+=InvisibleFeature* ("child" children+=ChildElement)*
-	//	"}";
+	//	{Invisible}
+	//	'invisible' (styled?='+' style=[Style])? '{'
+	//	features+=InvisibleFeature* ('child' children+=ChildElement)*
+	//	'}';
 	public InvisibleElements getInvisibleAccess() {
 		return pInvisible;
 	}
@@ -4333,8 +4458,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getInvisibleAccess().getRule();
 	}
 
-	//InvisibleFeature returns Feature:
-	//	Size | Position | LinkedFeature | Layout;
+	//InvisibleFeature Feature:
+	//	Size | Position | LinkedFeature | Layout
 	public InvisibleFeatureElements getInvisibleFeatureAccess() {
 		return pInvisibleFeature;
 	}
@@ -4353,8 +4478,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getColorFeatureAccess().getRule();
 	}
 
-	//Foreground returns ColorFeature:
-	//	type="foreground" color=Color conditional=FeatureConditional? ";";
+	//Foreground ColorFeature:
+	//	type='foreground' color=Color
+	//	conditional=FeatureConditional?
+	//	';'
 	public ForegroundElements getForegroundAccess() {
 		return pForeground;
 	}
@@ -4363,8 +4490,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		return getForegroundAccess().getRule();
 	}
 
-	//Background returns ColorFeature:
-	//	type="background" color=Color conditional=FeatureConditional? ";";
+	//Background ColorFeature:
+	//	type='background' color=Color
+	//	conditional=FeatureConditional?
+	//	';'
 	public BackgroundElements getBackgroundAccess() {
 		return pBackground;
 	}
@@ -4375,7 +4504,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// TODO validation percent
 	//Transparency:
-	//	"transparency" percent=INT "%" conditional=FeatureConditional? ";";
+	//	'transparency' percent=INT '%'
+	//	conditional=FeatureConditional?
+	//	';';
 	public TransparencyElements getTransparencyAccess() {
 		return pTransparency;
 	}
@@ -4385,8 +4516,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Size:
-	//	"size" width=INT widthRelative?="]"? (height=INT heightRelative?="]"?)? resizable?="resizable"?
-	//	conditional=FeatureConditional? ";";
+	//	'size' width=INT widthRelative?=']'? (height=INT heightRelative?=']'?)? resizable?='resizable'?
+	//	conditional=FeatureConditional?
+	//	';';
 	public SizeElements getSizeAccess() {
 		return pSize;
 	}
@@ -4396,7 +4528,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Point:
-	//	"point" x=INT y=INT conditional=FeatureConditional? ";";
+	//	'point' x=INT y=INT
+	//	conditional=FeatureConditional?
+	//	';';
 	public PointElements getPointAccess() {
 		return pPoint;
 	}
@@ -4406,7 +4540,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Position:
-	//	"position" x=INT xRelative?="%"? y=INT yRelative?="%"? conditional=FeatureConditional? ";";
+	//	'position' x=INT xRelative?='%'? y=INT yRelative?='%'?
+	//	conditional=FeatureConditional?
+	//	';';
 	public PositionElements getPositionAccess() {
 		return pPosition;
 	}
@@ -4416,7 +4552,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Corner:
-	//	"corner" angle=INT conditional=FeatureConditional? ";";
+	//	'corner' angle=INT
+	//	conditional=FeatureConditional?
+	//	';';
 	public CornerElements getCornerAccess() {
 		return pCorner;
 	}
@@ -4426,7 +4564,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Layout:
-	//	"layout" (vertical?="vertical" | horizontal?="horizontal") ("margin" margin=INT)? conditional=FeatureConditional? ";";
+	//	'layout' (vertical?='vertical' | horizontal?='horizontal') ('margin' margin=INT)?
+	//	conditional=FeatureConditional?
+	//	';';
 	public LayoutElements getLayoutAccess() {
 		return pLayout;
 	}
@@ -4436,7 +4576,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Visible:
-	//	"invisible" conditional=FeatureConditional ";";
+	//	'invisible' conditional=FeatureConditional
+	//	';';
 	public VisibleElements getVisibleAccess() {
 		return pVisible;
 	}
@@ -4449,7 +4590,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	//// Text
 	//// TODO: validation of owned attribute
 	//TextValue:
-	//	{TextValue} "text" parts+=TextPart* conditional=FeatureConditional? ";";
+	//	{TextValue}
+	//	'text' parts+=TextPart*
+	//	conditional=FeatureConditional?
+	//	';';
 	public TextValueElements getTextValueAccess() {
 		return pTextValue;
 	}
@@ -4459,7 +4603,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TextPart:
-	//	text=STRING | editable?="edit:"? modelAttribute=[ecore::EAttribute|QualifiedName];
+	//	text=STRING | editable?='edit:'? modelAttribute=[ecore::EAttribute|QualifiedName];
 	public TextPartElements getTextPartAccess() {
 		return pTextPart;
 	}
@@ -4469,8 +4613,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//FontProperties:
-	//	{FontProperties} "font" (face="arial" | "verdana" | "courier" | "times")? size=INT? bold?="bold"? italics?="italics"?
-	//	conditional=FeatureConditional? ";";
+	//	{FontProperties}
+	//	'font' (face='arial' | 'verdana' | 'courier' | 'times')? size=INT? bold?='bold'? italics?='italics'?
+	//	conditional=FeatureConditional?
+	//	';';
 	public FontPropertiesElements getFontPropertiesAccess() {
 		return pFontProperties;
 	}
@@ -4480,7 +4626,9 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TextAlign:
-	//	"align" value=TextAlignValue conditional=FeatureConditional? ";";
+	//	'align' value=TextAlignValue
+	//	conditional=FeatureConditional?
+	//	';';
 	public TextAlignElements getTextAlignAccess() {
 		return pTextAlign;
 	}
@@ -4490,9 +4638,11 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum TextAlignValue:
-	//	LEFT="left" | CENTER="center" | RIGHT="right";
+	//	LEFT='left' |
+	//	CENTER='center' |
+	//	RIGHT='right';
 	public TextAlignValueElements getTextAlignValueAccess() {
-		return unknownRuleTextAlignValue;
+		return eTextAlignValue;
 	}
 	
 	public EnumRule getTextAlignValueRule() {
@@ -4502,7 +4652,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	////-------------------------------
 	//// Lines
 	//LineStyle:
-	//	{LineStyle} "linestyle" style=LineType? manhattan?="manhattan"? conditional=FeatureConditional? ";";
+	//	{LineStyle}
+	//	'linestyle' style=LineType? manhattan?='manhattan'?
+	//	conditional=FeatureConditional?
+	//	';';
 	public LineStyleElements getLineStyleAccess() {
 		return pLineStyle;
 	}
@@ -4512,24 +4665,21 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum LineType:
-	//	SOLID="solid" | DASH="dashed" | DOT="dotted";
+	//	SOLID='solid' |
+	//	DASH='dashed' |
+	//	DOT='dotted';
 	public LineTypeElements getLineTypeAccess() {
-		return unknownRuleLineType;
+		return eLineType;
 	}
 	
 	public EnumRule getLineTypeRule() {
 		return getLineTypeAccess().getRule();
 	}
 
-	////---------------------------------
-	//// Terminals
-	////terminal PERCENT: ('0'|('1'..'9')(('0'..'9'))?|'100');
-	////terminal S: (' '|'\t')+;
-	////terminal NEWLINE:
-	//// New line on DOS or Unix 
-	////   '\r'? '\n';
 	//LineWidth:
-	//	"linewidth" width=INT conditional=FeatureConditional? ";";
+	//	'linewidth' width=INT
+	//	conditional=FeatureConditional?
+	//	';';
 	public LineWidthElements getLineWidthAccess() {
 		return pLineWidth;
 	}
@@ -4539,38 +4689,38 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//terminal ID:
-	//	"^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
+	//	'^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;
 	public TerminalRule getIDRule() {
 		return gaTerminals.getIDRule();
 	} 
 
 	//terminal INT returns ecore::EInt:
-	//	"0".."9"+;
+	//	'0'..'9'+;
 	public TerminalRule getINTRule() {
 		return gaTerminals.getINTRule();
 	} 
 
 	//terminal STRING:
-	//	"\"" ("\\" . / * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\""))* "\"" | "\'" ("\\" .
-	//	/ * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\'"))* "\'";
+	//	'"' ('\\' . | !('\\' | '"'))* '"' |
+	//	"'" ('\\' . | !('\\' | "'"))* "'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	} 
 
 	//terminal ML_COMMENT:
-	//	"/ *"->"* /";
+	//	'/ *'->'* /';
 	public TerminalRule getML_COMMENTRule() {
 		return gaTerminals.getML_COMMENTRule();
 	} 
 
 	//terminal SL_COMMENT:
-	//	"//" !("\n" | "\r")* ("\r"? "\n")?;
+	//	'//' !('\n' | '\r')* ('\r'? '\n')?;
 	public TerminalRule getSL_COMMENTRule() {
 		return gaTerminals.getSL_COMMENTRule();
 	} 
 
 	//terminal WS:
-	//	(" " | "\t" | "\r" | "\n")+;
+	//	' ' | '\t' | '\r' | '\n'+;
 	public TerminalRule getWSRule() {
 		return gaTerminals.getWSRule();
 	} 

@@ -8,12 +8,12 @@ import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.AnchorContainer;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.services.Graphiti;
-import org.eclipselabs.xdiagram.dsl.Anchor;
-import org.eclipselabs.xdiagram.dsl.ConnectableElement;
-import org.eclipselabs.xdiagram.dsl.Feature;
-import org.eclipselabs.xdiagram.dsl.FeatureContainer;
-import org.eclipselabs.xdiagram.dsl.Node;
-import org.eclipselabs.xdiagram.dsl.Position;
+import pt.iscte.xdiagram.dsl.model.Anchor;
+import pt.iscte.xdiagram.dsl.model.ConnectableElement;
+import pt.iscte.xdiagram.dsl.model.Feature;
+import pt.iscte.xdiagram.dsl.model.FeatureContainer;
+import pt.iscte.xdiagram.dsl.model.Node;
+import pt.iscte.xdiagram.dsl.model.Position;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 
 import com.google.common.collect.Maps;

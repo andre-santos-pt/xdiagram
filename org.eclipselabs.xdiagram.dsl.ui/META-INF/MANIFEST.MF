@@ -16,12 +16,14 @@ Require-Bundle: org.eclipselabs.xdiagram.dsl;visibility:=reexport,
  org.eclipse.xtext.common.types.ui,
  org.eclipse.xtext.ui.codetemplates.ui,
  org.eclipse.compare,
- org.eclipse.xtext.xbase.lib
+ org.eclipse.xtext.xbase.lib,
+ com.google.guava
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.eclipselabs.xdiagram.ui.quickfix,
  org.eclipselabs.xdiagram.ui.contentassist,
  org.eclipselabs.xdiagram.ui.contentassist.antlr,
- org.eclipselabs.xdiagram.ui.internal
+ org.eclipselabs.xdiagram.ui.internal,
+ org.eclipselabs.xdiagram.ui.contentassist.antlr.internal
 Bundle-Activator: org.eclipselabs.xdiagram.ui.internal.DslActivator

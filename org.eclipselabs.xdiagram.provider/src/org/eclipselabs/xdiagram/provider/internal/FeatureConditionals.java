@@ -4,12 +4,12 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipselabs.xdiagram.dsl.BooleanValue;
-import org.eclipselabs.xdiagram.dsl.EnumValue;
-import org.eclipselabs.xdiagram.dsl.FeatureConditional;
-import org.eclipselabs.xdiagram.dsl.IntValue;
-import org.eclipselabs.xdiagram.dsl.StringValue;
-import org.eclipselabs.xdiagram.dsl.Value;
+import pt.iscte.xdiagram.dsl.model.BooleanValue;
+import pt.iscte.xdiagram.dsl.model.EnumValue;
+import pt.iscte.xdiagram.dsl.model.FeatureConditional;
+import pt.iscte.xdiagram.dsl.model.IntValue;
+import pt.iscte.xdiagram.dsl.model.StringValue;
+import pt.iscte.xdiagram.dsl.model.Value;
 
 public class FeatureConditionals {
 

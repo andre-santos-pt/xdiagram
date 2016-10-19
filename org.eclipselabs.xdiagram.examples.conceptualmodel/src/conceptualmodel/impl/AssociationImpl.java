@@ -21,13 +21,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link conceptualmodel.impl.AssociationImpl#getTo <em>To</em>}</li>
  *   <li>{@link conceptualmodel.impl.AssociationImpl#getType <em>Type</em>}</li>
  *   <li>{@link conceptualmodel.impl.AssociationImpl#getName <em>Name</em>}</li>
  *   <li>{@link conceptualmodel.impl.AssociationImpl#getCardinality <em>Cardinality</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

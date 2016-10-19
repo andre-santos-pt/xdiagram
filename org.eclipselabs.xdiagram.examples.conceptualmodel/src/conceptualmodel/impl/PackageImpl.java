@@ -27,12 +27,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link conceptualmodel.impl.PackageImpl#getNamespace <em>Namespace</em>}</li>
  *   <li>{@link conceptualmodel.impl.PackageImpl#getEntities <em>Entities</em>}</li>
  *   <li>{@link conceptualmodel.impl.PackageImpl#getPackages <em>Packages</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

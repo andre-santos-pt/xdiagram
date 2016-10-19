@@ -11,13 +11,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link conceptualmodel.Association#getTo <em>To</em>}</li>
  *   <li>{@link conceptualmodel.Association#getType <em>Type</em>}</li>
  *   <li>{@link conceptualmodel.Association#getName <em>Name</em>}</li>
  *   <li>{@link conceptualmodel.Association#getCardinality <em>Cardinality</em>}</li>
  * </ul>
- * </p>
  *
  * @see conceptualmodel.ConceptualmodelPackage#getAssociation()
  * @model

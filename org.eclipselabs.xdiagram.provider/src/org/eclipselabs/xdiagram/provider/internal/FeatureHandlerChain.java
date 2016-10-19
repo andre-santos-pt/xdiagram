@@ -8,24 +8,19 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.graphiti.features.IFeatureProvider;
-import org.eclipse.graphiti.features.IUpdateFeature;
-import org.eclipse.graphiti.features.context.impl.UpdateContext;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
-import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
-import org.eclipselabs.xdiagram.dsl.Custom;
-import org.eclipselabs.xdiagram.dsl.Feature;
-import org.eclipselabs.xdiagram.dsl.FeatureContainer;
-import org.eclipselabs.xdiagram.dsl.Link;
-import org.eclipselabs.xdiagram.dsl.Node;
-import org.eclipselabs.xdiagram.dsl.Visible;
 import org.eclipselabs.xdiagram.provider.LanguageProvider;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.ListMultimap;
+
+import pt.iscte.xdiagram.dsl.model.Custom;
+import pt.iscte.xdiagram.dsl.model.Feature;
+import pt.iscte.xdiagram.dsl.model.FeatureContainer;
+import pt.iscte.xdiagram.dsl.model.Visible;
 
 public class FeatureHandlerChain  {
 

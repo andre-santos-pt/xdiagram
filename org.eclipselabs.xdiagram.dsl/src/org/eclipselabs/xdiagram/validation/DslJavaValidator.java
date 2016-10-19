@@ -64,6 +64,7 @@ public class DslJavaValidator extends org.eclipselabs.xdiagram.validation.Abstra
 		
 		String ecoreUri = diagram.getImportURI();
 		URI uri = URI.createURI(ecoreUri);
+		
 		if(!uri.isPlatform())
 			error("invalid ecore model", XDIAGRAM__IMPORT_URI);
 		pluginId = uri.segment(1);

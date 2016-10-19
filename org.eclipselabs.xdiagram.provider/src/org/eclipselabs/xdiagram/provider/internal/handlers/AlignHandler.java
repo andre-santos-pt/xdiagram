@@ -6,13 +6,12 @@ import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.algorithms.Text;
 import org.eclipse.graphiti.mm.algorithms.styles.Orientation;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
-import org.eclipselabs.xdiagram.dsl.ConnectableElement;
-import org.eclipselabs.xdiagram.dsl.Feature;
-import org.eclipselabs.xdiagram.dsl.FeatureContainer;
-import org.eclipselabs.xdiagram.dsl.Label;
-import org.eclipselabs.xdiagram.dsl.TextAlign;
-import org.eclipselabs.xdiagram.dsl.Visible;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
+
+import pt.iscte.xdiagram.dsl.model.Feature;
+import pt.iscte.xdiagram.dsl.model.FeatureContainer;
+import pt.iscte.xdiagram.dsl.model.Label;
+import pt.iscte.xdiagram.dsl.model.TextAlign;
 
 public class AlignHandler implements FeatureHandler {
 

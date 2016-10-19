@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link conceptualmodel.Package#getNamespace <em>Namespace</em>}</li>
  *   <li>{@link conceptualmodel.Package#getEntities <em>Entities</em>}</li>
  *   <li>{@link conceptualmodel.Package#getPackages <em>Packages</em>}</li>
  * </ul>
- * </p>
  *
  * @see conceptualmodel.ConceptualmodelPackage#getPackage()
  * @model

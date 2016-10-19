@@ -41,7 +41,7 @@ public class DslSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_FontProperties___CourierKeyword_2_2_or_TimesKeyword_2_3_or_VerdanaKeyword_2_1__q.equals(syntax))
+			if (match_FontProperties___CourierKeyword_2_2_or_TimesKeyword_2_3_or_VerdanaKeyword_2_1__q.equals(syntax))
 				emit_FontProperties___CourierKeyword_2_2_or_TimesKeyword_2_3_or_VerdanaKeyword_2_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}

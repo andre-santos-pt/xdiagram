@@ -5,17 +5,17 @@ import java.util.EnumMap;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
-import org.eclipse.graphiti.mm.algorithms.Polyline;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipse.graphiti.util.ColorConstant;
-import org.eclipselabs.xdiagram.dsl.Color;
-import org.eclipselabs.xdiagram.dsl.ColorFeature;
-import org.eclipselabs.xdiagram.dsl.CustomColor;
-import org.eclipselabs.xdiagram.dsl.DefaultColor;
-import org.eclipselabs.xdiagram.dsl.Feature;
-import org.eclipselabs.xdiagram.dsl.FeatureContainer;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
+
+import pt.iscte.xdiagram.dsl.model.Color;
+import pt.iscte.xdiagram.dsl.model.ColorFeature;
+import pt.iscte.xdiagram.dsl.model.CustomColor;
+import pt.iscte.xdiagram.dsl.model.DefaultColor;
+import pt.iscte.xdiagram.dsl.model.Feature;
+import pt.iscte.xdiagram.dsl.model.FeatureContainer;
 
 public class ColorHandler implements FeatureHandler {
 

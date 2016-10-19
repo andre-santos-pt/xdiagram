@@ -8,13 +8,13 @@ import org.eclipse.graphiti.mm.algorithms.styles.Font;
 import org.eclipse.graphiti.mm.algorithms.styles.Orientation;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.services.Graphiti;
-import org.eclipselabs.xdiagram.dsl.ConnectableElement;
-import org.eclipselabs.xdiagram.dsl.Feature;
-import org.eclipselabs.xdiagram.dsl.FeatureContainer;
-import org.eclipselabs.xdiagram.dsl.FontProperties;
-import org.eclipselabs.xdiagram.dsl.Label;
-import org.eclipselabs.xdiagram.dsl.TextAlign;
-import org.eclipselabs.xdiagram.dsl.Visible;
+import pt.iscte.xdiagram.dsl.model.ConnectableElement;
+import pt.iscte.xdiagram.dsl.model.Feature;
+import pt.iscte.xdiagram.dsl.model.FeatureContainer;
+import pt.iscte.xdiagram.dsl.model.FontProperties;
+import pt.iscte.xdiagram.dsl.model.Label;
+import pt.iscte.xdiagram.dsl.model.TextAlign;
+import pt.iscte.xdiagram.dsl.model.Visible;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 
 public class FontHandler implements FeatureHandler {

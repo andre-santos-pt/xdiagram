@@ -7,19 +7,18 @@ import java.util.List;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.algorithms.Polygon;
-import org.eclipse.graphiti.mm.algorithms.Text;
-import org.eclipse.graphiti.mm.algorithms.styles.Font;
 import org.eclipse.graphiti.mm.algorithms.styles.Point;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.services.Graphiti;
-import org.eclipselabs.xdiagram.dsl.Custom;
-import org.eclipselabs.xdiagram.dsl.CustomFigure;
-import org.eclipselabs.xdiagram.dsl.FeatureContainer;
-import org.eclipselabs.xdiagram.dsl.Image;
-import org.eclipselabs.xdiagram.dsl.Line;
-import org.eclipselabs.xdiagram.dsl.Polyline;
 import org.osgi.framework.Bundle;
+
+import pt.iscte.xdiagram.dsl.model.Custom;
+import pt.iscte.xdiagram.dsl.model.CustomFigure;
+import pt.iscte.xdiagram.dsl.model.FeatureContainer;
+import pt.iscte.xdiagram.dsl.model.Image;
+import pt.iscte.xdiagram.dsl.model.Line;
+import pt.iscte.xdiagram.dsl.model.Polyline;
 
 public enum ElementCreation {
 

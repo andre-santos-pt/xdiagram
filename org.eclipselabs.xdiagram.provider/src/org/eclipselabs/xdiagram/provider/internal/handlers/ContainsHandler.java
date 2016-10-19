@@ -12,10 +12,10 @@ import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
-import org.eclipselabs.xdiagram.dsl.ConnectableElement;
-import org.eclipselabs.xdiagram.dsl.Contains;
-import org.eclipselabs.xdiagram.dsl.Feature;
-import org.eclipselabs.xdiagram.dsl.FeatureContainer;
+import pt.iscte.xdiagram.dsl.model.ConnectableElement;
+import pt.iscte.xdiagram.dsl.model.Contains;
+import pt.iscte.xdiagram.dsl.model.Feature;
+import pt.iscte.xdiagram.dsl.model.FeatureContainer;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 
 import com.google.common.collect.ArrayListMultimap;

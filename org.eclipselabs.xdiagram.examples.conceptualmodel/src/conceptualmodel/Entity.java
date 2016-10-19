@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link conceptualmodel.Entity#getName <em>Name</em>}</li>
  *   <li>{@link conceptualmodel.Entity#isAbstract <em>Abstract</em>}</li>
@@ -20,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link conceptualmodel.Entity#getExtends <em>Extends</em>}</li>
  *   <li>{@link conceptualmodel.Entity#getAssociations <em>Associations</em>}</li>
  * </ul>
- * </p>
  *
  * @see conceptualmodel.ConceptualmodelPackage#getEntity()
  * @model

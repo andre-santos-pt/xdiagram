@@ -14,7 +14,7 @@ import com.google.inject.name.Names;
  * Manual modifications go to {org.eclipselabs.xdiagram.DslRuntimeModule}
  */
 @SuppressWarnings("all")
-public abstract class AbstractDslRuntimeModule extends org.eclipse.xtext.common.types.DefaultCommonTypesRuntimeModule {
+public abstract class AbstractDslRuntimeModule extends org.eclipse.xtext.service.DefaultRuntimeModule {
 
 	protected Properties properties = null;
 
@@ -93,6 +93,11 @@ public abstract class AbstractDslRuntimeModule extends org.eclipse.xtext.common.
 		return org.eclipse.xtext.parser.antlr.AntlrTokenDefProvider.class;
 	}
 
+	// contributed by org.eclipse.xtext.generator.exporting.SimpleNamesFragment
+	public Class<? extends org.eclipse.xtext.naming.IQualifiedNameProvider> bindIQualifiedNameProvider() {
+		return org.eclipse.xtext.naming.SimpleNameProvider.class;
+	}
+
 	// contributed by org.eclipse.xtext.generator.scoping.AbstractScopingFragment
 	public Class<? extends org.eclipse.xtext.scoping.IScopeProvider> bindIScopeProvider() {
 		return org.eclipselabs.xdiagram.scoping.DslScopeProvider.class;
@@ -104,13 +109,13 @@ public abstract class AbstractDslRuntimeModule extends org.eclipse.xtext.common.
 	}
 
 	// contributed by org.eclipse.xtext.generator.scoping.AbstractScopingFragment
-	public void configureIgnoreCaseLinking(com.google.inject.Binder binder) {
-		binder.bindConstant().annotatedWith(org.eclipse.xtext.scoping.IgnoreCaseLinking.class).to(false);
+	public Class<? extends org.eclipse.xtext.scoping.IGlobalScopeProvider> bindIGlobalScopeProvider() {
+		return org.eclipse.xtext.scoping.impl.DefaultGlobalScopeProvider.class;
 	}
 
-	// contributed by org.eclipse.xtext.generator.exporting.QualifiedNamesFragment
-	public Class<? extends org.eclipse.xtext.naming.IQualifiedNameProvider> bindIQualifiedNameProvider() {
-		return org.eclipse.xtext.naming.DefaultDeclarativeQualifiedNameProvider.class;
+	// contributed by org.eclipse.xtext.generator.scoping.AbstractScopingFragment
+	public void configureIgnoreCaseLinking(com.google.inject.Binder binder) {
+		binder.bindConstant().annotatedWith(org.eclipse.xtext.scoping.IgnoreCaseLinking.class).to(false);
 	}
 
 	// contributed by org.eclipse.xtext.generator.builder.BuilderIntegrationFragment
@@ -141,11 +146,6 @@ public abstract class AbstractDslRuntimeModule extends org.eclipse.xtext.common.
 	// contributed by org.eclipse.xtext.generator.formatting.FormatterFragment
 	public Class<? extends org.eclipse.xtext.formatting.IFormatter> bindIFormatter() {
 		return org.eclipselabs.xdiagram.formatting.DslFormatter.class;
-	}
-
-	// contributed by org.eclipse.xtext.generator.types.TypesGeneratorFragment
-	public Class<? extends org.eclipse.xtext.scoping.IGlobalScopeProvider> bindIGlobalScopeProvider() {
-		return org.eclipse.xtext.common.types.xtext.TypesAwareDefaultGlobalScopeProvider.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.validation.JavaValidatorFragment

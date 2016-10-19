@@ -36,7 +36,7 @@
             provider="org.eclipselabs.xdiagram.provider.LanguageProvider">
          <property
                id="file"
-               value="model/conceptualmodel.xdiagram">
+               value="model/conceptualmodel.xdia">
          </property>
       </provider>
    </extension>

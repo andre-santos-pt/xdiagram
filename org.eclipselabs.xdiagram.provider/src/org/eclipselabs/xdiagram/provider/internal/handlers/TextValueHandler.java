@@ -10,17 +10,14 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.AbstractText;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
-import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
-import org.eclipse.graphiti.mm.pictograms.PictogramElement;
-import org.eclipselabs.xdiagram.dsl.Feature;
-import org.eclipselabs.xdiagram.dsl.FeatureContainer;
-import org.eclipselabs.xdiagram.dsl.Label;
-import org.eclipselabs.xdiagram.dsl.TextPart;
-import org.eclipselabs.xdiagram.dsl.TextValue;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
 
-import com.google.common.collect.Maps;
+import pt.iscte.xdiagram.dsl.model.Feature;
+import pt.iscte.xdiagram.dsl.model.FeatureContainer;
+import pt.iscte.xdiagram.dsl.model.Label;
+import pt.iscte.xdiagram.dsl.model.TextPart;
+import pt.iscte.xdiagram.dsl.model.TextValue;
 
 public class TextValueHandler implements FeatureHandler {
 

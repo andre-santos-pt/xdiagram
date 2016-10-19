@@ -10,7 +10,7 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
  * Manual modifications go to {org.eclipselabs.xdiagram.ui.DslUiModule}
  */
 @SuppressWarnings("all")
-public abstract class AbstractDslUiModule extends org.eclipse.xtext.common.types.ui.DefaultCommonTypesUiModule {
+public abstract class AbstractDslUiModule extends org.eclipse.xtext.ui.DefaultUiModule {
 	
 	public AbstractDslUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
@@ -38,6 +38,11 @@ public abstract class AbstractDslUiModule extends org.eclipse.xtext.common.types
 	}
 
 	// contributed by org.eclipse.xtext.generator.exporting.QualifiedNamesFragment
+	public Class<? extends org.eclipse.xtext.ui.editor.contentassist.PrefixMatcher> bindPrefixMatcher() {
+		return org.eclipse.xtext.ui.editor.contentassist.FQNPrefixMatcher.class;
+	}
+
+	// contributed by org.eclipse.xtext.generator.exporting.QualifiedNamesFragment
 	public Class<? extends org.eclipse.xtext.ui.refactoring.IDependentElementsCalculator> bindIDependentElementsCalculator() {
 		return org.eclipse.xtext.ui.refactoring.impl.DefaultDependentElementsCalculator.class;
 	}
@@ -50,6 +55,11 @@ public abstract class AbstractDslUiModule extends org.eclipse.xtext.common.types
 	// contributed by org.eclipse.xtext.generator.builder.BuilderIntegrationFragment
 	public Class<? extends org.eclipse.xtext.ui.editor.IXtextEditorCallback> bindIXtextEditorCallback() {
 		return org.eclipse.xtext.builder.nature.NatureAddingEditorCallback.class;
+	}
+
+	// contributed by org.eclipse.xtext.generator.builder.BuilderIntegrationFragment
+	public Class<? extends org.eclipse.xtext.generator.IContextualOutputConfigurationProvider> bindIContextualOutputConfigurationProvider() {
+		return org.eclipse.xtext.builder.EclipseOutputConfigurationProvider.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.builder.BuilderIntegrationFragment
@@ -150,11 +160,6 @@ public abstract class AbstractDslUiModule extends org.eclipse.xtext.common.types
 	// contributed by org.eclipse.xtext.ui.generator.refactoring.RefactorElementNameFragment
 	public Class<? extends org.eclipse.xtext.ui.refactoring.ui.IRenameSupport.Factory> bindIRenameSupport$Factory() {
 		return org.eclipse.xtext.ui.refactoring.ui.DefaultRenameSupport.Factory.class;
-	}
-
-	// contributed by org.eclipse.xtext.generator.types.TypesGeneratorFragment
-	public Class<? extends org.eclipse.xtext.ui.editor.contentassist.PrefixMatcher> bindPrefixMatcher() {
-		return org.eclipse.xtext.ui.editor.contentassist.FQNPrefixMatcher.class;
 	}
 
 	// contributed by org.eclipse.xtext.ui.generator.templates.CodetemplatesGeneratorFragment

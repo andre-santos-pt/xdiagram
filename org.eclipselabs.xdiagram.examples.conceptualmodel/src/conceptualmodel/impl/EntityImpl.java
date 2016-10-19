@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link conceptualmodel.impl.EntityImpl#getName <em>Name</em>}</li>
  *   <li>{@link conceptualmodel.impl.EntityImpl#isAbstract <em>Abstract</em>}</li>
@@ -36,7 +37,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link conceptualmodel.impl.EntityImpl#getExtends <em>Extends</em>}</li>
  *   <li>{@link conceptualmodel.impl.EntityImpl#getAssociations <em>Associations</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

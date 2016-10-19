@@ -8,10 +8,13 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.graphiti.ui;bundle-version="0.9.1",
  org.eclipse.core.resources;bundle-version="3.8.1",
  org.eclipselabs.xdiagram.interpreter,
- org.eclipselabs.xdiagram.dsl;bundle-version="1.0.0",
- org.eclipse.emf.transaction;bundle-version="1.4.0"
+ org.eclipse.emf.transaction;bundle-version="1.4.0",
+ com.google.guava;bundle-version="15.0.0",
+ pt.iscte.xdiagram.dsl;bundle-version="1.0.0",
+ org.eclipse.emf.mwe.core,
+ org.eclipse.m2e.maven.runtime
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipselabs.xdiagram.provider
 Import-Package: org.eclipse.emf.edit.domain,
  org.eclipse.emf.transaction

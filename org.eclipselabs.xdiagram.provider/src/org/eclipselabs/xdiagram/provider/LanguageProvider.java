@@ -22,7 +22,6 @@ import org.eclipse.graphiti.features.IFeatureProvider;
 import org.eclipse.graphiti.features.IUpdateFeature;
 import org.eclipse.graphiti.features.context.IAddContext;
 import org.eclipse.graphiti.features.context.impl.UpdateContext;
-import org.eclipse.graphiti.internal.command.GenericFeatureCommandWithContext;
 import org.eclipse.graphiti.mm.GraphicsAlgorithmContainer;
 import org.eclipse.graphiti.mm.algorithms.AbstractText;
 import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
@@ -37,21 +36,6 @@ import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.mm.pictograms.PictogramLink;
 import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipse.graphiti.services.Graphiti;
-import org.eclipselabs.xdiagram.DslStandaloneSetup;
-import org.eclipselabs.xdiagram.dsl.ConnectableElement;
-import org.eclipselabs.xdiagram.dsl.Contains;
-import org.eclipselabs.xdiagram.dsl.Decorator;
-import org.eclipselabs.xdiagram.dsl.Feature;
-import org.eclipselabs.xdiagram.dsl.FeatureConditional;
-import org.eclipselabs.xdiagram.dsl.FeatureContainer;
-import org.eclipselabs.xdiagram.dsl.Label;
-import org.eclipselabs.xdiagram.dsl.Layout;
-import org.eclipselabs.xdiagram.dsl.LineStyle;
-import org.eclipselabs.xdiagram.dsl.Link;
-import org.eclipselabs.xdiagram.dsl.Node;
-import org.eclipselabs.xdiagram.dsl.TextPart;
-import org.eclipselabs.xdiagram.dsl.XDiagram;
-import org.eclipselabs.xdiagram.dsl.util.DslSwitch;
 import org.eclipselabs.xdiagram.interpreter.GraphicsProvider;
 import org.eclipselabs.xdiagram.interpreter.ProviderException;
 import org.eclipselabs.xdiagram.provider.internal.ElementCreation;
@@ -77,6 +61,21 @@ import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
 
+import pt.iscte.xdiagram.dsl.XdiagramDslStandaloneSetup;
+import pt.iscte.xdiagram.dsl.model.ConnectableElement;
+import pt.iscte.xdiagram.dsl.model.Contains;
+import pt.iscte.xdiagram.dsl.model.Decorator;
+import pt.iscte.xdiagram.dsl.model.Feature;
+import pt.iscte.xdiagram.dsl.model.FeatureConditional;
+import pt.iscte.xdiagram.dsl.model.FeatureContainer;
+import pt.iscte.xdiagram.dsl.model.Label;
+import pt.iscte.xdiagram.dsl.model.LineStyle;
+import pt.iscte.xdiagram.dsl.model.Link;
+import pt.iscte.xdiagram.dsl.model.Node;
+import pt.iscte.xdiagram.dsl.model.TextPart;
+import pt.iscte.xdiagram.dsl.model.XDiagram;
+import pt.iscte.xdiagram.dsl.model.util.ModelSwitch;
+
 public final class LanguageProvider implements GraphicsProvider {
 
 	private URI modelLocation;
@@ -100,8 +99,8 @@ public final class LanguageProvider implements GraphicsProvider {
 	private Map<EClass, Link> complexLinks;
 	private Map<EReference, Link> links;
 
-	private Multimap<EReference, org.eclipselabs.xdiagram.dsl.Anchor> outgoing;
-	private Multimap<EReference, org.eclipselabs.xdiagram.dsl.Anchor> incomming;
+	private Multimap<EReference, pt.iscte.xdiagram.dsl.model.Anchor> outgoing;
+	private Multimap<EReference, pt.iscte.xdiagram.dsl.model.Anchor> incomming;
 
 
 
@@ -140,7 +139,7 @@ public final class LanguageProvider implements GraphicsProvider {
 
 	@Override
 	public void setup(Bundle bundle, Map<String, String> properties, EPackage ePackage) throws ProviderException {		
-		new DslStandaloneSetup().createInjectorAndDoEMFRegistration();
+		new XdiagramDslStandaloneSetup().createInjectorAndDoEMFRegistration();
 		this.ePackage = ePackage;
 		this.bundle = bundle;
 		modelLocation = URI.createPlatformPluginURI(bundle.getSymbolicName() + "/" + properties.get("file"), false);
@@ -174,15 +173,17 @@ public final class LanguageProvider implements GraphicsProvider {
 
 		incomming = ArrayListMultimap.create();
 		outgoing = ArrayListMultimap.create();
-
+		
 		LoadModelData doSwitch = new LoadModelData();
-
-		for(TreeIterator<EObject> iterator = EcoreUtil.getAllContents(model.eResource(), false); iterator.hasNext();)
-			doSwitch.doSwitch(iterator.next());
+		for(TreeIterator<EObject> iterator = EcoreUtil.getAllContents(model.eResource(), false); iterator.hasNext();) {
+			EObject obj = iterator.next();
+			doSwitch.doSwitch(obj);
+		}
+			
 	}		
 
 
-	private class LoadModelData extends DslSwitch<Object> {
+	private class LoadModelData extends ModelSwitch<Object> {
 
 		private EClass match(EClass c) {
 			return (EClass) ePackage.getEClassifier(c.getName());
@@ -228,7 +229,7 @@ public final class LanguageProvider implements GraphicsProvider {
 			return null;
 		};
 
-		public Object caseAnchor(org.eclipselabs.xdiagram.dsl.Anchor anchor) {
+		public Object caseAnchor(pt.iscte.xdiagram.dsl.model.Anchor anchor) {
 			EReference r = match(anchor.getModelReference());
 			anchor.setModelReference(r);
 
@@ -260,7 +261,6 @@ public final class LanguageProvider implements GraphicsProvider {
 			conditional.setModelAttribute(match(conditional.getModelAttribute()));
 			return null;
 		};
-
 	};
 
 
@@ -497,7 +497,7 @@ public final class LanguageProvider implements GraphicsProvider {
 	// TODO validation anchors cannot have children?
 	private void addChildren(FeatureContainer element, Shape container, Diagram diagram, EObject eObject) {
 		boolean isActive = hasFeature(element, Contains.class, false);
-		boolean hasAnchor = hasFeature(element, org.eclipselabs.xdiagram.dsl.Anchor.class, false);
+		boolean hasAnchor = hasFeature(element, pt.iscte.xdiagram.dsl.model.Anchor.class, false);
 
 		GraphicsAlgorithmContainer childContainer = null; 
 		if(hasAnchor) {
@@ -693,7 +693,7 @@ public final class LanguageProvider implements GraphicsProvider {
 
 		EObject eObject = anchor.getParent().getLink().getBusinessObjects().get(0);
 
-		for(org.eclipselabs.xdiagram.dsl.Anchor a : outgoing.get(eReference)) {
+		for(pt.iscte.xdiagram.dsl.model.Anchor a : outgoing.get(eReference)) {
 
 		}
 

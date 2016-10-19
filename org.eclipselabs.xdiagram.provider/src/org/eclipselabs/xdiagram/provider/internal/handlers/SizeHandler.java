@@ -16,24 +16,22 @@ import org.eclipse.graphiti.mm.algorithms.Polygon;
 import org.eclipse.graphiti.mm.algorithms.Polyline;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
-import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.mm.pictograms.Shape;
 import org.eclipse.graphiti.services.Graphiti;
 import org.eclipse.graphiti.ui.services.GraphitiUi;
-import org.eclipselabs.xdiagram.dsl.Arrow;
-import org.eclipselabs.xdiagram.dsl.ConnectableElement;
-import org.eclipselabs.xdiagram.dsl.Ellipse;
-import org.eclipselabs.xdiagram.dsl.Feature;
-import org.eclipselabs.xdiagram.dsl.FeatureContainer;
-import org.eclipselabs.xdiagram.dsl.Label;
-import org.eclipselabs.xdiagram.dsl.Line;
-import org.eclipselabs.xdiagram.dsl.Rectangle;
-import org.eclipselabs.xdiagram.dsl.Rhombus;
-import org.eclipselabs.xdiagram.dsl.Size;
-import org.eclipselabs.xdiagram.dsl.Triangle;
 import org.eclipselabs.xdiagram.provider.internal.ElementCreation;
 import org.eclipselabs.xdiagram.provider.internal.FeatureHandler;
-import org.eclipselabs.xdiagram.validation.DslJavaValidator;
+
+import pt.iscte.xdiagram.dsl.model.Arrow;
+import pt.iscte.xdiagram.dsl.model.Ellipse;
+import pt.iscte.xdiagram.dsl.model.Feature;
+import pt.iscte.xdiagram.dsl.model.FeatureContainer;
+import pt.iscte.xdiagram.dsl.model.Label;
+import pt.iscte.xdiagram.dsl.model.Line;
+import pt.iscte.xdiagram.dsl.model.Rectangle;
+import pt.iscte.xdiagram.dsl.model.Rhombus;
+import pt.iscte.xdiagram.dsl.model.Size;
+import pt.iscte.xdiagram.dsl.model.Triangle;
 
 public class SizeHandler implements FeatureHandler {
 
@@ -175,11 +173,11 @@ public class SizeHandler implements FeatureHandler {
 		else {
 			if(dim.width != -1) {
 				Graphiti.getGaService().setWidth(figure, dim.width);
-				if(DslJavaValidator.isSingleDimension(element))
+				if(isSingleDimension(element))
 					Graphiti.getGaService().setHeight(figure, dim.width);
 			}
 
-			if(dim.height != -1 && !DslJavaValidator.isSingleDimension(element))
+			if(dim.height != -1 && !isSingleDimension(element))
 				Graphiti.getGaService().setHeight(figure, dim.height);
 		}
 	}
@@ -243,5 +241,10 @@ public class SizeHandler implements FeatureHandler {
 	
 	
 
-
+	public static boolean isSingleDimension(FeatureContainer o) {
+		return 
+				o instanceof Rectangle && ((Rectangle) o).isSquare() ||
+				o instanceof Ellipse && ((Ellipse) o).isCircle() ||
+				o instanceof Line;
+	}
 }

@@ -1,29 +1,26 @@
 metamodel "platform:/plugin/org.eclipselabs.xdiagram.examples.conceptualmodel/model/conceptualmodel.ecore"
 import conceptualmodel.*
 
-diagram ConceptualModel {
-	contains ConceptualModel.entities;
-	contains ConceptualModel.packages;
+diagram Package {
+	contains Package.entities;
+	contains Package.packages;
 }
 
 node Entity rectangle {
 	size 200 100 resizable;
 	corner 10;
-		
+	background red;
 	child image "class_icon.gif" {
 		size 32 32;
 		position 10% 0;
 	}
-	
-	
-	
+		
 	child label {
 		text "<<abstract>>";
 		position 50% 0;
 		size 150 15;
 		invisible if Entity.abstract = false;	
 	}
-	
 	
 	child label {
 		position 50% 15;
@@ -43,7 +40,9 @@ node Entity rectangle {
 	}
 }
 
-
+node Package circle {
+	
+}
 
 node Attribute label {
 	size 10] 20;
@@ -52,6 +51,10 @@ node Attribute label {
 	align left;
 }
 
+node Package rectangle {
+	contains  Package.entities;
+	background maroon;
+}
 
 link reference Entity.extends {
 	foreground black;
@@ -61,6 +64,7 @@ link reference Entity.extends {
 		size 20 20;
 	}	 
 }
+
 
 link class Association source Entity.associations target Association.to {
 	decorator 0% rhombus {
@@ -83,4 +87,8 @@ link class Association source Entity.associations target Association.to {
 		invisible if Association.type <> REFERENCE;
 		size 10 10;
 	}
+}
+
+node Package rectangle {
+	size 200 200;
 }

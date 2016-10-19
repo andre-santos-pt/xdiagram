@@ -4,17 +4,15 @@
 package org.eclipselabs.xdiagram.serializer;
 
 import com.google.inject.Inject;
-import com.google.inject.Provider;
+import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.xtext.Action;
+import org.eclipse.xtext.Parameter;
+import org.eclipse.xtext.ParserRule;
+import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
-import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
-import org.eclipse.xtext.serializer.diagnostic.ISerializationDiagnostic.Acceptor;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
-import org.eclipse.xtext.serializer.sequencer.GenericSequencer;
-import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEObjectProvider;
-import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
-import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.eclipselabs.xdiagram.dsl.Anchor;
 import org.eclipselabs.xdiagram.dsl.Arrow;
@@ -70,8 +68,13 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	private DslGrammarAccess grammarAccess;
 	
 	@Override
-	public void createSequence(EObject context, EObject semanticObject) {
-		if(semanticObject.eClass().getEPackage() == DslPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+	public void sequence(ISerializationContext context, EObject semanticObject) {
+		EPackage epackage = semanticObject.eClass().getEPackage();
+		ParserRule rule = context.getParserRule();
+		Action action = context.getAssignedAction();
+		Set<Parameter> parameters = context.getEnabledBooleanParameters();
+		if (epackage == DslPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
 			case DslPackage.ANCHOR:
 				sequence_Anchor(context, (Anchor) semanticObject); 
 				return; 
@@ -85,23 +88,23 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				sequence_Color(context, (Color) semanticObject); 
 				return; 
 			case DslPackage.COLOR_FEATURE:
-				if(context == grammarAccess.getBackgroundRule()) {
+				if (rule == grammarAccess.getBackgroundRule()) {
 					sequence_Background(context, (ColorFeature) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getColorFeatureRule() ||
-				   context == grammarAccess.getConnectableElementFeatureRule() ||
-				   context == grammarAccess.getFeatureRule() ||
-				   context == grammarAccess.getFigureFeatureRule() ||
-				   context == grammarAccess.getRectangleFeatureRule() ||
-				   context == grammarAccess.getStyleFeatureRule()) {
-					sequence_Background_Foreground_StyleFeature(context, (ColorFeature) semanticObject); 
+				else if (rule == grammarAccess.getFeatureRule()
+						|| rule == grammarAccess.getStyleFeatureRule()
+						|| rule == grammarAccess.getConnectableElementFeatureRule()
+						|| rule == grammarAccess.getRectangleFeatureRule()
+						|| rule == grammarAccess.getFigureFeatureRule()
+						|| rule == grammarAccess.getColorFeatureRule()) {
+					sequence_Background_Foreground(context, (ColorFeature) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getForegroundRule() ||
-				   context == grammarAccess.getLabelFeatureRule() ||
-				   context == grammarAccess.getLineFeatureRule() ||
-				   context == grammarAccess.getLinkFeatureRule()) {
+				else if (rule == grammarAccess.getLinkFeatureRule()
+						|| rule == grammarAccess.getLineFeatureRule()
+						|| rule == grammarAccess.getLabelFeatureRule()
+						|| rule == grammarAccess.getForegroundRule()) {
 					sequence_Foreground(context, (ColorFeature) semanticObject); 
 					return; 
 				}
@@ -224,105 +227,153 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				sequence_XDiagram(context, (XDiagram) semanticObject); 
 				return; 
 			}
-		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
+		if (errorAcceptor != null)
+			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
 	
 	/**
+	 * Contexts:
+	 *     Feature returns Anchor
+	 *     LinkedFeature returns Anchor
+	 *     Anchor returns Anchor
+	 *     ConnectableElementFeature returns Anchor
+	 *     RectangleFeature returns Anchor
+	 *     InvisibleFeature returns Anchor
+	 *
 	 * Constraint:
 	 *     (direction=AnchorDirection modelReference=[EReference|QualifiedName] max=INT? conditional=FeatureConditional?)
 	 */
-	protected void sequence_Anchor(EObject context, Anchor semanticObject) {
+	protected void sequence_Anchor(ISerializationContext context, Anchor semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     FeatureContainer returns Arrow
+	 *     ChildElement returns Arrow
+	 *     DecoratorElement returns Arrow
+	 *     Arrow returns Arrow
+	 *
 	 * Constraint:
 	 *     ((styled?='+' style=[Style|ID])? features+=LineFeature*)
 	 */
-	protected void sequence_Arrow(EObject context, Arrow semanticObject) {
+	protected void sequence_Arrow(ISerializationContext context, Arrow semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Background returns ColorFeature
+	 *
 	 * Constraint:
 	 *     (type='background' color=Color conditional=FeatureConditional?)
 	 */
-	protected void sequence_Background(EObject context, ColorFeature semanticObject) {
+	protected void sequence_Background(ISerializationContext context, ColorFeature semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Feature returns ColorFeature
+	 *     StyleFeature returns ColorFeature
+	 *     ConnectableElementFeature returns ColorFeature
+	 *     RectangleFeature returns ColorFeature
+	 *     FigureFeature returns ColorFeature
+	 *     ColorFeature returns ColorFeature
+	 *
 	 * Constraint:
-	 *     ((type='background' color=Color conditional=FeatureConditional?) | (type='foreground' color=Color conditional=FeatureConditional?))
+	 *     ((type='foreground' color=Color conditional=FeatureConditional?) | (type='background' color=Color conditional=FeatureConditional?))
 	 */
-	protected void sequence_Background_Foreground_StyleFeature(EObject context, ColorFeature semanticObject) {
+	protected void sequence_Background_Foreground(ISerializationContext context, ColorFeature semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Value returns BooleanValue
+	 *     BooleanValue returns BooleanValue
+	 *
 	 * Constraint:
 	 *     value=BooleanLiteral
 	 */
-	protected void sequence_BooleanValue(EObject context, BooleanValue semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.BOOLEAN_VALUE__VALUE) == ValueTransient.YES)
+	protected void sequence_BooleanValue(ISerializationContext context, BooleanValue semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.BOOLEAN_VALUE__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.BOOLEAN_VALUE__VALUE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getBooleanValueAccess().getValueBooleanLiteralEnumRuleCall_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Color returns Color
+	 *
 	 * Constraint:
 	 *     (default=DefaultColor | custom=[CustomColor|ID])
 	 */
-	protected void sequence_Color(EObject context, Color semanticObject) {
+	protected void sequence_Color(ISerializationContext context, Color semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Feature returns Contains
+	 *     LinkedFeature returns Contains
+	 *     ConnectableElementFeature returns Contains
+	 *     RectangleFeature returns Contains
+	 *     Contains returns Contains
+	 *     InvisibleFeature returns Contains
+	 *
 	 * Constraint:
 	 *     (modelReference=[EReference|QualifiedName] conditional=FeatureConditional?)
 	 */
-	protected void sequence_Contains(EObject context, Contains semanticObject) {
+	protected void sequence_Contains(ISerializationContext context, Contains semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Feature returns Corner
+	 *     StyleFeature returns Corner
+	 *     RectangleFeature returns Corner
+	 *     Corner returns Corner
+	 *
 	 * Constraint:
 	 *     (angle=INT conditional=FeatureConditional?)
 	 */
-	protected void sequence_Corner(EObject context, Corner semanticObject) {
+	protected void sequence_Corner(ISerializationContext context, Corner semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     CustomColor returns CustomColor
+	 *
 	 * Constraint:
 	 *     (name=ID R=INT G=INT B=INT)
 	 */
-	protected void sequence_CustomColor(EObject context, CustomColor semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.CUSTOM_COLOR__NAME) == ValueTransient.YES)
+	protected void sequence_CustomColor(ISerializationContext context, CustomColor semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.CUSTOM_COLOR__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.CUSTOM_COLOR__NAME));
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.CUSTOM_COLOR__R) == ValueTransient.YES)
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.CUSTOM_COLOR__R) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.CUSTOM_COLOR__R));
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.CUSTOM_COLOR__G) == ValueTransient.YES)
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.CUSTOM_COLOR__G) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.CUSTOM_COLOR__G));
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.CUSTOM_COLOR__B) == ValueTransient.YES)
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.CUSTOM_COLOR__B) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.CUSTOM_COLOR__B));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getCustomColorAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getCustomColorAccess().getRINTTerminalRuleCall_2_0(), semanticObject.getR());
 		feeder.accept(grammarAccess.getCustomColorAccess().getGINTTerminalRuleCall_3_0(), semanticObject.getG());
@@ -332,18 +383,20 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	
 	/**
+	 * Contexts:
+	 *     CustomFigure returns CustomFigure
+	 *
 	 * Constraint:
 	 *     (name=ID element=ConnectableElement)
 	 */
-	protected void sequence_CustomFigure(EObject context, CustomFigure semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.CUSTOM_FIGURE__NAME) == ValueTransient.YES)
+	protected void sequence_CustomFigure(ISerializationContext context, CustomFigure semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.CUSTOM_FIGURE__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.CUSTOM_FIGURE__NAME));
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.CUSTOM_FIGURE__ELEMENT) == ValueTransient.YES)
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.CUSTOM_FIGURE__ELEMENT) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.CUSTOM_FIGURE__ELEMENT));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getCustomFigureAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getCustomFigureAccess().getElementConnectableElementParserRuleCall_3_0(), semanticObject.getElement());
 		feeder.finish();
@@ -351,27 +404,35 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	
 	/**
+	 * Contexts:
+	 *     FeatureContainer returns Custom
+	 *     ChildElement returns Custom
+	 *     ConnectableElement returns Custom
+	 *     Custom returns Custom
+	 *
 	 * Constraint:
 	 *     (figure=[CustomFigure|ID] (styled?='+' style=[Style|ID])? features+=LinkedFeature* children+=ChildElement*)
 	 */
-	protected void sequence_Custom(EObject context, Custom semanticObject) {
+	protected void sequence_Custom(ISerializationContext context, Custom semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Decorator returns Decorator
+	 *
 	 * Constraint:
 	 *     (position=INT element=DecoratorElement)
 	 */
-	protected void sequence_Decorator(EObject context, Decorator semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.DECORATOR__POSITION) == ValueTransient.YES)
+	protected void sequence_Decorator(ISerializationContext context, Decorator semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.DECORATOR__POSITION) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.DECORATOR__POSITION));
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.DECORATOR__ELEMENT) == ValueTransient.YES)
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.DECORATOR__ELEMENT) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.DECORATOR__ELEMENT));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDecoratorAccess().getPositionINTTerminalRuleCall_1_0(), semanticObject.getPosition());
 		feeder.accept(grammarAccess.getDecoratorAccess().getElementDecoratorElementParserRuleCall_3_0(), semanticObject.getElement());
 		feeder.finish();
@@ -379,27 +440,33 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	
 	/**
+	 * Contexts:
+	 *     Diagram returns Diagram
+	 *
 	 * Constraint:
 	 *     (modelClass=[EClass|QualifiedName] contains+=Contains*)
 	 */
-	protected void sequence_Diagram(EObject context, Diagram semanticObject) {
+	protected void sequence_Diagram(ISerializationContext context, Diagram semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Value returns DoubleValue
+	 *     DoubleValue returns DoubleValue
+	 *
 	 * Constraint:
 	 *     (valueInt=INT valueDecimal=INT)
 	 */
-	protected void sequence_DoubleValue(EObject context, DoubleValue semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.DOUBLE_VALUE__VALUE_INT) == ValueTransient.YES)
+	protected void sequence_DoubleValue(ISerializationContext context, DoubleValue semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.DOUBLE_VALUE__VALUE_INT) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.DOUBLE_VALUE__VALUE_INT));
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.DOUBLE_VALUE__VALUE_DECIMAL) == ValueTransient.YES)
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.DOUBLE_VALUE__VALUE_DECIMAL) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.DOUBLE_VALUE__VALUE_DECIMAL));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDoubleValueAccess().getValueIntINTTerminalRuleCall_0_0(), semanticObject.getValueInt());
 		feeder.accept(grammarAccess.getDoubleValueAccess().getValueDecimalINTTerminalRuleCall_2_0(), semanticObject.getValueDecimal());
 		feeder.finish();
@@ -407,45 +474,57 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	
 	/**
+	 * Contexts:
+	 *     FeatureContainer returns Ellipse
+	 *     ChildElement returns Ellipse
+	 *     ConnectableElement returns Ellipse
+	 *     DecoratorElement returns Ellipse
+	 *     Ellipse returns Ellipse
+	 *
 	 * Constraint:
 	 *     ((ellipse?='ellipse' | circle?='circle') (styled?='+' style=[Style|ID])? features+=ConnectableElementFeature* children+=ChildElement*)
 	 */
-	protected void sequence_Ellipse(EObject context, Ellipse semanticObject) {
+	protected void sequence_Ellipse(ISerializationContext context, Ellipse semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Value returns EnumValue
+	 *     EnumValue returns EnumValue
+	 *
 	 * Constraint:
 	 *     name=ID
 	 */
-	protected void sequence_EnumValue(EObject context, EnumValue semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.ENUM_VALUE__NAME) == ValueTransient.YES)
+	protected void sequence_EnumValue(ISerializationContext context, EnumValue semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.ENUM_VALUE__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.ENUM_VALUE__NAME));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getEnumValueAccess().getNameIDTerminalRuleCall_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     FeatureConditional returns FeatureConditional
+	 *
 	 * Constraint:
 	 *     (modelAttribute=[EAttribute|QualifiedName] operator=Operator value=Value)
 	 */
-	protected void sequence_FeatureConditional(EObject context, FeatureConditional semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.FEATURE_CONDITIONAL__MODEL_ATTRIBUTE) == ValueTransient.YES)
+	protected void sequence_FeatureConditional(ISerializationContext context, FeatureConditional semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.FEATURE_CONDITIONAL__MODEL_ATTRIBUTE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.FEATURE_CONDITIONAL__MODEL_ATTRIBUTE));
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.FEATURE_CONDITIONAL__OPERATOR) == ValueTransient.YES)
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.FEATURE_CONDITIONAL__OPERATOR) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.FEATURE_CONDITIONAL__OPERATOR));
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.FEATURE_CONDITIONAL__VALUE) == ValueTransient.YES)
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.FEATURE_CONDITIONAL__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.FEATURE_CONDITIONAL__VALUE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getFeatureConditionalAccess().getModelAttributeEAttributeQualifiedNameParserRuleCall_1_0_1(), semanticObject.getModelAttribute());
 		feeder.accept(grammarAccess.getFeatureConditionalAccess().getOperatorOperatorEnumRuleCall_2_0(), semanticObject.getOperator());
 		feeder.accept(grammarAccess.getFeatureConditionalAccess().getValueValueParserRuleCall_3_0(), semanticObject.getValue());
@@ -454,112 +533,186 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	
 	/**
+	 * Contexts:
+	 *     Feature returns FontProperties
+	 *     StyleFeature returns FontProperties
+	 *     LabelFeature returns FontProperties
+	 *     FontProperties returns FontProperties
+	 *
 	 * Constraint:
 	 *     (face='arial'? size=INT? bold?='bold'? italics?='italics'? conditional=FeatureConditional?)
 	 */
-	protected void sequence_FontProperties(EObject context, FontProperties semanticObject) {
+	protected void sequence_FontProperties(ISerializationContext context, FontProperties semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     LinkFeature returns ColorFeature
+	 *     LineFeature returns ColorFeature
+	 *     LabelFeature returns ColorFeature
+	 *     Foreground returns ColorFeature
+	 *
 	 * Constraint:
 	 *     (type='foreground' color=Color conditional=FeatureConditional?)
 	 */
-	protected void sequence_Foreground(EObject context, ColorFeature semanticObject) {
+	protected void sequence_Foreground(ISerializationContext context, ColorFeature semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     FeatureContainer returns Image
+	 *     ChildElement returns Image
+	 *     ConnectableElement returns Image
+	 *     DecoratorElement returns Image
+	 *     Image returns Image
+	 *
 	 * Constraint:
 	 *     (imageId=STRING (styled?='+' style=[Style|ID])? features+=ImageFeature* children+=ChildElement*)
 	 */
-	protected void sequence_Image(EObject context, Image semanticObject) {
+	protected void sequence_Image(ISerializationContext context, Image semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ImportStatement returns ImportStatement
+	 *
 	 * Constraint:
-	 *     (importedNamespace=QualifiedNameWithWildCard?)
+	 *     importedNamespace=QualifiedNameWithWildCard?
 	 */
-	protected void sequence_ImportStatement(EObject context, ImportStatement semanticObject) {
+	protected void sequence_ImportStatement(ISerializationContext context, ImportStatement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Value returns IntValue
+	 *     IntValue returns IntValue
+	 *
 	 * Constraint:
 	 *     value=INT
 	 */
-	protected void sequence_IntValue(EObject context, IntValue semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.INT_VALUE__VALUE) == ValueTransient.YES)
+	protected void sequence_IntValue(ISerializationContext context, IntValue semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.INT_VALUE__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.INT_VALUE__VALUE));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getIntValueAccess().getValueINTTerminalRuleCall_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     FeatureContainer returns Invisible
+	 *     ChildElement returns Invisible
+	 *     ConnectableElement returns Invisible
+	 *     Invisible returns Invisible
+	 *
 	 * Constraint:
 	 *     ((styled?='+' style=[Style|ID])? features+=InvisibleFeature* children+=ChildElement*)
 	 */
-	protected void sequence_Invisible(EObject context, Invisible semanticObject) {
+	protected void sequence_Invisible(ISerializationContext context, Invisible semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     FeatureContainer returns Label
+	 *     ChildElement returns Label
+	 *     ConnectableElement returns Label
+	 *     DecoratorElement returns Label
+	 *     Label returns Label
+	 *
 	 * Constraint:
 	 *     ((styled?='+' style=[Style|ID])? features+=LabelFeature* children+=ChildElement*)
 	 */
-	protected void sequence_Label(EObject context, Label semanticObject) {
+	protected void sequence_Label(ISerializationContext context, Label semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ConnectableElementFeature returns Layout
+	 *     RectangleFeature returns Layout
+	 *     InvisibleFeature returns Layout
+	 *     Layout returns Layout
+	 *
 	 * Constraint:
 	 *     ((vertical?='vertical' | horizontal?='horizontal') margin=INT? conditional=FeatureConditional?)
 	 */
-	protected void sequence_Layout(EObject context, Layout semanticObject) {
+	protected void sequence_Layout(ISerializationContext context, Layout semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Feature returns LineStyle
+	 *     StyleFeature returns LineStyle
+	 *     LinkFeature returns LineStyle
+	 *     ConnectableElementFeature returns LineStyle
+	 *     RectangleFeature returns LineStyle
+	 *     LineFeature returns LineStyle
+	 *     FigureFeature returns LineStyle
+	 *     LineStyle returns LineStyle
+	 *
 	 * Constraint:
 	 *     (style=LineType? manhattan?='manhattan'? conditional=FeatureConditional?)
 	 */
-	protected void sequence_LineStyle(EObject context, LineStyle semanticObject) {
+	protected void sequence_LineStyle(ISerializationContext context, LineStyle semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Feature returns LineWidth
+	 *     StyleFeature returns LineWidth
+	 *     LinkFeature returns LineWidth
+	 *     ConnectableElementFeature returns LineWidth
+	 *     RectangleFeature returns LineWidth
+	 *     LineFeature returns LineWidth
+	 *     LineWidth returns LineWidth
+	 *
 	 * Constraint:
 	 *     (width=INT conditional=FeatureConditional?)
 	 */
-	protected void sequence_LineWidth(EObject context, LineWidth semanticObject) {
+	protected void sequence_LineWidth(ISerializationContext context, LineWidth semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     FeatureContainer returns Line
+	 *     ChildElement returns Line
+	 *     DecoratorElement returns Line
+	 *     Line returns Line
+	 *
 	 * Constraint:
 	 *     ((horizontal?='hline' | vertical?='vline') (styled?='+' style=[Style|ID])? features+=LineFeature*)
 	 */
-	protected void sequence_Line(EObject context, Line semanticObject) {
+	protected void sequence_Line(ISerializationContext context, Line semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     DiagramElement returns Link
+	 *     FeatureContainer returns Link
+	 *     Link returns Link
+	 *
 	 * Constraint:
 	 *     (
 	 *         (tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup|ID])? (icon?='icon' imageId=ID)?)? 
@@ -572,12 +725,16 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         decorators+=Decorator*
 	 *     )
 	 */
-	protected void sequence_Link(EObject context, Link semanticObject) {
+	protected void sequence_Link(ISerializationContext context, Link semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     DiagramElement returns Node
+	 *     Node returns Node
+	 *
 	 * Constraint:
 	 *     (
 	 *         (tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup|ID])? (icon?='icon' imageId=ID)?)? 
@@ -585,21 +742,34 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         rootFigure=ConnectableElement
 	 *     )
 	 */
-	protected void sequence_Node(EObject context, Node semanticObject) {
+	protected void sequence_Node(ISerializationContext context, Node semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Feature returns Point
+	 *     StyleFeature returns Point
+	 *     FigureFeature returns Point
+	 *     Point returns Point
+	 *
 	 * Constraint:
 	 *     (x=INT y=INT conditional=FeatureConditional?)
 	 */
-	protected void sequence_Point(EObject context, Point semanticObject) {
+	protected void sequence_Point(ISerializationContext context, Point semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     FeatureContainer returns Polyline
+	 *     ChildElement returns Polyline
+	 *     ConnectableElement returns Polyline
+	 *     DecoratorElement returns Polyline
+	 *     Polyline returns Polyline
+	 *
 	 * Constraint:
 	 *     (
 	 *         (polygon?='polygon' | polyline?='polyline') 
@@ -611,136 +781,223 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         children+=ChildElement*
 	 *     )
 	 */
-	protected void sequence_Polyline(EObject context, Polyline semanticObject) {
+	protected void sequence_Polyline(ISerializationContext context, Polyline semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Feature returns Position
+	 *     StyleFeature returns Position
+	 *     ConnectableElementFeature returns Position
+	 *     RectangleFeature returns Position
+	 *     LineFeature returns Position
+	 *     FigureFeature returns Position
+	 *     LabelFeature returns Position
+	 *     ImageFeature returns Position
+	 *     InvisibleFeature returns Position
+	 *     Position returns Position
+	 *
 	 * Constraint:
 	 *     (x=INT xRelative?='%'? y=INT yRelative?='%'? conditional=FeatureConditional?)
 	 */
-	protected void sequence_Position(EObject context, Position semanticObject) {
+	protected void sequence_Position(ISerializationContext context, Position semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     FeatureContainer returns Rectangle
+	 *     ChildElement returns Rectangle
+	 *     ConnectableElement returns Rectangle
+	 *     Rectangle returns Rectangle
+	 *
 	 * Constraint:
 	 *     ((rectangle?='rectangle' | square?='square') (styled?='+' style=[Style|ID])? features+=RectangleFeature* children+=ChildElement*)
 	 */
-	protected void sequence_Rectangle(EObject context, Rectangle semanticObject) {
+	protected void sequence_Rectangle(ISerializationContext context, Rectangle semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     FeatureContainer returns Rhombus
+	 *     ChildElement returns Rhombus
+	 *     ConnectableElement returns Rhombus
+	 *     DecoratorElement returns Rhombus
+	 *     Rhombus returns Rhombus
+	 *
 	 * Constraint:
 	 *     ((styled?='+' style=[Style|ID])? features+=ConnectableElementFeature* children+=ChildElement*)
 	 */
-	protected void sequence_Rhombus(EObject context, Rhombus semanticObject) {
+	protected void sequence_Rhombus(ISerializationContext context, Rhombus semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Feature returns Size
+	 *     StyleFeature returns Size
+	 *     ConnectableElementFeature returns Size
+	 *     RectangleFeature returns Size
+	 *     LineFeature returns Size
+	 *     FigureFeature returns Size
+	 *     LabelFeature returns Size
+	 *     ImageFeature returns Size
+	 *     InvisibleFeature returns Size
+	 *     Size returns Size
+	 *
 	 * Constraint:
 	 *     (width=INT widthRelative?=']'? (height=INT heightRelative?=']'?)? resizable?='resizable'? conditional=FeatureConditional?)
 	 */
-	protected void sequence_Size(EObject context, Size semanticObject) {
+	protected void sequence_Size(ISerializationContext context, Size semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Value returns StringValue
+	 *     StringValue returns StringValue
+	 *
 	 * Constraint:
 	 *     (null?='null' | value=STRING)
 	 */
-	protected void sequence_StringValue(EObject context, StringValue semanticObject) {
+	protected void sequence_StringValue(ISerializationContext context, StringValue semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Style returns Style
+	 *     FeatureContainer returns Style
+	 *
 	 * Constraint:
 	 *     (name=ID (styled?='+' style=[Style|ID])? features+=StyleFeature*)
 	 */
-	protected void sequence_Style(EObject context, Style semanticObject) {
+	protected void sequence_Style(ISerializationContext context, Style semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Feature returns TextAlign
+	 *     StyleFeature returns TextAlign
+	 *     LabelFeature returns TextAlign
+	 *     TextAlign returns TextAlign
+	 *
 	 * Constraint:
 	 *     (value=TextAlignValue conditional=FeatureConditional?)
 	 */
-	protected void sequence_TextAlign(EObject context, TextAlign semanticObject) {
+	protected void sequence_TextAlign(ISerializationContext context, TextAlign semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     TextPart returns TextPart
+	 *
 	 * Constraint:
 	 *     (text=STRING | (editable?='edit:'? modelAttribute=[EAttribute|QualifiedName]))
 	 */
-	protected void sequence_TextPart(EObject context, TextPart semanticObject) {
+	protected void sequence_TextPart(ISerializationContext context, TextPart semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Feature returns TextValue
+	 *     StyleFeature returns TextValue
+	 *     LabelFeature returns TextValue
+	 *     TextValue returns TextValue
+	 *
 	 * Constraint:
 	 *     (parts+=TextPart* conditional=FeatureConditional?)
 	 */
-	protected void sequence_TextValue(EObject context, TextValue semanticObject) {
+	protected void sequence_TextValue(ISerializationContext context, TextValue semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ToolGroup returns ToolGroup
+	 *
 	 * Constraint:
 	 *     (name=ID description=STRING?)
 	 */
-	protected void sequence_ToolGroup(EObject context, ToolGroup semanticObject) {
+	protected void sequence_ToolGroup(ISerializationContext context, ToolGroup semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     Feature returns Transparency
+	 *     StyleFeature returns Transparency
+	 *     ConnectableElementFeature returns Transparency
+	 *     RectangleFeature returns Transparency
+	 *     ImageFeature returns Transparency
+	 *     Transparency returns Transparency
+	 *
 	 * Constraint:
 	 *     (percent=INT conditional=FeatureConditional?)
 	 */
-	protected void sequence_Transparency(EObject context, Transparency semanticObject) {
+	protected void sequence_Transparency(ISerializationContext context, Transparency semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     FeatureContainer returns Triangle
+	 *     ChildElement returns Triangle
+	 *     ConnectableElement returns Triangle
+	 *     DecoratorElement returns Triangle
+	 *     Triangle returns Triangle
+	 *
 	 * Constraint:
 	 *     ((styled?='+' style=[Style|ID])? features+=ConnectableElementFeature* children+=ChildElement*)
 	 */
-	protected void sequence_Triangle(EObject context, Triangle semanticObject) {
+	protected void sequence_Triangle(ISerializationContext context, Triangle semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     ConnectableElementFeature returns Visible
+	 *     RectangleFeature returns Visible
+	 *     LineFeature returns Visible
+	 *     LabelFeature returns Visible
+	 *     Visible returns Visible
+	 *
 	 * Constraint:
 	 *     conditional=FeatureConditional
 	 */
-	protected void sequence_Visible(EObject context, Visible semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DslPackage.Literals.FEATURE__CONDITIONAL) == ValueTransient.YES)
+	protected void sequence_Visible(ISerializationContext context, Visible semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.FEATURE__CONDITIONAL) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.FEATURE__CONDITIONAL));
 		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getVisibleAccess().getConditionalFeatureConditionalParserRuleCall_1_0(), semanticObject.getConditional());
 		feeder.finish();
 	}
 	
 	
 	/**
+	 * Contexts:
+	 *     XDiagram returns XDiagram
+	 *
 	 * Constraint:
 	 *     (
 	 *         importURI=STRING 
@@ -750,7 +1007,9 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*
 	 *     )
 	 */
-	protected void sequence_XDiagram(EObject context, XDiagram semanticObject) {
+	protected void sequence_XDiagram(ISerializationContext context, XDiagram semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
+	
+	
 }
