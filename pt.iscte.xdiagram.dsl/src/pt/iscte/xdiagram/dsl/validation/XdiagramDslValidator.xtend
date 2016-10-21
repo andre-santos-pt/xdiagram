@@ -37,6 +37,10 @@ import pt.iscte.xdiagram.dsl.model.XDiagram
  */
 class XdiagramDslValidator extends AbstractXdiagramDslValidator {
 	
+	/* TODO
+	 * anchor reference  incoming/outgoing
+	* 
+	*/
 
 	@Check
 	def ecoreExists(XDiagram diagram) {

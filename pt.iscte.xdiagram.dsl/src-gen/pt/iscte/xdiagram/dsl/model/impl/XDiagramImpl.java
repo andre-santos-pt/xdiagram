@@ -37,6 +37,8 @@ import pt.iscte.xdiagram.dsl.model.XDiagram;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getId <em>Id</em>}</li>
+ *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getDesc <em>Desc</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getImportURI <em>Import URI</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getImports <em>Imports</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getDiagram <em>Diagram</em>}</li>
@@ -51,6 +53,46 @@ import pt.iscte.xdiagram.dsl.model.XDiagram;
  */
 public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagram
 {
+  /**
+   * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getId()
+   * @generated
+   * @ordered
+   */
+  protected static final String ID_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getId()
+   * @generated
+   * @ordered
+   */
+  protected String id = ID_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getDesc() <em>Desc</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDesc()
+   * @generated
+   * @ordered
+   */
+  protected static final String DESC_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getDesc() <em>Desc</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDesc()
+   * @generated
+   * @ordered
+   */
+  protected String desc = DESC_EDEFAULT;
+
   /**
    * The default value of the '{@link #getImportURI() <em>Import URI</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -160,6 +202,52 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
   protected EClass eStaticClass()
   {
     return ModelPackage.Literals.XDIAGRAM;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getId()
+  {
+    return id;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setId(String newId)
+  {
+    String oldId = id;
+    id = newId;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.XDIAGRAM__ID, oldId, id));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getDesc()
+  {
+    return desc;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDesc(String newDesc)
+  {
+    String oldDesc = desc;
+    desc = newDesc;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.XDIAGRAM__DESC, oldDesc, desc));
   }
 
   /**
@@ -355,6 +443,10 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
   {
     switch (featureID)
     {
+      case ModelPackage.XDIAGRAM__ID:
+        return getId();
+      case ModelPackage.XDIAGRAM__DESC:
+        return getDesc();
       case ModelPackage.XDIAGRAM__IMPORT_URI:
         return getImportURI();
       case ModelPackage.XDIAGRAM__IMPORTS:
@@ -386,6 +478,12 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
   {
     switch (featureID)
     {
+      case ModelPackage.XDIAGRAM__ID:
+        setId((String)newValue);
+        return;
+      case ModelPackage.XDIAGRAM__DESC:
+        setDesc((String)newValue);
+        return;
       case ModelPackage.XDIAGRAM__IMPORT_URI:
         setImportURI((String)newValue);
         return;
@@ -430,6 +528,12 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
   {
     switch (featureID)
     {
+      case ModelPackage.XDIAGRAM__ID:
+        setId(ID_EDEFAULT);
+        return;
+      case ModelPackage.XDIAGRAM__DESC:
+        setDesc(DESC_EDEFAULT);
+        return;
       case ModelPackage.XDIAGRAM__IMPORT_URI:
         setImportURI(IMPORT_URI_EDEFAULT);
         return;
@@ -468,6 +572,10 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
   {
     switch (featureID)
     {
+      case ModelPackage.XDIAGRAM__ID:
+        return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+      case ModelPackage.XDIAGRAM__DESC:
+        return DESC_EDEFAULT == null ? desc != null : !DESC_EDEFAULT.equals(desc);
       case ModelPackage.XDIAGRAM__IMPORT_URI:
         return IMPORT_URI_EDEFAULT == null ? importURI != null : !IMPORT_URI_EDEFAULT.equals(importURI);
       case ModelPackage.XDIAGRAM__IMPORTS:
@@ -499,7 +607,11 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (importURI: ");
+    result.append(" (id: ");
+    result.append(id);
+    result.append(", desc: ");
+    result.append(desc);
+    result.append(", importURI: ");
     result.append(importURI);
     result.append(')');
     return result.toString();

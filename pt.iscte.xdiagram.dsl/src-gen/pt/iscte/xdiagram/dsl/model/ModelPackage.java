@@ -69,13 +69,31 @@ public interface ModelPackage extends EPackage
   int XDIAGRAM = 0;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDIAGRAM__ID = 0;
+
+  /**
+   * The feature id for the '<em><b>Desc</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDIAGRAM__DESC = 1;
+
+  /**
    * The feature id for the '<em><b>Import URI</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int XDIAGRAM__IMPORT_URI = 0;
+  int XDIAGRAM__IMPORT_URI = 2;
 
   /**
    * The feature id for the '<em><b>Imports</b></em>' containment reference list.
@@ -84,7 +102,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int XDIAGRAM__IMPORTS = 1;
+  int XDIAGRAM__IMPORTS = 3;
 
   /**
    * The feature id for the '<em><b>Diagram</b></em>' containment reference.
@@ -93,7 +111,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int XDIAGRAM__DIAGRAM = 2;
+  int XDIAGRAM__DIAGRAM = 4;
 
   /**
    * The feature id for the '<em><b>Groups</b></em>' containment reference list.
@@ -102,7 +120,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int XDIAGRAM__GROUPS = 3;
+  int XDIAGRAM__GROUPS = 5;
 
   /**
    * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -111,7 +129,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int XDIAGRAM__ELEMENTS = 4;
+  int XDIAGRAM__ELEMENTS = 6;
 
   /**
    * The feature id for the '<em><b>Styles</b></em>' containment reference list.
@@ -120,7 +138,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int XDIAGRAM__STYLES = 5;
+  int XDIAGRAM__STYLES = 7;
 
   /**
    * The feature id for the '<em><b>Colors</b></em>' containment reference list.
@@ -129,7 +147,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int XDIAGRAM__COLORS = 6;
+  int XDIAGRAM__COLORS = 8;
 
   /**
    * The feature id for the '<em><b>Figures</b></em>' containment reference list.
@@ -138,7 +156,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int XDIAGRAM__FIGURES = 7;
+  int XDIAGRAM__FIGURES = 9;
 
   /**
    * The number of structural features of the '<em>XDiagram</em>' class.
@@ -147,7 +165,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int XDIAGRAM_FEATURE_COUNT = 8;
+  int XDIAGRAM_FEATURE_COUNT = 10;
 
   /**
    * The meta object id for the '{@link pt.iscte.xdiagram.dsl.model.impl.ImportStatementImpl <em>Import Statement</em>}' class.
@@ -2654,6 +2672,28 @@ public interface ModelPackage extends EPackage
   EClass getXDiagram();
 
   /**
+   * Returns the meta object for the attribute '{@link pt.iscte.xdiagram.dsl.model.XDiagram#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Id</em>'.
+   * @see pt.iscte.xdiagram.dsl.model.XDiagram#getId()
+   * @see #getXDiagram()
+   * @generated
+   */
+  EAttribute getXDiagram_Id();
+
+  /**
+   * Returns the meta object for the attribute '{@link pt.iscte.xdiagram.dsl.model.XDiagram#getDesc <em>Desc</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Desc</em>'.
+   * @see pt.iscte.xdiagram.dsl.model.XDiagram#getDesc()
+   * @see #getXDiagram()
+   * @generated
+   */
+  EAttribute getXDiagram_Desc();
+
+  /**
    * Returns the meta object for the attribute '{@link pt.iscte.xdiagram.dsl.model.XDiagram#getImportURI <em>Import URI</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -4292,6 +4332,22 @@ public interface ModelPackage extends EPackage
      * @generated
      */
     EClass XDIAGRAM = eINSTANCE.getXDiagram();
+
+    /**
+     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute XDIAGRAM__ID = eINSTANCE.getXDiagram_Id();
+
+    /**
+     * The meta object literal for the '<em><b>Desc</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute XDIAGRAM__DESC = eINSTANCE.getXDiagram_Desc();
 
     /**
      * The meta object literal for the '<em><b>Import URI</b></em>' attribute feature.

@@ -47,6 +47,8 @@
       <genEnumLiterals ecoreEnumLiteral="XdiagramDsl.ecore#//LineType/DOT"/>
     </genEnums>
     <genClasses ecoreClass="XdiagramDsl.ecore#//XDiagram">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//XDiagram/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//XDiagram/desc"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//XDiagram/importURI"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/imports"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/diagram"/>

@@ -30,89 +30,110 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	public class XDiagramElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.XDiagram");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cMetamodelKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cImportURIAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cImportURISTRINGTerminalRuleCall_1_0 = (RuleCall)cImportURIAssignment_1.eContents().get(0);
-		private final Assignment cImportsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cImportsImportStatementParserRuleCall_2_0 = (RuleCall)cImportsAssignment_2.eContents().get(0);
-		private final Assignment cDiagramAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cDiagramDiagramParserRuleCall_3_0 = (RuleCall)cDiagramAssignment_3.eContents().get(0);
-		private final Assignment cGroupsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cGroupsToolGroupParserRuleCall_4_0 = (RuleCall)cGroupsAssignment_4.eContents().get(0);
-		private final Alternatives cAlternatives_5 = (Alternatives)cGroup.eContents().get(5);
-		private final Assignment cElementsAssignment_5_0 = (Assignment)cAlternatives_5.eContents().get(0);
-		private final RuleCall cElementsDiagramElementParserRuleCall_5_0_0 = (RuleCall)cElementsAssignment_5_0.eContents().get(0);
-		private final Assignment cStylesAssignment_5_1 = (Assignment)cAlternatives_5.eContents().get(1);
-		private final RuleCall cStylesStyleParserRuleCall_5_1_0 = (RuleCall)cStylesAssignment_5_1.eContents().get(0);
-		private final Assignment cColorsAssignment_5_2 = (Assignment)cAlternatives_5.eContents().get(2);
-		private final RuleCall cColorsCustomColorParserRuleCall_5_2_0 = (RuleCall)cColorsAssignment_5_2.eContents().get(0);
-		private final Assignment cFiguresAssignment_5_3 = (Assignment)cAlternatives_5.eContents().get(3);
-		private final RuleCall cFiguresCustomFigureParserRuleCall_5_3_0 = (RuleCall)cFiguresAssignment_5_3.eContents().get(0);
+		private final Keyword cXdiagramKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cIdIDTerminalRuleCall_1_0 = (RuleCall)cIdAssignment_1.eContents().get(0);
+		private final Assignment cDescAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cDescSTRINGTerminalRuleCall_2_0 = (RuleCall)cDescAssignment_2.eContents().get(0);
+		private final Keyword cMetamodelKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cImportURIAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cImportURISTRINGTerminalRuleCall_4_0 = (RuleCall)cImportURIAssignment_4.eContents().get(0);
+		private final Assignment cImportsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cImportsImportStatementParserRuleCall_5_0 = (RuleCall)cImportsAssignment_5.eContents().get(0);
+		private final Assignment cDiagramAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cDiagramDiagramParserRuleCall_6_0 = (RuleCall)cDiagramAssignment_6.eContents().get(0);
+		private final Assignment cGroupsAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cGroupsToolGroupParserRuleCall_7_0 = (RuleCall)cGroupsAssignment_7.eContents().get(0);
+		private final Alternatives cAlternatives_8 = (Alternatives)cGroup.eContents().get(8);
+		private final Assignment cElementsAssignment_8_0 = (Assignment)cAlternatives_8.eContents().get(0);
+		private final RuleCall cElementsDiagramElementParserRuleCall_8_0_0 = (RuleCall)cElementsAssignment_8_0.eContents().get(0);
+		private final Assignment cStylesAssignment_8_1 = (Assignment)cAlternatives_8.eContents().get(1);
+		private final RuleCall cStylesStyleParserRuleCall_8_1_0 = (RuleCall)cStylesAssignment_8_1.eContents().get(0);
+		private final Assignment cColorsAssignment_8_2 = (Assignment)cAlternatives_8.eContents().get(2);
+		private final RuleCall cColorsCustomColorParserRuleCall_8_2_0 = (RuleCall)cColorsAssignment_8_2.eContents().get(0);
+		private final Assignment cFiguresAssignment_8_3 = (Assignment)cAlternatives_8.eContents().get(3);
+		private final RuleCall cFiguresCustomFigureParserRuleCall_8_3_0 = (RuleCall)cFiguresAssignment_8_3.eContents().get(0);
 		
 		//XDiagram:
+		//	'xdiagram' id=ID desc=STRING
 		//	'metamodel' importURI=STRING
 		//	imports+=ImportStatement
 		//	diagram=Diagram
 		//	groups+=ToolGroup* (elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'metamodel' importURI=STRING imports+=ImportStatement diagram=Diagram groups+=ToolGroup* (elements+=DiagramElement |
-		//styles+=Style | colors+=CustomColor | figures+=CustomFigure)*
+		//'xdiagram' id=ID desc=STRING 'metamodel' importURI=STRING imports+=ImportStatement diagram=Diagram groups+=ToolGroup*
+		//(elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*
 		public Group getGroup() { return cGroup; }
 		
-		//'metamodel'
-		public Keyword getMetamodelKeyword_0() { return cMetamodelKeyword_0; }
+		//'xdiagram'
+		public Keyword getXdiagramKeyword_0() { return cXdiagramKeyword_0; }
 		
-		//importURI=STRING
-		public Assignment getImportURIAssignment_1() { return cImportURIAssignment_1; }
+		//id=ID
+		public Assignment getIdAssignment_1() { return cIdAssignment_1; }
+		
+		//ID
+		public RuleCall getIdIDTerminalRuleCall_1_0() { return cIdIDTerminalRuleCall_1_0; }
+		
+		//desc=STRING
+		public Assignment getDescAssignment_2() { return cDescAssignment_2; }
 		
 		//STRING
-		public RuleCall getImportURISTRINGTerminalRuleCall_1_0() { return cImportURISTRINGTerminalRuleCall_1_0; }
+		public RuleCall getDescSTRINGTerminalRuleCall_2_0() { return cDescSTRINGTerminalRuleCall_2_0; }
+		
+		//'metamodel'
+		public Keyword getMetamodelKeyword_3() { return cMetamodelKeyword_3; }
+		
+		//importURI=STRING
+		public Assignment getImportURIAssignment_4() { return cImportURIAssignment_4; }
+		
+		//STRING
+		public RuleCall getImportURISTRINGTerminalRuleCall_4_0() { return cImportURISTRINGTerminalRuleCall_4_0; }
 		
 		//imports+=ImportStatement
-		public Assignment getImportsAssignment_2() { return cImportsAssignment_2; }
+		public Assignment getImportsAssignment_5() { return cImportsAssignment_5; }
 		
 		//ImportStatement
-		public RuleCall getImportsImportStatementParserRuleCall_2_0() { return cImportsImportStatementParserRuleCall_2_0; }
+		public RuleCall getImportsImportStatementParserRuleCall_5_0() { return cImportsImportStatementParserRuleCall_5_0; }
 		
 		//diagram=Diagram
-		public Assignment getDiagramAssignment_3() { return cDiagramAssignment_3; }
+		public Assignment getDiagramAssignment_6() { return cDiagramAssignment_6; }
 		
 		//Diagram
-		public RuleCall getDiagramDiagramParserRuleCall_3_0() { return cDiagramDiagramParserRuleCall_3_0; }
+		public RuleCall getDiagramDiagramParserRuleCall_6_0() { return cDiagramDiagramParserRuleCall_6_0; }
 		
 		//groups+=ToolGroup*
-		public Assignment getGroupsAssignment_4() { return cGroupsAssignment_4; }
+		public Assignment getGroupsAssignment_7() { return cGroupsAssignment_7; }
 		
 		//ToolGroup
-		public RuleCall getGroupsToolGroupParserRuleCall_4_0() { return cGroupsToolGroupParserRuleCall_4_0; }
+		public RuleCall getGroupsToolGroupParserRuleCall_7_0() { return cGroupsToolGroupParserRuleCall_7_0; }
 		
 		//(elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*
-		public Alternatives getAlternatives_5() { return cAlternatives_5; }
+		public Alternatives getAlternatives_8() { return cAlternatives_8; }
 		
 		//elements+=DiagramElement
-		public Assignment getElementsAssignment_5_0() { return cElementsAssignment_5_0; }
+		public Assignment getElementsAssignment_8_0() { return cElementsAssignment_8_0; }
 		
 		//DiagramElement
-		public RuleCall getElementsDiagramElementParserRuleCall_5_0_0() { return cElementsDiagramElementParserRuleCall_5_0_0; }
+		public RuleCall getElementsDiagramElementParserRuleCall_8_0_0() { return cElementsDiagramElementParserRuleCall_8_0_0; }
 		
 		//styles+=Style
-		public Assignment getStylesAssignment_5_1() { return cStylesAssignment_5_1; }
+		public Assignment getStylesAssignment_8_1() { return cStylesAssignment_8_1; }
 		
 		//Style
-		public RuleCall getStylesStyleParserRuleCall_5_1_0() { return cStylesStyleParserRuleCall_5_1_0; }
+		public RuleCall getStylesStyleParserRuleCall_8_1_0() { return cStylesStyleParserRuleCall_8_1_0; }
 		
 		//colors+=CustomColor
-		public Assignment getColorsAssignment_5_2() { return cColorsAssignment_5_2; }
+		public Assignment getColorsAssignment_8_2() { return cColorsAssignment_8_2; }
 		
 		//CustomColor
-		public RuleCall getColorsCustomColorParserRuleCall_5_2_0() { return cColorsCustomColorParserRuleCall_5_2_0; }
+		public RuleCall getColorsCustomColorParserRuleCall_8_2_0() { return cColorsCustomColorParserRuleCall_8_2_0; }
 		
 		//figures+=CustomFigure
-		public Assignment getFiguresAssignment_5_3() { return cFiguresAssignment_5_3; }
+		public Assignment getFiguresAssignment_8_3() { return cFiguresAssignment_8_3; }
 		
 		//CustomFigure
-		public RuleCall getFiguresCustomFigureParserRuleCall_5_3_0() { return cFiguresCustomFigureParserRuleCall_5_3_0; }
+		public RuleCall getFiguresCustomFigureParserRuleCall_8_3_0() { return cFiguresCustomFigureParserRuleCall_8_3_0; }
 	}
 	public class ImportStatementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.ImportStatement");
@@ -3794,6 +3815,7 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//XDiagram:
+	//	'xdiagram' id=ID desc=STRING
 	//	'metamodel' importURI=STRING
 	//	imports+=ImportStatement
 	//	diagram=Diagram

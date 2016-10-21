@@ -28,6 +28,8 @@ import org.eclipse.graphiti.mm.algorithms.GraphicsAlgorithm;
 import org.eclipse.graphiti.mm.algorithms.Polyline;
 import org.eclipse.graphiti.mm.pictograms.Anchor;
 import org.eclipse.graphiti.mm.pictograms.BoxRelativeAnchor;
+import org.eclipse.graphiti.mm.pictograms.ChopboxAnchor;
+//import org.eclipse.graphiti.mm.pictograms.ChopboxAnchor;
 import org.eclipse.graphiti.mm.pictograms.Connection;
 import org.eclipse.graphiti.mm.pictograms.ConnectionDecorator;
 import org.eclipse.graphiti.mm.pictograms.ContainerShape;
@@ -62,6 +64,7 @@ import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
 
 import pt.iscte.xdiagram.dsl.XdiagramDslStandaloneSetup;
+import pt.iscte.xdiagram.dsl.model.AnchorDirection;
 import pt.iscte.xdiagram.dsl.model.ConnectableElement;
 import pt.iscte.xdiagram.dsl.model.Contains;
 import pt.iscte.xdiagram.dsl.model.Decorator;
@@ -94,13 +97,13 @@ public final class LanguageProvider implements GraphicsProvider {
 	private LayoutHandler layoutHandler;
 	private SizeHandler sizeHandler;
 	private TextValueHandler textHandler;
-	
+
 	private Map<EClass, Node> nodes;
 	private Map<EClass, Link> complexLinks;
 	private Map<EReference, Link> links;
 
 	private Multimap<EReference, pt.iscte.xdiagram.dsl.model.Anchor> outgoing;
-	private Multimap<EReference, pt.iscte.xdiagram.dsl.model.Anchor> incomming;
+	private Multimap<EReference, pt.iscte.xdiagram.dsl.model.Anchor> incoming;
 
 
 
@@ -111,29 +114,29 @@ public final class LanguageProvider implements GraphicsProvider {
 		layoutHandler = new LayoutHandler();
 		sizeHandler = new SizeHandler();
 		textHandler = new TextValueHandler();
-		
+
 		featureChain = new FeatureHandlerChain(this)
 
-		.add(new VisibleHandler())
-		.add(new ColorHandler())
-		.add(new TransparencyHandler())
-		.add(new PositionHandler(layoutHandler))
-		.add(new FontHandler())
-		.add(textHandler)
-		.add(new AlignHandler())
-		.add(sizeHandler)
-		.add(new LineWidthHandler())
-		.add(new PointHandler())
-		
-		.add(new CornerHandler())
-		.add(new LineStyleHandler())
+				.add(new VisibleHandler())
+				.add(new ColorHandler())
+				.add(new TransparencyHandler())
+				.add(new PositionHandler(layoutHandler))
+				.add(new FontHandler())
+				.add(textHandler)
+				.add(new AlignHandler())
+				.add(sizeHandler)
+				.add(new LineWidthHandler())
+				.add(new PointHandler())
 
-		//.add(new DecoratorHandler())
+				.add(new CornerHandler())
+				.add(new LineStyleHandler())
 
-		.add(containsHandler)
-		.add(anchorHandler)
+				//.add(new DecoratorHandler())
 
-		.add(layoutHandler);
+				.add(containsHandler)
+				.add(anchorHandler)
+
+				.add(layoutHandler);
 	}
 
 
@@ -171,15 +174,15 @@ public final class LanguageProvider implements GraphicsProvider {
 		links = Maps.newHashMap();
 		complexLinks = Maps.newHashMap();
 
-		incomming = ArrayListMultimap.create();
+		incoming = ArrayListMultimap.create();
 		outgoing = ArrayListMultimap.create();
-		
+
 		LoadModelData doSwitch = new LoadModelData();
 		for(TreeIterator<EObject> iterator = EcoreUtil.getAllContents(model.eResource(), false); iterator.hasNext();) {
 			EObject obj = iterator.next();
 			doSwitch.doSwitch(obj);
 		}
-			
+
 	}		
 
 
@@ -227,22 +230,18 @@ public final class LanguageProvider implements GraphicsProvider {
 		public Object caseContains(Contains contains) {
 			contains.setModelReference(match(contains.getModelReference()));
 			return null;
-		};
+		}
 
 		public Object caseAnchor(pt.iscte.xdiagram.dsl.model.Anchor anchor) {
 			EReference r = match(anchor.getModelReference());
 			anchor.setModelReference(r);
 
 			switch(anchor.getDirection()) {
-			case OUTGOING:
-				outgoing.put(r, anchor);
-				break;
-			case INCOMING:
-				incomming.put(r, anchor);
-				break;
+			case OUTGOING: outgoing.put(r, anchor); break;
+			case INCOMING: incoming.put(r, anchor); break;
 			}
 			return null;
-		};
+		}
 
 		@Override
 		public Object caseTextPart(TextPart part) {
@@ -327,10 +326,10 @@ public final class LanguageProvider implements GraphicsProvider {
 		return isComplexLink(eClass);
 	}
 
-//	@Override
-//	public boolean isProperty(EStructuralFeature feature) {
-//		return true;
-//	}
+	//	@Override
+	//	public boolean isProperty(EStructuralFeature feature) {
+	//		return true;
+	//	}
 
 	@Override
 	public EClass getRoot() {
@@ -340,20 +339,20 @@ public final class LanguageProvider implements GraphicsProvider {
 
 	@Override
 	public boolean canAddChild(ContainerShape container, EClass eClass) {
-//		if(!containsHandler.isContainer( container)) {
-//			return false;
-//		}
-//		
-//		
-//
-//		for(EReference r: containsHandler.getReferences(container))
-//			if(r.getEReferenceType().isSuperTypeOf(eClass))
-//				return true;
+		//		if(!containsHandler.isContainer( container)) {
+		//			return false;
+		//		}
+		//		
+		//		
+		//
+		//		for(EReference r: containsHandler.getReferences(container))
+		//			if(r.getEReferenceType().isSuperTypeOf(eClass))
+		//				return true;
 
-//		return false;
-		
+		//		return false;
+
 		// codigo repetido do interpreter?
-		
+
 		return true;
 	}
 
@@ -362,7 +361,7 @@ public final class LanguageProvider implements GraphicsProvider {
 	public EObject getContainerObject(ContainerShape container) {
 		return containsHandler.isContainer(container) ? containsHandler.getOwner(container) : null;
 	}
-	
+
 	@Override
 	public Collection<EReference> getContainerReferences(ContainerShape container) {
 		return containsHandler.getReferences(container);
@@ -371,9 +370,6 @@ public final class LanguageProvider implements GraphicsProvider {
 	public Collection<EReference> getCompatibleContainerReferences(ContainerShape container, EObject eObject) {
 		return containsHandler.getReferences(container, eObject);
 	}
-
-	
-
 
 
 
@@ -405,7 +401,7 @@ public final class LanguageProvider implements GraphicsProvider {
 
 		PictogramLink link = element.getLink();
 		EObject eObject = link != null ? (EObject) link.getBusinessObjects().get(0) : null;
-		
+
 		if(element instanceof ContainerShape) {
 			Node node = getNode(eObject.eClass());
 			if(node != null) {
@@ -468,25 +464,15 @@ public final class LanguageProvider implements GraphicsProvider {
 
 	@Override
 	public GraphicsAlgorithm createNodeFigure(Diagram diagram, IAddContext context, ContainerShape container, EObject eObject) {
-		GraphicsAlgorithm nodeFigure = null;
-
 		Node node = getNode(eObject.eClass());
 		ConnectableElement mainFig = node.getRootFigure();
-		nodeFigure = ElementCreation.createNodeFigure(mainFig, diagram, container, bundle);
-
-		//		if(mainFig instanceof Custom)
-		//			featureChain.update(((Custom) mainFig).getFigure().getElement(), eObject, diagram, nodeFigure, container);
+		GraphicsAlgorithm nodeFigure = ElementCreation.createNodeFigure(mainFig, diagram, container, bundle);
 
 		for(FeatureContainer child : mainFig.getChildren())
 			addChildren(child, container, diagram, eObject);
 
 		// parent features after
 		featureChain.update(mainFig, eObject, diagram, nodeFigure, container);
-
-		//		if(!hasFeature(mainFig, org.eclipselabs.xdiagram.dsl.Anchor.class, true)) {
-		//			Anchor anchor = Graphiti.getPeCreateService().createChopboxAnchor(container);
-		//			anchors.put(anchor, eObject);
-		//		}
 
 		Graphiti.getGaLayoutService().setLocation(nodeFigure, context.getX(), context.getY(), true);
 		return nodeFigure;		
@@ -500,15 +486,14 @@ public final class LanguageProvider implements GraphicsProvider {
 		boolean hasAnchor = hasFeature(element, pt.iscte.xdiagram.dsl.model.Anchor.class, false);
 
 		GraphicsAlgorithmContainer childContainer = null; 
-		if(hasAnchor) {
-			BoxRelativeAnchor anchor = Graphiti.getPeCreateService().createBoxRelativeAnchor(container);
-			anchor.setReferencedGraphicsAlgorithm(container.getGraphicsAlgorithm());
-			childContainer = anchor;
-			//			anchors.put(anchor, eObject);
-		}
-		else {
+//		if(hasAnchor) {
+//			BoxRelativeAnchor anchor = Graphiti.getPeCreateService().createBoxRelativeAnchor(container);
+//			anchor.setReferencedGraphicsAlgorithm(container.getGraphicsAlgorithm());
+//			childContainer = anchor;
+//		}
+//		else {
 			childContainer = Graphiti.getPeCreateService().createContainerShape((ContainerShape) container, isActive);
-		}
+//		}
 
 		GraphicsAlgorithm childFigure =  ElementCreation.createNodeFigure(element, diagram, childContainer, bundle);
 		featureChain.update(element, eObject, diagram, childFigure, childContainer);
@@ -529,7 +514,9 @@ public final class LanguageProvider implements GraphicsProvider {
 
 			if(recursive && element instanceof ConnectableElement)
 				for(FeatureContainer child : ((ConnectableElement) element).getChildren())
-					hasFeature(child, clazz, recursive);
+					if(hasFeature(child, clazz, recursive))
+						return true;
+							
 		}
 
 		return false;
@@ -578,10 +565,10 @@ public final class LanguageProvider implements GraphicsProvider {
 
 
 
-	
-	
-	
-	
+
+
+
+
 	@Override
 	public boolean canEditFigureLabel(AbstractText text) {
 		return textHandler.isLabelEditable((AbstractText) text);
@@ -592,7 +579,7 @@ public final class LanguageProvider implements GraphicsProvider {
 	@Override
 	public AbstractText getFigureLabel(ContainerShape container) {
 		return null;
-//		return textHandler.getEditableLabel(container);
+		//		return textHandler.getEditableLabel(container);
 	}
 
 
@@ -643,7 +630,6 @@ public final class LanguageProvider implements GraphicsProvider {
 
 				GraphicsAlgorithm connectionLink = createLinkConnection(link, diagram, connection, eObject);
 
-				//		handleDecorators(diagram, eObject, connection, link, connectionLink);
 				handleDecorators(link, connection, eObject, diagram, connectionLink);
 
 				connection.setStart(source);
@@ -691,24 +677,35 @@ public final class LanguageProvider implements GraphicsProvider {
 		assert anchor != null;
 		assert eReference != null;
 
+		// no anchors
+		if(anchor instanceof ChopboxAnchor)
+			return true;
+
 		EObject eObject = anchor.getParent().getLink().getBusinessObjects().get(0);
 
-		for(pt.iscte.xdiagram.dsl.model.Anchor a : outgoing.get(eReference)) {
+		for(pt.iscte.xdiagram.dsl.model.Anchor a : outgoing.get(eReference))
+			if(a.getMax() == 0 || anchor.getOutgoingConnections().size() <= a.getMax())
+				return true;
+					
+					//a.getModelReference().equals(eReference) &&
+				//(a.getMax() == 0 || anchor.getOutgoingConnections().size() <= a.getMax())
 
-		}
-
-		return true;
-		//		return anchor instanceof ChopboxAnchor || (anchor.getOutgoingConnections().size()>=0 &&
-		//				canSetConnection(anchor, eReference, ANCHOR_OUTGOING));
+		return false;
 	}
 
 	@Override
 	public boolean isValidIncomingConnection(Anchor anchor, EReference eReference) {
 		assert anchor != null;
 		assert eReference != null;
-		return true;
-		//		return anchor instanceof ChopboxAnchor || (anchor.getIncomingConnections().size()>=0 &&
-		//				canSetConnection(anchor, eReference, ANCHOR_INCOMING));
+		// no anchors
+		if(anchor instanceof ChopboxAnchor)
+			return true;
+		
+		for(pt.iscte.xdiagram.dsl.model.Anchor a : incoming.get(eReference))
+			if(a.getMax() == 0 || anchor.getOutgoingConnections().size() <= a.getMax())
+				return true;
+		
+		return false;
 	}
 
 	@Override
@@ -726,7 +723,7 @@ public final class LanguageProvider implements GraphicsProvider {
 	public void internalUpdate(PictogramElement element) {
 		while(!(element.eContainer() instanceof Diagram))
 			element = (PictogramElement) element.eContainer();
-		
+
 		UpdateContext updateContext = new UpdateContext(element);
 		IUpdateFeature updateFeature = gFeatureProvider.getUpdateFeature(updateContext);
 		if(updateFeature != null)

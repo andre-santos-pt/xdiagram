@@ -1000,6 +1000,8 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *
 	 * Constraint:
 	 *     (
+	 *         id=ID 
+	 *         desc=STRING 
 	 *         importURI=STRING 
 	 *         imports+=ImportStatement 
 	 *         diagram=Diagram 

@@ -53,26 +53,26 @@ public abstract class AbstractCreateEReferenceFeature extends AbstractCreateConn
 		EObject source = getEObject(sourceAnchor);
 		EObject target = getEObject(targetAnchor);
 		
-		return 
-				sourceAnchor != null && 
+		return 	validOutgoing(sourceAnchor, source) &&
 				targetAnchor != null &&
-				sourceType.isInstance(source) &&
 				targetType.isInstance(target) &&
-				ECoreUtil.enoughUpperBound(eReference, source) &&
-				provider.isValidOutgoingConnection(sourceAnchor, eReference) &&
 				provider.isValidIncomingConnection(targetAnchor, eReference);
 	}
 
 	public boolean canStartConnection(ICreateConnectionContext context) {
 		Anchor anchor = context.getSourceAnchor();
 		EObject source = getEObject(anchor);
-		return 
-				anchor != null &&
-				sourceType.isInstance(source) &&
-				ECoreUtil.enoughUpperBound(eReference, source) &&
-				provider.isValidOutgoingConnection(anchor, eReference);
+		return validOutgoing(anchor, source);
+	}
+	
+	private boolean validOutgoing(Anchor sourceAnchor, EObject source) {
+		return sourceAnchor != null &&
+		sourceType.isInstance(source) &&
+		provider.isValidOutgoingConnection(sourceAnchor, eReference) &&
+		ECoreUtil.enoughUpperBound(eReference, source);
 	}
 
+	
 	protected EObject getEObject(Anchor anchor) {
 		if (anchor != null) {
 			Object obj = getBusinessObjectForPictogramElement(anchor.getParent());

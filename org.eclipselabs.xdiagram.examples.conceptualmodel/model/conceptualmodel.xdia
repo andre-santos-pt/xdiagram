@@ -1,3 +1,4 @@
+xdiagram ConceptualModel "UML-Like Conceptual models"
 metamodel "platform:/plugin/org.eclipselabs.xdiagram.examples.conceptualmodel/model/conceptualmodel.ecore"
 import conceptualmodel.*
 

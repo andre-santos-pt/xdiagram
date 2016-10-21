@@ -540,7 +540,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getXDiagram_ImportURI()
+  public EAttribute getXDiagram_Id()
   {
     return (EAttribute)xDiagramEClass.getEStructuralFeatures().get(0);
   }
@@ -550,27 +550,27 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getXDiagram_Desc()
+  {
+    return (EAttribute)xDiagramEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getXDiagram_ImportURI()
+  {
+    return (EAttribute)xDiagramEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getXDiagram_Imports()
-  {
-    return (EReference)xDiagramEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getXDiagram_Diagram()
-  {
-    return (EReference)xDiagramEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getXDiagram_Groups()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(3);
   }
@@ -580,7 +580,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Elements()
+  public EReference getXDiagram_Diagram()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(4);
   }
@@ -590,7 +590,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Styles()
+  public EReference getXDiagram_Groups()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(5);
   }
@@ -600,7 +600,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Colors()
+  public EReference getXDiagram_Elements()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(6);
   }
@@ -610,9 +610,29 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Figures()
+  public EReference getXDiagram_Styles()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getXDiagram_Colors()
+  {
+    return (EReference)xDiagramEClass.getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getXDiagram_Figures()
+  {
+    return (EReference)xDiagramEClass.getEStructuralFeatures().get(9);
   }
 
   /**
@@ -2076,6 +2096,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
 
     // Create classes and their features
     xDiagramEClass = createEClass(XDIAGRAM);
+    createEAttribute(xDiagramEClass, XDIAGRAM__ID);
+    createEAttribute(xDiagramEClass, XDIAGRAM__DESC);
     createEAttribute(xDiagramEClass, XDIAGRAM__IMPORT_URI);
     createEReference(xDiagramEClass, XDIAGRAM__IMPORTS);
     createEReference(xDiagramEClass, XDIAGRAM__DIAGRAM);
@@ -2347,6 +2369,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
 
     // Initialize classes and features; add operations and parameters
     initEClass(xDiagramEClass, XDiagram.class, "XDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getXDiagram_Id(), ecorePackage.getEString(), "id", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getXDiagram_Desc(), ecorePackage.getEString(), "desc", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getXDiagram_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Imports(), this.getImportStatement(), null, "imports", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Diagram(), this.getDiagram(), null, "diagram", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

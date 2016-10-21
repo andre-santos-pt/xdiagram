@@ -16,6 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getId <em>Id</em>}</li>
+ *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getDesc <em>Desc</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getImportURI <em>Import URI</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getImports <em>Imports</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getDiagram <em>Diagram</em>}</li>
@@ -32,6 +34,58 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface XDiagram extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Id</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Id</em>' attribute.
+   * @see #setId(String)
+   * @see pt.iscte.xdiagram.dsl.model.ModelPackage#getXDiagram_Id()
+   * @model
+   * @generated
+   */
+  String getId();
+
+  /**
+   * Sets the value of the '{@link pt.iscte.xdiagram.dsl.model.XDiagram#getId <em>Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Id</em>' attribute.
+   * @see #getId()
+   * @generated
+   */
+  void setId(String value);
+
+  /**
+   * Returns the value of the '<em><b>Desc</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Desc</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Desc</em>' attribute.
+   * @see #setDesc(String)
+   * @see pt.iscte.xdiagram.dsl.model.ModelPackage#getXDiagram_Desc()
+   * @model
+   * @generated
+   */
+  String getDesc();
+
+  /**
+   * Sets the value of the '{@link pt.iscte.xdiagram.dsl.model.XDiagram#getDesc <em>Desc</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Desc</em>' attribute.
+   * @see #getDesc()
+   * @generated
+   */
+  void setDesc(String value);
+
   /**
    * Returns the value of the '<em><b>Import URI</b></em>' attribute.
    * <!-- begin-user-doc -->

@@ -49,6 +49,10 @@ import pt.iscte.xdiagram.dsl.validation.AbstractXdiagramDslValidator;
  */
 @SuppressWarnings("all")
 public class XdiagramDslValidator extends AbstractXdiagramDslValidator {
+  /**
+   * TODO
+   * anchor reference  incoming/outgoing
+   */
   @Check
   public void ecoreExists(final XDiagram diagram) {
     String ecoreUri = diagram.getImportURI();

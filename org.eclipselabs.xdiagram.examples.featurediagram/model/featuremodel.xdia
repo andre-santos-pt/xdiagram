@@ -1,3 +1,5 @@
+xdiagram FeatureDiagram "Feature diagrams"
+
 metamodel "platform:/plugin/org.eclipselabs.xdiagram.examples.featurediagram/model/featuremodel.ecore"
 import featuremodel.*
 
@@ -34,8 +36,8 @@ node Feature invisible {
 	}
 
 	child invisible {
-		size 3 3;
-		position 50% 50;
+		size 20 20;
+		position 50% 100%;
 		anchor incoming Feature.parent;
 	}
 	
@@ -52,8 +54,8 @@ link reference Feature.parent {
 	linestyle solid;	
 }
 
-link class Constraint source Feature.constraints target Constraint.feature {
-	linestyle dotted manhattan;
-	decorator 100% arrow { }
-}
+//link class Constraint source Feature.constraints target Constraint.feature {
+//	linestyle dotted manhattan;
+//	decorator 100% arrow { }
+//}
 
