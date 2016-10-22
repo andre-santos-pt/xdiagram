@@ -52,6 +52,8 @@ public class XdiagramDslValidator extends AbstractXdiagramDslValidator {
   /**
    * TODO
    * anchor reference  incoming/outgoing
+   * 	diagram contains
+   * contains containment
    */
   @Check
   public void ecoreExists(final XDiagram diagram) {

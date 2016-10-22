@@ -39,7 +39,8 @@ class XdiagramDslValidator extends AbstractXdiagramDslValidator {
 	
 	/* TODO
 	 * anchor reference  incoming/outgoing
-	* 
+	* 	diagram contains
+	* contains containment
 	*/
 
 	@Check
