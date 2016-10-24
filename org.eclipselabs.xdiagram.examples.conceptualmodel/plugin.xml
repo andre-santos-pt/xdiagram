@@ -1,45 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-   <extension
-         point="org.eclipse.graphiti.ui.diagramTypes">
-      <diagramType
-            description="Conceptual model type"
-            id="ConceptualModelType"
-            name="Conceptual Model Type"
-            type="ConceptualModelDiagram">
-      </diagramType>
-   </extension>
    
    
-   <extension
-         point="org.eclipse.graphiti.ui.diagramTypeProviders">
-      <diagramTypeProvider
-            class="org.eclipselabs.xdiagram.interpreter.XDiagramTypeProvider"
-            description="Conceptual model editor"
-            id="ConceptualModelTypeProvider"
-            name="Conceptual Model Type Provider">
-         <diagramType
-               id="ConceptualModelType">
-         </diagramType>
-         <imageProvider
-               id="org.eclipselabs.xdiagram.examples.conceptualmodel.imageProvider">
-         </imageProvider>
-      </diagramTypeProvider>
-   </extension>
    
-   <extension
-         point="org.eclipselabs.xdiagram.interpreter.providers">
-      <provider
-            diagramType="ConceptualModelDiagram"
-            ePackageURI="http://org.eclipselabs.xdiagram.examples/ConceptualModel"
-            provider="org.eclipselabs.xdiagram.provider.LanguageProvider">
-         <property
-               id="file"
-               value="model/conceptualmodel.xdia">
-         </property>
-      </provider>
-   </extension>
 
 
    
@@ -50,13 +14,6 @@
             uri="http://org.eclipselabs.xdiagram.examples/ConceptualModel"
             class="conceptualmodel.ConceptualmodelPackage"
             genModel="model/conceptualmodel.genmodel"/>
-   </extension>
-   <extension
-         point="org.eclipse.graphiti.ui.imageProviders">
-      <imageProvider
-            class="org.eclipselabs.xdiagram.interpreter.XDiagramImageProvider"
-            id="org.eclipselabs.xdiagram.examples.conceptualmodel.imageProvider">
-      </imageProvider>
    </extension>
 
 </plugin>

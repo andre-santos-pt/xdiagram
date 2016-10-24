@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.eclipselabs.xdiagram.examples.conceptualmodel.xdiagram
+Bundle-SymbolicName: org.eclipselabs.xdiagram.examples.conceptualmodel.xdiagram; singleton:=true
+Bundle-Version: 1.0.0
+Require-Bundle: org.eclipselabs.xdiagram.examples.conceptualmodel,
+ org.eclipse.core.runtime,
+ org.eclipse.emf.ecore,
+ org.eclipselabs.xdiagram.provider,
+ org.eclipselabs.xdiagram.interpreter
+Bundle-RequiredExecutionEnvironment: J2SE-1.8

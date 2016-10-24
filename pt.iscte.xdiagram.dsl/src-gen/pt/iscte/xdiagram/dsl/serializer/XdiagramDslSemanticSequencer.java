@@ -41,6 +41,7 @@ import pt.iscte.xdiagram.dsl.model.Line;
 import pt.iscte.xdiagram.dsl.model.LineStyle;
 import pt.iscte.xdiagram.dsl.model.LineWidth;
 import pt.iscte.xdiagram.dsl.model.Link;
+import pt.iscte.xdiagram.dsl.model.MetaModel;
 import pt.iscte.xdiagram.dsl.model.ModelPackage;
 import pt.iscte.xdiagram.dsl.model.Node;
 import pt.iscte.xdiagram.dsl.model.Point;
@@ -174,6 +175,9 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 				return; 
 			case ModelPackage.LINK:
 				sequence_Link(context, (Link) semanticObject); 
+				return; 
+			case ModelPackage.META_MODEL:
+				sequence_MetaModel(context, (MetaModel) semanticObject); 
 				return; 
 			case ModelPackage.NODE:
 				sequence_Node(context, (Node) semanticObject); 
@@ -732,6 +736,27 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Contexts:
+	 *     MetaModel returns MetaModel
+	 *
+	 * Constraint:
+	 *     (plugin=STRING ecorePath=STRING)
+	 */
+	protected void sequence_MetaModel(ISerializationContext context, MetaModel semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, ModelPackage.Literals.META_MODEL__PLUGIN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelPackage.Literals.META_MODEL__PLUGIN));
+			if (transientValues.isValueTransient(semanticObject, ModelPackage.Literals.META_MODEL__ECORE_PATH) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelPackage.Literals.META_MODEL__ECORE_PATH));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getMetaModelAccess().getPluginSTRINGTerminalRuleCall_3_0(), semanticObject.getPlugin());
+		feeder.accept(grammarAccess.getMetaModelAccess().getEcorePathSTRINGTerminalRuleCall_6_0(), semanticObject.getEcorePath());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     DiagramElement returns Node
 	 *     Node returns Node
 	 *
@@ -1002,8 +1027,9 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     (
 	 *         id=ID 
 	 *         desc=STRING 
-	 *         importURI=STRING 
+	 *         importURI=STRING? 
 	 *         imports+=ImportStatement 
+	 *         metamodel=MetaModel 
 	 *         diagram=Diagram 
 	 *         groups+=ToolGroup* 
 	 *         (elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*

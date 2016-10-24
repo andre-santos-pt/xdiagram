@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin >
+<extension point="org.eclipse.graphiti.ui.diagramTypes" >
+<diagramType id="conceptualmodelDiagramType" name="Conceptual Diagram" type="conceptualmodelDiagram" />
+</extension>
+
+
+<extension point="org.eclipse.graphiti.ui.diagramTypeProviders" >
+<diagramTypeProvider class="org.eclipselabs.xdiagram.interpreter.XDiagramTypeProvider" id="conceptualmodelDiagramProvider" name=" Type Provider" >
+<diagramType id="conceptualmodelDiagram" />
+<imageProvider id="org.eclipselabs.xdiagram.examples.featurediagram.imageProvider" />
+</diagramTypeProvider>
+</extension>
+
+
+<extension point="org.eclipselabs.xdiagram.interpreter.providers" >
+<provider diagramType="conceptualmodelDiagram" ePackageURI="http://org.eclipselabs.xdiagram.examples/ConceptualModel" provider="org.eclipselabs.xdiagram.provider.LanguageProvider" >
+<property id="file" value="conceptualmodel.xdia" />
+</provider>
+</extension>
+</plugin>

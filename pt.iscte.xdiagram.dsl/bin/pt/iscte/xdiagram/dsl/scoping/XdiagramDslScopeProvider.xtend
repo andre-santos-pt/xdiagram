@@ -10,6 +10,35 @@ import pt.iscte.xdiagram.dsl.model.ConnectableElement
 import pt.iscte.xdiagram.dsl.model.Contains
 import pt.iscte.xdiagram.dsl.model.Diagram
 import pt.iscte.xdiagram.dsl.model.Node
+import org.eclipse.xtext.resource.EObjectDescription
+import org.eclipse.xtext.resource.IEObjectDescription
+import org.eclipse.xtext.scoping.IScope
+import java.util.List
+import java.util.ArrayList
+import org.eclipse.xtext.naming.QualifiedName
+import javax.lang.model.element.QualifiedNameable
+import org.eclipse.emf.ecore.EcorePackage
+import org.eclipse.emf.ecore.EcoreFactory
+import org.eclipse.core.resources.ResourcesPlugin
+import org.eclipse.emf.common.util.URI
+import org.eclipse.core.resources.IResource
+import org.eclipse.core.runtime.Path
+import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
+import org.eclipse.emf.ecore.resource.ResourceSet
+import org.eclipse.emf.ecore.EPackage
+import pt.iscte.xdiagram.dsl.model.XDiagram
+import java.util.Collections
+import java.util.HashMap
+import org.eclipse.emf.ecore.EClassifier
+import org.eclipse.emf.ecore.EClass
+import com.google.common.collect.ArrayListMultimap
+import pt.iscte.xdiagram.dsl.model.Link
+import pt.iscte.xdiagram.dsl.model.ModelPackage
+import java.io.InvalidObjectException
+import com.google.common.collect.Multimap
+import pt.iscte.xdiagram.dsl.model.DiagramElement
+import org.eclipse.emf.ecore.EAttribute
 
 /**
  * This class contains custom scoping description.
@@ -19,11 +48,205 @@ import pt.iscte.xdiagram.dsl.model.Node
  */
 class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 
-//	override getScope(EObject context, EReference reference) {
+	new() {
+		println("SCOPE")
+
+	}
+
+	static class XdiagramScope implements IScope {
+		var list = new ArrayList<IEObjectDescription>();
+		var map = new HashMap<QualifiedName, IEObjectDescription>;
+		
+		var Multimap<QualifiedName, IEObjectDescription> referenceLinksMap = ArrayListMultimap.create();
+		var Multimap<QualifiedName, IEObjectDescription> parentChildrenMap = ArrayListMultimap.create();
+		var Multimap<QualifiedName, IEObjectDescription> attributesMap = ArrayListMultimap.create();
+		
+
+		val EObject context;
+		val EReference reference;
+		var EPackage ePackage;
+
+		new(EObject context, EReference reference) {
+			this.context = context;
+			this.reference = reference;
+
+			var top = context;
+			while (!(top instanceof XDiagram))
+				top = top.eContainer;
+
+//			println((top as XDiagram).id + "   " + context);
+
+			var xdiagram = top as XDiagram;
+			if (xdiagram.metamodel != null && xdiagram.metamodel.plugin != null &&
+				xdiagram.metamodel.ecorePath != null) {
+				var ecorePlugin = xdiagram.metamodel.plugin;
+				var ecorePath = xdiagram.metamodel.ecorePath;
+				if (ecorePath.startsWith("/"))
+					ecorePath.substring(1);
+				var location = ecorePlugin + "/" + ecorePath;
+
+				var modelLocation = URI.createPlatformResourceURI(location, true);
+				var rs = new ResourceSetImpl();
+				var Resource resource = null;
+				try {
+					resource = rs.getResource(modelLocation, true);
+				} catch (Exception e) {
+					println("FAIL")
+
+					modelLocation = URI.createPlatformPluginURI(location, true);
+					try {
+						resource = rs.getResource(modelLocation, true);
+					} catch (Exception e2) {
+						println("FAIL2")
+					}
+				}
+
+				if (resource != null) {
+					ePackage = resource.getContents().get(0) as EPackage;
+
+					for (EClassifier c : ePackage.EClassifiers) {
+						if (c instanceof EClass) {
+							var eClass = c as EClass;
+							var classQname = QualifiedName.create(eClass.name);
+							var desc = new EObjectDescription(classQname, c, null);
+
+							map.put(QualifiedName.create(eClass.name), desc);
+							
+							for(EAttribute a : c.EAllAttributes) {
+								var adesc = new EObjectDescription(QualifiedName.create(a.name), a, null);
+								attributesMap.put(classQname, adesc);
+							}
+							
+							for (EReference r : c.EAllReferences) {
+								var qname = QualifiedName.create(c.name, r.name)
+								var rdesc = new EObjectDescription(qname, r, null);		
+								referenceLinksMap.put(qname, rdesc);
+								if(r.isContainment) {
+									qname = QualifiedName.create(c.name)
+									rdesc = new EObjectDescription(QualifiedName.create(r.name), r, null);	
+									parentChildrenMap.put(qname, rdesc);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		def getDiagramElement(EObject o) {
+			var n = o.eContainer;
+			while (!(n instanceof DiagramElement))
+				n = n.eContainer;
+			return n as DiagramElement;
+		}
+		
+		override getAllElements() {
+			if (context instanceof Contains) {
+				if (context.eContainer instanceof Diagram) {
+//					val list = new ArrayList<IEObjectDescription>;
+					val diagram = context.eContainer as Diagram;
+					return parentChildrenMap.get(QualifiedName.create(diagram.modelClass.name));
+//					for (EReference r : diagram.modelClass.EAllContainments) {
+//						list.add(new EObjectDescription(QualifiedName.create(r.name), r, null));
+//					}
+//					return list;
+				} else if (context.eContainer instanceof ConnectableElement) {
+//					var n = context.eContainer;
+//					while (!(n instanceof Node))
+//						n = n.eContainer;
+					val node = getDiagramElement(context) as Node;
+//					val list = new ArrayList<IEObjectDescription>;
+//					for (EReference r : node.modelClass.EAllContainments) {
+//						list.add(new EObjectDescription(QualifiedName.create(r.name), r, null));
+//					}
+//					return list;
+					return parentChildrenMap.get(QualifiedName.create(node.modelClass.name));
+				}
+			} else if (context instanceof Link && (context as Link).reference) {
+				return referenceLinksMap.values();
+			}
+			if (context instanceof Link && (context as Link).complex) {
+				if(reference.equals(ModelPackage.Literals.LINK__SOURCE_REFERENCE)) {
+					
+				}
+				else if(reference.equals(ModelPackage.Literals.LINK__TARGET_REFERENCE)) {
+					
+				}
+			}
+			else if(reference.name.equals("modelAttribute")) {
+				var owner = getDiagramElement(context);
+				if(owner instanceof Link && (owner as Link).reference) {
+					return Collections.emptyIterator() as Iterable<IEObjectDescription>;
+				}
+				else if(owner instanceof Node) {
+					return attributesMap.get(QualifiedName.create((owner as Node).modelClass.name));
+				}
+				else
+					return attributesMap.get(QualifiedName.create((owner as Link).modelClass.name));
+			}
+			 else
+				return map.values;
+		}
+		
+		override getElements(EObject object) {
+			return list;
+
+		}
+
+		override getSingleElement(EObject object) {
+			return if(list.isEmpty) null else list.get(0);
+		}
+
+		override getElements(QualifiedName name) {
+			return Collections.emptyIterator() as Iterable<IEObjectDescription>;
+		}
+
+		override getSingleElement(QualifiedName name) {
+			if (context instanceof Contains) {
+				if (context.eContainer instanceof Diagram) {
+					val diagram = context.eContainer as Diagram;
+					for (EReference r : diagram.modelClass.EAllContainments) {
+						if (r.name.equals(name.toString))
+							return new EObjectDescription(name, r, null);
+					}
+				} else if (context.eContainer instanceof ConnectableElement) {
+					var n = context.eContainer;
+					while (!(n instanceof Node))
+						n = n.eContainer;
+					val node = n as Node;
+					for (EReference r : node.modelClass.EAllContainments) {
+						if (r.name.equals(name.toString))
+							return new EObjectDescription(QualifiedName.create(r.name), r, null);
+					}
+				}
+			}
+			else if(context instanceof Link && (context as Link).reference) {
+				var list = referenceLinksMap.get(name);
+				return if(list.isEmpty) null else list.get(0);
+			}
+			if(reference.name.equals("modelAttribute")) {
+				var owner = getDiagramElement(context);
+				if(owner.modelClass == null)
+					return null;
+				var list = attributesMap.get(QualifiedName.create(owner.modelClass.name));
+				return if(list.isEmpty) null else list.get(0);
+			 }	
+
+			return map.get(name); // if(list.isEmpty) null else list.get(0);
+		}
+	}
+
+	override getScope(EObject context, EReference reference) {
+
+//		var scope = new XdiagramScope();
+		return new XdiagramScope(context, reference);
+
 //		var scope = super.getScope(context, reference);
 //		if (context instanceof Contains) {
 //			if(context.eContainer instanceof Diagram) {
 //				val diagram = context.eContainer as Diagram;
+//				for(IEObjectDescription d : scope.getAllElements())
+//					System::out.println(d.getClass() + "  " + d);
 //				return new FilteringScope(scope, [EObjectOrProxy.eContainer == diagram.modelClass && !name.toString.startsWith("http") && (EObjectOrProxy as EReference).containment ]);
 //			}
 //			else if(context.eContainer instanceof ConnectableElement) {
@@ -35,6 +258,8 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 //			}
 //		}
 //		return scope;
-//	}
+	}
 
+//			var ecoreFile = ResourcesPlugin.getWorkspace().getRoot().findMember(new Path("/pt.iscte.xdiagram.examples.statemachine/model/statemachine.ecore"));
+//			var modelLocation = URI.createFileURI("platform:/resource/pt.iscte.xdiagram.examples.statemachine/model/statemachine.ecore");
 }

@@ -81,6 +81,11 @@ public class ModelAdapterFactory extends AdapterFactoryImpl
         return createXDiagramAdapter();
       }
       @Override
+      public Adapter caseMetaModel(MetaModel object)
+      {
+        return createMetaModelAdapter();
+      }
+      @Override
       public Adapter caseImportStatement(ImportStatement object)
       {
         return createImportStatementAdapter();
@@ -353,6 +358,21 @@ public class ModelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createXDiagramAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link pt.iscte.xdiagram.dsl.model.MetaModel <em>Meta Model</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see pt.iscte.xdiagram.dsl.model.MetaModel
+   * @generated
+   */
+  public Adapter createMetaModelAdapter()
   {
     return null;
   }

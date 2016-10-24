@@ -71,6 +71,8 @@ public class XdiagramDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTextAlignValueAccess().getAlternatives(), "rule__TextAlignValue__Alternatives");
 					put(grammarAccess.getLineTypeAccess().getAlternatives(), "rule__LineType__Alternatives");
 					put(grammarAccess.getXDiagramAccess().getGroup(), "rule__XDiagram__Group__0");
+					put(grammarAccess.getXDiagramAccess().getGroup_3(), "rule__XDiagram__Group_3__0");
+					put(grammarAccess.getMetaModelAccess().getGroup(), "rule__MetaModel__Group__0");
 					put(grammarAccess.getImportStatementAccess().getGroup(), "rule__ImportStatement__Group__0");
 					put(grammarAccess.getImportStatementAccess().getGroup_1(), "rule__ImportStatement__Group_1__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
@@ -150,14 +152,17 @@ public class XdiagramDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLineWidthAccess().getGroup(), "rule__LineWidth__Group__0");
 					put(grammarAccess.getXDiagramAccess().getIdAssignment_1(), "rule__XDiagram__IdAssignment_1");
 					put(grammarAccess.getXDiagramAccess().getDescAssignment_2(), "rule__XDiagram__DescAssignment_2");
-					put(grammarAccess.getXDiagramAccess().getImportURIAssignment_4(), "rule__XDiagram__ImportURIAssignment_4");
-					put(grammarAccess.getXDiagramAccess().getImportsAssignment_5(), "rule__XDiagram__ImportsAssignment_5");
+					put(grammarAccess.getXDiagramAccess().getImportURIAssignment_3_1(), "rule__XDiagram__ImportURIAssignment_3_1");
+					put(grammarAccess.getXDiagramAccess().getImportsAssignment_4(), "rule__XDiagram__ImportsAssignment_4");
+					put(grammarAccess.getXDiagramAccess().getMetamodelAssignment_5(), "rule__XDiagram__MetamodelAssignment_5");
 					put(grammarAccess.getXDiagramAccess().getDiagramAssignment_6(), "rule__XDiagram__DiagramAssignment_6");
 					put(grammarAccess.getXDiagramAccess().getGroupsAssignment_7(), "rule__XDiagram__GroupsAssignment_7");
 					put(grammarAccess.getXDiagramAccess().getElementsAssignment_8_0(), "rule__XDiagram__ElementsAssignment_8_0");
 					put(grammarAccess.getXDiagramAccess().getStylesAssignment_8_1(), "rule__XDiagram__StylesAssignment_8_1");
 					put(grammarAccess.getXDiagramAccess().getColorsAssignment_8_2(), "rule__XDiagram__ColorsAssignment_8_2");
 					put(grammarAccess.getXDiagramAccess().getFiguresAssignment_8_3(), "rule__XDiagram__FiguresAssignment_8_3");
+					put(grammarAccess.getMetaModelAccess().getPluginAssignment_3(), "rule__MetaModel__PluginAssignment_3");
+					put(grammarAccess.getMetaModelAccess().getEcorePathAssignment_6(), "rule__MetaModel__EcorePathAssignment_6");
 					put(grammarAccess.getImportStatementAccess().getImportedNamespaceAssignment_1_1(), "rule__ImportStatement__ImportedNamespaceAssignment_1_1");
 					put(grammarAccess.getDiagramAccess().getModelClassAssignment_1(), "rule__Diagram__ModelClassAssignment_1");
 					put(grammarAccess.getDiagramAccess().getContainsAssignment_3(), "rule__Diagram__ContainsAssignment_3");

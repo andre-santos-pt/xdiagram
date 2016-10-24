@@ -46,6 +46,7 @@ import pt.iscte.xdiagram.dsl.model.LineStyle;
 import pt.iscte.xdiagram.dsl.model.LineType;
 import pt.iscte.xdiagram.dsl.model.LineWidth;
 import pt.iscte.xdiagram.dsl.model.Link;
+import pt.iscte.xdiagram.dsl.model.MetaModel;
 import pt.iscte.xdiagram.dsl.model.ModelFactory;
 import pt.iscte.xdiagram.dsl.model.ModelPackage;
 import pt.iscte.xdiagram.dsl.model.Node;
@@ -83,6 +84,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * @generated
    */
   private EClass xDiagramEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass metaModelEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -580,7 +588,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Diagram()
+  public EReference getXDiagram_Metamodel()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(4);
   }
@@ -590,7 +598,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Groups()
+  public EReference getXDiagram_Diagram()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(5);
   }
@@ -600,7 +608,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Elements()
+  public EReference getXDiagram_Groups()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(6);
   }
@@ -610,7 +618,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Styles()
+  public EReference getXDiagram_Elements()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(7);
   }
@@ -620,7 +628,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Colors()
+  public EReference getXDiagram_Styles()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(8);
   }
@@ -630,9 +638,49 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Figures()
+  public EReference getXDiagram_Colors()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(9);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getXDiagram_Figures()
+  {
+    return (EReference)xDiagramEClass.getEStructuralFeatures().get(10);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMetaModel()
+  {
+    return metaModelEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMetaModel_Plugin()
+  {
+    return (EAttribute)metaModelEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMetaModel_EcorePath()
+  {
+    return (EAttribute)metaModelEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2100,12 +2148,17 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     createEAttribute(xDiagramEClass, XDIAGRAM__DESC);
     createEAttribute(xDiagramEClass, XDIAGRAM__IMPORT_URI);
     createEReference(xDiagramEClass, XDIAGRAM__IMPORTS);
+    createEReference(xDiagramEClass, XDIAGRAM__METAMODEL);
     createEReference(xDiagramEClass, XDIAGRAM__DIAGRAM);
     createEReference(xDiagramEClass, XDIAGRAM__GROUPS);
     createEReference(xDiagramEClass, XDIAGRAM__ELEMENTS);
     createEReference(xDiagramEClass, XDIAGRAM__STYLES);
     createEReference(xDiagramEClass, XDIAGRAM__COLORS);
     createEReference(xDiagramEClass, XDIAGRAM__FIGURES);
+
+    metaModelEClass = createEClass(META_MODEL);
+    createEAttribute(metaModelEClass, META_MODEL__PLUGIN);
+    createEAttribute(metaModelEClass, META_MODEL__ECORE_PATH);
 
     importStatementEClass = createEClass(IMPORT_STATEMENT);
     createEAttribute(importStatementEClass, IMPORT_STATEMENT__IMPORTED_NAMESPACE);
@@ -2373,12 +2426,17 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     initEAttribute(getXDiagram_Desc(), ecorePackage.getEString(), "desc", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getXDiagram_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Imports(), this.getImportStatement(), null, "imports", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getXDiagram_Metamodel(), this.getMetaModel(), null, "metamodel", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Diagram(), this.getDiagram(), null, "diagram", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Groups(), this.getToolGroup(), null, "groups", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Elements(), this.getDiagramElement(), null, "elements", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Styles(), this.getStyle(), null, "styles", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Colors(), this.getCustomColor(), null, "colors", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Figures(), this.getCustomFigure(), null, "figures", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(metaModelEClass, MetaModel.class, "MetaModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMetaModel_Plugin(), ecorePackage.getEString(), "plugin", null, 0, 1, MetaModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMetaModel_EcorePath(), ecorePackage.getEString(), "ecorePath", null, 0, 1, MetaModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(importStatementEClass, ImportStatement.class, "ImportStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getImportStatement_ImportedNamespace(), ecorePackage.getEString(), "importedNamespace", null, 0, 1, ImportStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

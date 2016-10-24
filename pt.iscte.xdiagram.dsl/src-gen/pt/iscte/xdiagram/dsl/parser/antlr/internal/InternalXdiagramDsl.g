@@ -117,32 +117,34 @@ ruleXDiagram returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3='metamodel'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getXDiagramAccess().getMetamodelKeyword_3());
-		}
 		(
+			otherlv_3='metamodel'
+			{
+				newLeafNode(otherlv_3, grammarAccess.getXDiagramAccess().getMetamodelKeyword_3_0());
+			}
 			(
-				lv_importURI_4_0=RULE_STRING
-				{
-					newLeafNode(lv_importURI_4_0, grammarAccess.getXDiagramAccess().getImportURISTRINGTerminalRuleCall_4_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getXDiagramRule());
+				(
+					lv_importURI_4_0=RULE_STRING
+					{
+						newLeafNode(lv_importURI_4_0, grammarAccess.getXDiagramAccess().getImportURISTRINGTerminalRuleCall_3_1_0());
 					}
-					setWithLastConsumed(
-						$current,
-						"importURI",
-						lv_importURI_4_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
-				}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getXDiagramRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"importURI",
+							lv_importURI_4_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
 			)
-		)
+		)?
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getXDiagramAccess().getImportsImportStatementParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getXDiagramAccess().getImportsImportStatementParserRuleCall_4_0());
 				}
 				lv_imports_5_0=ruleImportStatement
 				{
@@ -161,9 +163,28 @@ ruleXDiagram returns [EObject current=null]
 		(
 			(
 				{
+					newCompositeNode(grammarAccess.getXDiagramAccess().getMetamodelMetaModelParserRuleCall_5_0());
+				}
+				lv_metamodel_6_0=ruleMetaModel
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getXDiagramRule());
+					}
+					set(
+						$current,
+						"metamodel",
+						lv_metamodel_6_0,
+						"pt.iscte.xdiagram.dsl.XdiagramDsl.MetaModel");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
 					newCompositeNode(grammarAccess.getXDiagramAccess().getDiagramDiagramParserRuleCall_6_0());
 				}
-				lv_diagram_6_0=ruleDiagram
+				lv_diagram_7_0=ruleDiagram
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getXDiagramRule());
@@ -171,7 +192,7 @@ ruleXDiagram returns [EObject current=null]
 					set(
 						$current,
 						"diagram",
-						lv_diagram_6_0,
+						lv_diagram_7_0,
 						"pt.iscte.xdiagram.dsl.XdiagramDsl.Diagram");
 					afterParserOrEnumRuleCall();
 				}
@@ -182,7 +203,7 @@ ruleXDiagram returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getXDiagramAccess().getGroupsToolGroupParserRuleCall_7_0());
 				}
-				lv_groups_7_0=ruleToolGroup
+				lv_groups_8_0=ruleToolGroup
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getXDiagramRule());
@@ -190,7 +211,7 @@ ruleXDiagram returns [EObject current=null]
 					add(
 						$current,
 						"groups",
-						lv_groups_7_0,
+						lv_groups_8_0,
 						"pt.iscte.xdiagram.dsl.XdiagramDsl.ToolGroup");
 					afterParserOrEnumRuleCall();
 				}
@@ -202,7 +223,7 @@ ruleXDiagram returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getXDiagramAccess().getElementsDiagramElementParserRuleCall_8_0_0());
 					}
-					lv_elements_8_0=ruleDiagramElement
+					lv_elements_9_0=ruleDiagramElement
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getXDiagramRule());
@@ -210,7 +231,7 @@ ruleXDiagram returns [EObject current=null]
 						add(
 							$current,
 							"elements",
-							lv_elements_8_0,
+							lv_elements_9_0,
 							"pt.iscte.xdiagram.dsl.XdiagramDsl.DiagramElement");
 						afterParserOrEnumRuleCall();
 					}
@@ -222,7 +243,7 @@ ruleXDiagram returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getXDiagramAccess().getStylesStyleParserRuleCall_8_1_0());
 					}
-					lv_styles_9_0=ruleStyle
+					lv_styles_10_0=ruleStyle
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getXDiagramRule());
@@ -230,7 +251,7 @@ ruleXDiagram returns [EObject current=null]
 						add(
 							$current,
 							"styles",
-							lv_styles_9_0,
+							lv_styles_10_0,
 							"pt.iscte.xdiagram.dsl.XdiagramDsl.Style");
 						afterParserOrEnumRuleCall();
 					}
@@ -242,7 +263,7 @@ ruleXDiagram returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getXDiagramAccess().getColorsCustomColorParserRuleCall_8_2_0());
 					}
-					lv_colors_10_0=ruleCustomColor
+					lv_colors_11_0=ruleCustomColor
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getXDiagramRule());
@@ -250,7 +271,7 @@ ruleXDiagram returns [EObject current=null]
 						add(
 							$current,
 							"colors",
-							lv_colors_10_0,
+							lv_colors_11_0,
 							"pt.iscte.xdiagram.dsl.XdiagramDsl.CustomColor");
 						afterParserOrEnumRuleCall();
 					}
@@ -262,7 +283,7 @@ ruleXDiagram returns [EObject current=null]
 					{
 						newCompositeNode(grammarAccess.getXDiagramAccess().getFiguresCustomFigureParserRuleCall_8_3_0());
 					}
-					lv_figures_11_0=ruleCustomFigure
+					lv_figures_12_0=ruleCustomFigure
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getXDiagramRule());
@@ -270,13 +291,88 @@ ruleXDiagram returns [EObject current=null]
 						add(
 							$current,
 							"figures",
-							lv_figures_11_0,
+							lv_figures_12_0,
 							"pt.iscte.xdiagram.dsl.XdiagramDsl.CustomFigure");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)*
+	)
+;
+
+// Entry rule entryRuleMetaModel
+entryRuleMetaModel returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMetaModelRule()); }
+	iv_ruleMetaModel=ruleMetaModel
+	{ $current=$iv_ruleMetaModel.current; }
+	EOF;
+
+// Rule MetaModel
+ruleMetaModel returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='meta'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getMetaModelAccess().getMetaKeyword_0());
+		}
+		otherlv_1='plugin'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getMetaModelAccess().getPluginKeyword_1());
+		}
+		otherlv_2=':'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getMetaModelAccess().getColonKeyword_2());
+		}
+		(
+			(
+				lv_plugin_3_0=RULE_STRING
+				{
+					newLeafNode(lv_plugin_3_0, grammarAccess.getMetaModelAccess().getPluginSTRINGTerminalRuleCall_3_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMetaModelRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"plugin",
+						lv_plugin_3_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_4='ecore-file'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getMetaModelAccess().getEcoreFileKeyword_4());
+		}
+		otherlv_5=':'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getMetaModelAccess().getColonKeyword_5());
+		}
+		(
+			(
+				lv_ecorePath_6_0=RULE_STRING
+				{
+					newLeafNode(lv_ecorePath_6_0, grammarAccess.getMetaModelAccess().getEcorePathSTRINGTerminalRuleCall_6_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMetaModelRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"ecorePath",
+						lv_ecorePath_6_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
 	)
 ;
 

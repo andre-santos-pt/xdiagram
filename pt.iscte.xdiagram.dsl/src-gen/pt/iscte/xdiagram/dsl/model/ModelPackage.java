@@ -105,13 +105,22 @@ public interface ModelPackage extends EPackage
   int XDIAGRAM__IMPORTS = 3;
 
   /**
+   * The feature id for the '<em><b>Metamodel</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDIAGRAM__METAMODEL = 4;
+
+  /**
    * The feature id for the '<em><b>Diagram</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int XDIAGRAM__DIAGRAM = 4;
+  int XDIAGRAM__DIAGRAM = 5;
 
   /**
    * The feature id for the '<em><b>Groups</b></em>' containment reference list.
@@ -120,7 +129,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int XDIAGRAM__GROUPS = 5;
+  int XDIAGRAM__GROUPS = 6;
 
   /**
    * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -129,7 +138,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int XDIAGRAM__ELEMENTS = 6;
+  int XDIAGRAM__ELEMENTS = 7;
 
   /**
    * The feature id for the '<em><b>Styles</b></em>' containment reference list.
@@ -138,7 +147,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int XDIAGRAM__STYLES = 7;
+  int XDIAGRAM__STYLES = 8;
 
   /**
    * The feature id for the '<em><b>Colors</b></em>' containment reference list.
@@ -147,7 +156,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int XDIAGRAM__COLORS = 8;
+  int XDIAGRAM__COLORS = 9;
 
   /**
    * The feature id for the '<em><b>Figures</b></em>' containment reference list.
@@ -156,7 +165,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int XDIAGRAM__FIGURES = 9;
+  int XDIAGRAM__FIGURES = 10;
 
   /**
    * The number of structural features of the '<em>XDiagram</em>' class.
@@ -165,7 +174,44 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int XDIAGRAM_FEATURE_COUNT = 10;
+  int XDIAGRAM_FEATURE_COUNT = 11;
+
+  /**
+   * The meta object id for the '{@link pt.iscte.xdiagram.dsl.model.impl.MetaModelImpl <em>Meta Model</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see pt.iscte.xdiagram.dsl.model.impl.MetaModelImpl
+   * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getMetaModel()
+   * @generated
+   */
+  int META_MODEL = 1;
+
+  /**
+   * The feature id for the '<em><b>Plugin</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int META_MODEL__PLUGIN = 0;
+
+  /**
+   * The feature id for the '<em><b>Ecore Path</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int META_MODEL__ECORE_PATH = 1;
+
+  /**
+   * The number of structural features of the '<em>Meta Model</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int META_MODEL_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link pt.iscte.xdiagram.dsl.model.impl.ImportStatementImpl <em>Import Statement</em>}' class.
@@ -175,7 +221,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getImportStatement()
    * @generated
    */
-  int IMPORT_STATEMENT = 1;
+  int IMPORT_STATEMENT = 2;
 
   /**
    * The feature id for the '<em><b>Imported Namespace</b></em>' attribute.
@@ -203,7 +249,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getDiagram()
    * @generated
    */
-  int DIAGRAM = 2;
+  int DIAGRAM = 3;
 
   /**
    * The feature id for the '<em><b>Model Class</b></em>' reference.
@@ -240,7 +286,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getToolGroup()
    * @generated
    */
-  int TOOL_GROUP = 3;
+  int TOOL_GROUP = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -277,7 +323,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getDiagramElement()
    * @generated
    */
-  int DIAGRAM_ELEMENT = 4;
+  int DIAGRAM_ELEMENT = 5;
 
   /**
    * The feature id for the '<em><b>Tool</b></em>' attribute.
@@ -359,7 +405,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getFeatureContainer()
    * @generated
    */
-  int FEATURE_CONTAINER = 7;
+  int FEATURE_CONTAINER = 8;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -405,7 +451,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getStyle()
    * @generated
    */
-  int STYLE = 5;
+  int STYLE = 6;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -460,7 +506,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getFeature()
    * @generated
    */
-  int FEATURE = 6;
+  int FEATURE = 7;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -488,7 +534,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getFeatureConditional()
    * @generated
    */
-  int FEATURE_CONDITIONAL = 8;
+  int FEATURE_CONDITIONAL = 9;
 
   /**
    * The feature id for the '<em><b>Model Attribute</b></em>' reference.
@@ -534,7 +580,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getNode()
    * @generated
    */
-  int NODE = 9;
+  int NODE = 10;
 
   /**
    * The feature id for the '<em><b>Tool</b></em>' attribute.
@@ -625,7 +671,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getLink()
    * @generated
    */
-  int LINK = 10;
+  int LINK = 11;
 
   /**
    * The feature id for the '<em><b>Tool</b></em>' attribute.
@@ -788,7 +834,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getDecorator()
    * @generated
    */
-  int DECORATOR = 11;
+  int DECORATOR = 12;
 
   /**
    * The feature id for the '<em><b>Position</b></em>' attribute.
@@ -825,7 +871,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getAnchor()
    * @generated
    */
-  int ANCHOR = 12;
+  int ANCHOR = 13;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -880,7 +926,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getCustomColor()
    * @generated
    */
-  int CUSTOM_COLOR = 13;
+  int CUSTOM_COLOR = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -935,7 +981,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getColor()
    * @generated
    */
-  int COLOR = 14;
+  int COLOR = 15;
 
   /**
    * The feature id for the '<em><b>Default</b></em>' attribute.
@@ -972,7 +1018,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getConnectableElement()
    * @generated
    */
-  int CONNECTABLE_ELEMENT = 15;
+  int CONNECTABLE_ELEMENT = 16;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1027,7 +1073,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getCustomFigure()
    * @generated
    */
-  int CUSTOM_FIGURE = 16;
+  int CUSTOM_FIGURE = 17;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1064,7 +1110,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getCustom()
    * @generated
    */
-  int CUSTOM = 17;
+  int CUSTOM = 18;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1128,7 +1174,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getRectangle()
    * @generated
    */
-  int RECTANGLE = 18;
+  int RECTANGLE = 19;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1201,7 +1247,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getRhombus()
    * @generated
    */
-  int RHOMBUS = 19;
+  int RHOMBUS = 20;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1256,7 +1302,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getEllipse()
    * @generated
    */
-  int ELLIPSE = 20;
+  int ELLIPSE = 21;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1329,7 +1375,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getPolyline()
    * @generated
    */
-  int POLYLINE = 21;
+  int POLYLINE = 22;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1402,7 +1448,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getTriangle()
    * @generated
    */
-  int TRIANGLE = 22;
+  int TRIANGLE = 23;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1457,7 +1503,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getLine()
    * @generated
    */
-  int LINE = 23;
+  int LINE = 24;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1521,7 +1567,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getArrow()
    * @generated
    */
-  int ARROW = 24;
+  int ARROW = 25;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1567,7 +1613,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getContains()
    * @generated
    */
-  int CONTAINS = 25;
+  int CONTAINS = 26;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -1604,7 +1650,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getValue()
    * @generated
    */
-  int VALUE = 26;
+  int VALUE = 27;
 
   /**
    * The number of structural features of the '<em>Value</em>' class.
@@ -1623,7 +1669,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getIntValue()
    * @generated
    */
-  int INT_VALUE = 27;
+  int INT_VALUE = 28;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1651,7 +1697,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getDoubleValue()
    * @generated
    */
-  int DOUBLE_VALUE = 28;
+  int DOUBLE_VALUE = 29;
 
   /**
    * The feature id for the '<em><b>Value Int</b></em>' attribute.
@@ -1688,7 +1734,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getStringValue()
    * @generated
    */
-  int STRING_VALUE = 29;
+  int STRING_VALUE = 30;
 
   /**
    * The feature id for the '<em><b>Null</b></em>' attribute.
@@ -1725,7 +1771,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getBooleanValue()
    * @generated
    */
-  int BOOLEAN_VALUE = 30;
+  int BOOLEAN_VALUE = 31;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1753,7 +1799,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getEnumValue()
    * @generated
    */
-  int ENUM_VALUE = 31;
+  int ENUM_VALUE = 32;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1781,7 +1827,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getLabel()
    * @generated
    */
-  int LABEL = 32;
+  int LABEL = 33;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1836,7 +1882,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getImage()
    * @generated
    */
-  int IMAGE = 33;
+  int IMAGE = 34;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1900,7 +1946,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getInvisible()
    * @generated
    */
-  int INVISIBLE = 34;
+  int INVISIBLE = 35;
 
   /**
    * The feature id for the '<em><b>Styled</b></em>' attribute.
@@ -1955,7 +2001,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getColorFeature()
    * @generated
    */
-  int COLOR_FEATURE = 35;
+  int COLOR_FEATURE = 36;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2001,7 +2047,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getTransparency()
    * @generated
    */
-  int TRANSPARENCY = 36;
+  int TRANSPARENCY = 37;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2038,7 +2084,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getSize()
    * @generated
    */
-  int SIZE = 37;
+  int SIZE = 38;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2111,7 +2157,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getPoint()
    * @generated
    */
-  int POINT = 38;
+  int POINT = 39;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2157,7 +2203,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getPosition()
    * @generated
    */
-  int POSITION = 39;
+  int POSITION = 40;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2221,7 +2267,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getCorner()
    * @generated
    */
-  int CORNER = 40;
+  int CORNER = 41;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2258,7 +2304,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getLayout()
    * @generated
    */
-  int LAYOUT = 41;
+  int LAYOUT = 42;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2313,7 +2359,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getVisible()
    * @generated
    */
-  int VISIBLE = 42;
+  int VISIBLE = 43;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2341,7 +2387,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getTextValue()
    * @generated
    */
-  int TEXT_VALUE = 43;
+  int TEXT_VALUE = 44;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2378,7 +2424,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getTextPart()
    * @generated
    */
-  int TEXT_PART = 44;
+  int TEXT_PART = 45;
 
   /**
    * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -2424,7 +2470,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getFontProperties()
    * @generated
    */
-  int FONT_PROPERTIES = 45;
+  int FONT_PROPERTIES = 46;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2488,7 +2534,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getTextAlign()
    * @generated
    */
-  int TEXT_ALIGN = 46;
+  int TEXT_ALIGN = 47;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2525,7 +2571,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getLineStyle()
    * @generated
    */
-  int LINE_STYLE = 47;
+  int LINE_STYLE = 48;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2571,7 +2617,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getLineWidth()
    * @generated
    */
-  int LINE_WIDTH = 48;
+  int LINE_WIDTH = 49;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2608,7 +2654,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getAnchorDirection()
    * @generated
    */
-  int ANCHOR_DIRECTION = 49;
+  int ANCHOR_DIRECTION = 50;
 
   /**
    * The meta object id for the '{@link pt.iscte.xdiagram.dsl.model.DefaultColor <em>Default Color</em>}' enum.
@@ -2618,7 +2664,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getDefaultColor()
    * @generated
    */
-  int DEFAULT_COLOR = 50;
+  int DEFAULT_COLOR = 51;
 
   /**
    * The meta object id for the '{@link pt.iscte.xdiagram.dsl.model.Operator <em>Operator</em>}' enum.
@@ -2628,7 +2674,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getOperator()
    * @generated
    */
-  int OPERATOR = 51;
+  int OPERATOR = 52;
 
   /**
    * The meta object id for the '{@link pt.iscte.xdiagram.dsl.model.BooleanLiteral <em>Boolean Literal</em>}' enum.
@@ -2638,7 +2684,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getBooleanLiteral()
    * @generated
    */
-  int BOOLEAN_LITERAL = 52;
+  int BOOLEAN_LITERAL = 53;
 
   /**
    * The meta object id for the '{@link pt.iscte.xdiagram.dsl.model.TextAlignValue <em>Text Align Value</em>}' enum.
@@ -2648,7 +2694,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getTextAlignValue()
    * @generated
    */
-  int TEXT_ALIGN_VALUE = 53;
+  int TEXT_ALIGN_VALUE = 54;
 
   /**
    * The meta object id for the '{@link pt.iscte.xdiagram.dsl.model.LineType <em>Line Type</em>}' enum.
@@ -2658,7 +2704,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getLineType()
    * @generated
    */
-  int LINE_TYPE = 54;
+  int LINE_TYPE = 55;
 
 
   /**
@@ -2714,6 +2760,17 @@ public interface ModelPackage extends EPackage
    * @generated
    */
   EReference getXDiagram_Imports();
+
+  /**
+   * Returns the meta object for the containment reference '{@link pt.iscte.xdiagram.dsl.model.XDiagram#getMetamodel <em>Metamodel</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Metamodel</em>'.
+   * @see pt.iscte.xdiagram.dsl.model.XDiagram#getMetamodel()
+   * @see #getXDiagram()
+   * @generated
+   */
+  EReference getXDiagram_Metamodel();
 
   /**
    * Returns the meta object for the containment reference '{@link pt.iscte.xdiagram.dsl.model.XDiagram#getDiagram <em>Diagram</em>}'.
@@ -2780,6 +2837,38 @@ public interface ModelPackage extends EPackage
    * @generated
    */
   EReference getXDiagram_Figures();
+
+  /**
+   * Returns the meta object for class '{@link pt.iscte.xdiagram.dsl.model.MetaModel <em>Meta Model</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Meta Model</em>'.
+   * @see pt.iscte.xdiagram.dsl.model.MetaModel
+   * @generated
+   */
+  EClass getMetaModel();
+
+  /**
+   * Returns the meta object for the attribute '{@link pt.iscte.xdiagram.dsl.model.MetaModel#getPlugin <em>Plugin</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Plugin</em>'.
+   * @see pt.iscte.xdiagram.dsl.model.MetaModel#getPlugin()
+   * @see #getMetaModel()
+   * @generated
+   */
+  EAttribute getMetaModel_Plugin();
+
+  /**
+   * Returns the meta object for the attribute '{@link pt.iscte.xdiagram.dsl.model.MetaModel#getEcorePath <em>Ecore Path</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Ecore Path</em>'.
+   * @see pt.iscte.xdiagram.dsl.model.MetaModel#getEcorePath()
+   * @see #getMetaModel()
+   * @generated
+   */
+  EAttribute getMetaModel_EcorePath();
 
   /**
    * Returns the meta object for class '{@link pt.iscte.xdiagram.dsl.model.ImportStatement <em>Import Statement</em>}'.
@@ -4366,6 +4455,14 @@ public interface ModelPackage extends EPackage
     EReference XDIAGRAM__IMPORTS = eINSTANCE.getXDiagram_Imports();
 
     /**
+     * The meta object literal for the '<em><b>Metamodel</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference XDIAGRAM__METAMODEL = eINSTANCE.getXDiagram_Metamodel();
+
+    /**
      * The meta object literal for the '<em><b>Diagram</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4412,6 +4509,32 @@ public interface ModelPackage extends EPackage
      * @generated
      */
     EReference XDIAGRAM__FIGURES = eINSTANCE.getXDiagram_Figures();
+
+    /**
+     * The meta object literal for the '{@link pt.iscte.xdiagram.dsl.model.impl.MetaModelImpl <em>Meta Model</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see pt.iscte.xdiagram.dsl.model.impl.MetaModelImpl
+     * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getMetaModel()
+     * @generated
+     */
+    EClass META_MODEL = eINSTANCE.getMetaModel();
+
+    /**
+     * The meta object literal for the '<em><b>Plugin</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute META_MODEL__PLUGIN = eINSTANCE.getMetaModel_Plugin();
+
+    /**
+     * The meta object literal for the '<em><b>Ecore Path</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute META_MODEL__ECORE_PATH = eINSTANCE.getMetaModel_EcorePath();
 
     /**
      * The meta object literal for the '{@link pt.iscte.xdiagram.dsl.model.impl.ImportStatementImpl <em>Import Statement</em>}' class.

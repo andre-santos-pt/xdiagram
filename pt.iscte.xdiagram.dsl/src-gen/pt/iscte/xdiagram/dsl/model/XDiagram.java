@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getDesc <em>Desc</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getImportURI <em>Import URI</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getImports <em>Imports</em>}</li>
+ *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getMetamodel <em>Metamodel</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getDiagram <em>Diagram</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getGroups <em>Groups</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getElements <em>Elements</em>}</li>
@@ -127,6 +128,32 @@ public interface XDiagram extends EObject
    * @generated
    */
   EList<ImportStatement> getImports();
+
+  /**
+   * Returns the value of the '<em><b>Metamodel</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Metamodel</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Metamodel</em>' containment reference.
+   * @see #setMetamodel(MetaModel)
+   * @see pt.iscte.xdiagram.dsl.model.ModelPackage#getXDiagram_Metamodel()
+   * @model containment="true"
+   * @generated
+   */
+  MetaModel getMetamodel();
+
+  /**
+   * Sets the value of the '{@link pt.iscte.xdiagram.dsl.model.XDiagram#getMetamodel <em>Metamodel</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Metamodel</em>' containment reference.
+   * @see #getMetamodel()
+   * @generated
+   */
+  void setMetamodel(MetaModel value);
 
   /**
    * Returns the value of the '<em><b>Diagram</b></em>' containment reference.

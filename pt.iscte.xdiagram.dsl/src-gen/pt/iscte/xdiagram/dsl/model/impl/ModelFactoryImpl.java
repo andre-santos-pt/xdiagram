@@ -67,6 +67,7 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
     switch (eClass.getClassifierID())
     {
       case ModelPackage.XDIAGRAM: return createXDiagram();
+      case ModelPackage.META_MODEL: return createMetaModel();
       case ModelPackage.IMPORT_STATEMENT: return createImportStatement();
       case ModelPackage.DIAGRAM: return createDiagram();
       case ModelPackage.TOOL_GROUP: return createToolGroup();
@@ -183,6 +184,17 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
   {
     XDiagramImpl xDiagram = new XDiagramImpl();
     return xDiagram;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MetaModel createMetaModel()
+  {
+    MetaModelImpl metaModel = new MetaModelImpl();
+    return metaModel;
   }
 
   /**

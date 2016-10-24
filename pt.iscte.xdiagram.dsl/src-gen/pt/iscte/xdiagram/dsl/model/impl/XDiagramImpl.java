@@ -24,6 +24,7 @@ import pt.iscte.xdiagram.dsl.model.CustomFigure;
 import pt.iscte.xdiagram.dsl.model.Diagram;
 import pt.iscte.xdiagram.dsl.model.DiagramElement;
 import pt.iscte.xdiagram.dsl.model.ImportStatement;
+import pt.iscte.xdiagram.dsl.model.MetaModel;
 import pt.iscte.xdiagram.dsl.model.ModelPackage;
 import pt.iscte.xdiagram.dsl.model.Style;
 import pt.iscte.xdiagram.dsl.model.ToolGroup;
@@ -41,6 +42,7 @@ import pt.iscte.xdiagram.dsl.model.XDiagram;
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getDesc <em>Desc</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getImportURI <em>Import URI</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getImports <em>Imports</em>}</li>
+ *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getMetamodel <em>Metamodel</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getDiagram <em>Diagram</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getGroups <em>Groups</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getElements <em>Elements</em>}</li>
@@ -122,6 +124,16 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * @ordered
    */
   protected EList<ImportStatement> imports;
+
+  /**
+   * The cached value of the '{@link #getMetamodel() <em>Metamodel</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMetamodel()
+   * @generated
+   * @ordered
+   */
+  protected MetaModel metamodel;
 
   /**
    * The cached value of the '{@link #getDiagram() <em>Diagram</em>}' containment reference.
@@ -292,6 +304,54 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * <!-- end-user-doc -->
    * @generated
    */
+  public MetaModel getMetamodel()
+  {
+    return metamodel;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetMetamodel(MetaModel newMetamodel, NotificationChain msgs)
+  {
+    MetaModel oldMetamodel = metamodel;
+    metamodel = newMetamodel;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelPackage.XDIAGRAM__METAMODEL, oldMetamodel, newMetamodel);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setMetamodel(MetaModel newMetamodel)
+  {
+    if (newMetamodel != metamodel)
+    {
+      NotificationChain msgs = null;
+      if (metamodel != null)
+        msgs = ((InternalEObject)metamodel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelPackage.XDIAGRAM__METAMODEL, null, msgs);
+      if (newMetamodel != null)
+        msgs = ((InternalEObject)newMetamodel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelPackage.XDIAGRAM__METAMODEL, null, msgs);
+      msgs = basicSetMetamodel(newMetamodel, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.XDIAGRAM__METAMODEL, newMetamodel, newMetamodel));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Diagram getDiagram()
   {
     return diagram;
@@ -417,6 +477,8 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
     {
       case ModelPackage.XDIAGRAM__IMPORTS:
         return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
+      case ModelPackage.XDIAGRAM__METAMODEL:
+        return basicSetMetamodel(null, msgs);
       case ModelPackage.XDIAGRAM__DIAGRAM:
         return basicSetDiagram(null, msgs);
       case ModelPackage.XDIAGRAM__GROUPS:
@@ -451,6 +513,8 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         return getImportURI();
       case ModelPackage.XDIAGRAM__IMPORTS:
         return getImports();
+      case ModelPackage.XDIAGRAM__METAMODEL:
+        return getMetamodel();
       case ModelPackage.XDIAGRAM__DIAGRAM:
         return getDiagram();
       case ModelPackage.XDIAGRAM__GROUPS:
@@ -490,6 +554,9 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
       case ModelPackage.XDIAGRAM__IMPORTS:
         getImports().clear();
         getImports().addAll((Collection<? extends ImportStatement>)newValue);
+        return;
+      case ModelPackage.XDIAGRAM__METAMODEL:
+        setMetamodel((MetaModel)newValue);
         return;
       case ModelPackage.XDIAGRAM__DIAGRAM:
         setDiagram((Diagram)newValue);
@@ -540,6 +607,9 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
       case ModelPackage.XDIAGRAM__IMPORTS:
         getImports().clear();
         return;
+      case ModelPackage.XDIAGRAM__METAMODEL:
+        setMetamodel((MetaModel)null);
+        return;
       case ModelPackage.XDIAGRAM__DIAGRAM:
         setDiagram((Diagram)null);
         return;
@@ -580,6 +650,8 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         return IMPORT_URI_EDEFAULT == null ? importURI != null : !IMPORT_URI_EDEFAULT.equals(importURI);
       case ModelPackage.XDIAGRAM__IMPORTS:
         return imports != null && !imports.isEmpty();
+      case ModelPackage.XDIAGRAM__METAMODEL:
+        return metamodel != null;
       case ModelPackage.XDIAGRAM__DIAGRAM:
         return diagram != null;
       case ModelPackage.XDIAGRAM__GROUPS:

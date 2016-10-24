@@ -33,6 +33,15 @@ public interface ModelFactory extends EFactory
   XDiagram createXDiagram();
 
   /**
+   * Returns a new object of class '<em>Meta Model</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Meta Model</em>'.
+   * @generated
+   */
+  MetaModel createMetaModel();
+
+  /**
    * Returns a new object of class '<em>Import Statement</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

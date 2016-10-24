@@ -35,11 +35,14 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cIdIDTerminalRuleCall_1_0 = (RuleCall)cIdAssignment_1.eContents().get(0);
 		private final Assignment cDescAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cDescSTRINGTerminalRuleCall_2_0 = (RuleCall)cDescAssignment_2.eContents().get(0);
-		private final Keyword cMetamodelKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cImportURIAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cImportURISTRINGTerminalRuleCall_4_0 = (RuleCall)cImportURIAssignment_4.eContents().get(0);
-		private final Assignment cImportsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cImportsImportStatementParserRuleCall_5_0 = (RuleCall)cImportsAssignment_5.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cMetamodelKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cImportURIAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cImportURISTRINGTerminalRuleCall_3_1_0 = (RuleCall)cImportURIAssignment_3_1.eContents().get(0);
+		private final Assignment cImportsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cImportsImportStatementParserRuleCall_4_0 = (RuleCall)cImportsAssignment_4.eContents().get(0);
+		private final Assignment cMetamodelAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cMetamodelMetaModelParserRuleCall_5_0 = (RuleCall)cMetamodelAssignment_5.eContents().get(0);
 		private final Assignment cDiagramAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cDiagramDiagramParserRuleCall_6_0 = (RuleCall)cDiagramAssignment_6.eContents().get(0);
 		private final Assignment cGroupsAssignment_7 = (Assignment)cGroup.eContents().get(7);
@@ -55,15 +58,16 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFiguresCustomFigureParserRuleCall_8_3_0 = (RuleCall)cFiguresAssignment_8_3.eContents().get(0);
 		
 		//XDiagram:
-		//	'xdiagram' id=ID desc=STRING
-		//	'metamodel' importURI=STRING
+		//	'xdiagram' id=ID desc=STRING ('metamodel' importURI=STRING)?
 		//	imports+=ImportStatement
+		//	metamodel=MetaModel
 		//	diagram=Diagram
 		//	groups+=ToolGroup* (elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'xdiagram' id=ID desc=STRING 'metamodel' importURI=STRING imports+=ImportStatement diagram=Diagram groups+=ToolGroup*
-		//(elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*
+		//'xdiagram' id=ID desc=STRING ('metamodel' importURI=STRING)? imports+=ImportStatement metamodel=MetaModel
+		//diagram=Diagram groups+=ToolGroup* (elements+=DiagramElement | styles+=Style | colors+=CustomColor |
+		//figures+=CustomFigure)*
 		public Group getGroup() { return cGroup; }
 		
 		//'xdiagram'
@@ -81,20 +85,29 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getDescSTRINGTerminalRuleCall_2_0() { return cDescSTRINGTerminalRuleCall_2_0; }
 		
+		//('metamodel' importURI=STRING)?
+		public Group getGroup_3() { return cGroup_3; }
+		
 		//'metamodel'
-		public Keyword getMetamodelKeyword_3() { return cMetamodelKeyword_3; }
+		public Keyword getMetamodelKeyword_3_0() { return cMetamodelKeyword_3_0; }
 		
 		//importURI=STRING
-		public Assignment getImportURIAssignment_4() { return cImportURIAssignment_4; }
+		public Assignment getImportURIAssignment_3_1() { return cImportURIAssignment_3_1; }
 		
 		//STRING
-		public RuleCall getImportURISTRINGTerminalRuleCall_4_0() { return cImportURISTRINGTerminalRuleCall_4_0; }
+		public RuleCall getImportURISTRINGTerminalRuleCall_3_1_0() { return cImportURISTRINGTerminalRuleCall_3_1_0; }
 		
 		//imports+=ImportStatement
-		public Assignment getImportsAssignment_5() { return cImportsAssignment_5; }
+		public Assignment getImportsAssignment_4() { return cImportsAssignment_4; }
 		
 		//ImportStatement
-		public RuleCall getImportsImportStatementParserRuleCall_5_0() { return cImportsImportStatementParserRuleCall_5_0; }
+		public RuleCall getImportsImportStatementParserRuleCall_4_0() { return cImportsImportStatementParserRuleCall_4_0; }
+		
+		//metamodel=MetaModel
+		public Assignment getMetamodelAssignment_5() { return cMetamodelAssignment_5; }
+		
+		//MetaModel
+		public RuleCall getMetamodelMetaModelParserRuleCall_5_0() { return cMetamodelMetaModelParserRuleCall_5_0; }
 		
 		//diagram=Diagram
 		public Assignment getDiagramAssignment_6() { return cDiagramAssignment_6; }
@@ -134,6 +147,54 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//CustomFigure
 		public RuleCall getFiguresCustomFigureParserRuleCall_8_3_0() { return cFiguresCustomFigureParserRuleCall_8_3_0; }
+	}
+	public class MetaModelElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.MetaModel");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cMetaKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cPluginKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cPluginAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPluginSTRINGTerminalRuleCall_3_0 = (RuleCall)cPluginAssignment_3.eContents().get(0);
+		private final Keyword cEcoreFileKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cColonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cEcorePathAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cEcorePathSTRINGTerminalRuleCall_6_0 = (RuleCall)cEcorePathAssignment_6.eContents().get(0);
+		
+		//// validation
+		//MetaModel:
+		//	'meta' 'plugin' ':' plugin=STRING 'ecore-file' ':' ecorePath=STRING;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'meta' 'plugin' ':' plugin=STRING 'ecore-file' ':' ecorePath=STRING
+		public Group getGroup() { return cGroup; }
+		
+		//'meta'
+		public Keyword getMetaKeyword_0() { return cMetaKeyword_0; }
+		
+		//'plugin'
+		public Keyword getPluginKeyword_1() { return cPluginKeyword_1; }
+		
+		//':'
+		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
+		
+		//plugin=STRING
+		public Assignment getPluginAssignment_3() { return cPluginAssignment_3; }
+		
+		//STRING
+		public RuleCall getPluginSTRINGTerminalRuleCall_3_0() { return cPluginSTRINGTerminalRuleCall_3_0; }
+		
+		//'ecore-file'
+		public Keyword getEcoreFileKeyword_4() { return cEcoreFileKeyword_4; }
+		
+		//':'
+		public Keyword getColonKeyword_5() { return cColonKeyword_5; }
+		
+		//ecorePath=STRING
+		public Assignment getEcorePathAssignment_6() { return cEcorePathAssignment_6; }
+		
+		//STRING
+		public RuleCall getEcorePathSTRINGTerminalRuleCall_6_0() { return cEcorePathSTRINGTerminalRuleCall_6_0; }
 	}
 	public class ImportStatementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.ImportStatement");
@@ -3634,6 +3695,7 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	private final XDiagramElements pXDiagram;
+	private final MetaModelElements pMetaModel;
 	private final ImportStatementElements pImportStatement;
 	private final QualifiedNameElements pQualifiedName;
 	private final QualifiedNameWithWildCardElements pQualifiedNameWithWildCard;
@@ -3715,6 +3777,7 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pXDiagram = new XDiagramElements();
+		this.pMetaModel = new MetaModelElements();
 		this.pImportStatement = new ImportStatementElements();
 		this.pQualifiedName = new QualifiedNameElements();
 		this.pQualifiedNameWithWildCard = new QualifiedNameWithWildCardElements();
@@ -3815,9 +3878,9 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//XDiagram:
-	//	'xdiagram' id=ID desc=STRING
-	//	'metamodel' importURI=STRING
+	//	'xdiagram' id=ID desc=STRING ('metamodel' importURI=STRING)?
 	//	imports+=ImportStatement
+	//	metamodel=MetaModel
 	//	diagram=Diagram
 	//	groups+=ToolGroup* (elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*;
 	public XDiagramElements getXDiagramAccess() {
@@ -3826,6 +3889,17 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getXDiagramRule() {
 		return getXDiagramAccess().getRule();
+	}
+	
+	//// validation
+	//MetaModel:
+	//	'meta' 'plugin' ':' plugin=STRING 'ecore-file' ':' ecorePath=STRING;
+	public MetaModelElements getMetaModelAccess() {
+		return pMetaModel;
+	}
+	
+	public ParserRule getMetaModelRule() {
+		return getMetaModelAccess().getRule();
 	}
 	
 	//// importedNamespace apparently cannot be on the root element

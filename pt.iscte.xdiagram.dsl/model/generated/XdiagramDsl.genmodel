@@ -51,12 +51,17 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//XDiagram/desc"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//XDiagram/importURI"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/metamodel"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/diagram"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/groups"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/elements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/styles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/colors"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/figures"/>
+    </genClasses>
+    <genClasses ecoreClass="XdiagramDsl.ecore#//MetaModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//MetaModel/plugin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//MetaModel/ecorePath"/>
     </genClasses>
     <genClasses ecoreClass="XdiagramDsl.ecore#//ImportStatement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//ImportStatement/importedNamespace"/>

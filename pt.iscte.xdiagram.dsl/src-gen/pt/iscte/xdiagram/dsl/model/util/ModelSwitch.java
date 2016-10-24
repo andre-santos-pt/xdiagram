@@ -80,6 +80,13 @@ public class ModelSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case ModelPackage.META_MODEL:
+      {
+        MetaModel metaModel = (MetaModel)theEObject;
+        T result = caseMetaModel(metaModel);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case ModelPackage.IMPORT_STATEMENT:
       {
         ImportStatement importStatement = (ImportStatement)theEObject;
@@ -477,6 +484,22 @@ public class ModelSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseXDiagram(XDiagram object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Meta Model</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Meta Model</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMetaModel(MetaModel object)
   {
     return null;
   }
