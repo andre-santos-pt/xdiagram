@@ -5,7 +5,6 @@ package pt.iscte.xdiagram.dsl.model.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -13,7 +12,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -22,7 +20,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import pt.iscte.xdiagram.dsl.model.Feature;
 import pt.iscte.xdiagram.dsl.model.FeatureContainer;
 import pt.iscte.xdiagram.dsl.model.ModelPackage;
-import pt.iscte.xdiagram.dsl.model.Style;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,8 +29,6 @@ import pt.iscte.xdiagram.dsl.model.Style;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.FeatureContainerImpl#isStyled <em>Styled</em>}</li>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.FeatureContainerImpl#getStyle <em>Style</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.FeatureContainerImpl#getFeatures <em>Features</em>}</li>
  * </ul>
  *
@@ -41,36 +36,6 @@ import pt.iscte.xdiagram.dsl.model.Style;
  */
 public class FeatureContainerImpl extends MinimalEObjectImpl.Container implements FeatureContainer
 {
-  /**
-   * The default value of the '{@link #isStyled() <em>Styled</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isStyled()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean STYLED_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isStyled() <em>Styled</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isStyled()
-   * @generated
-   * @ordered
-   */
-  protected boolean styled = STYLED_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getStyle() <em>Style</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getStyle()
-   * @generated
-   * @ordered
-   */
-  protected Style style;
-
   /**
    * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -100,72 +65,6 @@ public class FeatureContainerImpl extends MinimalEObjectImpl.Container implement
   protected EClass eStaticClass()
   {
     return ModelPackage.Literals.FEATURE_CONTAINER;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isStyled()
-  {
-    return styled;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setStyled(boolean newStyled)
-  {
-    boolean oldStyled = styled;
-    styled = newStyled;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.FEATURE_CONTAINER__STYLED, oldStyled, styled));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Style getStyle()
-  {
-    if (style != null && style.eIsProxy())
-    {
-      InternalEObject oldStyle = (InternalEObject)style;
-      style = (Style)eResolveProxy(oldStyle);
-      if (style != oldStyle)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.FEATURE_CONTAINER__STYLE, oldStyle, style));
-      }
-    }
-    return style;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Style basicGetStyle()
-  {
-    return style;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setStyle(Style newStyle)
-  {
-    Style oldStyle = style;
-    style = newStyle;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.FEATURE_CONTAINER__STYLE, oldStyle, style));
   }
 
   /**
@@ -208,11 +107,6 @@ public class FeatureContainerImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case ModelPackage.FEATURE_CONTAINER__STYLED:
-        return isStyled();
-      case ModelPackage.FEATURE_CONTAINER__STYLE:
-        if (resolve) return getStyle();
-        return basicGetStyle();
       case ModelPackage.FEATURE_CONTAINER__FEATURES:
         return getFeatures();
     }
@@ -230,12 +124,6 @@ public class FeatureContainerImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case ModelPackage.FEATURE_CONTAINER__STYLED:
-        setStyled((Boolean)newValue);
-        return;
-      case ModelPackage.FEATURE_CONTAINER__STYLE:
-        setStyle((Style)newValue);
-        return;
       case ModelPackage.FEATURE_CONTAINER__FEATURES:
         getFeatures().clear();
         getFeatures().addAll((Collection<? extends Feature>)newValue);
@@ -254,12 +142,6 @@ public class FeatureContainerImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case ModelPackage.FEATURE_CONTAINER__STYLED:
-        setStyled(STYLED_EDEFAULT);
-        return;
-      case ModelPackage.FEATURE_CONTAINER__STYLE:
-        setStyle((Style)null);
-        return;
       case ModelPackage.FEATURE_CONTAINER__FEATURES:
         getFeatures().clear();
         return;
@@ -277,31 +159,10 @@ public class FeatureContainerImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case ModelPackage.FEATURE_CONTAINER__STYLED:
-        return styled != STYLED_EDEFAULT;
-      case ModelPackage.FEATURE_CONTAINER__STYLE:
-        return style != null;
       case ModelPackage.FEATURE_CONTAINER__FEATURES:
         return features != null && !features.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (styled: ");
-    result.append(styled);
-    result.append(')');
-    return result.toString();
   }
 
 } //FeatureContainerImpl

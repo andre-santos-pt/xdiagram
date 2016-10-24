@@ -24,7 +24,6 @@ import pt.iscte.xdiagram.dsl.model.Feature;
 import pt.iscte.xdiagram.dsl.model.FeatureContainer;
 import pt.iscte.xdiagram.dsl.model.Link;
 import pt.iscte.xdiagram.dsl.model.ModelPackage;
-import pt.iscte.xdiagram.dsl.model.Style;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,8 +33,6 @@ import pt.iscte.xdiagram.dsl.model.Style;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.LinkImpl#isStyled <em>Styled</em>}</li>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.LinkImpl#getStyle <em>Style</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.LinkImpl#getFeatures <em>Features</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.LinkImpl#isReference <em>Reference</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.LinkImpl#getModelReference <em>Model Reference</em>}</li>
@@ -49,36 +46,6 @@ import pt.iscte.xdiagram.dsl.model.Style;
  */
 public class LinkImpl extends DiagramElementImpl implements Link
 {
-  /**
-   * The default value of the '{@link #isStyled() <em>Styled</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isStyled()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean STYLED_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isStyled() <em>Styled</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isStyled()
-   * @generated
-   * @ordered
-   */
-  protected boolean styled = STYLED_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getStyle() <em>Style</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getStyle()
-   * @generated
-   * @ordered
-   */
-  protected Style style;
-
   /**
    * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -188,72 +155,6 @@ public class LinkImpl extends DiagramElementImpl implements Link
   protected EClass eStaticClass()
   {
     return ModelPackage.Literals.LINK;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isStyled()
-  {
-    return styled;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setStyled(boolean newStyled)
-  {
-    boolean oldStyled = styled;
-    styled = newStyled;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.LINK__STYLED, oldStyled, styled));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Style getStyle()
-  {
-    if (style != null && style.eIsProxy())
-    {
-      InternalEObject oldStyle = (InternalEObject)style;
-      style = (Style)eResolveProxy(oldStyle);
-      if (style != oldStyle)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.LINK__STYLE, oldStyle, style));
-      }
-    }
-    return style;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Style basicGetStyle()
-  {
-    return style;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setStyle(Style newStyle)
-  {
-    Style oldStyle = style;
-    style = newStyle;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.LINK__STYLE, oldStyle, style));
   }
 
   /**
@@ -487,11 +388,6 @@ public class LinkImpl extends DiagramElementImpl implements Link
   {
     switch (featureID)
     {
-      case ModelPackage.LINK__STYLED:
-        return isStyled();
-      case ModelPackage.LINK__STYLE:
-        if (resolve) return getStyle();
-        return basicGetStyle();
       case ModelPackage.LINK__FEATURES:
         return getFeatures();
       case ModelPackage.LINK__REFERENCE:
@@ -524,12 +420,6 @@ public class LinkImpl extends DiagramElementImpl implements Link
   {
     switch (featureID)
     {
-      case ModelPackage.LINK__STYLED:
-        setStyled((Boolean)newValue);
-        return;
-      case ModelPackage.LINK__STYLE:
-        setStyle((Style)newValue);
-        return;
       case ModelPackage.LINK__FEATURES:
         getFeatures().clear();
         getFeatures().addAll((Collection<? extends Feature>)newValue);
@@ -567,12 +457,6 @@ public class LinkImpl extends DiagramElementImpl implements Link
   {
     switch (featureID)
     {
-      case ModelPackage.LINK__STYLED:
-        setStyled(STYLED_EDEFAULT);
-        return;
-      case ModelPackage.LINK__STYLE:
-        setStyle((Style)null);
-        return;
       case ModelPackage.LINK__FEATURES:
         getFeatures().clear();
         return;
@@ -608,10 +492,6 @@ public class LinkImpl extends DiagramElementImpl implements Link
   {
     switch (featureID)
     {
-      case ModelPackage.LINK__STYLED:
-        return styled != STYLED_EDEFAULT;
-      case ModelPackage.LINK__STYLE:
-        return style != null;
       case ModelPackage.LINK__FEATURES:
         return features != null && !features.isEmpty();
       case ModelPackage.LINK__REFERENCE:
@@ -642,8 +522,6 @@ public class LinkImpl extends DiagramElementImpl implements Link
     {
       switch (derivedFeatureID)
       {
-        case ModelPackage.LINK__STYLED: return ModelPackage.FEATURE_CONTAINER__STYLED;
-        case ModelPackage.LINK__STYLE: return ModelPackage.FEATURE_CONTAINER__STYLE;
         case ModelPackage.LINK__FEATURES: return ModelPackage.FEATURE_CONTAINER__FEATURES;
         default: return -1;
       }
@@ -663,8 +541,6 @@ public class LinkImpl extends DiagramElementImpl implements Link
     {
       switch (baseFeatureID)
       {
-        case ModelPackage.FEATURE_CONTAINER__STYLED: return ModelPackage.LINK__STYLED;
-        case ModelPackage.FEATURE_CONTAINER__STYLE: return ModelPackage.LINK__STYLE;
         case ModelPackage.FEATURE_CONTAINER__FEATURES: return ModelPackage.LINK__FEATURES;
         default: return -1;
       }
@@ -683,9 +559,7 @@ public class LinkImpl extends DiagramElementImpl implements Link
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (styled: ");
-    result.append(styled);
-    result.append(", reference: ");
+    result.append(" (reference: ");
     result.append(reference);
     result.append(", complex: ");
     result.append(complex);

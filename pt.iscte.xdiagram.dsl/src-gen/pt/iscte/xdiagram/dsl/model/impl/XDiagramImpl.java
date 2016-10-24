@@ -23,11 +23,8 @@ import pt.iscte.xdiagram.dsl.model.CustomColor;
 import pt.iscte.xdiagram.dsl.model.CustomFigure;
 import pt.iscte.xdiagram.dsl.model.Diagram;
 import pt.iscte.xdiagram.dsl.model.DiagramElement;
-import pt.iscte.xdiagram.dsl.model.ImportStatement;
 import pt.iscte.xdiagram.dsl.model.MetaModel;
 import pt.iscte.xdiagram.dsl.model.ModelPackage;
-import pt.iscte.xdiagram.dsl.model.Style;
-import pt.iscte.xdiagram.dsl.model.ToolGroup;
 import pt.iscte.xdiagram.dsl.model.XDiagram;
 
 /**
@@ -38,15 +35,9 @@ import pt.iscte.xdiagram.dsl.model.XDiagram;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getId <em>Id</em>}</li>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getDesc <em>Desc</em>}</li>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getImportURI <em>Import URI</em>}</li>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getImports <em>Imports</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getMetamodel <em>Metamodel</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getDiagram <em>Diagram</em>}</li>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getGroups <em>Groups</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getElements <em>Elements</em>}</li>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getStyles <em>Styles</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getColors <em>Colors</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getFigures <em>Figures</em>}</li>
  * </ul>
@@ -55,76 +46,6 @@ import pt.iscte.xdiagram.dsl.model.XDiagram;
  */
 public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagram
 {
-  /**
-   * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getId()
-   * @generated
-   * @ordered
-   */
-  protected static final String ID_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getId()
-   * @generated
-   * @ordered
-   */
-  protected String id = ID_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getDesc() <em>Desc</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDesc()
-   * @generated
-   * @ordered
-   */
-  protected static final String DESC_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getDesc() <em>Desc</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDesc()
-   * @generated
-   * @ordered
-   */
-  protected String desc = DESC_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getImportURI() <em>Import URI</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getImportURI()
-   * @generated
-   * @ordered
-   */
-  protected static final String IMPORT_URI_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getImportURI() <em>Import URI</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getImportURI()
-   * @generated
-   * @ordered
-   */
-  protected String importURI = IMPORT_URI_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getImports()
-   * @generated
-   * @ordered
-   */
-  protected EList<ImportStatement> imports;
-
   /**
    * The cached value of the '{@link #getMetamodel() <em>Metamodel</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -146,16 +67,6 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
   protected Diagram diagram;
 
   /**
-   * The cached value of the '{@link #getGroups() <em>Groups</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getGroups()
-   * @generated
-   * @ordered
-   */
-  protected EList<ToolGroup> groups;
-
-  /**
    * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -164,16 +75,6 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * @ordered
    */
   protected EList<DiagramElement> elements;
-
-  /**
-   * The cached value of the '{@link #getStyles() <em>Styles</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getStyles()
-   * @generated
-   * @ordered
-   */
-  protected EList<Style> styles;
 
   /**
    * The cached value of the '{@link #getColors() <em>Colors</em>}' containment reference list.
@@ -214,89 +115,6 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
   protected EClass eStaticClass()
   {
     return ModelPackage.Literals.XDIAGRAM;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getId()
-  {
-    return id;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setId(String newId)
-  {
-    String oldId = id;
-    id = newId;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.XDIAGRAM__ID, oldId, id));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getDesc()
-  {
-    return desc;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setDesc(String newDesc)
-  {
-    String oldDesc = desc;
-    desc = newDesc;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.XDIAGRAM__DESC, oldDesc, desc));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getImportURI()
-  {
-    return importURI;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setImportURI(String newImportURI)
-  {
-    String oldImportURI = importURI;
-    importURI = newImportURI;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.XDIAGRAM__IMPORT_URI, oldImportURI, importURI));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<ImportStatement> getImports()
-  {
-    if (imports == null)
-    {
-      imports = new EObjectContainmentEList<ImportStatement>(ImportStatement.class, this, ModelPackage.XDIAGRAM__IMPORTS);
-    }
-    return imports;
   }
 
   /**
@@ -400,20 +218,6 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ToolGroup> getGroups()
-  {
-    if (groups == null)
-    {
-      groups = new EObjectContainmentEList<ToolGroup>(ToolGroup.class, this, ModelPackage.XDIAGRAM__GROUPS);
-    }
-    return groups;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EList<DiagramElement> getElements()
   {
     if (elements == null)
@@ -421,20 +225,6 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
       elements = new EObjectContainmentEList<DiagramElement>(DiagramElement.class, this, ModelPackage.XDIAGRAM__ELEMENTS);
     }
     return elements;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Style> getStyles()
-  {
-    if (styles == null)
-    {
-      styles = new EObjectContainmentEList<Style>(Style.class, this, ModelPackage.XDIAGRAM__STYLES);
-    }
-    return styles;
   }
 
   /**
@@ -475,18 +265,12 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
   {
     switch (featureID)
     {
-      case ModelPackage.XDIAGRAM__IMPORTS:
-        return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
       case ModelPackage.XDIAGRAM__METAMODEL:
         return basicSetMetamodel(null, msgs);
       case ModelPackage.XDIAGRAM__DIAGRAM:
         return basicSetDiagram(null, msgs);
-      case ModelPackage.XDIAGRAM__GROUPS:
-        return ((InternalEList<?>)getGroups()).basicRemove(otherEnd, msgs);
       case ModelPackage.XDIAGRAM__ELEMENTS:
         return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
-      case ModelPackage.XDIAGRAM__STYLES:
-        return ((InternalEList<?>)getStyles()).basicRemove(otherEnd, msgs);
       case ModelPackage.XDIAGRAM__COLORS:
         return ((InternalEList<?>)getColors()).basicRemove(otherEnd, msgs);
       case ModelPackage.XDIAGRAM__FIGURES:
@@ -505,24 +289,12 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
   {
     switch (featureID)
     {
-      case ModelPackage.XDIAGRAM__ID:
-        return getId();
-      case ModelPackage.XDIAGRAM__DESC:
-        return getDesc();
-      case ModelPackage.XDIAGRAM__IMPORT_URI:
-        return getImportURI();
-      case ModelPackage.XDIAGRAM__IMPORTS:
-        return getImports();
       case ModelPackage.XDIAGRAM__METAMODEL:
         return getMetamodel();
       case ModelPackage.XDIAGRAM__DIAGRAM:
         return getDiagram();
-      case ModelPackage.XDIAGRAM__GROUPS:
-        return getGroups();
       case ModelPackage.XDIAGRAM__ELEMENTS:
         return getElements();
-      case ModelPackage.XDIAGRAM__STYLES:
-        return getStyles();
       case ModelPackage.XDIAGRAM__COLORS:
         return getColors();
       case ModelPackage.XDIAGRAM__FIGURES:
@@ -542,36 +314,15 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
   {
     switch (featureID)
     {
-      case ModelPackage.XDIAGRAM__ID:
-        setId((String)newValue);
-        return;
-      case ModelPackage.XDIAGRAM__DESC:
-        setDesc((String)newValue);
-        return;
-      case ModelPackage.XDIAGRAM__IMPORT_URI:
-        setImportURI((String)newValue);
-        return;
-      case ModelPackage.XDIAGRAM__IMPORTS:
-        getImports().clear();
-        getImports().addAll((Collection<? extends ImportStatement>)newValue);
-        return;
       case ModelPackage.XDIAGRAM__METAMODEL:
         setMetamodel((MetaModel)newValue);
         return;
       case ModelPackage.XDIAGRAM__DIAGRAM:
         setDiagram((Diagram)newValue);
         return;
-      case ModelPackage.XDIAGRAM__GROUPS:
-        getGroups().clear();
-        getGroups().addAll((Collection<? extends ToolGroup>)newValue);
-        return;
       case ModelPackage.XDIAGRAM__ELEMENTS:
         getElements().clear();
         getElements().addAll((Collection<? extends DiagramElement>)newValue);
-        return;
-      case ModelPackage.XDIAGRAM__STYLES:
-        getStyles().clear();
-        getStyles().addAll((Collection<? extends Style>)newValue);
         return;
       case ModelPackage.XDIAGRAM__COLORS:
         getColors().clear();
@@ -595,32 +346,14 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
   {
     switch (featureID)
     {
-      case ModelPackage.XDIAGRAM__ID:
-        setId(ID_EDEFAULT);
-        return;
-      case ModelPackage.XDIAGRAM__DESC:
-        setDesc(DESC_EDEFAULT);
-        return;
-      case ModelPackage.XDIAGRAM__IMPORT_URI:
-        setImportURI(IMPORT_URI_EDEFAULT);
-        return;
-      case ModelPackage.XDIAGRAM__IMPORTS:
-        getImports().clear();
-        return;
       case ModelPackage.XDIAGRAM__METAMODEL:
         setMetamodel((MetaModel)null);
         return;
       case ModelPackage.XDIAGRAM__DIAGRAM:
         setDiagram((Diagram)null);
         return;
-      case ModelPackage.XDIAGRAM__GROUPS:
-        getGroups().clear();
-        return;
       case ModelPackage.XDIAGRAM__ELEMENTS:
         getElements().clear();
-        return;
-      case ModelPackage.XDIAGRAM__STYLES:
-        getStyles().clear();
         return;
       case ModelPackage.XDIAGRAM__COLORS:
         getColors().clear();
@@ -642,51 +375,18 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
   {
     switch (featureID)
     {
-      case ModelPackage.XDIAGRAM__ID:
-        return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-      case ModelPackage.XDIAGRAM__DESC:
-        return DESC_EDEFAULT == null ? desc != null : !DESC_EDEFAULT.equals(desc);
-      case ModelPackage.XDIAGRAM__IMPORT_URI:
-        return IMPORT_URI_EDEFAULT == null ? importURI != null : !IMPORT_URI_EDEFAULT.equals(importURI);
-      case ModelPackage.XDIAGRAM__IMPORTS:
-        return imports != null && !imports.isEmpty();
       case ModelPackage.XDIAGRAM__METAMODEL:
         return metamodel != null;
       case ModelPackage.XDIAGRAM__DIAGRAM:
         return diagram != null;
-      case ModelPackage.XDIAGRAM__GROUPS:
-        return groups != null && !groups.isEmpty();
       case ModelPackage.XDIAGRAM__ELEMENTS:
         return elements != null && !elements.isEmpty();
-      case ModelPackage.XDIAGRAM__STYLES:
-        return styles != null && !styles.isEmpty();
       case ModelPackage.XDIAGRAM__COLORS:
         return colors != null && !colors.isEmpty();
       case ModelPackage.XDIAGRAM__FIGURES:
         return figures != null && !figures.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (id: ");
-    result.append(id);
-    result.append(", desc: ");
-    result.append(desc);
-    result.append(", importURI: ");
-    result.append(importURI);
-    result.append(')');
-    return result.toString();
   }
 
 } //XDiagramImpl

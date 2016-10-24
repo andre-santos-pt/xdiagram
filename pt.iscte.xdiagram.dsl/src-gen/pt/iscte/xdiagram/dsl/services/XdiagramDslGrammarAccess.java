@@ -30,153 +30,98 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	public class XDiagramElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.XDiagram");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cXdiagramKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cIdIDTerminalRuleCall_1_0 = (RuleCall)cIdAssignment_1.eContents().get(0);
-		private final Assignment cDescAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cDescSTRINGTerminalRuleCall_2_0 = (RuleCall)cDescAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cMetamodelKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cImportURIAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cImportURISTRINGTerminalRuleCall_3_1_0 = (RuleCall)cImportURIAssignment_3_1.eContents().get(0);
-		private final Assignment cImportsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cImportsImportStatementParserRuleCall_4_0 = (RuleCall)cImportsAssignment_4.eContents().get(0);
-		private final Assignment cMetamodelAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cMetamodelMetaModelParserRuleCall_5_0 = (RuleCall)cMetamodelAssignment_5.eContents().get(0);
-		private final Assignment cDiagramAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cDiagramDiagramParserRuleCall_6_0 = (RuleCall)cDiagramAssignment_6.eContents().get(0);
-		private final Assignment cGroupsAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cGroupsToolGroupParserRuleCall_7_0 = (RuleCall)cGroupsAssignment_7.eContents().get(0);
-		private final Alternatives cAlternatives_8 = (Alternatives)cGroup.eContents().get(8);
-		private final Assignment cElementsAssignment_8_0 = (Assignment)cAlternatives_8.eContents().get(0);
-		private final RuleCall cElementsDiagramElementParserRuleCall_8_0_0 = (RuleCall)cElementsAssignment_8_0.eContents().get(0);
-		private final Assignment cStylesAssignment_8_1 = (Assignment)cAlternatives_8.eContents().get(1);
-		private final RuleCall cStylesStyleParserRuleCall_8_1_0 = (RuleCall)cStylesAssignment_8_1.eContents().get(0);
-		private final Assignment cColorsAssignment_8_2 = (Assignment)cAlternatives_8.eContents().get(2);
-		private final RuleCall cColorsCustomColorParserRuleCall_8_2_0 = (RuleCall)cColorsAssignment_8_2.eContents().get(0);
-		private final Assignment cFiguresAssignment_8_3 = (Assignment)cAlternatives_8.eContents().get(3);
-		private final RuleCall cFiguresCustomFigureParserRuleCall_8_3_0 = (RuleCall)cFiguresAssignment_8_3.eContents().get(0);
+		private final Assignment cMetamodelAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cMetamodelMetaModelParserRuleCall_0_0 = (RuleCall)cMetamodelAssignment_0.eContents().get(0);
+		private final Assignment cDiagramAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cDiagramDiagramParserRuleCall_1_0 = (RuleCall)cDiagramAssignment_1.eContents().get(0);
+		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
+		private final Assignment cElementsAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
+		private final RuleCall cElementsDiagramElementParserRuleCall_2_0_0 = (RuleCall)cElementsAssignment_2_0.eContents().get(0);
+		private final Assignment cColorsAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
+		private final RuleCall cColorsCustomColorParserRuleCall_2_1_0 = (RuleCall)cColorsAssignment_2_1.eContents().get(0);
+		private final Assignment cFiguresAssignment_2_2 = (Assignment)cAlternatives_2.eContents().get(2);
+		private final RuleCall cFiguresCustomFigureParserRuleCall_2_2_0 = (RuleCall)cFiguresAssignment_2_2.eContents().get(0);
 		
 		//XDiagram:
-		//	'xdiagram' id=ID desc=STRING ('metamodel' importURI=STRING)?
-		//	imports+=ImportStatement
 		//	metamodel=MetaModel
-		//	diagram=Diagram
-		//	groups+=ToolGroup* (elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*;
+		//	diagram=Diagram (elements+=DiagramElement | colors+=CustomColor | figures+=CustomFigure)*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'xdiagram' id=ID desc=STRING ('metamodel' importURI=STRING)? imports+=ImportStatement metamodel=MetaModel
-		//diagram=Diagram groups+=ToolGroup* (elements+=DiagramElement | styles+=Style | colors+=CustomColor |
-		//figures+=CustomFigure)*
+		////'xdiagram' id=ID desc=STRING
+		////('metamodel' importURI=STRING)?
+		////imports+=ImportStatement   
+		//metamodel=MetaModel diagram=Diagram (elements+=DiagramElement | colors+=CustomColor | figures+=CustomFigure)*
 		public Group getGroup() { return cGroup; }
 		
-		//'xdiagram'
-		public Keyword getXdiagramKeyword_0() { return cXdiagramKeyword_0; }
-		
-		//id=ID
-		public Assignment getIdAssignment_1() { return cIdAssignment_1; }
-		
-		//ID
-		public RuleCall getIdIDTerminalRuleCall_1_0() { return cIdIDTerminalRuleCall_1_0; }
-		
-		//desc=STRING
-		public Assignment getDescAssignment_2() { return cDescAssignment_2; }
-		
-		//STRING
-		public RuleCall getDescSTRINGTerminalRuleCall_2_0() { return cDescSTRINGTerminalRuleCall_2_0; }
-		
-		//('metamodel' importURI=STRING)?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//'metamodel'
-		public Keyword getMetamodelKeyword_3_0() { return cMetamodelKeyword_3_0; }
-		
-		//importURI=STRING
-		public Assignment getImportURIAssignment_3_1() { return cImportURIAssignment_3_1; }
-		
-		//STRING
-		public RuleCall getImportURISTRINGTerminalRuleCall_3_1_0() { return cImportURISTRINGTerminalRuleCall_3_1_0; }
-		
-		//imports+=ImportStatement
-		public Assignment getImportsAssignment_4() { return cImportsAssignment_4; }
-		
-		//ImportStatement
-		public RuleCall getImportsImportStatementParserRuleCall_4_0() { return cImportsImportStatementParserRuleCall_4_0; }
-		
+		////'xdiagram' id=ID desc=STRING
+		////('metamodel' importURI=STRING)?
+		////imports+=ImportStatement   
 		//metamodel=MetaModel
-		public Assignment getMetamodelAssignment_5() { return cMetamodelAssignment_5; }
+		public Assignment getMetamodelAssignment_0() { return cMetamodelAssignment_0; }
 		
 		//MetaModel
-		public RuleCall getMetamodelMetaModelParserRuleCall_5_0() { return cMetamodelMetaModelParserRuleCall_5_0; }
+		public RuleCall getMetamodelMetaModelParserRuleCall_0_0() { return cMetamodelMetaModelParserRuleCall_0_0; }
 		
 		//diagram=Diagram
-		public Assignment getDiagramAssignment_6() { return cDiagramAssignment_6; }
+		public Assignment getDiagramAssignment_1() { return cDiagramAssignment_1; }
 		
 		//Diagram
-		public RuleCall getDiagramDiagramParserRuleCall_6_0() { return cDiagramDiagramParserRuleCall_6_0; }
+		public RuleCall getDiagramDiagramParserRuleCall_1_0() { return cDiagramDiagramParserRuleCall_1_0; }
 		
-		//groups+=ToolGroup*
-		public Assignment getGroupsAssignment_7() { return cGroupsAssignment_7; }
-		
-		//ToolGroup
-		public RuleCall getGroupsToolGroupParserRuleCall_7_0() { return cGroupsToolGroupParserRuleCall_7_0; }
-		
-		//(elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*
-		public Alternatives getAlternatives_8() { return cAlternatives_8; }
+		//(elements+=DiagramElement | colors+=CustomColor | figures+=CustomFigure)*
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 		
 		//elements+=DiagramElement
-		public Assignment getElementsAssignment_8_0() { return cElementsAssignment_8_0; }
+		public Assignment getElementsAssignment_2_0() { return cElementsAssignment_2_0; }
 		
 		//DiagramElement
-		public RuleCall getElementsDiagramElementParserRuleCall_8_0_0() { return cElementsDiagramElementParserRuleCall_8_0_0; }
+		public RuleCall getElementsDiagramElementParserRuleCall_2_0_0() { return cElementsDiagramElementParserRuleCall_2_0_0; }
 		
-		//styles+=Style
-		public Assignment getStylesAssignment_8_1() { return cStylesAssignment_8_1; }
-		
-		//Style
-		public RuleCall getStylesStyleParserRuleCall_8_1_0() { return cStylesStyleParserRuleCall_8_1_0; }
-		
+		////    	(styles += Style) |
 		//colors+=CustomColor
-		public Assignment getColorsAssignment_8_2() { return cColorsAssignment_8_2; }
+		public Assignment getColorsAssignment_2_1() { return cColorsAssignment_2_1; }
 		
 		//CustomColor
-		public RuleCall getColorsCustomColorParserRuleCall_8_2_0() { return cColorsCustomColorParserRuleCall_8_2_0; }
+		public RuleCall getColorsCustomColorParserRuleCall_2_1_0() { return cColorsCustomColorParserRuleCall_2_1_0; }
 		
 		//figures+=CustomFigure
-		public Assignment getFiguresAssignment_8_3() { return cFiguresAssignment_8_3; }
+		public Assignment getFiguresAssignment_2_2() { return cFiguresAssignment_2_2; }
 		
 		//CustomFigure
-		public RuleCall getFiguresCustomFigureParserRuleCall_8_3_0() { return cFiguresCustomFigureParserRuleCall_8_3_0; }
+		public RuleCall getFiguresCustomFigureParserRuleCall_2_2_0() { return cFiguresCustomFigureParserRuleCall_2_2_0; }
 	}
 	public class MetaModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.MetaModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cMetaKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cPluginKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cMetamodelKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cPluginKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cPluginAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cPluginSTRINGTerminalRuleCall_3_0 = (RuleCall)cPluginAssignment_3.eContents().get(0);
 		private final Keyword cEcoreFileKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Keyword cColonKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cEcorePathAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cEcorePathSTRINGTerminalRuleCall_6_0 = (RuleCall)cEcorePathAssignment_6.eContents().get(0);
+		private final Assignment cEcorePathAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cEcorePathSTRINGTerminalRuleCall_5_0 = (RuleCall)cEcorePathAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//// validation
 		//MetaModel:
-		//	'meta' 'plugin' ':' plugin=STRING 'ecore-file' ':' ecorePath=STRING;
+		//	'metamodel' '{'
+		//	'plugin' plugin=STRING
+		//	'ecore-file' ecorePath=STRING
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'meta' 'plugin' ':' plugin=STRING 'ecore-file' ':' ecorePath=STRING
+		//'metamodel' '{' 'plugin' plugin=STRING 'ecore-file' ecorePath=STRING '}'
 		public Group getGroup() { return cGroup; }
 		
-		//'meta'
-		public Keyword getMetaKeyword_0() { return cMetaKeyword_0; }
+		//'metamodel'
+		public Keyword getMetamodelKeyword_0() { return cMetamodelKeyword_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
 		//'plugin'
-		public Keyword getPluginKeyword_1() { return cPluginKeyword_1; }
-		
-		//':'
-		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
+		public Keyword getPluginKeyword_2() { return cPluginKeyword_2; }
 		
 		//plugin=STRING
 		public Assignment getPluginAssignment_3() { return cPluginAssignment_3; }
@@ -187,14 +132,14 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'ecore-file'
 		public Keyword getEcoreFileKeyword_4() { return cEcoreFileKeyword_4; }
 		
-		//':'
-		public Keyword getColonKeyword_5() { return cColonKeyword_5; }
-		
 		//ecorePath=STRING
-		public Assignment getEcorePathAssignment_6() { return cEcorePathAssignment_6; }
+		public Assignment getEcorePathAssignment_5() { return cEcorePathAssignment_5; }
 		
 		//STRING
-		public RuleCall getEcorePathSTRINGTerminalRuleCall_6_0() { return cEcorePathSTRINGTerminalRuleCall_6_0; }
+		public RuleCall getEcorePathSTRINGTerminalRuleCall_5_0() { return cEcorePathSTRINGTerminalRuleCall_5_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 	public class ImportStatementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.ImportStatement");
@@ -327,47 +272,15 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
-	public class ToolGroupElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.ToolGroup");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cToolgroupKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cDescriptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cDescriptionSTRINGTerminalRuleCall_2_0 = (RuleCall)cDescriptionAssignment_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		
-		//ToolGroup:
-		//	'toolgroup' name=ID description=STRING? ';';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'toolgroup' name=ID description=STRING? ';'
-		public Group getGroup() { return cGroup; }
-		
-		//'toolgroup'
-		public Keyword getToolgroupKeyword_0() { return cToolgroupKeyword_0; }
-		
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-		
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-		
-		//description=STRING?
-		public Assignment getDescriptionAssignment_2() { return cDescriptionAssignment_2; }
-		
-		//STRING
-		public RuleCall getDescriptionSTRINGTerminalRuleCall_2_0() { return cDescriptionSTRINGTerminalRuleCall_2_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
-	}
 	public class DiagramElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.DiagramElement");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cNodeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cLinkParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
+		////ToolGroup:
+		////	'toolgroup' name=ID (description=STRING)? ';'
+		////;
 		//DiagramElement:
 		//	Node | Link;
 		@Override public ParserRule getRule() { return rule; }
@@ -381,77 +294,17 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Link
 		public RuleCall getLinkParserRuleCall_1() { return cLinkParserRuleCall_1; }
 	}
-	public class StyleElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.Style");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cStyleKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Assignment cStyledAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final Keyword cStyledPlusSignKeyword_2_0_0 = (Keyword)cStyledAssignment_2_0.eContents().get(0);
-		private final Assignment cStyleAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final CrossReference cStyleStyleCrossReference_2_1_0 = (CrossReference)cStyleAssignment_2_1.eContents().get(0);
-		private final RuleCall cStyleStyleIDTerminalRuleCall_2_1_0_1 = (RuleCall)cStyleStyleCrossReference_2_1_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cFeaturesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cFeaturesStyleFeatureParserRuleCall_4_0 = (RuleCall)cFeaturesAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		
-		//Style:
-		//	'style' name=ID (styled?='+' style=[Style])? '{'
-		//	features+=StyleFeature*
-		//	'}';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'style' name=ID (styled?='+' style=[Style])? '{' features+=StyleFeature* '}'
-		public Group getGroup() { return cGroup; }
-		
-		//'style'
-		public Keyword getStyleKeyword_0() { return cStyleKeyword_0; }
-		
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-		
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-		
-		//(styled?='+' style=[Style])?
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//styled?='+'
-		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
-		
-		//'+'
-		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
-		
-		//style=[Style]
-		public Assignment getStyleAssignment_2_1() { return cStyleAssignment_2_1; }
-		
-		//[Style]
-		public CrossReference getStyleStyleCrossReference_2_1_0() { return cStyleStyleCrossReference_2_1_0; }
-		
-		//ID
-		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
-		
-		//features+=StyleFeature*
-		public Assignment getFeaturesAssignment_4() { return cFeaturesAssignment_4; }
-		
-		//StyleFeature
-		public RuleCall getFeaturesStyleFeatureParserRuleCall_4_0() { return cFeaturesStyleFeatureParserRuleCall_4_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
-	}
 	public class FeatureElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.Feature");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cStyleFeatureParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cLinkedFeatureParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
+		////Style:
+		////	'style' name=ID  (styled?='+' style=[Style])? '{'
+		////	      features+=StyleFeature*
+		////	'}'
+		////;
 		/// **
 		// * Every feature has to be added here, and have:
 		// * (conditional=FeatureConditional)?
@@ -554,13 +407,13 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cConnectableElementParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cDecoratorElementParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cLinkParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cStyleParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//FeatureContainer:
-		//	ConnectableElement | DecoratorElement | Link | Style;
+		//	ConnectableElement | DecoratorElement | Link //| Style
+		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//ConnectableElement | DecoratorElement | Link | Style
+		//ConnectableElement | DecoratorElement | Link
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//ConnectableElement
@@ -571,9 +424,6 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Link
 		public RuleCall getLinkParserRuleCall_2() { return cLinkParserRuleCall_2; }
-		
-		//Style
-		public RuleCall getStyleParserRuleCall_3() { return cStyleParserRuleCall_3; }
 	}
 	public class ChildElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.ChildElement");
@@ -645,329 +495,174 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	public class NodeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.Node");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
-		private final Assignment cToolAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final Keyword cToolToolKeyword_0_0_0 = (Keyword)cToolAssignment_0_0.eContents().get(0);
-		private final Assignment cToolNameAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cToolNameSTRINGTerminalRuleCall_0_1_0 = (RuleCall)cToolNameAssignment_0_1.eContents().get(0);
-		private final Group cGroup_0_2 = (Group)cGroup_0.eContents().get(2);
-		private final Assignment cGroupAssignment_0_2_0 = (Assignment)cGroup_0_2.eContents().get(0);
-		private final Keyword cGroupGroupKeyword_0_2_0_0 = (Keyword)cGroupAssignment_0_2_0.eContents().get(0);
-		private final Assignment cGroupIdAssignment_0_2_1 = (Assignment)cGroup_0_2.eContents().get(1);
-		private final CrossReference cGroupIdToolGroupCrossReference_0_2_1_0 = (CrossReference)cGroupIdAssignment_0_2_1.eContents().get(0);
-		private final RuleCall cGroupIdToolGroupIDTerminalRuleCall_0_2_1_0_1 = (RuleCall)cGroupIdToolGroupCrossReference_0_2_1_0.eContents().get(1);
-		private final Group cGroup_0_3 = (Group)cGroup_0.eContents().get(3);
-		private final Assignment cIconAssignment_0_3_0 = (Assignment)cGroup_0_3.eContents().get(0);
-		private final Keyword cIconIconKeyword_0_3_0_0 = (Keyword)cIconAssignment_0_3_0.eContents().get(0);
-		private final Assignment cImageIdAssignment_0_3_1 = (Assignment)cGroup_0_3.eContents().get(1);
-		private final RuleCall cImageIdIDTerminalRuleCall_0_3_1_0 = (RuleCall)cImageIdAssignment_0_3_1.eContents().get(0);
-		private final Keyword cNodeKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cModelClassAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cModelClassEClassCrossReference_2_0 = (CrossReference)cModelClassAssignment_2.eContents().get(0);
-		private final RuleCall cModelClassEClassQualifiedNameParserRuleCall_2_0_1 = (RuleCall)cModelClassEClassCrossReference_2_0.eContents().get(1);
-		private final Assignment cRootFigureAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cRootFigureConnectableElementParserRuleCall_3_0 = (RuleCall)cRootFigureAssignment_3.eContents().get(0);
+		private final Keyword cNodeKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cModelClassAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cModelClassEClassCrossReference_1_0 = (CrossReference)cModelClassAssignment_1.eContents().get(0);
+		private final RuleCall cModelClassEClassQualifiedNameParserRuleCall_1_0_1 = (RuleCall)cModelClassEClassCrossReference_1_0.eContents().get(1);
+		private final Assignment cRootFigureAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cRootFigureConnectableElementParserRuleCall_2_0 = (RuleCall)cRootFigureAssignment_2.eContents().get(0);
 		
-		//Node:
-		//	(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
+		//Node: //(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
 		//	'node' modelClass=[ecore::EClass|QualifiedName] rootFigure=ConnectableElement;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)? 'node'
-		//modelClass=[ecore::EClass|QualifiedName] rootFigure=ConnectableElement
+		////(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
+		//'node' modelClass=[ecore::EClass|QualifiedName] rootFigure=ConnectableElement
 		public Group getGroup() { return cGroup; }
 		
-		//(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
-		public Group getGroup_0() { return cGroup_0; }
-		
-		//tool?='tool'
-		public Assignment getToolAssignment_0_0() { return cToolAssignment_0_0; }
-		
-		//'tool'
-		public Keyword getToolToolKeyword_0_0_0() { return cToolToolKeyword_0_0_0; }
-		
-		//toolName=STRING
-		public Assignment getToolNameAssignment_0_1() { return cToolNameAssignment_0_1; }
-		
-		//STRING
-		public RuleCall getToolNameSTRINGTerminalRuleCall_0_1_0() { return cToolNameSTRINGTerminalRuleCall_0_1_0; }
-		
-		//(group?='group' groupId=[ToolGroup])?
-		public Group getGroup_0_2() { return cGroup_0_2; }
-		
-		//group?='group'
-		public Assignment getGroupAssignment_0_2_0() { return cGroupAssignment_0_2_0; }
-		
-		//'group'
-		public Keyword getGroupGroupKeyword_0_2_0_0() { return cGroupGroupKeyword_0_2_0_0; }
-		
-		//groupId=[ToolGroup]
-		public Assignment getGroupIdAssignment_0_2_1() { return cGroupIdAssignment_0_2_1; }
-		
-		//[ToolGroup]
-		public CrossReference getGroupIdToolGroupCrossReference_0_2_1_0() { return cGroupIdToolGroupCrossReference_0_2_1_0; }
-		
-		//ID
-		public RuleCall getGroupIdToolGroupIDTerminalRuleCall_0_2_1_0_1() { return cGroupIdToolGroupIDTerminalRuleCall_0_2_1_0_1; }
-		
-		//(icon?='icon' imageId=ID)?
-		public Group getGroup_0_3() { return cGroup_0_3; }
-		
-		//icon?='icon'
-		public Assignment getIconAssignment_0_3_0() { return cIconAssignment_0_3_0; }
-		
-		//'icon'
-		public Keyword getIconIconKeyword_0_3_0_0() { return cIconIconKeyword_0_3_0_0; }
-		
-		//imageId=ID
-		public Assignment getImageIdAssignment_0_3_1() { return cImageIdAssignment_0_3_1; }
-		
-		//ID
-		public RuleCall getImageIdIDTerminalRuleCall_0_3_1_0() { return cImageIdIDTerminalRuleCall_0_3_1_0; }
-		
+		////(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
 		//'node'
-		public Keyword getNodeKeyword_1() { return cNodeKeyword_1; }
+		public Keyword getNodeKeyword_0() { return cNodeKeyword_0; }
 		
 		//modelClass=[ecore::EClass|QualifiedName]
-		public Assignment getModelClassAssignment_2() { return cModelClassAssignment_2; }
+		public Assignment getModelClassAssignment_1() { return cModelClassAssignment_1; }
 		
 		//[ecore::EClass|QualifiedName]
-		public CrossReference getModelClassEClassCrossReference_2_0() { return cModelClassEClassCrossReference_2_0; }
+		public CrossReference getModelClassEClassCrossReference_1_0() { return cModelClassEClassCrossReference_1_0; }
 		
 		//QualifiedName
-		public RuleCall getModelClassEClassQualifiedNameParserRuleCall_2_0_1() { return cModelClassEClassQualifiedNameParserRuleCall_2_0_1; }
+		public RuleCall getModelClassEClassQualifiedNameParserRuleCall_1_0_1() { return cModelClassEClassQualifiedNameParserRuleCall_1_0_1; }
 		
 		//rootFigure=ConnectableElement
-		public Assignment getRootFigureAssignment_3() { return cRootFigureAssignment_3; }
+		public Assignment getRootFigureAssignment_2() { return cRootFigureAssignment_2; }
 		
 		//ConnectableElement
-		public RuleCall getRootFigureConnectableElementParserRuleCall_3_0() { return cRootFigureConnectableElementParserRuleCall_3_0; }
+		public RuleCall getRootFigureConnectableElementParserRuleCall_2_0() { return cRootFigureConnectableElementParserRuleCall_2_0; }
 	}
 	public class LinkElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.Link");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
-		private final Assignment cToolAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final Keyword cToolToolKeyword_0_0_0 = (Keyword)cToolAssignment_0_0.eContents().get(0);
-		private final Assignment cToolNameAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cToolNameSTRINGTerminalRuleCall_0_1_0 = (RuleCall)cToolNameAssignment_0_1.eContents().get(0);
-		private final Group cGroup_0_2 = (Group)cGroup_0.eContents().get(2);
-		private final Assignment cGroupAssignment_0_2_0 = (Assignment)cGroup_0_2.eContents().get(0);
-		private final Keyword cGroupGroupKeyword_0_2_0_0 = (Keyword)cGroupAssignment_0_2_0.eContents().get(0);
-		private final Assignment cGroupIdAssignment_0_2_1 = (Assignment)cGroup_0_2.eContents().get(1);
-		private final CrossReference cGroupIdToolGroupCrossReference_0_2_1_0 = (CrossReference)cGroupIdAssignment_0_2_1.eContents().get(0);
-		private final RuleCall cGroupIdToolGroupIDTerminalRuleCall_0_2_1_0_1 = (RuleCall)cGroupIdToolGroupCrossReference_0_2_1_0.eContents().get(1);
-		private final Group cGroup_0_3 = (Group)cGroup_0.eContents().get(3);
-		private final Assignment cIconAssignment_0_3_0 = (Assignment)cGroup_0_3.eContents().get(0);
-		private final Keyword cIconIconKeyword_0_3_0_0 = (Keyword)cIconAssignment_0_3_0.eContents().get(0);
-		private final Assignment cImageIdAssignment_0_3_1 = (Assignment)cGroup_0_3.eContents().get(1);
-		private final RuleCall cImageIdIDTerminalRuleCall_0_3_1_0 = (RuleCall)cImageIdAssignment_0_3_1.eContents().get(0);
-		private final Keyword cLinkKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final Group cGroup_2_0 = (Group)cAlternatives_2.eContents().get(0);
-		private final Assignment cReferenceAssignment_2_0_0 = (Assignment)cGroup_2_0.eContents().get(0);
-		private final Keyword cReferenceReferenceKeyword_2_0_0_0 = (Keyword)cReferenceAssignment_2_0_0.eContents().get(0);
-		private final Assignment cModelReferenceAssignment_2_0_1 = (Assignment)cGroup_2_0.eContents().get(1);
-		private final CrossReference cModelReferenceEReferenceCrossReference_2_0_1_0 = (CrossReference)cModelReferenceAssignment_2_0_1.eContents().get(0);
-		private final RuleCall cModelReferenceEReferenceQualifiedNameParserRuleCall_2_0_1_0_1 = (RuleCall)cModelReferenceEReferenceCrossReference_2_0_1_0.eContents().get(1);
-		private final Group cGroup_2_1 = (Group)cAlternatives_2.eContents().get(1);
-		private final Assignment cComplexAssignment_2_1_0 = (Assignment)cGroup_2_1.eContents().get(0);
-		private final Keyword cComplexClassKeyword_2_1_0_0 = (Keyword)cComplexAssignment_2_1_0.eContents().get(0);
-		private final Assignment cModelClassAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
-		private final CrossReference cModelClassEClassCrossReference_2_1_1_0 = (CrossReference)cModelClassAssignment_2_1_1.eContents().get(0);
-		private final RuleCall cModelClassEClassQualifiedNameParserRuleCall_2_1_1_0_1 = (RuleCall)cModelClassEClassCrossReference_2_1_1_0.eContents().get(1);
-		private final Keyword cSourceKeyword_2_1_2 = (Keyword)cGroup_2_1.eContents().get(2);
-		private final Assignment cSourceReferenceAssignment_2_1_3 = (Assignment)cGroup_2_1.eContents().get(3);
-		private final CrossReference cSourceReferenceEReferenceCrossReference_2_1_3_0 = (CrossReference)cSourceReferenceAssignment_2_1_3.eContents().get(0);
-		private final RuleCall cSourceReferenceEReferenceQualifiedNameParserRuleCall_2_1_3_0_1 = (RuleCall)cSourceReferenceEReferenceCrossReference_2_1_3_0.eContents().get(1);
-		private final Keyword cTargetKeyword_2_1_4 = (Keyword)cGroup_2_1.eContents().get(4);
-		private final Assignment cTargetReferenceAssignment_2_1_5 = (Assignment)cGroup_2_1.eContents().get(5);
-		private final CrossReference cTargetReferenceEReferenceCrossReference_2_1_5_0 = (CrossReference)cTargetReferenceAssignment_2_1_5.eContents().get(0);
-		private final RuleCall cTargetReferenceEReferenceQualifiedNameParserRuleCall_2_1_5_0_1 = (RuleCall)cTargetReferenceEReferenceCrossReference_2_1_5_0.eContents().get(1);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Assignment cStyledAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final Keyword cStyledPlusSignKeyword_3_0_0 = (Keyword)cStyledAssignment_3_0.eContents().get(0);
-		private final Assignment cStyleAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final CrossReference cStyleStyleCrossReference_3_1_0 = (CrossReference)cStyleAssignment_3_1.eContents().get(0);
-		private final RuleCall cStyleStyleIDTerminalRuleCall_3_1_0_1 = (RuleCall)cStyleStyleCrossReference_3_1_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cFeaturesAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cFeaturesLinkFeatureParserRuleCall_5_0 = (RuleCall)cFeaturesAssignment_5.eContents().get(0);
-		private final Assignment cDecoratorsAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cDecoratorsDecoratorParserRuleCall_6_0 = (RuleCall)cDecoratorsAssignment_6.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cLinkKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Group cGroup_1_0 = (Group)cAlternatives_1.eContents().get(0);
+		private final Assignment cReferenceAssignment_1_0_0 = (Assignment)cGroup_1_0.eContents().get(0);
+		private final Keyword cReferenceReferenceKeyword_1_0_0_0 = (Keyword)cReferenceAssignment_1_0_0.eContents().get(0);
+		private final Assignment cModelReferenceAssignment_1_0_1 = (Assignment)cGroup_1_0.eContents().get(1);
+		private final CrossReference cModelReferenceEReferenceCrossReference_1_0_1_0 = (CrossReference)cModelReferenceAssignment_1_0_1.eContents().get(0);
+		private final RuleCall cModelReferenceEReferenceQualifiedNameParserRuleCall_1_0_1_0_1 = (RuleCall)cModelReferenceEReferenceCrossReference_1_0_1_0.eContents().get(1);
+		private final Group cGroup_1_1 = (Group)cAlternatives_1.eContents().get(1);
+		private final Assignment cComplexAssignment_1_1_0 = (Assignment)cGroup_1_1.eContents().get(0);
+		private final Keyword cComplexClassKeyword_1_1_0_0 = (Keyword)cComplexAssignment_1_1_0.eContents().get(0);
+		private final Assignment cModelClassAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
+		private final CrossReference cModelClassEClassCrossReference_1_1_1_0 = (CrossReference)cModelClassAssignment_1_1_1.eContents().get(0);
+		private final RuleCall cModelClassEClassQualifiedNameParserRuleCall_1_1_1_0_1 = (RuleCall)cModelClassEClassCrossReference_1_1_1_0.eContents().get(1);
+		private final Keyword cSourceKeyword_1_1_2 = (Keyword)cGroup_1_1.eContents().get(2);
+		private final Assignment cSourceReferenceAssignment_1_1_3 = (Assignment)cGroup_1_1.eContents().get(3);
+		private final CrossReference cSourceReferenceEReferenceCrossReference_1_1_3_0 = (CrossReference)cSourceReferenceAssignment_1_1_3.eContents().get(0);
+		private final RuleCall cSourceReferenceEReferenceQualifiedNameParserRuleCall_1_1_3_0_1 = (RuleCall)cSourceReferenceEReferenceCrossReference_1_1_3_0.eContents().get(1);
+		private final Keyword cTargetKeyword_1_1_4 = (Keyword)cGroup_1_1.eContents().get(4);
+		private final Assignment cTargetReferenceAssignment_1_1_5 = (Assignment)cGroup_1_1.eContents().get(5);
+		private final CrossReference cTargetReferenceEReferenceCrossReference_1_1_5_0 = (CrossReference)cTargetReferenceAssignment_1_1_5.eContents().get(0);
+		private final RuleCall cTargetReferenceEReferenceQualifiedNameParserRuleCall_1_1_5_0_1 = (RuleCall)cTargetReferenceEReferenceCrossReference_1_1_5_0.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cFeaturesAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cFeaturesLinkFeatureParserRuleCall_3_0 = (RuleCall)cFeaturesAssignment_3.eContents().get(0);
+		private final Assignment cDecoratorsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cDecoratorsDecoratorParserRuleCall_4_0 = (RuleCall)cDecoratorsAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//Link:
-		//	(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
+		//Link: //(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
 		//	'link' (reference?='reference' modelReference=[ecore::EReference|QualifiedName] | complex?='class'
-		//	modelClass=[ecore::EClass|QualifiedName]
-		//	'source' sourceReference=[ecore::EReference|QualifiedName]
-		//	'target' targetReference=[ecore::EReference|QualifiedName]) (styled?='+' style=[Style])?
-		//	'{'
-		//	features+=LinkFeature*
-		//	decorators+=Decorator*
-		//	'}';
+		//	modelClass=[ecore::EClass|QualifiedName] 'source' sourceReference=[ecore::EReference|QualifiedName] 'target'
+		//	targetReference=[ecore::EReference|QualifiedName]) //    (styled?='+' style=[Style])?
+		//	'{' features+=LinkFeature* decorators+=Decorator* '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)? 'link'
-		//(reference?='reference' modelReference=[ecore::EReference|QualifiedName] | complex?='class'
+		////(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
+		//'link' (reference?='reference' modelReference=[ecore::EReference|QualifiedName] | complex?='class'
 		//modelClass=[ecore::EClass|QualifiedName] 'source' sourceReference=[ecore::EReference|QualifiedName] 'target'
-		//targetReference=[ecore::EReference|QualifiedName]) (styled?='+' style=[Style])? '{' features+=LinkFeature*
-		//decorators+=Decorator* '}'
+		//targetReference=[ecore::EReference|QualifiedName]) //    (styled?='+' style=[Style])?
+		//'{' features+=LinkFeature* decorators+=Decorator* '}'
 		public Group getGroup() { return cGroup; }
 		
-		//(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
-		public Group getGroup_0() { return cGroup_0; }
-		
-		//tool?='tool'
-		public Assignment getToolAssignment_0_0() { return cToolAssignment_0_0; }
-		
-		//'tool'
-		public Keyword getToolToolKeyword_0_0_0() { return cToolToolKeyword_0_0_0; }
-		
-		//toolName=STRING
-		public Assignment getToolNameAssignment_0_1() { return cToolNameAssignment_0_1; }
-		
-		//STRING
-		public RuleCall getToolNameSTRINGTerminalRuleCall_0_1_0() { return cToolNameSTRINGTerminalRuleCall_0_1_0; }
-		
-		//(group?='group' groupId=[ToolGroup])?
-		public Group getGroup_0_2() { return cGroup_0_2; }
-		
-		//group?='group'
-		public Assignment getGroupAssignment_0_2_0() { return cGroupAssignment_0_2_0; }
-		
-		//'group'
-		public Keyword getGroupGroupKeyword_0_2_0_0() { return cGroupGroupKeyword_0_2_0_0; }
-		
-		//groupId=[ToolGroup]
-		public Assignment getGroupIdAssignment_0_2_1() { return cGroupIdAssignment_0_2_1; }
-		
-		//[ToolGroup]
-		public CrossReference getGroupIdToolGroupCrossReference_0_2_1_0() { return cGroupIdToolGroupCrossReference_0_2_1_0; }
-		
-		//ID
-		public RuleCall getGroupIdToolGroupIDTerminalRuleCall_0_2_1_0_1() { return cGroupIdToolGroupIDTerminalRuleCall_0_2_1_0_1; }
-		
-		//(icon?='icon' imageId=ID)?
-		public Group getGroup_0_3() { return cGroup_0_3; }
-		
-		//icon?='icon'
-		public Assignment getIconAssignment_0_3_0() { return cIconAssignment_0_3_0; }
-		
-		//'icon'
-		public Keyword getIconIconKeyword_0_3_0_0() { return cIconIconKeyword_0_3_0_0; }
-		
-		//imageId=ID
-		public Assignment getImageIdAssignment_0_3_1() { return cImageIdAssignment_0_3_1; }
-		
-		//ID
-		public RuleCall getImageIdIDTerminalRuleCall_0_3_1_0() { return cImageIdIDTerminalRuleCall_0_3_1_0; }
-		
+		////(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
 		//'link'
-		public Keyword getLinkKeyword_1() { return cLinkKeyword_1; }
+		public Keyword getLinkKeyword_0() { return cLinkKeyword_0; }
 		
 		//(reference?='reference' modelReference=[ecore::EReference|QualifiedName] | complex?='class'
 		//modelClass=[ecore::EClass|QualifiedName] 'source' sourceReference=[ecore::EReference|QualifiedName] 'target'
 		//targetReference=[ecore::EReference|QualifiedName])
-		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 		
 		//reference?='reference' modelReference=[ecore::EReference|QualifiedName]
-		public Group getGroup_2_0() { return cGroup_2_0; }
+		public Group getGroup_1_0() { return cGroup_1_0; }
 		
 		//reference?='reference'
-		public Assignment getReferenceAssignment_2_0_0() { return cReferenceAssignment_2_0_0; }
+		public Assignment getReferenceAssignment_1_0_0() { return cReferenceAssignment_1_0_0; }
 		
 		//'reference'
-		public Keyword getReferenceReferenceKeyword_2_0_0_0() { return cReferenceReferenceKeyword_2_0_0_0; }
+		public Keyword getReferenceReferenceKeyword_1_0_0_0() { return cReferenceReferenceKeyword_1_0_0_0; }
 		
 		//modelReference=[ecore::EReference|QualifiedName]
-		public Assignment getModelReferenceAssignment_2_0_1() { return cModelReferenceAssignment_2_0_1; }
+		public Assignment getModelReferenceAssignment_1_0_1() { return cModelReferenceAssignment_1_0_1; }
 		
 		//[ecore::EReference|QualifiedName]
-		public CrossReference getModelReferenceEReferenceCrossReference_2_0_1_0() { return cModelReferenceEReferenceCrossReference_2_0_1_0; }
+		public CrossReference getModelReferenceEReferenceCrossReference_1_0_1_0() { return cModelReferenceEReferenceCrossReference_1_0_1_0; }
 		
 		//QualifiedName
-		public RuleCall getModelReferenceEReferenceQualifiedNameParserRuleCall_2_0_1_0_1() { return cModelReferenceEReferenceQualifiedNameParserRuleCall_2_0_1_0_1; }
+		public RuleCall getModelReferenceEReferenceQualifiedNameParserRuleCall_1_0_1_0_1() { return cModelReferenceEReferenceQualifiedNameParserRuleCall_1_0_1_0_1; }
 		
 		//complex?='class' modelClass=[ecore::EClass|QualifiedName] 'source' sourceReference=[ecore::EReference|QualifiedName]
 		//'target' targetReference=[ecore::EReference|QualifiedName]
-		public Group getGroup_2_1() { return cGroup_2_1; }
+		public Group getGroup_1_1() { return cGroup_1_1; }
 		
 		//complex?='class'
-		public Assignment getComplexAssignment_2_1_0() { return cComplexAssignment_2_1_0; }
+		public Assignment getComplexAssignment_1_1_0() { return cComplexAssignment_1_1_0; }
 		
 		//'class'
-		public Keyword getComplexClassKeyword_2_1_0_0() { return cComplexClassKeyword_2_1_0_0; }
+		public Keyword getComplexClassKeyword_1_1_0_0() { return cComplexClassKeyword_1_1_0_0; }
 		
 		//modelClass=[ecore::EClass|QualifiedName]
-		public Assignment getModelClassAssignment_2_1_1() { return cModelClassAssignment_2_1_1; }
+		public Assignment getModelClassAssignment_1_1_1() { return cModelClassAssignment_1_1_1; }
 		
 		//[ecore::EClass|QualifiedName]
-		public CrossReference getModelClassEClassCrossReference_2_1_1_0() { return cModelClassEClassCrossReference_2_1_1_0; }
+		public CrossReference getModelClassEClassCrossReference_1_1_1_0() { return cModelClassEClassCrossReference_1_1_1_0; }
 		
 		//QualifiedName
-		public RuleCall getModelClassEClassQualifiedNameParserRuleCall_2_1_1_0_1() { return cModelClassEClassQualifiedNameParserRuleCall_2_1_1_0_1; }
+		public RuleCall getModelClassEClassQualifiedNameParserRuleCall_1_1_1_0_1() { return cModelClassEClassQualifiedNameParserRuleCall_1_1_1_0_1; }
 		
 		//'source'
-		public Keyword getSourceKeyword_2_1_2() { return cSourceKeyword_2_1_2; }
+		public Keyword getSourceKeyword_1_1_2() { return cSourceKeyword_1_1_2; }
 		
 		//sourceReference=[ecore::EReference|QualifiedName]
-		public Assignment getSourceReferenceAssignment_2_1_3() { return cSourceReferenceAssignment_2_1_3; }
+		public Assignment getSourceReferenceAssignment_1_1_3() { return cSourceReferenceAssignment_1_1_3; }
 		
 		//[ecore::EReference|QualifiedName]
-		public CrossReference getSourceReferenceEReferenceCrossReference_2_1_3_0() { return cSourceReferenceEReferenceCrossReference_2_1_3_0; }
+		public CrossReference getSourceReferenceEReferenceCrossReference_1_1_3_0() { return cSourceReferenceEReferenceCrossReference_1_1_3_0; }
 		
 		//QualifiedName
-		public RuleCall getSourceReferenceEReferenceQualifiedNameParserRuleCall_2_1_3_0_1() { return cSourceReferenceEReferenceQualifiedNameParserRuleCall_2_1_3_0_1; }
+		public RuleCall getSourceReferenceEReferenceQualifiedNameParserRuleCall_1_1_3_0_1() { return cSourceReferenceEReferenceQualifiedNameParserRuleCall_1_1_3_0_1; }
 		
 		//'target'
-		public Keyword getTargetKeyword_2_1_4() { return cTargetKeyword_2_1_4; }
+		public Keyword getTargetKeyword_1_1_4() { return cTargetKeyword_1_1_4; }
 		
 		//targetReference=[ecore::EReference|QualifiedName]
-		public Assignment getTargetReferenceAssignment_2_1_5() { return cTargetReferenceAssignment_2_1_5; }
+		public Assignment getTargetReferenceAssignment_1_1_5() { return cTargetReferenceAssignment_1_1_5; }
 		
 		//[ecore::EReference|QualifiedName]
-		public CrossReference getTargetReferenceEReferenceCrossReference_2_1_5_0() { return cTargetReferenceEReferenceCrossReference_2_1_5_0; }
+		public CrossReference getTargetReferenceEReferenceCrossReference_1_1_5_0() { return cTargetReferenceEReferenceCrossReference_1_1_5_0; }
 		
 		//QualifiedName
-		public RuleCall getTargetReferenceEReferenceQualifiedNameParserRuleCall_2_1_5_0_1() { return cTargetReferenceEReferenceQualifiedNameParserRuleCall_2_1_5_0_1; }
+		public RuleCall getTargetReferenceEReferenceQualifiedNameParserRuleCall_1_1_5_0_1() { return cTargetReferenceEReferenceQualifiedNameParserRuleCall_1_1_5_0_1; }
 		
-		//(styled?='+' style=[Style])?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//styled?='+'
-		public Assignment getStyledAssignment_3_0() { return cStyledAssignment_3_0; }
-		
-		//'+'
-		public Keyword getStyledPlusSignKeyword_3_0_0() { return cStyledPlusSignKeyword_3_0_0; }
-		
-		//style=[Style]
-		public Assignment getStyleAssignment_3_1() { return cStyleAssignment_3_1; }
-		
-		//[Style]
-		public CrossReference getStyleStyleCrossReference_3_1_0() { return cStyleStyleCrossReference_3_1_0; }
-		
-		//ID
-		public RuleCall getStyleStyleIDTerminalRuleCall_3_1_0_1() { return cStyleStyleIDTerminalRuleCall_3_1_0_1; }
-		
+		////    (styled?='+' style=[Style])?
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
 		//features+=LinkFeature*
-		public Assignment getFeaturesAssignment_5() { return cFeaturesAssignment_5; }
+		public Assignment getFeaturesAssignment_3() { return cFeaturesAssignment_3; }
 		
 		//LinkFeature
-		public RuleCall getFeaturesLinkFeatureParserRuleCall_5_0() { return cFeaturesLinkFeatureParserRuleCall_5_0; }
+		public RuleCall getFeaturesLinkFeatureParserRuleCall_3_0() { return cFeaturesLinkFeatureParserRuleCall_3_0; }
 		
 		//decorators+=Decorator*
-		public Assignment getDecoratorsAssignment_6() { return cDecoratorsAssignment_6; }
+		public Assignment getDecoratorsAssignment_4() { return cDecoratorsAssignment_4; }
 		
 		//Decorator
-		public RuleCall getDecoratorsDecoratorParserRuleCall_6_0() { return cDecoratorsDecoratorParserRuleCall_6_0; }
+		public RuleCall getDecoratorsDecoratorParserRuleCall_4_0() { return cDecoratorsDecoratorParserRuleCall_4_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 	public class LinkFeatureElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.LinkFeature");
@@ -1367,29 +1062,25 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cFigureAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final CrossReference cFigureCustomFigureCrossReference_1_0 = (CrossReference)cFigureAssignment_1.eContents().get(0);
 		private final RuleCall cFigureCustomFigureIDTerminalRuleCall_1_0_1 = (RuleCall)cFigureCustomFigureCrossReference_1_0.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Assignment cStyledAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final Keyword cStyledPlusSignKeyword_2_0_0 = (Keyword)cStyledAssignment_2_0.eContents().get(0);
-		private final Assignment cStyleAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final CrossReference cStyleStyleCrossReference_2_1_0 = (CrossReference)cStyleAssignment_2_1.eContents().get(0);
-		private final RuleCall cStyleStyleIDTerminalRuleCall_2_1_0_1 = (RuleCall)cStyleStyleCrossReference_2_1_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cFeaturesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cFeaturesLinkedFeatureParserRuleCall_4_0 = (RuleCall)cFeaturesAssignment_4.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cChildKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cChildrenAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cChildrenChildElementParserRuleCall_5_1_0 = (RuleCall)cChildrenAssignment_5_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cFeaturesAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cFeaturesLinkedFeatureParserRuleCall_3_0 = (RuleCall)cFeaturesAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cChildKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cChildrenAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cChildrenChildElementParserRuleCall_4_1_0 = (RuleCall)cChildrenAssignment_4_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Custom:
-		//	'figure' figure=[CustomFigure] (styled?='+' style=[Style])? '{'
+		//	'figure' figure=[CustomFigure]
+		//	//(styled?='+' style=[Style])?
+		//	'{'
 		//	features+=LinkedFeature* ('child' children+=ChildElement)*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'figure' figure=[CustomFigure] (styled?='+' style=[Style])? '{' features+=LinkedFeature* ('child'
-		//children+=ChildElement)* '}'
+		//'figure' figure=[CustomFigure] //(styled?='+' style=[Style])?
+		//'{' features+=LinkedFeature* ('child' children+=ChildElement)* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'figure'
@@ -1404,47 +1095,30 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getFigureCustomFigureIDTerminalRuleCall_1_0_1() { return cFigureCustomFigureIDTerminalRuleCall_1_0_1; }
 		
-		//(styled?='+' style=[Style])?
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//styled?='+'
-		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
-		
-		//'+'
-		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
-		
-		//style=[Style]
-		public Assignment getStyleAssignment_2_1() { return cStyleAssignment_2_1; }
-		
-		//[Style]
-		public CrossReference getStyleStyleCrossReference_2_1_0() { return cStyleStyleCrossReference_2_1_0; }
-		
-		//ID
-		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
-		
+		////(styled?='+' style=[Style])?
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
 		//features+=LinkedFeature*
-		public Assignment getFeaturesAssignment_4() { return cFeaturesAssignment_4; }
+		public Assignment getFeaturesAssignment_3() { return cFeaturesAssignment_3; }
 		
 		//LinkedFeature
-		public RuleCall getFeaturesLinkedFeatureParserRuleCall_4_0() { return cFeaturesLinkedFeatureParserRuleCall_4_0; }
+		public RuleCall getFeaturesLinkedFeatureParserRuleCall_3_0() { return cFeaturesLinkedFeatureParserRuleCall_3_0; }
 		
 		//('child' children+=ChildElement)*
-		public Group getGroup_5() { return cGroup_5; }
+		public Group getGroup_4() { return cGroup_4; }
 		
 		//'child'
-		public Keyword getChildKeyword_5_0() { return cChildKeyword_5_0; }
+		public Keyword getChildKeyword_4_0() { return cChildKeyword_4_0; }
 		
 		//children+=ChildElement
-		public Assignment getChildrenAssignment_5_1() { return cChildrenAssignment_5_1; }
+		public Assignment getChildrenAssignment_4_1() { return cChildrenAssignment_4_1; }
 		
 		//ChildElement
-		public RuleCall getChildrenChildElementParserRuleCall_5_1_0() { return cChildrenChildElementParserRuleCall_5_1_0; }
+		public RuleCall getChildrenChildElementParserRuleCall_4_1_0() { return cChildrenChildElementParserRuleCall_4_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 	public class RectangleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.Rectangle");
@@ -1454,29 +1128,25 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRectangleRectangleKeyword_0_0_0 = (Keyword)cRectangleAssignment_0_0.eContents().get(0);
 		private final Assignment cSquareAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
 		private final Keyword cSquareSquareKeyword_0_1_0 = (Keyword)cSquareAssignment_0_1.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Assignment cStyledAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
-		private final Keyword cStyledPlusSignKeyword_1_0_0 = (Keyword)cStyledAssignment_1_0.eContents().get(0);
-		private final Assignment cStyleAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final CrossReference cStyleStyleCrossReference_1_1_0 = (CrossReference)cStyleAssignment_1_1.eContents().get(0);
-		private final RuleCall cStyleStyleIDTerminalRuleCall_1_1_0_1 = (RuleCall)cStyleStyleCrossReference_1_1_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cFeaturesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cFeaturesRectangleFeatureParserRuleCall_3_0 = (RuleCall)cFeaturesAssignment_3.eContents().get(0);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cChildKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cChildrenAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cChildrenChildElementParserRuleCall_4_1_0 = (RuleCall)cChildrenAssignment_4_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cFeaturesAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFeaturesRectangleFeatureParserRuleCall_2_0 = (RuleCall)cFeaturesAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cChildKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cChildrenAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cChildrenChildElementParserRuleCall_3_1_0 = (RuleCall)cChildrenAssignment_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Rectangle:
-		//	(rectangle?='rectangle' | square?='square') (styled?='+' style=[Style])? '{'
+		//	(rectangle?='rectangle' | square?='square')
+		//	//	(styled?='+' style=[Style])? 
+		//	'{'
 		//	features+=RectangleFeature* ('child' children+=ChildElement)*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//(rectangle?='rectangle' | square?='square') (styled?='+' style=[Style])? '{' features+=RectangleFeature* ('child'
-		//children+=ChildElement)* '}'
+		//(rectangle?='rectangle' | square?='square') //	(styled?='+' style=[Style])? 
+		//'{' features+=RectangleFeature* ('child' children+=ChildElement)* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//(rectangle?='rectangle' | square?='square')
@@ -1494,47 +1164,30 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'square'
 		public Keyword getSquareSquareKeyword_0_1_0() { return cSquareSquareKeyword_0_1_0; }
 		
-		//(styled?='+' style=[Style])?
-		public Group getGroup_1() { return cGroup_1; }
-		
-		//styled?='+'
-		public Assignment getStyledAssignment_1_0() { return cStyledAssignment_1_0; }
-		
-		//'+'
-		public Keyword getStyledPlusSignKeyword_1_0_0() { return cStyledPlusSignKeyword_1_0_0; }
-		
-		//style=[Style]
-		public Assignment getStyleAssignment_1_1() { return cStyleAssignment_1_1; }
-		
-		//[Style]
-		public CrossReference getStyleStyleCrossReference_1_1_0() { return cStyleStyleCrossReference_1_1_0; }
-		
-		//ID
-		public RuleCall getStyleStyleIDTerminalRuleCall_1_1_0_1() { return cStyleStyleIDTerminalRuleCall_1_1_0_1; }
-		
+		////	(styled?='+' style=[Style])? 
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
 		//features+=RectangleFeature*
-		public Assignment getFeaturesAssignment_3() { return cFeaturesAssignment_3; }
+		public Assignment getFeaturesAssignment_2() { return cFeaturesAssignment_2; }
 		
 		//RectangleFeature
-		public RuleCall getFeaturesRectangleFeatureParserRuleCall_3_0() { return cFeaturesRectangleFeatureParserRuleCall_3_0; }
+		public RuleCall getFeaturesRectangleFeatureParserRuleCall_2_0() { return cFeaturesRectangleFeatureParserRuleCall_2_0; }
 		
 		//('child' children+=ChildElement)*
-		public Group getGroup_4() { return cGroup_4; }
+		public Group getGroup_3() { return cGroup_3; }
 		
 		//'child'
-		public Keyword getChildKeyword_4_0() { return cChildKeyword_4_0; }
+		public Keyword getChildKeyword_3_0() { return cChildKeyword_3_0; }
 		
 		//children+=ChildElement
-		public Assignment getChildrenAssignment_4_1() { return cChildrenAssignment_4_1; }
+		public Assignment getChildrenAssignment_3_1() { return cChildrenAssignment_3_1; }
 		
 		//ChildElement
-		public RuleCall getChildrenChildElementParserRuleCall_4_1_0() { return cChildrenChildElementParserRuleCall_4_1_0; }
+		public RuleCall getChildrenChildElementParserRuleCall_3_1_0() { return cChildrenChildElementParserRuleCall_3_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 	public class RectangleFeatureElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.RectangleFeature");
@@ -1560,94 +1213,6 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cRhombusAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cRhombusKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Assignment cStyledAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final Keyword cStyledPlusSignKeyword_2_0_0 = (Keyword)cStyledAssignment_2_0.eContents().get(0);
-		private final Assignment cStyleAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final CrossReference cStyleStyleCrossReference_2_1_0 = (CrossReference)cStyleAssignment_2_1.eContents().get(0);
-		private final RuleCall cStyleStyleIDTerminalRuleCall_2_1_0_1 = (RuleCall)cStyleStyleCrossReference_2_1_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cFeaturesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cFeaturesConnectableElementFeatureParserRuleCall_4_0 = (RuleCall)cFeaturesAssignment_4.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cChildKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cChildrenAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cChildrenChildElementParserRuleCall_5_1_0 = (RuleCall)cChildrenAssignment_5_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		
-		//Rhombus:
-		//	{Rhombus}
-		//	'rhombus' (styled?='+' style=[Style])? '{'
-		//	features+=ConnectableElementFeature* ('child' children+=ChildElement)*
-		//	'}';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//{Rhombus} 'rhombus' (styled?='+' style=[Style])? '{' features+=ConnectableElementFeature* ('child'
-		//children+=ChildElement)* '}'
-		public Group getGroup() { return cGroup; }
-		
-		//{Rhombus}
-		public Action getRhombusAction_0() { return cRhombusAction_0; }
-		
-		//'rhombus'
-		public Keyword getRhombusKeyword_1() { return cRhombusKeyword_1; }
-		
-		//(styled?='+' style=[Style])?
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//styled?='+'
-		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
-		
-		//'+'
-		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
-		
-		//style=[Style]
-		public Assignment getStyleAssignment_2_1() { return cStyleAssignment_2_1; }
-		
-		//[Style]
-		public CrossReference getStyleStyleCrossReference_2_1_0() { return cStyleStyleCrossReference_2_1_0; }
-		
-		//ID
-		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
-		
-		//features+=ConnectableElementFeature*
-		public Assignment getFeaturesAssignment_4() { return cFeaturesAssignment_4; }
-		
-		//ConnectableElementFeature
-		public RuleCall getFeaturesConnectableElementFeatureParserRuleCall_4_0() { return cFeaturesConnectableElementFeatureParserRuleCall_4_0; }
-		
-		//('child' children+=ChildElement)*
-		public Group getGroup_5() { return cGroup_5; }
-		
-		//'child'
-		public Keyword getChildKeyword_5_0() { return cChildKeyword_5_0; }
-		
-		//children+=ChildElement
-		public Assignment getChildrenAssignment_5_1() { return cChildrenAssignment_5_1; }
-		
-		//ChildElement
-		public RuleCall getChildrenChildElementParserRuleCall_5_1_0() { return cChildrenChildElementParserRuleCall_5_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
-	}
-	public class EllipseElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.Ellipse");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
-		private final Assignment cEllipseAssignment_0_0 = (Assignment)cAlternatives_0.eContents().get(0);
-		private final Keyword cEllipseEllipseKeyword_0_0_0 = (Keyword)cEllipseAssignment_0_0.eContents().get(0);
-		private final Assignment cCircleAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
-		private final Keyword cCircleCircleKeyword_0_1_0 = (Keyword)cCircleAssignment_0_1.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Assignment cStyledAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
-		private final Keyword cStyledPlusSignKeyword_1_0_0 = (Keyword)cStyledAssignment_1_0.eContents().get(0);
-		private final Assignment cStyleAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final CrossReference cStyleStyleCrossReference_1_1_0 = (CrossReference)cStyleAssignment_1_1.eContents().get(0);
-		private final RuleCall cStyleStyleIDTerminalRuleCall_1_1_0_1 = (RuleCall)cStyleStyleCrossReference_1_1_0.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cFeaturesAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cFeaturesConnectableElementFeatureParserRuleCall_3_0 = (RuleCall)cFeaturesAssignment_3.eContents().get(0);
@@ -1657,49 +1222,26 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cChildrenChildElementParserRuleCall_4_1_0 = (RuleCall)cChildrenAssignment_4_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//Ellipse:
-		//	(ellipse?='ellipse' | circle?='circle') (styled?='+' style=[Style])? '{'
+		//Rhombus:
+		//	{Rhombus}
+		//	'rhombus'
+		//	//	(styled?='+' style=[Style])?
+		//	'{'
 		//	features+=ConnectableElementFeature* ('child' children+=ChildElement)*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//(ellipse?='ellipse' | circle?='circle') (styled?='+' style=[Style])? '{' features+=ConnectableElementFeature* ('child'
-		//children+=ChildElement)* '}'
+		//{Rhombus} 'rhombus' //	(styled?='+' style=[Style])?
+		//'{' features+=ConnectableElementFeature* ('child' children+=ChildElement)* '}'
 		public Group getGroup() { return cGroup; }
 		
-		//(ellipse?='ellipse' | circle?='circle')
-		public Alternatives getAlternatives_0() { return cAlternatives_0; }
+		//{Rhombus}
+		public Action getRhombusAction_0() { return cRhombusAction_0; }
 		
-		//ellipse?='ellipse'
-		public Assignment getEllipseAssignment_0_0() { return cEllipseAssignment_0_0; }
+		//'rhombus'
+		public Keyword getRhombusKeyword_1() { return cRhombusKeyword_1; }
 		
-		//'ellipse'
-		public Keyword getEllipseEllipseKeyword_0_0_0() { return cEllipseEllipseKeyword_0_0_0; }
-		
-		//circle?='circle'
-		public Assignment getCircleAssignment_0_1() { return cCircleAssignment_0_1; }
-		
-		//'circle'
-		public Keyword getCircleCircleKeyword_0_1_0() { return cCircleCircleKeyword_0_1_0; }
-		
-		//(styled?='+' style=[Style])?
-		public Group getGroup_1() { return cGroup_1; }
-		
-		//styled?='+'
-		public Assignment getStyledAssignment_1_0() { return cStyledAssignment_1_0; }
-		
-		//'+'
-		public Keyword getStyledPlusSignKeyword_1_0_0() { return cStyledPlusSignKeyword_1_0_0; }
-		
-		//style=[Style]
-		public Assignment getStyleAssignment_1_1() { return cStyleAssignment_1_1; }
-		
-		//[Style]
-		public CrossReference getStyleStyleCrossReference_1_1_0() { return cStyleStyleCrossReference_1_1_0; }
-		
-		//ID
-		public RuleCall getStyleStyleIDTerminalRuleCall_1_1_0_1() { return cStyleStyleIDTerminalRuleCall_1_1_0_1; }
-		
+		////	(styled?='+' style=[Style])?
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
@@ -1724,6 +1266,75 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
+	public class EllipseElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.Ellipse");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
+		private final Assignment cEllipseAssignment_0_0 = (Assignment)cAlternatives_0.eContents().get(0);
+		private final Keyword cEllipseEllipseKeyword_0_0_0 = (Keyword)cEllipseAssignment_0_0.eContents().get(0);
+		private final Assignment cCircleAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
+		private final Keyword cCircleCircleKeyword_0_1_0 = (Keyword)cCircleAssignment_0_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cFeaturesAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFeaturesConnectableElementFeatureParserRuleCall_2_0 = (RuleCall)cFeaturesAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cChildKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cChildrenAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cChildrenChildElementParserRuleCall_3_1_0 = (RuleCall)cChildrenAssignment_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//Ellipse:
+		//	(ellipse?='ellipse' | circle?='circle')
+		//	//	(styled?='+' style=[Style])? 
+		//	'{'
+		//	features+=ConnectableElementFeature* ('child' children+=ChildElement)*
+		//	'}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//(ellipse?='ellipse' | circle?='circle') //	(styled?='+' style=[Style])? 
+		//'{' features+=ConnectableElementFeature* ('child' children+=ChildElement)* '}'
+		public Group getGroup() { return cGroup; }
+		
+		//(ellipse?='ellipse' | circle?='circle')
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
+		
+		//ellipse?='ellipse'
+		public Assignment getEllipseAssignment_0_0() { return cEllipseAssignment_0_0; }
+		
+		//'ellipse'
+		public Keyword getEllipseEllipseKeyword_0_0_0() { return cEllipseEllipseKeyword_0_0_0; }
+		
+		//circle?='circle'
+		public Assignment getCircleAssignment_0_1() { return cCircleAssignment_0_1; }
+		
+		//'circle'
+		public Keyword getCircleCircleKeyword_0_1_0() { return cCircleCircleKeyword_0_1_0; }
+		
+		////	(styled?='+' style=[Style])? 
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		
+		//features+=ConnectableElementFeature*
+		public Assignment getFeaturesAssignment_2() { return cFeaturesAssignment_2; }
+		
+		//ConnectableElementFeature
+		public RuleCall getFeaturesConnectableElementFeatureParserRuleCall_2_0() { return cFeaturesConnectableElementFeatureParserRuleCall_2_0; }
+		
+		//('child' children+=ChildElement)*
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//'child'
+		public Keyword getChildKeyword_3_0() { return cChildKeyword_3_0; }
+		
+		//children+=ChildElement
+		public Assignment getChildrenAssignment_3_1() { return cChildrenAssignment_3_1; }
+		
+		//ChildElement
+		public RuleCall getChildrenChildElementParserRuleCall_3_1_0() { return cChildrenChildElementParserRuleCall_3_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+	}
 	public class PolylineElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.Polyline");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -1732,29 +1343,25 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cPolygonPolygonKeyword_0_0_0 = (Keyword)cPolygonAssignment_0_0.eContents().get(0);
 		private final Assignment cPolylineAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
 		private final Keyword cPolylinePolylineKeyword_0_1_0 = (Keyword)cPolylineAssignment_0_1.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Assignment cStyledAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
-		private final Keyword cStyledPlusSignKeyword_1_0_0 = (Keyword)cStyledAssignment_1_0.eContents().get(0);
-		private final Assignment cStyleAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final CrossReference cStyleStyleCrossReference_1_1_0 = (CrossReference)cStyleAssignment_1_1.eContents().get(0);
-		private final RuleCall cStyleStyleIDTerminalRuleCall_1_1_0_1 = (RuleCall)cStyleStyleCrossReference_1_1_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cFeaturesAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFeaturesPointParserRuleCall_2_0 = (RuleCall)cFeaturesAssignment_2.eContents().get(0);
 		private final Assignment cFeaturesAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cFeaturesPointParserRuleCall_3_0 = (RuleCall)cFeaturesAssignment_3.eContents().get(0);
 		private final Assignment cFeaturesAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cFeaturesPointParserRuleCall_4_0 = (RuleCall)cFeaturesAssignment_4.eContents().get(0);
 		private final Assignment cFeaturesAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cFeaturesPointParserRuleCall_5_0 = (RuleCall)cFeaturesAssignment_5.eContents().get(0);
-		private final Assignment cFeaturesAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cFeaturesConnectableElementFeatureParserRuleCall_6_0 = (RuleCall)cFeaturesAssignment_6.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cChildKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cChildrenAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cChildrenChildElementParserRuleCall_7_1_0 = (RuleCall)cChildrenAssignment_7_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final RuleCall cFeaturesConnectableElementFeatureParserRuleCall_5_0 = (RuleCall)cFeaturesAssignment_5.eContents().get(0);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cChildKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cChildrenAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cChildrenChildElementParserRuleCall_6_1_0 = (RuleCall)cChildrenAssignment_6_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//Polyline:
-		//	(polygon?='polygon' | polyline?='polyline') (styled?='+' style=[Style])? '{'
+		//	(polygon?='polygon' | polyline?='polyline')
+		//	//	(styled?='+' style=[Style])?
+		//	'{'
 		//	features+=Point
 		//	features+=Point
 		//	features+=Point*
@@ -1762,8 +1369,9 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//(polygon?='polygon' | polyline?='polyline') (styled?='+' style=[Style])? '{' features+=Point features+=Point
-		//features+=Point* features+=ConnectableElementFeature* ('child' children+=ChildElement)* '}'
+		//(polygon?='polygon' | polyline?='polyline') //	(styled?='+' style=[Style])?
+		//'{' features+=Point features+=Point features+=Point* features+=ConnectableElementFeature* ('child'
+		//children+=ChildElement)* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//(polygon?='polygon' | polyline?='polyline')
@@ -1781,26 +1389,15 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'polyline'
 		public Keyword getPolylinePolylineKeyword_0_1_0() { return cPolylinePolylineKeyword_0_1_0; }
 		
-		//(styled?='+' style=[Style])?
-		public Group getGroup_1() { return cGroup_1; }
-		
-		//styled?='+'
-		public Assignment getStyledAssignment_1_0() { return cStyledAssignment_1_0; }
-		
-		//'+'
-		public Keyword getStyledPlusSignKeyword_1_0_0() { return cStyledPlusSignKeyword_1_0_0; }
-		
-		//style=[Style]
-		public Assignment getStyleAssignment_1_1() { return cStyleAssignment_1_1; }
-		
-		//[Style]
-		public CrossReference getStyleStyleCrossReference_1_1_0() { return cStyleStyleCrossReference_1_1_0; }
-		
-		//ID
-		public RuleCall getStyleStyleIDTerminalRuleCall_1_1_0_1() { return cStyleStyleIDTerminalRuleCall_1_1_0_1; }
-		
+		////	(styled?='+' style=[Style])?
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		
+		//features+=Point
+		public Assignment getFeaturesAssignment_2() { return cFeaturesAssignment_2; }
+		
+		//Point
+		public RuleCall getFeaturesPointParserRuleCall_2_0() { return cFeaturesPointParserRuleCall_2_0; }
 		
 		//features+=Point
 		public Assignment getFeaturesAssignment_3() { return cFeaturesAssignment_3; }
@@ -1808,68 +1405,58 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Point
 		public RuleCall getFeaturesPointParserRuleCall_3_0() { return cFeaturesPointParserRuleCall_3_0; }
 		
-		//features+=Point
+		//features+=Point*
 		public Assignment getFeaturesAssignment_4() { return cFeaturesAssignment_4; }
 		
 		//Point
 		public RuleCall getFeaturesPointParserRuleCall_4_0() { return cFeaturesPointParserRuleCall_4_0; }
 		
-		//features+=Point*
+		//features+=ConnectableElementFeature*
 		public Assignment getFeaturesAssignment_5() { return cFeaturesAssignment_5; }
 		
-		//Point
-		public RuleCall getFeaturesPointParserRuleCall_5_0() { return cFeaturesPointParserRuleCall_5_0; }
-		
-		//features+=ConnectableElementFeature*
-		public Assignment getFeaturesAssignment_6() { return cFeaturesAssignment_6; }
-		
 		//ConnectableElementFeature
-		public RuleCall getFeaturesConnectableElementFeatureParserRuleCall_6_0() { return cFeaturesConnectableElementFeatureParserRuleCall_6_0; }
+		public RuleCall getFeaturesConnectableElementFeatureParserRuleCall_5_0() { return cFeaturesConnectableElementFeatureParserRuleCall_5_0; }
 		
 		//('child' children+=ChildElement)*
-		public Group getGroup_7() { return cGroup_7; }
+		public Group getGroup_6() { return cGroup_6; }
 		
 		//'child'
-		public Keyword getChildKeyword_7_0() { return cChildKeyword_7_0; }
+		public Keyword getChildKeyword_6_0() { return cChildKeyword_6_0; }
 		
 		//children+=ChildElement
-		public Assignment getChildrenAssignment_7_1() { return cChildrenAssignment_7_1; }
+		public Assignment getChildrenAssignment_6_1() { return cChildrenAssignment_6_1; }
 		
 		//ChildElement
-		public RuleCall getChildrenChildElementParserRuleCall_7_1_0() { return cChildrenChildElementParserRuleCall_7_1_0; }
+		public RuleCall getChildrenChildElementParserRuleCall_6_1_0() { return cChildrenChildElementParserRuleCall_6_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 	public class TriangleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.Triangle");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cTriangleAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cTriangleKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Assignment cStyledAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final Keyword cStyledPlusSignKeyword_2_0_0 = (Keyword)cStyledAssignment_2_0.eContents().get(0);
-		private final Assignment cStyleAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final CrossReference cStyleStyleCrossReference_2_1_0 = (CrossReference)cStyleAssignment_2_1.eContents().get(0);
-		private final RuleCall cStyleStyleIDTerminalRuleCall_2_1_0_1 = (RuleCall)cStyleStyleCrossReference_2_1_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cFeaturesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cFeaturesConnectableElementFeatureParserRuleCall_4_0 = (RuleCall)cFeaturesAssignment_4.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cChildKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cChildrenAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cChildrenChildElementParserRuleCall_5_1_0 = (RuleCall)cChildrenAssignment_5_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cFeaturesAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cFeaturesConnectableElementFeatureParserRuleCall_3_0 = (RuleCall)cFeaturesAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cChildKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cChildrenAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cChildrenChildElementParserRuleCall_4_1_0 = (RuleCall)cChildrenAssignment_4_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Triangle:
 		//	{Triangle}
-		//	'triangle' (styled?='+' style=[Style])? '{'
+		//	'triangle'
+		//	//	(styled?='+' style=[Style])?
+		//	'{'
 		//	features+=ConnectableElementFeature* ('child' children+=ChildElement)*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Triangle} 'triangle' (styled?='+' style=[Style])? '{' features+=ConnectableElementFeature* ('child'
-		//children+=ChildElement)* '}'
+		//{Triangle} 'triangle' //	(styled?='+' style=[Style])?
+		//'{' features+=ConnectableElementFeature* ('child' children+=ChildElement)* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{Triangle}
@@ -1878,47 +1465,30 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'triangle'
 		public Keyword getTriangleKeyword_1() { return cTriangleKeyword_1; }
 		
-		//(styled?='+' style=[Style])?
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//styled?='+'
-		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
-		
-		//'+'
-		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
-		
-		//style=[Style]
-		public Assignment getStyleAssignment_2_1() { return cStyleAssignment_2_1; }
-		
-		//[Style]
-		public CrossReference getStyleStyleCrossReference_2_1_0() { return cStyleStyleCrossReference_2_1_0; }
-		
-		//ID
-		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
-		
+		////	(styled?='+' style=[Style])?
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
 		//features+=ConnectableElementFeature*
-		public Assignment getFeaturesAssignment_4() { return cFeaturesAssignment_4; }
+		public Assignment getFeaturesAssignment_3() { return cFeaturesAssignment_3; }
 		
 		//ConnectableElementFeature
-		public RuleCall getFeaturesConnectableElementFeatureParserRuleCall_4_0() { return cFeaturesConnectableElementFeatureParserRuleCall_4_0; }
+		public RuleCall getFeaturesConnectableElementFeatureParserRuleCall_3_0() { return cFeaturesConnectableElementFeatureParserRuleCall_3_0; }
 		
 		//('child' children+=ChildElement)*
-		public Group getGroup_5() { return cGroup_5; }
+		public Group getGroup_4() { return cGroup_4; }
 		
 		//'child'
-		public Keyword getChildKeyword_5_0() { return cChildKeyword_5_0; }
+		public Keyword getChildKeyword_4_0() { return cChildKeyword_4_0; }
 		
 		//children+=ChildElement
-		public Assignment getChildrenAssignment_5_1() { return cChildrenAssignment_5_1; }
+		public Assignment getChildrenAssignment_4_1() { return cChildrenAssignment_4_1; }
 		
 		//ChildElement
-		public RuleCall getChildrenChildElementParserRuleCall_5_1_0() { return cChildrenChildElementParserRuleCall_5_1_0; }
+		public RuleCall getChildrenChildElementParserRuleCall_4_1_0() { return cChildrenChildElementParserRuleCall_4_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 	public class LineElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.Line");
@@ -1929,24 +1499,21 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cHorizontalHlineKeyword_1_0_0 = (Keyword)cHorizontalAssignment_1_0.eContents().get(0);
 		private final Assignment cVerticalAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
 		private final Keyword cVerticalVlineKeyword_1_1_0 = (Keyword)cVerticalAssignment_1_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Assignment cStyledAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final Keyword cStyledPlusSignKeyword_2_0_0 = (Keyword)cStyledAssignment_2_0.eContents().get(0);
-		private final Assignment cStyleAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final CrossReference cStyleStyleCrossReference_2_1_0 = (CrossReference)cStyleAssignment_2_1.eContents().get(0);
-		private final RuleCall cStyleStyleIDTerminalRuleCall_2_1_0_1 = (RuleCall)cStyleStyleCrossReference_2_1_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cFeaturesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cFeaturesLineFeatureParserRuleCall_4_0 = (RuleCall)cFeaturesAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cFeaturesAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cFeaturesLineFeatureParserRuleCall_3_0 = (RuleCall)cFeaturesAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Line:
-		//	{Line} (horizontal?='hline' | vertical?='vline') (styled?='+' style=[Style])? '{'
+		//	{Line} (horizontal?='hline' | vertical?='vline')
+		//	//	(styled?='+' style=[Style])? 
+		//	'{'
 		//	features+=LineFeature*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Line} (horizontal?='hline' | vertical?='vline') (styled?='+' style=[Style])? '{' features+=LineFeature* '}'
+		//{Line} (horizontal?='hline' | vertical?='vline') //	(styled?='+' style=[Style])? 
+		//'{' features+=LineFeature* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{Line}
@@ -1967,35 +1534,18 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'vline'
 		public Keyword getVerticalVlineKeyword_1_1_0() { return cVerticalVlineKeyword_1_1_0; }
 		
-		//(styled?='+' style=[Style])?
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//styled?='+'
-		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
-		
-		//'+'
-		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
-		
-		//style=[Style]
-		public Assignment getStyleAssignment_2_1() { return cStyleAssignment_2_1; }
-		
-		//[Style]
-		public CrossReference getStyleStyleCrossReference_2_1_0() { return cStyleStyleCrossReference_2_1_0; }
-		
-		//ID
-		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
-		
+		////	(styled?='+' style=[Style])? 
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
 		//features+=LineFeature*
-		public Assignment getFeaturesAssignment_4() { return cFeaturesAssignment_4; }
+		public Assignment getFeaturesAssignment_3() { return cFeaturesAssignment_3; }
 		
 		//LineFeature
-		public RuleCall getFeaturesLineFeatureParserRuleCall_4_0() { return cFeaturesLineFeatureParserRuleCall_4_0; }
+		public RuleCall getFeaturesLineFeatureParserRuleCall_3_0() { return cFeaturesLineFeatureParserRuleCall_3_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 	public class LineFeatureElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.LineFeature");
@@ -2037,25 +1587,22 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cArrowAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cArrowKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Assignment cStyledAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final Keyword cStyledPlusSignKeyword_2_0_0 = (Keyword)cStyledAssignment_2_0.eContents().get(0);
-		private final Assignment cStyleAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final CrossReference cStyleStyleCrossReference_2_1_0 = (CrossReference)cStyleAssignment_2_1.eContents().get(0);
-		private final RuleCall cStyleStyleIDTerminalRuleCall_2_1_0_1 = (RuleCall)cStyleStyleCrossReference_2_1_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cFeaturesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cFeaturesLineFeatureParserRuleCall_4_0 = (RuleCall)cFeaturesAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cFeaturesAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cFeaturesLineFeatureParserRuleCall_3_0 = (RuleCall)cFeaturesAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Arrow:
 		//	{Arrow}
-		//	'arrow' (styled?='+' style=[Style])? '{'
+		//	'arrow'
+		//	//	(styled?='+' style=[Style])? 
+		//	'{'
 		//	features+=LineFeature*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Arrow} 'arrow' (styled?='+' style=[Style])? '{' features+=LineFeature* '}'
+		//{Arrow} 'arrow' //	(styled?='+' style=[Style])? 
+		//'{' features+=LineFeature* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{Arrow}
@@ -2064,35 +1611,18 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'arrow'
 		public Keyword getArrowKeyword_1() { return cArrowKeyword_1; }
 		
-		//(styled?='+' style=[Style])?
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//styled?='+'
-		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
-		
-		//'+'
-		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
-		
-		//style=[Style]
-		public Assignment getStyleAssignment_2_1() { return cStyleAssignment_2_1; }
-		
-		//[Style]
-		public CrossReference getStyleStyleCrossReference_2_1_0() { return cStyleStyleCrossReference_2_1_0; }
-		
-		//ID
-		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
-		
+		////	(styled?='+' style=[Style])? 
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
 		//features+=LineFeature*
-		public Assignment getFeaturesAssignment_4() { return cFeaturesAssignment_4; }
+		public Assignment getFeaturesAssignment_3() { return cFeaturesAssignment_3; }
 		
 		//LineFeature
-		public RuleCall getFeaturesLineFeatureParserRuleCall_4_0() { return cFeaturesLineFeatureParserRuleCall_4_0; }
+		public RuleCall getFeaturesLineFeatureParserRuleCall_3_0() { return cFeaturesLineFeatureParserRuleCall_3_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 	public class ContainsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.Contains");
@@ -2305,29 +1835,26 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cLabelAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cLabelKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Assignment cStyledAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final Keyword cStyledPlusSignKeyword_2_0_0 = (Keyword)cStyledAssignment_2_0.eContents().get(0);
-		private final Assignment cStyleAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final CrossReference cStyleStyleCrossReference_2_1_0 = (CrossReference)cStyleAssignment_2_1.eContents().get(0);
-		private final RuleCall cStyleStyleIDTerminalRuleCall_2_1_0_1 = (RuleCall)cStyleStyleCrossReference_2_1_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cFeaturesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cFeaturesLabelFeatureParserRuleCall_4_0 = (RuleCall)cFeaturesAssignment_4.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cChildKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cChildrenAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cChildrenChildElementParserRuleCall_5_1_0 = (RuleCall)cChildrenAssignment_5_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cFeaturesAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cFeaturesLabelFeatureParserRuleCall_3_0 = (RuleCall)cFeaturesAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cChildKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cChildrenAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cChildrenChildElementParserRuleCall_4_1_0 = (RuleCall)cChildrenAssignment_4_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Label:
 		//	{Label}
-		//	'label' (styled?='+' style=[Style])? '{'
+		//	'label'
+		//	//	(styled?='+' style=[Style])? 
+		//	'{'
 		//	features+=LabelFeature* ('child' children+=ChildElement)*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Label} 'label' (styled?='+' style=[Style])? '{' features+=LabelFeature* ('child' children+=ChildElement)* '}'
+		//{Label} 'label' //	(styled?='+' style=[Style])? 
+		//'{' features+=LabelFeature* ('child' children+=ChildElement)* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{Label}
@@ -2336,47 +1863,30 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'label'
 		public Keyword getLabelKeyword_1() { return cLabelKeyword_1; }
 		
-		//(styled?='+' style=[Style])?
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//styled?='+'
-		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
-		
-		//'+'
-		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
-		
-		//style=[Style]
-		public Assignment getStyleAssignment_2_1() { return cStyleAssignment_2_1; }
-		
-		//[Style]
-		public CrossReference getStyleStyleCrossReference_2_1_0() { return cStyleStyleCrossReference_2_1_0; }
-		
-		//ID
-		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
-		
+		////	(styled?='+' style=[Style])? 
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
 		//features+=LabelFeature*
-		public Assignment getFeaturesAssignment_4() { return cFeaturesAssignment_4; }
+		public Assignment getFeaturesAssignment_3() { return cFeaturesAssignment_3; }
 		
 		//LabelFeature
-		public RuleCall getFeaturesLabelFeatureParserRuleCall_4_0() { return cFeaturesLabelFeatureParserRuleCall_4_0; }
+		public RuleCall getFeaturesLabelFeatureParserRuleCall_3_0() { return cFeaturesLabelFeatureParserRuleCall_3_0; }
 		
 		//('child' children+=ChildElement)*
-		public Group getGroup_5() { return cGroup_5; }
+		public Group getGroup_4() { return cGroup_4; }
 		
 		//'child'
-		public Keyword getChildKeyword_5_0() { return cChildKeyword_5_0; }
+		public Keyword getChildKeyword_4_0() { return cChildKeyword_4_0; }
 		
 		//children+=ChildElement
-		public Assignment getChildrenAssignment_5_1() { return cChildrenAssignment_5_1; }
+		public Assignment getChildrenAssignment_4_1() { return cChildrenAssignment_4_1; }
 		
 		//ChildElement
-		public RuleCall getChildrenChildElementParserRuleCall_5_1_0() { return cChildrenChildElementParserRuleCall_5_1_0; }
+		public RuleCall getChildrenChildElementParserRuleCall_4_1_0() { return cChildrenChildElementParserRuleCall_4_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 	public class LabelFeatureElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.LabelFeature");
@@ -2423,29 +1933,26 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cImageKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cImageIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cImageIdSTRINGTerminalRuleCall_1_0 = (RuleCall)cImageIdAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Assignment cStyledAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final Keyword cStyledPlusSignKeyword_2_0_0 = (Keyword)cStyledAssignment_2_0.eContents().get(0);
-		private final Assignment cStyleAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final CrossReference cStyleStyleCrossReference_2_1_0 = (CrossReference)cStyleAssignment_2_1.eContents().get(0);
-		private final RuleCall cStyleStyleIDTerminalRuleCall_2_1_0_1 = (RuleCall)cStyleStyleCrossReference_2_1_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cFeaturesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cFeaturesImageFeatureParserRuleCall_4_0 = (RuleCall)cFeaturesAssignment_4.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cChildKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cChildrenAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cChildrenChildElementParserRuleCall_5_1_0 = (RuleCall)cChildrenAssignment_5_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cFeaturesAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cFeaturesImageFeatureParserRuleCall_3_0 = (RuleCall)cFeaturesAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cChildKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cChildrenAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cChildrenChildElementParserRuleCall_4_1_0 = (RuleCall)cChildrenAssignment_4_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//// TODO image provider problem
 		//Image:
-		//	'image' imageId=STRING (styled?='+' style=[Style])? '{'
+		//	'image' imageId=STRING
+		//	//	(styled?='+' style=[Style])? 
+		//	'{'
 		//	features+=ImageFeature* ('child' children+=ChildElement)*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'image' imageId=STRING (styled?='+' style=[Style])? '{' features+=ImageFeature* ('child' children+=ChildElement)* '}'
+		//'image' imageId=STRING //	(styled?='+' style=[Style])? 
+		//'{' features+=ImageFeature* ('child' children+=ChildElement)* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'image'
@@ -2457,47 +1964,30 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getImageIdSTRINGTerminalRuleCall_1_0() { return cImageIdSTRINGTerminalRuleCall_1_0; }
 		
-		//(styled?='+' style=[Style])?
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//styled?='+'
-		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
-		
-		//'+'
-		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
-		
-		//style=[Style]
-		public Assignment getStyleAssignment_2_1() { return cStyleAssignment_2_1; }
-		
-		//[Style]
-		public CrossReference getStyleStyleCrossReference_2_1_0() { return cStyleStyleCrossReference_2_1_0; }
-		
-		//ID
-		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
-		
+		////	(styled?='+' style=[Style])? 
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
 		//features+=ImageFeature*
-		public Assignment getFeaturesAssignment_4() { return cFeaturesAssignment_4; }
+		public Assignment getFeaturesAssignment_3() { return cFeaturesAssignment_3; }
 		
 		//ImageFeature
-		public RuleCall getFeaturesImageFeatureParserRuleCall_4_0() { return cFeaturesImageFeatureParserRuleCall_4_0; }
+		public RuleCall getFeaturesImageFeatureParserRuleCall_3_0() { return cFeaturesImageFeatureParserRuleCall_3_0; }
 		
 		//('child' children+=ChildElement)*
-		public Group getGroup_5() { return cGroup_5; }
+		public Group getGroup_4() { return cGroup_4; }
 		
 		//'child'
-		public Keyword getChildKeyword_5_0() { return cChildKeyword_5_0; }
+		public Keyword getChildKeyword_4_0() { return cChildKeyword_4_0; }
 		
 		//children+=ChildElement
-		public Assignment getChildrenAssignment_5_1() { return cChildrenAssignment_5_1; }
+		public Assignment getChildrenAssignment_4_1() { return cChildrenAssignment_4_1; }
 		
 		//ChildElement
-		public RuleCall getChildrenChildElementParserRuleCall_5_1_0() { return cChildrenChildElementParserRuleCall_5_1_0; }
+		public RuleCall getChildrenChildElementParserRuleCall_4_1_0() { return cChildrenChildElementParserRuleCall_4_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 	public class ImageFeatureElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.ImageFeature");
@@ -2527,30 +2017,26 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cInvisibleAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cInvisibleKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Assignment cStyledAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final Keyword cStyledPlusSignKeyword_2_0_0 = (Keyword)cStyledAssignment_2_0.eContents().get(0);
-		private final Assignment cStyleAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final CrossReference cStyleStyleCrossReference_2_1_0 = (CrossReference)cStyleAssignment_2_1.eContents().get(0);
-		private final RuleCall cStyleStyleIDTerminalRuleCall_2_1_0_1 = (RuleCall)cStyleStyleCrossReference_2_1_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cFeaturesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cFeaturesInvisibleFeatureParserRuleCall_4_0 = (RuleCall)cFeaturesAssignment_4.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cChildKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cChildrenAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cChildrenChildElementParserRuleCall_5_1_0 = (RuleCall)cChildrenAssignment_5_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cFeaturesAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cFeaturesInvisibleFeatureParserRuleCall_3_0 = (RuleCall)cFeaturesAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cChildKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cChildrenAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cChildrenChildElementParserRuleCall_4_1_0 = (RuleCall)cChildrenAssignment_4_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Invisible:
 		//	{Invisible}
-		//	'invisible' (styled?='+' style=[Style])? '{'
+		//	'invisible'
+		//	//	(styled?='+' style=[Style])?
+		//	'{'
 		//	features+=InvisibleFeature* ('child' children+=ChildElement)*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Invisible} 'invisible' (styled?='+' style=[Style])? '{' features+=InvisibleFeature* ('child' children+=ChildElement)*
-		//'}'
+		//{Invisible} 'invisible' //	(styled?='+' style=[Style])?
+		//'{' features+=InvisibleFeature* ('child' children+=ChildElement)* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{Invisible}
@@ -2559,47 +2045,30 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'invisible'
 		public Keyword getInvisibleKeyword_1() { return cInvisibleKeyword_1; }
 		
-		//(styled?='+' style=[Style])?
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//styled?='+'
-		public Assignment getStyledAssignment_2_0() { return cStyledAssignment_2_0; }
-		
-		//'+'
-		public Keyword getStyledPlusSignKeyword_2_0_0() { return cStyledPlusSignKeyword_2_0_0; }
-		
-		//style=[Style]
-		public Assignment getStyleAssignment_2_1() { return cStyleAssignment_2_1; }
-		
-		//[Style]
-		public CrossReference getStyleStyleCrossReference_2_1_0() { return cStyleStyleCrossReference_2_1_0; }
-		
-		//ID
-		public RuleCall getStyleStyleIDTerminalRuleCall_2_1_0_1() { return cStyleStyleIDTerminalRuleCall_2_1_0_1; }
-		
+		////	(styled?='+' style=[Style])?
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
 		//features+=InvisibleFeature*
-		public Assignment getFeaturesAssignment_4() { return cFeaturesAssignment_4; }
+		public Assignment getFeaturesAssignment_3() { return cFeaturesAssignment_3; }
 		
 		//InvisibleFeature
-		public RuleCall getFeaturesInvisibleFeatureParserRuleCall_4_0() { return cFeaturesInvisibleFeatureParserRuleCall_4_0; }
+		public RuleCall getFeaturesInvisibleFeatureParserRuleCall_3_0() { return cFeaturesInvisibleFeatureParserRuleCall_3_0; }
 		
 		//('child' children+=ChildElement)*
-		public Group getGroup_5() { return cGroup_5; }
+		public Group getGroup_4() { return cGroup_4; }
 		
 		//'child'
-		public Keyword getChildKeyword_5_0() { return cChildKeyword_5_0; }
+		public Keyword getChildKeyword_4_0() { return cChildKeyword_4_0; }
 		
 		//children+=ChildElement
-		public Assignment getChildrenAssignment_5_1() { return cChildrenAssignment_5_1; }
+		public Assignment getChildrenAssignment_4_1() { return cChildrenAssignment_4_1; }
 		
 		//ChildElement
-		public RuleCall getChildrenChildElementParserRuleCall_5_1_0() { return cChildrenChildElementParserRuleCall_5_1_0; }
+		public RuleCall getChildrenChildElementParserRuleCall_4_1_0() { return cChildrenChildElementParserRuleCall_4_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 	public class InvisibleFeatureElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.InvisibleFeature");
@@ -3700,9 +3169,7 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final QualifiedNameElements pQualifiedName;
 	private final QualifiedNameWithWildCardElements pQualifiedNameWithWildCard;
 	private final DiagramElements pDiagram;
-	private final ToolGroupElements pToolGroup;
 	private final DiagramElementElements pDiagramElement;
-	private final StyleElements pStyle;
 	private final FeatureElements pFeature;
 	private final LinkedFeatureElements pLinkedFeature;
 	private final StyleFeatureElements pStyleFeature;
@@ -3782,9 +3249,7 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pQualifiedName = new QualifiedNameElements();
 		this.pQualifiedNameWithWildCard = new QualifiedNameWithWildCardElements();
 		this.pDiagram = new DiagramElements();
-		this.pToolGroup = new ToolGroupElements();
 		this.pDiagramElement = new DiagramElementElements();
-		this.pStyle = new StyleElements();
 		this.pFeature = new FeatureElements();
 		this.pLinkedFeature = new LinkedFeatureElements();
 		this.pStyleFeature = new StyleFeatureElements();
@@ -3878,11 +3343,8 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//XDiagram:
-	//	'xdiagram' id=ID desc=STRING ('metamodel' importURI=STRING)?
-	//	imports+=ImportStatement
 	//	metamodel=MetaModel
-	//	diagram=Diagram
-	//	groups+=ToolGroup* (elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*;
+	//	diagram=Diagram (elements+=DiagramElement | colors+=CustomColor | figures+=CustomFigure)*;
 	public XDiagramElements getXDiagramAccess() {
 		return pXDiagram;
 	}
@@ -3893,7 +3355,10 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//// validation
 	//MetaModel:
-	//	'meta' 'plugin' ':' plugin=STRING 'ecore-file' ':' ecorePath=STRING;
+	//	'metamodel' '{'
+	//	'plugin' plugin=STRING
+	//	'ecore-file' ecorePath=STRING
+	//	'}';
 	public MetaModelElements getMetaModelAccess() {
 		return pMetaModel;
 	}
@@ -3945,16 +3410,9 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getDiagramAccess().getRule();
 	}
 	
-	//ToolGroup:
-	//	'toolgroup' name=ID description=STRING? ';';
-	public ToolGroupElements getToolGroupAccess() {
-		return pToolGroup;
-	}
-	
-	public ParserRule getToolGroupRule() {
-		return getToolGroupAccess().getRule();
-	}
-	
+	////ToolGroup:
+	////	'toolgroup' name=ID (description=STRING)? ';'
+	////;
 	//DiagramElement:
 	//	Node | Link;
 	public DiagramElementElements getDiagramElementAccess() {
@@ -3965,18 +3423,11 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getDiagramElementAccess().getRule();
 	}
 	
-	//Style:
-	//	'style' name=ID (styled?='+' style=[Style])? '{'
-	//	features+=StyleFeature*
-	//	'}';
-	public StyleElements getStyleAccess() {
-		return pStyle;
-	}
-	
-	public ParserRule getStyleRule() {
-		return getStyleAccess().getRule();
-	}
-	
+	////Style:
+	////	'style' name=ID  (styled?='+' style=[Style])? '{'
+	////	      features+=StyleFeature*
+	////	'}'
+	////;
 	/// **
 	// * Every feature has to be added here, and have:
 	// * (conditional=FeatureConditional)?
@@ -4012,7 +3463,8 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//FeatureContainer:
-	//	ConnectableElement | DecoratorElement | Link | Style;
+	//	ConnectableElement | DecoratorElement | Link //| Style
+	//;
 	public FeatureContainerElements getFeatureContainerAccess() {
 		return pFeatureContainer;
 	}
@@ -4042,8 +3494,7 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getFeatureConditionalAccess().getRule();
 	}
 	
-	//Node:
-	//	(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
+	//Node: //(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
 	//	'node' modelClass=[ecore::EClass|QualifiedName] rootFigure=ConnectableElement;
 	public NodeElements getNodeAccess() {
 		return pNode;
@@ -4053,16 +3504,11 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getNodeAccess().getRule();
 	}
 	
-	//Link:
-	//	(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
+	//Link: //(tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup])? (icon?='icon' imageId=ID)?)?
 	//	'link' (reference?='reference' modelReference=[ecore::EReference|QualifiedName] | complex?='class'
-	//	modelClass=[ecore::EClass|QualifiedName]
-	//	'source' sourceReference=[ecore::EReference|QualifiedName]
-	//	'target' targetReference=[ecore::EReference|QualifiedName]) (styled?='+' style=[Style])?
-	//	'{'
-	//	features+=LinkFeature*
-	//	decorators+=Decorator*
-	//	'}';
+	//	modelClass=[ecore::EClass|QualifiedName] 'source' sourceReference=[ecore::EReference|QualifiedName] 'target'
+	//	targetReference=[ecore::EReference|QualifiedName]) //    (styled?='+' style=[Style])?
+	//	'{' features+=LinkFeature* decorators+=Decorator* '}';
 	public LinkElements getLinkAccess() {
 		return pLink;
 	}
@@ -4209,7 +3655,9 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Custom:
-	//	'figure' figure=[CustomFigure] (styled?='+' style=[Style])? '{'
+	//	'figure' figure=[CustomFigure]
+	//	//(styled?='+' style=[Style])?
+	//	'{'
 	//	features+=LinkedFeature* ('child' children+=ChildElement)*
 	//	'}';
 	public CustomElements getCustomAccess() {
@@ -4221,7 +3669,9 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Rectangle:
-	//	(rectangle?='rectangle' | square?='square') (styled?='+' style=[Style])? '{'
+	//	(rectangle?='rectangle' | square?='square')
+	//	//	(styled?='+' style=[Style])? 
+	//	'{'
 	//	features+=RectangleFeature* ('child' children+=ChildElement)*
 	//	'}';
 	public RectangleElements getRectangleAccess() {
@@ -4244,7 +3694,9 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Rhombus:
 	//	{Rhombus}
-	//	'rhombus' (styled?='+' style=[Style])? '{'
+	//	'rhombus'
+	//	//	(styled?='+' style=[Style])?
+	//	'{'
 	//	features+=ConnectableElementFeature* ('child' children+=ChildElement)*
 	//	'}';
 	public RhombusElements getRhombusAccess() {
@@ -4256,7 +3708,9 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Ellipse:
-	//	(ellipse?='ellipse' | circle?='circle') (styled?='+' style=[Style])? '{'
+	//	(ellipse?='ellipse' | circle?='circle')
+	//	//	(styled?='+' style=[Style])? 
+	//	'{'
 	//	features+=ConnectableElementFeature* ('child' children+=ChildElement)*
 	//	'}';
 	public EllipseElements getEllipseAccess() {
@@ -4268,7 +3722,9 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Polyline:
-	//	(polygon?='polygon' | polyline?='polyline') (styled?='+' style=[Style])? '{'
+	//	(polygon?='polygon' | polyline?='polyline')
+	//	//	(styled?='+' style=[Style])?
+	//	'{'
 	//	features+=Point
 	//	features+=Point
 	//	features+=Point*
@@ -4284,7 +3740,9 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Triangle:
 	//	{Triangle}
-	//	'triangle' (styled?='+' style=[Style])? '{'
+	//	'triangle'
+	//	//	(styled?='+' style=[Style])?
+	//	'{'
 	//	features+=ConnectableElementFeature* ('child' children+=ChildElement)*
 	//	'}';
 	public TriangleElements getTriangleAccess() {
@@ -4296,7 +3754,9 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Line:
-	//	{Line} (horizontal?='hline' | vertical?='vline') (styled?='+' style=[Style])? '{'
+	//	{Line} (horizontal?='hline' | vertical?='vline')
+	//	//	(styled?='+' style=[Style])? 
+	//	'{'
 	//	features+=LineFeature*
 	//	'}';
 	public LineElements getLineAccess() {
@@ -4319,7 +3779,9 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Arrow:
 	//	{Arrow}
-	//	'arrow' (styled?='+' style=[Style])? '{'
+	//	'arrow'
+	//	//	(styled?='+' style=[Style])? 
+	//	'{'
 	//	features+=LineFeature*
 	//	'}';
 	public ArrowElements getArrowAccess() {
@@ -4436,7 +3898,9 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Label:
 	//	{Label}
-	//	'label' (styled?='+' style=[Style])? '{'
+	//	'label'
+	//	//	(styled?='+' style=[Style])? 
+	//	'{'
 	//	features+=LabelFeature* ('child' children+=ChildElement)*
 	//	'}';
 	public LabelElements getLabelAccess() {
@@ -4459,7 +3923,9 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//// TODO image provider problem
 	//Image:
-	//	'image' imageId=STRING (styled?='+' style=[Style])? '{'
+	//	'image' imageId=STRING
+	//	//	(styled?='+' style=[Style])? 
+	//	'{'
 	//	features+=ImageFeature* ('child' children+=ChildElement)*
 	//	'}';
 	public ImageElements getImageAccess() {
@@ -4482,7 +3948,9 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Invisible:
 	//	{Invisible}
-	//	'invisible' (styled?='+' style=[Style])? '{'
+	//	'invisible'
+	//	//	(styled?='+' style=[Style])?
+	//	'{'
 	//	features+=InvisibleFeature* ('child' children+=ChildElement)*
 	//	'}';
 	public InvisibleElements getInvisibleAccess() {

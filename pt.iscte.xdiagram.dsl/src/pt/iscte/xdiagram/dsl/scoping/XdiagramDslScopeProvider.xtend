@@ -49,7 +49,7 @@ import org.eclipse.emf.ecore.EAttribute
 class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 
 	new() {
-		println("SCOPE")
+//		println("SCOPE")
 
 	}
 
@@ -91,13 +91,12 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 				try {
 					resource = rs.getResource(modelLocation, true);
 				} catch (Exception e) {
-					println("FAIL")
-
+//					println("FAIL")
 					modelLocation = URI.createPlatformPluginURI(location, true);
 					try {
 						resource = rs.getResource(modelLocation, true);
 					} catch (Exception e2) {
-						println("FAIL2")
+//						println("FAIL2")
 					}
 				}
 
@@ -143,23 +142,10 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 		override getAllElements() {
 			if (context instanceof Contains) {
 				if (context.eContainer instanceof Diagram) {
-//					val list = new ArrayList<IEObjectDescription>;
 					val diagram = context.eContainer as Diagram;
 					return parentChildrenMap.get(QualifiedName.create(diagram.modelClass.name));
-//					for (EReference r : diagram.modelClass.EAllContainments) {
-//						list.add(new EObjectDescription(QualifiedName.create(r.name), r, null));
-//					}
-//					return list;
 				} else if (context.eContainer instanceof ConnectableElement) {
-//					var n = context.eContainer;
-//					while (!(n instanceof Node))
-//						n = n.eContainer;
 					val node = getDiagramElement(context) as Node;
-//					val list = new ArrayList<IEObjectDescription>;
-//					for (EReference r : node.modelClass.EAllContainments) {
-//						list.add(new EObjectDescription(QualifiedName.create(r.name), r, null));
-//					}
-//					return list;
 					return parentChildrenMap.get(QualifiedName.create(node.modelClass.name));
 				}
 			} else if (context instanceof Link && (context as Link).reference) {
@@ -224,7 +210,7 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 				var list = referenceLinksMap.get(name);
 				return if(list.isEmpty) null else list.get(0);
 			}
-			if(reference.name.equals("modelAttribute")) {
+			else if(reference.name.equals("modelAttribute")) {
 				var owner = getDiagramElement(context);
 				if(owner.modelClass == null)
 					return null;
@@ -237,9 +223,9 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 	}
 
 	override getScope(EObject context, EReference reference) {
+		return new XdiagramScope(context, reference);
 
 //		var scope = new XdiagramScope();
-		return new XdiagramScope(context, reference);
 
 //		var scope = super.getScope(context, reference);
 //		if (context instanceof Contains) {

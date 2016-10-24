@@ -34,6 +34,7 @@ import pt.iscte.xdiagram.dsl.model.FeatureContainer;
 import pt.iscte.xdiagram.dsl.model.Layout;
 import pt.iscte.xdiagram.dsl.model.Line;
 import pt.iscte.xdiagram.dsl.model.Link;
+import pt.iscte.xdiagram.dsl.model.MetaModel;
 import pt.iscte.xdiagram.dsl.model.ModelPackage;
 import pt.iscte.xdiagram.dsl.model.Node;
 import pt.iscte.xdiagram.dsl.model.Position;
@@ -57,13 +58,16 @@ public class XdiagramDslValidator extends AbstractXdiagramDslValidator {
    */
   @Check
   public void ecoreExists(final XDiagram diagram) {
-    String ecoreUri = diagram.getImportURI();
-    URI uri = URI.createURI(ecoreUri);
-    boolean _isPlatform = uri.isPlatform();
-    boolean _not = (!_isPlatform);
-    if (_not) {
-      this.error("invalid ecore model", ModelPackage.Literals.XDIAGRAM__IMPORT_URI);
+    if (((Objects.equal(diagram.getMetamodel(), null) || Objects.equal(diagram.getMetamodel().getPlugin(), null)) || Objects.equal(diagram.getMetamodel().getEcorePath(), null))) {
+      this.error("Metamodel section has to be defined.", diagram, ModelPackage.Literals.XDIAGRAM__METAMODEL);
     }
+    MetaModel _metamodel = diagram.getMetamodel();
+    String _plugin = _metamodel.getPlugin();
+    String _plus = (_plugin + "/");
+    MetaModel _metamodel_1 = diagram.getMetamodel();
+    String _ecorePath = _metamodel_1.getEcorePath();
+    String loc = (_plus + _ecorePath);
+    URI uri = URI.createPlatformResourceURI(loc, true);
     ResourceSetImpl resourceSet = new ResourceSetImpl();
     Resource.Factory.Registry _resourceFactoryRegistry = resourceSet.getResourceFactoryRegistry();
     Map<String, Object> _extensionToFactoryMap = _resourceFactoryRegistry.getExtensionToFactoryMap();
@@ -74,8 +78,18 @@ public class XdiagramDslValidator extends AbstractXdiagramDslValidator {
     } catch (final Throwable _t) {
       if (_t instanceof Exception) {
         final Exception e = (Exception)_t;
-        this.error("could not load ecore model, check URI: should be in the form \"platform:/plugin/plugin...id/.../model.ecore", 
-          ModelPackage.Literals.XDIAGRAM__IMPORT_URI);
+        URI _createPlatformPluginURI = URI.createPlatformPluginURI(loc, true);
+        uri = _createPlatformPluginURI;
+        try {
+          Resource resource2 = resourceSet.getResource(uri, true);
+        } catch (final Throwable _t_1) {
+          if (_t_1 instanceof Exception) {
+            final Exception e2 = (Exception)_t_1;
+            this.error("could not load ecore model, check plugin id and write the ecore path relative to that plugin", diagram, ModelPackage.Literals.XDIAGRAM__METAMODEL);
+          } else {
+            throw Exceptions.sneakyThrow(_t_1);
+          }
+        }
       } else {
         throw Exceptions.sneakyThrow(_t);
       }

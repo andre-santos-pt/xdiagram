@@ -27,7 +27,6 @@ import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.xbase.lib.Conversions;
 import org.eclipse.xtext.xbase.lib.Exceptions;
-import org.eclipse.xtext.xbase.lib.InputOutput;
 import pt.iscte.xdiagram.dsl.model.ConnectableElement;
 import pt.iscte.xdiagram.dsl.model.Contains;
 import pt.iscte.xdiagram.dsl.model.Diagram;
@@ -93,7 +92,6 @@ public class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
         } catch (final Throwable _t) {
           if (_t instanceof Exception) {
             final Exception e = (Exception)_t;
-            InputOutput.<String>println("FAIL");
             URI _createPlatformPluginURI = URI.createPlatformPluginURI(location, true);
             modelLocation = _createPlatformPluginURI;
             try {
@@ -102,7 +100,6 @@ public class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
             } catch (final Throwable _t_1) {
               if (_t_1 instanceof Exception) {
                 final Exception e2 = (Exception)_t_1;
-                InputOutput.<String>println("FAIL2");
               } else {
                 throw Exceptions.sneakyThrow(_t_1);
               }
@@ -320,37 +317,37 @@ public class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
             _xifexpression = ((IEObjectDescription[])Conversions.unwrapArray(_converted_list, IEObjectDescription.class))[0];
           }
           return _xifexpression;
-        }
-      }
-      String _name_3 = this.reference.getName();
-      boolean _equals_2 = _name_3.equals("modelAttribute");
-      if (_equals_2) {
-        DiagramElement owner = this.getDiagramElement(this.context);
-        EClass _modelClass_2 = owner.getModelClass();
-        boolean _equals_3 = Objects.equal(_modelClass_2, null);
-        if (_equals_3) {
-          return null;
-        }
-        EClass _modelClass_3 = owner.getModelClass();
-        String _name_4 = _modelClass_3.getName();
-        QualifiedName _create_1 = QualifiedName.create(_name_4);
-        Collection<IEObjectDescription> list_1 = this.attributesMap.get(_create_1);
-        IEObjectDescription _xifexpression_1 = null;
-        boolean _isEmpty_1 = list_1.isEmpty();
-        if (_isEmpty_1) {
-          _xifexpression_1 = null;
         } else {
-          final Collection<IEObjectDescription> _converted_list_1 = (Collection<IEObjectDescription>)list_1;
-          _xifexpression_1 = ((IEObjectDescription[])Conversions.unwrapArray(_converted_list_1, IEObjectDescription.class))[0];
+          String _name_3 = this.reference.getName();
+          boolean _equals_2 = _name_3.equals("modelAttribute");
+          if (_equals_2) {
+            DiagramElement owner = this.getDiagramElement(this.context);
+            EClass _modelClass_2 = owner.getModelClass();
+            boolean _equals_3 = Objects.equal(_modelClass_2, null);
+            if (_equals_3) {
+              return null;
+            }
+            EClass _modelClass_3 = owner.getModelClass();
+            String _name_4 = _modelClass_3.getName();
+            QualifiedName _create_1 = QualifiedName.create(_name_4);
+            Collection<IEObjectDescription> list_1 = this.attributesMap.get(_create_1);
+            IEObjectDescription _xifexpression_1 = null;
+            boolean _isEmpty_1 = list_1.isEmpty();
+            if (_isEmpty_1) {
+              _xifexpression_1 = null;
+            } else {
+              final Collection<IEObjectDescription> _converted_list_1 = (Collection<IEObjectDescription>)list_1;
+              _xifexpression_1 = ((IEObjectDescription[])Conversions.unwrapArray(_converted_list_1, IEObjectDescription.class))[0];
+            }
+            return _xifexpression_1;
+          }
         }
-        return _xifexpression_1;
       }
       return this.map.get(name);
     }
   }
   
   public XdiagramDslScopeProvider() {
-    InputOutput.<String>println("SCOPE");
   }
   
   @Override

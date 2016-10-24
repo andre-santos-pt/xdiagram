@@ -45,12 +45,11 @@ class XdiagramDslValidator extends AbstractXdiagramDslValidator {
 
 	@Check
 	def ecoreExists(XDiagram diagram) {
-		var ecoreUri = diagram.getImportURI();
-		var uri = URI.createURI(ecoreUri);
+		if(diagram.metamodel == null || diagram.metamodel.plugin == null || diagram.metamodel.ecorePath == null)
+			error("Metamodel section has to be defined.", diagram, ModelPackage.Literals.XDIAGRAM__METAMODEL);
+		var loc = diagram.metamodel.plugin + "/" + diagram.metamodel.ecorePath;
+		var uri = URI.createPlatformResourceURI(loc, true);
 		
-		if(!uri.isPlatform())
-			error("invalid ecore model", ModelPackage.Literals.XDIAGRAM__IMPORT_URI);
-//		var pluginId = uri.segment(1);
 		var resourceSet = new ResourceSetImpl(); 
 		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore", new EcoreResourceFactoryImpl()); 
 		
@@ -58,11 +57,36 @@ class XdiagramDslValidator extends AbstractXdiagramDslValidator {
 			var resource = resourceSet.getResource(uri, true);
 		}
 		catch(Exception e) {
-			error("could not load ecore model, check URI: should be in the form \"platform:/plugin/plugin...id/.../model.ecore", 
-				ModelPackage.Literals.XDIAGRAM__IMPORT_URI
-			);
+			uri = URI.createPlatformPluginURI(loc, true);
+			try {
+				var resource2 = resourceSet.getResource(uri, true);
+			}
+			catch(Exception e2) {
+				error("could not load ecore model, check plugin id and write the ecore path relative to that plugin", diagram, ModelPackage.Literals.XDIAGRAM__METAMODEL);
+			}
 		}
 	}
+
+//	@Check
+//	def ecoreExists(XDiagram diagram) {
+//		var ecoreUri = diagram.getImportURI();
+//		var uri = URI.createURI(ecoreUri);
+//		
+//		if(!uri.isPlatform())
+//			error("invalid ecore model", ModelPackage.Literals.XDIAGRAM__IMPORT_URI);
+////		var pluginId = uri.segment(1);
+//		var resourceSet = new ResourceSetImpl(); 
+//		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore", new EcoreResourceFactoryImpl()); 
+//		
+//		try {
+//			var resource = resourceSet.getResource(uri, true);
+//		}
+//		catch(Exception e) {
+//			error("could not load ecore model, check URI: should be in the form \"platform:/plugin/plugin...id/.../model.ecore", 
+//				ModelPackage.Literals.XDIAGRAM__IMPORT_URI
+//			);
+//		}
+//	}
 
 
 	@Check

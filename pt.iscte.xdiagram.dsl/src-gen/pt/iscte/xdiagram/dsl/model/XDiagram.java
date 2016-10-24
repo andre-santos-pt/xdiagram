@@ -16,15 +16,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getId <em>Id</em>}</li>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getDesc <em>Desc</em>}</li>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getImportURI <em>Import URI</em>}</li>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getImports <em>Imports</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getMetamodel <em>Metamodel</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getDiagram <em>Diagram</em>}</li>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getGroups <em>Groups</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getElements <em>Elements</em>}</li>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getStyles <em>Styles</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getColors <em>Colors</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getFigures <em>Figures</em>}</li>
  * </ul>
@@ -35,100 +29,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface XDiagram extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Id</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Id</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Id</em>' attribute.
-   * @see #setId(String)
-   * @see pt.iscte.xdiagram.dsl.model.ModelPackage#getXDiagram_Id()
-   * @model
-   * @generated
-   */
-  String getId();
-
-  /**
-   * Sets the value of the '{@link pt.iscte.xdiagram.dsl.model.XDiagram#getId <em>Id</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Id</em>' attribute.
-   * @see #getId()
-   * @generated
-   */
-  void setId(String value);
-
-  /**
-   * Returns the value of the '<em><b>Desc</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Desc</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Desc</em>' attribute.
-   * @see #setDesc(String)
-   * @see pt.iscte.xdiagram.dsl.model.ModelPackage#getXDiagram_Desc()
-   * @model
-   * @generated
-   */
-  String getDesc();
-
-  /**
-   * Sets the value of the '{@link pt.iscte.xdiagram.dsl.model.XDiagram#getDesc <em>Desc</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Desc</em>' attribute.
-   * @see #getDesc()
-   * @generated
-   */
-  void setDesc(String value);
-
-  /**
-   * Returns the value of the '<em><b>Import URI</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Import URI</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Import URI</em>' attribute.
-   * @see #setImportURI(String)
-   * @see pt.iscte.xdiagram.dsl.model.ModelPackage#getXDiagram_ImportURI()
-   * @model
-   * @generated
-   */
-  String getImportURI();
-
-  /**
-   * Sets the value of the '{@link pt.iscte.xdiagram.dsl.model.XDiagram#getImportURI <em>Import URI</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Import URI</em>' attribute.
-   * @see #getImportURI()
-   * @generated
-   */
-  void setImportURI(String value);
-
-  /**
-   * Returns the value of the '<em><b>Imports</b></em>' containment reference list.
-   * The list contents are of type {@link pt.iscte.xdiagram.dsl.model.ImportStatement}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Imports</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Imports</em>' containment reference list.
-   * @see pt.iscte.xdiagram.dsl.model.ModelPackage#getXDiagram_Imports()
-   * @model containment="true"
-   * @generated
-   */
-  EList<ImportStatement> getImports();
-
   /**
    * Returns the value of the '<em><b>Metamodel</b></em>' containment reference.
    * <!-- begin-user-doc -->
@@ -182,22 +82,6 @@ public interface XDiagram extends EObject
   void setDiagram(Diagram value);
 
   /**
-   * Returns the value of the '<em><b>Groups</b></em>' containment reference list.
-   * The list contents are of type {@link pt.iscte.xdiagram.dsl.model.ToolGroup}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Groups</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Groups</em>' containment reference list.
-   * @see pt.iscte.xdiagram.dsl.model.ModelPackage#getXDiagram_Groups()
-   * @model containment="true"
-   * @generated
-   */
-  EList<ToolGroup> getGroups();
-
-  /**
    * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
    * The list contents are of type {@link pt.iscte.xdiagram.dsl.model.DiagramElement}.
    * <!-- begin-user-doc -->
@@ -212,22 +96,6 @@ public interface XDiagram extends EObject
    * @generated
    */
   EList<DiagramElement> getElements();
-
-  /**
-   * Returns the value of the '<em><b>Styles</b></em>' containment reference list.
-   * The list contents are of type {@link pt.iscte.xdiagram.dsl.model.Style}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Styles</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Styles</em>' containment reference list.
-   * @see pt.iscte.xdiagram.dsl.model.ModelPackage#getXDiagram_Styles()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Style> getStyles();
 
   /**
    * Returns the value of the '<em><b>Colors</b></em>' containment reference list.

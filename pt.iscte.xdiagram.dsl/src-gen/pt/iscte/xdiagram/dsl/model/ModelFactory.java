@@ -60,15 +60,6 @@ public interface ModelFactory extends EFactory
   Diagram createDiagram();
 
   /**
-   * Returns a new object of class '<em>Tool Group</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Tool Group</em>'.
-   * @generated
-   */
-  ToolGroup createToolGroup();
-
-  /**
    * Returns a new object of class '<em>Diagram Element</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -76,15 +67,6 @@ public interface ModelFactory extends EFactory
    * @generated
    */
   DiagramElement createDiagramElement();
-
-  /**
-   * Returns a new object of class '<em>Style</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Style</em>'.
-   * @generated
-   */
-  Style createStyle();
 
   /**
    * Returns a new object of class '<em>Feature</em>'.

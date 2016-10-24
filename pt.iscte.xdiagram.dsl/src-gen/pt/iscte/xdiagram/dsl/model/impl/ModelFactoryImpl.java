@@ -70,9 +70,7 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
       case ModelPackage.META_MODEL: return createMetaModel();
       case ModelPackage.IMPORT_STATEMENT: return createImportStatement();
       case ModelPackage.DIAGRAM: return createDiagram();
-      case ModelPackage.TOOL_GROUP: return createToolGroup();
       case ModelPackage.DIAGRAM_ELEMENT: return createDiagramElement();
-      case ModelPackage.STYLE: return createStyle();
       case ModelPackage.FEATURE: return createFeature();
       case ModelPackage.FEATURE_CONTAINER: return createFeatureContainer();
       case ModelPackage.FEATURE_CONDITIONAL: return createFeatureConditional();
@@ -224,32 +222,10 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ToolGroup createToolGroup()
-  {
-    ToolGroupImpl toolGroup = new ToolGroupImpl();
-    return toolGroup;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public DiagramElement createDiagramElement()
   {
     DiagramElementImpl diagramElement = new DiagramElementImpl();
     return diagramElement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Style createStyle()
-  {
-    StyleImpl style = new StyleImpl();
-    return style;
   }
 
   /**

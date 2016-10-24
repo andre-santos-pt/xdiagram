@@ -58,12 +58,10 @@ import pt.iscte.xdiagram.dsl.model.Rectangle;
 import pt.iscte.xdiagram.dsl.model.Rhombus;
 import pt.iscte.xdiagram.dsl.model.Size;
 import pt.iscte.xdiagram.dsl.model.StringValue;
-import pt.iscte.xdiagram.dsl.model.Style;
 import pt.iscte.xdiagram.dsl.model.TextAlign;
 import pt.iscte.xdiagram.dsl.model.TextAlignValue;
 import pt.iscte.xdiagram.dsl.model.TextPart;
 import pt.iscte.xdiagram.dsl.model.TextValue;
-import pt.iscte.xdiagram.dsl.model.ToolGroup;
 import pt.iscte.xdiagram.dsl.model.Transparency;
 import pt.iscte.xdiagram.dsl.model.Triangle;
 import pt.iscte.xdiagram.dsl.model.Value;
@@ -111,21 +109,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass toolGroupEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass diagramElementEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass styleEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -548,49 +532,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getXDiagram_Id()
-  {
-    return (EAttribute)xDiagramEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getXDiagram_Desc()
-  {
-    return (EAttribute)xDiagramEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getXDiagram_ImportURI()
-  {
-    return (EAttribute)xDiagramEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getXDiagram_Imports()
-  {
-    return (EReference)xDiagramEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getXDiagram_Metamodel()
   {
-    return (EReference)xDiagramEClass.getEStructuralFeatures().get(4);
+    return (EReference)xDiagramEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -600,17 +544,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    */
   public EReference getXDiagram_Diagram()
   {
-    return (EReference)xDiagramEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getXDiagram_Groups()
-  {
-    return (EReference)xDiagramEClass.getEStructuralFeatures().get(6);
+    return (EReference)xDiagramEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -620,17 +554,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    */
   public EReference getXDiagram_Elements()
   {
-    return (EReference)xDiagramEClass.getEStructuralFeatures().get(7);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getXDiagram_Styles()
-  {
-    return (EReference)xDiagramEClass.getEStructuralFeatures().get(8);
+    return (EReference)xDiagramEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -640,7 +564,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    */
   public EReference getXDiagram_Colors()
   {
-    return (EReference)xDiagramEClass.getEStructuralFeatures().get(9);
+    return (EReference)xDiagramEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -650,7 +574,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    */
   public EReference getXDiagram_Figures()
   {
-    return (EReference)xDiagramEClass.getEStructuralFeatures().get(10);
+    return (EReference)xDiagramEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -738,36 +662,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getToolGroup()
-  {
-    return toolGroupEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getToolGroup_Name()
-  {
-    return (EAttribute)toolGroupEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getToolGroup_Description()
-  {
-    return (EAttribute)toolGroupEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getDiagramElement()
   {
     return diagramElementEClass;
@@ -778,89 +672,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDiagramElement_Tool()
-  {
-    return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getDiagramElement_ToolName()
-  {
-    return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getDiagramElement_Group()
-  {
-    return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getDiagramElement_GroupId()
-  {
-    return (EReference)diagramElementEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getDiagramElement_Icon()
-  {
-    return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getDiagramElement_ImageId()
-  {
-    return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getDiagramElement_ModelClass()
   {
-    return (EReference)diagramElementEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getStyle()
-  {
-    return styleEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getStyle_Name()
-  {
-    return (EAttribute)styleEClass.getEStructuralFeatures().get(0);
+    return (EReference)diagramElementEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -898,29 +712,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFeatureContainer_Styled()
-  {
-    return (EAttribute)featureContainerEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFeatureContainer_Style()
-  {
-    return (EReference)featureContainerEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getFeatureContainer_Features()
   {
-    return (EReference)featureContainerEClass.getEStructuralFeatures().get(2);
+    return (EReference)featureContainerEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2144,15 +1938,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
 
     // Create classes and their features
     xDiagramEClass = createEClass(XDIAGRAM);
-    createEAttribute(xDiagramEClass, XDIAGRAM__ID);
-    createEAttribute(xDiagramEClass, XDIAGRAM__DESC);
-    createEAttribute(xDiagramEClass, XDIAGRAM__IMPORT_URI);
-    createEReference(xDiagramEClass, XDIAGRAM__IMPORTS);
     createEReference(xDiagramEClass, XDIAGRAM__METAMODEL);
     createEReference(xDiagramEClass, XDIAGRAM__DIAGRAM);
-    createEReference(xDiagramEClass, XDIAGRAM__GROUPS);
     createEReference(xDiagramEClass, XDIAGRAM__ELEMENTS);
-    createEReference(xDiagramEClass, XDIAGRAM__STYLES);
     createEReference(xDiagramEClass, XDIAGRAM__COLORS);
     createEReference(xDiagramEClass, XDIAGRAM__FIGURES);
 
@@ -2167,28 +1955,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     createEReference(diagramEClass, DIAGRAM__MODEL_CLASS);
     createEReference(diagramEClass, DIAGRAM__CONTAINS);
 
-    toolGroupEClass = createEClass(TOOL_GROUP);
-    createEAttribute(toolGroupEClass, TOOL_GROUP__NAME);
-    createEAttribute(toolGroupEClass, TOOL_GROUP__DESCRIPTION);
-
     diagramElementEClass = createEClass(DIAGRAM_ELEMENT);
-    createEAttribute(diagramElementEClass, DIAGRAM_ELEMENT__TOOL);
-    createEAttribute(diagramElementEClass, DIAGRAM_ELEMENT__TOOL_NAME);
-    createEAttribute(diagramElementEClass, DIAGRAM_ELEMENT__GROUP);
-    createEReference(diagramElementEClass, DIAGRAM_ELEMENT__GROUP_ID);
-    createEAttribute(diagramElementEClass, DIAGRAM_ELEMENT__ICON);
-    createEAttribute(diagramElementEClass, DIAGRAM_ELEMENT__IMAGE_ID);
     createEReference(diagramElementEClass, DIAGRAM_ELEMENT__MODEL_CLASS);
-
-    styleEClass = createEClass(STYLE);
-    createEAttribute(styleEClass, STYLE__NAME);
 
     featureEClass = createEClass(FEATURE);
     createEReference(featureEClass, FEATURE__CONDITIONAL);
 
     featureContainerEClass = createEClass(FEATURE_CONTAINER);
-    createEAttribute(featureContainerEClass, FEATURE_CONTAINER__STYLED);
-    createEReference(featureContainerEClass, FEATURE_CONTAINER__STYLE);
     createEReference(featureContainerEClass, FEATURE_CONTAINER__FEATURES);
 
     featureConditionalEClass = createEClass(FEATURE_CONDITIONAL);
@@ -2383,7 +2156,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    styleEClass.getESuperTypes().add(this.getFeatureContainer());
     nodeEClass.getESuperTypes().add(this.getDiagramElement());
     linkEClass.getESuperTypes().add(this.getDiagramElement());
     linkEClass.getESuperTypes().add(this.getFeatureContainer());
@@ -2422,15 +2194,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
 
     // Initialize classes and features; add operations and parameters
     initEClass(xDiagramEClass, XDiagram.class, "XDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getXDiagram_Id(), ecorePackage.getEString(), "id", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getXDiagram_Desc(), ecorePackage.getEString(), "desc", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getXDiagram_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getXDiagram_Imports(), this.getImportStatement(), null, "imports", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Metamodel(), this.getMetaModel(), null, "metamodel", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Diagram(), this.getDiagram(), null, "diagram", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getXDiagram_Groups(), this.getToolGroup(), null, "groups", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Elements(), this.getDiagramElement(), null, "elements", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getXDiagram_Styles(), this.getStyle(), null, "styles", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Colors(), this.getCustomColor(), null, "colors", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Figures(), this.getCustomFigure(), null, "figures", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2445,28 +2211,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     initEReference(getDiagram_ModelClass(), ecorePackage.getEClass(), null, "modelClass", null, 0, 1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDiagram_Contains(), this.getContains(), null, "contains", null, 0, -1, Diagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(toolGroupEClass, ToolGroup.class, "ToolGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getToolGroup_Name(), ecorePackage.getEString(), "name", null, 0, 1, ToolGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getToolGroup_Description(), ecorePackage.getEString(), "description", null, 0, 1, ToolGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(diagramElementEClass, DiagramElement.class, "DiagramElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDiagramElement_Tool(), ecorePackage.getEBoolean(), "tool", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDiagramElement_ToolName(), ecorePackage.getEString(), "toolName", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDiagramElement_Group(), ecorePackage.getEBoolean(), "group", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDiagramElement_GroupId(), this.getToolGroup(), null, "groupId", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDiagramElement_Icon(), ecorePackage.getEBoolean(), "icon", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDiagramElement_ImageId(), ecorePackage.getEString(), "imageId", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDiagramElement_ModelClass(), ecorePackage.getEClass(), null, "modelClass", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(styleEClass, Style.class, "Style", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getStyle_Name(), ecorePackage.getEString(), "name", null, 0, 1, Style.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(featureEClass, Feature.class, "Feature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFeature_Conditional(), this.getFeatureConditional(), null, "conditional", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(featureContainerEClass, FeatureContainer.class, "FeatureContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFeatureContainer_Styled(), ecorePackage.getEBoolean(), "styled", null, 0, 1, FeatureContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFeatureContainer_Style(), this.getStyle(), null, "style", null, 0, 1, FeatureContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFeatureContainer_Features(), this.getFeature(), null, "features", null, 0, -1, FeatureContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(featureConditionalEClass, FeatureConditional.class, "FeatureConditional", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

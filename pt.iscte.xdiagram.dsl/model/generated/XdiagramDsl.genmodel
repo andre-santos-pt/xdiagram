@@ -47,15 +47,9 @@
       <genEnumLiterals ecoreEnumLiteral="XdiagramDsl.ecore#//LineType/DOT"/>
     </genEnums>
     <genClasses ecoreClass="XdiagramDsl.ecore#//XDiagram">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//XDiagram/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//XDiagram/desc"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//XDiagram/importURI"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/imports"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/metamodel"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/diagram"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/groups"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/elements"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/styles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/colors"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/figures"/>
     </genClasses>
@@ -70,28 +64,13 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//Diagram/modelClass"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//Diagram/contains"/>
     </genClasses>
-    <genClasses ecoreClass="XdiagramDsl.ecore#//ToolGroup">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//ToolGroup/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//ToolGroup/description"/>
-    </genClasses>
     <genClasses ecoreClass="XdiagramDsl.ecore#//DiagramElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//DiagramElement/tool"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//DiagramElement/toolName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//DiagramElement/group"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//DiagramElement/groupId"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//DiagramElement/icon"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//DiagramElement/imageId"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//DiagramElement/modelClass"/>
-    </genClasses>
-    <genClasses ecoreClass="XdiagramDsl.ecore#//Style">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//Style/name"/>
     </genClasses>
     <genClasses ecoreClass="XdiagramDsl.ecore#//Feature">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//Feature/conditional"/>
     </genClasses>
     <genClasses ecoreClass="XdiagramDsl.ecore#//FeatureContainer">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//FeatureContainer/styled"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//FeatureContainer/style"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//FeatureContainer/features"/>
     </genClasses>
     <genClasses ecoreClass="XdiagramDsl.ecore#//FeatureConditional">

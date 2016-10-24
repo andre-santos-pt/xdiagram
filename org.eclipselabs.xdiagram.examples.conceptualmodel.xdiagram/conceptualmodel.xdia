@@ -19,7 +19,7 @@ node Entity rectangle {
 	size 200 100 resizable;
 	corner 20;
 	foreground red;
-//	background lightgray;
+	background yellow;
 	child image "class_icon.gif" {
 		size 32 32;
 		position 10% 0;

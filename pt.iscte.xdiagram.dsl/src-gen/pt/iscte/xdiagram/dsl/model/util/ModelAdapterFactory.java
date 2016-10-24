@@ -96,19 +96,9 @@ public class ModelAdapterFactory extends AdapterFactoryImpl
         return createDiagramAdapter();
       }
       @Override
-      public Adapter caseToolGroup(ToolGroup object)
-      {
-        return createToolGroupAdapter();
-      }
-      @Override
       public Adapter caseDiagramElement(DiagramElement object)
       {
         return createDiagramElementAdapter();
-      }
-      @Override
-      public Adapter caseStyle(Style object)
-      {
-        return createStyleAdapter();
       }
       @Override
       public Adapter caseFeature(Feature object)
@@ -408,21 +398,6 @@ public class ModelAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link pt.iscte.xdiagram.dsl.model.ToolGroup <em>Tool Group</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see pt.iscte.xdiagram.dsl.model.ToolGroup
-   * @generated
-   */
-  public Adapter createToolGroupAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link pt.iscte.xdiagram.dsl.model.DiagramElement <em>Diagram Element</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -433,21 +408,6 @@ public class ModelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDiagramElementAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link pt.iscte.xdiagram.dsl.model.Style <em>Style</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see pt.iscte.xdiagram.dsl.model.Style
-   * @generated
-   */
-  public Adapter createStyleAdapter()
   {
     return null;
   }

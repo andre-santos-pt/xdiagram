@@ -51,11 +51,9 @@ import pt.iscte.xdiagram.dsl.model.Rectangle;
 import pt.iscte.xdiagram.dsl.model.Rhombus;
 import pt.iscte.xdiagram.dsl.model.Size;
 import pt.iscte.xdiagram.dsl.model.StringValue;
-import pt.iscte.xdiagram.dsl.model.Style;
 import pt.iscte.xdiagram.dsl.model.TextAlign;
 import pt.iscte.xdiagram.dsl.model.TextPart;
 import pt.iscte.xdiagram.dsl.model.TextValue;
-import pt.iscte.xdiagram.dsl.model.ToolGroup;
 import pt.iscte.xdiagram.dsl.model.Transparency;
 import pt.iscte.xdiagram.dsl.model.Triangle;
 import pt.iscte.xdiagram.dsl.model.Visible;
@@ -203,9 +201,6 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 			case ModelPackage.STRING_VALUE:
 				sequence_StringValue(context, (StringValue) semanticObject); 
 				return; 
-			case ModelPackage.STYLE:
-				sequence_Style(context, (Style) semanticObject); 
-				return; 
 			case ModelPackage.TEXT_ALIGN:
 				sequence_TextAlign(context, (TextAlign) semanticObject); 
 				return; 
@@ -214,9 +209,6 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 				return; 
 			case ModelPackage.TEXT_VALUE:
 				sequence_TextValue(context, (TextValue) semanticObject); 
-				return; 
-			case ModelPackage.TOOL_GROUP:
-				sequence_ToolGroup(context, (ToolGroup) semanticObject); 
 				return; 
 			case ModelPackage.TRANSPARENCY:
 				sequence_Transparency(context, (Transparency) semanticObject); 
@@ -260,7 +252,7 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Arrow returns Arrow
 	 *
 	 * Constraint:
-	 *     ((styled?='+' style=[Style|ID])? features+=LineFeature*)
+	 *     features+=LineFeature*
 	 */
 	protected void sequence_Arrow(ISerializationContext context, Arrow semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -415,7 +407,7 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Custom returns Custom
 	 *
 	 * Constraint:
-	 *     (figure=[CustomFigure|ID] (styled?='+' style=[Style|ID])? features+=LinkedFeature* children+=ChildElement*)
+	 *     (figure=[CustomFigure|ID] features+=LinkedFeature* children+=ChildElement*)
 	 */
 	protected void sequence_Custom(ISerializationContext context, Custom semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -486,7 +478,7 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Ellipse returns Ellipse
 	 *
 	 * Constraint:
-	 *     ((ellipse?='ellipse' | circle?='circle') (styled?='+' style=[Style|ID])? features+=ConnectableElementFeature* children+=ChildElement*)
+	 *     ((ellipse?='ellipse' | circle?='circle') features+=ConnectableElementFeature* children+=ChildElement*)
 	 */
 	protected void sequence_Ellipse(ISerializationContext context, Ellipse semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -575,7 +567,7 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Image returns Image
 	 *
 	 * Constraint:
-	 *     (imageId=STRING (styled?='+' style=[Style|ID])? features+=ImageFeature* children+=ChildElement*)
+	 *     (imageId=STRING features+=ImageFeature* children+=ChildElement*)
 	 */
 	protected void sequence_Image(ISerializationContext context, Image semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -621,7 +613,7 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Invisible returns Invisible
 	 *
 	 * Constraint:
-	 *     ((styled?='+' style=[Style|ID])? features+=InvisibleFeature* children+=ChildElement*)
+	 *     (features+=InvisibleFeature* children+=ChildElement*)
 	 */
 	protected void sequence_Invisible(ISerializationContext context, Invisible semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -637,7 +629,7 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Label returns Label
 	 *
 	 * Constraint:
-	 *     ((styled?='+' style=[Style|ID])? features+=LabelFeature* children+=ChildElement*)
+	 *     (features+=LabelFeature* children+=ChildElement*)
 	 */
 	protected void sequence_Label(ISerializationContext context, Label semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -704,7 +696,7 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Line returns Line
 	 *
 	 * Constraint:
-	 *     ((horizontal?='hline' | vertical?='vline') (styled?='+' style=[Style|ID])? features+=LineFeature*)
+	 *     ((horizontal?='hline' | vertical?='vline') features+=LineFeature*)
 	 */
 	protected void sequence_Line(ISerializationContext context, Line semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -719,12 +711,10 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *
 	 * Constraint:
 	 *     (
-	 *         (tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup|ID])? (icon?='icon' imageId=ID)?)? 
 	 *         (
 	 *             (reference?='reference' modelReference=[EReference|QualifiedName]) | 
 	 *             (complex?='class' modelClass=[EClass|QualifiedName] sourceReference=[EReference|QualifiedName] targetReference=[EReference|QualifiedName])
 	 *         ) 
-	 *         (styled?='+' style=[Style|ID])? 
 	 *         features+=LinkFeature* 
 	 *         decorators+=Decorator*
 	 *     )
@@ -750,7 +740,7 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getMetaModelAccess().getPluginSTRINGTerminalRuleCall_3_0(), semanticObject.getPlugin());
-		feeder.accept(grammarAccess.getMetaModelAccess().getEcorePathSTRINGTerminalRuleCall_6_0(), semanticObject.getEcorePath());
+		feeder.accept(grammarAccess.getMetaModelAccess().getEcorePathSTRINGTerminalRuleCall_5_0(), semanticObject.getEcorePath());
 		feeder.finish();
 	}
 	
@@ -761,14 +751,19 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Node returns Node
 	 *
 	 * Constraint:
-	 *     (
-	 *         (tool?='tool' toolName=STRING (group?='group' groupId=[ToolGroup|ID])? (icon?='icon' imageId=ID)?)? 
-	 *         modelClass=[EClass|QualifiedName] 
-	 *         rootFigure=ConnectableElement
-	 *     )
+	 *     (modelClass=[EClass|QualifiedName] rootFigure=ConnectableElement)
 	 */
 	protected void sequence_Node(ISerializationContext context, Node semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, ModelPackage.Literals.DIAGRAM_ELEMENT__MODEL_CLASS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelPackage.Literals.DIAGRAM_ELEMENT__MODEL_CLASS));
+			if (transientValues.isValueTransient(semanticObject, ModelPackage.Literals.NODE__ROOT_FIGURE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelPackage.Literals.NODE__ROOT_FIGURE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getNodeAccess().getModelClassEClassQualifiedNameParserRuleCall_1_0_1(), semanticObject.getModelClass());
+		feeder.accept(grammarAccess.getNodeAccess().getRootFigureConnectableElementParserRuleCall_2_0(), semanticObject.getRootFigure());
+		feeder.finish();
 	}
 	
 	
@@ -798,7 +793,6 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 * Constraint:
 	 *     (
 	 *         (polygon?='polygon' | polyline?='polyline') 
-	 *         (styled?='+' style=[Style|ID])? 
 	 *         features+=Point 
 	 *         features+=Point 
 	 *         features+=Point* 
@@ -840,7 +834,7 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Rectangle returns Rectangle
 	 *
 	 * Constraint:
-	 *     ((rectangle?='rectangle' | square?='square') (styled?='+' style=[Style|ID])? features+=RectangleFeature* children+=ChildElement*)
+	 *     ((rectangle?='rectangle' | square?='square') features+=RectangleFeature* children+=ChildElement*)
 	 */
 	protected void sequence_Rectangle(ISerializationContext context, Rectangle semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -856,7 +850,7 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Rhombus returns Rhombus
 	 *
 	 * Constraint:
-	 *     ((styled?='+' style=[Style|ID])? features+=ConnectableElementFeature* children+=ChildElement*)
+	 *     (features+=ConnectableElementFeature* children+=ChildElement*)
 	 */
 	protected void sequence_Rhombus(ISerializationContext context, Rhombus semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -893,19 +887,6 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     (null?='null' | value=STRING)
 	 */
 	protected void sequence_StringValue(ISerializationContext context, StringValue semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Style returns Style
-	 *     FeatureContainer returns Style
-	 *
-	 * Constraint:
-	 *     (name=ID (styled?='+' style=[Style|ID])? features+=StyleFeature*)
-	 */
-	protected void sequence_Style(ISerializationContext context, Style semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -954,18 +935,6 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Contexts:
-	 *     ToolGroup returns ToolGroup
-	 *
-	 * Constraint:
-	 *     (name=ID description=STRING?)
-	 */
-	protected void sequence_ToolGroup(ISerializationContext context, ToolGroup semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     Feature returns Transparency
 	 *     StyleFeature returns Transparency
 	 *     ConnectableElementFeature returns Transparency
@@ -990,7 +959,7 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Triangle returns Triangle
 	 *
 	 * Constraint:
-	 *     ((styled?='+' style=[Style|ID])? features+=ConnectableElementFeature* children+=ChildElement*)
+	 *     (features+=ConnectableElementFeature* children+=ChildElement*)
 	 */
 	protected void sequence_Triangle(ISerializationContext context, Triangle semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1024,16 +993,7 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     XDiagram returns XDiagram
 	 *
 	 * Constraint:
-	 *     (
-	 *         id=ID 
-	 *         desc=STRING 
-	 *         importURI=STRING? 
-	 *         imports+=ImportStatement 
-	 *         metamodel=MetaModel 
-	 *         diagram=Diagram 
-	 *         groups+=ToolGroup* 
-	 *         (elements+=DiagramElement | styles+=Style | colors+=CustomColor | figures+=CustomFigure)*
-	 *     )
+	 *     (metamodel=MetaModel diagram=Diagram (elements+=DiagramElement | colors+=CustomColor | figures+=CustomFigure)*)
 	 */
 	protected void sequence_XDiagram(ISerializationContext context, XDiagram semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

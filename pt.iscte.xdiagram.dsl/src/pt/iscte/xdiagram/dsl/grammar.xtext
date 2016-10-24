@@ -6,17 +6,16 @@ import 'http://www.eclipse.org/emf/2002/Ecore' as ecore
 
 
 XDiagram:
-	'xdiagram' id=ID desc=STRING
-    ('metamodel' importURI=STRING)?
-    imports+=ImportStatement   
+	//'xdiagram' id=ID desc=STRING
+    //('metamodel' importURI=STRING)?
+    //imports+=ImportStatement   
     metamodel=MetaModel
-     
     diagram=Diagram
-    groups+=ToolGroup*
+//    groups+=ToolGroup*
     
     (
     	(elements += DiagramElement) |
-    	(styles += Style) |
+//    	(styles += Style) |
     	(colors += CustomColor) |
     	(figures += CustomFigure)
     )*
@@ -24,7 +23,10 @@ XDiagram:
 
 // validation
 MetaModel:
-	'meta' 'plugin' ':' plugin=STRING 'ecore-file' ':' ecorePath=STRING
+	'metamodel' '{' 
+		'plugin-id' plugin=STRING 
+		'ecore-file' ecorePath=STRING
+	'}'
 ;
 
 // importedNamespace apparently cannot be on the root element
@@ -49,20 +51,20 @@ Diagram:
 	'}'
 ;
 
-ToolGroup:
-	'toolgroup' name=ID (description=STRING)? ';'
-;
+//ToolGroup:
+//	'toolgroup' name=ID (description=STRING)? ';'
+//;
 
 DiagramElement:
 	(Node | Link)
 ;
 
 
-Style:
-	'style' name=ID  (styled?='+' style=[Style])? '{'
-	      features+=StyleFeature*
-	'}'
-;
+//Style:
+//	'style' name=ID  (styled?='+' style=[Style])? '{'
+//	      features+=StyleFeature*
+//	'}'
+//;
 
 
 
@@ -89,7 +91,7 @@ StyleFeature returns Feature:
 ;
 
 FeatureContainer:
-	ConnectableElement | DecoratorElement | Link | Style
+	ConnectableElement | DecoratorElement | Link //| Style
 ;
 
 ChildElement returns FeatureContainer:
@@ -127,7 +129,7 @@ Link:
     		'target' targetReference=[ecore::EReference|QualifiedName]
     	)
     )
-    (styled?='+' style=[Style])?
+//    (styled?='+' style=[Style])?
     '{'
     	features += LinkFeature*
     	decorators += Decorator*	
@@ -255,14 +257,18 @@ CustomFigure:
 
 
 Custom:
-	'figure' figure=[CustomFigure] (styled?='+' style=[Style])? '{'
+	'figure' figure=[CustomFigure] 
+	//(styled?='+' style=[Style])?
+	'{'
 		features+=LinkedFeature*
 		('child' children+=ChildElement)*
 	'}'
 ;
 
 Rectangle:
-	(rectangle?='rectangle' | square?='square') (styled?='+' style=[Style])? '{'
+	(rectangle?='rectangle' | square?='square')
+//	(styled?='+' style=[Style])? 
+	'{'
 		features+=RectangleFeature*
 		('child' children+=ChildElement)*
 	'}'
@@ -274,14 +280,18 @@ RectangleFeature returns Feature:
 
 Rhombus:
 	{Rhombus}
-	'rhombus' (styled?='+' style=[Style])? '{'
+	'rhombus' 
+//	(styled?='+' style=[Style])?
+	'{'
 		features+=ConnectableElementFeature*
 		('child' children+=ChildElement)*
 	'}'
 ;
 
 Ellipse:
-	(ellipse?='ellipse' | circle?='circle') (styled?='+' style=[Style])? '{'
+	(ellipse?='ellipse' | circle?='circle') 
+//	(styled?='+' style=[Style])? 
+	'{'
 		features+=ConnectableElementFeature*
 		('child' children+=ChildElement)*
 	'}'
@@ -289,7 +299,9 @@ Ellipse:
 
 
 Polyline: 
-	(polygon?='polygon' | polyline?='polyline') (styled?='+' style=[Style])? '{'
+	(polygon?='polygon' | polyline?='polyline') 
+//	(styled?='+' style=[Style])?
+	'{'
 		features+=Point
 		features+=Point
 		features+=Point*
@@ -300,7 +312,9 @@ Polyline:
 
 Triangle:
 	{Triangle}
-	'triangle' 	(styled?='+' style=[Style])? '{'
+	'triangle'
+//	(styled?='+' style=[Style])?
+	'{'
 		features+=ConnectableElementFeature*
 		('child' children+=ChildElement)*
 	'}'
@@ -310,7 +324,9 @@ Triangle:
 
 Line:
 	{Line}
-	(horizontal?='hline' | vertical?='vline') (styled?='+' style=[Style])? '{'
+	(horizontal?='hline' | vertical?='vline')
+//	(styled?='+' style=[Style])? 
+	'{'
 		features+=LineFeature*
 	'}'
 ;
@@ -321,7 +337,9 @@ LineFeature returns Feature:
 
 Arrow:
 	{Arrow}
-	'arrow' (styled?='+' style=[Style])? '{'
+	'arrow' 
+//	(styled?='+' style=[Style])? 
+	'{'
 		features+=LineFeature*
 	'}'
 ;
@@ -390,7 +408,9 @@ FigureFeature returns Feature:
 
 Label:
 	{Label}
-	'label' (styled?='+' style=[Style])? '{'
+	'label'
+//	(styled?='+' style=[Style])? 
+	'{'
 	features+=LabelFeature*
 	('child' children+=ChildElement)*
 	'}'
@@ -404,7 +424,9 @@ LabelFeature returns Feature:
 
 // TODO image provider problem
 Image:
-	'image' imageId=STRING (styled?='+' style=[Style])? '{'
+	'image' imageId=STRING
+//	(styled?='+' style=[Style])? 
+	'{'
 	features+=ImageFeature*
 	('child' children+=ChildElement)*
 	'}'
@@ -417,7 +439,9 @@ ImageFeature returns Feature:
 
 Invisible:
 	{Invisible}
-	'invisible' (styled?='+' style=[Style])? '{'
+	'invisible'
+//	(styled?='+' style=[Style])?
+	'{'
 	features+=InvisibleFeature*
 	('child' children+=ChildElement)*
 	'}'

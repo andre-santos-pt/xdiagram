@@ -101,25 +101,10 @@ public class ModelSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ModelPackage.TOOL_GROUP:
-      {
-        ToolGroup toolGroup = (ToolGroup)theEObject;
-        T result = caseToolGroup(toolGroup);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case ModelPackage.DIAGRAM_ELEMENT:
       {
         DiagramElement diagramElement = (DiagramElement)theEObject;
         T result = caseDiagramElement(diagramElement);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case ModelPackage.STYLE:
-      {
-        Style style = (Style)theEObject;
-        T result = caseStyle(style);
-        if (result == null) result = caseFeatureContainer(style);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -537,22 +522,6 @@ public class ModelSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Tool Group</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Tool Group</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseToolGroup(ToolGroup object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -564,22 +533,6 @@ public class ModelSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDiagramElement(DiagramElement object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Style</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Style</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseStyle(Style object)
   {
     return null;
   }

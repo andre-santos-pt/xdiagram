@@ -16,8 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.FeatureContainer#isStyled <em>Styled</em>}</li>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.FeatureContainer#getStyle <em>Style</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.FeatureContainer#getFeatures <em>Features</em>}</li>
  * </ul>
  *
@@ -27,58 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface FeatureContainer extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Styled</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Styled</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Styled</em>' attribute.
-   * @see #setStyled(boolean)
-   * @see pt.iscte.xdiagram.dsl.model.ModelPackage#getFeatureContainer_Styled()
-   * @model
-   * @generated
-   */
-  boolean isStyled();
-
-  /**
-   * Sets the value of the '{@link pt.iscte.xdiagram.dsl.model.FeatureContainer#isStyled <em>Styled</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Styled</em>' attribute.
-   * @see #isStyled()
-   * @generated
-   */
-  void setStyled(boolean value);
-
-  /**
-   * Returns the value of the '<em><b>Style</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Style</em>' reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Style</em>' reference.
-   * @see #setStyle(Style)
-   * @see pt.iscte.xdiagram.dsl.model.ModelPackage#getFeatureContainer_Style()
-   * @model
-   * @generated
-   */
-  Style getStyle();
-
-  /**
-   * Sets the value of the '{@link pt.iscte.xdiagram.dsl.model.FeatureContainer#getStyle <em>Style</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Style</em>' reference.
-   * @see #getStyle()
-   * @generated
-   */
-  void setStyle(Style value);
-
   /**
    * Returns the value of the '<em><b>Features</b></em>' containment reference list.
    * The list contents are of type {@link pt.iscte.xdiagram.dsl.model.Feature}.
