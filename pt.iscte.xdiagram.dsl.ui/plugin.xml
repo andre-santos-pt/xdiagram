@@ -4,12 +4,13 @@
 	<extension
 		point="org.eclipse.ui.editors">
 		<editor
-			class="pt.iscte.xdiagram.dsl.ui.XdiagramDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
-			contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
-			default="true"
-			extensions="xdia"
-			id="pt.iscte.xdiagram.dsl.XdiagramDsl"
-			name="XdiagramDsl Editor">
+        class="pt.iscte.xdiagram.dsl.ui.XdiagramDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+        contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
+        default="true"
+        extensions="xdia"
+        icon="icons/xdiagram_ico.gif"
+        id="pt.iscte.xdiagram.dsl.XdiagramDsl"
+        name="XdiagramDsl Editor">
 		</editor>
 	</extension>
 	<extension

@@ -95,7 +95,7 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cMetamodelKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cPluginKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cPluginIdKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cPluginAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cPluginSTRINGTerminalRuleCall_3_0 = (RuleCall)cPluginAssignment_3.eContents().get(0);
 		private final Keyword cEcoreFileKeyword_4 = (Keyword)cGroup.eContents().get(4);
@@ -106,12 +106,12 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//// validation
 		//MetaModel:
 		//	'metamodel' '{'
-		//	'plugin' plugin=STRING
+		//	'plugin-id' plugin=STRING
 		//	'ecore-file' ecorePath=STRING
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'metamodel' '{' 'plugin' plugin=STRING 'ecore-file' ecorePath=STRING '}'
+		//'metamodel' '{' 'plugin-id' plugin=STRING 'ecore-file' ecorePath=STRING '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'metamodel'
@@ -120,8 +120,8 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//'plugin'
-		public Keyword getPluginKeyword_2() { return cPluginKeyword_2; }
+		//'plugin-id'
+		public Keyword getPluginIdKeyword_2() { return cPluginIdKeyword_2; }
 		
 		//plugin=STRING
 		public Assignment getPluginAssignment_3() { return cPluginAssignment_3; }
@@ -3356,7 +3356,7 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	//// validation
 	//MetaModel:
 	//	'metamodel' '{'
-	//	'plugin' plugin=STRING
+	//	'plugin-id' plugin=STRING
 	//	'ecore-file' ecorePath=STRING
 	//	'}';
 	public MetaModelElements getMetaModelAccess() {

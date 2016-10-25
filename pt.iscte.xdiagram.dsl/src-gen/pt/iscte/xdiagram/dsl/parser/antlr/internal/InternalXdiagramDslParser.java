@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'metamodel'", "'{'", "'plugin'", "'ecore-file'", "'}'", "'.'", "'*'", "'diagram'", "'if'", "'node'", "'link'", "'reference'", "'class'", "'source'", "'target'", "'decorator'", "'%'", "'anchor'", "'max'", "';'", "'color'", "'figure'", "'as'", "'child'", "'rectangle'", "'square'", "'rhombus'", "'ellipse'", "'circle'", "'polygon'", "'polyline'", "'triangle'", "'hline'", "'vline'", "'arrow'", "'contains'", "'null'", "'label'", "'image'", "'invisible'", "'foreground'", "'background'", "'transparency'", "'size'", "']'", "'resizable'", "'point'", "'position'", "'corner'", "'layout'", "'vertical'", "'horizontal'", "'margin'", "'text'", "'edit:'", "'font'", "'arial'", "'verdana'", "'courier'", "'times'", "'bold'", "'italics'", "'align'", "'linestyle'", "'manhattan'", "'linewidth'", "'incoming'", "'outgoing'", "'white'", "'silver'", "'gray'", "'black'", "'red'", "'maroon'", "'yellow'", "'olive'", "'lime'", "'green'", "'aqua'", "'teal'", "'blue'", "'navy'", "'fuchsia'", "'purple'", "'='", "'<>'", "'true'", "'false'", "'left'", "'center'", "'right'", "'solid'", "'dashed'", "'dotted'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'metamodel'", "'{'", "'plugin-id'", "'ecore-file'", "'}'", "'.'", "'*'", "'diagram'", "'if'", "'node'", "'link'", "'reference'", "'class'", "'source'", "'target'", "'decorator'", "'%'", "'anchor'", "'max'", "';'", "'color'", "'figure'", "'as'", "'child'", "'rectangle'", "'square'", "'rhombus'", "'ellipse'", "'circle'", "'polygon'", "'polyline'", "'triangle'", "'hline'", "'vline'", "'arrow'", "'contains'", "'null'", "'label'", "'image'", "'invisible'", "'foreground'", "'background'", "'transparency'", "'size'", "']'", "'resizable'", "'point'", "'position'", "'corner'", "'layout'", "'vertical'", "'horizontal'", "'margin'", "'text'", "'edit:'", "'font'", "'arial'", "'verdana'", "'courier'", "'times'", "'bold'", "'italics'", "'align'", "'linestyle'", "'manhattan'", "'linewidth'", "'incoming'", "'outgoing'", "'white'", "'silver'", "'gray'", "'black'", "'red'", "'maroon'", "'yellow'", "'olive'", "'lime'", "'green'", "'aqua'", "'teal'", "'blue'", "'navy'", "'fuchsia'", "'purple'", "'='", "'<>'", "'true'", "'false'", "'left'", "'center'", "'right'", "'solid'", "'dashed'", "'dotted'"
     };
     public static final int T__50=50;
     public static final int T__59=59;
@@ -491,7 +491,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMetaModel"
-    // InternalXdiagramDsl.g:190:1: ruleMetaModel returns [EObject current=null] : (otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}' ) ;
+    // InternalXdiagramDsl.g:190:1: ruleMetaModel returns [EObject current=null] : (otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin-id' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}' ) ;
     public final EObject ruleMetaModel() throws RecognitionException {
         EObject current = null;
 
@@ -507,11 +507,11 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:196:2: ( (otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}' ) )
-            // InternalXdiagramDsl.g:197:2: (otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}' )
+            // InternalXdiagramDsl.g:196:2: ( (otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin-id' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}' ) )
+            // InternalXdiagramDsl.g:197:2: (otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin-id' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}' )
             {
-            // InternalXdiagramDsl.g:197:2: (otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}' )
-            // InternalXdiagramDsl.g:198:3: otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}'
+            // InternalXdiagramDsl.g:197:2: (otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin-id' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}' )
+            // InternalXdiagramDsl.g:198:3: otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin-id' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}'
             {
             otherlv_0=(Token)match(input,11,FOLLOW_5); 
 
@@ -523,7 +523,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             		
             otherlv_2=(Token)match(input,13,FOLLOW_7); 
 
-            			newLeafNode(otherlv_2, grammarAccess.getMetaModelAccess().getPluginKeyword_2());
+            			newLeafNode(otherlv_2, grammarAccess.getMetaModelAccess().getPluginIdKeyword_2());
             		
             // InternalXdiagramDsl.g:210:3: ( (lv_plugin_3_0= RULE_STRING ) )
             // InternalXdiagramDsl.g:211:4: (lv_plugin_3_0= RULE_STRING )

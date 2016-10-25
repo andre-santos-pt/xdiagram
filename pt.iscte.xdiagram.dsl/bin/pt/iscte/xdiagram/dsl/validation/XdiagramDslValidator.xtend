@@ -141,17 +141,17 @@ class XdiagramDslValidator extends AbstractXdiagramDslValidator {
 			if(linkClass.isAbstract())
 				error("link class cannot be abstract", ModelPackage.Literals.DIAGRAM_ELEMENT__MODEL_CLASS);
 			
-		
-			var srcRef = link.getSourceReference();
-			if(!srcRef.getEReferenceType().isSuperTypeOf(linkClass))
-				error("source reference type must be compatible with link class", ModelPackage.Literals.LINK__SOURCE_REFERENCE);			
+			// TODO
+//			var srcRef = link.getSourceReference();
+//			if(!srcRef.getEReferenceType().isSuperTypeOf(linkClass))
+//				error("source reference type must be compatible with link class", ModelPackage.Literals.LINK__SOURCE_REFERENCE);			
 			
-			var tgtRef = link.getTargetReference();
-			if(!linkClass.getEAllReferences().contains(tgtRef))
-				error("target reference must be owned by link class", ModelPackage.Literals.LINK__TARGET_REFERENCE);
+//			var tgtRef = link.getTargetReference();
+//			if(!linkClass.getEAllReferences().contains(tgtRef))
+//				error("target reference must be owned by link class", ModelPackage.Literals.LINK__TARGET_REFERENCE);
 			
-			if(!(tgtRef.getLowerBound() == 1 && tgtRef.getUpperBound() == 1))
-				error("target reference must have cardinality 1..1", ModelPackage.Literals.LINK__TARGET_REFERENCE);
+//			if(!(tgtRef.getLowerBound() == 1 && tgtRef.getUpperBound() == 1))
+//				error("target reference must have cardinality 1..1", ModelPackage.Literals.LINK__TARGET_REFERENCE);
 			
 		}
 	}

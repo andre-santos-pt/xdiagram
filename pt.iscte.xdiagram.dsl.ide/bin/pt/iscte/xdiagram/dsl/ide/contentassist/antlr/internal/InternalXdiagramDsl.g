@@ -2872,9 +2872,9 @@ rule__MetaModel__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getMetaModelAccess().getPluginKeyword_2()); }
-	'plugin'
-	{ after(grammarAccess.getMetaModelAccess().getPluginKeyword_2()); }
+	{ before(grammarAccess.getMetaModelAccess().getPluginIdKeyword_2()); }
+	'plugin-id'
+	{ after(grammarAccess.getMetaModelAccess().getPluginIdKeyword_2()); }
 )
 ;
 finally {

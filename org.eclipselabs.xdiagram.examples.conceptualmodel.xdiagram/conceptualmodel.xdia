@@ -1,25 +1,19 @@
-xdiagram conceptualmodelDiagram "asdsa"
-meta plugin: "org.eclipselabs.xdiagram.examples.conceptualmodel" ecore-file: "model/conceptualmodel.ecore"
-
-//metamodel {
-//	id conceptualmodelDiagram;
-//	description "asdsad";
-//	plugin "org.eclipselabs.xdiagram.examples.conceptualmodel";
-//	ecore-file "model/conceptualmodel.ecore";
-//}
+metamodel {
+	plugin-id "org.eclipselabs.xdiagram.examples.conceptualmodel"
+	ecore-file "model/conceptualmodel.ecore"
+}
 
 diagram Package {
 	contains entities;
 	contains packages;
 }
 
-//color lightgray 240 240 240;
+color lightgray 240 240 240;
 
 node Entity rectangle {
 	size 200 100 resizable;
 	corner 20;
-	foreground red;
-	background yellow;
+	background lightgray;
 	child image "class_icon.gif" {
 		size 32 32;
 		position 10% 0;
@@ -75,26 +69,26 @@ link reference Entity.extends {
 }
 
 
-//link class Association source Entity.associations target Association.to {
-//	decorator 0% rhombus {
-//		size 20 20;
-//		background black if type = COMPOSITION;
-//		background white if type = AGGREGATION;
-//		invisible if Association.type = REFERENCE;
-//	}
-//	
-//	decorator 50% label {
-//		text name;
-//	}
-//	
-//	decorator 85% label {
-//		text cardinality;
-//		font 16;
-//	}
-//		
-//	decorator 100% arrow {
-//		invisible if type <> REFERENCE;
-//		size 10 10;
-//	}
-//}
+link class Association source Entity.associations target to {
+	decorator 0% rhombus {
+		size 20 20;
+		background black if type = COMPOSITION;
+		background white if type = AGGREGATION;
+		invisible if type = REFERENCE;
+	}
+	
+	decorator 50% label {
+		text name;
+	}
+	
+	decorator 85% label {
+		text cardinality;
+		font 16;
+	}
+		
+	decorator 100% arrow {
+		invisible if type <> REFERENCE;
+		size 10 10;
+	}
+}
 

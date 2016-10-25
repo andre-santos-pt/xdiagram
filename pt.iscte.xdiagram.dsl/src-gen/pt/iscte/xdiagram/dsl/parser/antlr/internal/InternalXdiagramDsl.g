@@ -203,9 +203,9 @@ ruleMetaModel returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getMetaModelAccess().getLeftCurlyBracketKeyword_1());
 		}
-		otherlv_2='plugin'
+		otherlv_2='plugin-id'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getMetaModelAccess().getPluginKeyword_2());
+			newLeafNode(otherlv_2, grammarAccess.getMetaModelAccess().getPluginIdKeyword_2());
 		}
 		(
 			(

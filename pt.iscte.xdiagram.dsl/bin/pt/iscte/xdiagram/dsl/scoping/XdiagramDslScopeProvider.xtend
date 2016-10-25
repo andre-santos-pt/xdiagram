@@ -50,16 +50,19 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 
 	new() {
 //		println("SCOPE")
+	}
 
+	override getScope(EObject context, EReference reference) {
+		return if(reference.EType.getName().matches("EClass|EReference|EAttribute"))
+			new XdiagramScope(context, reference)
+		else 
+			super.getScope(context, reference)	
 	}
 
 	static class XdiagramScope implements IScope {
 		var list = new ArrayList<IEObjectDescription>();
 		var map = new HashMap<QualifiedName, IEObjectDescription>;
-		
-		var Multimap<QualifiedName, IEObjectDescription> referenceLinksMap = ArrayListMultimap.create();
-		var Multimap<QualifiedName, IEObjectDescription> parentChildrenMap = ArrayListMultimap.create();
-		var Multimap<QualifiedName, IEObjectDescription> attributesMap = ArrayListMultimap.create();
+
 		
 
 		val EObject context;
@@ -69,14 +72,14 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 		new(EObject context, EReference reference) {
 			this.context = context;
 			this.reference = reference;
+			loadEPackage();
+			if (ePackage != null)
+				loadData();
+		}
 
-			var top = context;
-			while (!(top instanceof XDiagram))
-				top = top.eContainer;
+		def loadEPackage() {
+			var xdiagram = crawlUp(context, ModelPackage.Literals.XDIAGRAM) as XDiagram;
 
-//			println((top as XDiagram).id + "   " + context);
-
-			var xdiagram = top as XDiagram;
 			if (xdiagram.metamodel != null && xdiagram.metamodel.plugin != null &&
 				xdiagram.metamodel.ecorePath != null) {
 				var ecorePlugin = xdiagram.metamodel.plugin;
@@ -99,37 +102,68 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 //						println("FAIL2")
 					}
 				}
-
-				if (resource != null) {
+				if (resource != null)
 					ePackage = resource.getContents().get(0) as EPackage;
+			}
+		}
+		
+		var Multimap<QualifiedName, IEObjectDescription> referenceLinksMap = ArrayListMultimap.create();
+		var Multimap<QualifiedName, IEObjectDescription> parentChildrenMap = ArrayListMultimap.create();
+		var Multimap<QualifiedName, IEObjectDescription> attributesMap = ArrayListMultimap.create();
+		var Multimap<QualifiedName, IEObjectDescription> complexRefsMap = ArrayListMultimap.create();
+		var Multimap<QualifiedName, IEObjectDescription> complexRefsSourceMap = ArrayListMultimap.create();
+		var Multimap<QualifiedName, IEObjectDescription> targetRefsMap = ArrayListMultimap.create();
 
-					for (EClassifier c : ePackage.EClassifiers) {
-						if (c instanceof EClass) {
-							var eClass = c as EClass;
-							var classQname = QualifiedName.create(eClass.name);
-							var desc = new EObjectDescription(classQname, c, null);
+		
+		def loadData() {
+			for (c : ePackage.EClassifiers) {
+				if (c instanceof EClass) {
+					var eClass = c as EClass;
+					var classQname = QualifiedName.create(eClass.name);
+					var desc = new EObjectDescription(classQname, c, null);
 
-							map.put(QualifiedName.create(eClass.name), desc);
+					map.put(QualifiedName.create(eClass.name), desc);
+
+					for (a : c.EAllAttributes) {
+						var adesc = new EObjectDescription(QualifiedName.create(a.name), a, null);
+						attributesMap.put(classQname, adesc);
+					}
+
+					for (r : c.EAllReferences) {
+						var qname = QualifiedName.create(c.name, r.name)
+						var rdesc = new EObjectDescription(qname, r, null);
+						referenceLinksMap.put(qname, rdesc);
+						if (r.isContainment) {
+							qname = QualifiedName.create(c.name)
+							rdesc = new EObjectDescription(QualifiedName.create(r.name), r, null);
+							parentChildrenMap.put(qname, rdesc);
 							
-							for(EAttribute a : c.EAllAttributes) {
-								var adesc = new EObjectDescription(QualifiedName.create(a.name), a, null);
-								attributesMap.put(classQname, adesc);
-							}
-							
-							for (EReference r : c.EAllReferences) {
-								var qname = QualifiedName.create(c.name, r.name)
-								var rdesc = new EObjectDescription(qname, r, null);		
-								referenceLinksMap.put(qname, rdesc);
-								if(r.isContainment) {
-									qname = QualifiedName.create(c.name)
-									rdesc = new EObjectDescription(QualifiedName.create(r.name), r, null);	
-									parentChildrenMap.put(qname, rdesc);
+							for(r_uni : (r.EType as EClass).EAllReferences) {
+								if(r_uni.lowerBound == 1 && r_uni.upperBound == 1) {
+									var uname = QualifiedName.create(r.EType.name);
+									var udesc = new EObjectDescription(uname, r.EType, null);
+									complexRefsMap.put(uname, udesc);
+									
+									var sname = QualifiedName.create(c.name, r.name);
+									var sdesc = new EObjectDescription(sname, r, null);
+									complexRefsSourceMap.put(uname, sdesc);
 								}
 							}
+						}
+						else if(!r.isContainment && r.lowerBound == 1 && r.upperBound == 1) {
+							var tdesc = new EObjectDescription(QualifiedName.create(r.name), r, null);							
+							targetRefsMap.put(classQname, tdesc);
 						}
 					}
 				}
 			}
+		}
+
+		def crawlUp(EObject o, EClass clazz) {
+			var n = o.eContainer;
+			while (!(clazz.isInstance(n)))
+				n = n.eContainer;
+			return n;
 		}
 
 		def getDiagramElement(EObject o) {
@@ -138,7 +172,7 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 				n = n.eContainer;
 			return n as DiagramElement;
 		}
-		
+
 		override getAllElements() {
 			if (context instanceof Contains) {
 				if (context.eContainer instanceof Diagram) {
@@ -148,32 +182,35 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 					val node = getDiagramElement(context) as Node;
 					return parentChildrenMap.get(QualifiedName.create(node.modelClass.name));
 				}
-			} else if (context instanceof Link && (context as Link).reference) {
-				return referenceLinksMap.values();
+			} 
+			else if (context instanceof Link && (context as Link).reference) {
+				return referenceLinksMap.values;
 			}
-			if (context instanceof Link && (context as Link).complex) {
-				if(reference.equals(ModelPackage.Literals.LINK__SOURCE_REFERENCE)) {
-					
+			else if (context instanceof Link && (context as Link).complex) {
+				if(reference.name.equals("modelClass")) {
+					return complexRefsMap.values;
 				}
-				else if(reference.equals(ModelPackage.Literals.LINK__TARGET_REFERENCE)) {
-					
+				else if (reference.equals(ModelPackage.Literals.LINK__SOURCE_REFERENCE)) {
+					var qname = QualifiedName.create((context as Link).modelClass.name);
+					return complexRefsSourceMap.get(qname);
+				} 
+				else if (reference.equals(ModelPackage.Literals.LINK__TARGET_REFERENCE)) {
+					var qname = QualifiedName.create((context as Link).modelClass.name);
+					return targetRefsMap.get(qname);
 				}
-			}
-			else if(reference.name.equals("modelAttribute")) {
-				var owner = getDiagramElement(context);
-				if(owner instanceof Link && (owner as Link).reference) {
+			} 
+			else if (reference.name.equals("modelAttribute")) {
+				var owner = crawlUp(context, ModelPackage.Literals.DIAGRAM_ELEMENT);
+				if (owner instanceof Link && (owner as Link).reference) {
 					return Collections.emptyIterator() as Iterable<IEObjectDescription>;
-				}
-				else if(owner instanceof Node) {
+				} else if (owner instanceof Node) {
 					return attributesMap.get(QualifiedName.create((owner as Node).modelClass.name));
-				}
-				else
+				} else
 					return attributesMap.get(QualifiedName.create((owner as Link).modelClass.name));
-			}
-			 else
+			} else
 				return map.values;
 		}
-		
+
 		override getElements(EObject object) {
 			return list;
 
@@ -184,7 +221,7 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 		}
 
 		override getElements(QualifiedName name) {
-			return Collections.emptyIterator() as Iterable<IEObjectDescription>;
+			return Collections.emptyList();
 		}
 
 		override getSingleElement(QualifiedName name) {
@@ -205,47 +242,43 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 							return new EObjectDescription(QualifiedName.create(r.name), r, null);
 					}
 				}
-			}
-			else if(context instanceof Link && (context as Link).reference) {
+			} 
+			else if (context instanceof Link && (context as Link).reference) {
 				var list = referenceLinksMap.get(name);
 				return if(list.isEmpty) null else list.get(0);
 			}
-			else if(reference.name.equals("modelAttribute")) {
+			else if (context instanceof Link && (context as Link).complex) {
+				if(reference.name.equals("modelClass")) {
+					for(d : complexRefsMap.values)
+						if(d.name.equals(name))
+							return d;
+				}
+				else if (reference.equals(ModelPackage.Literals.LINK__SOURCE_REFERENCE)) {
+					var qname = QualifiedName.create((context as Link).modelClass.name);
+					for(d : complexRefsSourceMap.get(qname))
+						if(d.name.equals(name))
+							return d;
+				} 
+				else if (reference.equals(ModelPackage.Literals.LINK__TARGET_REFERENCE)) {
+					var qname = QualifiedName.create((context as Link).modelClass.name);
+					for(d : targetRefsMap.get(qname))
+						if(d.name.equals(name))
+							return d;
+				}	
+			}
+			else if (reference.name.equals("modelAttribute")) {
 				var owner = getDiagramElement(context);
-				if(owner.modelClass == null)
+				if (owner.modelClass == null || owner.modelClass.name == null)
 					return null;
 				var list = attributesMap.get(QualifiedName.create(owner.modelClass.name));
-				return if(list.isEmpty) null else list.get(0);
-			 }	
+				for(d : list)
+					if(d.name.equals(name))
+						return d;
+				return null;
+			}
 
 			return map.get(name); // if(list.isEmpty) null else list.get(0);
 		}
 	}
 
-	override getScope(EObject context, EReference reference) {
-		return new XdiagramScope(context, reference);
-
-//		var scope = new XdiagramScope();
-
-//		var scope = super.getScope(context, reference);
-//		if (context instanceof Contains) {
-//			if(context.eContainer instanceof Diagram) {
-//				val diagram = context.eContainer as Diagram;
-//				for(IEObjectDescription d : scope.getAllElements())
-//					System::out.println(d.getClass() + "  " + d);
-//				return new FilteringScope(scope, [EObjectOrProxy.eContainer == diagram.modelClass && !name.toString.startsWith("http") && (EObjectOrProxy as EReference).containment ]);
-//			}
-//			else if(context.eContainer instanceof ConnectableElement) {
-//				var n =  context.eContainer;
-//				while(!(n instanceof Node))
-//					n = n.eContainer;
-//				val node = n as Node;
-//				return new FilteringScope(scope, [EObjectOrProxy.eContainer == node.modelClass && !name.toString.startsWith("http") && (EObjectOrProxy as EReference).containment]);
-//			}
-//		}
-//		return scope;
-	}
-
-//			var ecoreFile = ResourcesPlugin.getWorkspace().getRoot().findMember(new Path("/pt.iscte.xdiagram.examples.statemachine/model/statemachine.ecore"));
-//			var modelLocation = URI.createFileURI("platform:/resource/pt.iscte.xdiagram.examples.statemachine/model/statemachine.ecore");
 }

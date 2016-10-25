@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalXdiagramDslParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'verdana'", "'courier'", "'times'", "'incoming'", "'outgoing'", "'white'", "'silver'", "'gray'", "'black'", "'red'", "'maroon'", "'yellow'", "'olive'", "'lime'", "'green'", "'aqua'", "'teal'", "'blue'", "'navy'", "'fuchsia'", "'purple'", "'='", "'<>'", "'true'", "'false'", "'left'", "'center'", "'right'", "'solid'", "'dashed'", "'dotted'", "'metamodel'", "'{'", "'plugin'", "'ecore-file'", "'}'", "'.'", "'*'", "'diagram'", "'if'", "'node'", "'link'", "'source'", "'target'", "'decorator'", "'%'", "'anchor'", "';'", "'max'", "'color'", "'figure'", "'as'", "'child'", "'rhombus'", "'triangle'", "'arrow'", "'contains'", "'label'", "'image'", "'invisible'", "'transparency'", "'size'", "'point'", "'position'", "'corner'", "'layout'", "'margin'", "'text'", "'font'", "'align'", "'linestyle'", "'linewidth'", "'reference'", "'class'", "'rectangle'", "'square'", "'ellipse'", "'circle'", "'polygon'", "'polyline'", "'hline'", "'vline'", "'null'", "'foreground'", "'background'", "']'", "'resizable'", "'vertical'", "'horizontal'", "'edit:'", "'arial'", "'bold'", "'italics'", "'manhattan'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'verdana'", "'courier'", "'times'", "'incoming'", "'outgoing'", "'white'", "'silver'", "'gray'", "'black'", "'red'", "'maroon'", "'yellow'", "'olive'", "'lime'", "'green'", "'aqua'", "'teal'", "'blue'", "'navy'", "'fuchsia'", "'purple'", "'='", "'<>'", "'true'", "'false'", "'left'", "'center'", "'right'", "'solid'", "'dashed'", "'dotted'", "'metamodel'", "'{'", "'plugin-id'", "'ecore-file'", "'}'", "'.'", "'*'", "'diagram'", "'if'", "'node'", "'link'", "'source'", "'target'", "'decorator'", "'%'", "'anchor'", "';'", "'max'", "'color'", "'figure'", "'as'", "'child'", "'rhombus'", "'triangle'", "'arrow'", "'contains'", "'label'", "'image'", "'invisible'", "'transparency'", "'size'", "'point'", "'position'", "'corner'", "'layout'", "'margin'", "'text'", "'font'", "'align'", "'linestyle'", "'linewidth'", "'reference'", "'class'", "'rectangle'", "'square'", "'ellipse'", "'circle'", "'polygon'", "'polyline'", "'hline'", "'vline'", "'null'", "'foreground'", "'background'", "']'", "'resizable'", "'vertical'", "'horizontal'", "'edit:'", "'arial'", "'bold'", "'italics'", "'manhattan'"
     };
     public static final int T__50=50;
     public static final int T__59=59;
@@ -9928,21 +9928,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__MetaModel__Group__2__Impl"
-    // InternalXdiagramDsl.g:2869:1: rule__MetaModel__Group__2__Impl : ( 'plugin' ) ;
+    // InternalXdiagramDsl.g:2869:1: rule__MetaModel__Group__2__Impl : ( 'plugin-id' ) ;
     public final void rule__MetaModel__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:2873:1: ( ( 'plugin' ) )
-            // InternalXdiagramDsl.g:2874:1: ( 'plugin' )
+            // InternalXdiagramDsl.g:2873:1: ( ( 'plugin-id' ) )
+            // InternalXdiagramDsl.g:2874:1: ( 'plugin-id' )
             {
-            // InternalXdiagramDsl.g:2874:1: ( 'plugin' )
-            // InternalXdiagramDsl.g:2875:2: 'plugin'
+            // InternalXdiagramDsl.g:2874:1: ( 'plugin-id' )
+            // InternalXdiagramDsl.g:2875:2: 'plugin-id'
             {
-             before(grammarAccess.getMetaModelAccess().getPluginKeyword_2()); 
+             before(grammarAccess.getMetaModelAccess().getPluginIdKeyword_2()); 
             match(input,44,FOLLOW_2); 
-             after(grammarAccess.getMetaModelAccess().getPluginKeyword_2()); 
+             after(grammarAccess.getMetaModelAccess().getPluginIdKeyword_2()); 
 
             }
 
