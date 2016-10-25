@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
-	<classpathentry excluding="org/eclipselabs/xdiagram/provider/internal/props/|org/eclipselabs/xdiagram/provider/internal/CustomRenderingStyle.java|org/eclipselabs/xdiagram/provider/handlers/PolylineHandler.java|org/eclipselabs/xdiagram/provider/handlers/RectangleHandler.java|org/eclipselabs/xdiagram/provider/handlers/EllipseHandler.java|org/eclipselabs/xdiagram/provider/handlers/LabelHandler.java|org/eclipselabs/xdiagram/provider/handlers/ConnectableElementHandler.java|org/eclipselabs/xdiagram/provider/handlers/ConnectableElementHandlerChain.java" kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="output" path="bin"/>
-</classpath>

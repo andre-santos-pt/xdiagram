@@ -13,7 +13,7 @@ import org.eclipse.xtext.ide.editor.contentassist.antlr.AbstractContentAssistPar
 import org.eclipse.xtext.ide.editor.contentassist.antlr.FollowElement;
 import org.eclipse.xtext.ide.editor.contentassist.antlr.internal.AbstractInternalContentAssistParser;
 import pt.iscte.xdiagram.dsl.ide.contentassist.antlr.internal.InternalXdiagramDslParser;
-import pt.iscte.xdiagram.dsl.services.XdiagramDslGrammarAccess;
+import pt.iscte.xdiagram.dsl.services.XdiagramDslGrammarAccess;;
 
 public class XdiagramDslParser extends AbstractContentAssistParser {
 

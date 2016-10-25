@@ -5,9 +5,9 @@ Bundle-Vendor: ISCTE-IUL
 Bundle-Version: 0.2
 Bundle-SymbolicName: pt.iscte.xdiagram.dsl.ide; singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: pt.iscte.xdiagram.dsl,
- org.eclipse.xtext.ide,
- org.eclipse.xtext.xbase.ide
+Require-Bundle: org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ pt.iscte.xdiagram.dsl;bundle-version="0.2.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: pt.iscte.xdiagram.dsl.ide.contentassist.antlr,
  pt.iscte.xdiagram.dsl.ide.contentassist.antlr.internal
