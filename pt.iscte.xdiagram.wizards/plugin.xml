@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="pt.iscte.xdiagram.pluginxml.wizards"
+            name="Xdiagram">
+      </category>
+      <wizard
+            category="pt.iscte.xdiagram.pluginxml.wizards"
+            class="pt.iscte.xdiagram.wizards.NewXdiagramWizard"
+            icon="icons/xdiagram_proj.gif"
+            id="pt.iscte.xdiagram.pluginxml.NewXdiagramWizard"
+            name="Xdiagram Project"
+            project="true">
+         <selection
+               class="org.eclipse.core.resources.IFile"
+               name="*.ecore">
+         </selection>
+      </wizard>
+   </extension>
+
+</plugin>
