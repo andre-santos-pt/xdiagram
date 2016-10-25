@@ -29,7 +29,7 @@
    </extension>
    
    <extension
-         point="org.eclipselabs.xdiagram.interpreter.providers">
+         point="pt.iscte.xdiagram.interpreter.providers">
       <provider
             diagramType="ComponentModelDiagram"
             ePackageURI="http://org.eclipselabs.xdiagram.examples/Components"

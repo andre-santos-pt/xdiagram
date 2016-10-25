@@ -6,11 +6,11 @@ package pt.iscte.xdiagram.dsl.scoping;
 import com.google.common.base.Objects;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAttribute;
@@ -27,6 +27,8 @@ import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.xbase.lib.Conversions;
 import org.eclipse.xtext.xbase.lib.Exceptions;
+import org.eclipse.xtext.xbase.lib.Functions.Function1;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import pt.iscte.xdiagram.dsl.model.ConnectableElement;
 import pt.iscte.xdiagram.dsl.model.Contains;
 import pt.iscte.xdiagram.dsl.model.Diagram;
@@ -47,10 +49,6 @@ import pt.iscte.xdiagram.dsl.scoping.AbstractXdiagramDslScopeProvider;
 @SuppressWarnings("all")
 public class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
   public static class XdiagramScope implements IScope {
-    private ArrayList<IEObjectDescription> list = new ArrayList<IEObjectDescription>();
-    
-    private HashMap<QualifiedName, IEObjectDescription> map = new HashMap<QualifiedName, IEObjectDescription>();
-    
     private final EObject context;
     
     private final EReference reference;
@@ -127,6 +125,8 @@ public class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
       return _xblockexpression;
     }
     
+    private Map<QualifiedName, IEObjectDescription> eClassMap = new HashMap<QualifiedName, IEObjectDescription>();
+    
     private Multimap<QualifiedName, IEObjectDescription> referenceLinksMap = ArrayListMultimap.<QualifiedName, IEObjectDescription>create();
     
     private Multimap<QualifiedName, IEObjectDescription> parentChildrenMap = ArrayListMultimap.<QualifiedName, IEObjectDescription>create();
@@ -146,59 +146,57 @@ public class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
           EClass eClass = ((EClass) c);
           String _name = eClass.getName();
           QualifiedName classQname = QualifiedName.create(_name);
-          EObjectDescription desc = new EObjectDescription(classQname, c, null);
-          String _name_1 = eClass.getName();
-          QualifiedName _create = QualifiedName.create(_name_1);
-          this.map.put(_create, desc);
+          EObjectDescription _eObjectDescription = new EObjectDescription(classQname, c, null);
+          this.eClassMap.put(classQname, _eObjectDescription);
           EList<EAttribute> _eAllAttributes = ((EClass)c).getEAllAttributes();
           for (final EAttribute a : _eAllAttributes) {
             {
-              String _name_2 = a.getName();
-              QualifiedName _create_1 = QualifiedName.create(_name_2);
-              EObjectDescription adesc = new EObjectDescription(_create_1, a, null);
+              String _name_1 = a.getName();
+              QualifiedName _create = QualifiedName.create(_name_1);
+              EObjectDescription adesc = new EObjectDescription(_create, a, null);
               this.attributesMap.put(classQname, adesc);
             }
           }
           EList<EReference> _eAllReferences = ((EClass)c).getEAllReferences();
           for (final EReference r : _eAllReferences) {
             {
-              String _name_2 = ((EClass)c).getName();
-              String _name_3 = r.getName();
-              QualifiedName qname = QualifiedName.create(_name_2, _name_3);
+              String _name_1 = ((EClass)c).getName();
+              String _name_2 = r.getName();
+              QualifiedName qname = QualifiedName.create(_name_1, _name_2);
               EObjectDescription rdesc = new EObjectDescription(qname, r, null);
               this.referenceLinksMap.put(qname, rdesc);
               boolean _isContainment = r.isContainment();
               if (_isContainment) {
-                String _name_4 = ((EClass)c).getName();
+                String _name_3 = ((EClass)c).getName();
+                QualifiedName _create = QualifiedName.create(_name_3);
+                qname = _create;
+                String _name_4 = r.getName();
                 QualifiedName _create_1 = QualifiedName.create(_name_4);
-                qname = _create_1;
-                String _name_5 = r.getName();
-                QualifiedName _create_2 = QualifiedName.create(_name_5);
-                EObjectDescription _eObjectDescription = new EObjectDescription(_create_2, r, null);
-                rdesc = _eObjectDescription;
+                EObjectDescription _eObjectDescription_1 = new EObjectDescription(_create_1, r, null);
+                rdesc = _eObjectDescription_1;
                 this.parentChildrenMap.put(qname, rdesc);
                 EClassifier _eType = r.getEType();
                 EList<EReference> _eAllReferences_1 = ((EClass) _eType).getEAllReferences();
                 for (final EReference r_uni : _eAllReferences_1) {
                   if (((r_uni.getLowerBound() == 1) && (r_uni.getUpperBound() == 1))) {
                     EClassifier _eType_1 = r.getEType();
-                    String _name_6 = _eType_1.getName();
-                    QualifiedName uname = QualifiedName.create(_name_6);
+                    String _name_5 = _eType_1.getName();
+                    QualifiedName uname = QualifiedName.create(_name_5);
                     EClassifier _eType_2 = r.getEType();
                     EObjectDescription udesc = new EObjectDescription(uname, _eType_2, null);
                     this.complexRefsMap.put(uname, udesc);
-                    String _name_7 = ((EClass)c).getName();
-                    String _name_8 = r.getName();
-                    QualifiedName sname = QualifiedName.create(_name_7, _name_8);
+                    String _name_6 = ((EClass)c).getName();
+                    String _name_7 = r.getName();
+                    QualifiedName sname = QualifiedName.create(_name_6, _name_7);
                     EObjectDescription sdesc = new EObjectDescription(sname, r, null);
                     this.complexRefsSourceMap.put(uname, sdesc);
                   }
                 }
               } else {
                 if ((((!r.isContainment()) && (r.getLowerBound() == 1)) && (r.getUpperBound() == 1))) {
-                  String _name_9 = r.getName();
-                  QualifiedName _create_3 = QualifiedName.create(_name_9);
-                  EObjectDescription tdesc = new EObjectDescription(_create_3, r, null);
+                  String _name_8 = r.getName();
+                  QualifiedName _create_2 = QualifiedName.create(_name_8);
+                  EObjectDescription tdesc = new EObjectDescription(_create_2, r, null);
                   this.targetRefsMap.put(classQname, tdesc);
                 }
               }
@@ -228,75 +226,85 @@ public class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
     
     @Override
     public Iterable<IEObjectDescription> getAllElements() {
-      if ((this.context instanceof Contains)) {
-        EObject _eContainer = ((Contains)this.context).eContainer();
-        if ((_eContainer instanceof Diagram)) {
-          EObject _eContainer_1 = ((Contains)this.context).eContainer();
-          final Diagram diagram = ((Diagram) _eContainer_1);
-          EClass _modelClass = diagram.getModelClass();
-          String _name = _modelClass.getName();
-          QualifiedName _create = QualifiedName.create(_name);
-          return this.parentChildrenMap.get(_create);
-        } else {
-          EObject _eContainer_2 = ((Contains)this.context).eContainer();
-          if ((_eContainer_2 instanceof ConnectableElement)) {
-            DiagramElement _diagramElement = this.getDiagramElement(this.context);
-            final Node node = ((Node) _diagramElement);
-            EClass _modelClass_1 = node.getModelClass();
-            String _name_1 = _modelClass_1.getName();
-            QualifiedName _create_1 = QualifiedName.create(_name_1);
-            return this.parentChildrenMap.get(_create_1);
-          }
-        }
+      if (((this.context instanceof Diagram) || (this.context instanceof Node))) {
+        Collection<IEObjectDescription> _values = this.eClassMap.values();
+        final Function1<IEObjectDescription, Boolean> _function = (IEObjectDescription it) -> {
+          EObject _eObjectOrProxy = it.getEObjectOrProxy();
+          boolean _isAbstract = ((EClass) _eObjectOrProxy).isAbstract();
+          return Boolean.valueOf((!_isAbstract));
+        };
+        return IterableExtensions.<IEObjectDescription>filter(_values, _function);
       } else {
-        if (((this.context instanceof Link) && ((Link) this.context).isReference())) {
-          return this.referenceLinksMap.values();
-        } else {
-          if (((this.context instanceof Link) && ((Link) this.context).isComplex())) {
-            String _name_2 = this.reference.getName();
-            boolean _equals = _name_2.equals("modelClass");
-            if (_equals) {
-              return this.complexRefsMap.values();
-            } else {
-              boolean _equals_1 = this.reference.equals(ModelPackage.Literals.LINK__SOURCE_REFERENCE);
-              if (_equals_1) {
-                EClass _modelClass_2 = ((Link) this.context).getModelClass();
-                String _name_3 = _modelClass_2.getName();
-                QualifiedName qname = QualifiedName.create(_name_3);
-                return this.complexRefsSourceMap.get(qname);
-              } else {
-                boolean _equals_2 = this.reference.equals(ModelPackage.Literals.LINK__TARGET_REFERENCE);
-                if (_equals_2) {
-                  EClass _modelClass_3 = ((Link) this.context).getModelClass();
-                  String _name_4 = _modelClass_3.getName();
-                  QualifiedName qname_1 = QualifiedName.create(_name_4);
-                  return this.targetRefsMap.get(qname_1);
-                }
-              }
-            }
+        if ((this.context instanceof Contains)) {
+          EObject _eContainer = ((Contains)this.context).eContainer();
+          if ((_eContainer instanceof Diagram)) {
+            EObject _eContainer_1 = ((Contains)this.context).eContainer();
+            final Diagram diagram = ((Diagram) _eContainer_1);
+            EClass _modelClass = diagram.getModelClass();
+            String _name = _modelClass.getName();
+            QualifiedName _create = QualifiedName.create(_name);
+            return this.parentChildrenMap.get(_create);
           } else {
-            String _name_5 = this.reference.getName();
-            boolean _equals_3 = _name_5.equals("modelAttribute");
-            if (_equals_3) {
-              EObject owner = this.crawlUp(this.context, ModelPackage.Literals.DIAGRAM_ELEMENT);
-              if (((owner instanceof Link) && ((Link) owner).isReference())) {
-                Iterator<Object> _emptyIterator = Collections.<Object>emptyIterator();
-                return ((Iterable<IEObjectDescription>) _emptyIterator);
+            EObject _eContainer_2 = ((Contains)this.context).eContainer();
+            if ((_eContainer_2 instanceof ConnectableElement)) {
+              DiagramElement _diagramElement = this.getDiagramElement(this.context);
+              final Node node = ((Node) _diagramElement);
+              EClass _modelClass_1 = node.getModelClass();
+              String _name_1 = _modelClass_1.getName();
+              QualifiedName _create_1 = QualifiedName.create(_name_1);
+              return this.parentChildrenMap.get(_create_1);
+            }
+          }
+        } else {
+          if (((this.context instanceof Link) && ((Link) this.context).isReference())) {
+            return this.referenceLinksMap.values();
+          } else {
+            if (((this.context instanceof Link) && ((Link) this.context).isComplex())) {
+              String _name_2 = this.reference.getName();
+              boolean _equals = _name_2.equals("modelClass");
+              if (_equals) {
+                return this.complexRefsMap.values();
               } else {
-                if ((owner instanceof Node)) {
-                  EClass _modelClass_4 = ((Node) owner).getModelClass();
-                  String _name_6 = _modelClass_4.getName();
-                  QualifiedName _create_2 = QualifiedName.create(_name_6);
-                  return this.attributesMap.get(_create_2);
+                boolean _equals_1 = this.reference.equals(ModelPackage.Literals.LINK__SOURCE_REFERENCE);
+                if (_equals_1) {
+                  EClass _modelClass_2 = ((Link) this.context).getModelClass();
+                  String _name_3 = _modelClass_2.getName();
+                  QualifiedName qname = QualifiedName.create(_name_3);
+                  return this.complexRefsSourceMap.get(qname);
                 } else {
-                  EClass _modelClass_5 = ((Link) owner).getModelClass();
-                  String _name_7 = _modelClass_5.getName();
-                  QualifiedName _create_3 = QualifiedName.create(_name_7);
-                  return this.attributesMap.get(_create_3);
+                  boolean _equals_2 = this.reference.equals(ModelPackage.Literals.LINK__TARGET_REFERENCE);
+                  if (_equals_2) {
+                    EClass _modelClass_3 = ((Link) this.context).getModelClass();
+                    String _name_4 = _modelClass_3.getName();
+                    QualifiedName qname_1 = QualifiedName.create(_name_4);
+                    return this.targetRefsMap.get(qname_1);
+                  }
                 }
               }
             } else {
-              return this.map.values();
+              String _name_5 = this.reference.getName();
+              boolean _equals_3 = _name_5.equals("modelAttribute");
+              if (_equals_3) {
+                EObject owner = this.crawlUp(this.context, ModelPackage.Literals.DIAGRAM_ELEMENT);
+                if (((owner instanceof Link) && ((Link) owner).isReference())) {
+                  Iterator<Object> _emptyIterator = Collections.<Object>emptyIterator();
+                  return ((Iterable<IEObjectDescription>) _emptyIterator);
+                } else {
+                  if ((owner instanceof Node)) {
+                    EClass _modelClass_4 = ((Node) owner).getModelClass();
+                    String _name_6 = _modelClass_4.getName();
+                    QualifiedName _create_2 = QualifiedName.create(_name_6);
+                    return this.attributesMap.get(_create_2);
+                  } else {
+                    EClass _modelClass_5 = ((Link) owner).getModelClass();
+                    String _name_7 = _modelClass_5.getName();
+                    QualifiedName _create_3 = QualifiedName.create(_name_7);
+                    return this.attributesMap.get(_create_3);
+                  }
+                }
+              } else {
+                return Collections.<IEObjectDescription>emptyList();
+              }
             }
           }
         }
@@ -306,19 +314,12 @@ public class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
     
     @Override
     public Iterable<IEObjectDescription> getElements(final EObject object) {
-      return this.list;
+      return Collections.<IEObjectDescription>emptyList();
     }
     
     @Override
     public IEObjectDescription getSingleElement(final EObject object) {
-      IEObjectDescription _xifexpression = null;
-      boolean _isEmpty = this.list.isEmpty();
-      if (_isEmpty) {
-        _xifexpression = null;
-      } else {
-        _xifexpression = this.list.get(0);
-      }
-      return _xifexpression;
+      return null;
     }
     
     @Override
@@ -446,7 +447,7 @@ public class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
           }
         }
       }
-      return this.map.get(name);
+      return this.eClassMap.get(name);
     }
   }
   

@@ -3,42 +3,30 @@
  */
 package pt.iscte.xdiagram.dsl.scoping
 
+import com.google.common.collect.ArrayListMultimap
+import com.google.common.collect.Multimap
+import java.util.Collections
+import java.util.Map
+import org.eclipse.emf.common.util.URI
+import org.eclipse.emf.ecore.EClass
 import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.EPackage
 import org.eclipse.emf.ecore.EReference
-import org.eclipse.xtext.scoping.impl.FilteringScope
-import pt.iscte.xdiagram.dsl.model.ConnectableElement
-import pt.iscte.xdiagram.dsl.model.Contains
-import pt.iscte.xdiagram.dsl.model.Diagram
-import pt.iscte.xdiagram.dsl.model.Node
+import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
+import org.eclipse.xtext.naming.QualifiedName
 import org.eclipse.xtext.resource.EObjectDescription
 import org.eclipse.xtext.resource.IEObjectDescription
 import org.eclipse.xtext.scoping.IScope
-import java.util.List
-import java.util.ArrayList
-import org.eclipse.xtext.naming.QualifiedName
-import javax.lang.model.element.QualifiedNameable
-import org.eclipse.emf.ecore.EcorePackage
-import org.eclipse.emf.ecore.EcoreFactory
-import org.eclipse.core.resources.ResourcesPlugin
-import org.eclipse.emf.common.util.URI
-import org.eclipse.core.resources.IResource
-import org.eclipse.core.runtime.Path
-import org.eclipse.emf.ecore.resource.Resource
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
-import org.eclipse.emf.ecore.resource.ResourceSet
-import org.eclipse.emf.ecore.EPackage
-import pt.iscte.xdiagram.dsl.model.XDiagram
-import java.util.Collections
-import java.util.HashMap
-import org.eclipse.emf.ecore.EClassifier
-import org.eclipse.emf.ecore.EClass
-import com.google.common.collect.ArrayListMultimap
+import pt.iscte.xdiagram.dsl.model.ConnectableElement
+import pt.iscte.xdiagram.dsl.model.Contains
+import pt.iscte.xdiagram.dsl.model.Diagram
+import pt.iscte.xdiagram.dsl.model.DiagramElement
 import pt.iscte.xdiagram.dsl.model.Link
 import pt.iscte.xdiagram.dsl.model.ModelPackage
-import java.io.InvalidObjectException
-import com.google.common.collect.Multimap
-import pt.iscte.xdiagram.dsl.model.DiagramElement
-import org.eclipse.emf.ecore.EAttribute
+import pt.iscte.xdiagram.dsl.model.Node
+import pt.iscte.xdiagram.dsl.model.XDiagram
+import java.util.HashMap
 
 /**
  * This class contains custom scoping description.
@@ -60,11 +48,7 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 	}
 
 	static class XdiagramScope implements IScope {
-		var list = new ArrayList<IEObjectDescription>();
-		var map = new HashMap<QualifiedName, IEObjectDescription>;
-
-		
-
+//		var list = new ArrayList<IEObjectDescription>();
 		val EObject context;
 		val EReference reference;
 		var EPackage ePackage;
@@ -107,6 +91,7 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 			}
 		}
 		
+		var Map<QualifiedName, IEObjectDescription> eClassMap = new HashMap();
 		var Multimap<QualifiedName, IEObjectDescription> referenceLinksMap = ArrayListMultimap.create();
 		var Multimap<QualifiedName, IEObjectDescription> parentChildrenMap = ArrayListMultimap.create();
 		var Multimap<QualifiedName, IEObjectDescription> attributesMap = ArrayListMultimap.create();
@@ -120,10 +105,9 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 				if (c instanceof EClass) {
 					var eClass = c as EClass;
 					var classQname = QualifiedName.create(eClass.name);
-					var desc = new EObjectDescription(classQname, c, null);
 
-					map.put(QualifiedName.create(eClass.name), desc);
-
+					eClassMap.put(classQname, new EObjectDescription(classQname, c, null));
+						
 					for (a : c.EAllAttributes) {
 						var adesc = new EObjectDescription(QualifiedName.create(a.name), a, null);
 						attributesMap.put(classQname, adesc);
@@ -174,7 +158,10 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 		}
 
 		override getAllElements() {
-			if (context instanceof Contains) {
+			if(context instanceof Diagram || context instanceof Node) {
+				 return eClassMap.values.filter[!(EObjectOrProxy as EClass).abstract];
+			}
+			else if (context instanceof Contains) {
 				if (context.eContainer instanceof Diagram) {
 					val diagram = context.eContainer as Diagram;
 					return parentChildrenMap.get(QualifiedName.create(diagram.modelClass.name));
@@ -208,18 +195,20 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 				} else
 					return attributesMap.get(QualifiedName.create((owner as Link).modelClass.name));
 			} else
-				return map.values;
+				return Collections.emptyList;
 		}
 
+//TODO
 		override getElements(EObject object) {
-			return list;
-
+			return Collections.emptyList();
 		}
 
+//TODO
 		override getSingleElement(EObject object) {
-			return if(list.isEmpty) null else list.get(0);
+			return null;
 		}
 
+//TODO
 		override getElements(QualifiedName name) {
 			return Collections.emptyList();
 		}
@@ -277,7 +266,7 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 				return null;
 			}
 
-			return map.get(name); // if(list.isEmpty) null else list.get(0);
+			return eClassMap.get(name);
 		}
 	}
 

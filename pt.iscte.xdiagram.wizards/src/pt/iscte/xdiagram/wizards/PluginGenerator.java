@@ -26,13 +26,15 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.Path;
 
+import pt.iscte.xdiagram.interpreter.ExtensionPointIds;
+
 class PluginGenerator {
 	
 	private static String[] IMPORTS = {
 			"org.eclipse.core.runtime",
 			"org.eclipse.emf.ecore",
-			org.eclipselabs.xdiagram.provider.LanguageProvider.class.getPackage().getName(),
-			org.eclipselabs.xdiagram.interpreter.XDiagramTypeProvider.class.getPackage().getName()
+			pt.iscte.xdiagram.provider.LanguageProvider.class.getPackage().getName(),
+			pt.iscte.xdiagram.interpreter.XDiagramTypeProvider.class.getPackage().getName()
 	};
 	
 	private static String[] PROJ_NATURES = {
@@ -57,7 +59,7 @@ class PluginGenerator {
 		createManifest(projName, ecoreProject, IMPORTS, Collections.emptyList(), monitor, project);
 		createFile("plugin.xml", project, PluginGenerator.getPluginXml(diagramId, diagramType, diagramDesc, ePackageURI, specFile).toString(), monitor);
 
-		String xdia = "metamodel {\n\tplugin-id \"" + ecoreProject + "\"\n\tecore-file \"" + ecoreFilePath + "\"\n}\n\ndiagram " + rootClass + "{\n\n}";
+		String xdia = "metamodel {\n\tplugin-id \"" + ecoreProject + "\"\n\tecore-file \"" + ecoreFilePath + "\"\n}\n\ndiagram " + rootClass + " {\n\n}";
 		createFile(specFile, project, xdia, monitor);
 		return project;
 	}
@@ -142,7 +144,7 @@ class PluginGenerator {
 		xml.append("<?eclipse version=\"3.0\"?>\n");
 
 		element(xml, "plugin");
-		element(xml, "extension", "point","org.eclipse.graphiti.ui.diagramTypes");
+		element(xml, "extension", "point", ExtensionPointIds.GRAPHITI_DIAGRAM_TYPES_EXT);
 		element_(xml, "diagramType",
 				"id", xDiaId, 
 				"name", xDiaDesc, 
@@ -151,25 +153,38 @@ class PluginGenerator {
 		xml.append("\n\n");
 
 
-		element(xml, "extension", "point","org.eclipse.graphiti.ui.diagramTypeProviders");
+		/*
+		   <extension
+	         point="org.eclipse.graphiti.ui.imageProviders">
+	      <imageProvider
+	            class="org.eclipselabs.xdiagram.interpreter.XDiagramImageProvider"
+	            id="org.eclipselabs.xdiagram.examples.components.imageProvider">
+	      </imageProvider>
+	   </extension>
+	*/   
+		
+		
+		element(xml, "extension", "point", ExtensionPointIds.GRAPHITI_DIAGRAM_TYPE_PROVIDERS_EXT);
 		element(xml, "diagramTypeProvider",
-				"class", org.eclipselabs.xdiagram.interpreter.XDiagramTypeProvider.class.getName(),
+				"class", pt.iscte.xdiagram.interpreter.XDiagramTypeProvider.class.getName(),
 				"id", xDiaId + "Provider",
 				"name", xDiaDesc + " Type Provider");
 
 		element_(xml, "diagramType", "id", xDiaId);
-		element_(xml, "imageProvider", "id", 	"org.eclipselabs.xdiagram.examples.featurediagram.imageProvider");
+		
+//		element_(xml, "imageProvider", "id", 	"org.eclipselabs.xdiagram.examples.featurediagram.imageProvider");
 
 		close(xml, "diagramTypeProvider", "extension");
 		xml.append("\n\n");
 
 
-		element(xml, "extension", "point","org.eclipselabs.xdiagram.interpreter.providers");
+		
+		element(xml, "extension", "point", ExtensionPointIds.XDIAGRAM_PROVIDERS_EXT);
 
 		element(xml, "provider", 
 				"diagramType", xDiaType,
 				"ePackageURI", ecoreURI,
-				"provider", org.eclipselabs.xdiagram.provider.LanguageProvider.class.getName());
+				"provider", pt.iscte.xdiagram.provider.LanguageProvider.class.getName());
 
 		element_(xml, "property", "id", "file","value", specFilePath);
 		close(xml, "provider", "extension", "plugin");

@@ -6,6 +6,6 @@ Bundle-Version: 1.0.0
 Require-Bundle: org.eclipselabs.xdiagram.examples.conceptualmodel,
  org.eclipse.core.runtime,
  org.eclipse.emf.ecore,
- org.eclipselabs.xdiagram.provider,
- org.eclipselabs.xdiagram.interpreter
+ pt.iscte.xdiagram.provider,
+ pt.iscte.xdiagram.interpreter
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

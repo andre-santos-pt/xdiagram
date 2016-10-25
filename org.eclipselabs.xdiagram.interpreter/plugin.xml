@@ -34,8 +34,8 @@
 	    point="org.eclipse.ui.views.properties.tabbed.propertySections">
 	    <propertySections contributorId="xdiagram.PropertyContributor">
 	        <propertySection tab="xdiagram.main.tab"            
-	         class="org.eclipselabs.xdiagram.interpreter.internal.PropertyNodeSection"
-	         filter="org.eclipselabs.xdiagram.interpreter.internal.PropertyNodeFilter"
+	         class="pt.iscte.xdiagram.interpreter.internal.PropertyNodeSection"
+	         filter="pt.iscte.xdiagram.interpreter.internal.PropertyNodeFilter"
 	         id="xdiagram.main.tab.emfclass">
 	        </propertySection>
 	        

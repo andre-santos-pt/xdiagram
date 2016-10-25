@@ -10,6 +10,7 @@ diagram Package {
 
 color lightgray 240 240 240;
 
+
 node Entity rectangle {
 	size 200 100 resizable;
 	corner 20;
