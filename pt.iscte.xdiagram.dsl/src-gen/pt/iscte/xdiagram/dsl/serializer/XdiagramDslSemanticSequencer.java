@@ -19,6 +19,7 @@ import pt.iscte.xdiagram.dsl.model.Arrow;
 import pt.iscte.xdiagram.dsl.model.BooleanValue;
 import pt.iscte.xdiagram.dsl.model.Color;
 import pt.iscte.xdiagram.dsl.model.ColorFeature;
+import pt.iscte.xdiagram.dsl.model.Colors;
 import pt.iscte.xdiagram.dsl.model.Contains;
 import pt.iscte.xdiagram.dsl.model.Corner;
 import pt.iscte.xdiagram.dsl.model.Custom;
@@ -108,6 +109,9 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 					return; 
 				}
 				else break;
+			case ModelPackage.COLORS:
+				sequence_Colors(context, (Colors) semanticObject); 
+				return; 
 			case ModelPackage.CONTAINS:
 				sequence_Contains(context, (Contains) semanticObject); 
 				return; 
@@ -321,6 +325,18 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Contexts:
+	 *     Colors returns Colors
+	 *
+	 * Constraint:
+	 *     colors+=CustomColor*
+	 */
+	protected void sequence_Colors(ISerializationContext context, Colors semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Feature returns Contains
 	 *     LinkedFeature returns Contains
 	 *     ConnectableElementFeature returns Contains
@@ -370,10 +386,10 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelPackage.Literals.CUSTOM_COLOR__B));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getCustomColorAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getCustomColorAccess().getRINTTerminalRuleCall_2_0(), semanticObject.getR());
-		feeder.accept(grammarAccess.getCustomColorAccess().getGINTTerminalRuleCall_3_0(), semanticObject.getG());
-		feeder.accept(grammarAccess.getCustomColorAccess().getBINTTerminalRuleCall_4_0(), semanticObject.getB());
+		feeder.accept(grammarAccess.getCustomColorAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getCustomColorAccess().getRINTTerminalRuleCall_1_0(), semanticObject.getR());
+		feeder.accept(grammarAccess.getCustomColorAccess().getGINTTerminalRuleCall_2_0(), semanticObject.getG());
+		feeder.accept(grammarAccess.getCustomColorAccess().getBINTTerminalRuleCall_3_0(), semanticObject.getB());
 		feeder.finish();
 	}
 	
@@ -993,7 +1009,7 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     XDiagram returns XDiagram
 	 *
 	 * Constraint:
-	 *     (metamodel=MetaModel diagram=Diagram (elements+=DiagramElement | colors+=CustomColor | figures+=CustomFigure)*)
+	 *     (metamodel=MetaModel diagram=Diagram customColors=Colors? (elements+=DiagramElement | figures+=CustomFigure)*)
 	 */
 	protected void sequence_XDiagram(ISerializationContext context, XDiagram semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

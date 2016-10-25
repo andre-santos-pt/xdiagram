@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getMetamodel <em>Metamodel</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getDiagram <em>Diagram</em>}</li>
+ *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getCustomColors <em>Custom Colors</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getElements <em>Elements</em>}</li>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getColors <em>Colors</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.XDiagram#getFigures <em>Figures</em>}</li>
  * </ul>
  *
@@ -82,6 +82,32 @@ public interface XDiagram extends EObject
   void setDiagram(Diagram value);
 
   /**
+   * Returns the value of the '<em><b>Custom Colors</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Custom Colors</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Custom Colors</em>' containment reference.
+   * @see #setCustomColors(Colors)
+   * @see pt.iscte.xdiagram.dsl.model.ModelPackage#getXDiagram_CustomColors()
+   * @model containment="true"
+   * @generated
+   */
+  Colors getCustomColors();
+
+  /**
+   * Sets the value of the '{@link pt.iscte.xdiagram.dsl.model.XDiagram#getCustomColors <em>Custom Colors</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Custom Colors</em>' containment reference.
+   * @see #getCustomColors()
+   * @generated
+   */
+  void setCustomColors(Colors value);
+
+  /**
    * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
    * The list contents are of type {@link pt.iscte.xdiagram.dsl.model.DiagramElement}.
    * <!-- begin-user-doc -->
@@ -96,22 +122,6 @@ public interface XDiagram extends EObject
    * @generated
    */
   EList<DiagramElement> getElements();
-
-  /**
-   * Returns the value of the '<em><b>Colors</b></em>' containment reference list.
-   * The list contents are of type {@link pt.iscte.xdiagram.dsl.model.CustomColor}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Colors</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Colors</em>' containment reference list.
-   * @see pt.iscte.xdiagram.dsl.model.ModelPackage#getXDiagram_Colors()
-   * @model containment="true"
-   * @generated
-   */
-  EList<CustomColor> getColors();
 
   /**
    * Returns the value of the '<em><b>Figures</b></em>' containment reference list.

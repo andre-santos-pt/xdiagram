@@ -34,23 +34,26 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMetamodelMetaModelParserRuleCall_0_0 = (RuleCall)cMetamodelAssignment_0.eContents().get(0);
 		private final Assignment cDiagramAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cDiagramDiagramParserRuleCall_1_0 = (RuleCall)cDiagramAssignment_1.eContents().get(0);
-		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final Assignment cElementsAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
-		private final RuleCall cElementsDiagramElementParserRuleCall_2_0_0 = (RuleCall)cElementsAssignment_2_0.eContents().get(0);
-		private final Assignment cColorsAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
-		private final RuleCall cColorsCustomColorParserRuleCall_2_1_0 = (RuleCall)cColorsAssignment_2_1.eContents().get(0);
-		private final Assignment cFiguresAssignment_2_2 = (Assignment)cAlternatives_2.eContents().get(2);
-		private final RuleCall cFiguresCustomFigureParserRuleCall_2_2_0 = (RuleCall)cFiguresAssignment_2_2.eContents().get(0);
+		private final Assignment cCustomColorsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cCustomColorsColorsParserRuleCall_2_0 = (RuleCall)cCustomColorsAssignment_2.eContents().get(0);
+		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
+		private final Assignment cElementsAssignment_3_0 = (Assignment)cAlternatives_3.eContents().get(0);
+		private final RuleCall cElementsDiagramElementParserRuleCall_3_0_0 = (RuleCall)cElementsAssignment_3_0.eContents().get(0);
+		private final Assignment cFiguresAssignment_3_1 = (Assignment)cAlternatives_3.eContents().get(1);
+		private final RuleCall cFiguresCustomFigureParserRuleCall_3_1_0 = (RuleCall)cFiguresAssignment_3_1.eContents().get(0);
 		
 		//XDiagram:
 		//	metamodel=MetaModel
-		//	diagram=Diagram (elements+=DiagramElement | colors+=CustomColor | figures+=CustomFigure)*;
+		//	diagram=Diagram
+		//	//    groups+=ToolGroup*
+		//	customColors=Colors? (elements+=DiagramElement | figures+=CustomFigure)*;
 		@Override public ParserRule getRule() { return rule; }
 		
 		////'xdiagram' id=ID desc=STRING
 		////('metamodel' importURI=STRING)?
 		////imports+=ImportStatement   
-		//metamodel=MetaModel diagram=Diagram (elements+=DiagramElement | colors+=CustomColor | figures+=CustomFigure)*
+		//metamodel=MetaModel diagram=Diagram //    groups+=ToolGroup*
+		//customColors=Colors? (elements+=DiagramElement | figures+=CustomFigure)*
 		public Group getGroup() { return cGroup; }
 		
 		////'xdiagram' id=ID desc=STRING
@@ -68,27 +71,29 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Diagram
 		public RuleCall getDiagramDiagramParserRuleCall_1_0() { return cDiagramDiagramParserRuleCall_1_0; }
 		
-		//(elements+=DiagramElement | colors+=CustomColor | figures+=CustomFigure)*
-		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+		////    groups+=ToolGroup*
+		//customColors=Colors?
+		public Assignment getCustomColorsAssignment_2() { return cCustomColorsAssignment_2; }
+		
+		//Colors
+		public RuleCall getCustomColorsColorsParserRuleCall_2_0() { return cCustomColorsColorsParserRuleCall_2_0; }
+		
+		//(elements+=DiagramElement | figures+=CustomFigure)*
+		public Alternatives getAlternatives_3() { return cAlternatives_3; }
 		
 		//elements+=DiagramElement
-		public Assignment getElementsAssignment_2_0() { return cElementsAssignment_2_0; }
+		public Assignment getElementsAssignment_3_0() { return cElementsAssignment_3_0; }
 		
 		//DiagramElement
-		public RuleCall getElementsDiagramElementParserRuleCall_2_0_0() { return cElementsDiagramElementParserRuleCall_2_0_0; }
+		public RuleCall getElementsDiagramElementParserRuleCall_3_0_0() { return cElementsDiagramElementParserRuleCall_3_0_0; }
 		
 		////    	(styles += Style) |
-		//colors+=CustomColor
-		public Assignment getColorsAssignment_2_1() { return cColorsAssignment_2_1; }
-		
-		//CustomColor
-		public RuleCall getColorsCustomColorParserRuleCall_2_1_0() { return cColorsCustomColorParserRuleCall_2_1_0; }
-		
+		////    	(colors += CustomColor) |
 		//figures+=CustomFigure
-		public Assignment getFiguresAssignment_2_2() { return cFiguresAssignment_2_2; }
+		public Assignment getFiguresAssignment_3_1() { return cFiguresAssignment_3_1; }
 		
 		//CustomFigure
-		public RuleCall getFiguresCustomFigureParserRuleCall_2_2_0() { return cFiguresCustomFigureParserRuleCall_2_2_0; }
+		public RuleCall getFiguresCustomFigureParserRuleCall_3_1_0() { return cFiguresCustomFigureParserRuleCall_3_1_0; }
 	}
 	public class MetaModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.MetaModel");
@@ -789,58 +794,92 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 	}
-	public class CustomColorElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.CustomColor");
+	public class ColorsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.Colors");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cColorKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cRAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cRINTTerminalRuleCall_2_0 = (RuleCall)cRAssignment_2.eContents().get(0);
-		private final Assignment cGAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cGINTTerminalRuleCall_3_0 = (RuleCall)cGAssignment_3.eContents().get(0);
-		private final Assignment cBAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cBINTTerminalRuleCall_4_0 = (RuleCall)cBAssignment_4.eContents().get(0);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Action cColorsAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cColorsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cColorsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cColorsCustomColorParserRuleCall_3_0 = (RuleCall)cColorsAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		////---------------------------------------
 		//// Colors
-		//CustomColor:
-		//	'color' name=ID R=INT G=INT B=INT ';';
+		//Colors:
+		//	{Colors}
+		//	'colors' '{'
+		//	colors+=CustomColor*
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'color' name=ID R=INT G=INT B=INT ';'
+		//{Colors} 'colors' '{' colors+=CustomColor* '}'
 		public Group getGroup() { return cGroup; }
 		
-		//'color'
-		public Keyword getColorKeyword_0() { return cColorKeyword_0; }
+		//{Colors}
+		public Action getColorsAction_0() { return cColorsAction_0; }
+		
+		//'colors'
+		public Keyword getColorsKeyword_1() { return cColorsKeyword_1; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//colors+=CustomColor*
+		public Assignment getColorsAssignment_3() { return cColorsAssignment_3; }
+		
+		//CustomColor
+		public RuleCall getColorsCustomColorParserRuleCall_3_0() { return cColorsCustomColorParserRuleCall_3_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+	}
+	public class CustomColorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.CustomColor");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Assignment cRAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cRINTTerminalRuleCall_1_0 = (RuleCall)cRAssignment_1.eContents().get(0);
+		private final Assignment cGAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cGINTTerminalRuleCall_2_0 = (RuleCall)cGAssignment_2.eContents().get(0);
+		private final Assignment cBAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cBINTTerminalRuleCall_3_0 = (RuleCall)cBAssignment_3.eContents().get(0);
+		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//CustomColor:
+		//	name=ID R=INT G=INT B=INT ';';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//name=ID R=INT G=INT B=INT ';'
+		public Group getGroup() { return cGroup; }
 		
 		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 		
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
 		
 		//R=INT
-		public Assignment getRAssignment_2() { return cRAssignment_2; }
+		public Assignment getRAssignment_1() { return cRAssignment_1; }
 		
 		//INT
-		public RuleCall getRINTTerminalRuleCall_2_0() { return cRINTTerminalRuleCall_2_0; }
+		public RuleCall getRINTTerminalRuleCall_1_0() { return cRINTTerminalRuleCall_1_0; }
 		
 		//G=INT
-		public Assignment getGAssignment_3() { return cGAssignment_3; }
+		public Assignment getGAssignment_2() { return cGAssignment_2; }
 		
 		//INT
-		public RuleCall getGINTTerminalRuleCall_3_0() { return cGINTTerminalRuleCall_3_0; }
+		public RuleCall getGINTTerminalRuleCall_2_0() { return cGINTTerminalRuleCall_2_0; }
 		
 		//B=INT
-		public Assignment getBAssignment_4() { return cBAssignment_4; }
+		public Assignment getBAssignment_3() { return cBAssignment_3; }
 		
 		//INT
-		public RuleCall getBINTTerminalRuleCall_4_0() { return cBINTTerminalRuleCall_4_0; }
+		public RuleCall getBINTTerminalRuleCall_3_0() { return cBINTTerminalRuleCall_3_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
 	}
 	public class ColorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.Color");
@@ -3182,6 +3221,7 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final DecoratorElements pDecorator;
 	private final AnchorElements pAnchor;
 	private final AnchorDirectionElements eAnchorDirection;
+	private final ColorsElements pColors;
 	private final CustomColorElements pCustomColor;
 	private final ColorElements pColor;
 	private final DefaultColorElements eDefaultColor;
@@ -3262,6 +3302,7 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pDecorator = new DecoratorElements();
 		this.pAnchor = new AnchorElements();
 		this.eAnchorDirection = new AnchorDirectionElements();
+		this.pColors = new ColorsElements();
 		this.pCustomColor = new CustomColorElements();
 		this.pColor = new ColorElements();
 		this.eDefaultColor = new DefaultColorElements();
@@ -3344,7 +3385,9 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//XDiagram:
 	//	metamodel=MetaModel
-	//	diagram=Diagram (elements+=DiagramElement | colors+=CustomColor | figures+=CustomFigure)*;
+	//	diagram=Diagram
+	//	//    groups+=ToolGroup*
+	//	customColors=Colors? (elements+=DiagramElement | figures+=CustomFigure)*;
 	public XDiagramElements getXDiagramAccess() {
 		return pXDiagram;
 	}
@@ -3563,8 +3606,21 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	////---------------------------------------
 	//// Colors
+	//Colors:
+	//	{Colors}
+	//	'colors' '{'
+	//	colors+=CustomColor*
+	//	'}';
+	public ColorsElements getColorsAccess() {
+		return pColors;
+	}
+	
+	public ParserRule getColorsRule() {
+		return getColorsAccess().getRule();
+	}
+	
 	//CustomColor:
-	//	'color' name=ID R=INT G=INT B=INT ';';
+	//	name=ID R=INT G=INT B=INT ';';
 	public CustomColorElements getCustomColorAccess() {
 		return pCustomColor;
 	}

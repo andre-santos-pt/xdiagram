@@ -138,6 +138,8 @@ class PluginGenerator {
 	
 	
 	private static StringBuffer getPluginXml(String xDiaId, String xDiaDesc, String xDiaType, String ecoreURI, String specFilePath) {
+		String imageProviderId = xDiaId + ".imageProvider";
+		
 		StringBuffer xml = new StringBuffer();
 
 		xml.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
@@ -152,40 +154,31 @@ class PluginGenerator {
 		close(xml, "extension");
 		xml.append("\n\n");
 
-
-		/*
-		   <extension
-	         point="org.eclipse.graphiti.ui.imageProviders">
-	      <imageProvider
-	            class="org.eclipselabs.xdiagram.interpreter.XDiagramImageProvider"
-	            id="org.eclipselabs.xdiagram.examples.components.imageProvider">
-	      </imageProvider>
-	   </extension>
-	*/   
 		
+		element(xml, "extension", "point",  ExtensionPointIds.GRAPHITI_IMAGE_PROVIDERS_EXT);
+		element_(xml, "imageProvider", 
+				"id", imageProviderId,
+				"class", pt.iscte.xdiagram.interpreter.XDiagramImageProvider.class.getName());
+		close(xml, "extension");
+		xml.append("\n\n");
+
 		
 		element(xml, "extension", "point", ExtensionPointIds.GRAPHITI_DIAGRAM_TYPE_PROVIDERS_EXT);
 		element(xml, "diagramTypeProvider",
 				"class", pt.iscte.xdiagram.interpreter.XDiagramTypeProvider.class.getName(),
 				"id", xDiaId + "Provider",
 				"name", xDiaDesc + " Type Provider");
-
-		element_(xml, "diagramType", "id", xDiaId);
-		
-//		element_(xml, "imageProvider", "id", 	"org.eclipselabs.xdiagram.examples.featurediagram.imageProvider");
-
+		element_(xml, "diagramType", "id", xDiaId);		
+		element_(xml, "imageProvider", "id", 	imageProviderId);
 		close(xml, "diagramTypeProvider", "extension");
 		xml.append("\n\n");
 
-
 		
 		element(xml, "extension", "point", ExtensionPointIds.XDIAGRAM_PROVIDERS_EXT);
-
 		element(xml, "provider", 
 				"diagramType", xDiaType,
 				"ePackageURI", ecoreURI,
 				"provider", pt.iscte.xdiagram.provider.LanguageProvider.class.getName());
-
 		element_(xml, "property", "id", "file","value", specFilePath);
 		close(xml, "provider", "extension", "plugin");
 

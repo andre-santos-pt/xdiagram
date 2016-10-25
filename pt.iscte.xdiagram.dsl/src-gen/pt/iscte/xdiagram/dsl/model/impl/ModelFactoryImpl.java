@@ -78,6 +78,7 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
       case ModelPackage.LINK: return createLink();
       case ModelPackage.DECORATOR: return createDecorator();
       case ModelPackage.ANCHOR: return createAnchor();
+      case ModelPackage.COLORS: return createColors();
       case ModelPackage.CUSTOM_COLOR: return createCustomColor();
       case ModelPackage.COLOR: return createColor();
       case ModelPackage.CONNECTABLE_ELEMENT: return createConnectableElement();
@@ -303,6 +304,17 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory
   {
     AnchorImpl anchor = new AnchorImpl();
     return anchor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Colors createColors()
+  {
+    ColorsImpl colors = new ColorsImpl();
+    return colors;
   }
 
   /**

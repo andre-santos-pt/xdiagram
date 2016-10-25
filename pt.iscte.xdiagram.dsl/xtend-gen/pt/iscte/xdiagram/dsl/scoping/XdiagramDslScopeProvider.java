@@ -29,6 +29,8 @@ import org.eclipse.xtext.xbase.lib.Conversions;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
+import pt.iscte.xdiagram.dsl.model.Anchor;
+import pt.iscte.xdiagram.dsl.model.AnchorDirection;
 import pt.iscte.xdiagram.dsl.model.ConnectableElement;
 import pt.iscte.xdiagram.dsl.model.Contains;
 import pt.iscte.xdiagram.dsl.model.Diagram;
@@ -139,6 +141,10 @@ public class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
     
     private Multimap<QualifiedName, IEObjectDescription> targetRefsMap = ArrayListMultimap.<QualifiedName, IEObjectDescription>create();
     
+    private Multimap<QualifiedName, IEObjectDescription> incomingRef = ArrayListMultimap.<QualifiedName, IEObjectDescription>create();
+    
+    private Multimap<QualifiedName, IEObjectDescription> outgoingRef = ArrayListMultimap.<QualifiedName, IEObjectDescription>create();
+    
     public void loadData() {
       EList<EClassifier> _eClassifiers = this.ePackage.getEClassifiers();
       for (final EClassifier c : _eClassifiers) {
@@ -165,38 +171,51 @@ public class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
               QualifiedName qname = QualifiedName.create(_name_1, _name_2);
               EObjectDescription rdesc = new EObjectDescription(qname, r, null);
               this.referenceLinksMap.put(qname, rdesc);
+              EClassifier _eType = r.getEType();
+              String _name_3 = _eType.getName();
+              String _name_4 = r.getName();
+              QualifiedName iname = QualifiedName.create(_name_3, _name_4);
+              EClassifier _eType_1 = r.getEType();
+              String _name_5 = _eType_1.getName();
+              QualifiedName _create = QualifiedName.create(_name_5);
+              EObjectDescription _eObjectDescription_1 = new EObjectDescription(iname, r, null);
+              this.incomingRef.put(_create, _eObjectDescription_1);
+              String _name_6 = r.getName();
+              QualifiedName _create_1 = QualifiedName.create(_name_6);
+              EObjectDescription _eObjectDescription_2 = new EObjectDescription(_create_1, r, null);
+              this.outgoingRef.put(classQname, _eObjectDescription_2);
               boolean _isContainment = r.isContainment();
               if (_isContainment) {
-                String _name_3 = ((EClass)c).getName();
-                QualifiedName _create = QualifiedName.create(_name_3);
-                qname = _create;
-                String _name_4 = r.getName();
-                QualifiedName _create_1 = QualifiedName.create(_name_4);
-                EObjectDescription _eObjectDescription_1 = new EObjectDescription(_create_1, r, null);
-                rdesc = _eObjectDescription_1;
+                String _name_7 = ((EClass)c).getName();
+                QualifiedName _create_2 = QualifiedName.create(_name_7);
+                qname = _create_2;
+                String _name_8 = r.getName();
+                QualifiedName _create_3 = QualifiedName.create(_name_8);
+                EObjectDescription _eObjectDescription_3 = new EObjectDescription(_create_3, r, null);
+                rdesc = _eObjectDescription_3;
                 this.parentChildrenMap.put(qname, rdesc);
-                EClassifier _eType = r.getEType();
-                EList<EReference> _eAllReferences_1 = ((EClass) _eType).getEAllReferences();
+                EClassifier _eType_2 = r.getEType();
+                EList<EReference> _eAllReferences_1 = ((EClass) _eType_2).getEAllReferences();
                 for (final EReference r_uni : _eAllReferences_1) {
                   if (((r_uni.getLowerBound() == 1) && (r_uni.getUpperBound() == 1))) {
-                    EClassifier _eType_1 = r.getEType();
-                    String _name_5 = _eType_1.getName();
-                    QualifiedName uname = QualifiedName.create(_name_5);
-                    EClassifier _eType_2 = r.getEType();
-                    EObjectDescription udesc = new EObjectDescription(uname, _eType_2, null);
+                    EClassifier _eType_3 = r.getEType();
+                    String _name_9 = _eType_3.getName();
+                    QualifiedName uname = QualifiedName.create(_name_9);
+                    EClassifier _eType_4 = r.getEType();
+                    EObjectDescription udesc = new EObjectDescription(uname, _eType_4, null);
                     this.complexRefsMap.put(uname, udesc);
-                    String _name_6 = ((EClass)c).getName();
-                    String _name_7 = r.getName();
-                    QualifiedName sname = QualifiedName.create(_name_6, _name_7);
+                    String _name_10 = ((EClass)c).getName();
+                    String _name_11 = r.getName();
+                    QualifiedName sname = QualifiedName.create(_name_10, _name_11);
                     EObjectDescription sdesc = new EObjectDescription(sname, r, null);
                     this.complexRefsSourceMap.put(uname, sdesc);
                   }
                 }
               } else {
                 if ((((!r.isContainment()) && (r.getLowerBound() == 1)) && (r.getUpperBound() == 1))) {
-                  String _name_8 = r.getName();
-                  QualifiedName _create_2 = QualifiedName.create(_name_8);
-                  EObjectDescription tdesc = new EObjectDescription(_create_2, r, null);
+                  String _name_12 = r.getName();
+                  QualifiedName _create_4 = QualifiedName.create(_name_12);
+                  EObjectDescription tdesc = new EObjectDescription(_create_4, r, null);
                   this.targetRefsMap.put(classQname, tdesc);
                 }
               }
@@ -291,19 +310,40 @@ public class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
                   return ((Iterable<IEObjectDescription>) _emptyIterator);
                 } else {
                   if ((owner instanceof Node)) {
-                    EClass _modelClass_4 = ((Node) owner).getModelClass();
+                    EClass _modelClass_4 = ((Node)owner).getModelClass();
                     String _name_6 = _modelClass_4.getName();
                     QualifiedName _create_2 = QualifiedName.create(_name_6);
                     return this.attributesMap.get(_create_2);
                   } else {
-                    EClass _modelClass_5 = ((Link) owner).getModelClass();
-                    String _name_7 = _modelClass_5.getName();
-                    QualifiedName _create_3 = QualifiedName.create(_name_7);
-                    return this.attributesMap.get(_create_3);
+                    if ((owner instanceof Link)) {
+                      EClass _modelClass_5 = ((Link)owner).getModelClass();
+                      String _name_7 = _modelClass_5.getName();
+                      QualifiedName _create_3 = QualifiedName.create(_name_7);
+                      return this.attributesMap.get(_create_3);
+                    }
                   }
                 }
               } else {
-                return Collections.<IEObjectDescription>emptyList();
+                if ((this.context instanceof Anchor)) {
+                  EObject _crawlUp = this.crawlUp(this.context, ModelPackage.Literals.NODE);
+                  Node owner_1 = ((Node) _crawlUp);
+                  EClass _modelClass_6 = owner_1.getModelClass();
+                  String _name_8 = _modelClass_6.getName();
+                  QualifiedName qname_2 = QualifiedName.create(_name_8);
+                  AnchorDirection _direction = ((Anchor)this.context).getDirection();
+                  boolean _equals_4 = Objects.equal(_direction, AnchorDirection.OUTGOING);
+                  if (_equals_4) {
+                    return this.outgoingRef.get(qname_2);
+                  } else {
+                    AnchorDirection _direction_1 = ((Anchor)this.context).getDirection();
+                    boolean _equals_5 = Objects.equal(_direction_1, AnchorDirection.INCOMING);
+                    if (_equals_5) {
+                      return this.incomingRef.get(qname_2);
+                    }
+                  }
+                } else {
+                  return Collections.<IEObjectDescription>emptyList();
+                }
               }
             }
           }
@@ -443,6 +483,41 @@ public class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
                 }
               }
               return null;
+            } else {
+              if ((this.context instanceof Anchor)) {
+                EObject _crawlUp = this.crawlUp(this.context, ModelPackage.Literals.NODE);
+                Node owner_1 = ((Node) _crawlUp);
+                EClass _modelClass_5 = owner_1.getModelClass();
+                String _name_12 = _modelClass_5.getName();
+                QualifiedName qname_2 = QualifiedName.create(_name_12);
+                AnchorDirection _direction = ((Anchor)this.context).getDirection();
+                boolean _equals_10 = Objects.equal(_direction, AnchorDirection.OUTGOING);
+                if (_equals_10) {
+                  Collection<IEObjectDescription> _get_2 = this.outgoingRef.get(qname_2);
+                  for (final IEObjectDescription d_4 : _get_2) {
+                    QualifiedName _name_13 = d_4.getName();
+                    boolean _equals_11 = _name_13.equals(name);
+                    if (_equals_11) {
+                      return d_4;
+                    }
+                  }
+                  return null;
+                } else {
+                  AnchorDirection _direction_1 = ((Anchor)this.context).getDirection();
+                  boolean _equals_12 = Objects.equal(_direction_1, AnchorDirection.INCOMING);
+                  if (_equals_12) {
+                    Collection<IEObjectDescription> _get_3 = this.incomingRef.get(qname_2);
+                    for (final IEObjectDescription d_5 : _get_3) {
+                      QualifiedName _name_14 = d_5.getName();
+                      boolean _equals_13 = _name_14.equals(name);
+                      if (_equals_13) {
+                        return d_5;
+                      }
+                    }
+                    return null;
+                  }
+                }
+              }
             }
           }
         }

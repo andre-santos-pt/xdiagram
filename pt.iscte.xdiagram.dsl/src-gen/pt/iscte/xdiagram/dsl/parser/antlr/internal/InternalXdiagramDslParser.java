@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'metamodel'", "'{'", "'plugin-id'", "'ecore-file'", "'}'", "'.'", "'*'", "'diagram'", "'if'", "'node'", "'link'", "'reference'", "'class'", "'source'", "'target'", "'decorator'", "'%'", "'anchor'", "'max'", "';'", "'color'", "'figure'", "'as'", "'child'", "'rectangle'", "'square'", "'rhombus'", "'ellipse'", "'circle'", "'polygon'", "'polyline'", "'triangle'", "'hline'", "'vline'", "'arrow'", "'contains'", "'null'", "'label'", "'image'", "'invisible'", "'foreground'", "'background'", "'transparency'", "'size'", "']'", "'resizable'", "'point'", "'position'", "'corner'", "'layout'", "'vertical'", "'horizontal'", "'margin'", "'text'", "'edit:'", "'font'", "'arial'", "'verdana'", "'courier'", "'times'", "'bold'", "'italics'", "'align'", "'linestyle'", "'manhattan'", "'linewidth'", "'incoming'", "'outgoing'", "'white'", "'silver'", "'gray'", "'black'", "'red'", "'maroon'", "'yellow'", "'olive'", "'lime'", "'green'", "'aqua'", "'teal'", "'blue'", "'navy'", "'fuchsia'", "'purple'", "'='", "'<>'", "'true'", "'false'", "'left'", "'center'", "'right'", "'solid'", "'dashed'", "'dotted'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'metamodel'", "'{'", "'plugin-id'", "'ecore-file'", "'}'", "'.'", "'*'", "'diagram'", "'if'", "'node'", "'link'", "'reference'", "'class'", "'source'", "'target'", "'decorator'", "'%'", "'anchor'", "'max'", "';'", "'colors'", "'figure'", "'as'", "'child'", "'rectangle'", "'square'", "'rhombus'", "'ellipse'", "'circle'", "'polygon'", "'polyline'", "'triangle'", "'hline'", "'vline'", "'arrow'", "'contains'", "'null'", "'label'", "'image'", "'invisible'", "'foreground'", "'background'", "'transparency'", "'size'", "']'", "'resizable'", "'point'", "'position'", "'corner'", "'layout'", "'vertical'", "'horizontal'", "'margin'", "'text'", "'edit:'", "'font'", "'arial'", "'verdana'", "'courier'", "'times'", "'bold'", "'italics'", "'align'", "'linestyle'", "'manhattan'", "'linewidth'", "'incoming'", "'outgoing'", "'white'", "'silver'", "'gray'", "'black'", "'red'", "'maroon'", "'yellow'", "'olive'", "'lime'", "'green'", "'aqua'", "'teal'", "'blue'", "'navy'", "'fuchsia'", "'purple'", "'='", "'<>'", "'true'", "'false'", "'left'", "'center'", "'right'", "'solid'", "'dashed'", "'dotted'"
     };
     public static final int T__50=50;
     public static final int T__59=59;
@@ -203,7 +203,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleXDiagram"
-    // InternalXdiagramDsl.g:72:1: ruleXDiagram returns [EObject current=null] : ( ( (lv_metamodel_0_0= ruleMetaModel ) ) ( (lv_diagram_1_0= ruleDiagram ) ) ( ( (lv_elements_2_0= ruleDiagramElement ) ) | ( (lv_colors_3_0= ruleCustomColor ) ) | ( (lv_figures_4_0= ruleCustomFigure ) ) )* ) ;
+    // InternalXdiagramDsl.g:72:1: ruleXDiagram returns [EObject current=null] : ( ( (lv_metamodel_0_0= ruleMetaModel ) ) ( (lv_diagram_1_0= ruleDiagram ) ) ( (lv_customColors_2_0= ruleColors ) )? ( ( (lv_elements_3_0= ruleDiagramElement ) ) | ( (lv_figures_4_0= ruleCustomFigure ) ) )* ) ;
     public final EObject ruleXDiagram() throws RecognitionException {
         EObject current = null;
 
@@ -211,9 +211,9 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
         EObject lv_diagram_1_0 = null;
 
-        EObject lv_elements_2_0 = null;
+        EObject lv_customColors_2_0 = null;
 
-        EObject lv_colors_3_0 = null;
+        EObject lv_elements_3_0 = null;
 
         EObject lv_figures_4_0 = null;
 
@@ -222,11 +222,11 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:78:2: ( ( ( (lv_metamodel_0_0= ruleMetaModel ) ) ( (lv_diagram_1_0= ruleDiagram ) ) ( ( (lv_elements_2_0= ruleDiagramElement ) ) | ( (lv_colors_3_0= ruleCustomColor ) ) | ( (lv_figures_4_0= ruleCustomFigure ) ) )* ) )
-            // InternalXdiagramDsl.g:79:2: ( ( (lv_metamodel_0_0= ruleMetaModel ) ) ( (lv_diagram_1_0= ruleDiagram ) ) ( ( (lv_elements_2_0= ruleDiagramElement ) ) | ( (lv_colors_3_0= ruleCustomColor ) ) | ( (lv_figures_4_0= ruleCustomFigure ) ) )* )
+            // InternalXdiagramDsl.g:78:2: ( ( ( (lv_metamodel_0_0= ruleMetaModel ) ) ( (lv_diagram_1_0= ruleDiagram ) ) ( (lv_customColors_2_0= ruleColors ) )? ( ( (lv_elements_3_0= ruleDiagramElement ) ) | ( (lv_figures_4_0= ruleCustomFigure ) ) )* ) )
+            // InternalXdiagramDsl.g:79:2: ( ( (lv_metamodel_0_0= ruleMetaModel ) ) ( (lv_diagram_1_0= ruleDiagram ) ) ( (lv_customColors_2_0= ruleColors ) )? ( ( (lv_elements_3_0= ruleDiagramElement ) ) | ( (lv_figures_4_0= ruleCustomFigure ) ) )* )
             {
-            // InternalXdiagramDsl.g:79:2: ( ( (lv_metamodel_0_0= ruleMetaModel ) ) ( (lv_diagram_1_0= ruleDiagram ) ) ( ( (lv_elements_2_0= ruleDiagramElement ) ) | ( (lv_colors_3_0= ruleCustomColor ) ) | ( (lv_figures_4_0= ruleCustomFigure ) ) )* )
-            // InternalXdiagramDsl.g:80:3: ( (lv_metamodel_0_0= ruleMetaModel ) ) ( (lv_diagram_1_0= ruleDiagram ) ) ( ( (lv_elements_2_0= ruleDiagramElement ) ) | ( (lv_colors_3_0= ruleCustomColor ) ) | ( (lv_figures_4_0= ruleCustomFigure ) ) )*
+            // InternalXdiagramDsl.g:79:2: ( ( (lv_metamodel_0_0= ruleMetaModel ) ) ( (lv_diagram_1_0= ruleDiagram ) ) ( (lv_customColors_2_0= ruleColors ) )? ( ( (lv_elements_3_0= ruleDiagramElement ) ) | ( (lv_figures_4_0= ruleCustomFigure ) ) )* )
+            // InternalXdiagramDsl.g:80:3: ( (lv_metamodel_0_0= ruleMetaModel ) ) ( (lv_diagram_1_0= ruleDiagram ) ) ( (lv_customColors_2_0= ruleColors ) )? ( ( (lv_elements_3_0= ruleDiagramElement ) ) | ( (lv_figures_4_0= ruleCustomFigure ) ) )*
             {
             // InternalXdiagramDsl.g:80:3: ( (lv_metamodel_0_0= ruleMetaModel ) )
             // InternalXdiagramDsl.g:81:4: (lv_metamodel_0_0= ruleMetaModel )
@@ -290,45 +290,77 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:118:3: ( ( (lv_elements_2_0= ruleDiagramElement ) ) | ( (lv_colors_3_0= ruleCustomColor ) ) | ( (lv_figures_4_0= ruleCustomFigure ) ) )*
-            loop1:
-            do {
-                int alt1=4;
-                switch ( input.LA(1) ) {
-                case 20:
-                case 21:
+            // InternalXdiagramDsl.g:118:3: ( (lv_customColors_2_0= ruleColors ) )?
+            int alt1=2;
+            int LA1_0 = input.LA(1);
+
+            if ( (LA1_0==31) ) {
+                alt1=1;
+            }
+            switch (alt1) {
+                case 1 :
+                    // InternalXdiagramDsl.g:119:4: (lv_customColors_2_0= ruleColors )
                     {
-                    alt1=1;
+                    // InternalXdiagramDsl.g:119:4: (lv_customColors_2_0= ruleColors )
+                    // InternalXdiagramDsl.g:120:5: lv_customColors_2_0= ruleColors
+                    {
+
+                    					newCompositeNode(grammarAccess.getXDiagramAccess().getCustomColorsColorsParserRuleCall_2_0());
+                    				
+                    pushFollow(FOLLOW_5);
+                    lv_customColors_2_0=ruleColors();
+
+                    state._fsp--;
+
+
+                    					if (current==null) {
+                    						current = createModelElementForParent(grammarAccess.getXDiagramRule());
+                    					}
+                    					set(
+                    						current,
+                    						"customColors",
+                    						lv_customColors_2_0,
+                    						"pt.iscte.xdiagram.dsl.XdiagramDsl.Colors");
+                    					afterParserOrEnumRuleCall();
+                    				
+
                     }
-                    break;
-                case 31:
-                    {
-                    alt1=2;
-                    }
-                    break;
-                case 32:
-                    {
-                    alt1=3;
+
+
                     }
                     break;
 
+            }
+
+            // InternalXdiagramDsl.g:137:3: ( ( (lv_elements_3_0= ruleDiagramElement ) ) | ( (lv_figures_4_0= ruleCustomFigure ) ) )*
+            loop2:
+            do {
+                int alt2=3;
+                int LA2_0 = input.LA(1);
+
+                if ( ((LA2_0>=20 && LA2_0<=21)) ) {
+                    alt2=1;
+                }
+                else if ( (LA2_0==32) ) {
+                    alt2=2;
                 }
 
-                switch (alt1) {
+
+                switch (alt2) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:119:4: ( (lv_elements_2_0= ruleDiagramElement ) )
+            	    // InternalXdiagramDsl.g:138:4: ( (lv_elements_3_0= ruleDiagramElement ) )
             	    {
-            	    // InternalXdiagramDsl.g:119:4: ( (lv_elements_2_0= ruleDiagramElement ) )
-            	    // InternalXdiagramDsl.g:120:5: (lv_elements_2_0= ruleDiagramElement )
+            	    // InternalXdiagramDsl.g:138:4: ( (lv_elements_3_0= ruleDiagramElement ) )
+            	    // InternalXdiagramDsl.g:139:5: (lv_elements_3_0= ruleDiagramElement )
             	    {
-            	    // InternalXdiagramDsl.g:120:5: (lv_elements_2_0= ruleDiagramElement )
-            	    // InternalXdiagramDsl.g:121:6: lv_elements_2_0= ruleDiagramElement
+            	    // InternalXdiagramDsl.g:139:5: (lv_elements_3_0= ruleDiagramElement )
+            	    // InternalXdiagramDsl.g:140:6: lv_elements_3_0= ruleDiagramElement
             	    {
 
-            	    						newCompositeNode(grammarAccess.getXDiagramAccess().getElementsDiagramElementParserRuleCall_2_0_0());
+            	    						newCompositeNode(grammarAccess.getXDiagramAccess().getElementsDiagramElementParserRuleCall_3_0_0());
             	    					
-            	    pushFollow(FOLLOW_4);
-            	    lv_elements_2_0=ruleDiagramElement();
+            	    pushFollow(FOLLOW_5);
+            	    lv_elements_3_0=ruleDiagramElement();
 
             	    state._fsp--;
 
@@ -339,7 +371,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    						add(
             	    							current,
             	    							"elements",
-            	    							lv_elements_2_0,
+            	    							lv_elements_3_0,
             	    							"pt.iscte.xdiagram.dsl.XdiagramDsl.DiagramElement");
             	    						afterParserOrEnumRuleCall();
             	    					
@@ -353,55 +385,18 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalXdiagramDsl.g:139:4: ( (lv_colors_3_0= ruleCustomColor ) )
+            	    // InternalXdiagramDsl.g:158:4: ( (lv_figures_4_0= ruleCustomFigure ) )
             	    {
-            	    // InternalXdiagramDsl.g:139:4: ( (lv_colors_3_0= ruleCustomColor ) )
-            	    // InternalXdiagramDsl.g:140:5: (lv_colors_3_0= ruleCustomColor )
+            	    // InternalXdiagramDsl.g:158:4: ( (lv_figures_4_0= ruleCustomFigure ) )
+            	    // InternalXdiagramDsl.g:159:5: (lv_figures_4_0= ruleCustomFigure )
             	    {
-            	    // InternalXdiagramDsl.g:140:5: (lv_colors_3_0= ruleCustomColor )
-            	    // InternalXdiagramDsl.g:141:6: lv_colors_3_0= ruleCustomColor
+            	    // InternalXdiagramDsl.g:159:5: (lv_figures_4_0= ruleCustomFigure )
+            	    // InternalXdiagramDsl.g:160:6: lv_figures_4_0= ruleCustomFigure
             	    {
 
-            	    						newCompositeNode(grammarAccess.getXDiagramAccess().getColorsCustomColorParserRuleCall_2_1_0());
+            	    						newCompositeNode(grammarAccess.getXDiagramAccess().getFiguresCustomFigureParserRuleCall_3_1_0());
             	    					
-            	    pushFollow(FOLLOW_4);
-            	    lv_colors_3_0=ruleCustomColor();
-
-            	    state._fsp--;
-
-
-            	    						if (current==null) {
-            	    							current = createModelElementForParent(grammarAccess.getXDiagramRule());
-            	    						}
-            	    						add(
-            	    							current,
-            	    							"colors",
-            	    							lv_colors_3_0,
-            	    							"pt.iscte.xdiagram.dsl.XdiagramDsl.CustomColor");
-            	    						afterParserOrEnumRuleCall();
-            	    					
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 3 :
-            	    // InternalXdiagramDsl.g:159:4: ( (lv_figures_4_0= ruleCustomFigure ) )
-            	    {
-            	    // InternalXdiagramDsl.g:159:4: ( (lv_figures_4_0= ruleCustomFigure ) )
-            	    // InternalXdiagramDsl.g:160:5: (lv_figures_4_0= ruleCustomFigure )
-            	    {
-            	    // InternalXdiagramDsl.g:160:5: (lv_figures_4_0= ruleCustomFigure )
-            	    // InternalXdiagramDsl.g:161:6: lv_figures_4_0= ruleCustomFigure
-            	    {
-
-            	    						newCompositeNode(grammarAccess.getXDiagramAccess().getFiguresCustomFigureParserRuleCall_2_2_0());
-            	    					
-            	    pushFollow(FOLLOW_4);
+            	    pushFollow(FOLLOW_5);
             	    lv_figures_4_0=ruleCustomFigure();
 
             	    state._fsp--;
@@ -428,7 +423,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop1;
+            	    break loop2;
                 }
             } while (true);
 
@@ -455,7 +450,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMetaModel"
-    // InternalXdiagramDsl.g:183:1: entryRuleMetaModel returns [EObject current=null] : iv_ruleMetaModel= ruleMetaModel EOF ;
+    // InternalXdiagramDsl.g:182:1: entryRuleMetaModel returns [EObject current=null] : iv_ruleMetaModel= ruleMetaModel EOF ;
     public final EObject entryRuleMetaModel() throws RecognitionException {
         EObject current = null;
 
@@ -463,8 +458,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:183:50: (iv_ruleMetaModel= ruleMetaModel EOF )
-            // InternalXdiagramDsl.g:184:2: iv_ruleMetaModel= ruleMetaModel EOF
+            // InternalXdiagramDsl.g:182:50: (iv_ruleMetaModel= ruleMetaModel EOF )
+            // InternalXdiagramDsl.g:183:2: iv_ruleMetaModel= ruleMetaModel EOF
             {
              newCompositeNode(grammarAccess.getMetaModelRule()); 
             pushFollow(FOLLOW_1);
@@ -491,7 +486,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMetaModel"
-    // InternalXdiagramDsl.g:190:1: ruleMetaModel returns [EObject current=null] : (otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin-id' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}' ) ;
+    // InternalXdiagramDsl.g:189:1: ruleMetaModel returns [EObject current=null] : (otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin-id' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}' ) ;
     public final EObject ruleMetaModel() throws RecognitionException {
         EObject current = null;
 
@@ -507,31 +502,31 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:196:2: ( (otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin-id' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}' ) )
-            // InternalXdiagramDsl.g:197:2: (otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin-id' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}' )
+            // InternalXdiagramDsl.g:195:2: ( (otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin-id' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}' ) )
+            // InternalXdiagramDsl.g:196:2: (otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin-id' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}' )
             {
-            // InternalXdiagramDsl.g:197:2: (otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin-id' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}' )
-            // InternalXdiagramDsl.g:198:3: otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin-id' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}'
+            // InternalXdiagramDsl.g:196:2: (otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin-id' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}' )
+            // InternalXdiagramDsl.g:197:3: otherlv_0= 'metamodel' otherlv_1= '{' otherlv_2= 'plugin-id' ( (lv_plugin_3_0= RULE_STRING ) ) otherlv_4= 'ecore-file' ( (lv_ecorePath_5_0= RULE_STRING ) ) otherlv_6= '}'
             {
-            otherlv_0=(Token)match(input,11,FOLLOW_5); 
+            otherlv_0=(Token)match(input,11,FOLLOW_6); 
 
             			newLeafNode(otherlv_0, grammarAccess.getMetaModelAccess().getMetamodelKeyword_0());
             		
-            otherlv_1=(Token)match(input,12,FOLLOW_6); 
+            otherlv_1=(Token)match(input,12,FOLLOW_7); 
 
             			newLeafNode(otherlv_1, grammarAccess.getMetaModelAccess().getLeftCurlyBracketKeyword_1());
             		
-            otherlv_2=(Token)match(input,13,FOLLOW_7); 
+            otherlv_2=(Token)match(input,13,FOLLOW_8); 
 
             			newLeafNode(otherlv_2, grammarAccess.getMetaModelAccess().getPluginIdKeyword_2());
             		
-            // InternalXdiagramDsl.g:210:3: ( (lv_plugin_3_0= RULE_STRING ) )
-            // InternalXdiagramDsl.g:211:4: (lv_plugin_3_0= RULE_STRING )
+            // InternalXdiagramDsl.g:209:3: ( (lv_plugin_3_0= RULE_STRING ) )
+            // InternalXdiagramDsl.g:210:4: (lv_plugin_3_0= RULE_STRING )
             {
-            // InternalXdiagramDsl.g:211:4: (lv_plugin_3_0= RULE_STRING )
-            // InternalXdiagramDsl.g:212:5: lv_plugin_3_0= RULE_STRING
+            // InternalXdiagramDsl.g:210:4: (lv_plugin_3_0= RULE_STRING )
+            // InternalXdiagramDsl.g:211:5: lv_plugin_3_0= RULE_STRING
             {
-            lv_plugin_3_0=(Token)match(input,RULE_STRING,FOLLOW_8); 
+            lv_plugin_3_0=(Token)match(input,RULE_STRING,FOLLOW_9); 
 
             					newLeafNode(lv_plugin_3_0, grammarAccess.getMetaModelAccess().getPluginSTRINGTerminalRuleCall_3_0());
             				
@@ -551,17 +546,17 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,14,FOLLOW_7); 
+            otherlv_4=(Token)match(input,14,FOLLOW_8); 
 
             			newLeafNode(otherlv_4, grammarAccess.getMetaModelAccess().getEcoreFileKeyword_4());
             		
-            // InternalXdiagramDsl.g:232:3: ( (lv_ecorePath_5_0= RULE_STRING ) )
-            // InternalXdiagramDsl.g:233:4: (lv_ecorePath_5_0= RULE_STRING )
+            // InternalXdiagramDsl.g:231:3: ( (lv_ecorePath_5_0= RULE_STRING ) )
+            // InternalXdiagramDsl.g:232:4: (lv_ecorePath_5_0= RULE_STRING )
             {
-            // InternalXdiagramDsl.g:233:4: (lv_ecorePath_5_0= RULE_STRING )
-            // InternalXdiagramDsl.g:234:5: lv_ecorePath_5_0= RULE_STRING
+            // InternalXdiagramDsl.g:232:4: (lv_ecorePath_5_0= RULE_STRING )
+            // InternalXdiagramDsl.g:233:5: lv_ecorePath_5_0= RULE_STRING
             {
-            lv_ecorePath_5_0=(Token)match(input,RULE_STRING,FOLLOW_9); 
+            lv_ecorePath_5_0=(Token)match(input,RULE_STRING,FOLLOW_10); 
 
             					newLeafNode(lv_ecorePath_5_0, grammarAccess.getMetaModelAccess().getEcorePathSTRINGTerminalRuleCall_5_0());
             				
@@ -608,7 +603,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // InternalXdiagramDsl.g:258:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // InternalXdiagramDsl.g:257:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -616,8 +611,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:258:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // InternalXdiagramDsl.g:259:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // InternalXdiagramDsl.g:257:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // InternalXdiagramDsl.g:258:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
              newCompositeNode(grammarAccess.getQualifiedNameRule()); 
             pushFollow(FOLLOW_1);
@@ -644,7 +639,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedName"
-    // InternalXdiagramDsl.g:265:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // InternalXdiagramDsl.g:264:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -656,46 +651,46 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:271:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // InternalXdiagramDsl.g:272:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalXdiagramDsl.g:270:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // InternalXdiagramDsl.g:271:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // InternalXdiagramDsl.g:272:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // InternalXdiagramDsl.g:273:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // InternalXdiagramDsl.g:271:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalXdiagramDsl.g:272:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_10); 
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_11); 
 
             			current.merge(this_ID_0);
             		
 
             			newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0());
             		
-            // InternalXdiagramDsl.g:280:3: (kw= '.' this_ID_2= RULE_ID )*
-            loop2:
+            // InternalXdiagramDsl.g:279:3: (kw= '.' this_ID_2= RULE_ID )*
+            loop3:
             do {
-                int alt2=2;
-                int LA2_0 = input.LA(1);
+                int alt3=2;
+                int LA3_0 = input.LA(1);
 
-                if ( (LA2_0==16) ) {
-                    int LA2_2 = input.LA(2);
+                if ( (LA3_0==16) ) {
+                    int LA3_2 = input.LA(2);
 
-                    if ( (LA2_2==RULE_ID) ) {
-                        alt2=1;
+                    if ( (LA3_2==RULE_ID) ) {
+                        alt3=1;
                     }
 
 
                 }
 
 
-                switch (alt2) {
+                switch (alt3) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:281:4: kw= '.' this_ID_2= RULE_ID
+            	    // InternalXdiagramDsl.g:280:4: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,16,FOLLOW_11); 
+            	    kw=(Token)match(input,16,FOLLOW_12); 
 
             	    				current.merge(kw);
             	    				newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0());
             	    			
-            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_10); 
+            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_11); 
 
             	    				current.merge(this_ID_2);
             	    			
@@ -707,7 +702,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop2;
+            	    break loop3;
                 }
             } while (true);
 
@@ -734,7 +729,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedNameWithWildCard"
-    // InternalXdiagramDsl.g:298:1: entryRuleQualifiedNameWithWildCard returns [String current=null] : iv_ruleQualifiedNameWithWildCard= ruleQualifiedNameWithWildCard EOF ;
+    // InternalXdiagramDsl.g:297:1: entryRuleQualifiedNameWithWildCard returns [String current=null] : iv_ruleQualifiedNameWithWildCard= ruleQualifiedNameWithWildCard EOF ;
     public final String entryRuleQualifiedNameWithWildCard() throws RecognitionException {
         String current = null;
 
@@ -742,8 +737,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:298:65: (iv_ruleQualifiedNameWithWildCard= ruleQualifiedNameWithWildCard EOF )
-            // InternalXdiagramDsl.g:299:2: iv_ruleQualifiedNameWithWildCard= ruleQualifiedNameWithWildCard EOF
+            // InternalXdiagramDsl.g:297:65: (iv_ruleQualifiedNameWithWildCard= ruleQualifiedNameWithWildCard EOF )
+            // InternalXdiagramDsl.g:298:2: iv_ruleQualifiedNameWithWildCard= ruleQualifiedNameWithWildCard EOF
             {
              newCompositeNode(grammarAccess.getQualifiedNameWithWildCardRule()); 
             pushFollow(FOLLOW_1);
@@ -770,7 +765,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedNameWithWildCard"
-    // InternalXdiagramDsl.g:305:1: ruleQualifiedNameWithWildCard returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName (kw= '.' kw= '*' )? ) ;
+    // InternalXdiagramDsl.g:304:1: ruleQualifiedNameWithWildCard returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName (kw= '.' kw= '*' )? ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedNameWithWildCard() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -782,16 +777,16 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:311:2: ( (this_QualifiedName_0= ruleQualifiedName (kw= '.' kw= '*' )? ) )
-            // InternalXdiagramDsl.g:312:2: (this_QualifiedName_0= ruleQualifiedName (kw= '.' kw= '*' )? )
+            // InternalXdiagramDsl.g:310:2: ( (this_QualifiedName_0= ruleQualifiedName (kw= '.' kw= '*' )? ) )
+            // InternalXdiagramDsl.g:311:2: (this_QualifiedName_0= ruleQualifiedName (kw= '.' kw= '*' )? )
             {
-            // InternalXdiagramDsl.g:312:2: (this_QualifiedName_0= ruleQualifiedName (kw= '.' kw= '*' )? )
-            // InternalXdiagramDsl.g:313:3: this_QualifiedName_0= ruleQualifiedName (kw= '.' kw= '*' )?
+            // InternalXdiagramDsl.g:311:2: (this_QualifiedName_0= ruleQualifiedName (kw= '.' kw= '*' )? )
+            // InternalXdiagramDsl.g:312:3: this_QualifiedName_0= ruleQualifiedName (kw= '.' kw= '*' )?
             {
 
             			newCompositeNode(grammarAccess.getQualifiedNameWithWildCardAccess().getQualifiedNameParserRuleCall_0());
             		
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_11);
             this_QualifiedName_0=ruleQualifiedName();
 
             state._fsp--;
@@ -802,18 +797,18 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             			afterParserOrEnumRuleCall();
             		
-            // InternalXdiagramDsl.g:323:3: (kw= '.' kw= '*' )?
-            int alt3=2;
-            int LA3_0 = input.LA(1);
+            // InternalXdiagramDsl.g:322:3: (kw= '.' kw= '*' )?
+            int alt4=2;
+            int LA4_0 = input.LA(1);
 
-            if ( (LA3_0==16) ) {
-                alt3=1;
+            if ( (LA4_0==16) ) {
+                alt4=1;
             }
-            switch (alt3) {
+            switch (alt4) {
                 case 1 :
-                    // InternalXdiagramDsl.g:324:4: kw= '.' kw= '*'
+                    // InternalXdiagramDsl.g:323:4: kw= '.' kw= '*'
                     {
-                    kw=(Token)match(input,16,FOLLOW_12); 
+                    kw=(Token)match(input,16,FOLLOW_13); 
 
                     				current.merge(kw);
                     				newLeafNode(kw, grammarAccess.getQualifiedNameWithWildCardAccess().getFullStopKeyword_1_0());
@@ -852,7 +847,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDiagram"
-    // InternalXdiagramDsl.g:339:1: entryRuleDiagram returns [EObject current=null] : iv_ruleDiagram= ruleDiagram EOF ;
+    // InternalXdiagramDsl.g:338:1: entryRuleDiagram returns [EObject current=null] : iv_ruleDiagram= ruleDiagram EOF ;
     public final EObject entryRuleDiagram() throws RecognitionException {
         EObject current = null;
 
@@ -860,8 +855,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:339:48: (iv_ruleDiagram= ruleDiagram EOF )
-            // InternalXdiagramDsl.g:340:2: iv_ruleDiagram= ruleDiagram EOF
+            // InternalXdiagramDsl.g:338:48: (iv_ruleDiagram= ruleDiagram EOF )
+            // InternalXdiagramDsl.g:339:2: iv_ruleDiagram= ruleDiagram EOF
             {
              newCompositeNode(grammarAccess.getDiagramRule()); 
             pushFollow(FOLLOW_1);
@@ -888,7 +883,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDiagram"
-    // InternalXdiagramDsl.g:346:1: ruleDiagram returns [EObject current=null] : (otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* otherlv_4= '}' ) ;
+    // InternalXdiagramDsl.g:345:1: ruleDiagram returns [EObject current=null] : (otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* otherlv_4= '}' ) ;
     public final EObject ruleDiagram() throws RecognitionException {
         EObject current = null;
 
@@ -902,21 +897,21 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:352:2: ( (otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* otherlv_4= '}' ) )
-            // InternalXdiagramDsl.g:353:2: (otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* otherlv_4= '}' )
+            // InternalXdiagramDsl.g:351:2: ( (otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* otherlv_4= '}' ) )
+            // InternalXdiagramDsl.g:352:2: (otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* otherlv_4= '}' )
             {
-            // InternalXdiagramDsl.g:353:2: (otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* otherlv_4= '}' )
-            // InternalXdiagramDsl.g:354:3: otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* otherlv_4= '}'
+            // InternalXdiagramDsl.g:352:2: (otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* otherlv_4= '}' )
+            // InternalXdiagramDsl.g:353:3: otherlv_0= 'diagram' ( ( ruleQualifiedName ) ) otherlv_2= '{' ( (lv_contains_3_0= ruleContains ) )* otherlv_4= '}'
             {
-            otherlv_0=(Token)match(input,18,FOLLOW_11); 
+            otherlv_0=(Token)match(input,18,FOLLOW_12); 
 
             			newLeafNode(otherlv_0, grammarAccess.getDiagramAccess().getDiagramKeyword_0());
             		
-            // InternalXdiagramDsl.g:358:3: ( ( ruleQualifiedName ) )
-            // InternalXdiagramDsl.g:359:4: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:357:3: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:358:4: ( ruleQualifiedName )
             {
-            // InternalXdiagramDsl.g:359:4: ( ruleQualifiedName )
-            // InternalXdiagramDsl.g:360:5: ruleQualifiedName
+            // InternalXdiagramDsl.g:358:4: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:359:5: ruleQualifiedName
             {
 
             					if (current==null) {
@@ -926,7 +921,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getDiagramAccess().getModelClassEClassCrossReference_1_0());
             				
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             ruleQualifiedName();
 
             state._fsp--;
@@ -940,32 +935,32 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_13); 
+            otherlv_2=(Token)match(input,12,FOLLOW_14); 
 
             			newLeafNode(otherlv_2, grammarAccess.getDiagramAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalXdiagramDsl.g:378:3: ( (lv_contains_3_0= ruleContains ) )*
-            loop4:
+            // InternalXdiagramDsl.g:377:3: ( (lv_contains_3_0= ruleContains ) )*
+            loop5:
             do {
-                int alt4=2;
-                int LA4_0 = input.LA(1);
+                int alt5=2;
+                int LA5_0 = input.LA(1);
 
-                if ( (LA4_0==46) ) {
-                    alt4=1;
+                if ( (LA5_0==46) ) {
+                    alt5=1;
                 }
 
 
-                switch (alt4) {
+                switch (alt5) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:379:4: (lv_contains_3_0= ruleContains )
+            	    // InternalXdiagramDsl.g:378:4: (lv_contains_3_0= ruleContains )
             	    {
-            	    // InternalXdiagramDsl.g:379:4: (lv_contains_3_0= ruleContains )
-            	    // InternalXdiagramDsl.g:380:5: lv_contains_3_0= ruleContains
+            	    // InternalXdiagramDsl.g:378:4: (lv_contains_3_0= ruleContains )
+            	    // InternalXdiagramDsl.g:379:5: lv_contains_3_0= ruleContains
             	    {
 
             	    					newCompositeNode(grammarAccess.getDiagramAccess().getContainsContainsParserRuleCall_3_0());
             	    				
-            	    pushFollow(FOLLOW_13);
+            	    pushFollow(FOLLOW_14);
             	    lv_contains_3_0=ruleContains();
 
             	    state._fsp--;
@@ -989,7 +984,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop4;
+            	    break loop5;
                 }
             } while (true);
 
@@ -1020,7 +1015,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDiagramElement"
-    // InternalXdiagramDsl.g:405:1: entryRuleDiagramElement returns [EObject current=null] : iv_ruleDiagramElement= ruleDiagramElement EOF ;
+    // InternalXdiagramDsl.g:404:1: entryRuleDiagramElement returns [EObject current=null] : iv_ruleDiagramElement= ruleDiagramElement EOF ;
     public final EObject entryRuleDiagramElement() throws RecognitionException {
         EObject current = null;
 
@@ -1028,8 +1023,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:405:55: (iv_ruleDiagramElement= ruleDiagramElement EOF )
-            // InternalXdiagramDsl.g:406:2: iv_ruleDiagramElement= ruleDiagramElement EOF
+            // InternalXdiagramDsl.g:404:55: (iv_ruleDiagramElement= ruleDiagramElement EOF )
+            // InternalXdiagramDsl.g:405:2: iv_ruleDiagramElement= ruleDiagramElement EOF
             {
              newCompositeNode(grammarAccess.getDiagramElementRule()); 
             pushFollow(FOLLOW_1);
@@ -1056,7 +1051,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDiagramElement"
-    // InternalXdiagramDsl.g:412:1: ruleDiagramElement returns [EObject current=null] : (this_Node_0= ruleNode | this_Link_1= ruleLink ) ;
+    // InternalXdiagramDsl.g:411:1: ruleDiagramElement returns [EObject current=null] : (this_Node_0= ruleNode | this_Link_1= ruleLink ) ;
     public final EObject ruleDiagramElement() throws RecognitionException {
         EObject current = null;
 
@@ -1069,28 +1064,28 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:418:2: ( (this_Node_0= ruleNode | this_Link_1= ruleLink ) )
-            // InternalXdiagramDsl.g:419:2: (this_Node_0= ruleNode | this_Link_1= ruleLink )
+            // InternalXdiagramDsl.g:417:2: ( (this_Node_0= ruleNode | this_Link_1= ruleLink ) )
+            // InternalXdiagramDsl.g:418:2: (this_Node_0= ruleNode | this_Link_1= ruleLink )
             {
-            // InternalXdiagramDsl.g:419:2: (this_Node_0= ruleNode | this_Link_1= ruleLink )
-            int alt5=2;
-            int LA5_0 = input.LA(1);
+            // InternalXdiagramDsl.g:418:2: (this_Node_0= ruleNode | this_Link_1= ruleLink )
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA5_0==20) ) {
-                alt5=1;
+            if ( (LA6_0==20) ) {
+                alt6=1;
             }
-            else if ( (LA5_0==21) ) {
-                alt5=2;
+            else if ( (LA6_0==21) ) {
+                alt6=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
+                    new NoViableAltException("", 6, 0, input);
 
                 throw nvae;
             }
-            switch (alt5) {
+            switch (alt6) {
                 case 1 :
-                    // InternalXdiagramDsl.g:420:3: this_Node_0= ruleNode
+                    // InternalXdiagramDsl.g:419:3: this_Node_0= ruleNode
                     {
 
                     			newCompositeNode(grammarAccess.getDiagramElementAccess().getNodeParserRuleCall_0());
@@ -1108,7 +1103,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:429:3: this_Link_1= ruleLink
+                    // InternalXdiagramDsl.g:428:3: this_Link_1= ruleLink
                     {
 
                     			newCompositeNode(grammarAccess.getDiagramElementAccess().getLinkParserRuleCall_1());
@@ -1148,7 +1143,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLinkedFeature"
-    // InternalXdiagramDsl.g:441:1: entryRuleLinkedFeature returns [EObject current=null] : iv_ruleLinkedFeature= ruleLinkedFeature EOF ;
+    // InternalXdiagramDsl.g:440:1: entryRuleLinkedFeature returns [EObject current=null] : iv_ruleLinkedFeature= ruleLinkedFeature EOF ;
     public final EObject entryRuleLinkedFeature() throws RecognitionException {
         EObject current = null;
 
@@ -1156,8 +1151,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:441:54: (iv_ruleLinkedFeature= ruleLinkedFeature EOF )
-            // InternalXdiagramDsl.g:442:2: iv_ruleLinkedFeature= ruleLinkedFeature EOF
+            // InternalXdiagramDsl.g:440:54: (iv_ruleLinkedFeature= ruleLinkedFeature EOF )
+            // InternalXdiagramDsl.g:441:2: iv_ruleLinkedFeature= ruleLinkedFeature EOF
             {
              newCompositeNode(grammarAccess.getLinkedFeatureRule()); 
             pushFollow(FOLLOW_1);
@@ -1184,7 +1179,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLinkedFeature"
-    // InternalXdiagramDsl.g:448:1: ruleLinkedFeature returns [EObject current=null] : (this_Contains_0= ruleContains | this_Anchor_1= ruleAnchor ) ;
+    // InternalXdiagramDsl.g:447:1: ruleLinkedFeature returns [EObject current=null] : (this_Contains_0= ruleContains | this_Anchor_1= ruleAnchor ) ;
     public final EObject ruleLinkedFeature() throws RecognitionException {
         EObject current = null;
 
@@ -1197,28 +1192,28 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:454:2: ( (this_Contains_0= ruleContains | this_Anchor_1= ruleAnchor ) )
-            // InternalXdiagramDsl.g:455:2: (this_Contains_0= ruleContains | this_Anchor_1= ruleAnchor )
+            // InternalXdiagramDsl.g:453:2: ( (this_Contains_0= ruleContains | this_Anchor_1= ruleAnchor ) )
+            // InternalXdiagramDsl.g:454:2: (this_Contains_0= ruleContains | this_Anchor_1= ruleAnchor )
             {
-            // InternalXdiagramDsl.g:455:2: (this_Contains_0= ruleContains | this_Anchor_1= ruleAnchor )
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            // InternalXdiagramDsl.g:454:2: (this_Contains_0= ruleContains | this_Anchor_1= ruleAnchor )
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( (LA6_0==46) ) {
-                alt6=1;
+            if ( (LA7_0==46) ) {
+                alt7=1;
             }
-            else if ( (LA6_0==28) ) {
-                alt6=2;
+            else if ( (LA7_0==28) ) {
+                alt7=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
-            switch (alt6) {
+            switch (alt7) {
                 case 1 :
-                    // InternalXdiagramDsl.g:456:3: this_Contains_0= ruleContains
+                    // InternalXdiagramDsl.g:455:3: this_Contains_0= ruleContains
                     {
 
                     			newCompositeNode(grammarAccess.getLinkedFeatureAccess().getContainsParserRuleCall_0());
@@ -1236,7 +1231,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:465:3: this_Anchor_1= ruleAnchor
+                    // InternalXdiagramDsl.g:464:3: this_Anchor_1= ruleAnchor
                     {
 
                     			newCompositeNode(grammarAccess.getLinkedFeatureAccess().getAnchorParserRuleCall_1());
@@ -1276,7 +1271,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStyleFeature"
-    // InternalXdiagramDsl.g:477:1: entryRuleStyleFeature returns [EObject current=null] : iv_ruleStyleFeature= ruleStyleFeature EOF ;
+    // InternalXdiagramDsl.g:476:1: entryRuleStyleFeature returns [EObject current=null] : iv_ruleStyleFeature= ruleStyleFeature EOF ;
     public final EObject entryRuleStyleFeature() throws RecognitionException {
         EObject current = null;
 
@@ -1284,8 +1279,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:477:53: (iv_ruleStyleFeature= ruleStyleFeature EOF )
-            // InternalXdiagramDsl.g:478:2: iv_ruleStyleFeature= ruleStyleFeature EOF
+            // InternalXdiagramDsl.g:476:53: (iv_ruleStyleFeature= ruleStyleFeature EOF )
+            // InternalXdiagramDsl.g:477:2: iv_ruleStyleFeature= ruleStyleFeature EOF
             {
              newCompositeNode(grammarAccess.getStyleFeatureRule()); 
             pushFollow(FOLLOW_1);
@@ -1312,7 +1307,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStyleFeature"
-    // InternalXdiagramDsl.g:484:1: ruleStyleFeature returns [EObject current=null] : (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Point_2= rulePoint | this_Corner_3= ruleCorner | this_Background_4= ruleBackground | this_Foreground_5= ruleForeground | this_Transparency_6= ruleTransparency | this_FontProperties_7= ruleFontProperties | this_TextValue_8= ruleTextValue | this_TextAlign_9= ruleTextAlign | this_LineStyle_10= ruleLineStyle | this_LineWidth_11= ruleLineWidth ) ;
+    // InternalXdiagramDsl.g:483:1: ruleStyleFeature returns [EObject current=null] : (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Point_2= rulePoint | this_Corner_3= ruleCorner | this_Background_4= ruleBackground | this_Foreground_5= ruleForeground | this_Transparency_6= ruleTransparency | this_FontProperties_7= ruleFontProperties | this_TextValue_8= ruleTextValue | this_TextAlign_9= ruleTextAlign | this_LineStyle_10= ruleLineStyle | this_LineWidth_11= ruleLineWidth ) ;
     public final EObject ruleStyleFeature() throws RecognitionException {
         EObject current = null;
 
@@ -1345,82 +1340,82 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:490:2: ( (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Point_2= rulePoint | this_Corner_3= ruleCorner | this_Background_4= ruleBackground | this_Foreground_5= ruleForeground | this_Transparency_6= ruleTransparency | this_FontProperties_7= ruleFontProperties | this_TextValue_8= ruleTextValue | this_TextAlign_9= ruleTextAlign | this_LineStyle_10= ruleLineStyle | this_LineWidth_11= ruleLineWidth ) )
-            // InternalXdiagramDsl.g:491:2: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Point_2= rulePoint | this_Corner_3= ruleCorner | this_Background_4= ruleBackground | this_Foreground_5= ruleForeground | this_Transparency_6= ruleTransparency | this_FontProperties_7= ruleFontProperties | this_TextValue_8= ruleTextValue | this_TextAlign_9= ruleTextAlign | this_LineStyle_10= ruleLineStyle | this_LineWidth_11= ruleLineWidth )
+            // InternalXdiagramDsl.g:489:2: ( (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Point_2= rulePoint | this_Corner_3= ruleCorner | this_Background_4= ruleBackground | this_Foreground_5= ruleForeground | this_Transparency_6= ruleTransparency | this_FontProperties_7= ruleFontProperties | this_TextValue_8= ruleTextValue | this_TextAlign_9= ruleTextAlign | this_LineStyle_10= ruleLineStyle | this_LineWidth_11= ruleLineWidth ) )
+            // InternalXdiagramDsl.g:490:2: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Point_2= rulePoint | this_Corner_3= ruleCorner | this_Background_4= ruleBackground | this_Foreground_5= ruleForeground | this_Transparency_6= ruleTransparency | this_FontProperties_7= ruleFontProperties | this_TextValue_8= ruleTextValue | this_TextAlign_9= ruleTextAlign | this_LineStyle_10= ruleLineStyle | this_LineWidth_11= ruleLineWidth )
             {
-            // InternalXdiagramDsl.g:491:2: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Point_2= rulePoint | this_Corner_3= ruleCorner | this_Background_4= ruleBackground | this_Foreground_5= ruleForeground | this_Transparency_6= ruleTransparency | this_FontProperties_7= ruleFontProperties | this_TextValue_8= ruleTextValue | this_TextAlign_9= ruleTextAlign | this_LineStyle_10= ruleLineStyle | this_LineWidth_11= ruleLineWidth )
-            int alt7=12;
+            // InternalXdiagramDsl.g:490:2: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Point_2= rulePoint | this_Corner_3= ruleCorner | this_Background_4= ruleBackground | this_Foreground_5= ruleForeground | this_Transparency_6= ruleTransparency | this_FontProperties_7= ruleFontProperties | this_TextValue_8= ruleTextValue | this_TextAlign_9= ruleTextAlign | this_LineStyle_10= ruleLineStyle | this_LineWidth_11= ruleLineWidth )
+            int alt8=12;
             switch ( input.LA(1) ) {
             case 54:
                 {
-                alt7=1;
+                alt8=1;
                 }
                 break;
             case 58:
                 {
-                alt7=2;
+                alt8=2;
                 }
                 break;
             case 57:
                 {
-                alt7=3;
+                alt8=3;
                 }
                 break;
             case 59:
                 {
-                alt7=4;
+                alt8=4;
                 }
                 break;
             case 52:
                 {
-                alt7=5;
+                alt8=5;
                 }
                 break;
             case 51:
                 {
-                alt7=6;
+                alt8=6;
                 }
                 break;
             case 53:
                 {
-                alt7=7;
+                alt8=7;
                 }
                 break;
             case 66:
                 {
-                alt7=8;
+                alt8=8;
                 }
                 break;
             case 64:
                 {
-                alt7=9;
+                alt8=9;
                 }
                 break;
             case 73:
                 {
-                alt7=10;
+                alt8=10;
                 }
                 break;
             case 74:
                 {
-                alt7=11;
+                alt8=11;
                 }
                 break;
             case 76:
                 {
-                alt7=12;
+                alt8=12;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 7, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt7) {
+            switch (alt8) {
                 case 1 :
-                    // InternalXdiagramDsl.g:492:3: this_Size_0= ruleSize
+                    // InternalXdiagramDsl.g:491:3: this_Size_0= ruleSize
                     {
 
                     			newCompositeNode(grammarAccess.getStyleFeatureAccess().getSizeParserRuleCall_0());
@@ -1438,7 +1433,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:501:3: this_Position_1= rulePosition
+                    // InternalXdiagramDsl.g:500:3: this_Position_1= rulePosition
                     {
 
                     			newCompositeNode(grammarAccess.getStyleFeatureAccess().getPositionParserRuleCall_1());
@@ -1456,7 +1451,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalXdiagramDsl.g:510:3: this_Point_2= rulePoint
+                    // InternalXdiagramDsl.g:509:3: this_Point_2= rulePoint
                     {
 
                     			newCompositeNode(grammarAccess.getStyleFeatureAccess().getPointParserRuleCall_2());
@@ -1474,7 +1469,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalXdiagramDsl.g:519:3: this_Corner_3= ruleCorner
+                    // InternalXdiagramDsl.g:518:3: this_Corner_3= ruleCorner
                     {
 
                     			newCompositeNode(grammarAccess.getStyleFeatureAccess().getCornerParserRuleCall_3());
@@ -1492,7 +1487,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalXdiagramDsl.g:528:3: this_Background_4= ruleBackground
+                    // InternalXdiagramDsl.g:527:3: this_Background_4= ruleBackground
                     {
 
                     			newCompositeNode(grammarAccess.getStyleFeatureAccess().getBackgroundParserRuleCall_4());
@@ -1510,7 +1505,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalXdiagramDsl.g:537:3: this_Foreground_5= ruleForeground
+                    // InternalXdiagramDsl.g:536:3: this_Foreground_5= ruleForeground
                     {
 
                     			newCompositeNode(grammarAccess.getStyleFeatureAccess().getForegroundParserRuleCall_5());
@@ -1528,7 +1523,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalXdiagramDsl.g:546:3: this_Transparency_6= ruleTransparency
+                    // InternalXdiagramDsl.g:545:3: this_Transparency_6= ruleTransparency
                     {
 
                     			newCompositeNode(grammarAccess.getStyleFeatureAccess().getTransparencyParserRuleCall_6());
@@ -1546,7 +1541,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalXdiagramDsl.g:555:3: this_FontProperties_7= ruleFontProperties
+                    // InternalXdiagramDsl.g:554:3: this_FontProperties_7= ruleFontProperties
                     {
 
                     			newCompositeNode(grammarAccess.getStyleFeatureAccess().getFontPropertiesParserRuleCall_7());
@@ -1564,7 +1559,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalXdiagramDsl.g:564:3: this_TextValue_8= ruleTextValue
+                    // InternalXdiagramDsl.g:563:3: this_TextValue_8= ruleTextValue
                     {
 
                     			newCompositeNode(grammarAccess.getStyleFeatureAccess().getTextValueParserRuleCall_8());
@@ -1582,7 +1577,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalXdiagramDsl.g:573:3: this_TextAlign_9= ruleTextAlign
+                    // InternalXdiagramDsl.g:572:3: this_TextAlign_9= ruleTextAlign
                     {
 
                     			newCompositeNode(grammarAccess.getStyleFeatureAccess().getTextAlignParserRuleCall_9());
@@ -1600,7 +1595,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // InternalXdiagramDsl.g:582:3: this_LineStyle_10= ruleLineStyle
+                    // InternalXdiagramDsl.g:581:3: this_LineStyle_10= ruleLineStyle
                     {
 
                     			newCompositeNode(grammarAccess.getStyleFeatureAccess().getLineStyleParserRuleCall_10());
@@ -1618,7 +1613,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // InternalXdiagramDsl.g:591:3: this_LineWidth_11= ruleLineWidth
+                    // InternalXdiagramDsl.g:590:3: this_LineWidth_11= ruleLineWidth
                     {
 
                     			newCompositeNode(grammarAccess.getStyleFeatureAccess().getLineWidthParserRuleCall_11());
@@ -1658,7 +1653,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleChildElement"
-    // InternalXdiagramDsl.g:603:1: entryRuleChildElement returns [EObject current=null] : iv_ruleChildElement= ruleChildElement EOF ;
+    // InternalXdiagramDsl.g:602:1: entryRuleChildElement returns [EObject current=null] : iv_ruleChildElement= ruleChildElement EOF ;
     public final EObject entryRuleChildElement() throws RecognitionException {
         EObject current = null;
 
@@ -1666,8 +1661,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:603:53: (iv_ruleChildElement= ruleChildElement EOF )
-            // InternalXdiagramDsl.g:604:2: iv_ruleChildElement= ruleChildElement EOF
+            // InternalXdiagramDsl.g:602:53: (iv_ruleChildElement= ruleChildElement EOF )
+            // InternalXdiagramDsl.g:603:2: iv_ruleChildElement= ruleChildElement EOF
             {
              newCompositeNode(grammarAccess.getChildElementRule()); 
             pushFollow(FOLLOW_1);
@@ -1694,7 +1689,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleChildElement"
-    // InternalXdiagramDsl.g:610:1: ruleChildElement returns [EObject current=null] : (this_ConnectableElement_0= ruleConnectableElement | this_Line_1= ruleLine | this_Arrow_2= ruleArrow ) ;
+    // InternalXdiagramDsl.g:609:1: ruleChildElement returns [EObject current=null] : (this_ConnectableElement_0= ruleConnectableElement | this_Line_1= ruleLine | this_Arrow_2= ruleArrow ) ;
     public final EObject ruleChildElement() throws RecognitionException {
         EObject current = null;
 
@@ -1709,11 +1704,11 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:616:2: ( (this_ConnectableElement_0= ruleConnectableElement | this_Line_1= ruleLine | this_Arrow_2= ruleArrow ) )
-            // InternalXdiagramDsl.g:617:2: (this_ConnectableElement_0= ruleConnectableElement | this_Line_1= ruleLine | this_Arrow_2= ruleArrow )
+            // InternalXdiagramDsl.g:615:2: ( (this_ConnectableElement_0= ruleConnectableElement | this_Line_1= ruleLine | this_Arrow_2= ruleArrow ) )
+            // InternalXdiagramDsl.g:616:2: (this_ConnectableElement_0= ruleConnectableElement | this_Line_1= ruleLine | this_Arrow_2= ruleArrow )
             {
-            // InternalXdiagramDsl.g:617:2: (this_ConnectableElement_0= ruleConnectableElement | this_Line_1= ruleLine | this_Arrow_2= ruleArrow )
-            int alt8=3;
+            // InternalXdiagramDsl.g:616:2: (this_ConnectableElement_0= ruleConnectableElement | this_Line_1= ruleLine | this_Arrow_2= ruleArrow )
+            int alt9=3;
             switch ( input.LA(1) ) {
             case 32:
             case 35:
@@ -1728,30 +1723,30 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             case 49:
             case 50:
                 {
-                alt8=1;
+                alt9=1;
                 }
                 break;
             case 43:
             case 44:
                 {
-                alt8=2;
+                alt9=2;
                 }
                 break;
             case 45:
                 {
-                alt8=3;
+                alt9=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
+                    new NoViableAltException("", 9, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt8) {
+            switch (alt9) {
                 case 1 :
-                    // InternalXdiagramDsl.g:618:3: this_ConnectableElement_0= ruleConnectableElement
+                    // InternalXdiagramDsl.g:617:3: this_ConnectableElement_0= ruleConnectableElement
                     {
 
                     			newCompositeNode(grammarAccess.getChildElementAccess().getConnectableElementParserRuleCall_0());
@@ -1769,7 +1764,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:627:3: this_Line_1= ruleLine
+                    // InternalXdiagramDsl.g:626:3: this_Line_1= ruleLine
                     {
 
                     			newCompositeNode(grammarAccess.getChildElementAccess().getLineParserRuleCall_1());
@@ -1787,7 +1782,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalXdiagramDsl.g:636:3: this_Arrow_2= ruleArrow
+                    // InternalXdiagramDsl.g:635:3: this_Arrow_2= ruleArrow
                     {
 
                     			newCompositeNode(grammarAccess.getChildElementAccess().getArrowParserRuleCall_2());
@@ -1827,7 +1822,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFeatureConditional"
-    // InternalXdiagramDsl.g:648:1: entryRuleFeatureConditional returns [EObject current=null] : iv_ruleFeatureConditional= ruleFeatureConditional EOF ;
+    // InternalXdiagramDsl.g:647:1: entryRuleFeatureConditional returns [EObject current=null] : iv_ruleFeatureConditional= ruleFeatureConditional EOF ;
     public final EObject entryRuleFeatureConditional() throws RecognitionException {
         EObject current = null;
 
@@ -1835,8 +1830,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:648:59: (iv_ruleFeatureConditional= ruleFeatureConditional EOF )
-            // InternalXdiagramDsl.g:649:2: iv_ruleFeatureConditional= ruleFeatureConditional EOF
+            // InternalXdiagramDsl.g:647:59: (iv_ruleFeatureConditional= ruleFeatureConditional EOF )
+            // InternalXdiagramDsl.g:648:2: iv_ruleFeatureConditional= ruleFeatureConditional EOF
             {
              newCompositeNode(grammarAccess.getFeatureConditionalRule()); 
             pushFollow(FOLLOW_1);
@@ -1863,7 +1858,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFeatureConditional"
-    // InternalXdiagramDsl.g:655:1: ruleFeatureConditional returns [EObject current=null] : (otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) ) ) ;
+    // InternalXdiagramDsl.g:654:1: ruleFeatureConditional returns [EObject current=null] : (otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) ) ) ;
     public final EObject ruleFeatureConditional() throws RecognitionException {
         EObject current = null;
 
@@ -1877,21 +1872,21 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:661:2: ( (otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) ) ) )
-            // InternalXdiagramDsl.g:662:2: (otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) ) )
+            // InternalXdiagramDsl.g:660:2: ( (otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) ) ) )
+            // InternalXdiagramDsl.g:661:2: (otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) ) )
             {
-            // InternalXdiagramDsl.g:662:2: (otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) ) )
-            // InternalXdiagramDsl.g:663:3: otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) )
+            // InternalXdiagramDsl.g:661:2: (otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) ) )
+            // InternalXdiagramDsl.g:662:3: otherlv_0= 'if' ( ( ruleQualifiedName ) ) ( (lv_operator_2_0= ruleOperator ) ) ( (lv_value_3_0= ruleValue ) )
             {
-            otherlv_0=(Token)match(input,19,FOLLOW_11); 
+            otherlv_0=(Token)match(input,19,FOLLOW_12); 
 
             			newLeafNode(otherlv_0, grammarAccess.getFeatureConditionalAccess().getIfKeyword_0());
             		
-            // InternalXdiagramDsl.g:667:3: ( ( ruleQualifiedName ) )
-            // InternalXdiagramDsl.g:668:4: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:666:3: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:667:4: ( ruleQualifiedName )
             {
-            // InternalXdiagramDsl.g:668:4: ( ruleQualifiedName )
-            // InternalXdiagramDsl.g:669:5: ruleQualifiedName
+            // InternalXdiagramDsl.g:667:4: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:668:5: ruleQualifiedName
             {
 
             					if (current==null) {
@@ -1901,7 +1896,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getFeatureConditionalAccess().getModelAttributeEAttributeCrossReference_1_0());
             				
-            pushFollow(FOLLOW_14);
+            pushFollow(FOLLOW_15);
             ruleQualifiedName();
 
             state._fsp--;
@@ -1915,16 +1910,16 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:683:3: ( (lv_operator_2_0= ruleOperator ) )
-            // InternalXdiagramDsl.g:684:4: (lv_operator_2_0= ruleOperator )
+            // InternalXdiagramDsl.g:682:3: ( (lv_operator_2_0= ruleOperator ) )
+            // InternalXdiagramDsl.g:683:4: (lv_operator_2_0= ruleOperator )
             {
-            // InternalXdiagramDsl.g:684:4: (lv_operator_2_0= ruleOperator )
-            // InternalXdiagramDsl.g:685:5: lv_operator_2_0= ruleOperator
+            // InternalXdiagramDsl.g:683:4: (lv_operator_2_0= ruleOperator )
+            // InternalXdiagramDsl.g:684:5: lv_operator_2_0= ruleOperator
             {
 
             					newCompositeNode(grammarAccess.getFeatureConditionalAccess().getOperatorOperatorEnumRuleCall_2_0());
             				
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_16);
             lv_operator_2_0=ruleOperator();
 
             state._fsp--;
@@ -1946,11 +1941,11 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:702:3: ( (lv_value_3_0= ruleValue ) )
-            // InternalXdiagramDsl.g:703:4: (lv_value_3_0= ruleValue )
+            // InternalXdiagramDsl.g:701:3: ( (lv_value_3_0= ruleValue ) )
+            // InternalXdiagramDsl.g:702:4: (lv_value_3_0= ruleValue )
             {
-            // InternalXdiagramDsl.g:703:4: (lv_value_3_0= ruleValue )
-            // InternalXdiagramDsl.g:704:5: lv_value_3_0= ruleValue
+            // InternalXdiagramDsl.g:702:4: (lv_value_3_0= ruleValue )
+            // InternalXdiagramDsl.g:703:5: lv_value_3_0= ruleValue
             {
 
             					newCompositeNode(grammarAccess.getFeatureConditionalAccess().getValueValueParserRuleCall_3_0());
@@ -2000,7 +1995,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNode"
-    // InternalXdiagramDsl.g:725:1: entryRuleNode returns [EObject current=null] : iv_ruleNode= ruleNode EOF ;
+    // InternalXdiagramDsl.g:724:1: entryRuleNode returns [EObject current=null] : iv_ruleNode= ruleNode EOF ;
     public final EObject entryRuleNode() throws RecognitionException {
         EObject current = null;
 
@@ -2008,8 +2003,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:725:45: (iv_ruleNode= ruleNode EOF )
-            // InternalXdiagramDsl.g:726:2: iv_ruleNode= ruleNode EOF
+            // InternalXdiagramDsl.g:724:45: (iv_ruleNode= ruleNode EOF )
+            // InternalXdiagramDsl.g:725:2: iv_ruleNode= ruleNode EOF
             {
              newCompositeNode(grammarAccess.getNodeRule()); 
             pushFollow(FOLLOW_1);
@@ -2036,7 +2031,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNode"
-    // InternalXdiagramDsl.g:732:1: ruleNode returns [EObject current=null] : (otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( (lv_rootFigure_2_0= ruleConnectableElement ) ) ) ;
+    // InternalXdiagramDsl.g:731:1: ruleNode returns [EObject current=null] : (otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( (lv_rootFigure_2_0= ruleConnectableElement ) ) ) ;
     public final EObject ruleNode() throws RecognitionException {
         EObject current = null;
 
@@ -2048,21 +2043,21 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:738:2: ( (otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( (lv_rootFigure_2_0= ruleConnectableElement ) ) ) )
-            // InternalXdiagramDsl.g:739:2: (otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( (lv_rootFigure_2_0= ruleConnectableElement ) ) )
+            // InternalXdiagramDsl.g:737:2: ( (otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( (lv_rootFigure_2_0= ruleConnectableElement ) ) ) )
+            // InternalXdiagramDsl.g:738:2: (otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( (lv_rootFigure_2_0= ruleConnectableElement ) ) )
             {
-            // InternalXdiagramDsl.g:739:2: (otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( (lv_rootFigure_2_0= ruleConnectableElement ) ) )
-            // InternalXdiagramDsl.g:740:3: otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( (lv_rootFigure_2_0= ruleConnectableElement ) )
+            // InternalXdiagramDsl.g:738:2: (otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( (lv_rootFigure_2_0= ruleConnectableElement ) ) )
+            // InternalXdiagramDsl.g:739:3: otherlv_0= 'node' ( ( ruleQualifiedName ) ) ( (lv_rootFigure_2_0= ruleConnectableElement ) )
             {
-            otherlv_0=(Token)match(input,20,FOLLOW_11); 
+            otherlv_0=(Token)match(input,20,FOLLOW_12); 
 
             			newLeafNode(otherlv_0, grammarAccess.getNodeAccess().getNodeKeyword_0());
             		
-            // InternalXdiagramDsl.g:744:3: ( ( ruleQualifiedName ) )
-            // InternalXdiagramDsl.g:745:4: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:743:3: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:744:4: ( ruleQualifiedName )
             {
-            // InternalXdiagramDsl.g:745:4: ( ruleQualifiedName )
-            // InternalXdiagramDsl.g:746:5: ruleQualifiedName
+            // InternalXdiagramDsl.g:744:4: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:745:5: ruleQualifiedName
             {
 
             					if (current==null) {
@@ -2072,7 +2067,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getNodeAccess().getModelClassEClassCrossReference_1_0());
             				
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             ruleQualifiedName();
 
             state._fsp--;
@@ -2086,11 +2081,11 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:760:3: ( (lv_rootFigure_2_0= ruleConnectableElement ) )
-            // InternalXdiagramDsl.g:761:4: (lv_rootFigure_2_0= ruleConnectableElement )
+            // InternalXdiagramDsl.g:759:3: ( (lv_rootFigure_2_0= ruleConnectableElement ) )
+            // InternalXdiagramDsl.g:760:4: (lv_rootFigure_2_0= ruleConnectableElement )
             {
-            // InternalXdiagramDsl.g:761:4: (lv_rootFigure_2_0= ruleConnectableElement )
-            // InternalXdiagramDsl.g:762:5: lv_rootFigure_2_0= ruleConnectableElement
+            // InternalXdiagramDsl.g:760:4: (lv_rootFigure_2_0= ruleConnectableElement )
+            // InternalXdiagramDsl.g:761:5: lv_rootFigure_2_0= ruleConnectableElement
             {
 
             					newCompositeNode(grammarAccess.getNodeAccess().getRootFigureConnectableElementParserRuleCall_2_0());
@@ -2140,7 +2135,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLink"
-    // InternalXdiagramDsl.g:783:1: entryRuleLink returns [EObject current=null] : iv_ruleLink= ruleLink EOF ;
+    // InternalXdiagramDsl.g:782:1: entryRuleLink returns [EObject current=null] : iv_ruleLink= ruleLink EOF ;
     public final EObject entryRuleLink() throws RecognitionException {
         EObject current = null;
 
@@ -2148,8 +2143,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:783:45: (iv_ruleLink= ruleLink EOF )
-            // InternalXdiagramDsl.g:784:2: iv_ruleLink= ruleLink EOF
+            // InternalXdiagramDsl.g:782:45: (iv_ruleLink= ruleLink EOF )
+            // InternalXdiagramDsl.g:783:2: iv_ruleLink= ruleLink EOF
             {
              newCompositeNode(grammarAccess.getLinkRule()); 
             pushFollow(FOLLOW_1);
@@ -2176,7 +2171,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLink"
-    // InternalXdiagramDsl.g:790:1: ruleLink returns [EObject current=null] : (otherlv_0= 'link' ( ( ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) ) ) | ( ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) ) ) ) otherlv_9= '{' ( (lv_features_10_0= ruleLinkFeature ) )* ( (lv_decorators_11_0= ruleDecorator ) )* otherlv_12= '}' ) ;
+    // InternalXdiagramDsl.g:789:1: ruleLink returns [EObject current=null] : (otherlv_0= 'link' ( ( ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) ) ) | ( ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) ) ) ) otherlv_9= '{' ( (lv_features_10_0= ruleLinkFeature ) )* ( (lv_decorators_11_0= ruleDecorator ) )* otherlv_12= '}' ) ;
     public final EObject ruleLink() throws RecognitionException {
         EObject current = null;
 
@@ -2196,46 +2191,46 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:796:2: ( (otherlv_0= 'link' ( ( ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) ) ) | ( ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) ) ) ) otherlv_9= '{' ( (lv_features_10_0= ruleLinkFeature ) )* ( (lv_decorators_11_0= ruleDecorator ) )* otherlv_12= '}' ) )
-            // InternalXdiagramDsl.g:797:2: (otherlv_0= 'link' ( ( ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) ) ) | ( ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) ) ) ) otherlv_9= '{' ( (lv_features_10_0= ruleLinkFeature ) )* ( (lv_decorators_11_0= ruleDecorator ) )* otherlv_12= '}' )
+            // InternalXdiagramDsl.g:795:2: ( (otherlv_0= 'link' ( ( ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) ) ) | ( ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) ) ) ) otherlv_9= '{' ( (lv_features_10_0= ruleLinkFeature ) )* ( (lv_decorators_11_0= ruleDecorator ) )* otherlv_12= '}' ) )
+            // InternalXdiagramDsl.g:796:2: (otherlv_0= 'link' ( ( ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) ) ) | ( ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) ) ) ) otherlv_9= '{' ( (lv_features_10_0= ruleLinkFeature ) )* ( (lv_decorators_11_0= ruleDecorator ) )* otherlv_12= '}' )
             {
-            // InternalXdiagramDsl.g:797:2: (otherlv_0= 'link' ( ( ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) ) ) | ( ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) ) ) ) otherlv_9= '{' ( (lv_features_10_0= ruleLinkFeature ) )* ( (lv_decorators_11_0= ruleDecorator ) )* otherlv_12= '}' )
-            // InternalXdiagramDsl.g:798:3: otherlv_0= 'link' ( ( ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) ) ) | ( ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) ) ) ) otherlv_9= '{' ( (lv_features_10_0= ruleLinkFeature ) )* ( (lv_decorators_11_0= ruleDecorator ) )* otherlv_12= '}'
+            // InternalXdiagramDsl.g:796:2: (otherlv_0= 'link' ( ( ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) ) ) | ( ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) ) ) ) otherlv_9= '{' ( (lv_features_10_0= ruleLinkFeature ) )* ( (lv_decorators_11_0= ruleDecorator ) )* otherlv_12= '}' )
+            // InternalXdiagramDsl.g:797:3: otherlv_0= 'link' ( ( ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) ) ) | ( ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) ) ) ) otherlv_9= '{' ( (lv_features_10_0= ruleLinkFeature ) )* ( (lv_decorators_11_0= ruleDecorator ) )* otherlv_12= '}'
             {
-            otherlv_0=(Token)match(input,21,FOLLOW_17); 
+            otherlv_0=(Token)match(input,21,FOLLOW_18); 
 
             			newLeafNode(otherlv_0, grammarAccess.getLinkAccess().getLinkKeyword_0());
             		
-            // InternalXdiagramDsl.g:802:3: ( ( ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) ) ) | ( ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) ) ) )
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // InternalXdiagramDsl.g:801:3: ( ( ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) ) ) | ( ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) ) ) )
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA9_0==22) ) {
-                alt9=1;
+            if ( (LA10_0==22) ) {
+                alt10=1;
             }
-            else if ( (LA9_0==23) ) {
-                alt9=2;
+            else if ( (LA10_0==23) ) {
+                alt10=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 9, 0, input);
+                    new NoViableAltException("", 10, 0, input);
 
                 throw nvae;
             }
-            switch (alt9) {
+            switch (alt10) {
                 case 1 :
-                    // InternalXdiagramDsl.g:803:4: ( ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) ) )
+                    // InternalXdiagramDsl.g:802:4: ( ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) ) )
                     {
-                    // InternalXdiagramDsl.g:803:4: ( ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) ) )
-                    // InternalXdiagramDsl.g:804:5: ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) )
+                    // InternalXdiagramDsl.g:802:4: ( ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) ) )
+                    // InternalXdiagramDsl.g:803:5: ( (lv_reference_1_0= 'reference' ) ) ( ( ruleQualifiedName ) )
                     {
-                    // InternalXdiagramDsl.g:804:5: ( (lv_reference_1_0= 'reference' ) )
-                    // InternalXdiagramDsl.g:805:6: (lv_reference_1_0= 'reference' )
+                    // InternalXdiagramDsl.g:803:5: ( (lv_reference_1_0= 'reference' ) )
+                    // InternalXdiagramDsl.g:804:6: (lv_reference_1_0= 'reference' )
                     {
-                    // InternalXdiagramDsl.g:805:6: (lv_reference_1_0= 'reference' )
-                    // InternalXdiagramDsl.g:806:7: lv_reference_1_0= 'reference'
+                    // InternalXdiagramDsl.g:804:6: (lv_reference_1_0= 'reference' )
+                    // InternalXdiagramDsl.g:805:7: lv_reference_1_0= 'reference'
                     {
-                    lv_reference_1_0=(Token)match(input,22,FOLLOW_11); 
+                    lv_reference_1_0=(Token)match(input,22,FOLLOW_12); 
 
                     							newLeafNode(lv_reference_1_0, grammarAccess.getLinkAccess().getReferenceReferenceKeyword_1_0_0_0());
                     						
@@ -2251,11 +2246,11 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalXdiagramDsl.g:818:5: ( ( ruleQualifiedName ) )
-                    // InternalXdiagramDsl.g:819:6: ( ruleQualifiedName )
+                    // InternalXdiagramDsl.g:817:5: ( ( ruleQualifiedName ) )
+                    // InternalXdiagramDsl.g:818:6: ( ruleQualifiedName )
                     {
-                    // InternalXdiagramDsl.g:819:6: ( ruleQualifiedName )
-                    // InternalXdiagramDsl.g:820:7: ruleQualifiedName
+                    // InternalXdiagramDsl.g:818:6: ( ruleQualifiedName )
+                    // InternalXdiagramDsl.g:819:7: ruleQualifiedName
                     {
 
                     							if (current==null) {
@@ -2265,7 +2260,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
                     							newCompositeNode(grammarAccess.getLinkAccess().getModelReferenceEReferenceCrossReference_1_0_1_0());
                     						
-                    pushFollow(FOLLOW_5);
+                    pushFollow(FOLLOW_6);
                     ruleQualifiedName();
 
                     state._fsp--;
@@ -2286,18 +2281,18 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:836:4: ( ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) ) )
+                    // InternalXdiagramDsl.g:835:4: ( ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) ) )
                     {
-                    // InternalXdiagramDsl.g:836:4: ( ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) ) )
-                    // InternalXdiagramDsl.g:837:5: ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) )
+                    // InternalXdiagramDsl.g:835:4: ( ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) ) )
+                    // InternalXdiagramDsl.g:836:5: ( (lv_complex_3_0= 'class' ) ) ( ( ruleQualifiedName ) ) otherlv_5= 'source' ( ( ruleQualifiedName ) ) otherlv_7= 'target' ( ( ruleQualifiedName ) )
                     {
-                    // InternalXdiagramDsl.g:837:5: ( (lv_complex_3_0= 'class' ) )
-                    // InternalXdiagramDsl.g:838:6: (lv_complex_3_0= 'class' )
+                    // InternalXdiagramDsl.g:836:5: ( (lv_complex_3_0= 'class' ) )
+                    // InternalXdiagramDsl.g:837:6: (lv_complex_3_0= 'class' )
                     {
-                    // InternalXdiagramDsl.g:838:6: (lv_complex_3_0= 'class' )
-                    // InternalXdiagramDsl.g:839:7: lv_complex_3_0= 'class'
+                    // InternalXdiagramDsl.g:837:6: (lv_complex_3_0= 'class' )
+                    // InternalXdiagramDsl.g:838:7: lv_complex_3_0= 'class'
                     {
-                    lv_complex_3_0=(Token)match(input,23,FOLLOW_11); 
+                    lv_complex_3_0=(Token)match(input,23,FOLLOW_12); 
 
                     							newLeafNode(lv_complex_3_0, grammarAccess.getLinkAccess().getComplexClassKeyword_1_1_0_0());
                     						
@@ -2313,11 +2308,11 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalXdiagramDsl.g:851:5: ( ( ruleQualifiedName ) )
-                    // InternalXdiagramDsl.g:852:6: ( ruleQualifiedName )
+                    // InternalXdiagramDsl.g:850:5: ( ( ruleQualifiedName ) )
+                    // InternalXdiagramDsl.g:851:6: ( ruleQualifiedName )
                     {
-                    // InternalXdiagramDsl.g:852:6: ( ruleQualifiedName )
-                    // InternalXdiagramDsl.g:853:7: ruleQualifiedName
+                    // InternalXdiagramDsl.g:851:6: ( ruleQualifiedName )
+                    // InternalXdiagramDsl.g:852:7: ruleQualifiedName
                     {
 
                     							if (current==null) {
@@ -2326,38 +2321,6 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     						
 
                     							newCompositeNode(grammarAccess.getLinkAccess().getModelClassEClassCrossReference_1_1_1_0());
-                    						
-                    pushFollow(FOLLOW_18);
-                    ruleQualifiedName();
-
-                    state._fsp--;
-
-
-                    							afterParserOrEnumRuleCall();
-                    						
-
-                    }
-
-
-                    }
-
-                    otherlv_5=(Token)match(input,24,FOLLOW_11); 
-
-                    					newLeafNode(otherlv_5, grammarAccess.getLinkAccess().getSourceKeyword_1_1_2());
-                    				
-                    // InternalXdiagramDsl.g:871:5: ( ( ruleQualifiedName ) )
-                    // InternalXdiagramDsl.g:872:6: ( ruleQualifiedName )
-                    {
-                    // InternalXdiagramDsl.g:872:6: ( ruleQualifiedName )
-                    // InternalXdiagramDsl.g:873:7: ruleQualifiedName
-                    {
-
-                    							if (current==null) {
-                    								current = createModelElement(grammarAccess.getLinkRule());
-                    							}
-                    						
-
-                    							newCompositeNode(grammarAccess.getLinkAccess().getSourceReferenceEReferenceCrossReference_1_1_3_0());
                     						
                     pushFollow(FOLLOW_19);
                     ruleQualifiedName();
@@ -2373,15 +2336,47 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_7=(Token)match(input,25,FOLLOW_11); 
+                    otherlv_5=(Token)match(input,24,FOLLOW_12); 
+
+                    					newLeafNode(otherlv_5, grammarAccess.getLinkAccess().getSourceKeyword_1_1_2());
+                    				
+                    // InternalXdiagramDsl.g:870:5: ( ( ruleQualifiedName ) )
+                    // InternalXdiagramDsl.g:871:6: ( ruleQualifiedName )
+                    {
+                    // InternalXdiagramDsl.g:871:6: ( ruleQualifiedName )
+                    // InternalXdiagramDsl.g:872:7: ruleQualifiedName
+                    {
+
+                    							if (current==null) {
+                    								current = createModelElement(grammarAccess.getLinkRule());
+                    							}
+                    						
+
+                    							newCompositeNode(grammarAccess.getLinkAccess().getSourceReferenceEReferenceCrossReference_1_1_3_0());
+                    						
+                    pushFollow(FOLLOW_20);
+                    ruleQualifiedName();
+
+                    state._fsp--;
+
+
+                    							afterParserOrEnumRuleCall();
+                    						
+
+                    }
+
+
+                    }
+
+                    otherlv_7=(Token)match(input,25,FOLLOW_12); 
 
                     					newLeafNode(otherlv_7, grammarAccess.getLinkAccess().getTargetKeyword_1_1_4());
                     				
-                    // InternalXdiagramDsl.g:891:5: ( ( ruleQualifiedName ) )
-                    // InternalXdiagramDsl.g:892:6: ( ruleQualifiedName )
+                    // InternalXdiagramDsl.g:890:5: ( ( ruleQualifiedName ) )
+                    // InternalXdiagramDsl.g:891:6: ( ruleQualifiedName )
                     {
-                    // InternalXdiagramDsl.g:892:6: ( ruleQualifiedName )
-                    // InternalXdiagramDsl.g:893:7: ruleQualifiedName
+                    // InternalXdiagramDsl.g:891:6: ( ruleQualifiedName )
+                    // InternalXdiagramDsl.g:892:7: ruleQualifiedName
                     {
 
                     							if (current==null) {
@@ -2391,7 +2386,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
                     							newCompositeNode(grammarAccess.getLinkAccess().getTargetReferenceEReferenceCrossReference_1_1_5_0());
                     						
-                    pushFollow(FOLLOW_5);
+                    pushFollow(FOLLOW_6);
                     ruleQualifiedName();
 
                     state._fsp--;
@@ -2414,32 +2409,32 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,12,FOLLOW_20); 
+            otherlv_9=(Token)match(input,12,FOLLOW_21); 
 
             			newLeafNode(otherlv_9, grammarAccess.getLinkAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalXdiagramDsl.g:913:3: ( (lv_features_10_0= ruleLinkFeature ) )*
-            loop10:
+            // InternalXdiagramDsl.g:912:3: ( (lv_features_10_0= ruleLinkFeature ) )*
+            loop11:
             do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-                if ( (LA10_0==51||LA10_0==74||LA10_0==76) ) {
-                    alt10=1;
+                if ( (LA11_0==51||LA11_0==74||LA11_0==76) ) {
+                    alt11=1;
                 }
 
 
-                switch (alt10) {
+                switch (alt11) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:914:4: (lv_features_10_0= ruleLinkFeature )
+            	    // InternalXdiagramDsl.g:913:4: (lv_features_10_0= ruleLinkFeature )
             	    {
-            	    // InternalXdiagramDsl.g:914:4: (lv_features_10_0= ruleLinkFeature )
-            	    // InternalXdiagramDsl.g:915:5: lv_features_10_0= ruleLinkFeature
+            	    // InternalXdiagramDsl.g:913:4: (lv_features_10_0= ruleLinkFeature )
+            	    // InternalXdiagramDsl.g:914:5: lv_features_10_0= ruleLinkFeature
             	    {
 
             	    					newCompositeNode(grammarAccess.getLinkAccess().getFeaturesLinkFeatureParserRuleCall_3_0());
             	    				
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    lv_features_10_0=ruleLinkFeature();
 
             	    state._fsp--;
@@ -2463,32 +2458,32 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop10;
+            	    break loop11;
                 }
             } while (true);
 
-            // InternalXdiagramDsl.g:932:3: ( (lv_decorators_11_0= ruleDecorator ) )*
-            loop11:
+            // InternalXdiagramDsl.g:931:3: ( (lv_decorators_11_0= ruleDecorator ) )*
+            loop12:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt12=2;
+                int LA12_0 = input.LA(1);
 
-                if ( (LA11_0==26) ) {
-                    alt11=1;
+                if ( (LA12_0==26) ) {
+                    alt12=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt12) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:933:4: (lv_decorators_11_0= ruleDecorator )
+            	    // InternalXdiagramDsl.g:932:4: (lv_decorators_11_0= ruleDecorator )
             	    {
-            	    // InternalXdiagramDsl.g:933:4: (lv_decorators_11_0= ruleDecorator )
-            	    // InternalXdiagramDsl.g:934:5: lv_decorators_11_0= ruleDecorator
+            	    // InternalXdiagramDsl.g:932:4: (lv_decorators_11_0= ruleDecorator )
+            	    // InternalXdiagramDsl.g:933:5: lv_decorators_11_0= ruleDecorator
             	    {
 
             	    					newCompositeNode(grammarAccess.getLinkAccess().getDecoratorsDecoratorParserRuleCall_4_0());
             	    				
-            	    pushFollow(FOLLOW_21);
+            	    pushFollow(FOLLOW_22);
             	    lv_decorators_11_0=ruleDecorator();
 
             	    state._fsp--;
@@ -2512,7 +2507,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop11;
+            	    break loop12;
                 }
             } while (true);
 
@@ -2543,7 +2538,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLinkFeature"
-    // InternalXdiagramDsl.g:959:1: entryRuleLinkFeature returns [EObject current=null] : iv_ruleLinkFeature= ruleLinkFeature EOF ;
+    // InternalXdiagramDsl.g:958:1: entryRuleLinkFeature returns [EObject current=null] : iv_ruleLinkFeature= ruleLinkFeature EOF ;
     public final EObject entryRuleLinkFeature() throws RecognitionException {
         EObject current = null;
 
@@ -2551,8 +2546,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:959:52: (iv_ruleLinkFeature= ruleLinkFeature EOF )
-            // InternalXdiagramDsl.g:960:2: iv_ruleLinkFeature= ruleLinkFeature EOF
+            // InternalXdiagramDsl.g:958:52: (iv_ruleLinkFeature= ruleLinkFeature EOF )
+            // InternalXdiagramDsl.g:959:2: iv_ruleLinkFeature= ruleLinkFeature EOF
             {
              newCompositeNode(grammarAccess.getLinkFeatureRule()); 
             pushFollow(FOLLOW_1);
@@ -2579,7 +2574,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLinkFeature"
-    // InternalXdiagramDsl.g:966:1: ruleLinkFeature returns [EObject current=null] : (this_Foreground_0= ruleForeground | this_LineStyle_1= ruleLineStyle | this_LineWidth_2= ruleLineWidth ) ;
+    // InternalXdiagramDsl.g:965:1: ruleLinkFeature returns [EObject current=null] : (this_Foreground_0= ruleForeground | this_LineStyle_1= ruleLineStyle | this_LineWidth_2= ruleLineWidth ) ;
     public final EObject ruleLinkFeature() throws RecognitionException {
         EObject current = null;
 
@@ -2594,37 +2589,37 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:972:2: ( (this_Foreground_0= ruleForeground | this_LineStyle_1= ruleLineStyle | this_LineWidth_2= ruleLineWidth ) )
-            // InternalXdiagramDsl.g:973:2: (this_Foreground_0= ruleForeground | this_LineStyle_1= ruleLineStyle | this_LineWidth_2= ruleLineWidth )
+            // InternalXdiagramDsl.g:971:2: ( (this_Foreground_0= ruleForeground | this_LineStyle_1= ruleLineStyle | this_LineWidth_2= ruleLineWidth ) )
+            // InternalXdiagramDsl.g:972:2: (this_Foreground_0= ruleForeground | this_LineStyle_1= ruleLineStyle | this_LineWidth_2= ruleLineWidth )
             {
-            // InternalXdiagramDsl.g:973:2: (this_Foreground_0= ruleForeground | this_LineStyle_1= ruleLineStyle | this_LineWidth_2= ruleLineWidth )
-            int alt12=3;
+            // InternalXdiagramDsl.g:972:2: (this_Foreground_0= ruleForeground | this_LineStyle_1= ruleLineStyle | this_LineWidth_2= ruleLineWidth )
+            int alt13=3;
             switch ( input.LA(1) ) {
             case 51:
                 {
-                alt12=1;
+                alt13=1;
                 }
                 break;
             case 74:
                 {
-                alt12=2;
+                alt13=2;
                 }
                 break;
             case 76:
                 {
-                alt12=3;
+                alt13=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 12, 0, input);
+                    new NoViableAltException("", 13, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt12) {
+            switch (alt13) {
                 case 1 :
-                    // InternalXdiagramDsl.g:974:3: this_Foreground_0= ruleForeground
+                    // InternalXdiagramDsl.g:973:3: this_Foreground_0= ruleForeground
                     {
 
                     			newCompositeNode(grammarAccess.getLinkFeatureAccess().getForegroundParserRuleCall_0());
@@ -2642,7 +2637,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:983:3: this_LineStyle_1= ruleLineStyle
+                    // InternalXdiagramDsl.g:982:3: this_LineStyle_1= ruleLineStyle
                     {
 
                     			newCompositeNode(grammarAccess.getLinkFeatureAccess().getLineStyleParserRuleCall_1());
@@ -2660,7 +2655,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalXdiagramDsl.g:992:3: this_LineWidth_2= ruleLineWidth
+                    // InternalXdiagramDsl.g:991:3: this_LineWidth_2= ruleLineWidth
                     {
 
                     			newCompositeNode(grammarAccess.getLinkFeatureAccess().getLineWidthParserRuleCall_2());
@@ -2700,7 +2695,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDecorator"
-    // InternalXdiagramDsl.g:1004:1: entryRuleDecorator returns [EObject current=null] : iv_ruleDecorator= ruleDecorator EOF ;
+    // InternalXdiagramDsl.g:1003:1: entryRuleDecorator returns [EObject current=null] : iv_ruleDecorator= ruleDecorator EOF ;
     public final EObject entryRuleDecorator() throws RecognitionException {
         EObject current = null;
 
@@ -2708,8 +2703,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:1004:50: (iv_ruleDecorator= ruleDecorator EOF )
-            // InternalXdiagramDsl.g:1005:2: iv_ruleDecorator= ruleDecorator EOF
+            // InternalXdiagramDsl.g:1003:50: (iv_ruleDecorator= ruleDecorator EOF )
+            // InternalXdiagramDsl.g:1004:2: iv_ruleDecorator= ruleDecorator EOF
             {
              newCompositeNode(grammarAccess.getDecoratorRule()); 
             pushFollow(FOLLOW_1);
@@ -2736,7 +2731,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDecorator"
-    // InternalXdiagramDsl.g:1011:1: ruleDecorator returns [EObject current=null] : (otherlv_0= 'decorator' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_element_3_0= ruleDecoratorElement ) ) ) ;
+    // InternalXdiagramDsl.g:1010:1: ruleDecorator returns [EObject current=null] : (otherlv_0= 'decorator' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_element_3_0= ruleDecoratorElement ) ) ) ;
     public final EObject ruleDecorator() throws RecognitionException {
         EObject current = null;
 
@@ -2750,23 +2745,23 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:1017:2: ( (otherlv_0= 'decorator' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_element_3_0= ruleDecoratorElement ) ) ) )
-            // InternalXdiagramDsl.g:1018:2: (otherlv_0= 'decorator' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_element_3_0= ruleDecoratorElement ) ) )
+            // InternalXdiagramDsl.g:1016:2: ( (otherlv_0= 'decorator' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_element_3_0= ruleDecoratorElement ) ) ) )
+            // InternalXdiagramDsl.g:1017:2: (otherlv_0= 'decorator' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_element_3_0= ruleDecoratorElement ) ) )
             {
-            // InternalXdiagramDsl.g:1018:2: (otherlv_0= 'decorator' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_element_3_0= ruleDecoratorElement ) ) )
-            // InternalXdiagramDsl.g:1019:3: otherlv_0= 'decorator' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_element_3_0= ruleDecoratorElement ) )
+            // InternalXdiagramDsl.g:1017:2: (otherlv_0= 'decorator' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_element_3_0= ruleDecoratorElement ) ) )
+            // InternalXdiagramDsl.g:1018:3: otherlv_0= 'decorator' ( (lv_position_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_element_3_0= ruleDecoratorElement ) )
             {
-            otherlv_0=(Token)match(input,26,FOLLOW_22); 
+            otherlv_0=(Token)match(input,26,FOLLOW_23); 
 
             			newLeafNode(otherlv_0, grammarAccess.getDecoratorAccess().getDecoratorKeyword_0());
             		
-            // InternalXdiagramDsl.g:1023:3: ( (lv_position_1_0= RULE_INT ) )
-            // InternalXdiagramDsl.g:1024:4: (lv_position_1_0= RULE_INT )
+            // InternalXdiagramDsl.g:1022:3: ( (lv_position_1_0= RULE_INT ) )
+            // InternalXdiagramDsl.g:1023:4: (lv_position_1_0= RULE_INT )
             {
-            // InternalXdiagramDsl.g:1024:4: (lv_position_1_0= RULE_INT )
-            // InternalXdiagramDsl.g:1025:5: lv_position_1_0= RULE_INT
+            // InternalXdiagramDsl.g:1023:4: (lv_position_1_0= RULE_INT )
+            // InternalXdiagramDsl.g:1024:5: lv_position_1_0= RULE_INT
             {
-            lv_position_1_0=(Token)match(input,RULE_INT,FOLLOW_23); 
+            lv_position_1_0=(Token)match(input,RULE_INT,FOLLOW_24); 
 
             					newLeafNode(lv_position_1_0, grammarAccess.getDecoratorAccess().getPositionINTTerminalRuleCall_1_0());
             				
@@ -2786,15 +2781,15 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,27,FOLLOW_24); 
+            otherlv_2=(Token)match(input,27,FOLLOW_25); 
 
             			newLeafNode(otherlv_2, grammarAccess.getDecoratorAccess().getPercentSignKeyword_2());
             		
-            // InternalXdiagramDsl.g:1045:3: ( (lv_element_3_0= ruleDecoratorElement ) )
-            // InternalXdiagramDsl.g:1046:4: (lv_element_3_0= ruleDecoratorElement )
+            // InternalXdiagramDsl.g:1044:3: ( (lv_element_3_0= ruleDecoratorElement ) )
+            // InternalXdiagramDsl.g:1045:4: (lv_element_3_0= ruleDecoratorElement )
             {
-            // InternalXdiagramDsl.g:1046:4: (lv_element_3_0= ruleDecoratorElement )
-            // InternalXdiagramDsl.g:1047:5: lv_element_3_0= ruleDecoratorElement
+            // InternalXdiagramDsl.g:1045:4: (lv_element_3_0= ruleDecoratorElement )
+            // InternalXdiagramDsl.g:1046:5: lv_element_3_0= ruleDecoratorElement
             {
 
             					newCompositeNode(grammarAccess.getDecoratorAccess().getElementDecoratorElementParserRuleCall_3_0());
@@ -2844,7 +2839,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAnchor"
-    // InternalXdiagramDsl.g:1068:1: entryRuleAnchor returns [EObject current=null] : iv_ruleAnchor= ruleAnchor EOF ;
+    // InternalXdiagramDsl.g:1067:1: entryRuleAnchor returns [EObject current=null] : iv_ruleAnchor= ruleAnchor EOF ;
     public final EObject entryRuleAnchor() throws RecognitionException {
         EObject current = null;
 
@@ -2852,8 +2847,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:1068:47: (iv_ruleAnchor= ruleAnchor EOF )
-            // InternalXdiagramDsl.g:1069:2: iv_ruleAnchor= ruleAnchor EOF
+            // InternalXdiagramDsl.g:1067:47: (iv_ruleAnchor= ruleAnchor EOF )
+            // InternalXdiagramDsl.g:1068:2: iv_ruleAnchor= ruleAnchor EOF
             {
              newCompositeNode(grammarAccess.getAnchorRule()); 
             pushFollow(FOLLOW_1);
@@ -2880,7 +2875,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAnchor"
-    // InternalXdiagramDsl.g:1075:1: ruleAnchor returns [EObject current=null] : (otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) (otherlv_3= 'max' ( (lv_max_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' ) ;
+    // InternalXdiagramDsl.g:1074:1: ruleAnchor returns [EObject current=null] : (otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) (otherlv_3= 'max' ( (lv_max_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' ) ;
     public final EObject ruleAnchor() throws RecognitionException {
         EObject current = null;
 
@@ -2897,26 +2892,26 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:1081:2: ( (otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) (otherlv_3= 'max' ( (lv_max_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' ) )
-            // InternalXdiagramDsl.g:1082:2: (otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) (otherlv_3= 'max' ( (lv_max_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' )
+            // InternalXdiagramDsl.g:1080:2: ( (otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) (otherlv_3= 'max' ( (lv_max_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' ) )
+            // InternalXdiagramDsl.g:1081:2: (otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) (otherlv_3= 'max' ( (lv_max_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' )
             {
-            // InternalXdiagramDsl.g:1082:2: (otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) (otherlv_3= 'max' ( (lv_max_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' )
-            // InternalXdiagramDsl.g:1083:3: otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) (otherlv_3= 'max' ( (lv_max_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';'
+            // InternalXdiagramDsl.g:1081:2: (otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) (otherlv_3= 'max' ( (lv_max_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' )
+            // InternalXdiagramDsl.g:1082:3: otherlv_0= 'anchor' ( (lv_direction_1_0= ruleAnchorDirection ) ) ( ( ruleQualifiedName ) ) (otherlv_3= 'max' ( (lv_max_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';'
             {
-            otherlv_0=(Token)match(input,28,FOLLOW_25); 
+            otherlv_0=(Token)match(input,28,FOLLOW_26); 
 
             			newLeafNode(otherlv_0, grammarAccess.getAnchorAccess().getAnchorKeyword_0());
             		
-            // InternalXdiagramDsl.g:1087:3: ( (lv_direction_1_0= ruleAnchorDirection ) )
-            // InternalXdiagramDsl.g:1088:4: (lv_direction_1_0= ruleAnchorDirection )
+            // InternalXdiagramDsl.g:1086:3: ( (lv_direction_1_0= ruleAnchorDirection ) )
+            // InternalXdiagramDsl.g:1087:4: (lv_direction_1_0= ruleAnchorDirection )
             {
-            // InternalXdiagramDsl.g:1088:4: (lv_direction_1_0= ruleAnchorDirection )
-            // InternalXdiagramDsl.g:1089:5: lv_direction_1_0= ruleAnchorDirection
+            // InternalXdiagramDsl.g:1087:4: (lv_direction_1_0= ruleAnchorDirection )
+            // InternalXdiagramDsl.g:1088:5: lv_direction_1_0= ruleAnchorDirection
             {
 
             					newCompositeNode(grammarAccess.getAnchorAccess().getDirectionAnchorDirectionEnumRuleCall_1_0());
             				
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_12);
             lv_direction_1_0=ruleAnchorDirection();
 
             state._fsp--;
@@ -2938,11 +2933,11 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:1106:3: ( ( ruleQualifiedName ) )
-            // InternalXdiagramDsl.g:1107:4: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:1105:3: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:1106:4: ( ruleQualifiedName )
             {
-            // InternalXdiagramDsl.g:1107:4: ( ruleQualifiedName )
-            // InternalXdiagramDsl.g:1108:5: ruleQualifiedName
+            // InternalXdiagramDsl.g:1106:4: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:1107:5: ruleQualifiedName
             {
 
             					if (current==null) {
@@ -2952,7 +2947,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getAnchorAccess().getModelReferenceEReferenceCrossReference_2_0());
             				
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_27);
             ruleQualifiedName();
 
             state._fsp--;
@@ -2966,28 +2961,28 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:1122:3: (otherlv_3= 'max' ( (lv_max_4_0= RULE_INT ) ) )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // InternalXdiagramDsl.g:1121:3: (otherlv_3= 'max' ( (lv_max_4_0= RULE_INT ) ) )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA13_0==29) ) {
-                alt13=1;
+            if ( (LA14_0==29) ) {
+                alt14=1;
             }
-            switch (alt13) {
+            switch (alt14) {
                 case 1 :
-                    // InternalXdiagramDsl.g:1123:4: otherlv_3= 'max' ( (lv_max_4_0= RULE_INT ) )
+                    // InternalXdiagramDsl.g:1122:4: otherlv_3= 'max' ( (lv_max_4_0= RULE_INT ) )
                     {
-                    otherlv_3=(Token)match(input,29,FOLLOW_22); 
+                    otherlv_3=(Token)match(input,29,FOLLOW_23); 
 
                     				newLeafNode(otherlv_3, grammarAccess.getAnchorAccess().getMaxKeyword_3_0());
                     			
-                    // InternalXdiagramDsl.g:1127:4: ( (lv_max_4_0= RULE_INT ) )
-                    // InternalXdiagramDsl.g:1128:5: (lv_max_4_0= RULE_INT )
+                    // InternalXdiagramDsl.g:1126:4: ( (lv_max_4_0= RULE_INT ) )
+                    // InternalXdiagramDsl.g:1127:5: (lv_max_4_0= RULE_INT )
                     {
-                    // InternalXdiagramDsl.g:1128:5: (lv_max_4_0= RULE_INT )
-                    // InternalXdiagramDsl.g:1129:6: lv_max_4_0= RULE_INT
+                    // InternalXdiagramDsl.g:1127:5: (lv_max_4_0= RULE_INT )
+                    // InternalXdiagramDsl.g:1128:6: lv_max_4_0= RULE_INT
                     {
-                    lv_max_4_0=(Token)match(input,RULE_INT,FOLLOW_27); 
+                    lv_max_4_0=(Token)match(input,RULE_INT,FOLLOW_28); 
 
                     						newLeafNode(lv_max_4_0, grammarAccess.getAnchorAccess().getMaxINTTerminalRuleCall_3_1_0());
                     					
@@ -3013,24 +3008,24 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:1146:3: ( (lv_conditional_5_0= ruleFeatureConditional ) )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // InternalXdiagramDsl.g:1145:3: ( (lv_conditional_5_0= ruleFeatureConditional ) )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA14_0==19) ) {
-                alt14=1;
+            if ( (LA15_0==19) ) {
+                alt15=1;
             }
-            switch (alt14) {
+            switch (alt15) {
                 case 1 :
-                    // InternalXdiagramDsl.g:1147:4: (lv_conditional_5_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:1146:4: (lv_conditional_5_0= ruleFeatureConditional )
                     {
-                    // InternalXdiagramDsl.g:1147:4: (lv_conditional_5_0= ruleFeatureConditional )
-                    // InternalXdiagramDsl.g:1148:5: lv_conditional_5_0= ruleFeatureConditional
+                    // InternalXdiagramDsl.g:1146:4: (lv_conditional_5_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:1147:5: lv_conditional_5_0= ruleFeatureConditional
                     {
 
                     					newCompositeNode(grammarAccess.getAnchorAccess().getConditionalFeatureConditionalParserRuleCall_4_0());
                     				
-                    pushFollow(FOLLOW_28);
+                    pushFollow(FOLLOW_29);
                     lv_conditional_5_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -3081,8 +3076,159 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleAnchor"
 
 
+    // $ANTLR start "entryRuleColors"
+    // InternalXdiagramDsl.g:1172:1: entryRuleColors returns [EObject current=null] : iv_ruleColors= ruleColors EOF ;
+    public final EObject entryRuleColors() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleColors = null;
+
+
+        try {
+            // InternalXdiagramDsl.g:1172:47: (iv_ruleColors= ruleColors EOF )
+            // InternalXdiagramDsl.g:1173:2: iv_ruleColors= ruleColors EOF
+            {
+             newCompositeNode(grammarAccess.getColorsRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleColors=ruleColors();
+
+            state._fsp--;
+
+             current =iv_ruleColors; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleColors"
+
+
+    // $ANTLR start "ruleColors"
+    // InternalXdiagramDsl.g:1179:1: ruleColors returns [EObject current=null] : ( () otherlv_1= 'colors' otherlv_2= '{' ( (lv_colors_3_0= ruleCustomColor ) )* otherlv_4= '}' ) ;
+    public final EObject ruleColors() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_1=null;
+        Token otherlv_2=null;
+        Token otherlv_4=null;
+        EObject lv_colors_3_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalXdiagramDsl.g:1185:2: ( ( () otherlv_1= 'colors' otherlv_2= '{' ( (lv_colors_3_0= ruleCustomColor ) )* otherlv_4= '}' ) )
+            // InternalXdiagramDsl.g:1186:2: ( () otherlv_1= 'colors' otherlv_2= '{' ( (lv_colors_3_0= ruleCustomColor ) )* otherlv_4= '}' )
+            {
+            // InternalXdiagramDsl.g:1186:2: ( () otherlv_1= 'colors' otherlv_2= '{' ( (lv_colors_3_0= ruleCustomColor ) )* otherlv_4= '}' )
+            // InternalXdiagramDsl.g:1187:3: () otherlv_1= 'colors' otherlv_2= '{' ( (lv_colors_3_0= ruleCustomColor ) )* otherlv_4= '}'
+            {
+            // InternalXdiagramDsl.g:1187:3: ()
+            // InternalXdiagramDsl.g:1188:4: 
+            {
+
+            				current = forceCreateModelElement(
+            					grammarAccess.getColorsAccess().getColorsAction_0(),
+            					current);
+            			
+
+            }
+
+            otherlv_1=(Token)match(input,31,FOLLOW_6); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getColorsAccess().getColorsKeyword_1());
+            		
+            otherlv_2=(Token)match(input,12,FOLLOW_30); 
+
+            			newLeafNode(otherlv_2, grammarAccess.getColorsAccess().getLeftCurlyBracketKeyword_2());
+            		
+            // InternalXdiagramDsl.g:1202:3: ( (lv_colors_3_0= ruleCustomColor ) )*
+            loop16:
+            do {
+                int alt16=2;
+                int LA16_0 = input.LA(1);
+
+                if ( (LA16_0==RULE_ID) ) {
+                    alt16=1;
+                }
+
+
+                switch (alt16) {
+            	case 1 :
+            	    // InternalXdiagramDsl.g:1203:4: (lv_colors_3_0= ruleCustomColor )
+            	    {
+            	    // InternalXdiagramDsl.g:1203:4: (lv_colors_3_0= ruleCustomColor )
+            	    // InternalXdiagramDsl.g:1204:5: lv_colors_3_0= ruleCustomColor
+            	    {
+
+            	    					newCompositeNode(grammarAccess.getColorsAccess().getColorsCustomColorParserRuleCall_3_0());
+            	    				
+            	    pushFollow(FOLLOW_30);
+            	    lv_colors_3_0=ruleCustomColor();
+
+            	    state._fsp--;
+
+
+            	    					if (current==null) {
+            	    						current = createModelElementForParent(grammarAccess.getColorsRule());
+            	    					}
+            	    					add(
+            	    						current,
+            	    						"colors",
+            	    						lv_colors_3_0,
+            	    						"pt.iscte.xdiagram.dsl.XdiagramDsl.CustomColor");
+            	    					afterParserOrEnumRuleCall();
+            	    				
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop16;
+                }
+            } while (true);
+
+            otherlv_4=(Token)match(input,15,FOLLOW_2); 
+
+            			newLeafNode(otherlv_4, grammarAccess.getColorsAccess().getRightCurlyBracketKeyword_4());
+            		
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleColors"
+
+
     // $ANTLR start "entryRuleCustomColor"
-    // InternalXdiagramDsl.g:1173:1: entryRuleCustomColor returns [EObject current=null] : iv_ruleCustomColor= ruleCustomColor EOF ;
+    // InternalXdiagramDsl.g:1229:1: entryRuleCustomColor returns [EObject current=null] : iv_ruleCustomColor= ruleCustomColor EOF ;
     public final EObject entryRuleCustomColor() throws RecognitionException {
         EObject current = null;
 
@@ -3090,8 +3236,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:1173:52: (iv_ruleCustomColor= ruleCustomColor EOF )
-            // InternalXdiagramDsl.g:1174:2: iv_ruleCustomColor= ruleCustomColor EOF
+            // InternalXdiagramDsl.g:1229:52: (iv_ruleCustomColor= ruleCustomColor EOF )
+            // InternalXdiagramDsl.g:1230:2: iv_ruleCustomColor= ruleCustomColor EOF
             {
              newCompositeNode(grammarAccess.getCustomColorRule()); 
             pushFollow(FOLLOW_1);
@@ -3118,40 +3264,35 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCustomColor"
-    // InternalXdiagramDsl.g:1180:1: ruleCustomColor returns [EObject current=null] : (otherlv_0= 'color' ( (lv_name_1_0= RULE_ID ) ) ( (lv_R_2_0= RULE_INT ) ) ( (lv_G_3_0= RULE_INT ) ) ( (lv_B_4_0= RULE_INT ) ) otherlv_5= ';' ) ;
+    // InternalXdiagramDsl.g:1236:1: ruleCustomColor returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_R_1_0= RULE_INT ) ) ( (lv_G_2_0= RULE_INT ) ) ( (lv_B_3_0= RULE_INT ) ) otherlv_4= ';' ) ;
     public final EObject ruleCustomColor() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
-        Token lv_name_1_0=null;
-        Token lv_R_2_0=null;
-        Token lv_G_3_0=null;
-        Token lv_B_4_0=null;
-        Token otherlv_5=null;
+        Token lv_name_0_0=null;
+        Token lv_R_1_0=null;
+        Token lv_G_2_0=null;
+        Token lv_B_3_0=null;
+        Token otherlv_4=null;
 
 
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:1186:2: ( (otherlv_0= 'color' ( (lv_name_1_0= RULE_ID ) ) ( (lv_R_2_0= RULE_INT ) ) ( (lv_G_3_0= RULE_INT ) ) ( (lv_B_4_0= RULE_INT ) ) otherlv_5= ';' ) )
-            // InternalXdiagramDsl.g:1187:2: (otherlv_0= 'color' ( (lv_name_1_0= RULE_ID ) ) ( (lv_R_2_0= RULE_INT ) ) ( (lv_G_3_0= RULE_INT ) ) ( (lv_B_4_0= RULE_INT ) ) otherlv_5= ';' )
+            // InternalXdiagramDsl.g:1242:2: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_R_1_0= RULE_INT ) ) ( (lv_G_2_0= RULE_INT ) ) ( (lv_B_3_0= RULE_INT ) ) otherlv_4= ';' ) )
+            // InternalXdiagramDsl.g:1243:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_R_1_0= RULE_INT ) ) ( (lv_G_2_0= RULE_INT ) ) ( (lv_B_3_0= RULE_INT ) ) otherlv_4= ';' )
             {
-            // InternalXdiagramDsl.g:1187:2: (otherlv_0= 'color' ( (lv_name_1_0= RULE_ID ) ) ( (lv_R_2_0= RULE_INT ) ) ( (lv_G_3_0= RULE_INT ) ) ( (lv_B_4_0= RULE_INT ) ) otherlv_5= ';' )
-            // InternalXdiagramDsl.g:1188:3: otherlv_0= 'color' ( (lv_name_1_0= RULE_ID ) ) ( (lv_R_2_0= RULE_INT ) ) ( (lv_G_3_0= RULE_INT ) ) ( (lv_B_4_0= RULE_INT ) ) otherlv_5= ';'
+            // InternalXdiagramDsl.g:1243:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_R_1_0= RULE_INT ) ) ( (lv_G_2_0= RULE_INT ) ) ( (lv_B_3_0= RULE_INT ) ) otherlv_4= ';' )
+            // InternalXdiagramDsl.g:1244:3: ( (lv_name_0_0= RULE_ID ) ) ( (lv_R_1_0= RULE_INT ) ) ( (lv_G_2_0= RULE_INT ) ) ( (lv_B_3_0= RULE_INT ) ) otherlv_4= ';'
             {
-            otherlv_0=(Token)match(input,31,FOLLOW_11); 
+            // InternalXdiagramDsl.g:1244:3: ( (lv_name_0_0= RULE_ID ) )
+            // InternalXdiagramDsl.g:1245:4: (lv_name_0_0= RULE_ID )
+            {
+            // InternalXdiagramDsl.g:1245:4: (lv_name_0_0= RULE_ID )
+            // InternalXdiagramDsl.g:1246:5: lv_name_0_0= RULE_ID
+            {
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_23); 
 
-            			newLeafNode(otherlv_0, grammarAccess.getCustomColorAccess().getColorKeyword_0());
-            		
-            // InternalXdiagramDsl.g:1192:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalXdiagramDsl.g:1193:4: (lv_name_1_0= RULE_ID )
-            {
-            // InternalXdiagramDsl.g:1193:4: (lv_name_1_0= RULE_ID )
-            // InternalXdiagramDsl.g:1194:5: lv_name_1_0= RULE_ID
-            {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_22); 
-
-            					newLeafNode(lv_name_1_0, grammarAccess.getCustomColorAccess().getNameIDTerminalRuleCall_1_0());
+            					newLeafNode(lv_name_0_0, grammarAccess.getCustomColorAccess().getNameIDTerminalRuleCall_0_0());
             				
 
             					if (current==null) {
@@ -3160,7 +3301,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             					setWithLastConsumed(
             						current,
             						"name",
-            						lv_name_1_0,
+            						lv_name_0_0,
             						"org.eclipse.xtext.common.Terminals.ID");
             				
 
@@ -3169,15 +3310,15 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:1210:3: ( (lv_R_2_0= RULE_INT ) )
-            // InternalXdiagramDsl.g:1211:4: (lv_R_2_0= RULE_INT )
+            // InternalXdiagramDsl.g:1262:3: ( (lv_R_1_0= RULE_INT ) )
+            // InternalXdiagramDsl.g:1263:4: (lv_R_1_0= RULE_INT )
             {
-            // InternalXdiagramDsl.g:1211:4: (lv_R_2_0= RULE_INT )
-            // InternalXdiagramDsl.g:1212:5: lv_R_2_0= RULE_INT
+            // InternalXdiagramDsl.g:1263:4: (lv_R_1_0= RULE_INT )
+            // InternalXdiagramDsl.g:1264:5: lv_R_1_0= RULE_INT
             {
-            lv_R_2_0=(Token)match(input,RULE_INT,FOLLOW_22); 
+            lv_R_1_0=(Token)match(input,RULE_INT,FOLLOW_23); 
 
-            					newLeafNode(lv_R_2_0, grammarAccess.getCustomColorAccess().getRINTTerminalRuleCall_2_0());
+            					newLeafNode(lv_R_1_0, grammarAccess.getCustomColorAccess().getRINTTerminalRuleCall_1_0());
             				
 
             					if (current==null) {
@@ -3186,7 +3327,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             					setWithLastConsumed(
             						current,
             						"R",
-            						lv_R_2_0,
+            						lv_R_1_0,
             						"org.eclipse.xtext.common.Terminals.INT");
             				
 
@@ -3195,15 +3336,15 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:1228:3: ( (lv_G_3_0= RULE_INT ) )
-            // InternalXdiagramDsl.g:1229:4: (lv_G_3_0= RULE_INT )
+            // InternalXdiagramDsl.g:1280:3: ( (lv_G_2_0= RULE_INT ) )
+            // InternalXdiagramDsl.g:1281:4: (lv_G_2_0= RULE_INT )
             {
-            // InternalXdiagramDsl.g:1229:4: (lv_G_3_0= RULE_INT )
-            // InternalXdiagramDsl.g:1230:5: lv_G_3_0= RULE_INT
+            // InternalXdiagramDsl.g:1281:4: (lv_G_2_0= RULE_INT )
+            // InternalXdiagramDsl.g:1282:5: lv_G_2_0= RULE_INT
             {
-            lv_G_3_0=(Token)match(input,RULE_INT,FOLLOW_22); 
+            lv_G_2_0=(Token)match(input,RULE_INT,FOLLOW_23); 
 
-            					newLeafNode(lv_G_3_0, grammarAccess.getCustomColorAccess().getGINTTerminalRuleCall_3_0());
+            					newLeafNode(lv_G_2_0, grammarAccess.getCustomColorAccess().getGINTTerminalRuleCall_2_0());
             				
 
             					if (current==null) {
@@ -3212,7 +3353,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             					setWithLastConsumed(
             						current,
             						"G",
-            						lv_G_3_0,
+            						lv_G_2_0,
             						"org.eclipse.xtext.common.Terminals.INT");
             				
 
@@ -3221,15 +3362,15 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:1246:3: ( (lv_B_4_0= RULE_INT ) )
-            // InternalXdiagramDsl.g:1247:4: (lv_B_4_0= RULE_INT )
+            // InternalXdiagramDsl.g:1298:3: ( (lv_B_3_0= RULE_INT ) )
+            // InternalXdiagramDsl.g:1299:4: (lv_B_3_0= RULE_INT )
             {
-            // InternalXdiagramDsl.g:1247:4: (lv_B_4_0= RULE_INT )
-            // InternalXdiagramDsl.g:1248:5: lv_B_4_0= RULE_INT
+            // InternalXdiagramDsl.g:1299:4: (lv_B_3_0= RULE_INT )
+            // InternalXdiagramDsl.g:1300:5: lv_B_3_0= RULE_INT
             {
-            lv_B_4_0=(Token)match(input,RULE_INT,FOLLOW_28); 
+            lv_B_3_0=(Token)match(input,RULE_INT,FOLLOW_29); 
 
-            					newLeafNode(lv_B_4_0, grammarAccess.getCustomColorAccess().getBINTTerminalRuleCall_4_0());
+            					newLeafNode(lv_B_3_0, grammarAccess.getCustomColorAccess().getBINTTerminalRuleCall_3_0());
             				
 
             					if (current==null) {
@@ -3238,7 +3379,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             					setWithLastConsumed(
             						current,
             						"B",
-            						lv_B_4_0,
+            						lv_B_3_0,
             						"org.eclipse.xtext.common.Terminals.INT");
             				
 
@@ -3247,9 +3388,9 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,30,FOLLOW_2); 
+            otherlv_4=(Token)match(input,30,FOLLOW_2); 
 
-            			newLeafNode(otherlv_5, grammarAccess.getCustomColorAccess().getSemicolonKeyword_5());
+            			newLeafNode(otherlv_4, grammarAccess.getCustomColorAccess().getSemicolonKeyword_4());
             		
 
             }
@@ -3274,7 +3415,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleColor"
-    // InternalXdiagramDsl.g:1272:1: entryRuleColor returns [EObject current=null] : iv_ruleColor= ruleColor EOF ;
+    // InternalXdiagramDsl.g:1324:1: entryRuleColor returns [EObject current=null] : iv_ruleColor= ruleColor EOF ;
     public final EObject entryRuleColor() throws RecognitionException {
         EObject current = null;
 
@@ -3282,8 +3423,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:1272:46: (iv_ruleColor= ruleColor EOF )
-            // InternalXdiagramDsl.g:1273:2: iv_ruleColor= ruleColor EOF
+            // InternalXdiagramDsl.g:1324:46: (iv_ruleColor= ruleColor EOF )
+            // InternalXdiagramDsl.g:1325:2: iv_ruleColor= ruleColor EOF
             {
              newCompositeNode(grammarAccess.getColorRule()); 
             pushFollow(FOLLOW_1);
@@ -3310,7 +3451,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleColor"
-    // InternalXdiagramDsl.g:1279:1: ruleColor returns [EObject current=null] : ( ( (lv_default_0_0= ruleDefaultColor ) ) | ( (otherlv_1= RULE_ID ) ) ) ;
+    // InternalXdiagramDsl.g:1331:1: ruleColor returns [EObject current=null] : ( ( (lv_default_0_0= ruleDefaultColor ) ) | ( (otherlv_1= RULE_ID ) ) ) ;
     public final EObject ruleColor() throws RecognitionException {
         EObject current = null;
 
@@ -3322,34 +3463,34 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:1285:2: ( ( ( (lv_default_0_0= ruleDefaultColor ) ) | ( (otherlv_1= RULE_ID ) ) ) )
-            // InternalXdiagramDsl.g:1286:2: ( ( (lv_default_0_0= ruleDefaultColor ) ) | ( (otherlv_1= RULE_ID ) ) )
+            // InternalXdiagramDsl.g:1337:2: ( ( ( (lv_default_0_0= ruleDefaultColor ) ) | ( (otherlv_1= RULE_ID ) ) ) )
+            // InternalXdiagramDsl.g:1338:2: ( ( (lv_default_0_0= ruleDefaultColor ) ) | ( (otherlv_1= RULE_ID ) ) )
             {
-            // InternalXdiagramDsl.g:1286:2: ( ( (lv_default_0_0= ruleDefaultColor ) ) | ( (otherlv_1= RULE_ID ) ) )
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // InternalXdiagramDsl.g:1338:2: ( ( (lv_default_0_0= ruleDefaultColor ) ) | ( (otherlv_1= RULE_ID ) ) )
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( ((LA15_0>=79 && LA15_0<=94)) ) {
-                alt15=1;
+            if ( ((LA17_0>=79 && LA17_0<=94)) ) {
+                alt17=1;
             }
-            else if ( (LA15_0==RULE_ID) ) {
-                alt15=2;
+            else if ( (LA17_0==RULE_ID) ) {
+                alt17=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 15, 0, input);
+                    new NoViableAltException("", 17, 0, input);
 
                 throw nvae;
             }
-            switch (alt15) {
+            switch (alt17) {
                 case 1 :
-                    // InternalXdiagramDsl.g:1287:3: ( (lv_default_0_0= ruleDefaultColor ) )
+                    // InternalXdiagramDsl.g:1339:3: ( (lv_default_0_0= ruleDefaultColor ) )
                     {
-                    // InternalXdiagramDsl.g:1287:3: ( (lv_default_0_0= ruleDefaultColor ) )
-                    // InternalXdiagramDsl.g:1288:4: (lv_default_0_0= ruleDefaultColor )
+                    // InternalXdiagramDsl.g:1339:3: ( (lv_default_0_0= ruleDefaultColor ) )
+                    // InternalXdiagramDsl.g:1340:4: (lv_default_0_0= ruleDefaultColor )
                     {
-                    // InternalXdiagramDsl.g:1288:4: (lv_default_0_0= ruleDefaultColor )
-                    // InternalXdiagramDsl.g:1289:5: lv_default_0_0= ruleDefaultColor
+                    // InternalXdiagramDsl.g:1340:4: (lv_default_0_0= ruleDefaultColor )
+                    // InternalXdiagramDsl.g:1341:5: lv_default_0_0= ruleDefaultColor
                     {
 
                     					newCompositeNode(grammarAccess.getColorAccess().getDefaultDefaultColorEnumRuleCall_0_0());
@@ -3380,13 +3521,13 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:1307:3: ( (otherlv_1= RULE_ID ) )
+                    // InternalXdiagramDsl.g:1359:3: ( (otherlv_1= RULE_ID ) )
                     {
-                    // InternalXdiagramDsl.g:1307:3: ( (otherlv_1= RULE_ID ) )
-                    // InternalXdiagramDsl.g:1308:4: (otherlv_1= RULE_ID )
+                    // InternalXdiagramDsl.g:1359:3: ( (otherlv_1= RULE_ID ) )
+                    // InternalXdiagramDsl.g:1360:4: (otherlv_1= RULE_ID )
                     {
-                    // InternalXdiagramDsl.g:1308:4: (otherlv_1= RULE_ID )
-                    // InternalXdiagramDsl.g:1309:5: otherlv_1= RULE_ID
+                    // InternalXdiagramDsl.g:1360:4: (otherlv_1= RULE_ID )
+                    // InternalXdiagramDsl.g:1361:5: otherlv_1= RULE_ID
                     {
 
                     					if (current==null) {
@@ -3429,7 +3570,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConnectableElement"
-    // InternalXdiagramDsl.g:1324:1: entryRuleConnectableElement returns [EObject current=null] : iv_ruleConnectableElement= ruleConnectableElement EOF ;
+    // InternalXdiagramDsl.g:1376:1: entryRuleConnectableElement returns [EObject current=null] : iv_ruleConnectableElement= ruleConnectableElement EOF ;
     public final EObject entryRuleConnectableElement() throws RecognitionException {
         EObject current = null;
 
@@ -3437,8 +3578,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:1324:59: (iv_ruleConnectableElement= ruleConnectableElement EOF )
-            // InternalXdiagramDsl.g:1325:2: iv_ruleConnectableElement= ruleConnectableElement EOF
+            // InternalXdiagramDsl.g:1376:59: (iv_ruleConnectableElement= ruleConnectableElement EOF )
+            // InternalXdiagramDsl.g:1377:2: iv_ruleConnectableElement= ruleConnectableElement EOF
             {
              newCompositeNode(grammarAccess.getConnectableElementRule()); 
             pushFollow(FOLLOW_1);
@@ -3465,7 +3606,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConnectableElement"
-    // InternalXdiagramDsl.g:1331:1: ruleConnectableElement returns [EObject current=null] : (this_Rectangle_0= ruleRectangle | this_Rhombus_1= ruleRhombus | this_Ellipse_2= ruleEllipse | this_Polyline_3= rulePolyline | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Invisible_6= ruleInvisible | this_Custom_7= ruleCustom | this_Triangle_8= ruleTriangle ) ;
+    // InternalXdiagramDsl.g:1383:1: ruleConnectableElement returns [EObject current=null] : (this_Rectangle_0= ruleRectangle | this_Rhombus_1= ruleRhombus | this_Ellipse_2= ruleEllipse | this_Polyline_3= rulePolyline | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Invisible_6= ruleInvisible | this_Custom_7= ruleCustom | this_Triangle_8= ruleTriangle ) ;
     public final EObject ruleConnectableElement() throws RecognitionException {
         EObject current = null;
 
@@ -3492,70 +3633,70 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:1337:2: ( (this_Rectangle_0= ruleRectangle | this_Rhombus_1= ruleRhombus | this_Ellipse_2= ruleEllipse | this_Polyline_3= rulePolyline | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Invisible_6= ruleInvisible | this_Custom_7= ruleCustom | this_Triangle_8= ruleTriangle ) )
-            // InternalXdiagramDsl.g:1338:2: (this_Rectangle_0= ruleRectangle | this_Rhombus_1= ruleRhombus | this_Ellipse_2= ruleEllipse | this_Polyline_3= rulePolyline | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Invisible_6= ruleInvisible | this_Custom_7= ruleCustom | this_Triangle_8= ruleTriangle )
+            // InternalXdiagramDsl.g:1389:2: ( (this_Rectangle_0= ruleRectangle | this_Rhombus_1= ruleRhombus | this_Ellipse_2= ruleEllipse | this_Polyline_3= rulePolyline | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Invisible_6= ruleInvisible | this_Custom_7= ruleCustom | this_Triangle_8= ruleTriangle ) )
+            // InternalXdiagramDsl.g:1390:2: (this_Rectangle_0= ruleRectangle | this_Rhombus_1= ruleRhombus | this_Ellipse_2= ruleEllipse | this_Polyline_3= rulePolyline | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Invisible_6= ruleInvisible | this_Custom_7= ruleCustom | this_Triangle_8= ruleTriangle )
             {
-            // InternalXdiagramDsl.g:1338:2: (this_Rectangle_0= ruleRectangle | this_Rhombus_1= ruleRhombus | this_Ellipse_2= ruleEllipse | this_Polyline_3= rulePolyline | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Invisible_6= ruleInvisible | this_Custom_7= ruleCustom | this_Triangle_8= ruleTriangle )
-            int alt16=9;
+            // InternalXdiagramDsl.g:1390:2: (this_Rectangle_0= ruleRectangle | this_Rhombus_1= ruleRhombus | this_Ellipse_2= ruleEllipse | this_Polyline_3= rulePolyline | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Invisible_6= ruleInvisible | this_Custom_7= ruleCustom | this_Triangle_8= ruleTriangle )
+            int alt18=9;
             switch ( input.LA(1) ) {
             case 35:
             case 36:
                 {
-                alt16=1;
+                alt18=1;
                 }
                 break;
             case 37:
                 {
-                alt16=2;
+                alt18=2;
                 }
                 break;
             case 38:
             case 39:
                 {
-                alt16=3;
+                alt18=3;
                 }
                 break;
             case 40:
             case 41:
                 {
-                alt16=4;
+                alt18=4;
                 }
                 break;
             case 48:
                 {
-                alt16=5;
+                alt18=5;
                 }
                 break;
             case 49:
                 {
-                alt16=6;
+                alt18=6;
                 }
                 break;
             case 50:
                 {
-                alt16=7;
+                alt18=7;
                 }
                 break;
             case 32:
                 {
-                alt16=8;
+                alt18=8;
                 }
                 break;
             case 42:
                 {
-                alt16=9;
+                alt18=9;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 16, 0, input);
+                    new NoViableAltException("", 18, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt16) {
+            switch (alt18) {
                 case 1 :
-                    // InternalXdiagramDsl.g:1339:3: this_Rectangle_0= ruleRectangle
+                    // InternalXdiagramDsl.g:1391:3: this_Rectangle_0= ruleRectangle
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementAccess().getRectangleParserRuleCall_0());
@@ -3573,7 +3714,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:1348:3: this_Rhombus_1= ruleRhombus
+                    // InternalXdiagramDsl.g:1400:3: this_Rhombus_1= ruleRhombus
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementAccess().getRhombusParserRuleCall_1());
@@ -3591,7 +3732,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalXdiagramDsl.g:1357:3: this_Ellipse_2= ruleEllipse
+                    // InternalXdiagramDsl.g:1409:3: this_Ellipse_2= ruleEllipse
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementAccess().getEllipseParserRuleCall_2());
@@ -3609,7 +3750,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalXdiagramDsl.g:1366:3: this_Polyline_3= rulePolyline
+                    // InternalXdiagramDsl.g:1418:3: this_Polyline_3= rulePolyline
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementAccess().getPolylineParserRuleCall_3());
@@ -3627,7 +3768,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalXdiagramDsl.g:1375:3: this_Label_4= ruleLabel
+                    // InternalXdiagramDsl.g:1427:3: this_Label_4= ruleLabel
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementAccess().getLabelParserRuleCall_4());
@@ -3645,7 +3786,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalXdiagramDsl.g:1384:3: this_Image_5= ruleImage
+                    // InternalXdiagramDsl.g:1436:3: this_Image_5= ruleImage
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementAccess().getImageParserRuleCall_5());
@@ -3663,7 +3804,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalXdiagramDsl.g:1393:3: this_Invisible_6= ruleInvisible
+                    // InternalXdiagramDsl.g:1445:3: this_Invisible_6= ruleInvisible
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementAccess().getInvisibleParserRuleCall_6());
@@ -3681,7 +3822,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalXdiagramDsl.g:1402:3: this_Custom_7= ruleCustom
+                    // InternalXdiagramDsl.g:1454:3: this_Custom_7= ruleCustom
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementAccess().getCustomParserRuleCall_7());
@@ -3699,7 +3840,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalXdiagramDsl.g:1411:3: this_Triangle_8= ruleTriangle
+                    // InternalXdiagramDsl.g:1463:3: this_Triangle_8= ruleTriangle
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementAccess().getTriangleParserRuleCall_8());
@@ -3739,7 +3880,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDecoratorElement"
-    // InternalXdiagramDsl.g:1423:1: entryRuleDecoratorElement returns [EObject current=null] : iv_ruleDecoratorElement= ruleDecoratorElement EOF ;
+    // InternalXdiagramDsl.g:1475:1: entryRuleDecoratorElement returns [EObject current=null] : iv_ruleDecoratorElement= ruleDecoratorElement EOF ;
     public final EObject entryRuleDecoratorElement() throws RecognitionException {
         EObject current = null;
 
@@ -3747,8 +3888,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:1423:57: (iv_ruleDecoratorElement= ruleDecoratorElement EOF )
-            // InternalXdiagramDsl.g:1424:2: iv_ruleDecoratorElement= ruleDecoratorElement EOF
+            // InternalXdiagramDsl.g:1475:57: (iv_ruleDecoratorElement= ruleDecoratorElement EOF )
+            // InternalXdiagramDsl.g:1476:2: iv_ruleDecoratorElement= ruleDecoratorElement EOF
             {
              newCompositeNode(grammarAccess.getDecoratorElementRule()); 
             pushFollow(FOLLOW_1);
@@ -3775,7 +3916,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDecoratorElement"
-    // InternalXdiagramDsl.g:1430:1: ruleDecoratorElement returns [EObject current=null] : (this_Ellipse_0= ruleEllipse | this_Rhombus_1= ruleRhombus | this_Polyline_2= rulePolyline | this_Triangle_3= ruleTriangle | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Arrow_6= ruleArrow | this_Line_7= ruleLine ) ;
+    // InternalXdiagramDsl.g:1482:1: ruleDecoratorElement returns [EObject current=null] : (this_Ellipse_0= ruleEllipse | this_Rhombus_1= ruleRhombus | this_Polyline_2= rulePolyline | this_Triangle_3= ruleTriangle | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Arrow_6= ruleArrow | this_Line_7= ruleLine ) ;
     public final EObject ruleDecoratorElement() throws RecognitionException {
         EObject current = null;
 
@@ -3800,65 +3941,65 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:1436:2: ( (this_Ellipse_0= ruleEllipse | this_Rhombus_1= ruleRhombus | this_Polyline_2= rulePolyline | this_Triangle_3= ruleTriangle | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Arrow_6= ruleArrow | this_Line_7= ruleLine ) )
-            // InternalXdiagramDsl.g:1437:2: (this_Ellipse_0= ruleEllipse | this_Rhombus_1= ruleRhombus | this_Polyline_2= rulePolyline | this_Triangle_3= ruleTriangle | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Arrow_6= ruleArrow | this_Line_7= ruleLine )
+            // InternalXdiagramDsl.g:1488:2: ( (this_Ellipse_0= ruleEllipse | this_Rhombus_1= ruleRhombus | this_Polyline_2= rulePolyline | this_Triangle_3= ruleTriangle | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Arrow_6= ruleArrow | this_Line_7= ruleLine ) )
+            // InternalXdiagramDsl.g:1489:2: (this_Ellipse_0= ruleEllipse | this_Rhombus_1= ruleRhombus | this_Polyline_2= rulePolyline | this_Triangle_3= ruleTriangle | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Arrow_6= ruleArrow | this_Line_7= ruleLine )
             {
-            // InternalXdiagramDsl.g:1437:2: (this_Ellipse_0= ruleEllipse | this_Rhombus_1= ruleRhombus | this_Polyline_2= rulePolyline | this_Triangle_3= ruleTriangle | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Arrow_6= ruleArrow | this_Line_7= ruleLine )
-            int alt17=8;
+            // InternalXdiagramDsl.g:1489:2: (this_Ellipse_0= ruleEllipse | this_Rhombus_1= ruleRhombus | this_Polyline_2= rulePolyline | this_Triangle_3= ruleTriangle | this_Label_4= ruleLabel | this_Image_5= ruleImage | this_Arrow_6= ruleArrow | this_Line_7= ruleLine )
+            int alt19=8;
             switch ( input.LA(1) ) {
             case 38:
             case 39:
                 {
-                alt17=1;
+                alt19=1;
                 }
                 break;
             case 37:
                 {
-                alt17=2;
+                alt19=2;
                 }
                 break;
             case 40:
             case 41:
                 {
-                alt17=3;
+                alt19=3;
                 }
                 break;
             case 42:
                 {
-                alt17=4;
+                alt19=4;
                 }
                 break;
             case 48:
                 {
-                alt17=5;
+                alt19=5;
                 }
                 break;
             case 49:
                 {
-                alt17=6;
+                alt19=6;
                 }
                 break;
             case 45:
                 {
-                alt17=7;
+                alt19=7;
                 }
                 break;
             case 43:
             case 44:
                 {
-                alt17=8;
+                alt19=8;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 17, 0, input);
+                    new NoViableAltException("", 19, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt17) {
+            switch (alt19) {
                 case 1 :
-                    // InternalXdiagramDsl.g:1438:3: this_Ellipse_0= ruleEllipse
+                    // InternalXdiagramDsl.g:1490:3: this_Ellipse_0= ruleEllipse
                     {
 
                     			newCompositeNode(grammarAccess.getDecoratorElementAccess().getEllipseParserRuleCall_0());
@@ -3876,7 +4017,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:1447:3: this_Rhombus_1= ruleRhombus
+                    // InternalXdiagramDsl.g:1499:3: this_Rhombus_1= ruleRhombus
                     {
 
                     			newCompositeNode(grammarAccess.getDecoratorElementAccess().getRhombusParserRuleCall_1());
@@ -3894,7 +4035,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalXdiagramDsl.g:1456:3: this_Polyline_2= rulePolyline
+                    // InternalXdiagramDsl.g:1508:3: this_Polyline_2= rulePolyline
                     {
 
                     			newCompositeNode(grammarAccess.getDecoratorElementAccess().getPolylineParserRuleCall_2());
@@ -3912,7 +4053,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalXdiagramDsl.g:1465:3: this_Triangle_3= ruleTriangle
+                    // InternalXdiagramDsl.g:1517:3: this_Triangle_3= ruleTriangle
                     {
 
                     			newCompositeNode(grammarAccess.getDecoratorElementAccess().getTriangleParserRuleCall_3());
@@ -3930,7 +4071,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalXdiagramDsl.g:1474:3: this_Label_4= ruleLabel
+                    // InternalXdiagramDsl.g:1526:3: this_Label_4= ruleLabel
                     {
 
                     			newCompositeNode(grammarAccess.getDecoratorElementAccess().getLabelParserRuleCall_4());
@@ -3948,7 +4089,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalXdiagramDsl.g:1483:3: this_Image_5= ruleImage
+                    // InternalXdiagramDsl.g:1535:3: this_Image_5= ruleImage
                     {
 
                     			newCompositeNode(grammarAccess.getDecoratorElementAccess().getImageParserRuleCall_5());
@@ -3966,7 +4107,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalXdiagramDsl.g:1492:3: this_Arrow_6= ruleArrow
+                    // InternalXdiagramDsl.g:1544:3: this_Arrow_6= ruleArrow
                     {
 
                     			newCompositeNode(grammarAccess.getDecoratorElementAccess().getArrowParserRuleCall_6());
@@ -3984,7 +4125,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalXdiagramDsl.g:1501:3: this_Line_7= ruleLine
+                    // InternalXdiagramDsl.g:1553:3: this_Line_7= ruleLine
                     {
 
                     			newCompositeNode(grammarAccess.getDecoratorElementAccess().getLineParserRuleCall_7());
@@ -4024,7 +4165,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConnectableElementFeature"
-    // InternalXdiagramDsl.g:1513:1: entryRuleConnectableElementFeature returns [EObject current=null] : iv_ruleConnectableElementFeature= ruleConnectableElementFeature EOF ;
+    // InternalXdiagramDsl.g:1565:1: entryRuleConnectableElementFeature returns [EObject current=null] : iv_ruleConnectableElementFeature= ruleConnectableElementFeature EOF ;
     public final EObject entryRuleConnectableElementFeature() throws RecognitionException {
         EObject current = null;
 
@@ -4032,8 +4173,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:1513:66: (iv_ruleConnectableElementFeature= ruleConnectableElementFeature EOF )
-            // InternalXdiagramDsl.g:1514:2: iv_ruleConnectableElementFeature= ruleConnectableElementFeature EOF
+            // InternalXdiagramDsl.g:1565:66: (iv_ruleConnectableElementFeature= ruleConnectableElementFeature EOF )
+            // InternalXdiagramDsl.g:1566:2: iv_ruleConnectableElementFeature= ruleConnectableElementFeature EOF
             {
              newCompositeNode(grammarAccess.getConnectableElementFeatureRule()); 
             pushFollow(FOLLOW_1);
@@ -4060,7 +4201,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConnectableElementFeature"
-    // InternalXdiagramDsl.g:1520:1: ruleConnectableElementFeature returns [EObject current=null] : (this_Position_0= rulePosition | this_Size_1= ruleSize | this_ColorFeature_2= ruleColorFeature | this_Transparency_3= ruleTransparency | this_LineStyle_4= ruleLineStyle | this_LineWidth_5= ruleLineWidth | this_Contains_6= ruleContains | this_Anchor_7= ruleAnchor | this_Layout_8= ruleLayout | this_Visible_9= ruleVisible ) ;
+    // InternalXdiagramDsl.g:1572:1: ruleConnectableElementFeature returns [EObject current=null] : (this_Position_0= rulePosition | this_Size_1= ruleSize | this_ColorFeature_2= ruleColorFeature | this_Transparency_3= ruleTransparency | this_LineStyle_4= ruleLineStyle | this_LineWidth_5= ruleLineWidth | this_Contains_6= ruleContains | this_Anchor_7= ruleAnchor | this_Layout_8= ruleLayout | this_Visible_9= ruleVisible ) ;
     public final EObject ruleConnectableElementFeature() throws RecognitionException {
         EObject current = null;
 
@@ -4089,73 +4230,73 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:1526:2: ( (this_Position_0= rulePosition | this_Size_1= ruleSize | this_ColorFeature_2= ruleColorFeature | this_Transparency_3= ruleTransparency | this_LineStyle_4= ruleLineStyle | this_LineWidth_5= ruleLineWidth | this_Contains_6= ruleContains | this_Anchor_7= ruleAnchor | this_Layout_8= ruleLayout | this_Visible_9= ruleVisible ) )
-            // InternalXdiagramDsl.g:1527:2: (this_Position_0= rulePosition | this_Size_1= ruleSize | this_ColorFeature_2= ruleColorFeature | this_Transparency_3= ruleTransparency | this_LineStyle_4= ruleLineStyle | this_LineWidth_5= ruleLineWidth | this_Contains_6= ruleContains | this_Anchor_7= ruleAnchor | this_Layout_8= ruleLayout | this_Visible_9= ruleVisible )
+            // InternalXdiagramDsl.g:1578:2: ( (this_Position_0= rulePosition | this_Size_1= ruleSize | this_ColorFeature_2= ruleColorFeature | this_Transparency_3= ruleTransparency | this_LineStyle_4= ruleLineStyle | this_LineWidth_5= ruleLineWidth | this_Contains_6= ruleContains | this_Anchor_7= ruleAnchor | this_Layout_8= ruleLayout | this_Visible_9= ruleVisible ) )
+            // InternalXdiagramDsl.g:1579:2: (this_Position_0= rulePosition | this_Size_1= ruleSize | this_ColorFeature_2= ruleColorFeature | this_Transparency_3= ruleTransparency | this_LineStyle_4= ruleLineStyle | this_LineWidth_5= ruleLineWidth | this_Contains_6= ruleContains | this_Anchor_7= ruleAnchor | this_Layout_8= ruleLayout | this_Visible_9= ruleVisible )
             {
-            // InternalXdiagramDsl.g:1527:2: (this_Position_0= rulePosition | this_Size_1= ruleSize | this_ColorFeature_2= ruleColorFeature | this_Transparency_3= ruleTransparency | this_LineStyle_4= ruleLineStyle | this_LineWidth_5= ruleLineWidth | this_Contains_6= ruleContains | this_Anchor_7= ruleAnchor | this_Layout_8= ruleLayout | this_Visible_9= ruleVisible )
-            int alt18=10;
+            // InternalXdiagramDsl.g:1579:2: (this_Position_0= rulePosition | this_Size_1= ruleSize | this_ColorFeature_2= ruleColorFeature | this_Transparency_3= ruleTransparency | this_LineStyle_4= ruleLineStyle | this_LineWidth_5= ruleLineWidth | this_Contains_6= ruleContains | this_Anchor_7= ruleAnchor | this_Layout_8= ruleLayout | this_Visible_9= ruleVisible )
+            int alt20=10;
             switch ( input.LA(1) ) {
             case 58:
                 {
-                alt18=1;
+                alt20=1;
                 }
                 break;
             case 54:
                 {
-                alt18=2;
+                alt20=2;
                 }
                 break;
             case 51:
             case 52:
                 {
-                alt18=3;
+                alt20=3;
                 }
                 break;
             case 53:
                 {
-                alt18=4;
+                alt20=4;
                 }
                 break;
             case 74:
                 {
-                alt18=5;
+                alt20=5;
                 }
                 break;
             case 76:
                 {
-                alt18=6;
+                alt20=6;
                 }
                 break;
             case 46:
                 {
-                alt18=7;
+                alt20=7;
                 }
                 break;
             case 28:
                 {
-                alt18=8;
+                alt20=8;
                 }
                 break;
             case 60:
                 {
-                alt18=9;
+                alt20=9;
                 }
                 break;
             case 50:
                 {
-                alt18=10;
+                alt20=10;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 18, 0, input);
+                    new NoViableAltException("", 20, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt18) {
+            switch (alt20) {
                 case 1 :
-                    // InternalXdiagramDsl.g:1528:3: this_Position_0= rulePosition
+                    // InternalXdiagramDsl.g:1580:3: this_Position_0= rulePosition
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementFeatureAccess().getPositionParserRuleCall_0());
@@ -4173,7 +4314,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:1537:3: this_Size_1= ruleSize
+                    // InternalXdiagramDsl.g:1589:3: this_Size_1= ruleSize
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementFeatureAccess().getSizeParserRuleCall_1());
@@ -4191,7 +4332,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalXdiagramDsl.g:1546:3: this_ColorFeature_2= ruleColorFeature
+                    // InternalXdiagramDsl.g:1598:3: this_ColorFeature_2= ruleColorFeature
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementFeatureAccess().getColorFeatureParserRuleCall_2());
@@ -4209,7 +4350,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalXdiagramDsl.g:1555:3: this_Transparency_3= ruleTransparency
+                    // InternalXdiagramDsl.g:1607:3: this_Transparency_3= ruleTransparency
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementFeatureAccess().getTransparencyParserRuleCall_3());
@@ -4227,7 +4368,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalXdiagramDsl.g:1564:3: this_LineStyle_4= ruleLineStyle
+                    // InternalXdiagramDsl.g:1616:3: this_LineStyle_4= ruleLineStyle
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementFeatureAccess().getLineStyleParserRuleCall_4());
@@ -4245,7 +4386,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalXdiagramDsl.g:1573:3: this_LineWidth_5= ruleLineWidth
+                    // InternalXdiagramDsl.g:1625:3: this_LineWidth_5= ruleLineWidth
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementFeatureAccess().getLineWidthParserRuleCall_5());
@@ -4263,7 +4404,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalXdiagramDsl.g:1582:3: this_Contains_6= ruleContains
+                    // InternalXdiagramDsl.g:1634:3: this_Contains_6= ruleContains
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementFeatureAccess().getContainsParserRuleCall_6());
@@ -4281,7 +4422,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalXdiagramDsl.g:1591:3: this_Anchor_7= ruleAnchor
+                    // InternalXdiagramDsl.g:1643:3: this_Anchor_7= ruleAnchor
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementFeatureAccess().getAnchorParserRuleCall_7());
@@ -4299,7 +4440,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalXdiagramDsl.g:1600:3: this_Layout_8= ruleLayout
+                    // InternalXdiagramDsl.g:1652:3: this_Layout_8= ruleLayout
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementFeatureAccess().getLayoutParserRuleCall_8());
@@ -4317,7 +4458,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalXdiagramDsl.g:1609:3: this_Visible_9= ruleVisible
+                    // InternalXdiagramDsl.g:1661:3: this_Visible_9= ruleVisible
                     {
 
                     			newCompositeNode(grammarAccess.getConnectableElementFeatureAccess().getVisibleParserRuleCall_9());
@@ -4357,7 +4498,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCustomFigure"
-    // InternalXdiagramDsl.g:1621:1: entryRuleCustomFigure returns [EObject current=null] : iv_ruleCustomFigure= ruleCustomFigure EOF ;
+    // InternalXdiagramDsl.g:1673:1: entryRuleCustomFigure returns [EObject current=null] : iv_ruleCustomFigure= ruleCustomFigure EOF ;
     public final EObject entryRuleCustomFigure() throws RecognitionException {
         EObject current = null;
 
@@ -4365,8 +4506,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:1621:53: (iv_ruleCustomFigure= ruleCustomFigure EOF )
-            // InternalXdiagramDsl.g:1622:2: iv_ruleCustomFigure= ruleCustomFigure EOF
+            // InternalXdiagramDsl.g:1673:53: (iv_ruleCustomFigure= ruleCustomFigure EOF )
+            // InternalXdiagramDsl.g:1674:2: iv_ruleCustomFigure= ruleCustomFigure EOF
             {
              newCompositeNode(grammarAccess.getCustomFigureRule()); 
             pushFollow(FOLLOW_1);
@@ -4393,7 +4534,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCustomFigure"
-    // InternalXdiagramDsl.g:1628:1: ruleCustomFigure returns [EObject current=null] : (otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) ) ) ;
+    // InternalXdiagramDsl.g:1680:1: ruleCustomFigure returns [EObject current=null] : (otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) ) ) ;
     public final EObject ruleCustomFigure() throws RecognitionException {
         EObject current = null;
 
@@ -4407,23 +4548,23 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:1634:2: ( (otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) ) ) )
-            // InternalXdiagramDsl.g:1635:2: (otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) ) )
+            // InternalXdiagramDsl.g:1686:2: ( (otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) ) ) )
+            // InternalXdiagramDsl.g:1687:2: (otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) ) )
             {
-            // InternalXdiagramDsl.g:1635:2: (otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) ) )
-            // InternalXdiagramDsl.g:1636:3: otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) )
+            // InternalXdiagramDsl.g:1687:2: (otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) ) )
+            // InternalXdiagramDsl.g:1688:3: otherlv_0= 'figure' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'as' ( (lv_element_3_0= ruleConnectableElement ) )
             {
-            otherlv_0=(Token)match(input,32,FOLLOW_11); 
+            otherlv_0=(Token)match(input,32,FOLLOW_12); 
 
             			newLeafNode(otherlv_0, grammarAccess.getCustomFigureAccess().getFigureKeyword_0());
             		
-            // InternalXdiagramDsl.g:1640:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalXdiagramDsl.g:1641:4: (lv_name_1_0= RULE_ID )
+            // InternalXdiagramDsl.g:1692:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalXdiagramDsl.g:1693:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalXdiagramDsl.g:1641:4: (lv_name_1_0= RULE_ID )
-            // InternalXdiagramDsl.g:1642:5: lv_name_1_0= RULE_ID
+            // InternalXdiagramDsl.g:1693:4: (lv_name_1_0= RULE_ID )
+            // InternalXdiagramDsl.g:1694:5: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_29); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_31); 
 
             					newLeafNode(lv_name_1_0, grammarAccess.getCustomFigureAccess().getNameIDTerminalRuleCall_1_0());
             				
@@ -4443,15 +4584,15 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,33,FOLLOW_16); 
+            otherlv_2=(Token)match(input,33,FOLLOW_17); 
 
             			newLeafNode(otherlv_2, grammarAccess.getCustomFigureAccess().getAsKeyword_2());
             		
-            // InternalXdiagramDsl.g:1662:3: ( (lv_element_3_0= ruleConnectableElement ) )
-            // InternalXdiagramDsl.g:1663:4: (lv_element_3_0= ruleConnectableElement )
+            // InternalXdiagramDsl.g:1714:3: ( (lv_element_3_0= ruleConnectableElement ) )
+            // InternalXdiagramDsl.g:1715:4: (lv_element_3_0= ruleConnectableElement )
             {
-            // InternalXdiagramDsl.g:1663:4: (lv_element_3_0= ruleConnectableElement )
-            // InternalXdiagramDsl.g:1664:5: lv_element_3_0= ruleConnectableElement
+            // InternalXdiagramDsl.g:1715:4: (lv_element_3_0= ruleConnectableElement )
+            // InternalXdiagramDsl.g:1716:5: lv_element_3_0= ruleConnectableElement
             {
 
             					newCompositeNode(grammarAccess.getCustomFigureAccess().getElementConnectableElementParserRuleCall_3_0());
@@ -4501,7 +4642,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCustom"
-    // InternalXdiagramDsl.g:1685:1: entryRuleCustom returns [EObject current=null] : iv_ruleCustom= ruleCustom EOF ;
+    // InternalXdiagramDsl.g:1737:1: entryRuleCustom returns [EObject current=null] : iv_ruleCustom= ruleCustom EOF ;
     public final EObject entryRuleCustom() throws RecognitionException {
         EObject current = null;
 
@@ -4509,8 +4650,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:1685:47: (iv_ruleCustom= ruleCustom EOF )
-            // InternalXdiagramDsl.g:1686:2: iv_ruleCustom= ruleCustom EOF
+            // InternalXdiagramDsl.g:1737:47: (iv_ruleCustom= ruleCustom EOF )
+            // InternalXdiagramDsl.g:1738:2: iv_ruleCustom= ruleCustom EOF
             {
              newCompositeNode(grammarAccess.getCustomRule()); 
             pushFollow(FOLLOW_1);
@@ -4537,7 +4678,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCustom"
-    // InternalXdiagramDsl.g:1692:1: ruleCustom returns [EObject current=null] : (otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) otherlv_2= '{' ( (lv_features_3_0= ruleLinkedFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) ;
+    // InternalXdiagramDsl.g:1744:1: ruleCustom returns [EObject current=null] : (otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) otherlv_2= '{' ( (lv_features_3_0= ruleLinkedFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) ;
     public final EObject ruleCustom() throws RecognitionException {
         EObject current = null;
 
@@ -4555,28 +4696,28 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:1698:2: ( (otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) otherlv_2= '{' ( (lv_features_3_0= ruleLinkedFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) )
-            // InternalXdiagramDsl.g:1699:2: (otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) otherlv_2= '{' ( (lv_features_3_0= ruleLinkedFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
+            // InternalXdiagramDsl.g:1750:2: ( (otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) otherlv_2= '{' ( (lv_features_3_0= ruleLinkedFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) )
+            // InternalXdiagramDsl.g:1751:2: (otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) otherlv_2= '{' ( (lv_features_3_0= ruleLinkedFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
             {
-            // InternalXdiagramDsl.g:1699:2: (otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) otherlv_2= '{' ( (lv_features_3_0= ruleLinkedFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
-            // InternalXdiagramDsl.g:1700:3: otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) otherlv_2= '{' ( (lv_features_3_0= ruleLinkedFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}'
+            // InternalXdiagramDsl.g:1751:2: (otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) otherlv_2= '{' ( (lv_features_3_0= ruleLinkedFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
+            // InternalXdiagramDsl.g:1752:3: otherlv_0= 'figure' ( (otherlv_1= RULE_ID ) ) otherlv_2= '{' ( (lv_features_3_0= ruleLinkedFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}'
             {
-            otherlv_0=(Token)match(input,32,FOLLOW_11); 
+            otherlv_0=(Token)match(input,32,FOLLOW_12); 
 
             			newLeafNode(otherlv_0, grammarAccess.getCustomAccess().getFigureKeyword_0());
             		
-            // InternalXdiagramDsl.g:1704:3: ( (otherlv_1= RULE_ID ) )
-            // InternalXdiagramDsl.g:1705:4: (otherlv_1= RULE_ID )
+            // InternalXdiagramDsl.g:1756:3: ( (otherlv_1= RULE_ID ) )
+            // InternalXdiagramDsl.g:1757:4: (otherlv_1= RULE_ID )
             {
-            // InternalXdiagramDsl.g:1705:4: (otherlv_1= RULE_ID )
-            // InternalXdiagramDsl.g:1706:5: otherlv_1= RULE_ID
+            // InternalXdiagramDsl.g:1757:4: (otherlv_1= RULE_ID )
+            // InternalXdiagramDsl.g:1758:5: otherlv_1= RULE_ID
             {
 
             					if (current==null) {
             						current = createModelElement(grammarAccess.getCustomRule());
             					}
             				
-            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_5); 
+            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_6); 
 
             					newLeafNode(otherlv_1, grammarAccess.getCustomAccess().getFigureCustomFigureCrossReference_1_0());
             				
@@ -4586,32 +4727,32 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_30); 
+            otherlv_2=(Token)match(input,12,FOLLOW_32); 
 
             			newLeafNode(otherlv_2, grammarAccess.getCustomAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalXdiagramDsl.g:1721:3: ( (lv_features_3_0= ruleLinkedFeature ) )*
-            loop19:
+            // InternalXdiagramDsl.g:1773:3: ( (lv_features_3_0= ruleLinkedFeature ) )*
+            loop21:
             do {
-                int alt19=2;
-                int LA19_0 = input.LA(1);
+                int alt21=2;
+                int LA21_0 = input.LA(1);
 
-                if ( (LA19_0==28||LA19_0==46) ) {
-                    alt19=1;
+                if ( (LA21_0==28||LA21_0==46) ) {
+                    alt21=1;
                 }
 
 
-                switch (alt19) {
+                switch (alt21) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:1722:4: (lv_features_3_0= ruleLinkedFeature )
+            	    // InternalXdiagramDsl.g:1774:4: (lv_features_3_0= ruleLinkedFeature )
             	    {
-            	    // InternalXdiagramDsl.g:1722:4: (lv_features_3_0= ruleLinkedFeature )
-            	    // InternalXdiagramDsl.g:1723:5: lv_features_3_0= ruleLinkedFeature
+            	    // InternalXdiagramDsl.g:1774:4: (lv_features_3_0= ruleLinkedFeature )
+            	    // InternalXdiagramDsl.g:1775:5: lv_features_3_0= ruleLinkedFeature
             	    {
 
             	    					newCompositeNode(grammarAccess.getCustomAccess().getFeaturesLinkedFeatureParserRuleCall_3_0());
             	    				
-            	    pushFollow(FOLLOW_30);
+            	    pushFollow(FOLLOW_32);
             	    lv_features_3_0=ruleLinkedFeature();
 
             	    state._fsp--;
@@ -4635,39 +4776,39 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop19;
+            	    break loop21;
                 }
             } while (true);
 
-            // InternalXdiagramDsl.g:1740:3: (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )*
-            loop20:
+            // InternalXdiagramDsl.g:1792:3: (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )*
+            loop22:
             do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+                int alt22=2;
+                int LA22_0 = input.LA(1);
 
-                if ( (LA20_0==34) ) {
-                    alt20=1;
+                if ( (LA22_0==34) ) {
+                    alt22=1;
                 }
 
 
-                switch (alt20) {
+                switch (alt22) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:1741:4: otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:1793:4: otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) )
             	    {
-            	    otherlv_4=(Token)match(input,34,FOLLOW_24); 
+            	    otherlv_4=(Token)match(input,34,FOLLOW_25); 
 
             	    				newLeafNode(otherlv_4, grammarAccess.getCustomAccess().getChildKeyword_4_0());
             	    			
-            	    // InternalXdiagramDsl.g:1745:4: ( (lv_children_5_0= ruleChildElement ) )
-            	    // InternalXdiagramDsl.g:1746:5: (lv_children_5_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:1797:4: ( (lv_children_5_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:1798:5: (lv_children_5_0= ruleChildElement )
             	    {
-            	    // InternalXdiagramDsl.g:1746:5: (lv_children_5_0= ruleChildElement )
-            	    // InternalXdiagramDsl.g:1747:6: lv_children_5_0= ruleChildElement
+            	    // InternalXdiagramDsl.g:1798:5: (lv_children_5_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:1799:6: lv_children_5_0= ruleChildElement
             	    {
 
             	    						newCompositeNode(grammarAccess.getCustomAccess().getChildrenChildElementParserRuleCall_4_1_0());
             	    					
-            	    pushFollow(FOLLOW_31);
+            	    pushFollow(FOLLOW_33);
             	    lv_children_5_0=ruleChildElement();
 
             	    state._fsp--;
@@ -4694,7 +4835,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop20;
+            	    break loop22;
                 }
             } while (true);
 
@@ -4725,7 +4866,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRectangle"
-    // InternalXdiagramDsl.g:1773:1: entryRuleRectangle returns [EObject current=null] : iv_ruleRectangle= ruleRectangle EOF ;
+    // InternalXdiagramDsl.g:1825:1: entryRuleRectangle returns [EObject current=null] : iv_ruleRectangle= ruleRectangle EOF ;
     public final EObject entryRuleRectangle() throws RecognitionException {
         EObject current = null;
 
@@ -4733,8 +4874,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:1773:50: (iv_ruleRectangle= ruleRectangle EOF )
-            // InternalXdiagramDsl.g:1774:2: iv_ruleRectangle= ruleRectangle EOF
+            // InternalXdiagramDsl.g:1825:50: (iv_ruleRectangle= ruleRectangle EOF )
+            // InternalXdiagramDsl.g:1826:2: iv_ruleRectangle= ruleRectangle EOF
             {
              newCompositeNode(grammarAccess.getRectangleRule()); 
             pushFollow(FOLLOW_1);
@@ -4761,7 +4902,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRectangle"
-    // InternalXdiagramDsl.g:1780:1: ruleRectangle returns [EObject current=null] : ( ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleRectangleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) ;
+    // InternalXdiagramDsl.g:1832:1: ruleRectangle returns [EObject current=null] : ( ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleRectangleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) ;
     public final EObject ruleRectangle() throws RecognitionException {
         EObject current = null;
 
@@ -4779,39 +4920,39 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:1786:2: ( ( ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleRectangleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) )
-            // InternalXdiagramDsl.g:1787:2: ( ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleRectangleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
+            // InternalXdiagramDsl.g:1838:2: ( ( ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleRectangleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) )
+            // InternalXdiagramDsl.g:1839:2: ( ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleRectangleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
             {
-            // InternalXdiagramDsl.g:1787:2: ( ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleRectangleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
-            // InternalXdiagramDsl.g:1788:3: ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleRectangleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}'
+            // InternalXdiagramDsl.g:1839:2: ( ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleRectangleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
+            // InternalXdiagramDsl.g:1840:3: ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleRectangleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}'
             {
-            // InternalXdiagramDsl.g:1788:3: ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) )
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // InternalXdiagramDsl.g:1840:3: ( ( (lv_rectangle_0_0= 'rectangle' ) ) | ( (lv_square_1_0= 'square' ) ) )
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA21_0==35) ) {
-                alt21=1;
+            if ( (LA23_0==35) ) {
+                alt23=1;
             }
-            else if ( (LA21_0==36) ) {
-                alt21=2;
+            else if ( (LA23_0==36) ) {
+                alt23=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 21, 0, input);
+                    new NoViableAltException("", 23, 0, input);
 
                 throw nvae;
             }
-            switch (alt21) {
+            switch (alt23) {
                 case 1 :
-                    // InternalXdiagramDsl.g:1789:4: ( (lv_rectangle_0_0= 'rectangle' ) )
+                    // InternalXdiagramDsl.g:1841:4: ( (lv_rectangle_0_0= 'rectangle' ) )
                     {
-                    // InternalXdiagramDsl.g:1789:4: ( (lv_rectangle_0_0= 'rectangle' ) )
-                    // InternalXdiagramDsl.g:1790:5: (lv_rectangle_0_0= 'rectangle' )
+                    // InternalXdiagramDsl.g:1841:4: ( (lv_rectangle_0_0= 'rectangle' ) )
+                    // InternalXdiagramDsl.g:1842:5: (lv_rectangle_0_0= 'rectangle' )
                     {
-                    // InternalXdiagramDsl.g:1790:5: (lv_rectangle_0_0= 'rectangle' )
-                    // InternalXdiagramDsl.g:1791:6: lv_rectangle_0_0= 'rectangle'
+                    // InternalXdiagramDsl.g:1842:5: (lv_rectangle_0_0= 'rectangle' )
+                    // InternalXdiagramDsl.g:1843:6: lv_rectangle_0_0= 'rectangle'
                     {
-                    lv_rectangle_0_0=(Token)match(input,35,FOLLOW_5); 
+                    lv_rectangle_0_0=(Token)match(input,35,FOLLOW_6); 
 
                     						newLeafNode(lv_rectangle_0_0, grammarAccess.getRectangleAccess().getRectangleRectangleKeyword_0_0_0());
                     					
@@ -4831,15 +4972,15 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:1804:4: ( (lv_square_1_0= 'square' ) )
+                    // InternalXdiagramDsl.g:1856:4: ( (lv_square_1_0= 'square' ) )
                     {
-                    // InternalXdiagramDsl.g:1804:4: ( (lv_square_1_0= 'square' ) )
-                    // InternalXdiagramDsl.g:1805:5: (lv_square_1_0= 'square' )
+                    // InternalXdiagramDsl.g:1856:4: ( (lv_square_1_0= 'square' ) )
+                    // InternalXdiagramDsl.g:1857:5: (lv_square_1_0= 'square' )
                     {
-                    // InternalXdiagramDsl.g:1805:5: (lv_square_1_0= 'square' )
-                    // InternalXdiagramDsl.g:1806:6: lv_square_1_0= 'square'
+                    // InternalXdiagramDsl.g:1857:5: (lv_square_1_0= 'square' )
+                    // InternalXdiagramDsl.g:1858:6: lv_square_1_0= 'square'
                     {
-                    lv_square_1_0=(Token)match(input,36,FOLLOW_5); 
+                    lv_square_1_0=(Token)match(input,36,FOLLOW_6); 
 
                     						newLeafNode(lv_square_1_0, grammarAccess.getRectangleAccess().getSquareSquareKeyword_0_1_0());
                     					
@@ -4861,32 +5002,32 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_32); 
+            otherlv_2=(Token)match(input,12,FOLLOW_34); 
 
             			newLeafNode(otherlv_2, grammarAccess.getRectangleAccess().getLeftCurlyBracketKeyword_1());
             		
-            // InternalXdiagramDsl.g:1823:3: ( (lv_features_3_0= ruleRectangleFeature ) )*
-            loop22:
+            // InternalXdiagramDsl.g:1875:3: ( (lv_features_3_0= ruleRectangleFeature ) )*
+            loop24:
             do {
-                int alt22=2;
-                int LA22_0 = input.LA(1);
+                int alt24=2;
+                int LA24_0 = input.LA(1);
 
-                if ( (LA22_0==28||LA22_0==46||(LA22_0>=50 && LA22_0<=54)||(LA22_0>=58 && LA22_0<=60)||LA22_0==74||LA22_0==76) ) {
-                    alt22=1;
+                if ( (LA24_0==28||LA24_0==46||(LA24_0>=50 && LA24_0<=54)||(LA24_0>=58 && LA24_0<=60)||LA24_0==74||LA24_0==76) ) {
+                    alt24=1;
                 }
 
 
-                switch (alt22) {
+                switch (alt24) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:1824:4: (lv_features_3_0= ruleRectangleFeature )
+            	    // InternalXdiagramDsl.g:1876:4: (lv_features_3_0= ruleRectangleFeature )
             	    {
-            	    // InternalXdiagramDsl.g:1824:4: (lv_features_3_0= ruleRectangleFeature )
-            	    // InternalXdiagramDsl.g:1825:5: lv_features_3_0= ruleRectangleFeature
+            	    // InternalXdiagramDsl.g:1876:4: (lv_features_3_0= ruleRectangleFeature )
+            	    // InternalXdiagramDsl.g:1877:5: lv_features_3_0= ruleRectangleFeature
             	    {
 
             	    					newCompositeNode(grammarAccess.getRectangleAccess().getFeaturesRectangleFeatureParserRuleCall_2_0());
             	    				
-            	    pushFollow(FOLLOW_32);
+            	    pushFollow(FOLLOW_34);
             	    lv_features_3_0=ruleRectangleFeature();
 
             	    state._fsp--;
@@ -4910,39 +5051,39 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop22;
+            	    break loop24;
                 }
             } while (true);
 
-            // InternalXdiagramDsl.g:1842:3: (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )*
-            loop23:
+            // InternalXdiagramDsl.g:1894:3: (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )*
+            loop25:
             do {
-                int alt23=2;
-                int LA23_0 = input.LA(1);
+                int alt25=2;
+                int LA25_0 = input.LA(1);
 
-                if ( (LA23_0==34) ) {
-                    alt23=1;
+                if ( (LA25_0==34) ) {
+                    alt25=1;
                 }
 
 
-                switch (alt23) {
+                switch (alt25) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:1843:4: otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:1895:4: otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) )
             	    {
-            	    otherlv_4=(Token)match(input,34,FOLLOW_24); 
+            	    otherlv_4=(Token)match(input,34,FOLLOW_25); 
 
             	    				newLeafNode(otherlv_4, grammarAccess.getRectangleAccess().getChildKeyword_3_0());
             	    			
-            	    // InternalXdiagramDsl.g:1847:4: ( (lv_children_5_0= ruleChildElement ) )
-            	    // InternalXdiagramDsl.g:1848:5: (lv_children_5_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:1899:4: ( (lv_children_5_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:1900:5: (lv_children_5_0= ruleChildElement )
             	    {
-            	    // InternalXdiagramDsl.g:1848:5: (lv_children_5_0= ruleChildElement )
-            	    // InternalXdiagramDsl.g:1849:6: lv_children_5_0= ruleChildElement
+            	    // InternalXdiagramDsl.g:1900:5: (lv_children_5_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:1901:6: lv_children_5_0= ruleChildElement
             	    {
 
             	    						newCompositeNode(grammarAccess.getRectangleAccess().getChildrenChildElementParserRuleCall_3_1_0());
             	    					
-            	    pushFollow(FOLLOW_31);
+            	    pushFollow(FOLLOW_33);
             	    lv_children_5_0=ruleChildElement();
 
             	    state._fsp--;
@@ -4969,7 +5110,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop23;
+            	    break loop25;
                 }
             } while (true);
 
@@ -5000,7 +5141,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRectangleFeature"
-    // InternalXdiagramDsl.g:1875:1: entryRuleRectangleFeature returns [EObject current=null] : iv_ruleRectangleFeature= ruleRectangleFeature EOF ;
+    // InternalXdiagramDsl.g:1927:1: entryRuleRectangleFeature returns [EObject current=null] : iv_ruleRectangleFeature= ruleRectangleFeature EOF ;
     public final EObject entryRuleRectangleFeature() throws RecognitionException {
         EObject current = null;
 
@@ -5008,8 +5149,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:1875:57: (iv_ruleRectangleFeature= ruleRectangleFeature EOF )
-            // InternalXdiagramDsl.g:1876:2: iv_ruleRectangleFeature= ruleRectangleFeature EOF
+            // InternalXdiagramDsl.g:1927:57: (iv_ruleRectangleFeature= ruleRectangleFeature EOF )
+            // InternalXdiagramDsl.g:1928:2: iv_ruleRectangleFeature= ruleRectangleFeature EOF
             {
              newCompositeNode(grammarAccess.getRectangleFeatureRule()); 
             pushFollow(FOLLOW_1);
@@ -5036,7 +5177,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRectangleFeature"
-    // InternalXdiagramDsl.g:1882:1: ruleRectangleFeature returns [EObject current=null] : (this_ConnectableElementFeature_0= ruleConnectableElementFeature | this_Corner_1= ruleCorner ) ;
+    // InternalXdiagramDsl.g:1934:1: ruleRectangleFeature returns [EObject current=null] : (this_ConnectableElementFeature_0= ruleConnectableElementFeature | this_Corner_1= ruleCorner ) ;
     public final EObject ruleRectangleFeature() throws RecognitionException {
         EObject current = null;
 
@@ -5049,28 +5190,28 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:1888:2: ( (this_ConnectableElementFeature_0= ruleConnectableElementFeature | this_Corner_1= ruleCorner ) )
-            // InternalXdiagramDsl.g:1889:2: (this_ConnectableElementFeature_0= ruleConnectableElementFeature | this_Corner_1= ruleCorner )
+            // InternalXdiagramDsl.g:1940:2: ( (this_ConnectableElementFeature_0= ruleConnectableElementFeature | this_Corner_1= ruleCorner ) )
+            // InternalXdiagramDsl.g:1941:2: (this_ConnectableElementFeature_0= ruleConnectableElementFeature | this_Corner_1= ruleCorner )
             {
-            // InternalXdiagramDsl.g:1889:2: (this_ConnectableElementFeature_0= ruleConnectableElementFeature | this_Corner_1= ruleCorner )
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            // InternalXdiagramDsl.g:1941:2: (this_ConnectableElementFeature_0= ruleConnectableElementFeature | this_Corner_1= ruleCorner )
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA24_0==28||LA24_0==46||(LA24_0>=50 && LA24_0<=54)||LA24_0==58||LA24_0==60||LA24_0==74||LA24_0==76) ) {
-                alt24=1;
+            if ( (LA26_0==28||LA26_0==46||(LA26_0>=50 && LA26_0<=54)||LA26_0==58||LA26_0==60||LA26_0==74||LA26_0==76) ) {
+                alt26=1;
             }
-            else if ( (LA24_0==59) ) {
-                alt24=2;
+            else if ( (LA26_0==59) ) {
+                alt26=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 24, 0, input);
+                    new NoViableAltException("", 26, 0, input);
 
                 throw nvae;
             }
-            switch (alt24) {
+            switch (alt26) {
                 case 1 :
-                    // InternalXdiagramDsl.g:1890:3: this_ConnectableElementFeature_0= ruleConnectableElementFeature
+                    // InternalXdiagramDsl.g:1942:3: this_ConnectableElementFeature_0= ruleConnectableElementFeature
                     {
 
                     			newCompositeNode(grammarAccess.getRectangleFeatureAccess().getConnectableElementFeatureParserRuleCall_0());
@@ -5088,7 +5229,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:1899:3: this_Corner_1= ruleCorner
+                    // InternalXdiagramDsl.g:1951:3: this_Corner_1= ruleCorner
                     {
 
                     			newCompositeNode(grammarAccess.getRectangleFeatureAccess().getCornerParserRuleCall_1());
@@ -5128,7 +5269,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRhombus"
-    // InternalXdiagramDsl.g:1911:1: entryRuleRhombus returns [EObject current=null] : iv_ruleRhombus= ruleRhombus EOF ;
+    // InternalXdiagramDsl.g:1963:1: entryRuleRhombus returns [EObject current=null] : iv_ruleRhombus= ruleRhombus EOF ;
     public final EObject entryRuleRhombus() throws RecognitionException {
         EObject current = null;
 
@@ -5136,8 +5277,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:1911:48: (iv_ruleRhombus= ruleRhombus EOF )
-            // InternalXdiagramDsl.g:1912:2: iv_ruleRhombus= ruleRhombus EOF
+            // InternalXdiagramDsl.g:1963:48: (iv_ruleRhombus= ruleRhombus EOF )
+            // InternalXdiagramDsl.g:1964:2: iv_ruleRhombus= ruleRhombus EOF
             {
              newCompositeNode(grammarAccess.getRhombusRule()); 
             pushFollow(FOLLOW_1);
@@ -5164,7 +5305,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRhombus"
-    // InternalXdiagramDsl.g:1918:1: ruleRhombus returns [EObject current=null] : ( () otherlv_1= 'rhombus' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) ;
+    // InternalXdiagramDsl.g:1970:1: ruleRhombus returns [EObject current=null] : ( () otherlv_1= 'rhombus' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) ;
     public final EObject ruleRhombus() throws RecognitionException {
         EObject current = null;
 
@@ -5181,14 +5322,14 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:1924:2: ( ( () otherlv_1= 'rhombus' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) )
-            // InternalXdiagramDsl.g:1925:2: ( () otherlv_1= 'rhombus' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
+            // InternalXdiagramDsl.g:1976:2: ( ( () otherlv_1= 'rhombus' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) )
+            // InternalXdiagramDsl.g:1977:2: ( () otherlv_1= 'rhombus' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
             {
-            // InternalXdiagramDsl.g:1925:2: ( () otherlv_1= 'rhombus' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
-            // InternalXdiagramDsl.g:1926:3: () otherlv_1= 'rhombus' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}'
+            // InternalXdiagramDsl.g:1977:2: ( () otherlv_1= 'rhombus' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
+            // InternalXdiagramDsl.g:1978:3: () otherlv_1= 'rhombus' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}'
             {
-            // InternalXdiagramDsl.g:1926:3: ()
-            // InternalXdiagramDsl.g:1927:4: 
+            // InternalXdiagramDsl.g:1978:3: ()
+            // InternalXdiagramDsl.g:1979:4: 
             {
 
             				current = forceCreateModelElement(
@@ -5198,36 +5339,36 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,37,FOLLOW_5); 
+            otherlv_1=(Token)match(input,37,FOLLOW_6); 
 
             			newLeafNode(otherlv_1, grammarAccess.getRhombusAccess().getRhombusKeyword_1());
             		
-            otherlv_2=(Token)match(input,12,FOLLOW_33); 
+            otherlv_2=(Token)match(input,12,FOLLOW_35); 
 
             			newLeafNode(otherlv_2, grammarAccess.getRhombusAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalXdiagramDsl.g:1941:3: ( (lv_features_3_0= ruleConnectableElementFeature ) )*
-            loop25:
+            // InternalXdiagramDsl.g:1993:3: ( (lv_features_3_0= ruleConnectableElementFeature ) )*
+            loop27:
             do {
-                int alt25=2;
-                int LA25_0 = input.LA(1);
+                int alt27=2;
+                int LA27_0 = input.LA(1);
 
-                if ( (LA25_0==28||LA25_0==46||(LA25_0>=50 && LA25_0<=54)||LA25_0==58||LA25_0==60||LA25_0==74||LA25_0==76) ) {
-                    alt25=1;
+                if ( (LA27_0==28||LA27_0==46||(LA27_0>=50 && LA27_0<=54)||LA27_0==58||LA27_0==60||LA27_0==74||LA27_0==76) ) {
+                    alt27=1;
                 }
 
 
-                switch (alt25) {
+                switch (alt27) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:1942:4: (lv_features_3_0= ruleConnectableElementFeature )
+            	    // InternalXdiagramDsl.g:1994:4: (lv_features_3_0= ruleConnectableElementFeature )
             	    {
-            	    // InternalXdiagramDsl.g:1942:4: (lv_features_3_0= ruleConnectableElementFeature )
-            	    // InternalXdiagramDsl.g:1943:5: lv_features_3_0= ruleConnectableElementFeature
+            	    // InternalXdiagramDsl.g:1994:4: (lv_features_3_0= ruleConnectableElementFeature )
+            	    // InternalXdiagramDsl.g:1995:5: lv_features_3_0= ruleConnectableElementFeature
             	    {
 
             	    					newCompositeNode(grammarAccess.getRhombusAccess().getFeaturesConnectableElementFeatureParserRuleCall_3_0());
             	    				
-            	    pushFollow(FOLLOW_33);
+            	    pushFollow(FOLLOW_35);
             	    lv_features_3_0=ruleConnectableElementFeature();
 
             	    state._fsp--;
@@ -5251,39 +5392,39 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop25;
+            	    break loop27;
                 }
             } while (true);
 
-            // InternalXdiagramDsl.g:1960:3: (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )*
-            loop26:
+            // InternalXdiagramDsl.g:2012:3: (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )*
+            loop28:
             do {
-                int alt26=2;
-                int LA26_0 = input.LA(1);
+                int alt28=2;
+                int LA28_0 = input.LA(1);
 
-                if ( (LA26_0==34) ) {
-                    alt26=1;
+                if ( (LA28_0==34) ) {
+                    alt28=1;
                 }
 
 
-                switch (alt26) {
+                switch (alt28) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:1961:4: otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:2013:4: otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) )
             	    {
-            	    otherlv_4=(Token)match(input,34,FOLLOW_24); 
+            	    otherlv_4=(Token)match(input,34,FOLLOW_25); 
 
             	    				newLeafNode(otherlv_4, grammarAccess.getRhombusAccess().getChildKeyword_4_0());
             	    			
-            	    // InternalXdiagramDsl.g:1965:4: ( (lv_children_5_0= ruleChildElement ) )
-            	    // InternalXdiagramDsl.g:1966:5: (lv_children_5_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:2017:4: ( (lv_children_5_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:2018:5: (lv_children_5_0= ruleChildElement )
             	    {
-            	    // InternalXdiagramDsl.g:1966:5: (lv_children_5_0= ruleChildElement )
-            	    // InternalXdiagramDsl.g:1967:6: lv_children_5_0= ruleChildElement
+            	    // InternalXdiagramDsl.g:2018:5: (lv_children_5_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:2019:6: lv_children_5_0= ruleChildElement
             	    {
 
             	    						newCompositeNode(grammarAccess.getRhombusAccess().getChildrenChildElementParserRuleCall_4_1_0());
             	    					
-            	    pushFollow(FOLLOW_31);
+            	    pushFollow(FOLLOW_33);
             	    lv_children_5_0=ruleChildElement();
 
             	    state._fsp--;
@@ -5310,7 +5451,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop26;
+            	    break loop28;
                 }
             } while (true);
 
@@ -5341,7 +5482,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEllipse"
-    // InternalXdiagramDsl.g:1993:1: entryRuleEllipse returns [EObject current=null] : iv_ruleEllipse= ruleEllipse EOF ;
+    // InternalXdiagramDsl.g:2045:1: entryRuleEllipse returns [EObject current=null] : iv_ruleEllipse= ruleEllipse EOF ;
     public final EObject entryRuleEllipse() throws RecognitionException {
         EObject current = null;
 
@@ -5349,8 +5490,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:1993:48: (iv_ruleEllipse= ruleEllipse EOF )
-            // InternalXdiagramDsl.g:1994:2: iv_ruleEllipse= ruleEllipse EOF
+            // InternalXdiagramDsl.g:2045:48: (iv_ruleEllipse= ruleEllipse EOF )
+            // InternalXdiagramDsl.g:2046:2: iv_ruleEllipse= ruleEllipse EOF
             {
              newCompositeNode(grammarAccess.getEllipseRule()); 
             pushFollow(FOLLOW_1);
@@ -5377,7 +5518,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEllipse"
-    // InternalXdiagramDsl.g:2000:1: ruleEllipse returns [EObject current=null] : ( ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) ;
+    // InternalXdiagramDsl.g:2052:1: ruleEllipse returns [EObject current=null] : ( ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) ;
     public final EObject ruleEllipse() throws RecognitionException {
         EObject current = null;
 
@@ -5395,39 +5536,39 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:2006:2: ( ( ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) )
-            // InternalXdiagramDsl.g:2007:2: ( ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
+            // InternalXdiagramDsl.g:2058:2: ( ( ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) )
+            // InternalXdiagramDsl.g:2059:2: ( ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
             {
-            // InternalXdiagramDsl.g:2007:2: ( ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
-            // InternalXdiagramDsl.g:2008:3: ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}'
+            // InternalXdiagramDsl.g:2059:2: ( ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
+            // InternalXdiagramDsl.g:2060:3: ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) ) otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}'
             {
-            // InternalXdiagramDsl.g:2008:3: ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) )
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // InternalXdiagramDsl.g:2060:3: ( ( (lv_ellipse_0_0= 'ellipse' ) ) | ( (lv_circle_1_0= 'circle' ) ) )
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA27_0==38) ) {
-                alt27=1;
+            if ( (LA29_0==38) ) {
+                alt29=1;
             }
-            else if ( (LA27_0==39) ) {
-                alt27=2;
+            else if ( (LA29_0==39) ) {
+                alt29=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 27, 0, input);
+                    new NoViableAltException("", 29, 0, input);
 
                 throw nvae;
             }
-            switch (alt27) {
+            switch (alt29) {
                 case 1 :
-                    // InternalXdiagramDsl.g:2009:4: ( (lv_ellipse_0_0= 'ellipse' ) )
+                    // InternalXdiagramDsl.g:2061:4: ( (lv_ellipse_0_0= 'ellipse' ) )
                     {
-                    // InternalXdiagramDsl.g:2009:4: ( (lv_ellipse_0_0= 'ellipse' ) )
-                    // InternalXdiagramDsl.g:2010:5: (lv_ellipse_0_0= 'ellipse' )
+                    // InternalXdiagramDsl.g:2061:4: ( (lv_ellipse_0_0= 'ellipse' ) )
+                    // InternalXdiagramDsl.g:2062:5: (lv_ellipse_0_0= 'ellipse' )
                     {
-                    // InternalXdiagramDsl.g:2010:5: (lv_ellipse_0_0= 'ellipse' )
-                    // InternalXdiagramDsl.g:2011:6: lv_ellipse_0_0= 'ellipse'
+                    // InternalXdiagramDsl.g:2062:5: (lv_ellipse_0_0= 'ellipse' )
+                    // InternalXdiagramDsl.g:2063:6: lv_ellipse_0_0= 'ellipse'
                     {
-                    lv_ellipse_0_0=(Token)match(input,38,FOLLOW_5); 
+                    lv_ellipse_0_0=(Token)match(input,38,FOLLOW_6); 
 
                     						newLeafNode(lv_ellipse_0_0, grammarAccess.getEllipseAccess().getEllipseEllipseKeyword_0_0_0());
                     					
@@ -5447,15 +5588,15 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:2024:4: ( (lv_circle_1_0= 'circle' ) )
+                    // InternalXdiagramDsl.g:2076:4: ( (lv_circle_1_0= 'circle' ) )
                     {
-                    // InternalXdiagramDsl.g:2024:4: ( (lv_circle_1_0= 'circle' ) )
-                    // InternalXdiagramDsl.g:2025:5: (lv_circle_1_0= 'circle' )
+                    // InternalXdiagramDsl.g:2076:4: ( (lv_circle_1_0= 'circle' ) )
+                    // InternalXdiagramDsl.g:2077:5: (lv_circle_1_0= 'circle' )
                     {
-                    // InternalXdiagramDsl.g:2025:5: (lv_circle_1_0= 'circle' )
-                    // InternalXdiagramDsl.g:2026:6: lv_circle_1_0= 'circle'
+                    // InternalXdiagramDsl.g:2077:5: (lv_circle_1_0= 'circle' )
+                    // InternalXdiagramDsl.g:2078:6: lv_circle_1_0= 'circle'
                     {
-                    lv_circle_1_0=(Token)match(input,39,FOLLOW_5); 
+                    lv_circle_1_0=(Token)match(input,39,FOLLOW_6); 
 
                     						newLeafNode(lv_circle_1_0, grammarAccess.getEllipseAccess().getCircleCircleKeyword_0_1_0());
                     					
@@ -5477,32 +5618,32 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_33); 
+            otherlv_2=(Token)match(input,12,FOLLOW_35); 
 
             			newLeafNode(otherlv_2, grammarAccess.getEllipseAccess().getLeftCurlyBracketKeyword_1());
             		
-            // InternalXdiagramDsl.g:2043:3: ( (lv_features_3_0= ruleConnectableElementFeature ) )*
-            loop28:
+            // InternalXdiagramDsl.g:2095:3: ( (lv_features_3_0= ruleConnectableElementFeature ) )*
+            loop30:
             do {
-                int alt28=2;
-                int LA28_0 = input.LA(1);
+                int alt30=2;
+                int LA30_0 = input.LA(1);
 
-                if ( (LA28_0==28||LA28_0==46||(LA28_0>=50 && LA28_0<=54)||LA28_0==58||LA28_0==60||LA28_0==74||LA28_0==76) ) {
-                    alt28=1;
+                if ( (LA30_0==28||LA30_0==46||(LA30_0>=50 && LA30_0<=54)||LA30_0==58||LA30_0==60||LA30_0==74||LA30_0==76) ) {
+                    alt30=1;
                 }
 
 
-                switch (alt28) {
+                switch (alt30) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:2044:4: (lv_features_3_0= ruleConnectableElementFeature )
+            	    // InternalXdiagramDsl.g:2096:4: (lv_features_3_0= ruleConnectableElementFeature )
             	    {
-            	    // InternalXdiagramDsl.g:2044:4: (lv_features_3_0= ruleConnectableElementFeature )
-            	    // InternalXdiagramDsl.g:2045:5: lv_features_3_0= ruleConnectableElementFeature
+            	    // InternalXdiagramDsl.g:2096:4: (lv_features_3_0= ruleConnectableElementFeature )
+            	    // InternalXdiagramDsl.g:2097:5: lv_features_3_0= ruleConnectableElementFeature
             	    {
 
             	    					newCompositeNode(grammarAccess.getEllipseAccess().getFeaturesConnectableElementFeatureParserRuleCall_2_0());
             	    				
-            	    pushFollow(FOLLOW_33);
+            	    pushFollow(FOLLOW_35);
             	    lv_features_3_0=ruleConnectableElementFeature();
 
             	    state._fsp--;
@@ -5526,39 +5667,39 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop28;
+            	    break loop30;
                 }
             } while (true);
 
-            // InternalXdiagramDsl.g:2062:3: (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )*
-            loop29:
+            // InternalXdiagramDsl.g:2114:3: (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )*
+            loop31:
             do {
-                int alt29=2;
-                int LA29_0 = input.LA(1);
+                int alt31=2;
+                int LA31_0 = input.LA(1);
 
-                if ( (LA29_0==34) ) {
-                    alt29=1;
+                if ( (LA31_0==34) ) {
+                    alt31=1;
                 }
 
 
-                switch (alt29) {
+                switch (alt31) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:2063:4: otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:2115:4: otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) )
             	    {
-            	    otherlv_4=(Token)match(input,34,FOLLOW_24); 
+            	    otherlv_4=(Token)match(input,34,FOLLOW_25); 
 
             	    				newLeafNode(otherlv_4, grammarAccess.getEllipseAccess().getChildKeyword_3_0());
             	    			
-            	    // InternalXdiagramDsl.g:2067:4: ( (lv_children_5_0= ruleChildElement ) )
-            	    // InternalXdiagramDsl.g:2068:5: (lv_children_5_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:2119:4: ( (lv_children_5_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:2120:5: (lv_children_5_0= ruleChildElement )
             	    {
-            	    // InternalXdiagramDsl.g:2068:5: (lv_children_5_0= ruleChildElement )
-            	    // InternalXdiagramDsl.g:2069:6: lv_children_5_0= ruleChildElement
+            	    // InternalXdiagramDsl.g:2120:5: (lv_children_5_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:2121:6: lv_children_5_0= ruleChildElement
             	    {
 
             	    						newCompositeNode(grammarAccess.getEllipseAccess().getChildrenChildElementParserRuleCall_3_1_0());
             	    					
-            	    pushFollow(FOLLOW_31);
+            	    pushFollow(FOLLOW_33);
             	    lv_children_5_0=ruleChildElement();
 
             	    state._fsp--;
@@ -5585,7 +5726,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop29;
+            	    break loop31;
                 }
             } while (true);
 
@@ -5616,7 +5757,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePolyline"
-    // InternalXdiagramDsl.g:2095:1: entryRulePolyline returns [EObject current=null] : iv_rulePolyline= rulePolyline EOF ;
+    // InternalXdiagramDsl.g:2147:1: entryRulePolyline returns [EObject current=null] : iv_rulePolyline= rulePolyline EOF ;
     public final EObject entryRulePolyline() throws RecognitionException {
         EObject current = null;
 
@@ -5624,8 +5765,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:2095:49: (iv_rulePolyline= rulePolyline EOF )
-            // InternalXdiagramDsl.g:2096:2: iv_rulePolyline= rulePolyline EOF
+            // InternalXdiagramDsl.g:2147:49: (iv_rulePolyline= rulePolyline EOF )
+            // InternalXdiagramDsl.g:2148:2: iv_rulePolyline= rulePolyline EOF
             {
              newCompositeNode(grammarAccess.getPolylineRule()); 
             pushFollow(FOLLOW_1);
@@ -5652,7 +5793,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePolyline"
-    // InternalXdiagramDsl.g:2102:1: rulePolyline returns [EObject current=null] : ( ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) otherlv_2= '{' ( (lv_features_3_0= rulePoint ) ) ( (lv_features_4_0= rulePoint ) ) ( (lv_features_5_0= rulePoint ) )* ( (lv_features_6_0= ruleConnectableElementFeature ) )* (otherlv_7= 'child' ( (lv_children_8_0= ruleChildElement ) ) )* otherlv_9= '}' ) ;
+    // InternalXdiagramDsl.g:2154:1: rulePolyline returns [EObject current=null] : ( ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) otherlv_2= '{' ( (lv_features_3_0= rulePoint ) ) ( (lv_features_4_0= rulePoint ) ) ( (lv_features_5_0= rulePoint ) )* ( (lv_features_6_0= ruleConnectableElementFeature ) )* (otherlv_7= 'child' ( (lv_children_8_0= ruleChildElement ) ) )* otherlv_9= '}' ) ;
     public final EObject rulePolyline() throws RecognitionException {
         EObject current = null;
 
@@ -5676,39 +5817,39 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:2108:2: ( ( ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) otherlv_2= '{' ( (lv_features_3_0= rulePoint ) ) ( (lv_features_4_0= rulePoint ) ) ( (lv_features_5_0= rulePoint ) )* ( (lv_features_6_0= ruleConnectableElementFeature ) )* (otherlv_7= 'child' ( (lv_children_8_0= ruleChildElement ) ) )* otherlv_9= '}' ) )
-            // InternalXdiagramDsl.g:2109:2: ( ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) otherlv_2= '{' ( (lv_features_3_0= rulePoint ) ) ( (lv_features_4_0= rulePoint ) ) ( (lv_features_5_0= rulePoint ) )* ( (lv_features_6_0= ruleConnectableElementFeature ) )* (otherlv_7= 'child' ( (lv_children_8_0= ruleChildElement ) ) )* otherlv_9= '}' )
+            // InternalXdiagramDsl.g:2160:2: ( ( ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) otherlv_2= '{' ( (lv_features_3_0= rulePoint ) ) ( (lv_features_4_0= rulePoint ) ) ( (lv_features_5_0= rulePoint ) )* ( (lv_features_6_0= ruleConnectableElementFeature ) )* (otherlv_7= 'child' ( (lv_children_8_0= ruleChildElement ) ) )* otherlv_9= '}' ) )
+            // InternalXdiagramDsl.g:2161:2: ( ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) otherlv_2= '{' ( (lv_features_3_0= rulePoint ) ) ( (lv_features_4_0= rulePoint ) ) ( (lv_features_5_0= rulePoint ) )* ( (lv_features_6_0= ruleConnectableElementFeature ) )* (otherlv_7= 'child' ( (lv_children_8_0= ruleChildElement ) ) )* otherlv_9= '}' )
             {
-            // InternalXdiagramDsl.g:2109:2: ( ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) otherlv_2= '{' ( (lv_features_3_0= rulePoint ) ) ( (lv_features_4_0= rulePoint ) ) ( (lv_features_5_0= rulePoint ) )* ( (lv_features_6_0= ruleConnectableElementFeature ) )* (otherlv_7= 'child' ( (lv_children_8_0= ruleChildElement ) ) )* otherlv_9= '}' )
-            // InternalXdiagramDsl.g:2110:3: ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) otherlv_2= '{' ( (lv_features_3_0= rulePoint ) ) ( (lv_features_4_0= rulePoint ) ) ( (lv_features_5_0= rulePoint ) )* ( (lv_features_6_0= ruleConnectableElementFeature ) )* (otherlv_7= 'child' ( (lv_children_8_0= ruleChildElement ) ) )* otherlv_9= '}'
+            // InternalXdiagramDsl.g:2161:2: ( ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) otherlv_2= '{' ( (lv_features_3_0= rulePoint ) ) ( (lv_features_4_0= rulePoint ) ) ( (lv_features_5_0= rulePoint ) )* ( (lv_features_6_0= ruleConnectableElementFeature ) )* (otherlv_7= 'child' ( (lv_children_8_0= ruleChildElement ) ) )* otherlv_9= '}' )
+            // InternalXdiagramDsl.g:2162:3: ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) ) otherlv_2= '{' ( (lv_features_3_0= rulePoint ) ) ( (lv_features_4_0= rulePoint ) ) ( (lv_features_5_0= rulePoint ) )* ( (lv_features_6_0= ruleConnectableElementFeature ) )* (otherlv_7= 'child' ( (lv_children_8_0= ruleChildElement ) ) )* otherlv_9= '}'
             {
-            // InternalXdiagramDsl.g:2110:3: ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) )
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // InternalXdiagramDsl.g:2162:3: ( ( (lv_polygon_0_0= 'polygon' ) ) | ( (lv_polyline_1_0= 'polyline' ) ) )
+            int alt32=2;
+            int LA32_0 = input.LA(1);
 
-            if ( (LA30_0==40) ) {
-                alt30=1;
+            if ( (LA32_0==40) ) {
+                alt32=1;
             }
-            else if ( (LA30_0==41) ) {
-                alt30=2;
+            else if ( (LA32_0==41) ) {
+                alt32=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 30, 0, input);
+                    new NoViableAltException("", 32, 0, input);
 
                 throw nvae;
             }
-            switch (alt30) {
+            switch (alt32) {
                 case 1 :
-                    // InternalXdiagramDsl.g:2111:4: ( (lv_polygon_0_0= 'polygon' ) )
+                    // InternalXdiagramDsl.g:2163:4: ( (lv_polygon_0_0= 'polygon' ) )
                     {
-                    // InternalXdiagramDsl.g:2111:4: ( (lv_polygon_0_0= 'polygon' ) )
-                    // InternalXdiagramDsl.g:2112:5: (lv_polygon_0_0= 'polygon' )
+                    // InternalXdiagramDsl.g:2163:4: ( (lv_polygon_0_0= 'polygon' ) )
+                    // InternalXdiagramDsl.g:2164:5: (lv_polygon_0_0= 'polygon' )
                     {
-                    // InternalXdiagramDsl.g:2112:5: (lv_polygon_0_0= 'polygon' )
-                    // InternalXdiagramDsl.g:2113:6: lv_polygon_0_0= 'polygon'
+                    // InternalXdiagramDsl.g:2164:5: (lv_polygon_0_0= 'polygon' )
+                    // InternalXdiagramDsl.g:2165:6: lv_polygon_0_0= 'polygon'
                     {
-                    lv_polygon_0_0=(Token)match(input,40,FOLLOW_5); 
+                    lv_polygon_0_0=(Token)match(input,40,FOLLOW_6); 
 
                     						newLeafNode(lv_polygon_0_0, grammarAccess.getPolylineAccess().getPolygonPolygonKeyword_0_0_0());
                     					
@@ -5728,15 +5869,15 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:2126:4: ( (lv_polyline_1_0= 'polyline' ) )
+                    // InternalXdiagramDsl.g:2178:4: ( (lv_polyline_1_0= 'polyline' ) )
                     {
-                    // InternalXdiagramDsl.g:2126:4: ( (lv_polyline_1_0= 'polyline' ) )
-                    // InternalXdiagramDsl.g:2127:5: (lv_polyline_1_0= 'polyline' )
+                    // InternalXdiagramDsl.g:2178:4: ( (lv_polyline_1_0= 'polyline' ) )
+                    // InternalXdiagramDsl.g:2179:5: (lv_polyline_1_0= 'polyline' )
                     {
-                    // InternalXdiagramDsl.g:2127:5: (lv_polyline_1_0= 'polyline' )
-                    // InternalXdiagramDsl.g:2128:6: lv_polyline_1_0= 'polyline'
+                    // InternalXdiagramDsl.g:2179:5: (lv_polyline_1_0= 'polyline' )
+                    // InternalXdiagramDsl.g:2180:6: lv_polyline_1_0= 'polyline'
                     {
-                    lv_polyline_1_0=(Token)match(input,41,FOLLOW_5); 
+                    lv_polyline_1_0=(Token)match(input,41,FOLLOW_6); 
 
                     						newLeafNode(lv_polyline_1_0, grammarAccess.getPolylineAccess().getPolylinePolylineKeyword_0_1_0());
                     					
@@ -5758,20 +5899,20 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_34); 
+            otherlv_2=(Token)match(input,12,FOLLOW_36); 
 
             			newLeafNode(otherlv_2, grammarAccess.getPolylineAccess().getLeftCurlyBracketKeyword_1());
             		
-            // InternalXdiagramDsl.g:2145:3: ( (lv_features_3_0= rulePoint ) )
-            // InternalXdiagramDsl.g:2146:4: (lv_features_3_0= rulePoint )
+            // InternalXdiagramDsl.g:2197:3: ( (lv_features_3_0= rulePoint ) )
+            // InternalXdiagramDsl.g:2198:4: (lv_features_3_0= rulePoint )
             {
-            // InternalXdiagramDsl.g:2146:4: (lv_features_3_0= rulePoint )
-            // InternalXdiagramDsl.g:2147:5: lv_features_3_0= rulePoint
+            // InternalXdiagramDsl.g:2198:4: (lv_features_3_0= rulePoint )
+            // InternalXdiagramDsl.g:2199:5: lv_features_3_0= rulePoint
             {
 
             					newCompositeNode(grammarAccess.getPolylineAccess().getFeaturesPointParserRuleCall_2_0());
             				
-            pushFollow(FOLLOW_34);
+            pushFollow(FOLLOW_36);
             lv_features_3_0=rulePoint();
 
             state._fsp--;
@@ -5793,16 +5934,16 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:2164:3: ( (lv_features_4_0= rulePoint ) )
-            // InternalXdiagramDsl.g:2165:4: (lv_features_4_0= rulePoint )
+            // InternalXdiagramDsl.g:2216:3: ( (lv_features_4_0= rulePoint ) )
+            // InternalXdiagramDsl.g:2217:4: (lv_features_4_0= rulePoint )
             {
-            // InternalXdiagramDsl.g:2165:4: (lv_features_4_0= rulePoint )
-            // InternalXdiagramDsl.g:2166:5: lv_features_4_0= rulePoint
+            // InternalXdiagramDsl.g:2217:4: (lv_features_4_0= rulePoint )
+            // InternalXdiagramDsl.g:2218:5: lv_features_4_0= rulePoint
             {
 
             					newCompositeNode(grammarAccess.getPolylineAccess().getFeaturesPointParserRuleCall_3_0());
             				
-            pushFollow(FOLLOW_35);
+            pushFollow(FOLLOW_37);
             lv_features_4_0=rulePoint();
 
             state._fsp--;
@@ -5824,28 +5965,28 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:2183:3: ( (lv_features_5_0= rulePoint ) )*
-            loop31:
+            // InternalXdiagramDsl.g:2235:3: ( (lv_features_5_0= rulePoint ) )*
+            loop33:
             do {
-                int alt31=2;
-                int LA31_0 = input.LA(1);
+                int alt33=2;
+                int LA33_0 = input.LA(1);
 
-                if ( (LA31_0==57) ) {
-                    alt31=1;
+                if ( (LA33_0==57) ) {
+                    alt33=1;
                 }
 
 
-                switch (alt31) {
+                switch (alt33) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:2184:4: (lv_features_5_0= rulePoint )
+            	    // InternalXdiagramDsl.g:2236:4: (lv_features_5_0= rulePoint )
             	    {
-            	    // InternalXdiagramDsl.g:2184:4: (lv_features_5_0= rulePoint )
-            	    // InternalXdiagramDsl.g:2185:5: lv_features_5_0= rulePoint
+            	    // InternalXdiagramDsl.g:2236:4: (lv_features_5_0= rulePoint )
+            	    // InternalXdiagramDsl.g:2237:5: lv_features_5_0= rulePoint
             	    {
 
             	    					newCompositeNode(grammarAccess.getPolylineAccess().getFeaturesPointParserRuleCall_4_0());
             	    				
-            	    pushFollow(FOLLOW_35);
+            	    pushFollow(FOLLOW_37);
             	    lv_features_5_0=rulePoint();
 
             	    state._fsp--;
@@ -5869,32 +6010,32 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop31;
+            	    break loop33;
                 }
             } while (true);
 
-            // InternalXdiagramDsl.g:2202:3: ( (lv_features_6_0= ruleConnectableElementFeature ) )*
-            loop32:
+            // InternalXdiagramDsl.g:2254:3: ( (lv_features_6_0= ruleConnectableElementFeature ) )*
+            loop34:
             do {
-                int alt32=2;
-                int LA32_0 = input.LA(1);
+                int alt34=2;
+                int LA34_0 = input.LA(1);
 
-                if ( (LA32_0==28||LA32_0==46||(LA32_0>=50 && LA32_0<=54)||LA32_0==58||LA32_0==60||LA32_0==74||LA32_0==76) ) {
-                    alt32=1;
+                if ( (LA34_0==28||LA34_0==46||(LA34_0>=50 && LA34_0<=54)||LA34_0==58||LA34_0==60||LA34_0==74||LA34_0==76) ) {
+                    alt34=1;
                 }
 
 
-                switch (alt32) {
+                switch (alt34) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:2203:4: (lv_features_6_0= ruleConnectableElementFeature )
+            	    // InternalXdiagramDsl.g:2255:4: (lv_features_6_0= ruleConnectableElementFeature )
             	    {
-            	    // InternalXdiagramDsl.g:2203:4: (lv_features_6_0= ruleConnectableElementFeature )
-            	    // InternalXdiagramDsl.g:2204:5: lv_features_6_0= ruleConnectableElementFeature
+            	    // InternalXdiagramDsl.g:2255:4: (lv_features_6_0= ruleConnectableElementFeature )
+            	    // InternalXdiagramDsl.g:2256:5: lv_features_6_0= ruleConnectableElementFeature
             	    {
 
             	    					newCompositeNode(grammarAccess.getPolylineAccess().getFeaturesConnectableElementFeatureParserRuleCall_5_0());
             	    				
-            	    pushFollow(FOLLOW_33);
+            	    pushFollow(FOLLOW_35);
             	    lv_features_6_0=ruleConnectableElementFeature();
 
             	    state._fsp--;
@@ -5918,39 +6059,39 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop32;
+            	    break loop34;
                 }
             } while (true);
 
-            // InternalXdiagramDsl.g:2221:3: (otherlv_7= 'child' ( (lv_children_8_0= ruleChildElement ) ) )*
-            loop33:
+            // InternalXdiagramDsl.g:2273:3: (otherlv_7= 'child' ( (lv_children_8_0= ruleChildElement ) ) )*
+            loop35:
             do {
-                int alt33=2;
-                int LA33_0 = input.LA(1);
+                int alt35=2;
+                int LA35_0 = input.LA(1);
 
-                if ( (LA33_0==34) ) {
-                    alt33=1;
+                if ( (LA35_0==34) ) {
+                    alt35=1;
                 }
 
 
-                switch (alt33) {
+                switch (alt35) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:2222:4: otherlv_7= 'child' ( (lv_children_8_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:2274:4: otherlv_7= 'child' ( (lv_children_8_0= ruleChildElement ) )
             	    {
-            	    otherlv_7=(Token)match(input,34,FOLLOW_24); 
+            	    otherlv_7=(Token)match(input,34,FOLLOW_25); 
 
             	    				newLeafNode(otherlv_7, grammarAccess.getPolylineAccess().getChildKeyword_6_0());
             	    			
-            	    // InternalXdiagramDsl.g:2226:4: ( (lv_children_8_0= ruleChildElement ) )
-            	    // InternalXdiagramDsl.g:2227:5: (lv_children_8_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:2278:4: ( (lv_children_8_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:2279:5: (lv_children_8_0= ruleChildElement )
             	    {
-            	    // InternalXdiagramDsl.g:2227:5: (lv_children_8_0= ruleChildElement )
-            	    // InternalXdiagramDsl.g:2228:6: lv_children_8_0= ruleChildElement
+            	    // InternalXdiagramDsl.g:2279:5: (lv_children_8_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:2280:6: lv_children_8_0= ruleChildElement
             	    {
 
             	    						newCompositeNode(grammarAccess.getPolylineAccess().getChildrenChildElementParserRuleCall_6_1_0());
             	    					
-            	    pushFollow(FOLLOW_31);
+            	    pushFollow(FOLLOW_33);
             	    lv_children_8_0=ruleChildElement();
 
             	    state._fsp--;
@@ -5977,7 +6118,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop33;
+            	    break loop35;
                 }
             } while (true);
 
@@ -6008,7 +6149,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTriangle"
-    // InternalXdiagramDsl.g:2254:1: entryRuleTriangle returns [EObject current=null] : iv_ruleTriangle= ruleTriangle EOF ;
+    // InternalXdiagramDsl.g:2306:1: entryRuleTriangle returns [EObject current=null] : iv_ruleTriangle= ruleTriangle EOF ;
     public final EObject entryRuleTriangle() throws RecognitionException {
         EObject current = null;
 
@@ -6016,8 +6157,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:2254:49: (iv_ruleTriangle= ruleTriangle EOF )
-            // InternalXdiagramDsl.g:2255:2: iv_ruleTriangle= ruleTriangle EOF
+            // InternalXdiagramDsl.g:2306:49: (iv_ruleTriangle= ruleTriangle EOF )
+            // InternalXdiagramDsl.g:2307:2: iv_ruleTriangle= ruleTriangle EOF
             {
              newCompositeNode(grammarAccess.getTriangleRule()); 
             pushFollow(FOLLOW_1);
@@ -6044,7 +6185,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTriangle"
-    // InternalXdiagramDsl.g:2261:1: ruleTriangle returns [EObject current=null] : ( () otherlv_1= 'triangle' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) ;
+    // InternalXdiagramDsl.g:2313:1: ruleTriangle returns [EObject current=null] : ( () otherlv_1= 'triangle' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) ;
     public final EObject ruleTriangle() throws RecognitionException {
         EObject current = null;
 
@@ -6061,14 +6202,14 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:2267:2: ( ( () otherlv_1= 'triangle' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) )
-            // InternalXdiagramDsl.g:2268:2: ( () otherlv_1= 'triangle' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
+            // InternalXdiagramDsl.g:2319:2: ( ( () otherlv_1= 'triangle' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) )
+            // InternalXdiagramDsl.g:2320:2: ( () otherlv_1= 'triangle' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
             {
-            // InternalXdiagramDsl.g:2268:2: ( () otherlv_1= 'triangle' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
-            // InternalXdiagramDsl.g:2269:3: () otherlv_1= 'triangle' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}'
+            // InternalXdiagramDsl.g:2320:2: ( () otherlv_1= 'triangle' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
+            // InternalXdiagramDsl.g:2321:3: () otherlv_1= 'triangle' otherlv_2= '{' ( (lv_features_3_0= ruleConnectableElementFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}'
             {
-            // InternalXdiagramDsl.g:2269:3: ()
-            // InternalXdiagramDsl.g:2270:4: 
+            // InternalXdiagramDsl.g:2321:3: ()
+            // InternalXdiagramDsl.g:2322:4: 
             {
 
             				current = forceCreateModelElement(
@@ -6078,36 +6219,36 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,42,FOLLOW_5); 
+            otherlv_1=(Token)match(input,42,FOLLOW_6); 
 
             			newLeafNode(otherlv_1, grammarAccess.getTriangleAccess().getTriangleKeyword_1());
             		
-            otherlv_2=(Token)match(input,12,FOLLOW_33); 
+            otherlv_2=(Token)match(input,12,FOLLOW_35); 
 
             			newLeafNode(otherlv_2, grammarAccess.getTriangleAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalXdiagramDsl.g:2284:3: ( (lv_features_3_0= ruleConnectableElementFeature ) )*
-            loop34:
+            // InternalXdiagramDsl.g:2336:3: ( (lv_features_3_0= ruleConnectableElementFeature ) )*
+            loop36:
             do {
-                int alt34=2;
-                int LA34_0 = input.LA(1);
+                int alt36=2;
+                int LA36_0 = input.LA(1);
 
-                if ( (LA34_0==28||LA34_0==46||(LA34_0>=50 && LA34_0<=54)||LA34_0==58||LA34_0==60||LA34_0==74||LA34_0==76) ) {
-                    alt34=1;
+                if ( (LA36_0==28||LA36_0==46||(LA36_0>=50 && LA36_0<=54)||LA36_0==58||LA36_0==60||LA36_0==74||LA36_0==76) ) {
+                    alt36=1;
                 }
 
 
-                switch (alt34) {
+                switch (alt36) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:2285:4: (lv_features_3_0= ruleConnectableElementFeature )
+            	    // InternalXdiagramDsl.g:2337:4: (lv_features_3_0= ruleConnectableElementFeature )
             	    {
-            	    // InternalXdiagramDsl.g:2285:4: (lv_features_3_0= ruleConnectableElementFeature )
-            	    // InternalXdiagramDsl.g:2286:5: lv_features_3_0= ruleConnectableElementFeature
+            	    // InternalXdiagramDsl.g:2337:4: (lv_features_3_0= ruleConnectableElementFeature )
+            	    // InternalXdiagramDsl.g:2338:5: lv_features_3_0= ruleConnectableElementFeature
             	    {
 
             	    					newCompositeNode(grammarAccess.getTriangleAccess().getFeaturesConnectableElementFeatureParserRuleCall_3_0());
             	    				
-            	    pushFollow(FOLLOW_33);
+            	    pushFollow(FOLLOW_35);
             	    lv_features_3_0=ruleConnectableElementFeature();
 
             	    state._fsp--;
@@ -6131,39 +6272,39 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop34;
+            	    break loop36;
                 }
             } while (true);
 
-            // InternalXdiagramDsl.g:2303:3: (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )*
-            loop35:
+            // InternalXdiagramDsl.g:2355:3: (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )*
+            loop37:
             do {
-                int alt35=2;
-                int LA35_0 = input.LA(1);
+                int alt37=2;
+                int LA37_0 = input.LA(1);
 
-                if ( (LA35_0==34) ) {
-                    alt35=1;
+                if ( (LA37_0==34) ) {
+                    alt37=1;
                 }
 
 
-                switch (alt35) {
+                switch (alt37) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:2304:4: otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:2356:4: otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) )
             	    {
-            	    otherlv_4=(Token)match(input,34,FOLLOW_24); 
+            	    otherlv_4=(Token)match(input,34,FOLLOW_25); 
 
             	    				newLeafNode(otherlv_4, grammarAccess.getTriangleAccess().getChildKeyword_4_0());
             	    			
-            	    // InternalXdiagramDsl.g:2308:4: ( (lv_children_5_0= ruleChildElement ) )
-            	    // InternalXdiagramDsl.g:2309:5: (lv_children_5_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:2360:4: ( (lv_children_5_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:2361:5: (lv_children_5_0= ruleChildElement )
             	    {
-            	    // InternalXdiagramDsl.g:2309:5: (lv_children_5_0= ruleChildElement )
-            	    // InternalXdiagramDsl.g:2310:6: lv_children_5_0= ruleChildElement
+            	    // InternalXdiagramDsl.g:2361:5: (lv_children_5_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:2362:6: lv_children_5_0= ruleChildElement
             	    {
 
             	    						newCompositeNode(grammarAccess.getTriangleAccess().getChildrenChildElementParserRuleCall_4_1_0());
             	    					
-            	    pushFollow(FOLLOW_31);
+            	    pushFollow(FOLLOW_33);
             	    lv_children_5_0=ruleChildElement();
 
             	    state._fsp--;
@@ -6190,7 +6331,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop35;
+            	    break loop37;
                 }
             } while (true);
 
@@ -6221,7 +6362,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLine"
-    // InternalXdiagramDsl.g:2336:1: entryRuleLine returns [EObject current=null] : iv_ruleLine= ruleLine EOF ;
+    // InternalXdiagramDsl.g:2388:1: entryRuleLine returns [EObject current=null] : iv_ruleLine= ruleLine EOF ;
     public final EObject entryRuleLine() throws RecognitionException {
         EObject current = null;
 
@@ -6229,8 +6370,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:2336:45: (iv_ruleLine= ruleLine EOF )
-            // InternalXdiagramDsl.g:2337:2: iv_ruleLine= ruleLine EOF
+            // InternalXdiagramDsl.g:2388:45: (iv_ruleLine= ruleLine EOF )
+            // InternalXdiagramDsl.g:2389:2: iv_ruleLine= ruleLine EOF
             {
              newCompositeNode(grammarAccess.getLineRule()); 
             pushFollow(FOLLOW_1);
@@ -6257,7 +6398,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLine"
-    // InternalXdiagramDsl.g:2343:1: ruleLine returns [EObject current=null] : ( () ( ( (lv_horizontal_1_0= 'hline' ) ) | ( (lv_vertical_2_0= 'vline' ) ) ) otherlv_3= '{' ( (lv_features_4_0= ruleLineFeature ) )* otherlv_5= '}' ) ;
+    // InternalXdiagramDsl.g:2395:1: ruleLine returns [EObject current=null] : ( () ( ( (lv_horizontal_1_0= 'hline' ) ) | ( (lv_vertical_2_0= 'vline' ) ) ) otherlv_3= '{' ( (lv_features_4_0= ruleLineFeature ) )* otherlv_5= '}' ) ;
     public final EObject ruleLine() throws RecognitionException {
         EObject current = null;
 
@@ -6272,14 +6413,14 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:2349:2: ( ( () ( ( (lv_horizontal_1_0= 'hline' ) ) | ( (lv_vertical_2_0= 'vline' ) ) ) otherlv_3= '{' ( (lv_features_4_0= ruleLineFeature ) )* otherlv_5= '}' ) )
-            // InternalXdiagramDsl.g:2350:2: ( () ( ( (lv_horizontal_1_0= 'hline' ) ) | ( (lv_vertical_2_0= 'vline' ) ) ) otherlv_3= '{' ( (lv_features_4_0= ruleLineFeature ) )* otherlv_5= '}' )
+            // InternalXdiagramDsl.g:2401:2: ( ( () ( ( (lv_horizontal_1_0= 'hline' ) ) | ( (lv_vertical_2_0= 'vline' ) ) ) otherlv_3= '{' ( (lv_features_4_0= ruleLineFeature ) )* otherlv_5= '}' ) )
+            // InternalXdiagramDsl.g:2402:2: ( () ( ( (lv_horizontal_1_0= 'hline' ) ) | ( (lv_vertical_2_0= 'vline' ) ) ) otherlv_3= '{' ( (lv_features_4_0= ruleLineFeature ) )* otherlv_5= '}' )
             {
-            // InternalXdiagramDsl.g:2350:2: ( () ( ( (lv_horizontal_1_0= 'hline' ) ) | ( (lv_vertical_2_0= 'vline' ) ) ) otherlv_3= '{' ( (lv_features_4_0= ruleLineFeature ) )* otherlv_5= '}' )
-            // InternalXdiagramDsl.g:2351:3: () ( ( (lv_horizontal_1_0= 'hline' ) ) | ( (lv_vertical_2_0= 'vline' ) ) ) otherlv_3= '{' ( (lv_features_4_0= ruleLineFeature ) )* otherlv_5= '}'
+            // InternalXdiagramDsl.g:2402:2: ( () ( ( (lv_horizontal_1_0= 'hline' ) ) | ( (lv_vertical_2_0= 'vline' ) ) ) otherlv_3= '{' ( (lv_features_4_0= ruleLineFeature ) )* otherlv_5= '}' )
+            // InternalXdiagramDsl.g:2403:3: () ( ( (lv_horizontal_1_0= 'hline' ) ) | ( (lv_vertical_2_0= 'vline' ) ) ) otherlv_3= '{' ( (lv_features_4_0= ruleLineFeature ) )* otherlv_5= '}'
             {
-            // InternalXdiagramDsl.g:2351:3: ()
-            // InternalXdiagramDsl.g:2352:4: 
+            // InternalXdiagramDsl.g:2403:3: ()
+            // InternalXdiagramDsl.g:2404:4: 
             {
 
             				current = forceCreateModelElement(
@@ -6289,33 +6430,33 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:2358:3: ( ( (lv_horizontal_1_0= 'hline' ) ) | ( (lv_vertical_2_0= 'vline' ) ) )
-            int alt36=2;
-            int LA36_0 = input.LA(1);
+            // InternalXdiagramDsl.g:2410:3: ( ( (lv_horizontal_1_0= 'hline' ) ) | ( (lv_vertical_2_0= 'vline' ) ) )
+            int alt38=2;
+            int LA38_0 = input.LA(1);
 
-            if ( (LA36_0==43) ) {
-                alt36=1;
+            if ( (LA38_0==43) ) {
+                alt38=1;
             }
-            else if ( (LA36_0==44) ) {
-                alt36=2;
+            else if ( (LA38_0==44) ) {
+                alt38=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 36, 0, input);
+                    new NoViableAltException("", 38, 0, input);
 
                 throw nvae;
             }
-            switch (alt36) {
+            switch (alt38) {
                 case 1 :
-                    // InternalXdiagramDsl.g:2359:4: ( (lv_horizontal_1_0= 'hline' ) )
+                    // InternalXdiagramDsl.g:2411:4: ( (lv_horizontal_1_0= 'hline' ) )
                     {
-                    // InternalXdiagramDsl.g:2359:4: ( (lv_horizontal_1_0= 'hline' ) )
-                    // InternalXdiagramDsl.g:2360:5: (lv_horizontal_1_0= 'hline' )
+                    // InternalXdiagramDsl.g:2411:4: ( (lv_horizontal_1_0= 'hline' ) )
+                    // InternalXdiagramDsl.g:2412:5: (lv_horizontal_1_0= 'hline' )
                     {
-                    // InternalXdiagramDsl.g:2360:5: (lv_horizontal_1_0= 'hline' )
-                    // InternalXdiagramDsl.g:2361:6: lv_horizontal_1_0= 'hline'
+                    // InternalXdiagramDsl.g:2412:5: (lv_horizontal_1_0= 'hline' )
+                    // InternalXdiagramDsl.g:2413:6: lv_horizontal_1_0= 'hline'
                     {
-                    lv_horizontal_1_0=(Token)match(input,43,FOLLOW_5); 
+                    lv_horizontal_1_0=(Token)match(input,43,FOLLOW_6); 
 
                     						newLeafNode(lv_horizontal_1_0, grammarAccess.getLineAccess().getHorizontalHlineKeyword_1_0_0());
                     					
@@ -6335,15 +6476,15 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:2374:4: ( (lv_vertical_2_0= 'vline' ) )
+                    // InternalXdiagramDsl.g:2426:4: ( (lv_vertical_2_0= 'vline' ) )
                     {
-                    // InternalXdiagramDsl.g:2374:4: ( (lv_vertical_2_0= 'vline' ) )
-                    // InternalXdiagramDsl.g:2375:5: (lv_vertical_2_0= 'vline' )
+                    // InternalXdiagramDsl.g:2426:4: ( (lv_vertical_2_0= 'vline' ) )
+                    // InternalXdiagramDsl.g:2427:5: (lv_vertical_2_0= 'vline' )
                     {
-                    // InternalXdiagramDsl.g:2375:5: (lv_vertical_2_0= 'vline' )
-                    // InternalXdiagramDsl.g:2376:6: lv_vertical_2_0= 'vline'
+                    // InternalXdiagramDsl.g:2427:5: (lv_vertical_2_0= 'vline' )
+                    // InternalXdiagramDsl.g:2428:6: lv_vertical_2_0= 'vline'
                     {
-                    lv_vertical_2_0=(Token)match(input,44,FOLLOW_5); 
+                    lv_vertical_2_0=(Token)match(input,44,FOLLOW_6); 
 
                     						newLeafNode(lv_vertical_2_0, grammarAccess.getLineAccess().getVerticalVlineKeyword_1_1_0());
                     					
@@ -6365,32 +6506,32 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FOLLOW_36); 
+            otherlv_3=(Token)match(input,12,FOLLOW_38); 
 
             			newLeafNode(otherlv_3, grammarAccess.getLineAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalXdiagramDsl.g:2393:3: ( (lv_features_4_0= ruleLineFeature ) )*
-            loop37:
+            // InternalXdiagramDsl.g:2445:3: ( (lv_features_4_0= ruleLineFeature ) )*
+            loop39:
             do {
-                int alt37=2;
-                int LA37_0 = input.LA(1);
+                int alt39=2;
+                int LA39_0 = input.LA(1);
 
-                if ( ((LA37_0>=50 && LA37_0<=51)||LA37_0==54||LA37_0==58||LA37_0==74||LA37_0==76) ) {
-                    alt37=1;
+                if ( ((LA39_0>=50 && LA39_0<=51)||LA39_0==54||LA39_0==58||LA39_0==74||LA39_0==76) ) {
+                    alt39=1;
                 }
 
 
-                switch (alt37) {
+                switch (alt39) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:2394:4: (lv_features_4_0= ruleLineFeature )
+            	    // InternalXdiagramDsl.g:2446:4: (lv_features_4_0= ruleLineFeature )
             	    {
-            	    // InternalXdiagramDsl.g:2394:4: (lv_features_4_0= ruleLineFeature )
-            	    // InternalXdiagramDsl.g:2395:5: lv_features_4_0= ruleLineFeature
+            	    // InternalXdiagramDsl.g:2446:4: (lv_features_4_0= ruleLineFeature )
+            	    // InternalXdiagramDsl.g:2447:5: lv_features_4_0= ruleLineFeature
             	    {
 
             	    					newCompositeNode(grammarAccess.getLineAccess().getFeaturesLineFeatureParserRuleCall_3_0());
             	    				
-            	    pushFollow(FOLLOW_36);
+            	    pushFollow(FOLLOW_38);
             	    lv_features_4_0=ruleLineFeature();
 
             	    state._fsp--;
@@ -6414,7 +6555,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop37;
+            	    break loop39;
                 }
             } while (true);
 
@@ -6445,7 +6586,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLineFeature"
-    // InternalXdiagramDsl.g:2420:1: entryRuleLineFeature returns [EObject current=null] : iv_ruleLineFeature= ruleLineFeature EOF ;
+    // InternalXdiagramDsl.g:2472:1: entryRuleLineFeature returns [EObject current=null] : iv_ruleLineFeature= ruleLineFeature EOF ;
     public final EObject entryRuleLineFeature() throws RecognitionException {
         EObject current = null;
 
@@ -6453,8 +6594,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:2420:52: (iv_ruleLineFeature= ruleLineFeature EOF )
-            // InternalXdiagramDsl.g:2421:2: iv_ruleLineFeature= ruleLineFeature EOF
+            // InternalXdiagramDsl.g:2472:52: (iv_ruleLineFeature= ruleLineFeature EOF )
+            // InternalXdiagramDsl.g:2473:2: iv_ruleLineFeature= ruleLineFeature EOF
             {
              newCompositeNode(grammarAccess.getLineFeatureRule()); 
             pushFollow(FOLLOW_1);
@@ -6481,7 +6622,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLineFeature"
-    // InternalXdiagramDsl.g:2427:1: ruleLineFeature returns [EObject current=null] : (this_LineWidth_0= ruleLineWidth | this_LineStyle_1= ruleLineStyle | this_Foreground_2= ruleForeground | this_Position_3= rulePosition | this_Size_4= ruleSize | this_Visible_5= ruleVisible ) ;
+    // InternalXdiagramDsl.g:2479:1: ruleLineFeature returns [EObject current=null] : (this_LineWidth_0= ruleLineWidth | this_LineStyle_1= ruleLineStyle | this_Foreground_2= ruleForeground | this_Position_3= rulePosition | this_Size_4= ruleSize | this_Visible_5= ruleVisible ) ;
     public final EObject ruleLineFeature() throws RecognitionException {
         EObject current = null;
 
@@ -6502,52 +6643,52 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:2433:2: ( (this_LineWidth_0= ruleLineWidth | this_LineStyle_1= ruleLineStyle | this_Foreground_2= ruleForeground | this_Position_3= rulePosition | this_Size_4= ruleSize | this_Visible_5= ruleVisible ) )
-            // InternalXdiagramDsl.g:2434:2: (this_LineWidth_0= ruleLineWidth | this_LineStyle_1= ruleLineStyle | this_Foreground_2= ruleForeground | this_Position_3= rulePosition | this_Size_4= ruleSize | this_Visible_5= ruleVisible )
+            // InternalXdiagramDsl.g:2485:2: ( (this_LineWidth_0= ruleLineWidth | this_LineStyle_1= ruleLineStyle | this_Foreground_2= ruleForeground | this_Position_3= rulePosition | this_Size_4= ruleSize | this_Visible_5= ruleVisible ) )
+            // InternalXdiagramDsl.g:2486:2: (this_LineWidth_0= ruleLineWidth | this_LineStyle_1= ruleLineStyle | this_Foreground_2= ruleForeground | this_Position_3= rulePosition | this_Size_4= ruleSize | this_Visible_5= ruleVisible )
             {
-            // InternalXdiagramDsl.g:2434:2: (this_LineWidth_0= ruleLineWidth | this_LineStyle_1= ruleLineStyle | this_Foreground_2= ruleForeground | this_Position_3= rulePosition | this_Size_4= ruleSize | this_Visible_5= ruleVisible )
-            int alt38=6;
+            // InternalXdiagramDsl.g:2486:2: (this_LineWidth_0= ruleLineWidth | this_LineStyle_1= ruleLineStyle | this_Foreground_2= ruleForeground | this_Position_3= rulePosition | this_Size_4= ruleSize | this_Visible_5= ruleVisible )
+            int alt40=6;
             switch ( input.LA(1) ) {
             case 76:
                 {
-                alt38=1;
+                alt40=1;
                 }
                 break;
             case 74:
                 {
-                alt38=2;
+                alt40=2;
                 }
                 break;
             case 51:
                 {
-                alt38=3;
+                alt40=3;
                 }
                 break;
             case 58:
                 {
-                alt38=4;
+                alt40=4;
                 }
                 break;
             case 54:
                 {
-                alt38=5;
+                alt40=5;
                 }
                 break;
             case 50:
                 {
-                alt38=6;
+                alt40=6;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 38, 0, input);
+                    new NoViableAltException("", 40, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt38) {
+            switch (alt40) {
                 case 1 :
-                    // InternalXdiagramDsl.g:2435:3: this_LineWidth_0= ruleLineWidth
+                    // InternalXdiagramDsl.g:2487:3: this_LineWidth_0= ruleLineWidth
                     {
 
                     			newCompositeNode(grammarAccess.getLineFeatureAccess().getLineWidthParserRuleCall_0());
@@ -6565,7 +6706,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:2444:3: this_LineStyle_1= ruleLineStyle
+                    // InternalXdiagramDsl.g:2496:3: this_LineStyle_1= ruleLineStyle
                     {
 
                     			newCompositeNode(grammarAccess.getLineFeatureAccess().getLineStyleParserRuleCall_1());
@@ -6583,7 +6724,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalXdiagramDsl.g:2453:3: this_Foreground_2= ruleForeground
+                    // InternalXdiagramDsl.g:2505:3: this_Foreground_2= ruleForeground
                     {
 
                     			newCompositeNode(grammarAccess.getLineFeatureAccess().getForegroundParserRuleCall_2());
@@ -6601,7 +6742,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalXdiagramDsl.g:2462:3: this_Position_3= rulePosition
+                    // InternalXdiagramDsl.g:2514:3: this_Position_3= rulePosition
                     {
 
                     			newCompositeNode(grammarAccess.getLineFeatureAccess().getPositionParserRuleCall_3());
@@ -6619,7 +6760,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalXdiagramDsl.g:2471:3: this_Size_4= ruleSize
+                    // InternalXdiagramDsl.g:2523:3: this_Size_4= ruleSize
                     {
 
                     			newCompositeNode(grammarAccess.getLineFeatureAccess().getSizeParserRuleCall_4());
@@ -6637,7 +6778,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalXdiagramDsl.g:2480:3: this_Visible_5= ruleVisible
+                    // InternalXdiagramDsl.g:2532:3: this_Visible_5= ruleVisible
                     {
 
                     			newCompositeNode(grammarAccess.getLineFeatureAccess().getVisibleParserRuleCall_5());
@@ -6677,7 +6818,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleArrow"
-    // InternalXdiagramDsl.g:2492:1: entryRuleArrow returns [EObject current=null] : iv_ruleArrow= ruleArrow EOF ;
+    // InternalXdiagramDsl.g:2544:1: entryRuleArrow returns [EObject current=null] : iv_ruleArrow= ruleArrow EOF ;
     public final EObject entryRuleArrow() throws RecognitionException {
         EObject current = null;
 
@@ -6685,8 +6826,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:2492:46: (iv_ruleArrow= ruleArrow EOF )
-            // InternalXdiagramDsl.g:2493:2: iv_ruleArrow= ruleArrow EOF
+            // InternalXdiagramDsl.g:2544:46: (iv_ruleArrow= ruleArrow EOF )
+            // InternalXdiagramDsl.g:2545:2: iv_ruleArrow= ruleArrow EOF
             {
              newCompositeNode(grammarAccess.getArrowRule()); 
             pushFollow(FOLLOW_1);
@@ -6713,7 +6854,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleArrow"
-    // InternalXdiagramDsl.g:2499:1: ruleArrow returns [EObject current=null] : ( () otherlv_1= 'arrow' otherlv_2= '{' ( (lv_features_3_0= ruleLineFeature ) )* otherlv_4= '}' ) ;
+    // InternalXdiagramDsl.g:2551:1: ruleArrow returns [EObject current=null] : ( () otherlv_1= 'arrow' otherlv_2= '{' ( (lv_features_3_0= ruleLineFeature ) )* otherlv_4= '}' ) ;
     public final EObject ruleArrow() throws RecognitionException {
         EObject current = null;
 
@@ -6727,14 +6868,14 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:2505:2: ( ( () otherlv_1= 'arrow' otherlv_2= '{' ( (lv_features_3_0= ruleLineFeature ) )* otherlv_4= '}' ) )
-            // InternalXdiagramDsl.g:2506:2: ( () otherlv_1= 'arrow' otherlv_2= '{' ( (lv_features_3_0= ruleLineFeature ) )* otherlv_4= '}' )
+            // InternalXdiagramDsl.g:2557:2: ( ( () otherlv_1= 'arrow' otherlv_2= '{' ( (lv_features_3_0= ruleLineFeature ) )* otherlv_4= '}' ) )
+            // InternalXdiagramDsl.g:2558:2: ( () otherlv_1= 'arrow' otherlv_2= '{' ( (lv_features_3_0= ruleLineFeature ) )* otherlv_4= '}' )
             {
-            // InternalXdiagramDsl.g:2506:2: ( () otherlv_1= 'arrow' otherlv_2= '{' ( (lv_features_3_0= ruleLineFeature ) )* otherlv_4= '}' )
-            // InternalXdiagramDsl.g:2507:3: () otherlv_1= 'arrow' otherlv_2= '{' ( (lv_features_3_0= ruleLineFeature ) )* otherlv_4= '}'
+            // InternalXdiagramDsl.g:2558:2: ( () otherlv_1= 'arrow' otherlv_2= '{' ( (lv_features_3_0= ruleLineFeature ) )* otherlv_4= '}' )
+            // InternalXdiagramDsl.g:2559:3: () otherlv_1= 'arrow' otherlv_2= '{' ( (lv_features_3_0= ruleLineFeature ) )* otherlv_4= '}'
             {
-            // InternalXdiagramDsl.g:2507:3: ()
-            // InternalXdiagramDsl.g:2508:4: 
+            // InternalXdiagramDsl.g:2559:3: ()
+            // InternalXdiagramDsl.g:2560:4: 
             {
 
             				current = forceCreateModelElement(
@@ -6744,36 +6885,36 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,45,FOLLOW_5); 
+            otherlv_1=(Token)match(input,45,FOLLOW_6); 
 
             			newLeafNode(otherlv_1, grammarAccess.getArrowAccess().getArrowKeyword_1());
             		
-            otherlv_2=(Token)match(input,12,FOLLOW_36); 
+            otherlv_2=(Token)match(input,12,FOLLOW_38); 
 
             			newLeafNode(otherlv_2, grammarAccess.getArrowAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalXdiagramDsl.g:2522:3: ( (lv_features_3_0= ruleLineFeature ) )*
-            loop39:
+            // InternalXdiagramDsl.g:2574:3: ( (lv_features_3_0= ruleLineFeature ) )*
+            loop41:
             do {
-                int alt39=2;
-                int LA39_0 = input.LA(1);
+                int alt41=2;
+                int LA41_0 = input.LA(1);
 
-                if ( ((LA39_0>=50 && LA39_0<=51)||LA39_0==54||LA39_0==58||LA39_0==74||LA39_0==76) ) {
-                    alt39=1;
+                if ( ((LA41_0>=50 && LA41_0<=51)||LA41_0==54||LA41_0==58||LA41_0==74||LA41_0==76) ) {
+                    alt41=1;
                 }
 
 
-                switch (alt39) {
+                switch (alt41) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:2523:4: (lv_features_3_0= ruleLineFeature )
+            	    // InternalXdiagramDsl.g:2575:4: (lv_features_3_0= ruleLineFeature )
             	    {
-            	    // InternalXdiagramDsl.g:2523:4: (lv_features_3_0= ruleLineFeature )
-            	    // InternalXdiagramDsl.g:2524:5: lv_features_3_0= ruleLineFeature
+            	    // InternalXdiagramDsl.g:2575:4: (lv_features_3_0= ruleLineFeature )
+            	    // InternalXdiagramDsl.g:2576:5: lv_features_3_0= ruleLineFeature
             	    {
 
             	    					newCompositeNode(grammarAccess.getArrowAccess().getFeaturesLineFeatureParserRuleCall_3_0());
             	    				
-            	    pushFollow(FOLLOW_36);
+            	    pushFollow(FOLLOW_38);
             	    lv_features_3_0=ruleLineFeature();
 
             	    state._fsp--;
@@ -6797,7 +6938,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop39;
+            	    break loop41;
                 }
             } while (true);
 
@@ -6828,7 +6969,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContains"
-    // InternalXdiagramDsl.g:2549:1: entryRuleContains returns [EObject current=null] : iv_ruleContains= ruleContains EOF ;
+    // InternalXdiagramDsl.g:2601:1: entryRuleContains returns [EObject current=null] : iv_ruleContains= ruleContains EOF ;
     public final EObject entryRuleContains() throws RecognitionException {
         EObject current = null;
 
@@ -6836,8 +6977,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:2549:49: (iv_ruleContains= ruleContains EOF )
-            // InternalXdiagramDsl.g:2550:2: iv_ruleContains= ruleContains EOF
+            // InternalXdiagramDsl.g:2601:49: (iv_ruleContains= ruleContains EOF )
+            // InternalXdiagramDsl.g:2602:2: iv_ruleContains= ruleContains EOF
             {
              newCompositeNode(grammarAccess.getContainsRule()); 
             pushFollow(FOLLOW_1);
@@ -6864,7 +7005,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContains"
-    // InternalXdiagramDsl.g:2556:1: ruleContains returns [EObject current=null] : (otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
+    // InternalXdiagramDsl.g:2608:1: ruleContains returns [EObject current=null] : (otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
     public final EObject ruleContains() throws RecognitionException {
         EObject current = null;
 
@@ -6877,21 +7018,21 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:2562:2: ( (otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
-            // InternalXdiagramDsl.g:2563:2: (otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // InternalXdiagramDsl.g:2614:2: ( (otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
+            // InternalXdiagramDsl.g:2615:2: (otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
             {
-            // InternalXdiagramDsl.g:2563:2: (otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
-            // InternalXdiagramDsl.g:2564:3: otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
+            // InternalXdiagramDsl.g:2615:2: (otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // InternalXdiagramDsl.g:2616:3: otherlv_0= 'contains' ( ( ruleQualifiedName ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
             {
-            otherlv_0=(Token)match(input,46,FOLLOW_11); 
+            otherlv_0=(Token)match(input,46,FOLLOW_12); 
 
             			newLeafNode(otherlv_0, grammarAccess.getContainsAccess().getContainsKeyword_0());
             		
-            // InternalXdiagramDsl.g:2568:3: ( ( ruleQualifiedName ) )
-            // InternalXdiagramDsl.g:2569:4: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:2620:3: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:2621:4: ( ruleQualifiedName )
             {
-            // InternalXdiagramDsl.g:2569:4: ( ruleQualifiedName )
-            // InternalXdiagramDsl.g:2570:5: ruleQualifiedName
+            // InternalXdiagramDsl.g:2621:4: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:2622:5: ruleQualifiedName
             {
 
             					if (current==null) {
@@ -6901,7 +7042,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getContainsAccess().getModelReferenceEReferenceCrossReference_1_0());
             				
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_28);
             ruleQualifiedName();
 
             state._fsp--;
@@ -6915,24 +7056,24 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:2584:3: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            // InternalXdiagramDsl.g:2636:3: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
+            int alt42=2;
+            int LA42_0 = input.LA(1);
 
-            if ( (LA40_0==19) ) {
-                alt40=1;
+            if ( (LA42_0==19) ) {
+                alt42=1;
             }
-            switch (alt40) {
+            switch (alt42) {
                 case 1 :
-                    // InternalXdiagramDsl.g:2585:4: (lv_conditional_2_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:2637:4: (lv_conditional_2_0= ruleFeatureConditional )
                     {
-                    // InternalXdiagramDsl.g:2585:4: (lv_conditional_2_0= ruleFeatureConditional )
-                    // InternalXdiagramDsl.g:2586:5: lv_conditional_2_0= ruleFeatureConditional
+                    // InternalXdiagramDsl.g:2637:4: (lv_conditional_2_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:2638:5: lv_conditional_2_0= ruleFeatureConditional
                     {
 
                     					newCompositeNode(grammarAccess.getContainsAccess().getConditionalFeatureConditionalParserRuleCall_2_0());
                     				
-                    pushFollow(FOLLOW_28);
+                    pushFollow(FOLLOW_29);
                     lv_conditional_2_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -6984,7 +7125,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleValue"
-    // InternalXdiagramDsl.g:2611:1: entryRuleValue returns [EObject current=null] : iv_ruleValue= ruleValue EOF ;
+    // InternalXdiagramDsl.g:2663:1: entryRuleValue returns [EObject current=null] : iv_ruleValue= ruleValue EOF ;
     public final EObject entryRuleValue() throws RecognitionException {
         EObject current = null;
 
@@ -6992,8 +7133,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:2611:46: (iv_ruleValue= ruleValue EOF )
-            // InternalXdiagramDsl.g:2612:2: iv_ruleValue= ruleValue EOF
+            // InternalXdiagramDsl.g:2663:46: (iv_ruleValue= ruleValue EOF )
+            // InternalXdiagramDsl.g:2664:2: iv_ruleValue= ruleValue EOF
             {
              newCompositeNode(grammarAccess.getValueRule()); 
             pushFollow(FOLLOW_1);
@@ -7020,7 +7161,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleValue"
-    // InternalXdiagramDsl.g:2618:1: ruleValue returns [EObject current=null] : (this_IntValue_0= ruleIntValue | this_DoubleValue_1= ruleDoubleValue | this_StringValue_2= ruleStringValue | this_BooleanValue_3= ruleBooleanValue | this_EnumValue_4= ruleEnumValue ) ;
+    // InternalXdiagramDsl.g:2670:1: ruleValue returns [EObject current=null] : (this_IntValue_0= ruleIntValue | this_DoubleValue_1= ruleDoubleValue | this_StringValue_2= ruleStringValue | this_BooleanValue_3= ruleBooleanValue | this_EnumValue_4= ruleEnumValue ) ;
     public final EObject ruleValue() throws RecognitionException {
         EObject current = null;
 
@@ -7039,25 +7180,25 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:2624:2: ( (this_IntValue_0= ruleIntValue | this_DoubleValue_1= ruleDoubleValue | this_StringValue_2= ruleStringValue | this_BooleanValue_3= ruleBooleanValue | this_EnumValue_4= ruleEnumValue ) )
-            // InternalXdiagramDsl.g:2625:2: (this_IntValue_0= ruleIntValue | this_DoubleValue_1= ruleDoubleValue | this_StringValue_2= ruleStringValue | this_BooleanValue_3= ruleBooleanValue | this_EnumValue_4= ruleEnumValue )
+            // InternalXdiagramDsl.g:2676:2: ( (this_IntValue_0= ruleIntValue | this_DoubleValue_1= ruleDoubleValue | this_StringValue_2= ruleStringValue | this_BooleanValue_3= ruleBooleanValue | this_EnumValue_4= ruleEnumValue ) )
+            // InternalXdiagramDsl.g:2677:2: (this_IntValue_0= ruleIntValue | this_DoubleValue_1= ruleDoubleValue | this_StringValue_2= ruleStringValue | this_BooleanValue_3= ruleBooleanValue | this_EnumValue_4= ruleEnumValue )
             {
-            // InternalXdiagramDsl.g:2625:2: (this_IntValue_0= ruleIntValue | this_DoubleValue_1= ruleDoubleValue | this_StringValue_2= ruleStringValue | this_BooleanValue_3= ruleBooleanValue | this_EnumValue_4= ruleEnumValue )
-            int alt41=5;
+            // InternalXdiagramDsl.g:2677:2: (this_IntValue_0= ruleIntValue | this_DoubleValue_1= ruleDoubleValue | this_StringValue_2= ruleStringValue | this_BooleanValue_3= ruleBooleanValue | this_EnumValue_4= ruleEnumValue )
+            int alt43=5;
             switch ( input.LA(1) ) {
             case RULE_INT:
                 {
-                int LA41_1 = input.LA(2);
+                int LA43_1 = input.LA(2);
 
-                if ( (LA41_1==16) ) {
-                    alt41=2;
+                if ( (LA43_1==16) ) {
+                    alt43=2;
                 }
-                else if ( (LA41_1==EOF||LA41_1==30) ) {
-                    alt41=1;
+                else if ( (LA43_1==EOF||LA43_1==30) ) {
+                    alt43=1;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 41, 1, input);
+                        new NoViableAltException("", 43, 1, input);
 
                     throw nvae;
                 }
@@ -7066,30 +7207,30 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             case RULE_STRING:
             case 47:
                 {
-                alt41=3;
+                alt43=3;
                 }
                 break;
             case 97:
             case 98:
                 {
-                alt41=4;
+                alt43=4;
                 }
                 break;
             case RULE_ID:
                 {
-                alt41=5;
+                alt43=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 41, 0, input);
+                    new NoViableAltException("", 43, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt41) {
+            switch (alt43) {
                 case 1 :
-                    // InternalXdiagramDsl.g:2626:3: this_IntValue_0= ruleIntValue
+                    // InternalXdiagramDsl.g:2678:3: this_IntValue_0= ruleIntValue
                     {
 
                     			newCompositeNode(grammarAccess.getValueAccess().getIntValueParserRuleCall_0());
@@ -7107,7 +7248,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:2635:3: this_DoubleValue_1= ruleDoubleValue
+                    // InternalXdiagramDsl.g:2687:3: this_DoubleValue_1= ruleDoubleValue
                     {
 
                     			newCompositeNode(grammarAccess.getValueAccess().getDoubleValueParserRuleCall_1());
@@ -7125,7 +7266,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalXdiagramDsl.g:2644:3: this_StringValue_2= ruleStringValue
+                    // InternalXdiagramDsl.g:2696:3: this_StringValue_2= ruleStringValue
                     {
 
                     			newCompositeNode(grammarAccess.getValueAccess().getStringValueParserRuleCall_2());
@@ -7143,7 +7284,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalXdiagramDsl.g:2653:3: this_BooleanValue_3= ruleBooleanValue
+                    // InternalXdiagramDsl.g:2705:3: this_BooleanValue_3= ruleBooleanValue
                     {
 
                     			newCompositeNode(grammarAccess.getValueAccess().getBooleanValueParserRuleCall_3());
@@ -7161,7 +7302,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalXdiagramDsl.g:2662:3: this_EnumValue_4= ruleEnumValue
+                    // InternalXdiagramDsl.g:2714:3: this_EnumValue_4= ruleEnumValue
                     {
 
                     			newCompositeNode(grammarAccess.getValueAccess().getEnumValueParserRuleCall_4());
@@ -7201,7 +7342,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIntValue"
-    // InternalXdiagramDsl.g:2674:1: entryRuleIntValue returns [EObject current=null] : iv_ruleIntValue= ruleIntValue EOF ;
+    // InternalXdiagramDsl.g:2726:1: entryRuleIntValue returns [EObject current=null] : iv_ruleIntValue= ruleIntValue EOF ;
     public final EObject entryRuleIntValue() throws RecognitionException {
         EObject current = null;
 
@@ -7209,8 +7350,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:2674:49: (iv_ruleIntValue= ruleIntValue EOF )
-            // InternalXdiagramDsl.g:2675:2: iv_ruleIntValue= ruleIntValue EOF
+            // InternalXdiagramDsl.g:2726:49: (iv_ruleIntValue= ruleIntValue EOF )
+            // InternalXdiagramDsl.g:2727:2: iv_ruleIntValue= ruleIntValue EOF
             {
              newCompositeNode(grammarAccess.getIntValueRule()); 
             pushFollow(FOLLOW_1);
@@ -7237,7 +7378,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIntValue"
-    // InternalXdiagramDsl.g:2681:1: ruleIntValue returns [EObject current=null] : ( (lv_value_0_0= RULE_INT ) ) ;
+    // InternalXdiagramDsl.g:2733:1: ruleIntValue returns [EObject current=null] : ( (lv_value_0_0= RULE_INT ) ) ;
     public final EObject ruleIntValue() throws RecognitionException {
         EObject current = null;
 
@@ -7247,14 +7388,14 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:2687:2: ( ( (lv_value_0_0= RULE_INT ) ) )
-            // InternalXdiagramDsl.g:2688:2: ( (lv_value_0_0= RULE_INT ) )
+            // InternalXdiagramDsl.g:2739:2: ( ( (lv_value_0_0= RULE_INT ) ) )
+            // InternalXdiagramDsl.g:2740:2: ( (lv_value_0_0= RULE_INT ) )
             {
-            // InternalXdiagramDsl.g:2688:2: ( (lv_value_0_0= RULE_INT ) )
-            // InternalXdiagramDsl.g:2689:3: (lv_value_0_0= RULE_INT )
+            // InternalXdiagramDsl.g:2740:2: ( (lv_value_0_0= RULE_INT ) )
+            // InternalXdiagramDsl.g:2741:3: (lv_value_0_0= RULE_INT )
             {
-            // InternalXdiagramDsl.g:2689:3: (lv_value_0_0= RULE_INT )
-            // InternalXdiagramDsl.g:2690:4: lv_value_0_0= RULE_INT
+            // InternalXdiagramDsl.g:2741:3: (lv_value_0_0= RULE_INT )
+            // InternalXdiagramDsl.g:2742:4: lv_value_0_0= RULE_INT
             {
             lv_value_0_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
@@ -7296,7 +7437,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDoubleValue"
-    // InternalXdiagramDsl.g:2709:1: entryRuleDoubleValue returns [EObject current=null] : iv_ruleDoubleValue= ruleDoubleValue EOF ;
+    // InternalXdiagramDsl.g:2761:1: entryRuleDoubleValue returns [EObject current=null] : iv_ruleDoubleValue= ruleDoubleValue EOF ;
     public final EObject entryRuleDoubleValue() throws RecognitionException {
         EObject current = null;
 
@@ -7304,8 +7445,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:2709:52: (iv_ruleDoubleValue= ruleDoubleValue EOF )
-            // InternalXdiagramDsl.g:2710:2: iv_ruleDoubleValue= ruleDoubleValue EOF
+            // InternalXdiagramDsl.g:2761:52: (iv_ruleDoubleValue= ruleDoubleValue EOF )
+            // InternalXdiagramDsl.g:2762:2: iv_ruleDoubleValue= ruleDoubleValue EOF
             {
              newCompositeNode(grammarAccess.getDoubleValueRule()); 
             pushFollow(FOLLOW_1);
@@ -7332,7 +7473,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDoubleValue"
-    // InternalXdiagramDsl.g:2716:1: ruleDoubleValue returns [EObject current=null] : ( ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) ) ) ;
+    // InternalXdiagramDsl.g:2768:1: ruleDoubleValue returns [EObject current=null] : ( ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) ) ) ;
     public final EObject ruleDoubleValue() throws RecognitionException {
         EObject current = null;
 
@@ -7344,19 +7485,19 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:2722:2: ( ( ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) ) ) )
-            // InternalXdiagramDsl.g:2723:2: ( ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) ) )
+            // InternalXdiagramDsl.g:2774:2: ( ( ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) ) ) )
+            // InternalXdiagramDsl.g:2775:2: ( ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) ) )
             {
-            // InternalXdiagramDsl.g:2723:2: ( ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) ) )
-            // InternalXdiagramDsl.g:2724:3: ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) )
+            // InternalXdiagramDsl.g:2775:2: ( ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) ) )
+            // InternalXdiagramDsl.g:2776:3: ( (lv_valueInt_0_0= RULE_INT ) ) otherlv_1= '.' ( (lv_valueDecimal_2_0= RULE_INT ) )
             {
-            // InternalXdiagramDsl.g:2724:3: ( (lv_valueInt_0_0= RULE_INT ) )
-            // InternalXdiagramDsl.g:2725:4: (lv_valueInt_0_0= RULE_INT )
+            // InternalXdiagramDsl.g:2776:3: ( (lv_valueInt_0_0= RULE_INT ) )
+            // InternalXdiagramDsl.g:2777:4: (lv_valueInt_0_0= RULE_INT )
             {
-            // InternalXdiagramDsl.g:2725:4: (lv_valueInt_0_0= RULE_INT )
-            // InternalXdiagramDsl.g:2726:5: lv_valueInt_0_0= RULE_INT
+            // InternalXdiagramDsl.g:2777:4: (lv_valueInt_0_0= RULE_INT )
+            // InternalXdiagramDsl.g:2778:5: lv_valueInt_0_0= RULE_INT
             {
-            lv_valueInt_0_0=(Token)match(input,RULE_INT,FOLLOW_37); 
+            lv_valueInt_0_0=(Token)match(input,RULE_INT,FOLLOW_39); 
 
             					newLeafNode(lv_valueInt_0_0, grammarAccess.getDoubleValueAccess().getValueIntINTTerminalRuleCall_0_0());
             				
@@ -7376,15 +7517,15 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,16,FOLLOW_22); 
+            otherlv_1=(Token)match(input,16,FOLLOW_23); 
 
             			newLeafNode(otherlv_1, grammarAccess.getDoubleValueAccess().getFullStopKeyword_1());
             		
-            // InternalXdiagramDsl.g:2746:3: ( (lv_valueDecimal_2_0= RULE_INT ) )
-            // InternalXdiagramDsl.g:2747:4: (lv_valueDecimal_2_0= RULE_INT )
+            // InternalXdiagramDsl.g:2798:3: ( (lv_valueDecimal_2_0= RULE_INT ) )
+            // InternalXdiagramDsl.g:2799:4: (lv_valueDecimal_2_0= RULE_INT )
             {
-            // InternalXdiagramDsl.g:2747:4: (lv_valueDecimal_2_0= RULE_INT )
-            // InternalXdiagramDsl.g:2748:5: lv_valueDecimal_2_0= RULE_INT
+            // InternalXdiagramDsl.g:2799:4: (lv_valueDecimal_2_0= RULE_INT )
+            // InternalXdiagramDsl.g:2800:5: lv_valueDecimal_2_0= RULE_INT
             {
             lv_valueDecimal_2_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
@@ -7429,7 +7570,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStringValue"
-    // InternalXdiagramDsl.g:2768:1: entryRuleStringValue returns [EObject current=null] : iv_ruleStringValue= ruleStringValue EOF ;
+    // InternalXdiagramDsl.g:2820:1: entryRuleStringValue returns [EObject current=null] : iv_ruleStringValue= ruleStringValue EOF ;
     public final EObject entryRuleStringValue() throws RecognitionException {
         EObject current = null;
 
@@ -7437,8 +7578,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:2768:52: (iv_ruleStringValue= ruleStringValue EOF )
-            // InternalXdiagramDsl.g:2769:2: iv_ruleStringValue= ruleStringValue EOF
+            // InternalXdiagramDsl.g:2820:52: (iv_ruleStringValue= ruleStringValue EOF )
+            // InternalXdiagramDsl.g:2821:2: iv_ruleStringValue= ruleStringValue EOF
             {
              newCompositeNode(grammarAccess.getStringValueRule()); 
             pushFollow(FOLLOW_1);
@@ -7465,7 +7606,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStringValue"
-    // InternalXdiagramDsl.g:2775:1: ruleStringValue returns [EObject current=null] : ( ( (lv_null_0_0= 'null' ) ) | ( (lv_value_1_0= RULE_STRING ) ) ) ;
+    // InternalXdiagramDsl.g:2827:1: ruleStringValue returns [EObject current=null] : ( ( (lv_null_0_0= 'null' ) ) | ( (lv_value_1_0= RULE_STRING ) ) ) ;
     public final EObject ruleStringValue() throws RecognitionException {
         EObject current = null;
 
@@ -7476,34 +7617,34 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:2781:2: ( ( ( (lv_null_0_0= 'null' ) ) | ( (lv_value_1_0= RULE_STRING ) ) ) )
-            // InternalXdiagramDsl.g:2782:2: ( ( (lv_null_0_0= 'null' ) ) | ( (lv_value_1_0= RULE_STRING ) ) )
+            // InternalXdiagramDsl.g:2833:2: ( ( ( (lv_null_0_0= 'null' ) ) | ( (lv_value_1_0= RULE_STRING ) ) ) )
+            // InternalXdiagramDsl.g:2834:2: ( ( (lv_null_0_0= 'null' ) ) | ( (lv_value_1_0= RULE_STRING ) ) )
             {
-            // InternalXdiagramDsl.g:2782:2: ( ( (lv_null_0_0= 'null' ) ) | ( (lv_value_1_0= RULE_STRING ) ) )
-            int alt42=2;
-            int LA42_0 = input.LA(1);
+            // InternalXdiagramDsl.g:2834:2: ( ( (lv_null_0_0= 'null' ) ) | ( (lv_value_1_0= RULE_STRING ) ) )
+            int alt44=2;
+            int LA44_0 = input.LA(1);
 
-            if ( (LA42_0==47) ) {
-                alt42=1;
+            if ( (LA44_0==47) ) {
+                alt44=1;
             }
-            else if ( (LA42_0==RULE_STRING) ) {
-                alt42=2;
+            else if ( (LA44_0==RULE_STRING) ) {
+                alt44=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 42, 0, input);
+                    new NoViableAltException("", 44, 0, input);
 
                 throw nvae;
             }
-            switch (alt42) {
+            switch (alt44) {
                 case 1 :
-                    // InternalXdiagramDsl.g:2783:3: ( (lv_null_0_0= 'null' ) )
+                    // InternalXdiagramDsl.g:2835:3: ( (lv_null_0_0= 'null' ) )
                     {
-                    // InternalXdiagramDsl.g:2783:3: ( (lv_null_0_0= 'null' ) )
-                    // InternalXdiagramDsl.g:2784:4: (lv_null_0_0= 'null' )
+                    // InternalXdiagramDsl.g:2835:3: ( (lv_null_0_0= 'null' ) )
+                    // InternalXdiagramDsl.g:2836:4: (lv_null_0_0= 'null' )
                     {
-                    // InternalXdiagramDsl.g:2784:4: (lv_null_0_0= 'null' )
-                    // InternalXdiagramDsl.g:2785:5: lv_null_0_0= 'null'
+                    // InternalXdiagramDsl.g:2836:4: (lv_null_0_0= 'null' )
+                    // InternalXdiagramDsl.g:2837:5: lv_null_0_0= 'null'
                     {
                     lv_null_0_0=(Token)match(input,47,FOLLOW_2); 
 
@@ -7525,13 +7666,13 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:2798:3: ( (lv_value_1_0= RULE_STRING ) )
+                    // InternalXdiagramDsl.g:2850:3: ( (lv_value_1_0= RULE_STRING ) )
                     {
-                    // InternalXdiagramDsl.g:2798:3: ( (lv_value_1_0= RULE_STRING ) )
-                    // InternalXdiagramDsl.g:2799:4: (lv_value_1_0= RULE_STRING )
+                    // InternalXdiagramDsl.g:2850:3: ( (lv_value_1_0= RULE_STRING ) )
+                    // InternalXdiagramDsl.g:2851:4: (lv_value_1_0= RULE_STRING )
                     {
-                    // InternalXdiagramDsl.g:2799:4: (lv_value_1_0= RULE_STRING )
-                    // InternalXdiagramDsl.g:2800:5: lv_value_1_0= RULE_STRING
+                    // InternalXdiagramDsl.g:2851:4: (lv_value_1_0= RULE_STRING )
+                    // InternalXdiagramDsl.g:2852:5: lv_value_1_0= RULE_STRING
                     {
                     lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
@@ -7579,7 +7720,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBooleanValue"
-    // InternalXdiagramDsl.g:2820:1: entryRuleBooleanValue returns [EObject current=null] : iv_ruleBooleanValue= ruleBooleanValue EOF ;
+    // InternalXdiagramDsl.g:2872:1: entryRuleBooleanValue returns [EObject current=null] : iv_ruleBooleanValue= ruleBooleanValue EOF ;
     public final EObject entryRuleBooleanValue() throws RecognitionException {
         EObject current = null;
 
@@ -7587,8 +7728,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:2820:53: (iv_ruleBooleanValue= ruleBooleanValue EOF )
-            // InternalXdiagramDsl.g:2821:2: iv_ruleBooleanValue= ruleBooleanValue EOF
+            // InternalXdiagramDsl.g:2872:53: (iv_ruleBooleanValue= ruleBooleanValue EOF )
+            // InternalXdiagramDsl.g:2873:2: iv_ruleBooleanValue= ruleBooleanValue EOF
             {
              newCompositeNode(grammarAccess.getBooleanValueRule()); 
             pushFollow(FOLLOW_1);
@@ -7615,7 +7756,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBooleanValue"
-    // InternalXdiagramDsl.g:2827:1: ruleBooleanValue returns [EObject current=null] : ( (lv_value_0_0= ruleBooleanLiteral ) ) ;
+    // InternalXdiagramDsl.g:2879:1: ruleBooleanValue returns [EObject current=null] : ( (lv_value_0_0= ruleBooleanLiteral ) ) ;
     public final EObject ruleBooleanValue() throws RecognitionException {
         EObject current = null;
 
@@ -7626,14 +7767,14 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:2833:2: ( ( (lv_value_0_0= ruleBooleanLiteral ) ) )
-            // InternalXdiagramDsl.g:2834:2: ( (lv_value_0_0= ruleBooleanLiteral ) )
+            // InternalXdiagramDsl.g:2885:2: ( ( (lv_value_0_0= ruleBooleanLiteral ) ) )
+            // InternalXdiagramDsl.g:2886:2: ( (lv_value_0_0= ruleBooleanLiteral ) )
             {
-            // InternalXdiagramDsl.g:2834:2: ( (lv_value_0_0= ruleBooleanLiteral ) )
-            // InternalXdiagramDsl.g:2835:3: (lv_value_0_0= ruleBooleanLiteral )
+            // InternalXdiagramDsl.g:2886:2: ( (lv_value_0_0= ruleBooleanLiteral ) )
+            // InternalXdiagramDsl.g:2887:3: (lv_value_0_0= ruleBooleanLiteral )
             {
-            // InternalXdiagramDsl.g:2835:3: (lv_value_0_0= ruleBooleanLiteral )
-            // InternalXdiagramDsl.g:2836:4: lv_value_0_0= ruleBooleanLiteral
+            // InternalXdiagramDsl.g:2887:3: (lv_value_0_0= ruleBooleanLiteral )
+            // InternalXdiagramDsl.g:2888:4: lv_value_0_0= ruleBooleanLiteral
             {
 
             				newCompositeNode(grammarAccess.getBooleanValueAccess().getValueBooleanLiteralEnumRuleCall_0());
@@ -7680,7 +7821,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEnumValue"
-    // InternalXdiagramDsl.g:2856:1: entryRuleEnumValue returns [EObject current=null] : iv_ruleEnumValue= ruleEnumValue EOF ;
+    // InternalXdiagramDsl.g:2908:1: entryRuleEnumValue returns [EObject current=null] : iv_ruleEnumValue= ruleEnumValue EOF ;
     public final EObject entryRuleEnumValue() throws RecognitionException {
         EObject current = null;
 
@@ -7688,8 +7829,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:2856:50: (iv_ruleEnumValue= ruleEnumValue EOF )
-            // InternalXdiagramDsl.g:2857:2: iv_ruleEnumValue= ruleEnumValue EOF
+            // InternalXdiagramDsl.g:2908:50: (iv_ruleEnumValue= ruleEnumValue EOF )
+            // InternalXdiagramDsl.g:2909:2: iv_ruleEnumValue= ruleEnumValue EOF
             {
              newCompositeNode(grammarAccess.getEnumValueRule()); 
             pushFollow(FOLLOW_1);
@@ -7716,7 +7857,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEnumValue"
-    // InternalXdiagramDsl.g:2863:1: ruleEnumValue returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // InternalXdiagramDsl.g:2915:1: ruleEnumValue returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject ruleEnumValue() throws RecognitionException {
         EObject current = null;
 
@@ -7726,14 +7867,14 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:2869:2: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // InternalXdiagramDsl.g:2870:2: ( (lv_name_0_0= RULE_ID ) )
+            // InternalXdiagramDsl.g:2921:2: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // InternalXdiagramDsl.g:2922:2: ( (lv_name_0_0= RULE_ID ) )
             {
-            // InternalXdiagramDsl.g:2870:2: ( (lv_name_0_0= RULE_ID ) )
-            // InternalXdiagramDsl.g:2871:3: (lv_name_0_0= RULE_ID )
+            // InternalXdiagramDsl.g:2922:2: ( (lv_name_0_0= RULE_ID ) )
+            // InternalXdiagramDsl.g:2923:3: (lv_name_0_0= RULE_ID )
             {
-            // InternalXdiagramDsl.g:2871:3: (lv_name_0_0= RULE_ID )
-            // InternalXdiagramDsl.g:2872:4: lv_name_0_0= RULE_ID
+            // InternalXdiagramDsl.g:2923:3: (lv_name_0_0= RULE_ID )
+            // InternalXdiagramDsl.g:2924:4: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -7775,7 +7916,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLabel"
-    // InternalXdiagramDsl.g:2891:1: entryRuleLabel returns [EObject current=null] : iv_ruleLabel= ruleLabel EOF ;
+    // InternalXdiagramDsl.g:2943:1: entryRuleLabel returns [EObject current=null] : iv_ruleLabel= ruleLabel EOF ;
     public final EObject entryRuleLabel() throws RecognitionException {
         EObject current = null;
 
@@ -7783,8 +7924,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:2891:46: (iv_ruleLabel= ruleLabel EOF )
-            // InternalXdiagramDsl.g:2892:2: iv_ruleLabel= ruleLabel EOF
+            // InternalXdiagramDsl.g:2943:46: (iv_ruleLabel= ruleLabel EOF )
+            // InternalXdiagramDsl.g:2944:2: iv_ruleLabel= ruleLabel EOF
             {
              newCompositeNode(grammarAccess.getLabelRule()); 
             pushFollow(FOLLOW_1);
@@ -7811,7 +7952,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLabel"
-    // InternalXdiagramDsl.g:2898:1: ruleLabel returns [EObject current=null] : ( () otherlv_1= 'label' otherlv_2= '{' ( (lv_features_3_0= ruleLabelFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) ;
+    // InternalXdiagramDsl.g:2950:1: ruleLabel returns [EObject current=null] : ( () otherlv_1= 'label' otherlv_2= '{' ( (lv_features_3_0= ruleLabelFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) ;
     public final EObject ruleLabel() throws RecognitionException {
         EObject current = null;
 
@@ -7828,14 +7969,14 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:2904:2: ( ( () otherlv_1= 'label' otherlv_2= '{' ( (lv_features_3_0= ruleLabelFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) )
-            // InternalXdiagramDsl.g:2905:2: ( () otherlv_1= 'label' otherlv_2= '{' ( (lv_features_3_0= ruleLabelFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
+            // InternalXdiagramDsl.g:2956:2: ( ( () otherlv_1= 'label' otherlv_2= '{' ( (lv_features_3_0= ruleLabelFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) )
+            // InternalXdiagramDsl.g:2957:2: ( () otherlv_1= 'label' otherlv_2= '{' ( (lv_features_3_0= ruleLabelFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
             {
-            // InternalXdiagramDsl.g:2905:2: ( () otherlv_1= 'label' otherlv_2= '{' ( (lv_features_3_0= ruleLabelFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
-            // InternalXdiagramDsl.g:2906:3: () otherlv_1= 'label' otherlv_2= '{' ( (lv_features_3_0= ruleLabelFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}'
+            // InternalXdiagramDsl.g:2957:2: ( () otherlv_1= 'label' otherlv_2= '{' ( (lv_features_3_0= ruleLabelFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
+            // InternalXdiagramDsl.g:2958:3: () otherlv_1= 'label' otherlv_2= '{' ( (lv_features_3_0= ruleLabelFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}'
             {
-            // InternalXdiagramDsl.g:2906:3: ()
-            // InternalXdiagramDsl.g:2907:4: 
+            // InternalXdiagramDsl.g:2958:3: ()
+            // InternalXdiagramDsl.g:2959:4: 
             {
 
             				current = forceCreateModelElement(
@@ -7845,36 +7986,36 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,48,FOLLOW_5); 
+            otherlv_1=(Token)match(input,48,FOLLOW_6); 
 
             			newLeafNode(otherlv_1, grammarAccess.getLabelAccess().getLabelKeyword_1());
             		
-            otherlv_2=(Token)match(input,12,FOLLOW_38); 
+            otherlv_2=(Token)match(input,12,FOLLOW_40); 
 
             			newLeafNode(otherlv_2, grammarAccess.getLabelAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalXdiagramDsl.g:2921:3: ( (lv_features_3_0= ruleLabelFeature ) )*
-            loop43:
+            // InternalXdiagramDsl.g:2973:3: ( (lv_features_3_0= ruleLabelFeature ) )*
+            loop45:
             do {
-                int alt43=2;
-                int LA43_0 = input.LA(1);
+                int alt45=2;
+                int LA45_0 = input.LA(1);
 
-                if ( ((LA43_0>=50 && LA43_0<=51)||LA43_0==54||LA43_0==58||LA43_0==64||LA43_0==66||LA43_0==73) ) {
-                    alt43=1;
+                if ( ((LA45_0>=50 && LA45_0<=51)||LA45_0==54||LA45_0==58||LA45_0==64||LA45_0==66||LA45_0==73) ) {
+                    alt45=1;
                 }
 
 
-                switch (alt43) {
+                switch (alt45) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:2922:4: (lv_features_3_0= ruleLabelFeature )
+            	    // InternalXdiagramDsl.g:2974:4: (lv_features_3_0= ruleLabelFeature )
             	    {
-            	    // InternalXdiagramDsl.g:2922:4: (lv_features_3_0= ruleLabelFeature )
-            	    // InternalXdiagramDsl.g:2923:5: lv_features_3_0= ruleLabelFeature
+            	    // InternalXdiagramDsl.g:2974:4: (lv_features_3_0= ruleLabelFeature )
+            	    // InternalXdiagramDsl.g:2975:5: lv_features_3_0= ruleLabelFeature
             	    {
 
             	    					newCompositeNode(grammarAccess.getLabelAccess().getFeaturesLabelFeatureParserRuleCall_3_0());
             	    				
-            	    pushFollow(FOLLOW_38);
+            	    pushFollow(FOLLOW_40);
             	    lv_features_3_0=ruleLabelFeature();
 
             	    state._fsp--;
@@ -7898,39 +8039,39 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop43;
+            	    break loop45;
                 }
             } while (true);
 
-            // InternalXdiagramDsl.g:2940:3: (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )*
-            loop44:
+            // InternalXdiagramDsl.g:2992:3: (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )*
+            loop46:
             do {
-                int alt44=2;
-                int LA44_0 = input.LA(1);
+                int alt46=2;
+                int LA46_0 = input.LA(1);
 
-                if ( (LA44_0==34) ) {
-                    alt44=1;
+                if ( (LA46_0==34) ) {
+                    alt46=1;
                 }
 
 
-                switch (alt44) {
+                switch (alt46) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:2941:4: otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:2993:4: otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) )
             	    {
-            	    otherlv_4=(Token)match(input,34,FOLLOW_24); 
+            	    otherlv_4=(Token)match(input,34,FOLLOW_25); 
 
             	    				newLeafNode(otherlv_4, grammarAccess.getLabelAccess().getChildKeyword_4_0());
             	    			
-            	    // InternalXdiagramDsl.g:2945:4: ( (lv_children_5_0= ruleChildElement ) )
-            	    // InternalXdiagramDsl.g:2946:5: (lv_children_5_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:2997:4: ( (lv_children_5_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:2998:5: (lv_children_5_0= ruleChildElement )
             	    {
-            	    // InternalXdiagramDsl.g:2946:5: (lv_children_5_0= ruleChildElement )
-            	    // InternalXdiagramDsl.g:2947:6: lv_children_5_0= ruleChildElement
+            	    // InternalXdiagramDsl.g:2998:5: (lv_children_5_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:2999:6: lv_children_5_0= ruleChildElement
             	    {
 
             	    						newCompositeNode(grammarAccess.getLabelAccess().getChildrenChildElementParserRuleCall_4_1_0());
             	    					
-            	    pushFollow(FOLLOW_31);
+            	    pushFollow(FOLLOW_33);
             	    lv_children_5_0=ruleChildElement();
 
             	    state._fsp--;
@@ -7957,7 +8098,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop44;
+            	    break loop46;
                 }
             } while (true);
 
@@ -7988,7 +8129,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLabelFeature"
-    // InternalXdiagramDsl.g:2973:1: entryRuleLabelFeature returns [EObject current=null] : iv_ruleLabelFeature= ruleLabelFeature EOF ;
+    // InternalXdiagramDsl.g:3025:1: entryRuleLabelFeature returns [EObject current=null] : iv_ruleLabelFeature= ruleLabelFeature EOF ;
     public final EObject entryRuleLabelFeature() throws RecognitionException {
         EObject current = null;
 
@@ -7996,8 +8137,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:2973:53: (iv_ruleLabelFeature= ruleLabelFeature EOF )
-            // InternalXdiagramDsl.g:2974:2: iv_ruleLabelFeature= ruleLabelFeature EOF
+            // InternalXdiagramDsl.g:3025:53: (iv_ruleLabelFeature= ruleLabelFeature EOF )
+            // InternalXdiagramDsl.g:3026:2: iv_ruleLabelFeature= ruleLabelFeature EOF
             {
              newCompositeNode(grammarAccess.getLabelFeatureRule()); 
             pushFollow(FOLLOW_1);
@@ -8024,7 +8165,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLabelFeature"
-    // InternalXdiagramDsl.g:2980:1: ruleLabelFeature returns [EObject current=null] : (this_TextValue_0= ruleTextValue | this_Foreground_1= ruleForeground | this_FontProperties_2= ruleFontProperties | this_Size_3= ruleSize | this_Position_4= rulePosition | this_Visible_5= ruleVisible | this_TextAlign_6= ruleTextAlign ) ;
+    // InternalXdiagramDsl.g:3032:1: ruleLabelFeature returns [EObject current=null] : (this_TextValue_0= ruleTextValue | this_Foreground_1= ruleForeground | this_FontProperties_2= ruleFontProperties | this_Size_3= ruleSize | this_Position_4= rulePosition | this_Visible_5= ruleVisible | this_TextAlign_6= ruleTextAlign ) ;
     public final EObject ruleLabelFeature() throws RecognitionException {
         EObject current = null;
 
@@ -8047,57 +8188,57 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:2986:2: ( (this_TextValue_0= ruleTextValue | this_Foreground_1= ruleForeground | this_FontProperties_2= ruleFontProperties | this_Size_3= ruleSize | this_Position_4= rulePosition | this_Visible_5= ruleVisible | this_TextAlign_6= ruleTextAlign ) )
-            // InternalXdiagramDsl.g:2987:2: (this_TextValue_0= ruleTextValue | this_Foreground_1= ruleForeground | this_FontProperties_2= ruleFontProperties | this_Size_3= ruleSize | this_Position_4= rulePosition | this_Visible_5= ruleVisible | this_TextAlign_6= ruleTextAlign )
+            // InternalXdiagramDsl.g:3038:2: ( (this_TextValue_0= ruleTextValue | this_Foreground_1= ruleForeground | this_FontProperties_2= ruleFontProperties | this_Size_3= ruleSize | this_Position_4= rulePosition | this_Visible_5= ruleVisible | this_TextAlign_6= ruleTextAlign ) )
+            // InternalXdiagramDsl.g:3039:2: (this_TextValue_0= ruleTextValue | this_Foreground_1= ruleForeground | this_FontProperties_2= ruleFontProperties | this_Size_3= ruleSize | this_Position_4= rulePosition | this_Visible_5= ruleVisible | this_TextAlign_6= ruleTextAlign )
             {
-            // InternalXdiagramDsl.g:2987:2: (this_TextValue_0= ruleTextValue | this_Foreground_1= ruleForeground | this_FontProperties_2= ruleFontProperties | this_Size_3= ruleSize | this_Position_4= rulePosition | this_Visible_5= ruleVisible | this_TextAlign_6= ruleTextAlign )
-            int alt45=7;
+            // InternalXdiagramDsl.g:3039:2: (this_TextValue_0= ruleTextValue | this_Foreground_1= ruleForeground | this_FontProperties_2= ruleFontProperties | this_Size_3= ruleSize | this_Position_4= rulePosition | this_Visible_5= ruleVisible | this_TextAlign_6= ruleTextAlign )
+            int alt47=7;
             switch ( input.LA(1) ) {
             case 64:
                 {
-                alt45=1;
+                alt47=1;
                 }
                 break;
             case 51:
                 {
-                alt45=2;
+                alt47=2;
                 }
                 break;
             case 66:
                 {
-                alt45=3;
+                alt47=3;
                 }
                 break;
             case 54:
                 {
-                alt45=4;
+                alt47=4;
                 }
                 break;
             case 58:
                 {
-                alt45=5;
+                alt47=5;
                 }
                 break;
             case 50:
                 {
-                alt45=6;
+                alt47=6;
                 }
                 break;
             case 73:
                 {
-                alt45=7;
+                alt47=7;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 45, 0, input);
+                    new NoViableAltException("", 47, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt45) {
+            switch (alt47) {
                 case 1 :
-                    // InternalXdiagramDsl.g:2988:3: this_TextValue_0= ruleTextValue
+                    // InternalXdiagramDsl.g:3040:3: this_TextValue_0= ruleTextValue
                     {
 
                     			newCompositeNode(grammarAccess.getLabelFeatureAccess().getTextValueParserRuleCall_0());
@@ -8115,7 +8256,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:2997:3: this_Foreground_1= ruleForeground
+                    // InternalXdiagramDsl.g:3049:3: this_Foreground_1= ruleForeground
                     {
 
                     			newCompositeNode(grammarAccess.getLabelFeatureAccess().getForegroundParserRuleCall_1());
@@ -8133,7 +8274,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalXdiagramDsl.g:3006:3: this_FontProperties_2= ruleFontProperties
+                    // InternalXdiagramDsl.g:3058:3: this_FontProperties_2= ruleFontProperties
                     {
 
                     			newCompositeNode(grammarAccess.getLabelFeatureAccess().getFontPropertiesParserRuleCall_2());
@@ -8151,7 +8292,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalXdiagramDsl.g:3015:3: this_Size_3= ruleSize
+                    // InternalXdiagramDsl.g:3067:3: this_Size_3= ruleSize
                     {
 
                     			newCompositeNode(grammarAccess.getLabelFeatureAccess().getSizeParserRuleCall_3());
@@ -8169,7 +8310,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalXdiagramDsl.g:3024:3: this_Position_4= rulePosition
+                    // InternalXdiagramDsl.g:3076:3: this_Position_4= rulePosition
                     {
 
                     			newCompositeNode(grammarAccess.getLabelFeatureAccess().getPositionParserRuleCall_4());
@@ -8187,7 +8328,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalXdiagramDsl.g:3033:3: this_Visible_5= ruleVisible
+                    // InternalXdiagramDsl.g:3085:3: this_Visible_5= ruleVisible
                     {
 
                     			newCompositeNode(grammarAccess.getLabelFeatureAccess().getVisibleParserRuleCall_5());
@@ -8205,7 +8346,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalXdiagramDsl.g:3042:3: this_TextAlign_6= ruleTextAlign
+                    // InternalXdiagramDsl.g:3094:3: this_TextAlign_6= ruleTextAlign
                     {
 
                     			newCompositeNode(grammarAccess.getLabelFeatureAccess().getTextAlignParserRuleCall_6());
@@ -8245,7 +8386,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleImage"
-    // InternalXdiagramDsl.g:3054:1: entryRuleImage returns [EObject current=null] : iv_ruleImage= ruleImage EOF ;
+    // InternalXdiagramDsl.g:3106:1: entryRuleImage returns [EObject current=null] : iv_ruleImage= ruleImage EOF ;
     public final EObject entryRuleImage() throws RecognitionException {
         EObject current = null;
 
@@ -8253,8 +8394,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:3054:46: (iv_ruleImage= ruleImage EOF )
-            // InternalXdiagramDsl.g:3055:2: iv_ruleImage= ruleImage EOF
+            // InternalXdiagramDsl.g:3106:46: (iv_ruleImage= ruleImage EOF )
+            // InternalXdiagramDsl.g:3107:2: iv_ruleImage= ruleImage EOF
             {
              newCompositeNode(grammarAccess.getImageRule()); 
             pushFollow(FOLLOW_1);
@@ -8281,7 +8422,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImage"
-    // InternalXdiagramDsl.g:3061:1: ruleImage returns [EObject current=null] : (otherlv_0= 'image' ( (lv_imageId_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_features_3_0= ruleImageFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) ;
+    // InternalXdiagramDsl.g:3113:1: ruleImage returns [EObject current=null] : (otherlv_0= 'image' ( (lv_imageId_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_features_3_0= ruleImageFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) ;
     public final EObject ruleImage() throws RecognitionException {
         EObject current = null;
 
@@ -8299,23 +8440,23 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:3067:2: ( (otherlv_0= 'image' ( (lv_imageId_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_features_3_0= ruleImageFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) )
-            // InternalXdiagramDsl.g:3068:2: (otherlv_0= 'image' ( (lv_imageId_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_features_3_0= ruleImageFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
+            // InternalXdiagramDsl.g:3119:2: ( (otherlv_0= 'image' ( (lv_imageId_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_features_3_0= ruleImageFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) )
+            // InternalXdiagramDsl.g:3120:2: (otherlv_0= 'image' ( (lv_imageId_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_features_3_0= ruleImageFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
             {
-            // InternalXdiagramDsl.g:3068:2: (otherlv_0= 'image' ( (lv_imageId_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_features_3_0= ruleImageFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
-            // InternalXdiagramDsl.g:3069:3: otherlv_0= 'image' ( (lv_imageId_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_features_3_0= ruleImageFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}'
+            // InternalXdiagramDsl.g:3120:2: (otherlv_0= 'image' ( (lv_imageId_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_features_3_0= ruleImageFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
+            // InternalXdiagramDsl.g:3121:3: otherlv_0= 'image' ( (lv_imageId_1_0= RULE_STRING ) ) otherlv_2= '{' ( (lv_features_3_0= ruleImageFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}'
             {
-            otherlv_0=(Token)match(input,49,FOLLOW_7); 
+            otherlv_0=(Token)match(input,49,FOLLOW_8); 
 
             			newLeafNode(otherlv_0, grammarAccess.getImageAccess().getImageKeyword_0());
             		
-            // InternalXdiagramDsl.g:3073:3: ( (lv_imageId_1_0= RULE_STRING ) )
-            // InternalXdiagramDsl.g:3074:4: (lv_imageId_1_0= RULE_STRING )
+            // InternalXdiagramDsl.g:3125:3: ( (lv_imageId_1_0= RULE_STRING ) )
+            // InternalXdiagramDsl.g:3126:4: (lv_imageId_1_0= RULE_STRING )
             {
-            // InternalXdiagramDsl.g:3074:4: (lv_imageId_1_0= RULE_STRING )
-            // InternalXdiagramDsl.g:3075:5: lv_imageId_1_0= RULE_STRING
+            // InternalXdiagramDsl.g:3126:4: (lv_imageId_1_0= RULE_STRING )
+            // InternalXdiagramDsl.g:3127:5: lv_imageId_1_0= RULE_STRING
             {
-            lv_imageId_1_0=(Token)match(input,RULE_STRING,FOLLOW_5); 
+            lv_imageId_1_0=(Token)match(input,RULE_STRING,FOLLOW_6); 
 
             					newLeafNode(lv_imageId_1_0, grammarAccess.getImageAccess().getImageIdSTRINGTerminalRuleCall_1_0());
             				
@@ -8335,32 +8476,32 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_39); 
+            otherlv_2=(Token)match(input,12,FOLLOW_41); 
 
             			newLeafNode(otherlv_2, grammarAccess.getImageAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalXdiagramDsl.g:3095:3: ( (lv_features_3_0= ruleImageFeature ) )*
-            loop46:
+            // InternalXdiagramDsl.g:3147:3: ( (lv_features_3_0= ruleImageFeature ) )*
+            loop48:
             do {
-                int alt46=2;
-                int LA46_0 = input.LA(1);
+                int alt48=2;
+                int LA48_0 = input.LA(1);
 
-                if ( ((LA46_0>=53 && LA46_0<=54)||LA46_0==58) ) {
-                    alt46=1;
+                if ( ((LA48_0>=53 && LA48_0<=54)||LA48_0==58) ) {
+                    alt48=1;
                 }
 
 
-                switch (alt46) {
+                switch (alt48) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:3096:4: (lv_features_3_0= ruleImageFeature )
+            	    // InternalXdiagramDsl.g:3148:4: (lv_features_3_0= ruleImageFeature )
             	    {
-            	    // InternalXdiagramDsl.g:3096:4: (lv_features_3_0= ruleImageFeature )
-            	    // InternalXdiagramDsl.g:3097:5: lv_features_3_0= ruleImageFeature
+            	    // InternalXdiagramDsl.g:3148:4: (lv_features_3_0= ruleImageFeature )
+            	    // InternalXdiagramDsl.g:3149:5: lv_features_3_0= ruleImageFeature
             	    {
 
             	    					newCompositeNode(grammarAccess.getImageAccess().getFeaturesImageFeatureParserRuleCall_3_0());
             	    				
-            	    pushFollow(FOLLOW_39);
+            	    pushFollow(FOLLOW_41);
             	    lv_features_3_0=ruleImageFeature();
 
             	    state._fsp--;
@@ -8384,39 +8525,39 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop46;
+            	    break loop48;
                 }
             } while (true);
 
-            // InternalXdiagramDsl.g:3114:3: (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )*
-            loop47:
+            // InternalXdiagramDsl.g:3166:3: (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )*
+            loop49:
             do {
-                int alt47=2;
-                int LA47_0 = input.LA(1);
+                int alt49=2;
+                int LA49_0 = input.LA(1);
 
-                if ( (LA47_0==34) ) {
-                    alt47=1;
+                if ( (LA49_0==34) ) {
+                    alt49=1;
                 }
 
 
-                switch (alt47) {
+                switch (alt49) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:3115:4: otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:3167:4: otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) )
             	    {
-            	    otherlv_4=(Token)match(input,34,FOLLOW_24); 
+            	    otherlv_4=(Token)match(input,34,FOLLOW_25); 
 
             	    				newLeafNode(otherlv_4, grammarAccess.getImageAccess().getChildKeyword_4_0());
             	    			
-            	    // InternalXdiagramDsl.g:3119:4: ( (lv_children_5_0= ruleChildElement ) )
-            	    // InternalXdiagramDsl.g:3120:5: (lv_children_5_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:3171:4: ( (lv_children_5_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:3172:5: (lv_children_5_0= ruleChildElement )
             	    {
-            	    // InternalXdiagramDsl.g:3120:5: (lv_children_5_0= ruleChildElement )
-            	    // InternalXdiagramDsl.g:3121:6: lv_children_5_0= ruleChildElement
+            	    // InternalXdiagramDsl.g:3172:5: (lv_children_5_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:3173:6: lv_children_5_0= ruleChildElement
             	    {
 
             	    						newCompositeNode(grammarAccess.getImageAccess().getChildrenChildElementParserRuleCall_4_1_0());
             	    					
-            	    pushFollow(FOLLOW_31);
+            	    pushFollow(FOLLOW_33);
             	    lv_children_5_0=ruleChildElement();
 
             	    state._fsp--;
@@ -8443,7 +8584,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop47;
+            	    break loop49;
                 }
             } while (true);
 
@@ -8474,7 +8615,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleImageFeature"
-    // InternalXdiagramDsl.g:3147:1: entryRuleImageFeature returns [EObject current=null] : iv_ruleImageFeature= ruleImageFeature EOF ;
+    // InternalXdiagramDsl.g:3199:1: entryRuleImageFeature returns [EObject current=null] : iv_ruleImageFeature= ruleImageFeature EOF ;
     public final EObject entryRuleImageFeature() throws RecognitionException {
         EObject current = null;
 
@@ -8482,8 +8623,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:3147:53: (iv_ruleImageFeature= ruleImageFeature EOF )
-            // InternalXdiagramDsl.g:3148:2: iv_ruleImageFeature= ruleImageFeature EOF
+            // InternalXdiagramDsl.g:3199:53: (iv_ruleImageFeature= ruleImageFeature EOF )
+            // InternalXdiagramDsl.g:3200:2: iv_ruleImageFeature= ruleImageFeature EOF
             {
              newCompositeNode(grammarAccess.getImageFeatureRule()); 
             pushFollow(FOLLOW_1);
@@ -8510,7 +8651,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImageFeature"
-    // InternalXdiagramDsl.g:3154:1: ruleImageFeature returns [EObject current=null] : (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Transparency_2= ruleTransparency ) ;
+    // InternalXdiagramDsl.g:3206:1: ruleImageFeature returns [EObject current=null] : (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Transparency_2= ruleTransparency ) ;
     public final EObject ruleImageFeature() throws RecognitionException {
         EObject current = null;
 
@@ -8525,37 +8666,37 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:3160:2: ( (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Transparency_2= ruleTransparency ) )
-            // InternalXdiagramDsl.g:3161:2: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Transparency_2= ruleTransparency )
+            // InternalXdiagramDsl.g:3212:2: ( (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Transparency_2= ruleTransparency ) )
+            // InternalXdiagramDsl.g:3213:2: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Transparency_2= ruleTransparency )
             {
-            // InternalXdiagramDsl.g:3161:2: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Transparency_2= ruleTransparency )
-            int alt48=3;
+            // InternalXdiagramDsl.g:3213:2: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_Transparency_2= ruleTransparency )
+            int alt50=3;
             switch ( input.LA(1) ) {
             case 54:
                 {
-                alt48=1;
+                alt50=1;
                 }
                 break;
             case 58:
                 {
-                alt48=2;
+                alt50=2;
                 }
                 break;
             case 53:
                 {
-                alt48=3;
+                alt50=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 48, 0, input);
+                    new NoViableAltException("", 50, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt48) {
+            switch (alt50) {
                 case 1 :
-                    // InternalXdiagramDsl.g:3162:3: this_Size_0= ruleSize
+                    // InternalXdiagramDsl.g:3214:3: this_Size_0= ruleSize
                     {
 
                     			newCompositeNode(grammarAccess.getImageFeatureAccess().getSizeParserRuleCall_0());
@@ -8573,7 +8714,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:3171:3: this_Position_1= rulePosition
+                    // InternalXdiagramDsl.g:3223:3: this_Position_1= rulePosition
                     {
 
                     			newCompositeNode(grammarAccess.getImageFeatureAccess().getPositionParserRuleCall_1());
@@ -8591,7 +8732,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalXdiagramDsl.g:3180:3: this_Transparency_2= ruleTransparency
+                    // InternalXdiagramDsl.g:3232:3: this_Transparency_2= ruleTransparency
                     {
 
                     			newCompositeNode(grammarAccess.getImageFeatureAccess().getTransparencyParserRuleCall_2());
@@ -8631,7 +8772,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInvisible"
-    // InternalXdiagramDsl.g:3192:1: entryRuleInvisible returns [EObject current=null] : iv_ruleInvisible= ruleInvisible EOF ;
+    // InternalXdiagramDsl.g:3244:1: entryRuleInvisible returns [EObject current=null] : iv_ruleInvisible= ruleInvisible EOF ;
     public final EObject entryRuleInvisible() throws RecognitionException {
         EObject current = null;
 
@@ -8639,8 +8780,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:3192:50: (iv_ruleInvisible= ruleInvisible EOF )
-            // InternalXdiagramDsl.g:3193:2: iv_ruleInvisible= ruleInvisible EOF
+            // InternalXdiagramDsl.g:3244:50: (iv_ruleInvisible= ruleInvisible EOF )
+            // InternalXdiagramDsl.g:3245:2: iv_ruleInvisible= ruleInvisible EOF
             {
              newCompositeNode(grammarAccess.getInvisibleRule()); 
             pushFollow(FOLLOW_1);
@@ -8667,7 +8808,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInvisible"
-    // InternalXdiagramDsl.g:3199:1: ruleInvisible returns [EObject current=null] : ( () otherlv_1= 'invisible' otherlv_2= '{' ( (lv_features_3_0= ruleInvisibleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) ;
+    // InternalXdiagramDsl.g:3251:1: ruleInvisible returns [EObject current=null] : ( () otherlv_1= 'invisible' otherlv_2= '{' ( (lv_features_3_0= ruleInvisibleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) ;
     public final EObject ruleInvisible() throws RecognitionException {
         EObject current = null;
 
@@ -8684,14 +8825,14 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:3205:2: ( ( () otherlv_1= 'invisible' otherlv_2= '{' ( (lv_features_3_0= ruleInvisibleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) )
-            // InternalXdiagramDsl.g:3206:2: ( () otherlv_1= 'invisible' otherlv_2= '{' ( (lv_features_3_0= ruleInvisibleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
+            // InternalXdiagramDsl.g:3257:2: ( ( () otherlv_1= 'invisible' otherlv_2= '{' ( (lv_features_3_0= ruleInvisibleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' ) )
+            // InternalXdiagramDsl.g:3258:2: ( () otherlv_1= 'invisible' otherlv_2= '{' ( (lv_features_3_0= ruleInvisibleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
             {
-            // InternalXdiagramDsl.g:3206:2: ( () otherlv_1= 'invisible' otherlv_2= '{' ( (lv_features_3_0= ruleInvisibleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
-            // InternalXdiagramDsl.g:3207:3: () otherlv_1= 'invisible' otherlv_2= '{' ( (lv_features_3_0= ruleInvisibleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}'
+            // InternalXdiagramDsl.g:3258:2: ( () otherlv_1= 'invisible' otherlv_2= '{' ( (lv_features_3_0= ruleInvisibleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}' )
+            // InternalXdiagramDsl.g:3259:3: () otherlv_1= 'invisible' otherlv_2= '{' ( (lv_features_3_0= ruleInvisibleFeature ) )* (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )* otherlv_6= '}'
             {
-            // InternalXdiagramDsl.g:3207:3: ()
-            // InternalXdiagramDsl.g:3208:4: 
+            // InternalXdiagramDsl.g:3259:3: ()
+            // InternalXdiagramDsl.g:3260:4: 
             {
 
             				current = forceCreateModelElement(
@@ -8701,36 +8842,36 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,50,FOLLOW_5); 
+            otherlv_1=(Token)match(input,50,FOLLOW_6); 
 
             			newLeafNode(otherlv_1, grammarAccess.getInvisibleAccess().getInvisibleKeyword_1());
             		
-            otherlv_2=(Token)match(input,12,FOLLOW_40); 
+            otherlv_2=(Token)match(input,12,FOLLOW_42); 
 
             			newLeafNode(otherlv_2, grammarAccess.getInvisibleAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalXdiagramDsl.g:3222:3: ( (lv_features_3_0= ruleInvisibleFeature ) )*
-            loop49:
+            // InternalXdiagramDsl.g:3274:3: ( (lv_features_3_0= ruleInvisibleFeature ) )*
+            loop51:
             do {
-                int alt49=2;
-                int LA49_0 = input.LA(1);
+                int alt51=2;
+                int LA51_0 = input.LA(1);
 
-                if ( (LA49_0==28||LA49_0==46||LA49_0==54||LA49_0==58||LA49_0==60) ) {
-                    alt49=1;
+                if ( (LA51_0==28||LA51_0==46||LA51_0==54||LA51_0==58||LA51_0==60) ) {
+                    alt51=1;
                 }
 
 
-                switch (alt49) {
+                switch (alt51) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:3223:4: (lv_features_3_0= ruleInvisibleFeature )
+            	    // InternalXdiagramDsl.g:3275:4: (lv_features_3_0= ruleInvisibleFeature )
             	    {
-            	    // InternalXdiagramDsl.g:3223:4: (lv_features_3_0= ruleInvisibleFeature )
-            	    // InternalXdiagramDsl.g:3224:5: lv_features_3_0= ruleInvisibleFeature
+            	    // InternalXdiagramDsl.g:3275:4: (lv_features_3_0= ruleInvisibleFeature )
+            	    // InternalXdiagramDsl.g:3276:5: lv_features_3_0= ruleInvisibleFeature
             	    {
 
             	    					newCompositeNode(grammarAccess.getInvisibleAccess().getFeaturesInvisibleFeatureParserRuleCall_3_0());
             	    				
-            	    pushFollow(FOLLOW_40);
+            	    pushFollow(FOLLOW_42);
             	    lv_features_3_0=ruleInvisibleFeature();
 
             	    state._fsp--;
@@ -8754,39 +8895,39 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop49;
+            	    break loop51;
                 }
             } while (true);
 
-            // InternalXdiagramDsl.g:3241:3: (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )*
-            loop50:
+            // InternalXdiagramDsl.g:3293:3: (otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) ) )*
+            loop52:
             do {
-                int alt50=2;
-                int LA50_0 = input.LA(1);
+                int alt52=2;
+                int LA52_0 = input.LA(1);
 
-                if ( (LA50_0==34) ) {
-                    alt50=1;
+                if ( (LA52_0==34) ) {
+                    alt52=1;
                 }
 
 
-                switch (alt50) {
+                switch (alt52) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:3242:4: otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:3294:4: otherlv_4= 'child' ( (lv_children_5_0= ruleChildElement ) )
             	    {
-            	    otherlv_4=(Token)match(input,34,FOLLOW_24); 
+            	    otherlv_4=(Token)match(input,34,FOLLOW_25); 
 
             	    				newLeafNode(otherlv_4, grammarAccess.getInvisibleAccess().getChildKeyword_4_0());
             	    			
-            	    // InternalXdiagramDsl.g:3246:4: ( (lv_children_5_0= ruleChildElement ) )
-            	    // InternalXdiagramDsl.g:3247:5: (lv_children_5_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:3298:4: ( (lv_children_5_0= ruleChildElement ) )
+            	    // InternalXdiagramDsl.g:3299:5: (lv_children_5_0= ruleChildElement )
             	    {
-            	    // InternalXdiagramDsl.g:3247:5: (lv_children_5_0= ruleChildElement )
-            	    // InternalXdiagramDsl.g:3248:6: lv_children_5_0= ruleChildElement
+            	    // InternalXdiagramDsl.g:3299:5: (lv_children_5_0= ruleChildElement )
+            	    // InternalXdiagramDsl.g:3300:6: lv_children_5_0= ruleChildElement
             	    {
 
             	    						newCompositeNode(grammarAccess.getInvisibleAccess().getChildrenChildElementParserRuleCall_4_1_0());
             	    					
-            	    pushFollow(FOLLOW_31);
+            	    pushFollow(FOLLOW_33);
             	    lv_children_5_0=ruleChildElement();
 
             	    state._fsp--;
@@ -8813,7 +8954,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop50;
+            	    break loop52;
                 }
             } while (true);
 
@@ -8844,7 +8985,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInvisibleFeature"
-    // InternalXdiagramDsl.g:3274:1: entryRuleInvisibleFeature returns [EObject current=null] : iv_ruleInvisibleFeature= ruleInvisibleFeature EOF ;
+    // InternalXdiagramDsl.g:3326:1: entryRuleInvisibleFeature returns [EObject current=null] : iv_ruleInvisibleFeature= ruleInvisibleFeature EOF ;
     public final EObject entryRuleInvisibleFeature() throws RecognitionException {
         EObject current = null;
 
@@ -8852,8 +8993,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:3274:57: (iv_ruleInvisibleFeature= ruleInvisibleFeature EOF )
-            // InternalXdiagramDsl.g:3275:2: iv_ruleInvisibleFeature= ruleInvisibleFeature EOF
+            // InternalXdiagramDsl.g:3326:57: (iv_ruleInvisibleFeature= ruleInvisibleFeature EOF )
+            // InternalXdiagramDsl.g:3327:2: iv_ruleInvisibleFeature= ruleInvisibleFeature EOF
             {
              newCompositeNode(grammarAccess.getInvisibleFeatureRule()); 
             pushFollow(FOLLOW_1);
@@ -8880,7 +9021,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInvisibleFeature"
-    // InternalXdiagramDsl.g:3281:1: ruleInvisibleFeature returns [EObject current=null] : (this_Size_0= ruleSize | this_Position_1= rulePosition | this_LinkedFeature_2= ruleLinkedFeature | this_Layout_3= ruleLayout ) ;
+    // InternalXdiagramDsl.g:3333:1: ruleInvisibleFeature returns [EObject current=null] : (this_Size_0= ruleSize | this_Position_1= rulePosition | this_LinkedFeature_2= ruleLinkedFeature | this_Layout_3= ruleLayout ) ;
     public final EObject ruleInvisibleFeature() throws RecognitionException {
         EObject current = null;
 
@@ -8897,43 +9038,43 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:3287:2: ( (this_Size_0= ruleSize | this_Position_1= rulePosition | this_LinkedFeature_2= ruleLinkedFeature | this_Layout_3= ruleLayout ) )
-            // InternalXdiagramDsl.g:3288:2: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_LinkedFeature_2= ruleLinkedFeature | this_Layout_3= ruleLayout )
+            // InternalXdiagramDsl.g:3339:2: ( (this_Size_0= ruleSize | this_Position_1= rulePosition | this_LinkedFeature_2= ruleLinkedFeature | this_Layout_3= ruleLayout ) )
+            // InternalXdiagramDsl.g:3340:2: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_LinkedFeature_2= ruleLinkedFeature | this_Layout_3= ruleLayout )
             {
-            // InternalXdiagramDsl.g:3288:2: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_LinkedFeature_2= ruleLinkedFeature | this_Layout_3= ruleLayout )
-            int alt51=4;
+            // InternalXdiagramDsl.g:3340:2: (this_Size_0= ruleSize | this_Position_1= rulePosition | this_LinkedFeature_2= ruleLinkedFeature | this_Layout_3= ruleLayout )
+            int alt53=4;
             switch ( input.LA(1) ) {
             case 54:
                 {
-                alt51=1;
+                alt53=1;
                 }
                 break;
             case 58:
                 {
-                alt51=2;
+                alt53=2;
                 }
                 break;
             case 28:
             case 46:
                 {
-                alt51=3;
+                alt53=3;
                 }
                 break;
             case 60:
                 {
-                alt51=4;
+                alt53=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 51, 0, input);
+                    new NoViableAltException("", 53, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt51) {
+            switch (alt53) {
                 case 1 :
-                    // InternalXdiagramDsl.g:3289:3: this_Size_0= ruleSize
+                    // InternalXdiagramDsl.g:3341:3: this_Size_0= ruleSize
                     {
 
                     			newCompositeNode(grammarAccess.getInvisibleFeatureAccess().getSizeParserRuleCall_0());
@@ -8951,7 +9092,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:3298:3: this_Position_1= rulePosition
+                    // InternalXdiagramDsl.g:3350:3: this_Position_1= rulePosition
                     {
 
                     			newCompositeNode(grammarAccess.getInvisibleFeatureAccess().getPositionParserRuleCall_1());
@@ -8969,7 +9110,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalXdiagramDsl.g:3307:3: this_LinkedFeature_2= ruleLinkedFeature
+                    // InternalXdiagramDsl.g:3359:3: this_LinkedFeature_2= ruleLinkedFeature
                     {
 
                     			newCompositeNode(grammarAccess.getInvisibleFeatureAccess().getLinkedFeatureParserRuleCall_2());
@@ -8987,7 +9128,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalXdiagramDsl.g:3316:3: this_Layout_3= ruleLayout
+                    // InternalXdiagramDsl.g:3368:3: this_Layout_3= ruleLayout
                     {
 
                     			newCompositeNode(grammarAccess.getInvisibleFeatureAccess().getLayoutParserRuleCall_3());
@@ -9027,7 +9168,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleColorFeature"
-    // InternalXdiagramDsl.g:3328:1: entryRuleColorFeature returns [EObject current=null] : iv_ruleColorFeature= ruleColorFeature EOF ;
+    // InternalXdiagramDsl.g:3380:1: entryRuleColorFeature returns [EObject current=null] : iv_ruleColorFeature= ruleColorFeature EOF ;
     public final EObject entryRuleColorFeature() throws RecognitionException {
         EObject current = null;
 
@@ -9035,8 +9176,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:3328:53: (iv_ruleColorFeature= ruleColorFeature EOF )
-            // InternalXdiagramDsl.g:3329:2: iv_ruleColorFeature= ruleColorFeature EOF
+            // InternalXdiagramDsl.g:3380:53: (iv_ruleColorFeature= ruleColorFeature EOF )
+            // InternalXdiagramDsl.g:3381:2: iv_ruleColorFeature= ruleColorFeature EOF
             {
              newCompositeNode(grammarAccess.getColorFeatureRule()); 
             pushFollow(FOLLOW_1);
@@ -9063,7 +9204,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleColorFeature"
-    // InternalXdiagramDsl.g:3335:1: ruleColorFeature returns [EObject current=null] : (this_Foreground_0= ruleForeground | this_Background_1= ruleBackground ) ;
+    // InternalXdiagramDsl.g:3387:1: ruleColorFeature returns [EObject current=null] : (this_Foreground_0= ruleForeground | this_Background_1= ruleBackground ) ;
     public final EObject ruleColorFeature() throws RecognitionException {
         EObject current = null;
 
@@ -9076,28 +9217,28 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:3341:2: ( (this_Foreground_0= ruleForeground | this_Background_1= ruleBackground ) )
-            // InternalXdiagramDsl.g:3342:2: (this_Foreground_0= ruleForeground | this_Background_1= ruleBackground )
+            // InternalXdiagramDsl.g:3393:2: ( (this_Foreground_0= ruleForeground | this_Background_1= ruleBackground ) )
+            // InternalXdiagramDsl.g:3394:2: (this_Foreground_0= ruleForeground | this_Background_1= ruleBackground )
             {
-            // InternalXdiagramDsl.g:3342:2: (this_Foreground_0= ruleForeground | this_Background_1= ruleBackground )
-            int alt52=2;
-            int LA52_0 = input.LA(1);
+            // InternalXdiagramDsl.g:3394:2: (this_Foreground_0= ruleForeground | this_Background_1= ruleBackground )
+            int alt54=2;
+            int LA54_0 = input.LA(1);
 
-            if ( (LA52_0==51) ) {
-                alt52=1;
+            if ( (LA54_0==51) ) {
+                alt54=1;
             }
-            else if ( (LA52_0==52) ) {
-                alt52=2;
+            else if ( (LA54_0==52) ) {
+                alt54=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 52, 0, input);
+                    new NoViableAltException("", 54, 0, input);
 
                 throw nvae;
             }
-            switch (alt52) {
+            switch (alt54) {
                 case 1 :
-                    // InternalXdiagramDsl.g:3343:3: this_Foreground_0= ruleForeground
+                    // InternalXdiagramDsl.g:3395:3: this_Foreground_0= ruleForeground
                     {
 
                     			newCompositeNode(grammarAccess.getColorFeatureAccess().getForegroundParserRuleCall_0());
@@ -9115,7 +9256,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:3352:3: this_Background_1= ruleBackground
+                    // InternalXdiagramDsl.g:3404:3: this_Background_1= ruleBackground
                     {
 
                     			newCompositeNode(grammarAccess.getColorFeatureAccess().getBackgroundParserRuleCall_1());
@@ -9155,7 +9296,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleForeground"
-    // InternalXdiagramDsl.g:3364:1: entryRuleForeground returns [EObject current=null] : iv_ruleForeground= ruleForeground EOF ;
+    // InternalXdiagramDsl.g:3416:1: entryRuleForeground returns [EObject current=null] : iv_ruleForeground= ruleForeground EOF ;
     public final EObject entryRuleForeground() throws RecognitionException {
         EObject current = null;
 
@@ -9163,8 +9304,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:3364:51: (iv_ruleForeground= ruleForeground EOF )
-            // InternalXdiagramDsl.g:3365:2: iv_ruleForeground= ruleForeground EOF
+            // InternalXdiagramDsl.g:3416:51: (iv_ruleForeground= ruleForeground EOF )
+            // InternalXdiagramDsl.g:3417:2: iv_ruleForeground= ruleForeground EOF
             {
              newCompositeNode(grammarAccess.getForegroundRule()); 
             pushFollow(FOLLOW_1);
@@ -9191,7 +9332,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleForeground"
-    // InternalXdiagramDsl.g:3371:1: ruleForeground returns [EObject current=null] : ( ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
+    // InternalXdiagramDsl.g:3423:1: ruleForeground returns [EObject current=null] : ( ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
     public final EObject ruleForeground() throws RecognitionException {
         EObject current = null;
 
@@ -9206,19 +9347,19 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:3377:2: ( ( ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
-            // InternalXdiagramDsl.g:3378:2: ( ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // InternalXdiagramDsl.g:3429:2: ( ( ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
+            // InternalXdiagramDsl.g:3430:2: ( ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
             {
-            // InternalXdiagramDsl.g:3378:2: ( ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
-            // InternalXdiagramDsl.g:3379:3: ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
+            // InternalXdiagramDsl.g:3430:2: ( ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // InternalXdiagramDsl.g:3431:3: ( (lv_type_0_0= 'foreground' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
             {
-            // InternalXdiagramDsl.g:3379:3: ( (lv_type_0_0= 'foreground' ) )
-            // InternalXdiagramDsl.g:3380:4: (lv_type_0_0= 'foreground' )
+            // InternalXdiagramDsl.g:3431:3: ( (lv_type_0_0= 'foreground' ) )
+            // InternalXdiagramDsl.g:3432:4: (lv_type_0_0= 'foreground' )
             {
-            // InternalXdiagramDsl.g:3380:4: (lv_type_0_0= 'foreground' )
-            // InternalXdiagramDsl.g:3381:5: lv_type_0_0= 'foreground'
+            // InternalXdiagramDsl.g:3432:4: (lv_type_0_0= 'foreground' )
+            // InternalXdiagramDsl.g:3433:5: lv_type_0_0= 'foreground'
             {
-            lv_type_0_0=(Token)match(input,51,FOLLOW_41); 
+            lv_type_0_0=(Token)match(input,51,FOLLOW_43); 
 
             					newLeafNode(lv_type_0_0, grammarAccess.getForegroundAccess().getTypeForegroundKeyword_0_0());
             				
@@ -9234,16 +9375,16 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:3393:3: ( (lv_color_1_0= ruleColor ) )
-            // InternalXdiagramDsl.g:3394:4: (lv_color_1_0= ruleColor )
+            // InternalXdiagramDsl.g:3445:3: ( (lv_color_1_0= ruleColor ) )
+            // InternalXdiagramDsl.g:3446:4: (lv_color_1_0= ruleColor )
             {
-            // InternalXdiagramDsl.g:3394:4: (lv_color_1_0= ruleColor )
-            // InternalXdiagramDsl.g:3395:5: lv_color_1_0= ruleColor
+            // InternalXdiagramDsl.g:3446:4: (lv_color_1_0= ruleColor )
+            // InternalXdiagramDsl.g:3447:5: lv_color_1_0= ruleColor
             {
 
             					newCompositeNode(grammarAccess.getForegroundAccess().getColorColorParserRuleCall_1_0());
             				
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_28);
             lv_color_1_0=ruleColor();
 
             state._fsp--;
@@ -9265,24 +9406,24 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:3412:3: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
-            int alt53=2;
-            int LA53_0 = input.LA(1);
+            // InternalXdiagramDsl.g:3464:3: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
+            int alt55=2;
+            int LA55_0 = input.LA(1);
 
-            if ( (LA53_0==19) ) {
-                alt53=1;
+            if ( (LA55_0==19) ) {
+                alt55=1;
             }
-            switch (alt53) {
+            switch (alt55) {
                 case 1 :
-                    // InternalXdiagramDsl.g:3413:4: (lv_conditional_2_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:3465:4: (lv_conditional_2_0= ruleFeatureConditional )
                     {
-                    // InternalXdiagramDsl.g:3413:4: (lv_conditional_2_0= ruleFeatureConditional )
-                    // InternalXdiagramDsl.g:3414:5: lv_conditional_2_0= ruleFeatureConditional
+                    // InternalXdiagramDsl.g:3465:4: (lv_conditional_2_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:3466:5: lv_conditional_2_0= ruleFeatureConditional
                     {
 
                     					newCompositeNode(grammarAccess.getForegroundAccess().getConditionalFeatureConditionalParserRuleCall_2_0());
                     				
-                    pushFollow(FOLLOW_28);
+                    pushFollow(FOLLOW_29);
                     lv_conditional_2_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -9334,7 +9475,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBackground"
-    // InternalXdiagramDsl.g:3439:1: entryRuleBackground returns [EObject current=null] : iv_ruleBackground= ruleBackground EOF ;
+    // InternalXdiagramDsl.g:3491:1: entryRuleBackground returns [EObject current=null] : iv_ruleBackground= ruleBackground EOF ;
     public final EObject entryRuleBackground() throws RecognitionException {
         EObject current = null;
 
@@ -9342,8 +9483,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:3439:51: (iv_ruleBackground= ruleBackground EOF )
-            // InternalXdiagramDsl.g:3440:2: iv_ruleBackground= ruleBackground EOF
+            // InternalXdiagramDsl.g:3491:51: (iv_ruleBackground= ruleBackground EOF )
+            // InternalXdiagramDsl.g:3492:2: iv_ruleBackground= ruleBackground EOF
             {
              newCompositeNode(grammarAccess.getBackgroundRule()); 
             pushFollow(FOLLOW_1);
@@ -9370,7 +9511,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBackground"
-    // InternalXdiagramDsl.g:3446:1: ruleBackground returns [EObject current=null] : ( ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
+    // InternalXdiagramDsl.g:3498:1: ruleBackground returns [EObject current=null] : ( ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
     public final EObject ruleBackground() throws RecognitionException {
         EObject current = null;
 
@@ -9385,19 +9526,19 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:3452:2: ( ( ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
-            // InternalXdiagramDsl.g:3453:2: ( ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // InternalXdiagramDsl.g:3504:2: ( ( ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
+            // InternalXdiagramDsl.g:3505:2: ( ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
             {
-            // InternalXdiagramDsl.g:3453:2: ( ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
-            // InternalXdiagramDsl.g:3454:3: ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
+            // InternalXdiagramDsl.g:3505:2: ( ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // InternalXdiagramDsl.g:3506:3: ( (lv_type_0_0= 'background' ) ) ( (lv_color_1_0= ruleColor ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
             {
-            // InternalXdiagramDsl.g:3454:3: ( (lv_type_0_0= 'background' ) )
-            // InternalXdiagramDsl.g:3455:4: (lv_type_0_0= 'background' )
+            // InternalXdiagramDsl.g:3506:3: ( (lv_type_0_0= 'background' ) )
+            // InternalXdiagramDsl.g:3507:4: (lv_type_0_0= 'background' )
             {
-            // InternalXdiagramDsl.g:3455:4: (lv_type_0_0= 'background' )
-            // InternalXdiagramDsl.g:3456:5: lv_type_0_0= 'background'
+            // InternalXdiagramDsl.g:3507:4: (lv_type_0_0= 'background' )
+            // InternalXdiagramDsl.g:3508:5: lv_type_0_0= 'background'
             {
-            lv_type_0_0=(Token)match(input,52,FOLLOW_41); 
+            lv_type_0_0=(Token)match(input,52,FOLLOW_43); 
 
             					newLeafNode(lv_type_0_0, grammarAccess.getBackgroundAccess().getTypeBackgroundKeyword_0_0());
             				
@@ -9413,16 +9554,16 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:3468:3: ( (lv_color_1_0= ruleColor ) )
-            // InternalXdiagramDsl.g:3469:4: (lv_color_1_0= ruleColor )
+            // InternalXdiagramDsl.g:3520:3: ( (lv_color_1_0= ruleColor ) )
+            // InternalXdiagramDsl.g:3521:4: (lv_color_1_0= ruleColor )
             {
-            // InternalXdiagramDsl.g:3469:4: (lv_color_1_0= ruleColor )
-            // InternalXdiagramDsl.g:3470:5: lv_color_1_0= ruleColor
+            // InternalXdiagramDsl.g:3521:4: (lv_color_1_0= ruleColor )
+            // InternalXdiagramDsl.g:3522:5: lv_color_1_0= ruleColor
             {
 
             					newCompositeNode(grammarAccess.getBackgroundAccess().getColorColorParserRuleCall_1_0());
             				
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_28);
             lv_color_1_0=ruleColor();
 
             state._fsp--;
@@ -9444,24 +9585,24 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:3487:3: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
-            int alt54=2;
-            int LA54_0 = input.LA(1);
+            // InternalXdiagramDsl.g:3539:3: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
+            int alt56=2;
+            int LA56_0 = input.LA(1);
 
-            if ( (LA54_0==19) ) {
-                alt54=1;
+            if ( (LA56_0==19) ) {
+                alt56=1;
             }
-            switch (alt54) {
+            switch (alt56) {
                 case 1 :
-                    // InternalXdiagramDsl.g:3488:4: (lv_conditional_2_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:3540:4: (lv_conditional_2_0= ruleFeatureConditional )
                     {
-                    // InternalXdiagramDsl.g:3488:4: (lv_conditional_2_0= ruleFeatureConditional )
-                    // InternalXdiagramDsl.g:3489:5: lv_conditional_2_0= ruleFeatureConditional
+                    // InternalXdiagramDsl.g:3540:4: (lv_conditional_2_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:3541:5: lv_conditional_2_0= ruleFeatureConditional
                     {
 
                     					newCompositeNode(grammarAccess.getBackgroundAccess().getConditionalFeatureConditionalParserRuleCall_2_0());
                     				
-                    pushFollow(FOLLOW_28);
+                    pushFollow(FOLLOW_29);
                     lv_conditional_2_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -9513,7 +9654,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTransparency"
-    // InternalXdiagramDsl.g:3514:1: entryRuleTransparency returns [EObject current=null] : iv_ruleTransparency= ruleTransparency EOF ;
+    // InternalXdiagramDsl.g:3566:1: entryRuleTransparency returns [EObject current=null] : iv_ruleTransparency= ruleTransparency EOF ;
     public final EObject entryRuleTransparency() throws RecognitionException {
         EObject current = null;
 
@@ -9521,8 +9662,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:3514:53: (iv_ruleTransparency= ruleTransparency EOF )
-            // InternalXdiagramDsl.g:3515:2: iv_ruleTransparency= ruleTransparency EOF
+            // InternalXdiagramDsl.g:3566:53: (iv_ruleTransparency= ruleTransparency EOF )
+            // InternalXdiagramDsl.g:3567:2: iv_ruleTransparency= ruleTransparency EOF
             {
              newCompositeNode(grammarAccess.getTransparencyRule()); 
             pushFollow(FOLLOW_1);
@@ -9549,7 +9690,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTransparency"
-    // InternalXdiagramDsl.g:3521:1: ruleTransparency returns [EObject current=null] : (otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) ;
+    // InternalXdiagramDsl.g:3573:1: ruleTransparency returns [EObject current=null] : (otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) ;
     public final EObject ruleTransparency() throws RecognitionException {
         EObject current = null;
 
@@ -9564,23 +9705,23 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:3527:2: ( (otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) )
-            // InternalXdiagramDsl.g:3528:2: (otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
+            // InternalXdiagramDsl.g:3579:2: ( (otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) )
+            // InternalXdiagramDsl.g:3580:2: (otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
             {
-            // InternalXdiagramDsl.g:3528:2: (otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
-            // InternalXdiagramDsl.g:3529:3: otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';'
+            // InternalXdiagramDsl.g:3580:2: (otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
+            // InternalXdiagramDsl.g:3581:3: otherlv_0= 'transparency' ( (lv_percent_1_0= RULE_INT ) ) otherlv_2= '%' ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';'
             {
-            otherlv_0=(Token)match(input,53,FOLLOW_22); 
+            otherlv_0=(Token)match(input,53,FOLLOW_23); 
 
             			newLeafNode(otherlv_0, grammarAccess.getTransparencyAccess().getTransparencyKeyword_0());
             		
-            // InternalXdiagramDsl.g:3533:3: ( (lv_percent_1_0= RULE_INT ) )
-            // InternalXdiagramDsl.g:3534:4: (lv_percent_1_0= RULE_INT )
+            // InternalXdiagramDsl.g:3585:3: ( (lv_percent_1_0= RULE_INT ) )
+            // InternalXdiagramDsl.g:3586:4: (lv_percent_1_0= RULE_INT )
             {
-            // InternalXdiagramDsl.g:3534:4: (lv_percent_1_0= RULE_INT )
-            // InternalXdiagramDsl.g:3535:5: lv_percent_1_0= RULE_INT
+            // InternalXdiagramDsl.g:3586:4: (lv_percent_1_0= RULE_INT )
+            // InternalXdiagramDsl.g:3587:5: lv_percent_1_0= RULE_INT
             {
-            lv_percent_1_0=(Token)match(input,RULE_INT,FOLLOW_23); 
+            lv_percent_1_0=(Token)match(input,RULE_INT,FOLLOW_24); 
 
             					newLeafNode(lv_percent_1_0, grammarAccess.getTransparencyAccess().getPercentINTTerminalRuleCall_1_0());
             				
@@ -9600,28 +9741,28 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,27,FOLLOW_27); 
+            otherlv_2=(Token)match(input,27,FOLLOW_28); 
 
             			newLeafNode(otherlv_2, grammarAccess.getTransparencyAccess().getPercentSignKeyword_2());
             		
-            // InternalXdiagramDsl.g:3555:3: ( (lv_conditional_3_0= ruleFeatureConditional ) )?
-            int alt55=2;
-            int LA55_0 = input.LA(1);
+            // InternalXdiagramDsl.g:3607:3: ( (lv_conditional_3_0= ruleFeatureConditional ) )?
+            int alt57=2;
+            int LA57_0 = input.LA(1);
 
-            if ( (LA55_0==19) ) {
-                alt55=1;
+            if ( (LA57_0==19) ) {
+                alt57=1;
             }
-            switch (alt55) {
+            switch (alt57) {
                 case 1 :
-                    // InternalXdiagramDsl.g:3556:4: (lv_conditional_3_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:3608:4: (lv_conditional_3_0= ruleFeatureConditional )
                     {
-                    // InternalXdiagramDsl.g:3556:4: (lv_conditional_3_0= ruleFeatureConditional )
-                    // InternalXdiagramDsl.g:3557:5: lv_conditional_3_0= ruleFeatureConditional
+                    // InternalXdiagramDsl.g:3608:4: (lv_conditional_3_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:3609:5: lv_conditional_3_0= ruleFeatureConditional
                     {
 
                     					newCompositeNode(grammarAccess.getTransparencyAccess().getConditionalFeatureConditionalParserRuleCall_3_0());
                     				
-                    pushFollow(FOLLOW_28);
+                    pushFollow(FOLLOW_29);
                     lv_conditional_3_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -9673,7 +9814,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSize"
-    // InternalXdiagramDsl.g:3582:1: entryRuleSize returns [EObject current=null] : iv_ruleSize= ruleSize EOF ;
+    // InternalXdiagramDsl.g:3634:1: entryRuleSize returns [EObject current=null] : iv_ruleSize= ruleSize EOF ;
     public final EObject entryRuleSize() throws RecognitionException {
         EObject current = null;
 
@@ -9681,8 +9822,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:3582:45: (iv_ruleSize= ruleSize EOF )
-            // InternalXdiagramDsl.g:3583:2: iv_ruleSize= ruleSize EOF
+            // InternalXdiagramDsl.g:3634:45: (iv_ruleSize= ruleSize EOF )
+            // InternalXdiagramDsl.g:3635:2: iv_ruleSize= ruleSize EOF
             {
              newCompositeNode(grammarAccess.getSizeRule()); 
             pushFollow(FOLLOW_1);
@@ -9709,7 +9850,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSize"
-    // InternalXdiagramDsl.g:3589:1: ruleSize returns [EObject current=null] : (otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) ( (lv_widthRelative_2_0= ']' ) )? ( ( (lv_height_3_0= RULE_INT ) ) ( (lv_heightRelative_4_0= ']' ) )? )? ( (lv_resizable_5_0= 'resizable' ) )? ( (lv_conditional_6_0= ruleFeatureConditional ) )? otherlv_7= ';' ) ;
+    // InternalXdiagramDsl.g:3641:1: ruleSize returns [EObject current=null] : (otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) ( (lv_widthRelative_2_0= ']' ) )? ( ( (lv_height_3_0= RULE_INT ) ) ( (lv_heightRelative_4_0= ']' ) )? )? ( (lv_resizable_5_0= 'resizable' ) )? ( (lv_conditional_6_0= ruleFeatureConditional ) )? otherlv_7= ';' ) ;
     public final EObject ruleSize() throws RecognitionException {
         EObject current = null;
 
@@ -9727,23 +9868,23 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:3595:2: ( (otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) ( (lv_widthRelative_2_0= ']' ) )? ( ( (lv_height_3_0= RULE_INT ) ) ( (lv_heightRelative_4_0= ']' ) )? )? ( (lv_resizable_5_0= 'resizable' ) )? ( (lv_conditional_6_0= ruleFeatureConditional ) )? otherlv_7= ';' ) )
-            // InternalXdiagramDsl.g:3596:2: (otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) ( (lv_widthRelative_2_0= ']' ) )? ( ( (lv_height_3_0= RULE_INT ) ) ( (lv_heightRelative_4_0= ']' ) )? )? ( (lv_resizable_5_0= 'resizable' ) )? ( (lv_conditional_6_0= ruleFeatureConditional ) )? otherlv_7= ';' )
+            // InternalXdiagramDsl.g:3647:2: ( (otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) ( (lv_widthRelative_2_0= ']' ) )? ( ( (lv_height_3_0= RULE_INT ) ) ( (lv_heightRelative_4_0= ']' ) )? )? ( (lv_resizable_5_0= 'resizable' ) )? ( (lv_conditional_6_0= ruleFeatureConditional ) )? otherlv_7= ';' ) )
+            // InternalXdiagramDsl.g:3648:2: (otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) ( (lv_widthRelative_2_0= ']' ) )? ( ( (lv_height_3_0= RULE_INT ) ) ( (lv_heightRelative_4_0= ']' ) )? )? ( (lv_resizable_5_0= 'resizable' ) )? ( (lv_conditional_6_0= ruleFeatureConditional ) )? otherlv_7= ';' )
             {
-            // InternalXdiagramDsl.g:3596:2: (otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) ( (lv_widthRelative_2_0= ']' ) )? ( ( (lv_height_3_0= RULE_INT ) ) ( (lv_heightRelative_4_0= ']' ) )? )? ( (lv_resizable_5_0= 'resizable' ) )? ( (lv_conditional_6_0= ruleFeatureConditional ) )? otherlv_7= ';' )
-            // InternalXdiagramDsl.g:3597:3: otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) ( (lv_widthRelative_2_0= ']' ) )? ( ( (lv_height_3_0= RULE_INT ) ) ( (lv_heightRelative_4_0= ']' ) )? )? ( (lv_resizable_5_0= 'resizable' ) )? ( (lv_conditional_6_0= ruleFeatureConditional ) )? otherlv_7= ';'
+            // InternalXdiagramDsl.g:3648:2: (otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) ( (lv_widthRelative_2_0= ']' ) )? ( ( (lv_height_3_0= RULE_INT ) ) ( (lv_heightRelative_4_0= ']' ) )? )? ( (lv_resizable_5_0= 'resizable' ) )? ( (lv_conditional_6_0= ruleFeatureConditional ) )? otherlv_7= ';' )
+            // InternalXdiagramDsl.g:3649:3: otherlv_0= 'size' ( (lv_width_1_0= RULE_INT ) ) ( (lv_widthRelative_2_0= ']' ) )? ( ( (lv_height_3_0= RULE_INT ) ) ( (lv_heightRelative_4_0= ']' ) )? )? ( (lv_resizable_5_0= 'resizable' ) )? ( (lv_conditional_6_0= ruleFeatureConditional ) )? otherlv_7= ';'
             {
-            otherlv_0=(Token)match(input,54,FOLLOW_22); 
+            otherlv_0=(Token)match(input,54,FOLLOW_23); 
 
             			newLeafNode(otherlv_0, grammarAccess.getSizeAccess().getSizeKeyword_0());
             		
-            // InternalXdiagramDsl.g:3601:3: ( (lv_width_1_0= RULE_INT ) )
-            // InternalXdiagramDsl.g:3602:4: (lv_width_1_0= RULE_INT )
+            // InternalXdiagramDsl.g:3653:3: ( (lv_width_1_0= RULE_INT ) )
+            // InternalXdiagramDsl.g:3654:4: (lv_width_1_0= RULE_INT )
             {
-            // InternalXdiagramDsl.g:3602:4: (lv_width_1_0= RULE_INT )
-            // InternalXdiagramDsl.g:3603:5: lv_width_1_0= RULE_INT
+            // InternalXdiagramDsl.g:3654:4: (lv_width_1_0= RULE_INT )
+            // InternalXdiagramDsl.g:3655:5: lv_width_1_0= RULE_INT
             {
-            lv_width_1_0=(Token)match(input,RULE_INT,FOLLOW_42); 
+            lv_width_1_0=(Token)match(input,RULE_INT,FOLLOW_44); 
 
             					newLeafNode(lv_width_1_0, grammarAccess.getSizeAccess().getWidthINTTerminalRuleCall_1_0());
             				
@@ -9763,21 +9904,21 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:3619:3: ( (lv_widthRelative_2_0= ']' ) )?
-            int alt56=2;
-            int LA56_0 = input.LA(1);
+            // InternalXdiagramDsl.g:3671:3: ( (lv_widthRelative_2_0= ']' ) )?
+            int alt58=2;
+            int LA58_0 = input.LA(1);
 
-            if ( (LA56_0==55) ) {
-                alt56=1;
+            if ( (LA58_0==55) ) {
+                alt58=1;
             }
-            switch (alt56) {
+            switch (alt58) {
                 case 1 :
-                    // InternalXdiagramDsl.g:3620:4: (lv_widthRelative_2_0= ']' )
+                    // InternalXdiagramDsl.g:3672:4: (lv_widthRelative_2_0= ']' )
                     {
-                    // InternalXdiagramDsl.g:3620:4: (lv_widthRelative_2_0= ']' )
-                    // InternalXdiagramDsl.g:3621:5: lv_widthRelative_2_0= ']'
+                    // InternalXdiagramDsl.g:3672:4: (lv_widthRelative_2_0= ']' )
+                    // InternalXdiagramDsl.g:3673:5: lv_widthRelative_2_0= ']'
                     {
-                    lv_widthRelative_2_0=(Token)match(input,55,FOLLOW_43); 
+                    lv_widthRelative_2_0=(Token)match(input,55,FOLLOW_45); 
 
                     					newLeafNode(lv_widthRelative_2_0, grammarAccess.getSizeAccess().getWidthRelativeRightSquareBracketKeyword_2_0());
                     				
@@ -9796,24 +9937,24 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:3633:3: ( ( (lv_height_3_0= RULE_INT ) ) ( (lv_heightRelative_4_0= ']' ) )? )?
-            int alt58=2;
-            int LA58_0 = input.LA(1);
+            // InternalXdiagramDsl.g:3685:3: ( ( (lv_height_3_0= RULE_INT ) ) ( (lv_heightRelative_4_0= ']' ) )? )?
+            int alt60=2;
+            int LA60_0 = input.LA(1);
 
-            if ( (LA58_0==RULE_INT) ) {
-                alt58=1;
+            if ( (LA60_0==RULE_INT) ) {
+                alt60=1;
             }
-            switch (alt58) {
+            switch (alt60) {
                 case 1 :
-                    // InternalXdiagramDsl.g:3634:4: ( (lv_height_3_0= RULE_INT ) ) ( (lv_heightRelative_4_0= ']' ) )?
+                    // InternalXdiagramDsl.g:3686:4: ( (lv_height_3_0= RULE_INT ) ) ( (lv_heightRelative_4_0= ']' ) )?
                     {
-                    // InternalXdiagramDsl.g:3634:4: ( (lv_height_3_0= RULE_INT ) )
-                    // InternalXdiagramDsl.g:3635:5: (lv_height_3_0= RULE_INT )
+                    // InternalXdiagramDsl.g:3686:4: ( (lv_height_3_0= RULE_INT ) )
+                    // InternalXdiagramDsl.g:3687:5: (lv_height_3_0= RULE_INT )
                     {
-                    // InternalXdiagramDsl.g:3635:5: (lv_height_3_0= RULE_INT )
-                    // InternalXdiagramDsl.g:3636:6: lv_height_3_0= RULE_INT
+                    // InternalXdiagramDsl.g:3687:5: (lv_height_3_0= RULE_INT )
+                    // InternalXdiagramDsl.g:3688:6: lv_height_3_0= RULE_INT
                     {
-                    lv_height_3_0=(Token)match(input,RULE_INT,FOLLOW_44); 
+                    lv_height_3_0=(Token)match(input,RULE_INT,FOLLOW_46); 
 
                     						newLeafNode(lv_height_3_0, grammarAccess.getSizeAccess().getHeightINTTerminalRuleCall_3_0_0());
                     					
@@ -9833,21 +9974,21 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalXdiagramDsl.g:3652:4: ( (lv_heightRelative_4_0= ']' ) )?
-                    int alt57=2;
-                    int LA57_0 = input.LA(1);
+                    // InternalXdiagramDsl.g:3704:4: ( (lv_heightRelative_4_0= ']' ) )?
+                    int alt59=2;
+                    int LA59_0 = input.LA(1);
 
-                    if ( (LA57_0==55) ) {
-                        alt57=1;
+                    if ( (LA59_0==55) ) {
+                        alt59=1;
                     }
-                    switch (alt57) {
+                    switch (alt59) {
                         case 1 :
-                            // InternalXdiagramDsl.g:3653:5: (lv_heightRelative_4_0= ']' )
+                            // InternalXdiagramDsl.g:3705:5: (lv_heightRelative_4_0= ']' )
                             {
-                            // InternalXdiagramDsl.g:3653:5: (lv_heightRelative_4_0= ']' )
-                            // InternalXdiagramDsl.g:3654:6: lv_heightRelative_4_0= ']'
+                            // InternalXdiagramDsl.g:3705:5: (lv_heightRelative_4_0= ']' )
+                            // InternalXdiagramDsl.g:3706:6: lv_heightRelative_4_0= ']'
                             {
-                            lv_heightRelative_4_0=(Token)match(input,55,FOLLOW_45); 
+                            lv_heightRelative_4_0=(Token)match(input,55,FOLLOW_47); 
 
                             						newLeafNode(lv_heightRelative_4_0, grammarAccess.getSizeAccess().getHeightRelativeRightSquareBracketKeyword_3_1_0());
                             					
@@ -9872,21 +10013,21 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:3667:3: ( (lv_resizable_5_0= 'resizable' ) )?
-            int alt59=2;
-            int LA59_0 = input.LA(1);
+            // InternalXdiagramDsl.g:3719:3: ( (lv_resizable_5_0= 'resizable' ) )?
+            int alt61=2;
+            int LA61_0 = input.LA(1);
 
-            if ( (LA59_0==56) ) {
-                alt59=1;
+            if ( (LA61_0==56) ) {
+                alt61=1;
             }
-            switch (alt59) {
+            switch (alt61) {
                 case 1 :
-                    // InternalXdiagramDsl.g:3668:4: (lv_resizable_5_0= 'resizable' )
+                    // InternalXdiagramDsl.g:3720:4: (lv_resizable_5_0= 'resizable' )
                     {
-                    // InternalXdiagramDsl.g:3668:4: (lv_resizable_5_0= 'resizable' )
-                    // InternalXdiagramDsl.g:3669:5: lv_resizable_5_0= 'resizable'
+                    // InternalXdiagramDsl.g:3720:4: (lv_resizable_5_0= 'resizable' )
+                    // InternalXdiagramDsl.g:3721:5: lv_resizable_5_0= 'resizable'
                     {
-                    lv_resizable_5_0=(Token)match(input,56,FOLLOW_27); 
+                    lv_resizable_5_0=(Token)match(input,56,FOLLOW_28); 
 
                     					newLeafNode(lv_resizable_5_0, grammarAccess.getSizeAccess().getResizableResizableKeyword_4_0());
                     				
@@ -9905,24 +10046,24 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:3681:3: ( (lv_conditional_6_0= ruleFeatureConditional ) )?
-            int alt60=2;
-            int LA60_0 = input.LA(1);
+            // InternalXdiagramDsl.g:3733:3: ( (lv_conditional_6_0= ruleFeatureConditional ) )?
+            int alt62=2;
+            int LA62_0 = input.LA(1);
 
-            if ( (LA60_0==19) ) {
-                alt60=1;
+            if ( (LA62_0==19) ) {
+                alt62=1;
             }
-            switch (alt60) {
+            switch (alt62) {
                 case 1 :
-                    // InternalXdiagramDsl.g:3682:4: (lv_conditional_6_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:3734:4: (lv_conditional_6_0= ruleFeatureConditional )
                     {
-                    // InternalXdiagramDsl.g:3682:4: (lv_conditional_6_0= ruleFeatureConditional )
-                    // InternalXdiagramDsl.g:3683:5: lv_conditional_6_0= ruleFeatureConditional
+                    // InternalXdiagramDsl.g:3734:4: (lv_conditional_6_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:3735:5: lv_conditional_6_0= ruleFeatureConditional
                     {
 
                     					newCompositeNode(grammarAccess.getSizeAccess().getConditionalFeatureConditionalParserRuleCall_5_0());
                     				
-                    pushFollow(FOLLOW_28);
+                    pushFollow(FOLLOW_29);
                     lv_conditional_6_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -9974,7 +10115,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePoint"
-    // InternalXdiagramDsl.g:3708:1: entryRulePoint returns [EObject current=null] : iv_rulePoint= rulePoint EOF ;
+    // InternalXdiagramDsl.g:3760:1: entryRulePoint returns [EObject current=null] : iv_rulePoint= rulePoint EOF ;
     public final EObject entryRulePoint() throws RecognitionException {
         EObject current = null;
 
@@ -9982,8 +10123,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:3708:46: (iv_rulePoint= rulePoint EOF )
-            // InternalXdiagramDsl.g:3709:2: iv_rulePoint= rulePoint EOF
+            // InternalXdiagramDsl.g:3760:46: (iv_rulePoint= rulePoint EOF )
+            // InternalXdiagramDsl.g:3761:2: iv_rulePoint= rulePoint EOF
             {
              newCompositeNode(grammarAccess.getPointRule()); 
             pushFollow(FOLLOW_1);
@@ -10010,7 +10151,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePoint"
-    // InternalXdiagramDsl.g:3715:1: rulePoint returns [EObject current=null] : (otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) ( (lv_y_2_0= RULE_INT ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) ;
+    // InternalXdiagramDsl.g:3767:1: rulePoint returns [EObject current=null] : (otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) ( (lv_y_2_0= RULE_INT ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) ;
     public final EObject rulePoint() throws RecognitionException {
         EObject current = null;
 
@@ -10025,23 +10166,23 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:3721:2: ( (otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) ( (lv_y_2_0= RULE_INT ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) )
-            // InternalXdiagramDsl.g:3722:2: (otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) ( (lv_y_2_0= RULE_INT ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
+            // InternalXdiagramDsl.g:3773:2: ( (otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) ( (lv_y_2_0= RULE_INT ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) )
+            // InternalXdiagramDsl.g:3774:2: (otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) ( (lv_y_2_0= RULE_INT ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
             {
-            // InternalXdiagramDsl.g:3722:2: (otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) ( (lv_y_2_0= RULE_INT ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
-            // InternalXdiagramDsl.g:3723:3: otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) ( (lv_y_2_0= RULE_INT ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';'
+            // InternalXdiagramDsl.g:3774:2: (otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) ( (lv_y_2_0= RULE_INT ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
+            // InternalXdiagramDsl.g:3775:3: otherlv_0= 'point' ( (lv_x_1_0= RULE_INT ) ) ( (lv_y_2_0= RULE_INT ) ) ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';'
             {
-            otherlv_0=(Token)match(input,57,FOLLOW_22); 
+            otherlv_0=(Token)match(input,57,FOLLOW_23); 
 
             			newLeafNode(otherlv_0, grammarAccess.getPointAccess().getPointKeyword_0());
             		
-            // InternalXdiagramDsl.g:3727:3: ( (lv_x_1_0= RULE_INT ) )
-            // InternalXdiagramDsl.g:3728:4: (lv_x_1_0= RULE_INT )
+            // InternalXdiagramDsl.g:3779:3: ( (lv_x_1_0= RULE_INT ) )
+            // InternalXdiagramDsl.g:3780:4: (lv_x_1_0= RULE_INT )
             {
-            // InternalXdiagramDsl.g:3728:4: (lv_x_1_0= RULE_INT )
-            // InternalXdiagramDsl.g:3729:5: lv_x_1_0= RULE_INT
+            // InternalXdiagramDsl.g:3780:4: (lv_x_1_0= RULE_INT )
+            // InternalXdiagramDsl.g:3781:5: lv_x_1_0= RULE_INT
             {
-            lv_x_1_0=(Token)match(input,RULE_INT,FOLLOW_22); 
+            lv_x_1_0=(Token)match(input,RULE_INT,FOLLOW_23); 
 
             					newLeafNode(lv_x_1_0, grammarAccess.getPointAccess().getXINTTerminalRuleCall_1_0());
             				
@@ -10061,13 +10202,13 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:3745:3: ( (lv_y_2_0= RULE_INT ) )
-            // InternalXdiagramDsl.g:3746:4: (lv_y_2_0= RULE_INT )
+            // InternalXdiagramDsl.g:3797:3: ( (lv_y_2_0= RULE_INT ) )
+            // InternalXdiagramDsl.g:3798:4: (lv_y_2_0= RULE_INT )
             {
-            // InternalXdiagramDsl.g:3746:4: (lv_y_2_0= RULE_INT )
-            // InternalXdiagramDsl.g:3747:5: lv_y_2_0= RULE_INT
+            // InternalXdiagramDsl.g:3798:4: (lv_y_2_0= RULE_INT )
+            // InternalXdiagramDsl.g:3799:5: lv_y_2_0= RULE_INT
             {
-            lv_y_2_0=(Token)match(input,RULE_INT,FOLLOW_27); 
+            lv_y_2_0=(Token)match(input,RULE_INT,FOLLOW_28); 
 
             					newLeafNode(lv_y_2_0, grammarAccess.getPointAccess().getYINTTerminalRuleCall_2_0());
             				
@@ -10087,24 +10228,24 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:3763:3: ( (lv_conditional_3_0= ruleFeatureConditional ) )?
-            int alt61=2;
-            int LA61_0 = input.LA(1);
+            // InternalXdiagramDsl.g:3815:3: ( (lv_conditional_3_0= ruleFeatureConditional ) )?
+            int alt63=2;
+            int LA63_0 = input.LA(1);
 
-            if ( (LA61_0==19) ) {
-                alt61=1;
+            if ( (LA63_0==19) ) {
+                alt63=1;
             }
-            switch (alt61) {
+            switch (alt63) {
                 case 1 :
-                    // InternalXdiagramDsl.g:3764:4: (lv_conditional_3_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:3816:4: (lv_conditional_3_0= ruleFeatureConditional )
                     {
-                    // InternalXdiagramDsl.g:3764:4: (lv_conditional_3_0= ruleFeatureConditional )
-                    // InternalXdiagramDsl.g:3765:5: lv_conditional_3_0= ruleFeatureConditional
+                    // InternalXdiagramDsl.g:3816:4: (lv_conditional_3_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:3817:5: lv_conditional_3_0= ruleFeatureConditional
                     {
 
                     					newCompositeNode(grammarAccess.getPointAccess().getConditionalFeatureConditionalParserRuleCall_3_0());
                     				
-                    pushFollow(FOLLOW_28);
+                    pushFollow(FOLLOW_29);
                     lv_conditional_3_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -10156,7 +10297,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePosition"
-    // InternalXdiagramDsl.g:3790:1: entryRulePosition returns [EObject current=null] : iv_rulePosition= rulePosition EOF ;
+    // InternalXdiagramDsl.g:3842:1: entryRulePosition returns [EObject current=null] : iv_rulePosition= rulePosition EOF ;
     public final EObject entryRulePosition() throws RecognitionException {
         EObject current = null;
 
@@ -10164,8 +10305,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:3790:49: (iv_rulePosition= rulePosition EOF )
-            // InternalXdiagramDsl.g:3791:2: iv_rulePosition= rulePosition EOF
+            // InternalXdiagramDsl.g:3842:49: (iv_rulePosition= rulePosition EOF )
+            // InternalXdiagramDsl.g:3843:2: iv_rulePosition= rulePosition EOF
             {
              newCompositeNode(grammarAccess.getPositionRule()); 
             pushFollow(FOLLOW_1);
@@ -10192,7 +10333,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePosition"
-    // InternalXdiagramDsl.g:3797:1: rulePosition returns [EObject current=null] : (otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) ( (lv_xRelative_2_0= '%' ) )? ( (lv_y_3_0= RULE_INT ) ) ( (lv_yRelative_4_0= '%' ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' ) ;
+    // InternalXdiagramDsl.g:3849:1: rulePosition returns [EObject current=null] : (otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) ( (lv_xRelative_2_0= '%' ) )? ( (lv_y_3_0= RULE_INT ) ) ( (lv_yRelative_4_0= '%' ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' ) ;
     public final EObject rulePosition() throws RecognitionException {
         EObject current = null;
 
@@ -10209,23 +10350,23 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:3803:2: ( (otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) ( (lv_xRelative_2_0= '%' ) )? ( (lv_y_3_0= RULE_INT ) ) ( (lv_yRelative_4_0= '%' ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' ) )
-            // InternalXdiagramDsl.g:3804:2: (otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) ( (lv_xRelative_2_0= '%' ) )? ( (lv_y_3_0= RULE_INT ) ) ( (lv_yRelative_4_0= '%' ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' )
+            // InternalXdiagramDsl.g:3855:2: ( (otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) ( (lv_xRelative_2_0= '%' ) )? ( (lv_y_3_0= RULE_INT ) ) ( (lv_yRelative_4_0= '%' ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' ) )
+            // InternalXdiagramDsl.g:3856:2: (otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) ( (lv_xRelative_2_0= '%' ) )? ( (lv_y_3_0= RULE_INT ) ) ( (lv_yRelative_4_0= '%' ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' )
             {
-            // InternalXdiagramDsl.g:3804:2: (otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) ( (lv_xRelative_2_0= '%' ) )? ( (lv_y_3_0= RULE_INT ) ) ( (lv_yRelative_4_0= '%' ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' )
-            // InternalXdiagramDsl.g:3805:3: otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) ( (lv_xRelative_2_0= '%' ) )? ( (lv_y_3_0= RULE_INT ) ) ( (lv_yRelative_4_0= '%' ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';'
+            // InternalXdiagramDsl.g:3856:2: (otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) ( (lv_xRelative_2_0= '%' ) )? ( (lv_y_3_0= RULE_INT ) ) ( (lv_yRelative_4_0= '%' ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' )
+            // InternalXdiagramDsl.g:3857:3: otherlv_0= 'position' ( (lv_x_1_0= RULE_INT ) ) ( (lv_xRelative_2_0= '%' ) )? ( (lv_y_3_0= RULE_INT ) ) ( (lv_yRelative_4_0= '%' ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';'
             {
-            otherlv_0=(Token)match(input,58,FOLLOW_22); 
+            otherlv_0=(Token)match(input,58,FOLLOW_23); 
 
             			newLeafNode(otherlv_0, grammarAccess.getPositionAccess().getPositionKeyword_0());
             		
-            // InternalXdiagramDsl.g:3809:3: ( (lv_x_1_0= RULE_INT ) )
-            // InternalXdiagramDsl.g:3810:4: (lv_x_1_0= RULE_INT )
+            // InternalXdiagramDsl.g:3861:3: ( (lv_x_1_0= RULE_INT ) )
+            // InternalXdiagramDsl.g:3862:4: (lv_x_1_0= RULE_INT )
             {
-            // InternalXdiagramDsl.g:3810:4: (lv_x_1_0= RULE_INT )
-            // InternalXdiagramDsl.g:3811:5: lv_x_1_0= RULE_INT
+            // InternalXdiagramDsl.g:3862:4: (lv_x_1_0= RULE_INT )
+            // InternalXdiagramDsl.g:3863:5: lv_x_1_0= RULE_INT
             {
-            lv_x_1_0=(Token)match(input,RULE_INT,FOLLOW_46); 
+            lv_x_1_0=(Token)match(input,RULE_INT,FOLLOW_48); 
 
             					newLeafNode(lv_x_1_0, grammarAccess.getPositionAccess().getXINTTerminalRuleCall_1_0());
             				
@@ -10245,21 +10386,21 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:3827:3: ( (lv_xRelative_2_0= '%' ) )?
-            int alt62=2;
-            int LA62_0 = input.LA(1);
+            // InternalXdiagramDsl.g:3879:3: ( (lv_xRelative_2_0= '%' ) )?
+            int alt64=2;
+            int LA64_0 = input.LA(1);
 
-            if ( (LA62_0==27) ) {
-                alt62=1;
+            if ( (LA64_0==27) ) {
+                alt64=1;
             }
-            switch (alt62) {
+            switch (alt64) {
                 case 1 :
-                    // InternalXdiagramDsl.g:3828:4: (lv_xRelative_2_0= '%' )
+                    // InternalXdiagramDsl.g:3880:4: (lv_xRelative_2_0= '%' )
                     {
-                    // InternalXdiagramDsl.g:3828:4: (lv_xRelative_2_0= '%' )
-                    // InternalXdiagramDsl.g:3829:5: lv_xRelative_2_0= '%'
+                    // InternalXdiagramDsl.g:3880:4: (lv_xRelative_2_0= '%' )
+                    // InternalXdiagramDsl.g:3881:5: lv_xRelative_2_0= '%'
                     {
-                    lv_xRelative_2_0=(Token)match(input,27,FOLLOW_22); 
+                    lv_xRelative_2_0=(Token)match(input,27,FOLLOW_23); 
 
                     					newLeafNode(lv_xRelative_2_0, grammarAccess.getPositionAccess().getXRelativePercentSignKeyword_2_0());
                     				
@@ -10278,13 +10419,13 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:3841:3: ( (lv_y_3_0= RULE_INT ) )
-            // InternalXdiagramDsl.g:3842:4: (lv_y_3_0= RULE_INT )
+            // InternalXdiagramDsl.g:3893:3: ( (lv_y_3_0= RULE_INT ) )
+            // InternalXdiagramDsl.g:3894:4: (lv_y_3_0= RULE_INT )
             {
-            // InternalXdiagramDsl.g:3842:4: (lv_y_3_0= RULE_INT )
-            // InternalXdiagramDsl.g:3843:5: lv_y_3_0= RULE_INT
+            // InternalXdiagramDsl.g:3894:4: (lv_y_3_0= RULE_INT )
+            // InternalXdiagramDsl.g:3895:5: lv_y_3_0= RULE_INT
             {
-            lv_y_3_0=(Token)match(input,RULE_INT,FOLLOW_47); 
+            lv_y_3_0=(Token)match(input,RULE_INT,FOLLOW_49); 
 
             					newLeafNode(lv_y_3_0, grammarAccess.getPositionAccess().getYINTTerminalRuleCall_3_0());
             				
@@ -10304,21 +10445,21 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:3859:3: ( (lv_yRelative_4_0= '%' ) )?
-            int alt63=2;
-            int LA63_0 = input.LA(1);
+            // InternalXdiagramDsl.g:3911:3: ( (lv_yRelative_4_0= '%' ) )?
+            int alt65=2;
+            int LA65_0 = input.LA(1);
 
-            if ( (LA63_0==27) ) {
-                alt63=1;
+            if ( (LA65_0==27) ) {
+                alt65=1;
             }
-            switch (alt63) {
+            switch (alt65) {
                 case 1 :
-                    // InternalXdiagramDsl.g:3860:4: (lv_yRelative_4_0= '%' )
+                    // InternalXdiagramDsl.g:3912:4: (lv_yRelative_4_0= '%' )
                     {
-                    // InternalXdiagramDsl.g:3860:4: (lv_yRelative_4_0= '%' )
-                    // InternalXdiagramDsl.g:3861:5: lv_yRelative_4_0= '%'
+                    // InternalXdiagramDsl.g:3912:4: (lv_yRelative_4_0= '%' )
+                    // InternalXdiagramDsl.g:3913:5: lv_yRelative_4_0= '%'
                     {
-                    lv_yRelative_4_0=(Token)match(input,27,FOLLOW_27); 
+                    lv_yRelative_4_0=(Token)match(input,27,FOLLOW_28); 
 
                     					newLeafNode(lv_yRelative_4_0, grammarAccess.getPositionAccess().getYRelativePercentSignKeyword_4_0());
                     				
@@ -10337,24 +10478,24 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:3873:3: ( (lv_conditional_5_0= ruleFeatureConditional ) )?
-            int alt64=2;
-            int LA64_0 = input.LA(1);
+            // InternalXdiagramDsl.g:3925:3: ( (lv_conditional_5_0= ruleFeatureConditional ) )?
+            int alt66=2;
+            int LA66_0 = input.LA(1);
 
-            if ( (LA64_0==19) ) {
-                alt64=1;
+            if ( (LA66_0==19) ) {
+                alt66=1;
             }
-            switch (alt64) {
+            switch (alt66) {
                 case 1 :
-                    // InternalXdiagramDsl.g:3874:4: (lv_conditional_5_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:3926:4: (lv_conditional_5_0= ruleFeatureConditional )
                     {
-                    // InternalXdiagramDsl.g:3874:4: (lv_conditional_5_0= ruleFeatureConditional )
-                    // InternalXdiagramDsl.g:3875:5: lv_conditional_5_0= ruleFeatureConditional
+                    // InternalXdiagramDsl.g:3926:4: (lv_conditional_5_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:3927:5: lv_conditional_5_0= ruleFeatureConditional
                     {
 
                     					newCompositeNode(grammarAccess.getPositionAccess().getConditionalFeatureConditionalParserRuleCall_5_0());
                     				
-                    pushFollow(FOLLOW_28);
+                    pushFollow(FOLLOW_29);
                     lv_conditional_5_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -10406,7 +10547,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCorner"
-    // InternalXdiagramDsl.g:3900:1: entryRuleCorner returns [EObject current=null] : iv_ruleCorner= ruleCorner EOF ;
+    // InternalXdiagramDsl.g:3952:1: entryRuleCorner returns [EObject current=null] : iv_ruleCorner= ruleCorner EOF ;
     public final EObject entryRuleCorner() throws RecognitionException {
         EObject current = null;
 
@@ -10414,8 +10555,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:3900:47: (iv_ruleCorner= ruleCorner EOF )
-            // InternalXdiagramDsl.g:3901:2: iv_ruleCorner= ruleCorner EOF
+            // InternalXdiagramDsl.g:3952:47: (iv_ruleCorner= ruleCorner EOF )
+            // InternalXdiagramDsl.g:3953:2: iv_ruleCorner= ruleCorner EOF
             {
              newCompositeNode(grammarAccess.getCornerRule()); 
             pushFollow(FOLLOW_1);
@@ -10442,7 +10583,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCorner"
-    // InternalXdiagramDsl.g:3907:1: ruleCorner returns [EObject current=null] : (otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
+    // InternalXdiagramDsl.g:3959:1: ruleCorner returns [EObject current=null] : (otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
     public final EObject ruleCorner() throws RecognitionException {
         EObject current = null;
 
@@ -10456,23 +10597,23 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:3913:2: ( (otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
-            // InternalXdiagramDsl.g:3914:2: (otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // InternalXdiagramDsl.g:3965:2: ( (otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
+            // InternalXdiagramDsl.g:3966:2: (otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
             {
-            // InternalXdiagramDsl.g:3914:2: (otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
-            // InternalXdiagramDsl.g:3915:3: otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
+            // InternalXdiagramDsl.g:3966:2: (otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // InternalXdiagramDsl.g:3967:3: otherlv_0= 'corner' ( (lv_angle_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
             {
-            otherlv_0=(Token)match(input,59,FOLLOW_22); 
+            otherlv_0=(Token)match(input,59,FOLLOW_23); 
 
             			newLeafNode(otherlv_0, grammarAccess.getCornerAccess().getCornerKeyword_0());
             		
-            // InternalXdiagramDsl.g:3919:3: ( (lv_angle_1_0= RULE_INT ) )
-            // InternalXdiagramDsl.g:3920:4: (lv_angle_1_0= RULE_INT )
+            // InternalXdiagramDsl.g:3971:3: ( (lv_angle_1_0= RULE_INT ) )
+            // InternalXdiagramDsl.g:3972:4: (lv_angle_1_0= RULE_INT )
             {
-            // InternalXdiagramDsl.g:3920:4: (lv_angle_1_0= RULE_INT )
-            // InternalXdiagramDsl.g:3921:5: lv_angle_1_0= RULE_INT
+            // InternalXdiagramDsl.g:3972:4: (lv_angle_1_0= RULE_INT )
+            // InternalXdiagramDsl.g:3973:5: lv_angle_1_0= RULE_INT
             {
-            lv_angle_1_0=(Token)match(input,RULE_INT,FOLLOW_27); 
+            lv_angle_1_0=(Token)match(input,RULE_INT,FOLLOW_28); 
 
             					newLeafNode(lv_angle_1_0, grammarAccess.getCornerAccess().getAngleINTTerminalRuleCall_1_0());
             				
@@ -10492,24 +10633,24 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:3937:3: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
-            int alt65=2;
-            int LA65_0 = input.LA(1);
+            // InternalXdiagramDsl.g:3989:3: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
+            int alt67=2;
+            int LA67_0 = input.LA(1);
 
-            if ( (LA65_0==19) ) {
-                alt65=1;
+            if ( (LA67_0==19) ) {
+                alt67=1;
             }
-            switch (alt65) {
+            switch (alt67) {
                 case 1 :
-                    // InternalXdiagramDsl.g:3938:4: (lv_conditional_2_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:3990:4: (lv_conditional_2_0= ruleFeatureConditional )
                     {
-                    // InternalXdiagramDsl.g:3938:4: (lv_conditional_2_0= ruleFeatureConditional )
-                    // InternalXdiagramDsl.g:3939:5: lv_conditional_2_0= ruleFeatureConditional
+                    // InternalXdiagramDsl.g:3990:4: (lv_conditional_2_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:3991:5: lv_conditional_2_0= ruleFeatureConditional
                     {
 
                     					newCompositeNode(grammarAccess.getCornerAccess().getConditionalFeatureConditionalParserRuleCall_2_0());
                     				
-                    pushFollow(FOLLOW_28);
+                    pushFollow(FOLLOW_29);
                     lv_conditional_2_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -10561,7 +10702,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLayout"
-    // InternalXdiagramDsl.g:3964:1: entryRuleLayout returns [EObject current=null] : iv_ruleLayout= ruleLayout EOF ;
+    // InternalXdiagramDsl.g:4016:1: entryRuleLayout returns [EObject current=null] : iv_ruleLayout= ruleLayout EOF ;
     public final EObject entryRuleLayout() throws RecognitionException {
         EObject current = null;
 
@@ -10569,8 +10710,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:3964:47: (iv_ruleLayout= ruleLayout EOF )
-            // InternalXdiagramDsl.g:3965:2: iv_ruleLayout= ruleLayout EOF
+            // InternalXdiagramDsl.g:4016:47: (iv_ruleLayout= ruleLayout EOF )
+            // InternalXdiagramDsl.g:4017:2: iv_ruleLayout= ruleLayout EOF
             {
              newCompositeNode(grammarAccess.getLayoutRule()); 
             pushFollow(FOLLOW_1);
@@ -10597,7 +10738,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLayout"
-    // InternalXdiagramDsl.g:3971:1: ruleLayout returns [EObject current=null] : (otherlv_0= 'layout' ( ( (lv_vertical_1_0= 'vertical' ) ) | ( (lv_horizontal_2_0= 'horizontal' ) ) ) (otherlv_3= 'margin' ( (lv_margin_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' ) ;
+    // InternalXdiagramDsl.g:4023:1: ruleLayout returns [EObject current=null] : (otherlv_0= 'layout' ( ( (lv_vertical_1_0= 'vertical' ) ) | ( (lv_horizontal_2_0= 'horizontal' ) ) ) (otherlv_3= 'margin' ( (lv_margin_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' ) ;
     public final EObject ruleLayout() throws RecognitionException {
         EObject current = null;
 
@@ -10614,43 +10755,43 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:3977:2: ( (otherlv_0= 'layout' ( ( (lv_vertical_1_0= 'vertical' ) ) | ( (lv_horizontal_2_0= 'horizontal' ) ) ) (otherlv_3= 'margin' ( (lv_margin_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' ) )
-            // InternalXdiagramDsl.g:3978:2: (otherlv_0= 'layout' ( ( (lv_vertical_1_0= 'vertical' ) ) | ( (lv_horizontal_2_0= 'horizontal' ) ) ) (otherlv_3= 'margin' ( (lv_margin_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' )
+            // InternalXdiagramDsl.g:4029:2: ( (otherlv_0= 'layout' ( ( (lv_vertical_1_0= 'vertical' ) ) | ( (lv_horizontal_2_0= 'horizontal' ) ) ) (otherlv_3= 'margin' ( (lv_margin_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' ) )
+            // InternalXdiagramDsl.g:4030:2: (otherlv_0= 'layout' ( ( (lv_vertical_1_0= 'vertical' ) ) | ( (lv_horizontal_2_0= 'horizontal' ) ) ) (otherlv_3= 'margin' ( (lv_margin_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' )
             {
-            // InternalXdiagramDsl.g:3978:2: (otherlv_0= 'layout' ( ( (lv_vertical_1_0= 'vertical' ) ) | ( (lv_horizontal_2_0= 'horizontal' ) ) ) (otherlv_3= 'margin' ( (lv_margin_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' )
-            // InternalXdiagramDsl.g:3979:3: otherlv_0= 'layout' ( ( (lv_vertical_1_0= 'vertical' ) ) | ( (lv_horizontal_2_0= 'horizontal' ) ) ) (otherlv_3= 'margin' ( (lv_margin_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';'
+            // InternalXdiagramDsl.g:4030:2: (otherlv_0= 'layout' ( ( (lv_vertical_1_0= 'vertical' ) ) | ( (lv_horizontal_2_0= 'horizontal' ) ) ) (otherlv_3= 'margin' ( (lv_margin_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';' )
+            // InternalXdiagramDsl.g:4031:3: otherlv_0= 'layout' ( ( (lv_vertical_1_0= 'vertical' ) ) | ( (lv_horizontal_2_0= 'horizontal' ) ) ) (otherlv_3= 'margin' ( (lv_margin_4_0= RULE_INT ) ) )? ( (lv_conditional_5_0= ruleFeatureConditional ) )? otherlv_6= ';'
             {
-            otherlv_0=(Token)match(input,60,FOLLOW_48); 
+            otherlv_0=(Token)match(input,60,FOLLOW_50); 
 
             			newLeafNode(otherlv_0, grammarAccess.getLayoutAccess().getLayoutKeyword_0());
             		
-            // InternalXdiagramDsl.g:3983:3: ( ( (lv_vertical_1_0= 'vertical' ) ) | ( (lv_horizontal_2_0= 'horizontal' ) ) )
-            int alt66=2;
-            int LA66_0 = input.LA(1);
+            // InternalXdiagramDsl.g:4035:3: ( ( (lv_vertical_1_0= 'vertical' ) ) | ( (lv_horizontal_2_0= 'horizontal' ) ) )
+            int alt68=2;
+            int LA68_0 = input.LA(1);
 
-            if ( (LA66_0==61) ) {
-                alt66=1;
+            if ( (LA68_0==61) ) {
+                alt68=1;
             }
-            else if ( (LA66_0==62) ) {
-                alt66=2;
+            else if ( (LA68_0==62) ) {
+                alt68=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 66, 0, input);
+                    new NoViableAltException("", 68, 0, input);
 
                 throw nvae;
             }
-            switch (alt66) {
+            switch (alt68) {
                 case 1 :
-                    // InternalXdiagramDsl.g:3984:4: ( (lv_vertical_1_0= 'vertical' ) )
+                    // InternalXdiagramDsl.g:4036:4: ( (lv_vertical_1_0= 'vertical' ) )
                     {
-                    // InternalXdiagramDsl.g:3984:4: ( (lv_vertical_1_0= 'vertical' ) )
-                    // InternalXdiagramDsl.g:3985:5: (lv_vertical_1_0= 'vertical' )
+                    // InternalXdiagramDsl.g:4036:4: ( (lv_vertical_1_0= 'vertical' ) )
+                    // InternalXdiagramDsl.g:4037:5: (lv_vertical_1_0= 'vertical' )
                     {
-                    // InternalXdiagramDsl.g:3985:5: (lv_vertical_1_0= 'vertical' )
-                    // InternalXdiagramDsl.g:3986:6: lv_vertical_1_0= 'vertical'
+                    // InternalXdiagramDsl.g:4037:5: (lv_vertical_1_0= 'vertical' )
+                    // InternalXdiagramDsl.g:4038:6: lv_vertical_1_0= 'vertical'
                     {
-                    lv_vertical_1_0=(Token)match(input,61,FOLLOW_49); 
+                    lv_vertical_1_0=(Token)match(input,61,FOLLOW_51); 
 
                     						newLeafNode(lv_vertical_1_0, grammarAccess.getLayoutAccess().getVerticalVerticalKeyword_1_0_0());
                     					
@@ -10670,15 +10811,15 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:3999:4: ( (lv_horizontal_2_0= 'horizontal' ) )
+                    // InternalXdiagramDsl.g:4051:4: ( (lv_horizontal_2_0= 'horizontal' ) )
                     {
-                    // InternalXdiagramDsl.g:3999:4: ( (lv_horizontal_2_0= 'horizontal' ) )
-                    // InternalXdiagramDsl.g:4000:5: (lv_horizontal_2_0= 'horizontal' )
+                    // InternalXdiagramDsl.g:4051:4: ( (lv_horizontal_2_0= 'horizontal' ) )
+                    // InternalXdiagramDsl.g:4052:5: (lv_horizontal_2_0= 'horizontal' )
                     {
-                    // InternalXdiagramDsl.g:4000:5: (lv_horizontal_2_0= 'horizontal' )
-                    // InternalXdiagramDsl.g:4001:6: lv_horizontal_2_0= 'horizontal'
+                    // InternalXdiagramDsl.g:4052:5: (lv_horizontal_2_0= 'horizontal' )
+                    // InternalXdiagramDsl.g:4053:6: lv_horizontal_2_0= 'horizontal'
                     {
-                    lv_horizontal_2_0=(Token)match(input,62,FOLLOW_49); 
+                    lv_horizontal_2_0=(Token)match(input,62,FOLLOW_51); 
 
                     						newLeafNode(lv_horizontal_2_0, grammarAccess.getLayoutAccess().getHorizontalHorizontalKeyword_1_1_0());
                     					
@@ -10700,28 +10841,28 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:4014:3: (otherlv_3= 'margin' ( (lv_margin_4_0= RULE_INT ) ) )?
-            int alt67=2;
-            int LA67_0 = input.LA(1);
+            // InternalXdiagramDsl.g:4066:3: (otherlv_3= 'margin' ( (lv_margin_4_0= RULE_INT ) ) )?
+            int alt69=2;
+            int LA69_0 = input.LA(1);
 
-            if ( (LA67_0==63) ) {
-                alt67=1;
+            if ( (LA69_0==63) ) {
+                alt69=1;
             }
-            switch (alt67) {
+            switch (alt69) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4015:4: otherlv_3= 'margin' ( (lv_margin_4_0= RULE_INT ) )
+                    // InternalXdiagramDsl.g:4067:4: otherlv_3= 'margin' ( (lv_margin_4_0= RULE_INT ) )
                     {
-                    otherlv_3=(Token)match(input,63,FOLLOW_22); 
+                    otherlv_3=(Token)match(input,63,FOLLOW_23); 
 
                     				newLeafNode(otherlv_3, grammarAccess.getLayoutAccess().getMarginKeyword_2_0());
                     			
-                    // InternalXdiagramDsl.g:4019:4: ( (lv_margin_4_0= RULE_INT ) )
-                    // InternalXdiagramDsl.g:4020:5: (lv_margin_4_0= RULE_INT )
+                    // InternalXdiagramDsl.g:4071:4: ( (lv_margin_4_0= RULE_INT ) )
+                    // InternalXdiagramDsl.g:4072:5: (lv_margin_4_0= RULE_INT )
                     {
-                    // InternalXdiagramDsl.g:4020:5: (lv_margin_4_0= RULE_INT )
-                    // InternalXdiagramDsl.g:4021:6: lv_margin_4_0= RULE_INT
+                    // InternalXdiagramDsl.g:4072:5: (lv_margin_4_0= RULE_INT )
+                    // InternalXdiagramDsl.g:4073:6: lv_margin_4_0= RULE_INT
                     {
-                    lv_margin_4_0=(Token)match(input,RULE_INT,FOLLOW_27); 
+                    lv_margin_4_0=(Token)match(input,RULE_INT,FOLLOW_28); 
 
                     						newLeafNode(lv_margin_4_0, grammarAccess.getLayoutAccess().getMarginINTTerminalRuleCall_2_1_0());
                     					
@@ -10747,24 +10888,24 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:4038:3: ( (lv_conditional_5_0= ruleFeatureConditional ) )?
-            int alt68=2;
-            int LA68_0 = input.LA(1);
+            // InternalXdiagramDsl.g:4090:3: ( (lv_conditional_5_0= ruleFeatureConditional ) )?
+            int alt70=2;
+            int LA70_0 = input.LA(1);
 
-            if ( (LA68_0==19) ) {
-                alt68=1;
+            if ( (LA70_0==19) ) {
+                alt70=1;
             }
-            switch (alt68) {
+            switch (alt70) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4039:4: (lv_conditional_5_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:4091:4: (lv_conditional_5_0= ruleFeatureConditional )
                     {
-                    // InternalXdiagramDsl.g:4039:4: (lv_conditional_5_0= ruleFeatureConditional )
-                    // InternalXdiagramDsl.g:4040:5: lv_conditional_5_0= ruleFeatureConditional
+                    // InternalXdiagramDsl.g:4091:4: (lv_conditional_5_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:4092:5: lv_conditional_5_0= ruleFeatureConditional
                     {
 
                     					newCompositeNode(grammarAccess.getLayoutAccess().getConditionalFeatureConditionalParserRuleCall_3_0());
                     				
-                    pushFollow(FOLLOW_28);
+                    pushFollow(FOLLOW_29);
                     lv_conditional_5_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -10816,7 +10957,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVisible"
-    // InternalXdiagramDsl.g:4065:1: entryRuleVisible returns [EObject current=null] : iv_ruleVisible= ruleVisible EOF ;
+    // InternalXdiagramDsl.g:4117:1: entryRuleVisible returns [EObject current=null] : iv_ruleVisible= ruleVisible EOF ;
     public final EObject entryRuleVisible() throws RecognitionException {
         EObject current = null;
 
@@ -10824,8 +10965,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:4065:48: (iv_ruleVisible= ruleVisible EOF )
-            // InternalXdiagramDsl.g:4066:2: iv_ruleVisible= ruleVisible EOF
+            // InternalXdiagramDsl.g:4117:48: (iv_ruleVisible= ruleVisible EOF )
+            // InternalXdiagramDsl.g:4118:2: iv_ruleVisible= ruleVisible EOF
             {
              newCompositeNode(grammarAccess.getVisibleRule()); 
             pushFollow(FOLLOW_1);
@@ -10852,7 +10993,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVisible"
-    // InternalXdiagramDsl.g:4072:1: ruleVisible returns [EObject current=null] : (otherlv_0= 'invisible' ( (lv_conditional_1_0= ruleFeatureConditional ) ) otherlv_2= ';' ) ;
+    // InternalXdiagramDsl.g:4124:1: ruleVisible returns [EObject current=null] : (otherlv_0= 'invisible' ( (lv_conditional_1_0= ruleFeatureConditional ) ) otherlv_2= ';' ) ;
     public final EObject ruleVisible() throws RecognitionException {
         EObject current = null;
 
@@ -10865,26 +11006,26 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:4078:2: ( (otherlv_0= 'invisible' ( (lv_conditional_1_0= ruleFeatureConditional ) ) otherlv_2= ';' ) )
-            // InternalXdiagramDsl.g:4079:2: (otherlv_0= 'invisible' ( (lv_conditional_1_0= ruleFeatureConditional ) ) otherlv_2= ';' )
+            // InternalXdiagramDsl.g:4130:2: ( (otherlv_0= 'invisible' ( (lv_conditional_1_0= ruleFeatureConditional ) ) otherlv_2= ';' ) )
+            // InternalXdiagramDsl.g:4131:2: (otherlv_0= 'invisible' ( (lv_conditional_1_0= ruleFeatureConditional ) ) otherlv_2= ';' )
             {
-            // InternalXdiagramDsl.g:4079:2: (otherlv_0= 'invisible' ( (lv_conditional_1_0= ruleFeatureConditional ) ) otherlv_2= ';' )
-            // InternalXdiagramDsl.g:4080:3: otherlv_0= 'invisible' ( (lv_conditional_1_0= ruleFeatureConditional ) ) otherlv_2= ';'
+            // InternalXdiagramDsl.g:4131:2: (otherlv_0= 'invisible' ( (lv_conditional_1_0= ruleFeatureConditional ) ) otherlv_2= ';' )
+            // InternalXdiagramDsl.g:4132:3: otherlv_0= 'invisible' ( (lv_conditional_1_0= ruleFeatureConditional ) ) otherlv_2= ';'
             {
-            otherlv_0=(Token)match(input,50,FOLLOW_50); 
+            otherlv_0=(Token)match(input,50,FOLLOW_52); 
 
             			newLeafNode(otherlv_0, grammarAccess.getVisibleAccess().getInvisibleKeyword_0());
             		
-            // InternalXdiagramDsl.g:4084:3: ( (lv_conditional_1_0= ruleFeatureConditional ) )
-            // InternalXdiagramDsl.g:4085:4: (lv_conditional_1_0= ruleFeatureConditional )
+            // InternalXdiagramDsl.g:4136:3: ( (lv_conditional_1_0= ruleFeatureConditional ) )
+            // InternalXdiagramDsl.g:4137:4: (lv_conditional_1_0= ruleFeatureConditional )
             {
-            // InternalXdiagramDsl.g:4085:4: (lv_conditional_1_0= ruleFeatureConditional )
-            // InternalXdiagramDsl.g:4086:5: lv_conditional_1_0= ruleFeatureConditional
+            // InternalXdiagramDsl.g:4137:4: (lv_conditional_1_0= ruleFeatureConditional )
+            // InternalXdiagramDsl.g:4138:5: lv_conditional_1_0= ruleFeatureConditional
             {
 
             					newCompositeNode(grammarAccess.getVisibleAccess().getConditionalFeatureConditionalParserRuleCall_1_0());
             				
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_29);
             lv_conditional_1_0=ruleFeatureConditional();
 
             state._fsp--;
@@ -10933,7 +11074,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTextValue"
-    // InternalXdiagramDsl.g:4111:1: entryRuleTextValue returns [EObject current=null] : iv_ruleTextValue= ruleTextValue EOF ;
+    // InternalXdiagramDsl.g:4163:1: entryRuleTextValue returns [EObject current=null] : iv_ruleTextValue= ruleTextValue EOF ;
     public final EObject entryRuleTextValue() throws RecognitionException {
         EObject current = null;
 
@@ -10941,8 +11082,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:4111:50: (iv_ruleTextValue= ruleTextValue EOF )
-            // InternalXdiagramDsl.g:4112:2: iv_ruleTextValue= ruleTextValue EOF
+            // InternalXdiagramDsl.g:4163:50: (iv_ruleTextValue= ruleTextValue EOF )
+            // InternalXdiagramDsl.g:4164:2: iv_ruleTextValue= ruleTextValue EOF
             {
              newCompositeNode(grammarAccess.getTextValueRule()); 
             pushFollow(FOLLOW_1);
@@ -10969,7 +11110,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTextValue"
-    // InternalXdiagramDsl.g:4118:1: ruleTextValue returns [EObject current=null] : ( () otherlv_1= 'text' ( (lv_parts_2_0= ruleTextPart ) )* ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) ;
+    // InternalXdiagramDsl.g:4170:1: ruleTextValue returns [EObject current=null] : ( () otherlv_1= 'text' ( (lv_parts_2_0= ruleTextPart ) )* ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) ;
     public final EObject ruleTextValue() throws RecognitionException {
         EObject current = null;
 
@@ -10984,14 +11125,14 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:4124:2: ( ( () otherlv_1= 'text' ( (lv_parts_2_0= ruleTextPart ) )* ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) )
-            // InternalXdiagramDsl.g:4125:2: ( () otherlv_1= 'text' ( (lv_parts_2_0= ruleTextPart ) )* ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
+            // InternalXdiagramDsl.g:4176:2: ( ( () otherlv_1= 'text' ( (lv_parts_2_0= ruleTextPart ) )* ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' ) )
+            // InternalXdiagramDsl.g:4177:2: ( () otherlv_1= 'text' ( (lv_parts_2_0= ruleTextPart ) )* ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
             {
-            // InternalXdiagramDsl.g:4125:2: ( () otherlv_1= 'text' ( (lv_parts_2_0= ruleTextPart ) )* ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
-            // InternalXdiagramDsl.g:4126:3: () otherlv_1= 'text' ( (lv_parts_2_0= ruleTextPart ) )* ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';'
+            // InternalXdiagramDsl.g:4177:2: ( () otherlv_1= 'text' ( (lv_parts_2_0= ruleTextPart ) )* ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';' )
+            // InternalXdiagramDsl.g:4178:3: () otherlv_1= 'text' ( (lv_parts_2_0= ruleTextPart ) )* ( (lv_conditional_3_0= ruleFeatureConditional ) )? otherlv_4= ';'
             {
-            // InternalXdiagramDsl.g:4126:3: ()
-            // InternalXdiagramDsl.g:4127:4: 
+            // InternalXdiagramDsl.g:4178:3: ()
+            // InternalXdiagramDsl.g:4179:4: 
             {
 
             				current = forceCreateModelElement(
@@ -11001,32 +11142,32 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,64,FOLLOW_51); 
+            otherlv_1=(Token)match(input,64,FOLLOW_53); 
 
             			newLeafNode(otherlv_1, grammarAccess.getTextValueAccess().getTextKeyword_1());
             		
-            // InternalXdiagramDsl.g:4137:3: ( (lv_parts_2_0= ruleTextPart ) )*
-            loop69:
+            // InternalXdiagramDsl.g:4189:3: ( (lv_parts_2_0= ruleTextPart ) )*
+            loop71:
             do {
-                int alt69=2;
-                int LA69_0 = input.LA(1);
+                int alt71=2;
+                int LA71_0 = input.LA(1);
 
-                if ( ((LA69_0>=RULE_STRING && LA69_0<=RULE_ID)||LA69_0==65) ) {
-                    alt69=1;
+                if ( ((LA71_0>=RULE_STRING && LA71_0<=RULE_ID)||LA71_0==65) ) {
+                    alt71=1;
                 }
 
 
-                switch (alt69) {
+                switch (alt71) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:4138:4: (lv_parts_2_0= ruleTextPart )
+            	    // InternalXdiagramDsl.g:4190:4: (lv_parts_2_0= ruleTextPart )
             	    {
-            	    // InternalXdiagramDsl.g:4138:4: (lv_parts_2_0= ruleTextPart )
-            	    // InternalXdiagramDsl.g:4139:5: lv_parts_2_0= ruleTextPart
+            	    // InternalXdiagramDsl.g:4190:4: (lv_parts_2_0= ruleTextPart )
+            	    // InternalXdiagramDsl.g:4191:5: lv_parts_2_0= ruleTextPart
             	    {
 
             	    					newCompositeNode(grammarAccess.getTextValueAccess().getPartsTextPartParserRuleCall_2_0());
             	    				
-            	    pushFollow(FOLLOW_51);
+            	    pushFollow(FOLLOW_53);
             	    lv_parts_2_0=ruleTextPart();
 
             	    state._fsp--;
@@ -11050,28 +11191,28 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop69;
+            	    break loop71;
                 }
             } while (true);
 
-            // InternalXdiagramDsl.g:4156:3: ( (lv_conditional_3_0= ruleFeatureConditional ) )?
-            int alt70=2;
-            int LA70_0 = input.LA(1);
+            // InternalXdiagramDsl.g:4208:3: ( (lv_conditional_3_0= ruleFeatureConditional ) )?
+            int alt72=2;
+            int LA72_0 = input.LA(1);
 
-            if ( (LA70_0==19) ) {
-                alt70=1;
+            if ( (LA72_0==19) ) {
+                alt72=1;
             }
-            switch (alt70) {
+            switch (alt72) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4157:4: (lv_conditional_3_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:4209:4: (lv_conditional_3_0= ruleFeatureConditional )
                     {
-                    // InternalXdiagramDsl.g:4157:4: (lv_conditional_3_0= ruleFeatureConditional )
-                    // InternalXdiagramDsl.g:4158:5: lv_conditional_3_0= ruleFeatureConditional
+                    // InternalXdiagramDsl.g:4209:4: (lv_conditional_3_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:4210:5: lv_conditional_3_0= ruleFeatureConditional
                     {
 
                     					newCompositeNode(grammarAccess.getTextValueAccess().getConditionalFeatureConditionalParserRuleCall_3_0());
                     				
-                    pushFollow(FOLLOW_28);
+                    pushFollow(FOLLOW_29);
                     lv_conditional_3_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -11123,7 +11264,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTextPart"
-    // InternalXdiagramDsl.g:4183:1: entryRuleTextPart returns [EObject current=null] : iv_ruleTextPart= ruleTextPart EOF ;
+    // InternalXdiagramDsl.g:4235:1: entryRuleTextPart returns [EObject current=null] : iv_ruleTextPart= ruleTextPart EOF ;
     public final EObject entryRuleTextPart() throws RecognitionException {
         EObject current = null;
 
@@ -11131,8 +11272,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:4183:49: (iv_ruleTextPart= ruleTextPart EOF )
-            // InternalXdiagramDsl.g:4184:2: iv_ruleTextPart= ruleTextPart EOF
+            // InternalXdiagramDsl.g:4235:49: (iv_ruleTextPart= ruleTextPart EOF )
+            // InternalXdiagramDsl.g:4236:2: iv_ruleTextPart= ruleTextPart EOF
             {
              newCompositeNode(grammarAccess.getTextPartRule()); 
             pushFollow(FOLLOW_1);
@@ -11159,7 +11300,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTextPart"
-    // InternalXdiagramDsl.g:4190:1: ruleTextPart returns [EObject current=null] : ( ( (lv_text_0_0= RULE_STRING ) ) | ( ( (lv_editable_1_0= 'edit:' ) )? ( ( ruleQualifiedName ) ) ) ) ;
+    // InternalXdiagramDsl.g:4242:1: ruleTextPart returns [EObject current=null] : ( ( (lv_text_0_0= RULE_STRING ) ) | ( ( (lv_editable_1_0= 'edit:' ) )? ( ( ruleQualifiedName ) ) ) ) ;
     public final EObject ruleTextPart() throws RecognitionException {
         EObject current = null;
 
@@ -11170,34 +11311,34 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:4196:2: ( ( ( (lv_text_0_0= RULE_STRING ) ) | ( ( (lv_editable_1_0= 'edit:' ) )? ( ( ruleQualifiedName ) ) ) ) )
-            // InternalXdiagramDsl.g:4197:2: ( ( (lv_text_0_0= RULE_STRING ) ) | ( ( (lv_editable_1_0= 'edit:' ) )? ( ( ruleQualifiedName ) ) ) )
+            // InternalXdiagramDsl.g:4248:2: ( ( ( (lv_text_0_0= RULE_STRING ) ) | ( ( (lv_editable_1_0= 'edit:' ) )? ( ( ruleQualifiedName ) ) ) ) )
+            // InternalXdiagramDsl.g:4249:2: ( ( (lv_text_0_0= RULE_STRING ) ) | ( ( (lv_editable_1_0= 'edit:' ) )? ( ( ruleQualifiedName ) ) ) )
             {
-            // InternalXdiagramDsl.g:4197:2: ( ( (lv_text_0_0= RULE_STRING ) ) | ( ( (lv_editable_1_0= 'edit:' ) )? ( ( ruleQualifiedName ) ) ) )
-            int alt72=2;
-            int LA72_0 = input.LA(1);
+            // InternalXdiagramDsl.g:4249:2: ( ( (lv_text_0_0= RULE_STRING ) ) | ( ( (lv_editable_1_0= 'edit:' ) )? ( ( ruleQualifiedName ) ) ) )
+            int alt74=2;
+            int LA74_0 = input.LA(1);
 
-            if ( (LA72_0==RULE_STRING) ) {
-                alt72=1;
+            if ( (LA74_0==RULE_STRING) ) {
+                alt74=1;
             }
-            else if ( (LA72_0==RULE_ID||LA72_0==65) ) {
-                alt72=2;
+            else if ( (LA74_0==RULE_ID||LA74_0==65) ) {
+                alt74=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 72, 0, input);
+                    new NoViableAltException("", 74, 0, input);
 
                 throw nvae;
             }
-            switch (alt72) {
+            switch (alt74) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4198:3: ( (lv_text_0_0= RULE_STRING ) )
+                    // InternalXdiagramDsl.g:4250:3: ( (lv_text_0_0= RULE_STRING ) )
                     {
-                    // InternalXdiagramDsl.g:4198:3: ( (lv_text_0_0= RULE_STRING ) )
-                    // InternalXdiagramDsl.g:4199:4: (lv_text_0_0= RULE_STRING )
+                    // InternalXdiagramDsl.g:4250:3: ( (lv_text_0_0= RULE_STRING ) )
+                    // InternalXdiagramDsl.g:4251:4: (lv_text_0_0= RULE_STRING )
                     {
-                    // InternalXdiagramDsl.g:4199:4: (lv_text_0_0= RULE_STRING )
-                    // InternalXdiagramDsl.g:4200:5: lv_text_0_0= RULE_STRING
+                    // InternalXdiagramDsl.g:4251:4: (lv_text_0_0= RULE_STRING )
+                    // InternalXdiagramDsl.g:4252:5: lv_text_0_0= RULE_STRING
                     {
                     lv_text_0_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
@@ -11223,26 +11364,26 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:4217:3: ( ( (lv_editable_1_0= 'edit:' ) )? ( ( ruleQualifiedName ) ) )
+                    // InternalXdiagramDsl.g:4269:3: ( ( (lv_editable_1_0= 'edit:' ) )? ( ( ruleQualifiedName ) ) )
                     {
-                    // InternalXdiagramDsl.g:4217:3: ( ( (lv_editable_1_0= 'edit:' ) )? ( ( ruleQualifiedName ) ) )
-                    // InternalXdiagramDsl.g:4218:4: ( (lv_editable_1_0= 'edit:' ) )? ( ( ruleQualifiedName ) )
+                    // InternalXdiagramDsl.g:4269:3: ( ( (lv_editable_1_0= 'edit:' ) )? ( ( ruleQualifiedName ) ) )
+                    // InternalXdiagramDsl.g:4270:4: ( (lv_editable_1_0= 'edit:' ) )? ( ( ruleQualifiedName ) )
                     {
-                    // InternalXdiagramDsl.g:4218:4: ( (lv_editable_1_0= 'edit:' ) )?
-                    int alt71=2;
-                    int LA71_0 = input.LA(1);
+                    // InternalXdiagramDsl.g:4270:4: ( (lv_editable_1_0= 'edit:' ) )?
+                    int alt73=2;
+                    int LA73_0 = input.LA(1);
 
-                    if ( (LA71_0==65) ) {
-                        alt71=1;
+                    if ( (LA73_0==65) ) {
+                        alt73=1;
                     }
-                    switch (alt71) {
+                    switch (alt73) {
                         case 1 :
-                            // InternalXdiagramDsl.g:4219:5: (lv_editable_1_0= 'edit:' )
+                            // InternalXdiagramDsl.g:4271:5: (lv_editable_1_0= 'edit:' )
                             {
-                            // InternalXdiagramDsl.g:4219:5: (lv_editable_1_0= 'edit:' )
-                            // InternalXdiagramDsl.g:4220:6: lv_editable_1_0= 'edit:'
+                            // InternalXdiagramDsl.g:4271:5: (lv_editable_1_0= 'edit:' )
+                            // InternalXdiagramDsl.g:4272:6: lv_editable_1_0= 'edit:'
                             {
-                            lv_editable_1_0=(Token)match(input,65,FOLLOW_11); 
+                            lv_editable_1_0=(Token)match(input,65,FOLLOW_12); 
 
                             						newLeafNode(lv_editable_1_0, grammarAccess.getTextPartAccess().getEditableEditKeyword_1_0_0());
                             					
@@ -11261,11 +11402,11 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalXdiagramDsl.g:4232:4: ( ( ruleQualifiedName ) )
-                    // InternalXdiagramDsl.g:4233:5: ( ruleQualifiedName )
+                    // InternalXdiagramDsl.g:4284:4: ( ( ruleQualifiedName ) )
+                    // InternalXdiagramDsl.g:4285:5: ( ruleQualifiedName )
                     {
-                    // InternalXdiagramDsl.g:4233:5: ( ruleQualifiedName )
-                    // InternalXdiagramDsl.g:4234:6: ruleQualifiedName
+                    // InternalXdiagramDsl.g:4285:5: ( ruleQualifiedName )
+                    // InternalXdiagramDsl.g:4286:6: ruleQualifiedName
                     {
 
                     						if (current==null) {
@@ -11318,7 +11459,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFontProperties"
-    // InternalXdiagramDsl.g:4253:1: entryRuleFontProperties returns [EObject current=null] : iv_ruleFontProperties= ruleFontProperties EOF ;
+    // InternalXdiagramDsl.g:4305:1: entryRuleFontProperties returns [EObject current=null] : iv_ruleFontProperties= ruleFontProperties EOF ;
     public final EObject entryRuleFontProperties() throws RecognitionException {
         EObject current = null;
 
@@ -11326,8 +11467,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:4253:55: (iv_ruleFontProperties= ruleFontProperties EOF )
-            // InternalXdiagramDsl.g:4254:2: iv_ruleFontProperties= ruleFontProperties EOF
+            // InternalXdiagramDsl.g:4305:55: (iv_ruleFontProperties= ruleFontProperties EOF )
+            // InternalXdiagramDsl.g:4306:2: iv_ruleFontProperties= ruleFontProperties EOF
             {
              newCompositeNode(grammarAccess.getFontPropertiesRule()); 
             pushFollow(FOLLOW_1);
@@ -11354,7 +11495,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFontProperties"
-    // InternalXdiagramDsl.g:4260:1: ruleFontProperties returns [EObject current=null] : ( () otherlv_1= 'font' ( ( (lv_face_2_0= 'arial' ) ) | otherlv_3= 'verdana' | otherlv_4= 'courier' | otherlv_5= 'times' )? ( (lv_size_6_0= RULE_INT ) )? ( (lv_bold_7_0= 'bold' ) )? ( (lv_italics_8_0= 'italics' ) )? ( (lv_conditional_9_0= ruleFeatureConditional ) )? otherlv_10= ';' ) ;
+    // InternalXdiagramDsl.g:4312:1: ruleFontProperties returns [EObject current=null] : ( () otherlv_1= 'font' ( ( (lv_face_2_0= 'arial' ) ) | otherlv_3= 'verdana' | otherlv_4= 'courier' | otherlv_5= 'times' )? ( (lv_size_6_0= RULE_INT ) )? ( (lv_bold_7_0= 'bold' ) )? ( (lv_italics_8_0= 'italics' ) )? ( (lv_conditional_9_0= ruleFeatureConditional ) )? otherlv_10= ';' ) ;
     public final EObject ruleFontProperties() throws RecognitionException {
         EObject current = null;
 
@@ -11374,14 +11515,14 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:4266:2: ( ( () otherlv_1= 'font' ( ( (lv_face_2_0= 'arial' ) ) | otherlv_3= 'verdana' | otherlv_4= 'courier' | otherlv_5= 'times' )? ( (lv_size_6_0= RULE_INT ) )? ( (lv_bold_7_0= 'bold' ) )? ( (lv_italics_8_0= 'italics' ) )? ( (lv_conditional_9_0= ruleFeatureConditional ) )? otherlv_10= ';' ) )
-            // InternalXdiagramDsl.g:4267:2: ( () otherlv_1= 'font' ( ( (lv_face_2_0= 'arial' ) ) | otherlv_3= 'verdana' | otherlv_4= 'courier' | otherlv_5= 'times' )? ( (lv_size_6_0= RULE_INT ) )? ( (lv_bold_7_0= 'bold' ) )? ( (lv_italics_8_0= 'italics' ) )? ( (lv_conditional_9_0= ruleFeatureConditional ) )? otherlv_10= ';' )
+            // InternalXdiagramDsl.g:4318:2: ( ( () otherlv_1= 'font' ( ( (lv_face_2_0= 'arial' ) ) | otherlv_3= 'verdana' | otherlv_4= 'courier' | otherlv_5= 'times' )? ( (lv_size_6_0= RULE_INT ) )? ( (lv_bold_7_0= 'bold' ) )? ( (lv_italics_8_0= 'italics' ) )? ( (lv_conditional_9_0= ruleFeatureConditional ) )? otherlv_10= ';' ) )
+            // InternalXdiagramDsl.g:4319:2: ( () otherlv_1= 'font' ( ( (lv_face_2_0= 'arial' ) ) | otherlv_3= 'verdana' | otherlv_4= 'courier' | otherlv_5= 'times' )? ( (lv_size_6_0= RULE_INT ) )? ( (lv_bold_7_0= 'bold' ) )? ( (lv_italics_8_0= 'italics' ) )? ( (lv_conditional_9_0= ruleFeatureConditional ) )? otherlv_10= ';' )
             {
-            // InternalXdiagramDsl.g:4267:2: ( () otherlv_1= 'font' ( ( (lv_face_2_0= 'arial' ) ) | otherlv_3= 'verdana' | otherlv_4= 'courier' | otherlv_5= 'times' )? ( (lv_size_6_0= RULE_INT ) )? ( (lv_bold_7_0= 'bold' ) )? ( (lv_italics_8_0= 'italics' ) )? ( (lv_conditional_9_0= ruleFeatureConditional ) )? otherlv_10= ';' )
-            // InternalXdiagramDsl.g:4268:3: () otherlv_1= 'font' ( ( (lv_face_2_0= 'arial' ) ) | otherlv_3= 'verdana' | otherlv_4= 'courier' | otherlv_5= 'times' )? ( (lv_size_6_0= RULE_INT ) )? ( (lv_bold_7_0= 'bold' ) )? ( (lv_italics_8_0= 'italics' ) )? ( (lv_conditional_9_0= ruleFeatureConditional ) )? otherlv_10= ';'
+            // InternalXdiagramDsl.g:4319:2: ( () otherlv_1= 'font' ( ( (lv_face_2_0= 'arial' ) ) | otherlv_3= 'verdana' | otherlv_4= 'courier' | otherlv_5= 'times' )? ( (lv_size_6_0= RULE_INT ) )? ( (lv_bold_7_0= 'bold' ) )? ( (lv_italics_8_0= 'italics' ) )? ( (lv_conditional_9_0= ruleFeatureConditional ) )? otherlv_10= ';' )
+            // InternalXdiagramDsl.g:4320:3: () otherlv_1= 'font' ( ( (lv_face_2_0= 'arial' ) ) | otherlv_3= 'verdana' | otherlv_4= 'courier' | otherlv_5= 'times' )? ( (lv_size_6_0= RULE_INT ) )? ( (lv_bold_7_0= 'bold' ) )? ( (lv_italics_8_0= 'italics' ) )? ( (lv_conditional_9_0= ruleFeatureConditional ) )? otherlv_10= ';'
             {
-            // InternalXdiagramDsl.g:4268:3: ()
-            // InternalXdiagramDsl.g:4269:4: 
+            // InternalXdiagramDsl.g:4320:3: ()
+            // InternalXdiagramDsl.g:4321:4: 
             {
 
             				current = forceCreateModelElement(
@@ -11391,46 +11532,46 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,66,FOLLOW_52); 
+            otherlv_1=(Token)match(input,66,FOLLOW_54); 
 
             			newLeafNode(otherlv_1, grammarAccess.getFontPropertiesAccess().getFontKeyword_1());
             		
-            // InternalXdiagramDsl.g:4279:3: ( ( (lv_face_2_0= 'arial' ) ) | otherlv_3= 'verdana' | otherlv_4= 'courier' | otherlv_5= 'times' )?
-            int alt73=5;
+            // InternalXdiagramDsl.g:4331:3: ( ( (lv_face_2_0= 'arial' ) ) | otherlv_3= 'verdana' | otherlv_4= 'courier' | otherlv_5= 'times' )?
+            int alt75=5;
             switch ( input.LA(1) ) {
                 case 67:
                     {
-                    alt73=1;
+                    alt75=1;
                     }
                     break;
                 case 68:
                     {
-                    alt73=2;
+                    alt75=2;
                     }
                     break;
                 case 69:
                     {
-                    alt73=3;
+                    alt75=3;
                     }
                     break;
                 case 70:
                     {
-                    alt73=4;
+                    alt75=4;
                     }
                     break;
             }
 
-            switch (alt73) {
+            switch (alt75) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4280:4: ( (lv_face_2_0= 'arial' ) )
+                    // InternalXdiagramDsl.g:4332:4: ( (lv_face_2_0= 'arial' ) )
                     {
-                    // InternalXdiagramDsl.g:4280:4: ( (lv_face_2_0= 'arial' ) )
-                    // InternalXdiagramDsl.g:4281:5: (lv_face_2_0= 'arial' )
+                    // InternalXdiagramDsl.g:4332:4: ( (lv_face_2_0= 'arial' ) )
+                    // InternalXdiagramDsl.g:4333:5: (lv_face_2_0= 'arial' )
                     {
-                    // InternalXdiagramDsl.g:4281:5: (lv_face_2_0= 'arial' )
-                    // InternalXdiagramDsl.g:4282:6: lv_face_2_0= 'arial'
+                    // InternalXdiagramDsl.g:4333:5: (lv_face_2_0= 'arial' )
+                    // InternalXdiagramDsl.g:4334:6: lv_face_2_0= 'arial'
                     {
-                    lv_face_2_0=(Token)match(input,67,FOLLOW_53); 
+                    lv_face_2_0=(Token)match(input,67,FOLLOW_55); 
 
                     						newLeafNode(lv_face_2_0, grammarAccess.getFontPropertiesAccess().getFaceArialKeyword_2_0_0());
                     					
@@ -11450,9 +11591,9 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:4295:4: otherlv_3= 'verdana'
+                    // InternalXdiagramDsl.g:4347:4: otherlv_3= 'verdana'
                     {
-                    otherlv_3=(Token)match(input,68,FOLLOW_53); 
+                    otherlv_3=(Token)match(input,68,FOLLOW_55); 
 
                     				newLeafNode(otherlv_3, grammarAccess.getFontPropertiesAccess().getVerdanaKeyword_2_1());
                     			
@@ -11460,9 +11601,9 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalXdiagramDsl.g:4300:4: otherlv_4= 'courier'
+                    // InternalXdiagramDsl.g:4352:4: otherlv_4= 'courier'
                     {
-                    otherlv_4=(Token)match(input,69,FOLLOW_53); 
+                    otherlv_4=(Token)match(input,69,FOLLOW_55); 
 
                     				newLeafNode(otherlv_4, grammarAccess.getFontPropertiesAccess().getCourierKeyword_2_2());
                     			
@@ -11470,9 +11611,9 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalXdiagramDsl.g:4305:4: otherlv_5= 'times'
+                    // InternalXdiagramDsl.g:4357:4: otherlv_5= 'times'
                     {
-                    otherlv_5=(Token)match(input,70,FOLLOW_53); 
+                    otherlv_5=(Token)match(input,70,FOLLOW_55); 
 
                     				newLeafNode(otherlv_5, grammarAccess.getFontPropertiesAccess().getTimesKeyword_2_3());
                     			
@@ -11482,21 +11623,21 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:4310:3: ( (lv_size_6_0= RULE_INT ) )?
-            int alt74=2;
-            int LA74_0 = input.LA(1);
+            // InternalXdiagramDsl.g:4362:3: ( (lv_size_6_0= RULE_INT ) )?
+            int alt76=2;
+            int LA76_0 = input.LA(1);
 
-            if ( (LA74_0==RULE_INT) ) {
-                alt74=1;
+            if ( (LA76_0==RULE_INT) ) {
+                alt76=1;
             }
-            switch (alt74) {
+            switch (alt76) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4311:4: (lv_size_6_0= RULE_INT )
+                    // InternalXdiagramDsl.g:4363:4: (lv_size_6_0= RULE_INT )
                     {
-                    // InternalXdiagramDsl.g:4311:4: (lv_size_6_0= RULE_INT )
-                    // InternalXdiagramDsl.g:4312:5: lv_size_6_0= RULE_INT
+                    // InternalXdiagramDsl.g:4363:4: (lv_size_6_0= RULE_INT )
+                    // InternalXdiagramDsl.g:4364:5: lv_size_6_0= RULE_INT
                     {
-                    lv_size_6_0=(Token)match(input,RULE_INT,FOLLOW_54); 
+                    lv_size_6_0=(Token)match(input,RULE_INT,FOLLOW_56); 
 
                     					newLeafNode(lv_size_6_0, grammarAccess.getFontPropertiesAccess().getSizeINTTerminalRuleCall_3_0());
                     				
@@ -11519,21 +11660,21 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:4328:3: ( (lv_bold_7_0= 'bold' ) )?
-            int alt75=2;
-            int LA75_0 = input.LA(1);
+            // InternalXdiagramDsl.g:4380:3: ( (lv_bold_7_0= 'bold' ) )?
+            int alt77=2;
+            int LA77_0 = input.LA(1);
 
-            if ( (LA75_0==71) ) {
-                alt75=1;
+            if ( (LA77_0==71) ) {
+                alt77=1;
             }
-            switch (alt75) {
+            switch (alt77) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4329:4: (lv_bold_7_0= 'bold' )
+                    // InternalXdiagramDsl.g:4381:4: (lv_bold_7_0= 'bold' )
                     {
-                    // InternalXdiagramDsl.g:4329:4: (lv_bold_7_0= 'bold' )
-                    // InternalXdiagramDsl.g:4330:5: lv_bold_7_0= 'bold'
+                    // InternalXdiagramDsl.g:4381:4: (lv_bold_7_0= 'bold' )
+                    // InternalXdiagramDsl.g:4382:5: lv_bold_7_0= 'bold'
                     {
-                    lv_bold_7_0=(Token)match(input,71,FOLLOW_55); 
+                    lv_bold_7_0=(Token)match(input,71,FOLLOW_57); 
 
                     					newLeafNode(lv_bold_7_0, grammarAccess.getFontPropertiesAccess().getBoldBoldKeyword_4_0());
                     				
@@ -11552,21 +11693,21 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:4342:3: ( (lv_italics_8_0= 'italics' ) )?
-            int alt76=2;
-            int LA76_0 = input.LA(1);
+            // InternalXdiagramDsl.g:4394:3: ( (lv_italics_8_0= 'italics' ) )?
+            int alt78=2;
+            int LA78_0 = input.LA(1);
 
-            if ( (LA76_0==72) ) {
-                alt76=1;
+            if ( (LA78_0==72) ) {
+                alt78=1;
             }
-            switch (alt76) {
+            switch (alt78) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4343:4: (lv_italics_8_0= 'italics' )
+                    // InternalXdiagramDsl.g:4395:4: (lv_italics_8_0= 'italics' )
                     {
-                    // InternalXdiagramDsl.g:4343:4: (lv_italics_8_0= 'italics' )
-                    // InternalXdiagramDsl.g:4344:5: lv_italics_8_0= 'italics'
+                    // InternalXdiagramDsl.g:4395:4: (lv_italics_8_0= 'italics' )
+                    // InternalXdiagramDsl.g:4396:5: lv_italics_8_0= 'italics'
                     {
-                    lv_italics_8_0=(Token)match(input,72,FOLLOW_27); 
+                    lv_italics_8_0=(Token)match(input,72,FOLLOW_28); 
 
                     					newLeafNode(lv_italics_8_0, grammarAccess.getFontPropertiesAccess().getItalicsItalicsKeyword_5_0());
                     				
@@ -11585,24 +11726,24 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:4356:3: ( (lv_conditional_9_0= ruleFeatureConditional ) )?
-            int alt77=2;
-            int LA77_0 = input.LA(1);
+            // InternalXdiagramDsl.g:4408:3: ( (lv_conditional_9_0= ruleFeatureConditional ) )?
+            int alt79=2;
+            int LA79_0 = input.LA(1);
 
-            if ( (LA77_0==19) ) {
-                alt77=1;
+            if ( (LA79_0==19) ) {
+                alt79=1;
             }
-            switch (alt77) {
+            switch (alt79) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4357:4: (lv_conditional_9_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:4409:4: (lv_conditional_9_0= ruleFeatureConditional )
                     {
-                    // InternalXdiagramDsl.g:4357:4: (lv_conditional_9_0= ruleFeatureConditional )
-                    // InternalXdiagramDsl.g:4358:5: lv_conditional_9_0= ruleFeatureConditional
+                    // InternalXdiagramDsl.g:4409:4: (lv_conditional_9_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:4410:5: lv_conditional_9_0= ruleFeatureConditional
                     {
 
                     					newCompositeNode(grammarAccess.getFontPropertiesAccess().getConditionalFeatureConditionalParserRuleCall_6_0());
                     				
-                    pushFollow(FOLLOW_28);
+                    pushFollow(FOLLOW_29);
                     lv_conditional_9_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -11654,7 +11795,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTextAlign"
-    // InternalXdiagramDsl.g:4383:1: entryRuleTextAlign returns [EObject current=null] : iv_ruleTextAlign= ruleTextAlign EOF ;
+    // InternalXdiagramDsl.g:4435:1: entryRuleTextAlign returns [EObject current=null] : iv_ruleTextAlign= ruleTextAlign EOF ;
     public final EObject entryRuleTextAlign() throws RecognitionException {
         EObject current = null;
 
@@ -11662,8 +11803,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:4383:50: (iv_ruleTextAlign= ruleTextAlign EOF )
-            // InternalXdiagramDsl.g:4384:2: iv_ruleTextAlign= ruleTextAlign EOF
+            // InternalXdiagramDsl.g:4435:50: (iv_ruleTextAlign= ruleTextAlign EOF )
+            // InternalXdiagramDsl.g:4436:2: iv_ruleTextAlign= ruleTextAlign EOF
             {
              newCompositeNode(grammarAccess.getTextAlignRule()); 
             pushFollow(FOLLOW_1);
@@ -11690,7 +11831,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTextAlign"
-    // InternalXdiagramDsl.g:4390:1: ruleTextAlign returns [EObject current=null] : (otherlv_0= 'align' ( (lv_value_1_0= ruleTextAlignValue ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
+    // InternalXdiagramDsl.g:4442:1: ruleTextAlign returns [EObject current=null] : (otherlv_0= 'align' ( (lv_value_1_0= ruleTextAlignValue ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
     public final EObject ruleTextAlign() throws RecognitionException {
         EObject current = null;
 
@@ -11705,26 +11846,26 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:4396:2: ( (otherlv_0= 'align' ( (lv_value_1_0= ruleTextAlignValue ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
-            // InternalXdiagramDsl.g:4397:2: (otherlv_0= 'align' ( (lv_value_1_0= ruleTextAlignValue ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // InternalXdiagramDsl.g:4448:2: ( (otherlv_0= 'align' ( (lv_value_1_0= ruleTextAlignValue ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
+            // InternalXdiagramDsl.g:4449:2: (otherlv_0= 'align' ( (lv_value_1_0= ruleTextAlignValue ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
             {
-            // InternalXdiagramDsl.g:4397:2: (otherlv_0= 'align' ( (lv_value_1_0= ruleTextAlignValue ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
-            // InternalXdiagramDsl.g:4398:3: otherlv_0= 'align' ( (lv_value_1_0= ruleTextAlignValue ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
+            // InternalXdiagramDsl.g:4449:2: (otherlv_0= 'align' ( (lv_value_1_0= ruleTextAlignValue ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // InternalXdiagramDsl.g:4450:3: otherlv_0= 'align' ( (lv_value_1_0= ruleTextAlignValue ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
             {
-            otherlv_0=(Token)match(input,73,FOLLOW_56); 
+            otherlv_0=(Token)match(input,73,FOLLOW_58); 
 
             			newLeafNode(otherlv_0, grammarAccess.getTextAlignAccess().getAlignKeyword_0());
             		
-            // InternalXdiagramDsl.g:4402:3: ( (lv_value_1_0= ruleTextAlignValue ) )
-            // InternalXdiagramDsl.g:4403:4: (lv_value_1_0= ruleTextAlignValue )
+            // InternalXdiagramDsl.g:4454:3: ( (lv_value_1_0= ruleTextAlignValue ) )
+            // InternalXdiagramDsl.g:4455:4: (lv_value_1_0= ruleTextAlignValue )
             {
-            // InternalXdiagramDsl.g:4403:4: (lv_value_1_0= ruleTextAlignValue )
-            // InternalXdiagramDsl.g:4404:5: lv_value_1_0= ruleTextAlignValue
+            // InternalXdiagramDsl.g:4455:4: (lv_value_1_0= ruleTextAlignValue )
+            // InternalXdiagramDsl.g:4456:5: lv_value_1_0= ruleTextAlignValue
             {
 
             					newCompositeNode(grammarAccess.getTextAlignAccess().getValueTextAlignValueEnumRuleCall_1_0());
             				
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_28);
             lv_value_1_0=ruleTextAlignValue();
 
             state._fsp--;
@@ -11746,24 +11887,24 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:4421:3: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
-            int alt78=2;
-            int LA78_0 = input.LA(1);
+            // InternalXdiagramDsl.g:4473:3: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
+            int alt80=2;
+            int LA80_0 = input.LA(1);
 
-            if ( (LA78_0==19) ) {
-                alt78=1;
+            if ( (LA80_0==19) ) {
+                alt80=1;
             }
-            switch (alt78) {
+            switch (alt80) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4422:4: (lv_conditional_2_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:4474:4: (lv_conditional_2_0= ruleFeatureConditional )
                     {
-                    // InternalXdiagramDsl.g:4422:4: (lv_conditional_2_0= ruleFeatureConditional )
-                    // InternalXdiagramDsl.g:4423:5: lv_conditional_2_0= ruleFeatureConditional
+                    // InternalXdiagramDsl.g:4474:4: (lv_conditional_2_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:4475:5: lv_conditional_2_0= ruleFeatureConditional
                     {
 
                     					newCompositeNode(grammarAccess.getTextAlignAccess().getConditionalFeatureConditionalParserRuleCall_2_0());
                     				
-                    pushFollow(FOLLOW_28);
+                    pushFollow(FOLLOW_29);
                     lv_conditional_2_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -11815,7 +11956,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLineStyle"
-    // InternalXdiagramDsl.g:4448:1: entryRuleLineStyle returns [EObject current=null] : iv_ruleLineStyle= ruleLineStyle EOF ;
+    // InternalXdiagramDsl.g:4500:1: entryRuleLineStyle returns [EObject current=null] : iv_ruleLineStyle= ruleLineStyle EOF ;
     public final EObject entryRuleLineStyle() throws RecognitionException {
         EObject current = null;
 
@@ -11823,8 +11964,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:4448:50: (iv_ruleLineStyle= ruleLineStyle EOF )
-            // InternalXdiagramDsl.g:4449:2: iv_ruleLineStyle= ruleLineStyle EOF
+            // InternalXdiagramDsl.g:4500:50: (iv_ruleLineStyle= ruleLineStyle EOF )
+            // InternalXdiagramDsl.g:4501:2: iv_ruleLineStyle= ruleLineStyle EOF
             {
              newCompositeNode(grammarAccess.getLineStyleRule()); 
             pushFollow(FOLLOW_1);
@@ -11851,7 +11992,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLineStyle"
-    // InternalXdiagramDsl.g:4455:1: ruleLineStyle returns [EObject current=null] : ( () otherlv_1= 'linestyle' ( (lv_style_2_0= ruleLineType ) )? ( (lv_manhattan_3_0= 'manhattan' ) )? ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) ;
+    // InternalXdiagramDsl.g:4507:1: ruleLineStyle returns [EObject current=null] : ( () otherlv_1= 'linestyle' ( (lv_style_2_0= ruleLineType ) )? ( (lv_manhattan_3_0= 'manhattan' ) )? ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) ;
     public final EObject ruleLineStyle() throws RecognitionException {
         EObject current = null;
 
@@ -11867,14 +12008,14 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:4461:2: ( ( () otherlv_1= 'linestyle' ( (lv_style_2_0= ruleLineType ) )? ( (lv_manhattan_3_0= 'manhattan' ) )? ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) )
-            // InternalXdiagramDsl.g:4462:2: ( () otherlv_1= 'linestyle' ( (lv_style_2_0= ruleLineType ) )? ( (lv_manhattan_3_0= 'manhattan' ) )? ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
+            // InternalXdiagramDsl.g:4513:2: ( ( () otherlv_1= 'linestyle' ( (lv_style_2_0= ruleLineType ) )? ( (lv_manhattan_3_0= 'manhattan' ) )? ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' ) )
+            // InternalXdiagramDsl.g:4514:2: ( () otherlv_1= 'linestyle' ( (lv_style_2_0= ruleLineType ) )? ( (lv_manhattan_3_0= 'manhattan' ) )? ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
             {
-            // InternalXdiagramDsl.g:4462:2: ( () otherlv_1= 'linestyle' ( (lv_style_2_0= ruleLineType ) )? ( (lv_manhattan_3_0= 'manhattan' ) )? ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
-            // InternalXdiagramDsl.g:4463:3: () otherlv_1= 'linestyle' ( (lv_style_2_0= ruleLineType ) )? ( (lv_manhattan_3_0= 'manhattan' ) )? ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';'
+            // InternalXdiagramDsl.g:4514:2: ( () otherlv_1= 'linestyle' ( (lv_style_2_0= ruleLineType ) )? ( (lv_manhattan_3_0= 'manhattan' ) )? ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';' )
+            // InternalXdiagramDsl.g:4515:3: () otherlv_1= 'linestyle' ( (lv_style_2_0= ruleLineType ) )? ( (lv_manhattan_3_0= 'manhattan' ) )? ( (lv_conditional_4_0= ruleFeatureConditional ) )? otherlv_5= ';'
             {
-            // InternalXdiagramDsl.g:4463:3: ()
-            // InternalXdiagramDsl.g:4464:4: 
+            // InternalXdiagramDsl.g:4515:3: ()
+            // InternalXdiagramDsl.g:4516:4: 
             {
 
             				current = forceCreateModelElement(
@@ -11884,28 +12025,28 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,74,FOLLOW_57); 
+            otherlv_1=(Token)match(input,74,FOLLOW_59); 
 
             			newLeafNode(otherlv_1, grammarAccess.getLineStyleAccess().getLinestyleKeyword_1());
             		
-            // InternalXdiagramDsl.g:4474:3: ( (lv_style_2_0= ruleLineType ) )?
-            int alt79=2;
-            int LA79_0 = input.LA(1);
+            // InternalXdiagramDsl.g:4526:3: ( (lv_style_2_0= ruleLineType ) )?
+            int alt81=2;
+            int LA81_0 = input.LA(1);
 
-            if ( ((LA79_0>=102 && LA79_0<=104)) ) {
-                alt79=1;
+            if ( ((LA81_0>=102 && LA81_0<=104)) ) {
+                alt81=1;
             }
-            switch (alt79) {
+            switch (alt81) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4475:4: (lv_style_2_0= ruleLineType )
+                    // InternalXdiagramDsl.g:4527:4: (lv_style_2_0= ruleLineType )
                     {
-                    // InternalXdiagramDsl.g:4475:4: (lv_style_2_0= ruleLineType )
-                    // InternalXdiagramDsl.g:4476:5: lv_style_2_0= ruleLineType
+                    // InternalXdiagramDsl.g:4527:4: (lv_style_2_0= ruleLineType )
+                    // InternalXdiagramDsl.g:4528:5: lv_style_2_0= ruleLineType
                     {
 
                     					newCompositeNode(grammarAccess.getLineStyleAccess().getStyleLineTypeEnumRuleCall_2_0());
                     				
-                    pushFollow(FOLLOW_58);
+                    pushFollow(FOLLOW_60);
                     lv_style_2_0=ruleLineType();
 
                     state._fsp--;
@@ -11930,21 +12071,21 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:4493:3: ( (lv_manhattan_3_0= 'manhattan' ) )?
-            int alt80=2;
-            int LA80_0 = input.LA(1);
+            // InternalXdiagramDsl.g:4545:3: ( (lv_manhattan_3_0= 'manhattan' ) )?
+            int alt82=2;
+            int LA82_0 = input.LA(1);
 
-            if ( (LA80_0==75) ) {
-                alt80=1;
+            if ( (LA82_0==75) ) {
+                alt82=1;
             }
-            switch (alt80) {
+            switch (alt82) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4494:4: (lv_manhattan_3_0= 'manhattan' )
+                    // InternalXdiagramDsl.g:4546:4: (lv_manhattan_3_0= 'manhattan' )
                     {
-                    // InternalXdiagramDsl.g:4494:4: (lv_manhattan_3_0= 'manhattan' )
-                    // InternalXdiagramDsl.g:4495:5: lv_manhattan_3_0= 'manhattan'
+                    // InternalXdiagramDsl.g:4546:4: (lv_manhattan_3_0= 'manhattan' )
+                    // InternalXdiagramDsl.g:4547:5: lv_manhattan_3_0= 'manhattan'
                     {
-                    lv_manhattan_3_0=(Token)match(input,75,FOLLOW_27); 
+                    lv_manhattan_3_0=(Token)match(input,75,FOLLOW_28); 
 
                     					newLeafNode(lv_manhattan_3_0, grammarAccess.getLineStyleAccess().getManhattanManhattanKeyword_3_0());
                     				
@@ -11963,24 +12104,24 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:4507:3: ( (lv_conditional_4_0= ruleFeatureConditional ) )?
-            int alt81=2;
-            int LA81_0 = input.LA(1);
+            // InternalXdiagramDsl.g:4559:3: ( (lv_conditional_4_0= ruleFeatureConditional ) )?
+            int alt83=2;
+            int LA83_0 = input.LA(1);
 
-            if ( (LA81_0==19) ) {
-                alt81=1;
+            if ( (LA83_0==19) ) {
+                alt83=1;
             }
-            switch (alt81) {
+            switch (alt83) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4508:4: (lv_conditional_4_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:4560:4: (lv_conditional_4_0= ruleFeatureConditional )
                     {
-                    // InternalXdiagramDsl.g:4508:4: (lv_conditional_4_0= ruleFeatureConditional )
-                    // InternalXdiagramDsl.g:4509:5: lv_conditional_4_0= ruleFeatureConditional
+                    // InternalXdiagramDsl.g:4560:4: (lv_conditional_4_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:4561:5: lv_conditional_4_0= ruleFeatureConditional
                     {
 
                     					newCompositeNode(grammarAccess.getLineStyleAccess().getConditionalFeatureConditionalParserRuleCall_4_0());
                     				
-                    pushFollow(FOLLOW_28);
+                    pushFollow(FOLLOW_29);
                     lv_conditional_4_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -12032,7 +12173,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLineWidth"
-    // InternalXdiagramDsl.g:4534:1: entryRuleLineWidth returns [EObject current=null] : iv_ruleLineWidth= ruleLineWidth EOF ;
+    // InternalXdiagramDsl.g:4586:1: entryRuleLineWidth returns [EObject current=null] : iv_ruleLineWidth= ruleLineWidth EOF ;
     public final EObject entryRuleLineWidth() throws RecognitionException {
         EObject current = null;
 
@@ -12040,8 +12181,8 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalXdiagramDsl.g:4534:50: (iv_ruleLineWidth= ruleLineWidth EOF )
-            // InternalXdiagramDsl.g:4535:2: iv_ruleLineWidth= ruleLineWidth EOF
+            // InternalXdiagramDsl.g:4586:50: (iv_ruleLineWidth= ruleLineWidth EOF )
+            // InternalXdiagramDsl.g:4587:2: iv_ruleLineWidth= ruleLineWidth EOF
             {
              newCompositeNode(grammarAccess.getLineWidthRule()); 
             pushFollow(FOLLOW_1);
@@ -12068,7 +12209,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLineWidth"
-    // InternalXdiagramDsl.g:4541:1: ruleLineWidth returns [EObject current=null] : (otherlv_0= 'linewidth' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
+    // InternalXdiagramDsl.g:4593:1: ruleLineWidth returns [EObject current=null] : (otherlv_0= 'linewidth' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) ;
     public final EObject ruleLineWidth() throws RecognitionException {
         EObject current = null;
 
@@ -12082,23 +12223,23 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:4547:2: ( (otherlv_0= 'linewidth' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
-            // InternalXdiagramDsl.g:4548:2: (otherlv_0= 'linewidth' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // InternalXdiagramDsl.g:4599:2: ( (otherlv_0= 'linewidth' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' ) )
+            // InternalXdiagramDsl.g:4600:2: (otherlv_0= 'linewidth' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
             {
-            // InternalXdiagramDsl.g:4548:2: (otherlv_0= 'linewidth' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
-            // InternalXdiagramDsl.g:4549:3: otherlv_0= 'linewidth' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
+            // InternalXdiagramDsl.g:4600:2: (otherlv_0= 'linewidth' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';' )
+            // InternalXdiagramDsl.g:4601:3: otherlv_0= 'linewidth' ( (lv_width_1_0= RULE_INT ) ) ( (lv_conditional_2_0= ruleFeatureConditional ) )? otherlv_3= ';'
             {
-            otherlv_0=(Token)match(input,76,FOLLOW_22); 
+            otherlv_0=(Token)match(input,76,FOLLOW_23); 
 
             			newLeafNode(otherlv_0, grammarAccess.getLineWidthAccess().getLinewidthKeyword_0());
             		
-            // InternalXdiagramDsl.g:4553:3: ( (lv_width_1_0= RULE_INT ) )
-            // InternalXdiagramDsl.g:4554:4: (lv_width_1_0= RULE_INT )
+            // InternalXdiagramDsl.g:4605:3: ( (lv_width_1_0= RULE_INT ) )
+            // InternalXdiagramDsl.g:4606:4: (lv_width_1_0= RULE_INT )
             {
-            // InternalXdiagramDsl.g:4554:4: (lv_width_1_0= RULE_INT )
-            // InternalXdiagramDsl.g:4555:5: lv_width_1_0= RULE_INT
+            // InternalXdiagramDsl.g:4606:4: (lv_width_1_0= RULE_INT )
+            // InternalXdiagramDsl.g:4607:5: lv_width_1_0= RULE_INT
             {
-            lv_width_1_0=(Token)match(input,RULE_INT,FOLLOW_27); 
+            lv_width_1_0=(Token)match(input,RULE_INT,FOLLOW_28); 
 
             					newLeafNode(lv_width_1_0, grammarAccess.getLineWidthAccess().getWidthINTTerminalRuleCall_1_0());
             				
@@ -12118,24 +12259,24 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXdiagramDsl.g:4571:3: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
-            int alt82=2;
-            int LA82_0 = input.LA(1);
+            // InternalXdiagramDsl.g:4623:3: ( (lv_conditional_2_0= ruleFeatureConditional ) )?
+            int alt84=2;
+            int LA84_0 = input.LA(1);
 
-            if ( (LA82_0==19) ) {
-                alt82=1;
+            if ( (LA84_0==19) ) {
+                alt84=1;
             }
-            switch (alt82) {
+            switch (alt84) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4572:4: (lv_conditional_2_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:4624:4: (lv_conditional_2_0= ruleFeatureConditional )
                     {
-                    // InternalXdiagramDsl.g:4572:4: (lv_conditional_2_0= ruleFeatureConditional )
-                    // InternalXdiagramDsl.g:4573:5: lv_conditional_2_0= ruleFeatureConditional
+                    // InternalXdiagramDsl.g:4624:4: (lv_conditional_2_0= ruleFeatureConditional )
+                    // InternalXdiagramDsl.g:4625:5: lv_conditional_2_0= ruleFeatureConditional
                     {
 
                     					newCompositeNode(grammarAccess.getLineWidthAccess().getConditionalFeatureConditionalParserRuleCall_2_0());
                     				
-                    pushFollow(FOLLOW_28);
+                    pushFollow(FOLLOW_29);
                     lv_conditional_2_0=ruleFeatureConditional();
 
                     state._fsp--;
@@ -12187,7 +12328,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAnchorDirection"
-    // InternalXdiagramDsl.g:4598:1: ruleAnchorDirection returns [Enumerator current=null] : ( (enumLiteral_0= 'incoming' ) | (enumLiteral_1= 'outgoing' ) ) ;
+    // InternalXdiagramDsl.g:4650:1: ruleAnchorDirection returns [Enumerator current=null] : ( (enumLiteral_0= 'incoming' ) | (enumLiteral_1= 'outgoing' ) ) ;
     public final Enumerator ruleAnchorDirection() throws RecognitionException {
         Enumerator current = null;
 
@@ -12198,31 +12339,31 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:4604:2: ( ( (enumLiteral_0= 'incoming' ) | (enumLiteral_1= 'outgoing' ) ) )
-            // InternalXdiagramDsl.g:4605:2: ( (enumLiteral_0= 'incoming' ) | (enumLiteral_1= 'outgoing' ) )
+            // InternalXdiagramDsl.g:4656:2: ( ( (enumLiteral_0= 'incoming' ) | (enumLiteral_1= 'outgoing' ) ) )
+            // InternalXdiagramDsl.g:4657:2: ( (enumLiteral_0= 'incoming' ) | (enumLiteral_1= 'outgoing' ) )
             {
-            // InternalXdiagramDsl.g:4605:2: ( (enumLiteral_0= 'incoming' ) | (enumLiteral_1= 'outgoing' ) )
-            int alt83=2;
-            int LA83_0 = input.LA(1);
+            // InternalXdiagramDsl.g:4657:2: ( (enumLiteral_0= 'incoming' ) | (enumLiteral_1= 'outgoing' ) )
+            int alt85=2;
+            int LA85_0 = input.LA(1);
 
-            if ( (LA83_0==77) ) {
-                alt83=1;
+            if ( (LA85_0==77) ) {
+                alt85=1;
             }
-            else if ( (LA83_0==78) ) {
-                alt83=2;
+            else if ( (LA85_0==78) ) {
+                alt85=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 83, 0, input);
+                    new NoViableAltException("", 85, 0, input);
 
                 throw nvae;
             }
-            switch (alt83) {
+            switch (alt85) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4606:3: (enumLiteral_0= 'incoming' )
+                    // InternalXdiagramDsl.g:4658:3: (enumLiteral_0= 'incoming' )
                     {
-                    // InternalXdiagramDsl.g:4606:3: (enumLiteral_0= 'incoming' )
-                    // InternalXdiagramDsl.g:4607:4: enumLiteral_0= 'incoming'
+                    // InternalXdiagramDsl.g:4658:3: (enumLiteral_0= 'incoming' )
+                    // InternalXdiagramDsl.g:4659:4: enumLiteral_0= 'incoming'
                     {
                     enumLiteral_0=(Token)match(input,77,FOLLOW_2); 
 
@@ -12236,10 +12377,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:4614:3: (enumLiteral_1= 'outgoing' )
+                    // InternalXdiagramDsl.g:4666:3: (enumLiteral_1= 'outgoing' )
                     {
-                    // InternalXdiagramDsl.g:4614:3: (enumLiteral_1= 'outgoing' )
-                    // InternalXdiagramDsl.g:4615:4: enumLiteral_1= 'outgoing'
+                    // InternalXdiagramDsl.g:4666:3: (enumLiteral_1= 'outgoing' )
+                    // InternalXdiagramDsl.g:4667:4: enumLiteral_1= 'outgoing'
                     {
                     enumLiteral_1=(Token)match(input,78,FOLLOW_2); 
 
@@ -12275,7 +12416,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDefaultColor"
-    // InternalXdiagramDsl.g:4625:1: ruleDefaultColor returns [Enumerator current=null] : ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) ) ;
+    // InternalXdiagramDsl.g:4677:1: ruleDefaultColor returns [Enumerator current=null] : ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) ) ;
     public final Enumerator ruleDefaultColor() throws RecognitionException {
         Enumerator current = null;
 
@@ -12300,105 +12441,105 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:4631:2: ( ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) ) )
-            // InternalXdiagramDsl.g:4632:2: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) )
+            // InternalXdiagramDsl.g:4683:2: ( ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) ) )
+            // InternalXdiagramDsl.g:4684:2: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) )
             {
-            // InternalXdiagramDsl.g:4632:2: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) )
-            int alt84=16;
+            // InternalXdiagramDsl.g:4684:2: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'silver' ) | (enumLiteral_2= 'gray' ) | (enumLiteral_3= 'black' ) | (enumLiteral_4= 'red' ) | (enumLiteral_5= 'maroon' ) | (enumLiteral_6= 'yellow' ) | (enumLiteral_7= 'olive' ) | (enumLiteral_8= 'lime' ) | (enumLiteral_9= 'green' ) | (enumLiteral_10= 'aqua' ) | (enumLiteral_11= 'teal' ) | (enumLiteral_12= 'blue' ) | (enumLiteral_13= 'navy' ) | (enumLiteral_14= 'fuchsia' ) | (enumLiteral_15= 'purple' ) )
+            int alt86=16;
             switch ( input.LA(1) ) {
             case 79:
                 {
-                alt84=1;
+                alt86=1;
                 }
                 break;
             case 80:
                 {
-                alt84=2;
+                alt86=2;
                 }
                 break;
             case 81:
                 {
-                alt84=3;
+                alt86=3;
                 }
                 break;
             case 82:
                 {
-                alt84=4;
+                alt86=4;
                 }
                 break;
             case 83:
                 {
-                alt84=5;
+                alt86=5;
                 }
                 break;
             case 84:
                 {
-                alt84=6;
+                alt86=6;
                 }
                 break;
             case 85:
                 {
-                alt84=7;
+                alt86=7;
                 }
                 break;
             case 86:
                 {
-                alt84=8;
+                alt86=8;
                 }
                 break;
             case 87:
                 {
-                alt84=9;
+                alt86=9;
                 }
                 break;
             case 88:
                 {
-                alt84=10;
+                alt86=10;
                 }
                 break;
             case 89:
                 {
-                alt84=11;
+                alt86=11;
                 }
                 break;
             case 90:
                 {
-                alt84=12;
+                alt86=12;
                 }
                 break;
             case 91:
                 {
-                alt84=13;
+                alt86=13;
                 }
                 break;
             case 92:
                 {
-                alt84=14;
+                alt86=14;
                 }
                 break;
             case 93:
                 {
-                alt84=15;
+                alt86=15;
                 }
                 break;
             case 94:
                 {
-                alt84=16;
+                alt86=16;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 84, 0, input);
+                    new NoViableAltException("", 86, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt84) {
+            switch (alt86) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4633:3: (enumLiteral_0= 'white' )
+                    // InternalXdiagramDsl.g:4685:3: (enumLiteral_0= 'white' )
                     {
-                    // InternalXdiagramDsl.g:4633:3: (enumLiteral_0= 'white' )
-                    // InternalXdiagramDsl.g:4634:4: enumLiteral_0= 'white'
+                    // InternalXdiagramDsl.g:4685:3: (enumLiteral_0= 'white' )
+                    // InternalXdiagramDsl.g:4686:4: enumLiteral_0= 'white'
                     {
                     enumLiteral_0=(Token)match(input,79,FOLLOW_2); 
 
@@ -12412,10 +12553,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:4641:3: (enumLiteral_1= 'silver' )
+                    // InternalXdiagramDsl.g:4693:3: (enumLiteral_1= 'silver' )
                     {
-                    // InternalXdiagramDsl.g:4641:3: (enumLiteral_1= 'silver' )
-                    // InternalXdiagramDsl.g:4642:4: enumLiteral_1= 'silver'
+                    // InternalXdiagramDsl.g:4693:3: (enumLiteral_1= 'silver' )
+                    // InternalXdiagramDsl.g:4694:4: enumLiteral_1= 'silver'
                     {
                     enumLiteral_1=(Token)match(input,80,FOLLOW_2); 
 
@@ -12429,10 +12570,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalXdiagramDsl.g:4649:3: (enumLiteral_2= 'gray' )
+                    // InternalXdiagramDsl.g:4701:3: (enumLiteral_2= 'gray' )
                     {
-                    // InternalXdiagramDsl.g:4649:3: (enumLiteral_2= 'gray' )
-                    // InternalXdiagramDsl.g:4650:4: enumLiteral_2= 'gray'
+                    // InternalXdiagramDsl.g:4701:3: (enumLiteral_2= 'gray' )
+                    // InternalXdiagramDsl.g:4702:4: enumLiteral_2= 'gray'
                     {
                     enumLiteral_2=(Token)match(input,81,FOLLOW_2); 
 
@@ -12446,10 +12587,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalXdiagramDsl.g:4657:3: (enumLiteral_3= 'black' )
+                    // InternalXdiagramDsl.g:4709:3: (enumLiteral_3= 'black' )
                     {
-                    // InternalXdiagramDsl.g:4657:3: (enumLiteral_3= 'black' )
-                    // InternalXdiagramDsl.g:4658:4: enumLiteral_3= 'black'
+                    // InternalXdiagramDsl.g:4709:3: (enumLiteral_3= 'black' )
+                    // InternalXdiagramDsl.g:4710:4: enumLiteral_3= 'black'
                     {
                     enumLiteral_3=(Token)match(input,82,FOLLOW_2); 
 
@@ -12463,10 +12604,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalXdiagramDsl.g:4665:3: (enumLiteral_4= 'red' )
+                    // InternalXdiagramDsl.g:4717:3: (enumLiteral_4= 'red' )
                     {
-                    // InternalXdiagramDsl.g:4665:3: (enumLiteral_4= 'red' )
-                    // InternalXdiagramDsl.g:4666:4: enumLiteral_4= 'red'
+                    // InternalXdiagramDsl.g:4717:3: (enumLiteral_4= 'red' )
+                    // InternalXdiagramDsl.g:4718:4: enumLiteral_4= 'red'
                     {
                     enumLiteral_4=(Token)match(input,83,FOLLOW_2); 
 
@@ -12480,10 +12621,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalXdiagramDsl.g:4673:3: (enumLiteral_5= 'maroon' )
+                    // InternalXdiagramDsl.g:4725:3: (enumLiteral_5= 'maroon' )
                     {
-                    // InternalXdiagramDsl.g:4673:3: (enumLiteral_5= 'maroon' )
-                    // InternalXdiagramDsl.g:4674:4: enumLiteral_5= 'maroon'
+                    // InternalXdiagramDsl.g:4725:3: (enumLiteral_5= 'maroon' )
+                    // InternalXdiagramDsl.g:4726:4: enumLiteral_5= 'maroon'
                     {
                     enumLiteral_5=(Token)match(input,84,FOLLOW_2); 
 
@@ -12497,10 +12638,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalXdiagramDsl.g:4681:3: (enumLiteral_6= 'yellow' )
+                    // InternalXdiagramDsl.g:4733:3: (enumLiteral_6= 'yellow' )
                     {
-                    // InternalXdiagramDsl.g:4681:3: (enumLiteral_6= 'yellow' )
-                    // InternalXdiagramDsl.g:4682:4: enumLiteral_6= 'yellow'
+                    // InternalXdiagramDsl.g:4733:3: (enumLiteral_6= 'yellow' )
+                    // InternalXdiagramDsl.g:4734:4: enumLiteral_6= 'yellow'
                     {
                     enumLiteral_6=(Token)match(input,85,FOLLOW_2); 
 
@@ -12514,10 +12655,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalXdiagramDsl.g:4689:3: (enumLiteral_7= 'olive' )
+                    // InternalXdiagramDsl.g:4741:3: (enumLiteral_7= 'olive' )
                     {
-                    // InternalXdiagramDsl.g:4689:3: (enumLiteral_7= 'olive' )
-                    // InternalXdiagramDsl.g:4690:4: enumLiteral_7= 'olive'
+                    // InternalXdiagramDsl.g:4741:3: (enumLiteral_7= 'olive' )
+                    // InternalXdiagramDsl.g:4742:4: enumLiteral_7= 'olive'
                     {
                     enumLiteral_7=(Token)match(input,86,FOLLOW_2); 
 
@@ -12531,10 +12672,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalXdiagramDsl.g:4697:3: (enumLiteral_8= 'lime' )
+                    // InternalXdiagramDsl.g:4749:3: (enumLiteral_8= 'lime' )
                     {
-                    // InternalXdiagramDsl.g:4697:3: (enumLiteral_8= 'lime' )
-                    // InternalXdiagramDsl.g:4698:4: enumLiteral_8= 'lime'
+                    // InternalXdiagramDsl.g:4749:3: (enumLiteral_8= 'lime' )
+                    // InternalXdiagramDsl.g:4750:4: enumLiteral_8= 'lime'
                     {
                     enumLiteral_8=(Token)match(input,87,FOLLOW_2); 
 
@@ -12548,10 +12689,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalXdiagramDsl.g:4705:3: (enumLiteral_9= 'green' )
+                    // InternalXdiagramDsl.g:4757:3: (enumLiteral_9= 'green' )
                     {
-                    // InternalXdiagramDsl.g:4705:3: (enumLiteral_9= 'green' )
-                    // InternalXdiagramDsl.g:4706:4: enumLiteral_9= 'green'
+                    // InternalXdiagramDsl.g:4757:3: (enumLiteral_9= 'green' )
+                    // InternalXdiagramDsl.g:4758:4: enumLiteral_9= 'green'
                     {
                     enumLiteral_9=(Token)match(input,88,FOLLOW_2); 
 
@@ -12565,10 +12706,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // InternalXdiagramDsl.g:4713:3: (enumLiteral_10= 'aqua' )
+                    // InternalXdiagramDsl.g:4765:3: (enumLiteral_10= 'aqua' )
                     {
-                    // InternalXdiagramDsl.g:4713:3: (enumLiteral_10= 'aqua' )
-                    // InternalXdiagramDsl.g:4714:4: enumLiteral_10= 'aqua'
+                    // InternalXdiagramDsl.g:4765:3: (enumLiteral_10= 'aqua' )
+                    // InternalXdiagramDsl.g:4766:4: enumLiteral_10= 'aqua'
                     {
                     enumLiteral_10=(Token)match(input,89,FOLLOW_2); 
 
@@ -12582,10 +12723,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // InternalXdiagramDsl.g:4721:3: (enumLiteral_11= 'teal' )
+                    // InternalXdiagramDsl.g:4773:3: (enumLiteral_11= 'teal' )
                     {
-                    // InternalXdiagramDsl.g:4721:3: (enumLiteral_11= 'teal' )
-                    // InternalXdiagramDsl.g:4722:4: enumLiteral_11= 'teal'
+                    // InternalXdiagramDsl.g:4773:3: (enumLiteral_11= 'teal' )
+                    // InternalXdiagramDsl.g:4774:4: enumLiteral_11= 'teal'
                     {
                     enumLiteral_11=(Token)match(input,90,FOLLOW_2); 
 
@@ -12599,10 +12740,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // InternalXdiagramDsl.g:4729:3: (enumLiteral_12= 'blue' )
+                    // InternalXdiagramDsl.g:4781:3: (enumLiteral_12= 'blue' )
                     {
-                    // InternalXdiagramDsl.g:4729:3: (enumLiteral_12= 'blue' )
-                    // InternalXdiagramDsl.g:4730:4: enumLiteral_12= 'blue'
+                    // InternalXdiagramDsl.g:4781:3: (enumLiteral_12= 'blue' )
+                    // InternalXdiagramDsl.g:4782:4: enumLiteral_12= 'blue'
                     {
                     enumLiteral_12=(Token)match(input,91,FOLLOW_2); 
 
@@ -12616,10 +12757,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // InternalXdiagramDsl.g:4737:3: (enumLiteral_13= 'navy' )
+                    // InternalXdiagramDsl.g:4789:3: (enumLiteral_13= 'navy' )
                     {
-                    // InternalXdiagramDsl.g:4737:3: (enumLiteral_13= 'navy' )
-                    // InternalXdiagramDsl.g:4738:4: enumLiteral_13= 'navy'
+                    // InternalXdiagramDsl.g:4789:3: (enumLiteral_13= 'navy' )
+                    // InternalXdiagramDsl.g:4790:4: enumLiteral_13= 'navy'
                     {
                     enumLiteral_13=(Token)match(input,92,FOLLOW_2); 
 
@@ -12633,10 +12774,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // InternalXdiagramDsl.g:4745:3: (enumLiteral_14= 'fuchsia' )
+                    // InternalXdiagramDsl.g:4797:3: (enumLiteral_14= 'fuchsia' )
                     {
-                    // InternalXdiagramDsl.g:4745:3: (enumLiteral_14= 'fuchsia' )
-                    // InternalXdiagramDsl.g:4746:4: enumLiteral_14= 'fuchsia'
+                    // InternalXdiagramDsl.g:4797:3: (enumLiteral_14= 'fuchsia' )
+                    // InternalXdiagramDsl.g:4798:4: enumLiteral_14= 'fuchsia'
                     {
                     enumLiteral_14=(Token)match(input,93,FOLLOW_2); 
 
@@ -12650,10 +12791,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 16 :
-                    // InternalXdiagramDsl.g:4753:3: (enumLiteral_15= 'purple' )
+                    // InternalXdiagramDsl.g:4805:3: (enumLiteral_15= 'purple' )
                     {
-                    // InternalXdiagramDsl.g:4753:3: (enumLiteral_15= 'purple' )
-                    // InternalXdiagramDsl.g:4754:4: enumLiteral_15= 'purple'
+                    // InternalXdiagramDsl.g:4805:3: (enumLiteral_15= 'purple' )
+                    // InternalXdiagramDsl.g:4806:4: enumLiteral_15= 'purple'
                     {
                     enumLiteral_15=(Token)match(input,94,FOLLOW_2); 
 
@@ -12689,7 +12830,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperator"
-    // InternalXdiagramDsl.g:4764:1: ruleOperator returns [Enumerator current=null] : ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) ) ;
+    // InternalXdiagramDsl.g:4816:1: ruleOperator returns [Enumerator current=null] : ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) ) ;
     public final Enumerator ruleOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -12700,31 +12841,31 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:4770:2: ( ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) ) )
-            // InternalXdiagramDsl.g:4771:2: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) )
+            // InternalXdiagramDsl.g:4822:2: ( ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) ) )
+            // InternalXdiagramDsl.g:4823:2: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) )
             {
-            // InternalXdiagramDsl.g:4771:2: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) )
-            int alt85=2;
-            int LA85_0 = input.LA(1);
+            // InternalXdiagramDsl.g:4823:2: ( (enumLiteral_0= '=' ) | (enumLiteral_1= '<>' ) )
+            int alt87=2;
+            int LA87_0 = input.LA(1);
 
-            if ( (LA85_0==95) ) {
-                alt85=1;
+            if ( (LA87_0==95) ) {
+                alt87=1;
             }
-            else if ( (LA85_0==96) ) {
-                alt85=2;
+            else if ( (LA87_0==96) ) {
+                alt87=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 85, 0, input);
+                    new NoViableAltException("", 87, 0, input);
 
                 throw nvae;
             }
-            switch (alt85) {
+            switch (alt87) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4772:3: (enumLiteral_0= '=' )
+                    // InternalXdiagramDsl.g:4824:3: (enumLiteral_0= '=' )
                     {
-                    // InternalXdiagramDsl.g:4772:3: (enumLiteral_0= '=' )
-                    // InternalXdiagramDsl.g:4773:4: enumLiteral_0= '='
+                    // InternalXdiagramDsl.g:4824:3: (enumLiteral_0= '=' )
+                    // InternalXdiagramDsl.g:4825:4: enumLiteral_0= '='
                     {
                     enumLiteral_0=(Token)match(input,95,FOLLOW_2); 
 
@@ -12738,10 +12879,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:4780:3: (enumLiteral_1= '<>' )
+                    // InternalXdiagramDsl.g:4832:3: (enumLiteral_1= '<>' )
                     {
-                    // InternalXdiagramDsl.g:4780:3: (enumLiteral_1= '<>' )
-                    // InternalXdiagramDsl.g:4781:4: enumLiteral_1= '<>'
+                    // InternalXdiagramDsl.g:4832:3: (enumLiteral_1= '<>' )
+                    // InternalXdiagramDsl.g:4833:4: enumLiteral_1= '<>'
                     {
                     enumLiteral_1=(Token)match(input,96,FOLLOW_2); 
 
@@ -12777,7 +12918,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBooleanLiteral"
-    // InternalXdiagramDsl.g:4791:1: ruleBooleanLiteral returns [Enumerator current=null] : ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) ;
+    // InternalXdiagramDsl.g:4843:1: ruleBooleanLiteral returns [Enumerator current=null] : ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) ;
     public final Enumerator ruleBooleanLiteral() throws RecognitionException {
         Enumerator current = null;
 
@@ -12788,31 +12929,31 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:4797:2: ( ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) )
-            // InternalXdiagramDsl.g:4798:2: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
+            // InternalXdiagramDsl.g:4849:2: ( ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) ) )
+            // InternalXdiagramDsl.g:4850:2: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
             {
-            // InternalXdiagramDsl.g:4798:2: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
-            int alt86=2;
-            int LA86_0 = input.LA(1);
+            // InternalXdiagramDsl.g:4850:2: ( (enumLiteral_0= 'true' ) | (enumLiteral_1= 'false' ) )
+            int alt88=2;
+            int LA88_0 = input.LA(1);
 
-            if ( (LA86_0==97) ) {
-                alt86=1;
+            if ( (LA88_0==97) ) {
+                alt88=1;
             }
-            else if ( (LA86_0==98) ) {
-                alt86=2;
+            else if ( (LA88_0==98) ) {
+                alt88=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 86, 0, input);
+                    new NoViableAltException("", 88, 0, input);
 
                 throw nvae;
             }
-            switch (alt86) {
+            switch (alt88) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4799:3: (enumLiteral_0= 'true' )
+                    // InternalXdiagramDsl.g:4851:3: (enumLiteral_0= 'true' )
                     {
-                    // InternalXdiagramDsl.g:4799:3: (enumLiteral_0= 'true' )
-                    // InternalXdiagramDsl.g:4800:4: enumLiteral_0= 'true'
+                    // InternalXdiagramDsl.g:4851:3: (enumLiteral_0= 'true' )
+                    // InternalXdiagramDsl.g:4852:4: enumLiteral_0= 'true'
                     {
                     enumLiteral_0=(Token)match(input,97,FOLLOW_2); 
 
@@ -12826,10 +12967,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:4807:3: (enumLiteral_1= 'false' )
+                    // InternalXdiagramDsl.g:4859:3: (enumLiteral_1= 'false' )
                     {
-                    // InternalXdiagramDsl.g:4807:3: (enumLiteral_1= 'false' )
-                    // InternalXdiagramDsl.g:4808:4: enumLiteral_1= 'false'
+                    // InternalXdiagramDsl.g:4859:3: (enumLiteral_1= 'false' )
+                    // InternalXdiagramDsl.g:4860:4: enumLiteral_1= 'false'
                     {
                     enumLiteral_1=(Token)match(input,98,FOLLOW_2); 
 
@@ -12865,7 +13006,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTextAlignValue"
-    // InternalXdiagramDsl.g:4818:1: ruleTextAlignValue returns [Enumerator current=null] : ( (enumLiteral_0= 'left' ) | (enumLiteral_1= 'center' ) | (enumLiteral_2= 'right' ) ) ;
+    // InternalXdiagramDsl.g:4870:1: ruleTextAlignValue returns [Enumerator current=null] : ( (enumLiteral_0= 'left' ) | (enumLiteral_1= 'center' ) | (enumLiteral_2= 'right' ) ) ;
     public final Enumerator ruleTextAlignValue() throws RecognitionException {
         Enumerator current = null;
 
@@ -12877,40 +13018,40 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:4824:2: ( ( (enumLiteral_0= 'left' ) | (enumLiteral_1= 'center' ) | (enumLiteral_2= 'right' ) ) )
-            // InternalXdiagramDsl.g:4825:2: ( (enumLiteral_0= 'left' ) | (enumLiteral_1= 'center' ) | (enumLiteral_2= 'right' ) )
+            // InternalXdiagramDsl.g:4876:2: ( ( (enumLiteral_0= 'left' ) | (enumLiteral_1= 'center' ) | (enumLiteral_2= 'right' ) ) )
+            // InternalXdiagramDsl.g:4877:2: ( (enumLiteral_0= 'left' ) | (enumLiteral_1= 'center' ) | (enumLiteral_2= 'right' ) )
             {
-            // InternalXdiagramDsl.g:4825:2: ( (enumLiteral_0= 'left' ) | (enumLiteral_1= 'center' ) | (enumLiteral_2= 'right' ) )
-            int alt87=3;
+            // InternalXdiagramDsl.g:4877:2: ( (enumLiteral_0= 'left' ) | (enumLiteral_1= 'center' ) | (enumLiteral_2= 'right' ) )
+            int alt89=3;
             switch ( input.LA(1) ) {
             case 99:
                 {
-                alt87=1;
+                alt89=1;
                 }
                 break;
             case 100:
                 {
-                alt87=2;
+                alt89=2;
                 }
                 break;
             case 101:
                 {
-                alt87=3;
+                alt89=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 87, 0, input);
+                    new NoViableAltException("", 89, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt87) {
+            switch (alt89) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4826:3: (enumLiteral_0= 'left' )
+                    // InternalXdiagramDsl.g:4878:3: (enumLiteral_0= 'left' )
                     {
-                    // InternalXdiagramDsl.g:4826:3: (enumLiteral_0= 'left' )
-                    // InternalXdiagramDsl.g:4827:4: enumLiteral_0= 'left'
+                    // InternalXdiagramDsl.g:4878:3: (enumLiteral_0= 'left' )
+                    // InternalXdiagramDsl.g:4879:4: enumLiteral_0= 'left'
                     {
                     enumLiteral_0=(Token)match(input,99,FOLLOW_2); 
 
@@ -12924,10 +13065,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:4834:3: (enumLiteral_1= 'center' )
+                    // InternalXdiagramDsl.g:4886:3: (enumLiteral_1= 'center' )
                     {
-                    // InternalXdiagramDsl.g:4834:3: (enumLiteral_1= 'center' )
-                    // InternalXdiagramDsl.g:4835:4: enumLiteral_1= 'center'
+                    // InternalXdiagramDsl.g:4886:3: (enumLiteral_1= 'center' )
+                    // InternalXdiagramDsl.g:4887:4: enumLiteral_1= 'center'
                     {
                     enumLiteral_1=(Token)match(input,100,FOLLOW_2); 
 
@@ -12941,10 +13082,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalXdiagramDsl.g:4842:3: (enumLiteral_2= 'right' )
+                    // InternalXdiagramDsl.g:4894:3: (enumLiteral_2= 'right' )
                     {
-                    // InternalXdiagramDsl.g:4842:3: (enumLiteral_2= 'right' )
-                    // InternalXdiagramDsl.g:4843:4: enumLiteral_2= 'right'
+                    // InternalXdiagramDsl.g:4894:3: (enumLiteral_2= 'right' )
+                    // InternalXdiagramDsl.g:4895:4: enumLiteral_2= 'right'
                     {
                     enumLiteral_2=(Token)match(input,101,FOLLOW_2); 
 
@@ -12980,7 +13121,7 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLineType"
-    // InternalXdiagramDsl.g:4853:1: ruleLineType returns [Enumerator current=null] : ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dashed' ) | (enumLiteral_2= 'dotted' ) ) ;
+    // InternalXdiagramDsl.g:4905:1: ruleLineType returns [Enumerator current=null] : ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dashed' ) | (enumLiteral_2= 'dotted' ) ) ;
     public final Enumerator ruleLineType() throws RecognitionException {
         Enumerator current = null;
 
@@ -12992,40 +13133,40 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalXdiagramDsl.g:4859:2: ( ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dashed' ) | (enumLiteral_2= 'dotted' ) ) )
-            // InternalXdiagramDsl.g:4860:2: ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dashed' ) | (enumLiteral_2= 'dotted' ) )
+            // InternalXdiagramDsl.g:4911:2: ( ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dashed' ) | (enumLiteral_2= 'dotted' ) ) )
+            // InternalXdiagramDsl.g:4912:2: ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dashed' ) | (enumLiteral_2= 'dotted' ) )
             {
-            // InternalXdiagramDsl.g:4860:2: ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dashed' ) | (enumLiteral_2= 'dotted' ) )
-            int alt88=3;
+            // InternalXdiagramDsl.g:4912:2: ( (enumLiteral_0= 'solid' ) | (enumLiteral_1= 'dashed' ) | (enumLiteral_2= 'dotted' ) )
+            int alt90=3;
             switch ( input.LA(1) ) {
             case 102:
                 {
-                alt88=1;
+                alt90=1;
                 }
                 break;
             case 103:
                 {
-                alt88=2;
+                alt90=2;
                 }
                 break;
             case 104:
                 {
-                alt88=3;
+                alt90=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 88, 0, input);
+                    new NoViableAltException("", 90, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt88) {
+            switch (alt90) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4861:3: (enumLiteral_0= 'solid' )
+                    // InternalXdiagramDsl.g:4913:3: (enumLiteral_0= 'solid' )
                     {
-                    // InternalXdiagramDsl.g:4861:3: (enumLiteral_0= 'solid' )
-                    // InternalXdiagramDsl.g:4862:4: enumLiteral_0= 'solid'
+                    // InternalXdiagramDsl.g:4913:3: (enumLiteral_0= 'solid' )
+                    // InternalXdiagramDsl.g:4914:4: enumLiteral_0= 'solid'
                     {
                     enumLiteral_0=(Token)match(input,102,FOLLOW_2); 
 
@@ -13039,10 +13180,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:4869:3: (enumLiteral_1= 'dashed' )
+                    // InternalXdiagramDsl.g:4921:3: (enumLiteral_1= 'dashed' )
                     {
-                    // InternalXdiagramDsl.g:4869:3: (enumLiteral_1= 'dashed' )
-                    // InternalXdiagramDsl.g:4870:4: enumLiteral_1= 'dashed'
+                    // InternalXdiagramDsl.g:4921:3: (enumLiteral_1= 'dashed' )
+                    // InternalXdiagramDsl.g:4922:4: enumLiteral_1= 'dashed'
                     {
                     enumLiteral_1=(Token)match(input,103,FOLLOW_2); 
 
@@ -13056,10 +13197,10 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalXdiagramDsl.g:4877:3: (enumLiteral_2= 'dotted' )
+                    // InternalXdiagramDsl.g:4929:3: (enumLiteral_2= 'dotted' )
                     {
-                    // InternalXdiagramDsl.g:4877:3: (enumLiteral_2= 'dotted' )
-                    // InternalXdiagramDsl.g:4878:4: enumLiteral_2= 'dotted'
+                    // InternalXdiagramDsl.g:4929:3: (enumLiteral_2= 'dotted' )
+                    // InternalXdiagramDsl.g:4930:4: enumLiteral_2= 'dotted'
                     {
                     enumLiteral_2=(Token)match(input,104,FOLLOW_2); 
 
@@ -13102,59 +13243,61 @@ public class InternalXdiagramDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000040000L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000180300002L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000400000008000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000000L,0x0000000180000000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000800000000070L,0x0000000600000000L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x000707F900000000L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0008000004008000L,0x0000000000001400L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000004008000L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x00073FF900000000L});
-    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000000000L,0x0000000000006000L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000060080000L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000040080000L});
-    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000400410008000L});
-    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000400008000L});
-    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x1C7C400410008000L,0x0000000000001400L});
-    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x147C400410008000L,0x0000000000001400L});
-    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x167C400410008000L,0x0000000000001400L});
-    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x147C400010008000L,0x0000000000001400L});
-    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x147C400410008000L,0x0000000000001605L});
-    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0460000400008000L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x1440400410008000L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000000000020L,0x000000007FFF8000L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0180000040080040L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0100000040080040L});
-    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0180000040080000L});
-    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0100000040080000L});
-    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000008000040L});
-    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000048080000L});
-    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x6000000000000000L});
-    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x8000000040080000L});
-    public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0000000040080030L,0x0000000000000002L});
-    public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0000000040080040L,0x00000000000001F8L});
-    public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000000040080040L,0x0000000000000180L});
-    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000040080000L,0x0000000000000180L});
-    public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000000040080000L,0x0000000000000100L});
-    public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000000000000L,0x0000003800000000L});
-    public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0000000040080000L,0x000001C000000800L});
-    public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0000000040080000L,0x0000000000000800L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000100300002L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000400000008000L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000000L,0x0000000180000000L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000800000000070L,0x0000000600000000L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x000707F900000000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000C00000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0008000004008000L,0x0000000000001400L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000004008000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x00073FF900000000L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000000000L,0x0000000000006000L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000060080000L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000040080000L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000008020L});
+    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000400410008000L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000400008000L});
+    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x1C7C400410008000L,0x0000000000001400L});
+    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x147C400410008000L,0x0000000000001400L});
+    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0200000000000000L});
+    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x167C400410008000L,0x0000000000001400L});
+    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x147C400010008000L,0x0000000000001400L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x147C400410008000L,0x0000000000001605L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0460000400008000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x1440400410008000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000000000020L,0x000000007FFF8000L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0180000040080040L});
+    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0100000040080040L});
+    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0180000040080000L});
+    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0100000040080000L});
+    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000008000040L});
+    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000048080000L});
+    public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x6000000000000000L});
+    public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x8000000040080000L});
+    public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000000040080030L,0x0000000000000002L});
+    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000040080040L,0x00000000000001F8L});
+    public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000000040080040L,0x0000000000000180L});
+    public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000040080000L,0x0000000000000180L});
+    public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0000000040080000L,0x0000000000000100L});
+    public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0000000000000000L,0x0000003800000000L});
+    public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000040080000L,0x000001C000000800L});
+    public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0000000040080000L,0x0000000000000800L});
 
 }

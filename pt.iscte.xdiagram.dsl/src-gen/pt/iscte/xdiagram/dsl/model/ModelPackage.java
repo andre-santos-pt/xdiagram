@@ -87,22 +87,22 @@ public interface ModelPackage extends EPackage
   int XDIAGRAM__DIAGRAM = 1;
 
   /**
+   * The feature id for the '<em><b>Custom Colors</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDIAGRAM__CUSTOM_COLORS = 2;
+
+  /**
    * The feature id for the '<em><b>Elements</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int XDIAGRAM__ELEMENTS = 2;
-
-  /**
-   * The feature id for the '<em><b>Colors</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int XDIAGRAM__COLORS = 3;
+  int XDIAGRAM__ELEMENTS = 3;
 
   /**
    * The feature id for the '<em><b>Figures</b></em>' containment reference list.
@@ -575,6 +575,34 @@ public interface ModelPackage extends EPackage
   int ANCHOR_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 3;
 
   /**
+   * The meta object id for the '{@link pt.iscte.xdiagram.dsl.model.impl.ColorsImpl <em>Colors</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see pt.iscte.xdiagram.dsl.model.impl.ColorsImpl
+   * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getColors()
+   * @generated
+   */
+  int COLORS = 12;
+
+  /**
+   * The feature id for the '<em><b>Colors</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLORS__COLORS = 0;
+
+  /**
+   * The number of structural features of the '<em>Colors</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLORS_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link pt.iscte.xdiagram.dsl.model.impl.CustomColorImpl <em>Custom Color</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -582,7 +610,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getCustomColor()
    * @generated
    */
-  int CUSTOM_COLOR = 12;
+  int CUSTOM_COLOR = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -637,7 +665,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getColor()
    * @generated
    */
-  int COLOR = 13;
+  int COLOR = 14;
 
   /**
    * The feature id for the '<em><b>Default</b></em>' attribute.
@@ -674,7 +702,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getConnectableElement()
    * @generated
    */
-  int CONNECTABLE_ELEMENT = 14;
+  int CONNECTABLE_ELEMENT = 15;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -711,7 +739,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getCustomFigure()
    * @generated
    */
-  int CUSTOM_FIGURE = 15;
+  int CUSTOM_FIGURE = 16;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -748,7 +776,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getCustom()
    * @generated
    */
-  int CUSTOM = 16;
+  int CUSTOM = 17;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -794,7 +822,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getRectangle()
    * @generated
    */
-  int RECTANGLE = 17;
+  int RECTANGLE = 18;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -849,7 +877,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getRhombus()
    * @generated
    */
-  int RHOMBUS = 18;
+  int RHOMBUS = 19;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -886,7 +914,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getEllipse()
    * @generated
    */
-  int ELLIPSE = 19;
+  int ELLIPSE = 20;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -941,7 +969,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getPolyline()
    * @generated
    */
-  int POLYLINE = 20;
+  int POLYLINE = 21;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -996,7 +1024,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getTriangle()
    * @generated
    */
-  int TRIANGLE = 21;
+  int TRIANGLE = 22;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -1033,7 +1061,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getLine()
    * @generated
    */
-  int LINE = 22;
+  int LINE = 23;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -1079,7 +1107,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getArrow()
    * @generated
    */
-  int ARROW = 23;
+  int ARROW = 24;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -1107,7 +1135,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getContains()
    * @generated
    */
-  int CONTAINS = 24;
+  int CONTAINS = 25;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -1144,7 +1172,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getValue()
    * @generated
    */
-  int VALUE = 25;
+  int VALUE = 26;
 
   /**
    * The number of structural features of the '<em>Value</em>' class.
@@ -1163,7 +1191,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getIntValue()
    * @generated
    */
-  int INT_VALUE = 26;
+  int INT_VALUE = 27;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1191,7 +1219,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getDoubleValue()
    * @generated
    */
-  int DOUBLE_VALUE = 27;
+  int DOUBLE_VALUE = 28;
 
   /**
    * The feature id for the '<em><b>Value Int</b></em>' attribute.
@@ -1228,7 +1256,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getStringValue()
    * @generated
    */
-  int STRING_VALUE = 28;
+  int STRING_VALUE = 29;
 
   /**
    * The feature id for the '<em><b>Null</b></em>' attribute.
@@ -1265,7 +1293,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getBooleanValue()
    * @generated
    */
-  int BOOLEAN_VALUE = 29;
+  int BOOLEAN_VALUE = 30;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1293,7 +1321,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getEnumValue()
    * @generated
    */
-  int ENUM_VALUE = 30;
+  int ENUM_VALUE = 31;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1321,7 +1349,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getLabel()
    * @generated
    */
-  int LABEL = 31;
+  int LABEL = 32;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -1358,7 +1386,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getImage()
    * @generated
    */
-  int IMAGE = 32;
+  int IMAGE = 33;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -1404,7 +1432,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getInvisible()
    * @generated
    */
-  int INVISIBLE = 33;
+  int INVISIBLE = 34;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -1441,7 +1469,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getColorFeature()
    * @generated
    */
-  int COLOR_FEATURE = 34;
+  int COLOR_FEATURE = 35;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -1487,7 +1515,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getTransparency()
    * @generated
    */
-  int TRANSPARENCY = 35;
+  int TRANSPARENCY = 36;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -1524,7 +1552,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getSize()
    * @generated
    */
-  int SIZE = 36;
+  int SIZE = 37;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -1597,7 +1625,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getPoint()
    * @generated
    */
-  int POINT = 37;
+  int POINT = 38;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -1643,7 +1671,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getPosition()
    * @generated
    */
-  int POSITION = 38;
+  int POSITION = 39;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -1707,7 +1735,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getCorner()
    * @generated
    */
-  int CORNER = 39;
+  int CORNER = 40;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -1744,7 +1772,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getLayout()
    * @generated
    */
-  int LAYOUT = 40;
+  int LAYOUT = 41;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -1799,7 +1827,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getVisible()
    * @generated
    */
-  int VISIBLE = 41;
+  int VISIBLE = 42;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -1827,7 +1855,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getTextValue()
    * @generated
    */
-  int TEXT_VALUE = 42;
+  int TEXT_VALUE = 43;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -1864,7 +1892,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getTextPart()
    * @generated
    */
-  int TEXT_PART = 43;
+  int TEXT_PART = 44;
 
   /**
    * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -1910,7 +1938,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getFontProperties()
    * @generated
    */
-  int FONT_PROPERTIES = 44;
+  int FONT_PROPERTIES = 45;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -1974,7 +2002,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getTextAlign()
    * @generated
    */
-  int TEXT_ALIGN = 45;
+  int TEXT_ALIGN = 46;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2011,7 +2039,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getLineStyle()
    * @generated
    */
-  int LINE_STYLE = 46;
+  int LINE_STYLE = 47;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2057,7 +2085,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getLineWidth()
    * @generated
    */
-  int LINE_WIDTH = 47;
+  int LINE_WIDTH = 48;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -2094,7 +2122,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getAnchorDirection()
    * @generated
    */
-  int ANCHOR_DIRECTION = 48;
+  int ANCHOR_DIRECTION = 49;
 
   /**
    * The meta object id for the '{@link pt.iscte.xdiagram.dsl.model.DefaultColor <em>Default Color</em>}' enum.
@@ -2104,7 +2132,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getDefaultColor()
    * @generated
    */
-  int DEFAULT_COLOR = 49;
+  int DEFAULT_COLOR = 50;
 
   /**
    * The meta object id for the '{@link pt.iscte.xdiagram.dsl.model.Operator <em>Operator</em>}' enum.
@@ -2114,7 +2142,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getOperator()
    * @generated
    */
-  int OPERATOR = 50;
+  int OPERATOR = 51;
 
   /**
    * The meta object id for the '{@link pt.iscte.xdiagram.dsl.model.BooleanLiteral <em>Boolean Literal</em>}' enum.
@@ -2124,7 +2152,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getBooleanLiteral()
    * @generated
    */
-  int BOOLEAN_LITERAL = 51;
+  int BOOLEAN_LITERAL = 52;
 
   /**
    * The meta object id for the '{@link pt.iscte.xdiagram.dsl.model.TextAlignValue <em>Text Align Value</em>}' enum.
@@ -2134,7 +2162,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getTextAlignValue()
    * @generated
    */
-  int TEXT_ALIGN_VALUE = 52;
+  int TEXT_ALIGN_VALUE = 53;
 
   /**
    * The meta object id for the '{@link pt.iscte.xdiagram.dsl.model.LineType <em>Line Type</em>}' enum.
@@ -2144,7 +2172,7 @@ public interface ModelPackage extends EPackage
    * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getLineType()
    * @generated
    */
-  int LINE_TYPE = 53;
+  int LINE_TYPE = 54;
 
 
   /**
@@ -2180,6 +2208,17 @@ public interface ModelPackage extends EPackage
   EReference getXDiagram_Diagram();
 
   /**
+   * Returns the meta object for the containment reference '{@link pt.iscte.xdiagram.dsl.model.XDiagram#getCustomColors <em>Custom Colors</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Custom Colors</em>'.
+   * @see pt.iscte.xdiagram.dsl.model.XDiagram#getCustomColors()
+   * @see #getXDiagram()
+   * @generated
+   */
+  EReference getXDiagram_CustomColors();
+
+  /**
    * Returns the meta object for the containment reference list '{@link pt.iscte.xdiagram.dsl.model.XDiagram#getElements <em>Elements</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2189,17 +2228,6 @@ public interface ModelPackage extends EPackage
    * @generated
    */
   EReference getXDiagram_Elements();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link pt.iscte.xdiagram.dsl.model.XDiagram#getColors <em>Colors</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Colors</em>'.
-   * @see pt.iscte.xdiagram.dsl.model.XDiagram#getColors()
-   * @see #getXDiagram()
-   * @generated
-   */
-  EReference getXDiagram_Colors();
 
   /**
    * Returns the meta object for the containment reference list '{@link pt.iscte.xdiagram.dsl.model.XDiagram#getFigures <em>Figures</em>}'.
@@ -2574,6 +2602,27 @@ public interface ModelPackage extends EPackage
    * @generated
    */
   EAttribute getAnchor_Max();
+
+  /**
+   * Returns the meta object for class '{@link pt.iscte.xdiagram.dsl.model.Colors <em>Colors</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Colors</em>'.
+   * @see pt.iscte.xdiagram.dsl.model.Colors
+   * @generated
+   */
+  EClass getColors();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link pt.iscte.xdiagram.dsl.model.Colors#getColors <em>Colors</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Colors</em>'.
+   * @see pt.iscte.xdiagram.dsl.model.Colors#getColors()
+   * @see #getColors()
+   * @generated
+   */
+  EReference getColors_Colors();
 
   /**
    * Returns the meta object for class '{@link pt.iscte.xdiagram.dsl.model.CustomColor <em>Custom Color</em>}'.
@@ -3672,20 +3721,20 @@ public interface ModelPackage extends EPackage
     EReference XDIAGRAM__DIAGRAM = eINSTANCE.getXDiagram_Diagram();
 
     /**
+     * The meta object literal for the '<em><b>Custom Colors</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference XDIAGRAM__CUSTOM_COLORS = eINSTANCE.getXDiagram_CustomColors();
+
+    /**
      * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference XDIAGRAM__ELEMENTS = eINSTANCE.getXDiagram_Elements();
-
-    /**
-     * The meta object literal for the '<em><b>Colors</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference XDIAGRAM__COLORS = eINSTANCE.getXDiagram_Colors();
 
     /**
      * The meta object literal for the '<em><b>Figures</b></em>' containment reference list feature.
@@ -3988,6 +4037,24 @@ public interface ModelPackage extends EPackage
      * @generated
      */
     EAttribute ANCHOR__MAX = eINSTANCE.getAnchor_Max();
+
+    /**
+     * The meta object literal for the '{@link pt.iscte.xdiagram.dsl.model.impl.ColorsImpl <em>Colors</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see pt.iscte.xdiagram.dsl.model.impl.ColorsImpl
+     * @see pt.iscte.xdiagram.dsl.model.impl.ModelPackageImpl#getColors()
+     * @generated
+     */
+    EClass COLORS = eINSTANCE.getColors();
+
+    /**
+     * The meta object literal for the '<em><b>Colors</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COLORS__COLORS = eINSTANCE.getColors_Colors();
 
     /**
      * The meta object literal for the '{@link pt.iscte.xdiagram.dsl.model.impl.CustomColorImpl <em>Custom Color</em>}' class.

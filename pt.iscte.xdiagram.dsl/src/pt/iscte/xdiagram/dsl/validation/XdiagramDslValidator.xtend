@@ -20,6 +20,7 @@ import pt.iscte.xdiagram.dsl.model.DiagramElement
 import pt.iscte.xdiagram.dsl.model.Ellipse
 import pt.iscte.xdiagram.dsl.model.Feature
 import pt.iscte.xdiagram.dsl.model.FeatureContainer
+import pt.iscte.xdiagram.dsl.model.Image
 import pt.iscte.xdiagram.dsl.model.Layout
 import pt.iscte.xdiagram.dsl.model.Line
 import pt.iscte.xdiagram.dsl.model.Link
@@ -29,6 +30,10 @@ import pt.iscte.xdiagram.dsl.model.Position
 import pt.iscte.xdiagram.dsl.model.Rectangle
 import pt.iscte.xdiagram.dsl.model.Size
 import pt.iscte.xdiagram.dsl.model.XDiagram
+import org.eclipse.core.runtime.Platform
+import org.eclipse.core.internal.resources.WorkspaceRoot
+import org.eclipse.core.internal.resources.Workspace
+import org.eclipse.ui.PlatformUI
 
 /**
  * This class contains custom validation rules. 
@@ -334,9 +339,12 @@ class XdiagramDslValidator extends AbstractXdiagramDslValidator {
 	
 //	@Check
 //	def void image(Image img) {
-//		var bundle = Platform.getBundle(pluginId);
+//	//	img.eResource.URI.
+////		 IWorkspaceRoot.findFile(new Path(uri.toPlatformString())).getLocation() 
+//		var uri = URI.createURI("", true);
+////		var bundle = Platform.
 //		
-//		var e = bundle.getEntryPaths(XdiagramConstants.IMAGES_FOLDER_NAME);
+//		var e = bundle.getEntryPaths("images");
 //		if(e == null)
 //			return;
 //		
@@ -346,9 +354,7 @@ class XdiagramDslValidator extends AbstractXdiagramDslValidator {
 //			if(file.equals(img.getImageId()))
 //				return;
 //		}
-//		error("image not found. images should be placed in a folder named \"" + 
-//				XdiagramConstants.IMAGES_FOLDER_NAME + "\" in the plugin root.", 
-//				IMAGE__IMAGE_ID);
+//		error("image not found. images should be placed in a folder named \"images\" in the plugin root.", ModelPackage.Literals.IMAGE__IMAGE_ID);
 //	}
 	
 	

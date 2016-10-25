@@ -136,6 +136,11 @@ public class ModelAdapterFactory extends AdapterFactoryImpl
         return createAnchorAdapter();
       }
       @Override
+      public Adapter caseColors(Colors object)
+      {
+        return createColorsAdapter();
+      }
+      @Override
       public Adapter caseCustomColor(CustomColor object)
       {
         return createCustomColorAdapter();
@@ -513,6 +518,21 @@ public class ModelAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAnchorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link pt.iscte.xdiagram.dsl.model.Colors <em>Colors</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see pt.iscte.xdiagram.dsl.model.Colors
+   * @generated
+   */
+  public Adapter createColorsAdapter()
   {
     return null;
   }

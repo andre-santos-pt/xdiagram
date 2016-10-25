@@ -6,10 +6,10 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="diagram" eType="#//Diagram"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="customColors" eType="#//Colors"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//DiagramElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="colors" upperBound="-1"
-        eType="#//CustomColor" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="figures" upperBound="-1"
         eType="#//CustomFigure" containment="true"/>
   </eClassifiers>
@@ -68,6 +68,10 @@
   <eClassifiers xsi:type="ecore:EEnum" name="AnchorDirection">
     <eLiterals name="INCOMING" literal="incoming"/>
     <eLiterals name="OUTGOING" value="1" literal="outgoing"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Colors">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="colors" upperBound="-1"
+        eType="#//CustomColor" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CustomColor">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

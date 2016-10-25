@@ -117,11 +117,30 @@ ruleXDiagram returns [EObject current=null]
 		)
 		(
 			(
+				{
+					newCompositeNode(grammarAccess.getXDiagramAccess().getCustomColorsColorsParserRuleCall_2_0());
+				}
+				lv_customColors_2_0=ruleColors
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getXDiagramRule());
+					}
+					set(
+						$current,
+						"customColors",
+						lv_customColors_2_0,
+						"pt.iscte.xdiagram.dsl.XdiagramDsl.Colors");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
 				(
 					{
-						newCompositeNode(grammarAccess.getXDiagramAccess().getElementsDiagramElementParserRuleCall_2_0_0());
+						newCompositeNode(grammarAccess.getXDiagramAccess().getElementsDiagramElementParserRuleCall_3_0_0());
 					}
-					lv_elements_2_0=ruleDiagramElement
+					lv_elements_3_0=ruleDiagramElement
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getXDiagramRule());
@@ -129,7 +148,7 @@ ruleXDiagram returns [EObject current=null]
 						add(
 							$current,
 							"elements",
-							lv_elements_2_0,
+							lv_elements_3_0,
 							"pt.iscte.xdiagram.dsl.XdiagramDsl.DiagramElement");
 						afterParserOrEnumRuleCall();
 					}
@@ -139,27 +158,7 @@ ruleXDiagram returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getXDiagramAccess().getColorsCustomColorParserRuleCall_2_1_0());
-					}
-					lv_colors_3_0=ruleCustomColor
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getXDiagramRule());
-						}
-						add(
-							$current,
-							"colors",
-							lv_colors_3_0,
-							"pt.iscte.xdiagram.dsl.XdiagramDsl.CustomColor");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			    |
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getXDiagramAccess().getFiguresCustomFigureParserRuleCall_2_2_0());
+						newCompositeNode(grammarAccess.getXDiagramAccess().getFiguresCustomFigureParserRuleCall_3_1_0());
 					}
 					lv_figures_4_0=ruleCustomFigure
 					{
@@ -1169,6 +1168,63 @@ ruleAnchor returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleColors
+entryRuleColors returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getColorsRule()); }
+	iv_ruleColors=ruleColors
+	{ $current=$iv_ruleColors.current; }
+	EOF;
+
+// Rule Colors
+ruleColors returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getColorsAccess().getColorsAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='colors'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getColorsAccess().getColorsKeyword_1());
+		}
+		otherlv_2='{'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getColorsAccess().getLeftCurlyBracketKeyword_2());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getColorsAccess().getColorsCustomColorParserRuleCall_3_0());
+				}
+				lv_colors_3_0=ruleCustomColor
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getColorsRule());
+					}
+					add(
+						$current,
+						"colors",
+						lv_colors_3_0,
+						"pt.iscte.xdiagram.dsl.XdiagramDsl.CustomColor");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_4='}'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getColorsAccess().getRightCurlyBracketKeyword_4());
+		}
+	)
+;
+
 // Entry rule entryRuleCustomColor
 entryRuleCustomColor returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getCustomColorRule()); }
@@ -1185,15 +1241,11 @@ ruleCustomColor returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='color'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getCustomColorAccess().getColorKeyword_0());
-		}
 		(
 			(
-				lv_name_1_0=RULE_ID
+				lv_name_0_0=RULE_ID
 				{
-					newLeafNode(lv_name_1_0, grammarAccess.getCustomColorAccess().getNameIDTerminalRuleCall_1_0());
+					newLeafNode(lv_name_0_0, grammarAccess.getCustomColorAccess().getNameIDTerminalRuleCall_0_0());
 				}
 				{
 					if ($current==null) {
@@ -1202,16 +1254,16 @@ ruleCustomColor returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"name",
-						lv_name_1_0,
+						lv_name_0_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
 		)
 		(
 			(
-				lv_R_2_0=RULE_INT
+				lv_R_1_0=RULE_INT
 				{
-					newLeafNode(lv_R_2_0, grammarAccess.getCustomColorAccess().getRINTTerminalRuleCall_2_0());
+					newLeafNode(lv_R_1_0, grammarAccess.getCustomColorAccess().getRINTTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
@@ -1220,16 +1272,16 @@ ruleCustomColor returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"R",
-						lv_R_2_0,
+						lv_R_1_0,
 						"org.eclipse.xtext.common.Terminals.INT");
 				}
 			)
 		)
 		(
 			(
-				lv_G_3_0=RULE_INT
+				lv_G_2_0=RULE_INT
 				{
-					newLeafNode(lv_G_3_0, grammarAccess.getCustomColorAccess().getGINTTerminalRuleCall_3_0());
+					newLeafNode(lv_G_2_0, grammarAccess.getCustomColorAccess().getGINTTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -1238,16 +1290,16 @@ ruleCustomColor returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"G",
-						lv_G_3_0,
+						lv_G_2_0,
 						"org.eclipse.xtext.common.Terminals.INT");
 				}
 			)
 		)
 		(
 			(
-				lv_B_4_0=RULE_INT
+				lv_B_3_0=RULE_INT
 				{
-					newLeafNode(lv_B_4_0, grammarAccess.getCustomColorAccess().getBINTTerminalRuleCall_4_0());
+					newLeafNode(lv_B_3_0, grammarAccess.getCustomColorAccess().getBINTTerminalRuleCall_3_0());
 				}
 				{
 					if ($current==null) {
@@ -1256,14 +1308,14 @@ ruleCustomColor returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"B",
-						lv_B_4_0,
+						lv_B_3_0,
 						"org.eclipse.xtext.common.Terminals.INT");
 				}
 			)
 		)
-		otherlv_5=';'
+		otherlv_4=';'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getCustomColorAccess().getSemicolonKeyword_5());
+			newLeafNode(otherlv_4, grammarAccess.getCustomColorAccess().getSemicolonKeyword_4());
 		}
 	)
 ;

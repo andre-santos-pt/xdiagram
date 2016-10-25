@@ -49,8 +49,8 @@
     <genClasses ecoreClass="XdiagramDsl.ecore#//XDiagram">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/metamodel"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/diagram"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/customColors"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/elements"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/colors"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//XDiagram/figures"/>
     </genClasses>
     <genClasses ecoreClass="XdiagramDsl.ecore#//MetaModel">
@@ -97,6 +97,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//Anchor/direction"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//Anchor/modelReference"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//Anchor/max"/>
+    </genClasses>
+    <genClasses ecoreClass="XdiagramDsl.ecore#//Colors">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//Colors/colors"/>
     </genClasses>
     <genClasses ecoreClass="XdiagramDsl.ecore#//CustomColor">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//CustomColor/name"/>

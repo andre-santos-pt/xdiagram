@@ -132,6 +132,15 @@ public interface ModelFactory extends EFactory
   Anchor createAnchor();
 
   /**
+   * Returns a new object of class '<em>Colors</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Colors</em>'.
+   * @generated
+   */
+  Colors createColors();
+
+  /**
    * Returns a new object of class '<em>Custom Color</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

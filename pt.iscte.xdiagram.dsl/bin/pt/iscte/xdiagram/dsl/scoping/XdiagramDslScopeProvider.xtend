@@ -27,6 +27,8 @@ import pt.iscte.xdiagram.dsl.model.ModelPackage
 import pt.iscte.xdiagram.dsl.model.Node
 import pt.iscte.xdiagram.dsl.model.XDiagram
 import java.util.HashMap
+import pt.iscte.xdiagram.dsl.model.Anchor
+import pt.iscte.xdiagram.dsl.model.AnchorDirection
 
 /**
  * This class contains custom scoping description.
@@ -99,6 +101,8 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 		var Multimap<QualifiedName, IEObjectDescription> complexRefsSourceMap = ArrayListMultimap.create();
 		var Multimap<QualifiedName, IEObjectDescription> targetRefsMap = ArrayListMultimap.create();
 
+		var Multimap<QualifiedName, IEObjectDescription> incomingRef = ArrayListMultimap.create();
+		var Multimap<QualifiedName, IEObjectDescription> outgoingRef = ArrayListMultimap.create();
 		
 		def loadData() {
 			for (c : ePackage.EClassifiers) {
@@ -117,6 +121,12 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 						var qname = QualifiedName.create(c.name, r.name)
 						var rdesc = new EObjectDescription(qname, r, null);
 						referenceLinksMap.put(qname, rdesc);
+						
+						var iname = QualifiedName.create(r.EType.name, r.name);
+						incomingRef.put(QualifiedName.create(r.EType.name), new EObjectDescription(iname,r,null));
+						
+						outgoingRef.put(classQname, new EObjectDescription(QualifiedName.create(r.name), r, null));
+						
 						if (r.isContainment) {
 							qname = QualifiedName.create(c.name)
 							rdesc = new EObjectDescription(QualifiedName.create(r.name), r, null);
@@ -191,10 +201,21 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 				if (owner instanceof Link && (owner as Link).reference) {
 					return Collections.emptyIterator() as Iterable<IEObjectDescription>;
 				} else if (owner instanceof Node) {
-					return attributesMap.get(QualifiedName.create((owner as Node).modelClass.name));
-				} else
-					return attributesMap.get(QualifiedName.create((owner as Link).modelClass.name));
-			} else
+					return attributesMap.get(QualifiedName.create(owner.modelClass.name));
+				} else if (owner instanceof Link)
+					return attributesMap.get(QualifiedName.create(owner.modelClass.name));
+			} 
+			else if(context instanceof Anchor) {
+				var owner = crawlUp(context, ModelPackage.Literals.NODE) as Node;
+				var qname = QualifiedName.create(owner.modelClass.name);
+				if(context.direction == AnchorDirection.OUTGOING) {
+					return outgoingRef.get(qname);
+				}
+				else if(context.direction == AnchorDirection.INCOMING) {
+					return incomingRef.get(qname);
+				}
+			}
+			else
 				return Collections.emptyList;
 		}
 
@@ -250,7 +271,7 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 				} 
 				else if (reference.equals(ModelPackage.Literals.LINK__TARGET_REFERENCE)) {
 					var qname = QualifiedName.create((context as Link).modelClass.name);
-					for(d : targetRefsMap.get(qname))
+				for(d : targetRefsMap.get(qname))
 						if(d.name.equals(name))
 							return d;
 				}	
@@ -264,6 +285,22 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 					if(d.name.equals(name))
 						return d;
 				return null;
+			}
+			else if(context instanceof Anchor) {
+				var owner = crawlUp(context, ModelPackage.Literals.NODE) as Node;
+				var qname = QualifiedName.create(owner.modelClass.name);
+				if(context.direction == AnchorDirection.OUTGOING) {
+					for(d : outgoingRef.get(qname))
+						if(d.name.equals(name))
+							return d;
+					return null;
+				}
+				else if(context.direction == AnchorDirection.INCOMING) {
+					for(d : incomingRef.get(qname))
+						if(d.name.equals(name))
+							return d;
+					return null;
+				}
 			}
 
 			return eClassMap.get(name);

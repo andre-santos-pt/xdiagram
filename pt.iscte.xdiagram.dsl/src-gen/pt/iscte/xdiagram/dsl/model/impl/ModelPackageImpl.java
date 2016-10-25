@@ -18,6 +18,7 @@ import pt.iscte.xdiagram.dsl.model.BooleanLiteral;
 import pt.iscte.xdiagram.dsl.model.BooleanValue;
 import pt.iscte.xdiagram.dsl.model.Color;
 import pt.iscte.xdiagram.dsl.model.ColorFeature;
+import pt.iscte.xdiagram.dsl.model.Colors;
 import pt.iscte.xdiagram.dsl.model.ConnectableElement;
 import pt.iscte.xdiagram.dsl.model.Contains;
 import pt.iscte.xdiagram.dsl.model.Corner;
@@ -159,6 +160,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * @generated
    */
   private EClass anchorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass colorsEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -552,7 +560,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Elements()
+  public EReference getXDiagram_CustomColors()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(2);
   }
@@ -562,7 +570,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getXDiagram_Colors()
+  public EReference getXDiagram_Elements()
   {
     return (EReference)xDiagramEClass.getEStructuralFeatures().get(3);
   }
@@ -915,6 +923,26 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
   public EAttribute getAnchor_Max()
   {
     return (EAttribute)anchorEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getColors()
+  {
+    return colorsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getColors_Colors()
+  {
+    return (EReference)colorsEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1940,8 +1968,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     xDiagramEClass = createEClass(XDIAGRAM);
     createEReference(xDiagramEClass, XDIAGRAM__METAMODEL);
     createEReference(xDiagramEClass, XDIAGRAM__DIAGRAM);
+    createEReference(xDiagramEClass, XDIAGRAM__CUSTOM_COLORS);
     createEReference(xDiagramEClass, XDIAGRAM__ELEMENTS);
-    createEReference(xDiagramEClass, XDIAGRAM__COLORS);
     createEReference(xDiagramEClass, XDIAGRAM__FIGURES);
 
     metaModelEClass = createEClass(META_MODEL);
@@ -1988,6 +2016,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     createEAttribute(anchorEClass, ANCHOR__DIRECTION);
     createEReference(anchorEClass, ANCHOR__MODEL_REFERENCE);
     createEAttribute(anchorEClass, ANCHOR__MAX);
+
+    colorsEClass = createEClass(COLORS);
+    createEReference(colorsEClass, COLORS__COLORS);
 
     customColorEClass = createEClass(CUSTOM_COLOR);
     createEAttribute(customColorEClass, CUSTOM_COLOR__NAME);
@@ -2196,8 +2227,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     initEClass(xDiagramEClass, XDiagram.class, "XDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getXDiagram_Metamodel(), this.getMetaModel(), null, "metamodel", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Diagram(), this.getDiagram(), null, "diagram", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getXDiagram_CustomColors(), this.getColors(), null, "customColors", null, 0, 1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Elements(), this.getDiagramElement(), null, "elements", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getXDiagram_Colors(), this.getCustomColor(), null, "colors", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getXDiagram_Figures(), this.getCustomFigure(), null, "figures", null, 0, -1, XDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(metaModelEClass, MetaModel.class, "MetaModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2244,6 +2275,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage
     initEAttribute(getAnchor_Direction(), this.getAnchorDirection(), "direction", null, 0, 1, Anchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAnchor_ModelReference(), ecorePackage.getEReference(), null, "modelReference", null, 0, 1, Anchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAnchor_Max(), ecorePackage.getEInt(), "max", null, 0, 1, Anchor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(colorsEClass, Colors.class, "Colors", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getColors_Colors(), this.getCustomColor(), null, "colors", null, 0, -1, Colors.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(customColorEClass, CustomColor.class, "CustomColor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCustomColor_Name(), ecorePackage.getEString(), "name", null, 0, 1, CustomColor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

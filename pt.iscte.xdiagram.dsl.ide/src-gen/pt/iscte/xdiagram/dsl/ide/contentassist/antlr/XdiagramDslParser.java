@@ -13,7 +13,7 @@ import org.eclipse.xtext.ide.editor.contentassist.antlr.AbstractContentAssistPar
 import org.eclipse.xtext.ide.editor.contentassist.antlr.FollowElement;
 import org.eclipse.xtext.ide.editor.contentassist.antlr.internal.AbstractInternalContentAssistParser;
 import pt.iscte.xdiagram.dsl.ide.contentassist.antlr.internal.InternalXdiagramDslParser;
-import pt.iscte.xdiagram.dsl.services.XdiagramDslGrammarAccess;;
+import pt.iscte.xdiagram.dsl.services.XdiagramDslGrammarAccess;
 
 public class XdiagramDslParser extends AbstractContentAssistParser {
 
@@ -35,7 +35,7 @@ public class XdiagramDslParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getXDiagramAccess().getAlternatives_2(), "rule__XDiagram__Alternatives_2");
+					put(grammarAccess.getXDiagramAccess().getAlternatives_3(), "rule__XDiagram__Alternatives_3");
 					put(grammarAccess.getDiagramElementAccess().getAlternatives(), "rule__DiagramElement__Alternatives");
 					put(grammarAccess.getFeatureAccess().getAlternatives(), "rule__Feature__Alternatives");
 					put(grammarAccess.getLinkedFeatureAccess().getAlternatives(), "rule__LinkedFeature__Alternatives");
@@ -87,6 +87,7 @@ public class XdiagramDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDecoratorAccess().getGroup(), "rule__Decorator__Group__0");
 					put(grammarAccess.getAnchorAccess().getGroup(), "rule__Anchor__Group__0");
 					put(grammarAccess.getAnchorAccess().getGroup_3(), "rule__Anchor__Group_3__0");
+					put(grammarAccess.getColorsAccess().getGroup(), "rule__Colors__Group__0");
 					put(grammarAccess.getCustomColorAccess().getGroup(), "rule__CustomColor__Group__0");
 					put(grammarAccess.getCustomFigureAccess().getGroup(), "rule__CustomFigure__Group__0");
 					put(grammarAccess.getCustomAccess().getGroup(), "rule__Custom__Group__0");
@@ -130,9 +131,9 @@ public class XdiagramDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLineWidthAccess().getGroup(), "rule__LineWidth__Group__0");
 					put(grammarAccess.getXDiagramAccess().getMetamodelAssignment_0(), "rule__XDiagram__MetamodelAssignment_0");
 					put(grammarAccess.getXDiagramAccess().getDiagramAssignment_1(), "rule__XDiagram__DiagramAssignment_1");
-					put(grammarAccess.getXDiagramAccess().getElementsAssignment_2_0(), "rule__XDiagram__ElementsAssignment_2_0");
-					put(grammarAccess.getXDiagramAccess().getColorsAssignment_2_1(), "rule__XDiagram__ColorsAssignment_2_1");
-					put(grammarAccess.getXDiagramAccess().getFiguresAssignment_2_2(), "rule__XDiagram__FiguresAssignment_2_2");
+					put(grammarAccess.getXDiagramAccess().getCustomColorsAssignment_2(), "rule__XDiagram__CustomColorsAssignment_2");
+					put(grammarAccess.getXDiagramAccess().getElementsAssignment_3_0(), "rule__XDiagram__ElementsAssignment_3_0");
+					put(grammarAccess.getXDiagramAccess().getFiguresAssignment_3_1(), "rule__XDiagram__FiguresAssignment_3_1");
 					put(grammarAccess.getMetaModelAccess().getPluginAssignment_3(), "rule__MetaModel__PluginAssignment_3");
 					put(grammarAccess.getMetaModelAccess().getEcorePathAssignment_5(), "rule__MetaModel__EcorePathAssignment_5");
 					put(grammarAccess.getImportStatementAccess().getImportedNamespaceAssignment_1_1(), "rule__ImportStatement__ImportedNamespaceAssignment_1_1");
@@ -157,10 +158,11 @@ public class XdiagramDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAnchorAccess().getModelReferenceAssignment_2(), "rule__Anchor__ModelReferenceAssignment_2");
 					put(grammarAccess.getAnchorAccess().getMaxAssignment_3_1(), "rule__Anchor__MaxAssignment_3_1");
 					put(grammarAccess.getAnchorAccess().getConditionalAssignment_4(), "rule__Anchor__ConditionalAssignment_4");
-					put(grammarAccess.getCustomColorAccess().getNameAssignment_1(), "rule__CustomColor__NameAssignment_1");
-					put(grammarAccess.getCustomColorAccess().getRAssignment_2(), "rule__CustomColor__RAssignment_2");
-					put(grammarAccess.getCustomColorAccess().getGAssignment_3(), "rule__CustomColor__GAssignment_3");
-					put(grammarAccess.getCustomColorAccess().getBAssignment_4(), "rule__CustomColor__BAssignment_4");
+					put(grammarAccess.getColorsAccess().getColorsAssignment_3(), "rule__Colors__ColorsAssignment_3");
+					put(grammarAccess.getCustomColorAccess().getNameAssignment_0(), "rule__CustomColor__NameAssignment_0");
+					put(grammarAccess.getCustomColorAccess().getRAssignment_1(), "rule__CustomColor__RAssignment_1");
+					put(grammarAccess.getCustomColorAccess().getGAssignment_2(), "rule__CustomColor__GAssignment_2");
+					put(grammarAccess.getCustomColorAccess().getBAssignment_3(), "rule__CustomColor__BAssignment_3");
 					put(grammarAccess.getColorAccess().getDefaultAssignment_0(), "rule__Color__DefaultAssignment_0");
 					put(grammarAccess.getColorAccess().getCustomAssignment_1(), "rule__Color__CustomAssignment_1");
 					put(grammarAccess.getCustomFigureAccess().getNameAssignment_1(), "rule__CustomFigure__NameAssignment_1");

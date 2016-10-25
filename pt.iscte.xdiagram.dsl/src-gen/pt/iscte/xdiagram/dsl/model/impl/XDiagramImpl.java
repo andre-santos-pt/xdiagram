@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import pt.iscte.xdiagram.dsl.model.CustomColor;
+import pt.iscte.xdiagram.dsl.model.Colors;
 import pt.iscte.xdiagram.dsl.model.CustomFigure;
 import pt.iscte.xdiagram.dsl.model.Diagram;
 import pt.iscte.xdiagram.dsl.model.DiagramElement;
@@ -37,8 +37,8 @@ import pt.iscte.xdiagram.dsl.model.XDiagram;
  * <ul>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getMetamodel <em>Metamodel</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getDiagram <em>Diagram</em>}</li>
+ *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getCustomColors <em>Custom Colors</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getElements <em>Elements</em>}</li>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getColors <em>Colors</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.XDiagramImpl#getFigures <em>Figures</em>}</li>
  * </ul>
  *
@@ -67,6 +67,16 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
   protected Diagram diagram;
 
   /**
+   * The cached value of the '{@link #getCustomColors() <em>Custom Colors</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCustomColors()
+   * @generated
+   * @ordered
+   */
+  protected Colors customColors;
+
+  /**
    * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -75,16 +85,6 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * @ordered
    */
   protected EList<DiagramElement> elements;
-
-  /**
-   * The cached value of the '{@link #getColors() <em>Colors</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getColors()
-   * @generated
-   * @ordered
-   */
-  protected EList<CustomColor> colors;
 
   /**
    * The cached value of the '{@link #getFigures() <em>Figures</em>}' containment reference list.
@@ -218,13 +218,9 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<DiagramElement> getElements()
+  public Colors getCustomColors()
   {
-    if (elements == null)
-    {
-      elements = new EObjectContainmentEList<DiagramElement>(DiagramElement.class, this, ModelPackage.XDIAGRAM__ELEMENTS);
-    }
-    return elements;
+    return customColors;
   }
 
   /**
@@ -232,13 +228,51 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<CustomColor> getColors()
+  public NotificationChain basicSetCustomColors(Colors newCustomColors, NotificationChain msgs)
   {
-    if (colors == null)
+    Colors oldCustomColors = customColors;
+    customColors = newCustomColors;
+    if (eNotificationRequired())
     {
-      colors = new EObjectContainmentEList<CustomColor>(CustomColor.class, this, ModelPackage.XDIAGRAM__COLORS);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelPackage.XDIAGRAM__CUSTOM_COLORS, oldCustomColors, newCustomColors);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return colors;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setCustomColors(Colors newCustomColors)
+  {
+    if (newCustomColors != customColors)
+    {
+      NotificationChain msgs = null;
+      if (customColors != null)
+        msgs = ((InternalEObject)customColors).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelPackage.XDIAGRAM__CUSTOM_COLORS, null, msgs);
+      if (newCustomColors != null)
+        msgs = ((InternalEObject)newCustomColors).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelPackage.XDIAGRAM__CUSTOM_COLORS, null, msgs);
+      msgs = basicSetCustomColors(newCustomColors, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.XDIAGRAM__CUSTOM_COLORS, newCustomColors, newCustomColors));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<DiagramElement> getElements()
+  {
+    if (elements == null)
+    {
+      elements = new EObjectContainmentEList<DiagramElement>(DiagramElement.class, this, ModelPackage.XDIAGRAM__ELEMENTS);
+    }
+    return elements;
   }
 
   /**
@@ -269,10 +303,10 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         return basicSetMetamodel(null, msgs);
       case ModelPackage.XDIAGRAM__DIAGRAM:
         return basicSetDiagram(null, msgs);
+      case ModelPackage.XDIAGRAM__CUSTOM_COLORS:
+        return basicSetCustomColors(null, msgs);
       case ModelPackage.XDIAGRAM__ELEMENTS:
         return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
-      case ModelPackage.XDIAGRAM__COLORS:
-        return ((InternalEList<?>)getColors()).basicRemove(otherEnd, msgs);
       case ModelPackage.XDIAGRAM__FIGURES:
         return ((InternalEList<?>)getFigures()).basicRemove(otherEnd, msgs);
     }
@@ -293,10 +327,10 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         return getMetamodel();
       case ModelPackage.XDIAGRAM__DIAGRAM:
         return getDiagram();
+      case ModelPackage.XDIAGRAM__CUSTOM_COLORS:
+        return getCustomColors();
       case ModelPackage.XDIAGRAM__ELEMENTS:
         return getElements();
-      case ModelPackage.XDIAGRAM__COLORS:
-        return getColors();
       case ModelPackage.XDIAGRAM__FIGURES:
         return getFigures();
     }
@@ -320,13 +354,12 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
       case ModelPackage.XDIAGRAM__DIAGRAM:
         setDiagram((Diagram)newValue);
         return;
+      case ModelPackage.XDIAGRAM__CUSTOM_COLORS:
+        setCustomColors((Colors)newValue);
+        return;
       case ModelPackage.XDIAGRAM__ELEMENTS:
         getElements().clear();
         getElements().addAll((Collection<? extends DiagramElement>)newValue);
-        return;
-      case ModelPackage.XDIAGRAM__COLORS:
-        getColors().clear();
-        getColors().addAll((Collection<? extends CustomColor>)newValue);
         return;
       case ModelPackage.XDIAGRAM__FIGURES:
         getFigures().clear();
@@ -352,11 +385,11 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
       case ModelPackage.XDIAGRAM__DIAGRAM:
         setDiagram((Diagram)null);
         return;
+      case ModelPackage.XDIAGRAM__CUSTOM_COLORS:
+        setCustomColors((Colors)null);
+        return;
       case ModelPackage.XDIAGRAM__ELEMENTS:
         getElements().clear();
-        return;
-      case ModelPackage.XDIAGRAM__COLORS:
-        getColors().clear();
         return;
       case ModelPackage.XDIAGRAM__FIGURES:
         getFigures().clear();
@@ -379,10 +412,10 @@ public class XDiagramImpl extends MinimalEObjectImpl.Container implements XDiagr
         return metamodel != null;
       case ModelPackage.XDIAGRAM__DIAGRAM:
         return diagram != null;
+      case ModelPackage.XDIAGRAM__CUSTOM_COLORS:
+        return customColors != null;
       case ModelPackage.XDIAGRAM__ELEMENTS:
         return elements != null && !elements.isEmpty();
-      case ModelPackage.XDIAGRAM__COLORS:
-        return colors != null && !colors.isEmpty();
       case ModelPackage.XDIAGRAM__FIGURES:
         return figures != null && !figures.isEmpty();
     }
