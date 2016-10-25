@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: pt.iscte.xdiagram.dsl.ui
-Bundle-Vendor: My Company
-Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: ISCTE-IUL
+Bundle-Version: 0.2
 Bundle-SymbolicName: pt.iscte.xdiagram.dsl.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: pt.iscte.xdiagram.dsl,
