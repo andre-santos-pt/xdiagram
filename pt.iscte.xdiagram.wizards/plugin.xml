@@ -10,7 +10,7 @@
       <wizard
             category="pt.iscte.xdiagram.pluginxml.wizards"
             class="pt.iscte.xdiagram.wizards.NewXdiagramWizard"
-            icon="icons/xdiagram_proj.gif"
+            icon="icons/xdiagram_ico.gif"
             id="pt.iscte.xdiagram.pluginxml.NewXdiagramWizard"
             name="Xdiagram Project"
             project="true">
