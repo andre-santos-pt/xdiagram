@@ -1,3 +1,13 @@
+/*******************************************************************************
+ * Copyright (c) 2016 ISCTE-IUL.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     André L. Santos, Eduardo Gomes - initial API and implementation
+ *******************************************************************************/
 package org.eclipselabs.xdiagram.interpreter.internal;
 
 
@@ -37,10 +47,10 @@ import org.eclipselabs.xdiagram.interpreter.GraphicsProvider;
 import org.eclipselabs.xdiagram.interpreter.ProviderException;
 import org.eclipselabs.xdiagram.interpreter.internal.Activator.LanguageDescription;
 import org.eclipselabs.xdiagram.interpreter.internal.features.DirectEditingFeature;
+import org.eclipselabs.xdiagram.interpreter.internal.features.LayoutDiagramFeature;
 import org.eclipselabs.xdiagram.interpreter.internal.features.MoveNodeFeature;
 import org.eclipselabs.xdiagram.interpreter.internal.features.RemoveNodeFeature;
 import org.eclipselabs.xdiagram.interpreter.internal.features.ResizeNodeFeature;
-import org.eclipselabs.xdiagram.interpreter.internal.features.TutorialLayoutDiagramFeature;
 import org.eclipselabs.xdiagram.interpreter.internal.features.UpdateDiagramFeature;
 import org.eclipselabs.xdiagram.interpreter.internal.features.UpdateNodeFeature;
 
@@ -211,6 +221,6 @@ public class GenericFeatureProvider extends DefaultFeatureProvider {
 	
 	@Override
 	public ICustomFeature[] getCustomFeatures(ICustomContext context) {
-		return new ICustomFeature[] { new TutorialLayoutDiagramFeature(this) };
+		return new ICustomFeature[] { new LayoutDiagramFeature(this) };
 	}
 }

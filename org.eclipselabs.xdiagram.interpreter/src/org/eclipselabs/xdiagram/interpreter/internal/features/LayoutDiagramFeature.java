@@ -1,3 +1,13 @@
+/*******************************************************************************
+ * Copyright (c) 2016 ISCTE-IUL.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     André L. Santos, Eduardo Gomes - initial API and implementation
+ *******************************************************************************/
 package org.eclipselabs.xdiagram.interpreter.internal.features;
 
 import java.util.HashMap;
@@ -20,18 +30,8 @@ import org.eclipse.graphiti.mm.pictograms.Connection;
 import org.eclipse.graphiti.mm.pictograms.Diagram;
 import org.eclipse.graphiti.mm.pictograms.Shape;
 
-/**
- * Maps the Graphiti Diagram to a graph structure which can be consumed by the
- * GEF Layouter, layouts the graph structure and maps the new coordinates back
- * to the diagram. Refresh is triggered automatically by the changes on the
- * diagram model.
- * 
- * Disclaimer: this is just an example to show how to plug an arbitrary layouter
- * into a Graphiti diagram editor. For instance, the basic layouting here does
- * not consider bendpoints etc.
- * 
- */
-public class TutorialLayoutDiagramFeature extends AbstractCustomFeature {
+
+public class LayoutDiagramFeature extends AbstractCustomFeature {
 
 	/**
 	 * Minimal distance between nodes.
@@ -39,7 +39,7 @@ public class TutorialLayoutDiagramFeature extends AbstractCustomFeature {
 	private static final int PADDING = 30;
 
 
-	public TutorialLayoutDiagramFeature(IFeatureProvider fp) {
+	public LayoutDiagramFeature(IFeatureProvider fp) {
 		super(fp);
 	}
 

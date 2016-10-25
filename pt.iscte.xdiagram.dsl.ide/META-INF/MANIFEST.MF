@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: pt.iscte.xdiagram.dsl.ide
+Bundle-Name: Xdiagram Xtext Parsing
 Bundle-Vendor: ISCTE-IUL
 Bundle-Version: 0.2
 Bundle-SymbolicName: pt.iscte.xdiagram.dsl.ide; singleton:=true
