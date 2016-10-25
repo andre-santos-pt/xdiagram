@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-SymbolicName: pt.iscte.xdiagram.interpreter;singleton:=true
+Require-Bundle: org.eclipse.graphiti;bundle-version="0.0.0",
+ org.eclipse.graphiti.ui;bundle-version="0.0.0",
+ org.eclipse.ui.views.properties.tabbed;bundle-version="0.0.0",
+ org.eclipse.gef;bundle-version="0.0.0",
+ org.eclipse.emf.workspace;bundle-version="0.0.0"
+Bundle-Version: 0.2
+Export-Package: pt.iscte.xdiagram.interpreter
+Bundle-ClassPath: .
+Bundle-ActivationPolicy: lazy
+Bundle-Name: Xdiagram Interperter Component
+Bundle-ManifestVersion: 2
+Bundle-Activator: pt.iscte.xdiagram.interpreter.internal.Activator
+Bundle-Vendor: ISCTE-IUL
+
+
