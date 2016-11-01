@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.Decorator#getPosition <em>Position</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.Decorator#getElement <em>Element</em>}</li>
  * </ul>
  *
@@ -24,32 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Decorator extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Position</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Position</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Position</em>' attribute.
-   * @see #setPosition(int)
-   * @see pt.iscte.xdiagram.dsl.model.ModelPackage#getDecorator_Position()
-   * @model
-   * @generated
-   */
-  int getPosition();
-
-  /**
-   * Sets the value of the '{@link pt.iscte.xdiagram.dsl.model.Decorator#getPosition <em>Position</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Position</em>' attribute.
-   * @see #getPosition()
-   * @generated
-   */
-  void setPosition(int value);
-
   /**
    * Returns the value of the '<em><b>Element</b></em>' containment reference.
    * <!-- begin-user-doc -->

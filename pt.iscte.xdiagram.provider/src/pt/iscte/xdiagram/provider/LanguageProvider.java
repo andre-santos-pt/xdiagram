@@ -66,6 +66,7 @@ import pt.iscte.xdiagram.dsl.model.Label;
 import pt.iscte.xdiagram.dsl.model.LineStyle;
 import pt.iscte.xdiagram.dsl.model.Link;
 import pt.iscte.xdiagram.dsl.model.Node;
+import pt.iscte.xdiagram.dsl.model.Position;
 import pt.iscte.xdiagram.dsl.model.TextPart;
 import pt.iscte.xdiagram.dsl.model.XDiagram;
 import pt.iscte.xdiagram.dsl.model.util.ModelSwitch;
@@ -657,7 +658,10 @@ public final class LanguageProvider implements GraphicsProvider {
 
 	private void handleDecorators(Link link, Connection connection, EObject eObject, Diagram diagram, GraphicsAlgorithm connectionLink) {
 		for(Decorator decorator : link.getDecorators()) {
-			double perc = decorator.getPosition(); // TODO: validation percent
+//			double perc = decorator.getPosition(); 
+			// TODO: validation percent
+			Position pos = getFeature(decorator.getElement(), Position.class);
+			double perc = pos == null ? 50 : pos.getX();
 			double position = perc/100.0;
 			boolean active = decorator.getElement() instanceof Label;
 			ConnectionDecorator dec = 

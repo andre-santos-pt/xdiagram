@@ -302,12 +302,6 @@ public class XdiagramDslValidator extends AbstractXdiagramDslValidator {
   
   @Check
   public void decorator(final Decorator d) {
-    int _position = d.getPosition();
-    boolean _isPercentage = this.isPercentage(_position);
-    boolean _not = (!_isPercentage);
-    if (_not) {
-      this.error("decorator position must be within [0, 100]", ModelPackage.Literals.DECORATOR__POSITION);
-    }
   }
   
   @Check

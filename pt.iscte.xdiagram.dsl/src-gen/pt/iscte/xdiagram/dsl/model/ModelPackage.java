@@ -493,22 +493,13 @@ public interface ModelPackage extends EPackage
   int DECORATOR = 10;
 
   /**
-   * The feature id for the '<em><b>Position</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DECORATOR__POSITION = 0;
-
-  /**
    * The feature id for the '<em><b>Element</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DECORATOR__ELEMENT = 1;
+  int DECORATOR__ELEMENT = 0;
 
   /**
    * The number of structural features of the '<em>Decorator</em>' class.
@@ -517,7 +508,7 @@ public interface ModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DECORATOR_FEATURE_COUNT = 2;
+  int DECORATOR_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link pt.iscte.xdiagram.dsl.model.impl.AnchorImpl <em>Anchor</em>}' class.
@@ -2539,17 +2530,6 @@ public interface ModelPackage extends EPackage
   EClass getDecorator();
 
   /**
-   * Returns the meta object for the attribute '{@link pt.iscte.xdiagram.dsl.model.Decorator#getPosition <em>Position</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Position</em>'.
-   * @see pt.iscte.xdiagram.dsl.model.Decorator#getPosition()
-   * @see #getDecorator()
-   * @generated
-   */
-  EAttribute getDecorator_Position();
-
-  /**
    * Returns the meta object for the containment reference '{@link pt.iscte.xdiagram.dsl.model.Decorator#getElement <em>Element</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3987,14 +3967,6 @@ public interface ModelPackage extends EPackage
      * @generated
      */
     EClass DECORATOR = eINSTANCE.getDecorator();
-
-    /**
-     * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute DECORATOR__POSITION = eINSTANCE.getDecorator_Position();
 
     /**
      * The meta object literal for the '<em><b>Element</b></em>' containment reference feature.

@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalXdiagramDslParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'verdana'", "'courier'", "'times'", "'incoming'", "'outgoing'", "'white'", "'silver'", "'gray'", "'black'", "'red'", "'maroon'", "'yellow'", "'olive'", "'lime'", "'green'", "'aqua'", "'teal'", "'blue'", "'navy'", "'fuchsia'", "'purple'", "'='", "'<>'", "'true'", "'false'", "'left'", "'center'", "'right'", "'solid'", "'dashed'", "'dotted'", "'metamodel'", "'{'", "'plugin-id'", "'ecore-file'", "'}'", "'.'", "'*'", "'diagram'", "'if'", "'node'", "'link'", "'source'", "'target'", "'decorator'", "'%'", "'anchor'", "';'", "'max'", "'colors'", "'figure'", "'as'", "'child'", "'rhombus'", "'triangle'", "'arrow'", "'contains'", "'label'", "'image'", "'invisible'", "'transparency'", "'size'", "'point'", "'position'", "'corner'", "'layout'", "'margin'", "'text'", "'font'", "'align'", "'linestyle'", "'linewidth'", "'reference'", "'class'", "'rectangle'", "'square'", "'ellipse'", "'circle'", "'polygon'", "'polyline'", "'hline'", "'vline'", "'null'", "'foreground'", "'background'", "']'", "'resizable'", "'vertical'", "'horizontal'", "'edit:'", "'arial'", "'bold'", "'italics'", "'manhattan'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'verdana'", "'courier'", "'times'", "'incoming'", "'outgoing'", "'white'", "'silver'", "'gray'", "'black'", "'red'", "'maroon'", "'yellow'", "'olive'", "'lime'", "'green'", "'aqua'", "'teal'", "'blue'", "'navy'", "'fuchsia'", "'purple'", "'='", "'<>'", "'true'", "'false'", "'left'", "'center'", "'right'", "'solid'", "'dashed'", "'dotted'", "'metamodel'", "'{'", "'plugin-id'", "'ecore-file'", "'}'", "'.'", "'*'", "'diagram'", "'if'", "'node'", "'link'", "'source'", "'target'", "'decorator'", "'anchor'", "';'", "'max'", "'colors'", "'figure'", "'as'", "'child'", "'rhombus'", "'triangle'", "'arrow'", "'contains'", "'label'", "'image'", "'invisible'", "'transparency'", "'%'", "'size'", "'point'", "'position'", "'corner'", "'layout'", "'margin'", "'text'", "'font'", "'align'", "'linestyle'", "'linewidth'", "'reference'", "'class'", "'rectangle'", "'square'", "'ellipse'", "'circle'", "'polygon'", "'polyline'", "'hline'", "'vline'", "'null'", "'foreground'", "'background'", "']'", "'resizable'", "'vertical'", "'horizontal'", "'edit:'", "'arial'", "'bold'", "'italics'", "'manhattan'"
     };
     public static final int T__50=50;
     public static final int T__59=59;
@@ -5155,7 +5155,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
             if ( ((LA1_0>=51 && LA1_0<=52)) ) {
                 alt1=1;
             }
-            else if ( (LA1_0==61) ) {
+            else if ( (LA1_0==60) ) {
                 alt1=2;
             }
             else {
@@ -5322,10 +5322,10 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==67) ) {
+            if ( (LA3_0==66) ) {
                 alt3=1;
             }
-            else if ( (LA3_0==57) ) {
+            else if ( (LA3_0==56) ) {
                 alt3=2;
             }
             else {
@@ -5430,7 +5430,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
                 alt4=6;
                 }
                 break;
-            case 71:
+            case 70:
                 {
                 alt4=7;
                 }
@@ -5723,12 +5723,12 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
             // InternalXdiagramDsl.g:1821:1: ( ( ruleConnectableElement ) | ( ruleLine ) | ( ruleArrow ) )
             int alt5=3;
             switch ( input.LA(1) ) {
-            case 61:
+            case 60:
+            case 63:
             case 64:
-            case 65:
+            case 67:
             case 68:
             case 69:
-            case 70:
             case 85:
             case 86:
             case 87:
@@ -5745,7 +5745,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
                 alt5=2;
                 }
                 break;
-            case 66:
+            case 65:
                 {
                 alt5=3;
                 }
@@ -6137,7 +6137,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
                 alt9=1;
                 }
                 break;
-            case 64:
+            case 63:
                 {
                 alt9=2;
                 }
@@ -6154,27 +6154,27 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
                 alt9=4;
                 }
                 break;
-            case 68:
+            case 67:
                 {
                 alt9=5;
                 }
                 break;
-            case 69:
+            case 68:
                 {
                 alt9=6;
                 }
                 break;
-            case 70:
+            case 69:
                 {
                 alt9=7;
                 }
                 break;
-            case 61:
+            case 60:
                 {
                 alt9=8;
                 }
                 break;
-            case 65:
+            case 64:
                 {
                 alt9=9;
                 }
@@ -6391,7 +6391,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
                 alt10=1;
                 }
                 break;
-            case 64:
+            case 63:
                 {
                 alt10=2;
                 }
@@ -6402,22 +6402,22 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
                 alt10=3;
                 }
                 break;
-            case 65:
+            case 64:
                 {
                 alt10=4;
                 }
                 break;
-            case 68:
+            case 67:
                 {
                 alt10=5;
                 }
                 break;
-            case 69:
+            case 68:
                 {
                 alt10=6;
                 }
                 break;
-            case 66:
+            case 65:
                 {
                 alt10=7;
                 }
@@ -6631,7 +6631,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
                 alt11=3;
                 }
                 break;
-            case 71:
+            case 70:
                 {
                 alt11=4;
                 }
@@ -6646,12 +6646,12 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
                 alt11=6;
                 }
                 break;
-            case 67:
+            case 66:
                 {
                 alt11=7;
                 }
                 break;
-            case 57:
+            case 56:
                 {
                 alt11=8;
                 }
@@ -6661,7 +6661,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
                 alt11=9;
                 }
                 break;
-            case 70:
+            case 69:
                 {
                 alt11=10;
                 }
@@ -6983,7 +6983,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==57||LA13_0==67||(LA13_0>=70 && LA13_0<=72)||LA13_0==74||LA13_0==76||(LA13_0>=81 && LA13_0<=82)||(LA13_0>=94 && LA13_0<=95)) ) {
+            if ( (LA13_0==56||LA13_0==66||(LA13_0>=69 && LA13_0<=70)||LA13_0==72||LA13_0==74||LA13_0==76||(LA13_0>=81 && LA13_0<=82)||(LA13_0>=94 && LA13_0<=95)) ) {
                 alt13=1;
             }
             else if ( (LA13_0==75) ) {
@@ -7359,7 +7359,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
                 alt17=5;
                 }
                 break;
-            case 70:
+            case 69:
                 {
                 alt17=6;
                 }
@@ -7517,11 +7517,11 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
                 {
                 int LA18_1 = input.LA(2);
 
-                if ( (LA18_1==47) ) {
-                    alt18=2;
-                }
-                else if ( (LA18_1==EOF||LA18_1==58) ) {
+                if ( (LA18_1==EOF||LA18_1==57) ) {
                     alt18=1;
+                }
+                else if ( (LA18_1==47) ) {
+                    alt18=2;
                 }
                 else {
                     NoViableAltException nvae =
@@ -7794,7 +7794,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
                 alt20=5;
                 }
                 break;
-            case 70:
+            case 69:
                 {
                 alt20=6;
                 }
@@ -7982,7 +7982,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
                 alt21=2;
                 }
                 break;
-            case 71:
+            case 70:
                 {
                 alt21=3;
                 }
@@ -8089,8 +8089,8 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
                 alt22=2;
                 }
                 break;
-            case 57:
-            case 67:
+            case 56:
+            case 66:
                 {
                 alt22=3;
                 }
@@ -9739,7 +9739,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
             int alt33=2;
             int LA33_0 = input.LA(1);
 
-            if ( (LA33_0==60) ) {
+            if ( (LA33_0==59) ) {
                 alt33=1;
             }
             switch (alt33) {
@@ -9832,7 +9832,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
                 int alt34=2;
                 int LA34_0 = input.LA(1);
 
-                if ( ((LA34_0>=51 && LA34_0<=52)||LA34_0==61) ) {
+                if ( ((LA34_0>=51 && LA34_0<=52)||LA34_0==60) ) {
                     alt34=1;
                 }
 
@@ -11349,7 +11349,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
                 int alt37=2;
                 int LA37_0 = input.LA(1);
 
-                if ( (LA37_0==67) ) {
+                if ( (LA37_0==66) ) {
                     alt37=1;
                 }
 
@@ -13266,22 +13266,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Decorator__Group__1"
-    // InternalXdiagramDsl.g:3983:1: rule__Decorator__Group__1 : rule__Decorator__Group__1__Impl rule__Decorator__Group__2 ;
+    // InternalXdiagramDsl.g:3983:1: rule__Decorator__Group__1 : rule__Decorator__Group__1__Impl ;
     public final void rule__Decorator__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:3987:1: ( rule__Decorator__Group__1__Impl rule__Decorator__Group__2 )
-            // InternalXdiagramDsl.g:3988:2: rule__Decorator__Group__1__Impl rule__Decorator__Group__2
+            // InternalXdiagramDsl.g:3987:1: ( rule__Decorator__Group__1__Impl )
+            // InternalXdiagramDsl.g:3988:2: rule__Decorator__Group__1__Impl
             {
-            pushFollow(FOLLOW_27);
-            rule__Decorator__Group__1__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__Decorator__Group__2();
+            rule__Decorator__Group__1__Impl();
 
             state._fsp--;
 
@@ -13304,31 +13299,31 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Decorator__Group__1__Impl"
-    // InternalXdiagramDsl.g:3995:1: rule__Decorator__Group__1__Impl : ( ( rule__Decorator__PositionAssignment_1 ) ) ;
+    // InternalXdiagramDsl.g:3994:1: rule__Decorator__Group__1__Impl : ( ( rule__Decorator__ElementAssignment_1 ) ) ;
     public final void rule__Decorator__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:3999:1: ( ( ( rule__Decorator__PositionAssignment_1 ) ) )
-            // InternalXdiagramDsl.g:4000:1: ( ( rule__Decorator__PositionAssignment_1 ) )
+            // InternalXdiagramDsl.g:3998:1: ( ( ( rule__Decorator__ElementAssignment_1 ) ) )
+            // InternalXdiagramDsl.g:3999:1: ( ( rule__Decorator__ElementAssignment_1 ) )
             {
-            // InternalXdiagramDsl.g:4000:1: ( ( rule__Decorator__PositionAssignment_1 ) )
-            // InternalXdiagramDsl.g:4001:2: ( rule__Decorator__PositionAssignment_1 )
+            // InternalXdiagramDsl.g:3999:1: ( ( rule__Decorator__ElementAssignment_1 ) )
+            // InternalXdiagramDsl.g:4000:2: ( rule__Decorator__ElementAssignment_1 )
             {
-             before(grammarAccess.getDecoratorAccess().getPositionAssignment_1()); 
-            // InternalXdiagramDsl.g:4002:2: ( rule__Decorator__PositionAssignment_1 )
-            // InternalXdiagramDsl.g:4002:3: rule__Decorator__PositionAssignment_1
+             before(grammarAccess.getDecoratorAccess().getElementAssignment_1()); 
+            // InternalXdiagramDsl.g:4001:2: ( rule__Decorator__ElementAssignment_1 )
+            // InternalXdiagramDsl.g:4001:3: rule__Decorator__ElementAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Decorator__PositionAssignment_1();
+            rule__Decorator__ElementAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getDecoratorAccess().getPositionAssignment_1()); 
+             after(grammarAccess.getDecoratorAccess().getElementAssignment_1()); 
 
             }
 
@@ -13350,172 +13345,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__Decorator__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Decorator__Group__2"
-    // InternalXdiagramDsl.g:4010:1: rule__Decorator__Group__2 : rule__Decorator__Group__2__Impl rule__Decorator__Group__3 ;
-    public final void rule__Decorator__Group__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalXdiagramDsl.g:4014:1: ( rule__Decorator__Group__2__Impl rule__Decorator__Group__3 )
-            // InternalXdiagramDsl.g:4015:2: rule__Decorator__Group__2__Impl rule__Decorator__Group__3
-            {
-            pushFollow(FOLLOW_28);
-            rule__Decorator__Group__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Decorator__Group__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Decorator__Group__2"
-
-
-    // $ANTLR start "rule__Decorator__Group__2__Impl"
-    // InternalXdiagramDsl.g:4022:1: rule__Decorator__Group__2__Impl : ( '%' ) ;
-    public final void rule__Decorator__Group__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalXdiagramDsl.g:4026:1: ( ( '%' ) )
-            // InternalXdiagramDsl.g:4027:1: ( '%' )
-            {
-            // InternalXdiagramDsl.g:4027:1: ( '%' )
-            // InternalXdiagramDsl.g:4028:2: '%'
-            {
-             before(grammarAccess.getDecoratorAccess().getPercentSignKeyword_2()); 
-            match(input,56,FOLLOW_2); 
-             after(grammarAccess.getDecoratorAccess().getPercentSignKeyword_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Decorator__Group__2__Impl"
-
-
-    // $ANTLR start "rule__Decorator__Group__3"
-    // InternalXdiagramDsl.g:4037:1: rule__Decorator__Group__3 : rule__Decorator__Group__3__Impl ;
-    public final void rule__Decorator__Group__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalXdiagramDsl.g:4041:1: ( rule__Decorator__Group__3__Impl )
-            // InternalXdiagramDsl.g:4042:2: rule__Decorator__Group__3__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Decorator__Group__3__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Decorator__Group__3"
-
-
-    // $ANTLR start "rule__Decorator__Group__3__Impl"
-    // InternalXdiagramDsl.g:4048:1: rule__Decorator__Group__3__Impl : ( ( rule__Decorator__ElementAssignment_3 ) ) ;
-    public final void rule__Decorator__Group__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalXdiagramDsl.g:4052:1: ( ( ( rule__Decorator__ElementAssignment_3 ) ) )
-            // InternalXdiagramDsl.g:4053:1: ( ( rule__Decorator__ElementAssignment_3 ) )
-            {
-            // InternalXdiagramDsl.g:4053:1: ( ( rule__Decorator__ElementAssignment_3 ) )
-            // InternalXdiagramDsl.g:4054:2: ( rule__Decorator__ElementAssignment_3 )
-            {
-             before(grammarAccess.getDecoratorAccess().getElementAssignment_3()); 
-            // InternalXdiagramDsl.g:4055:2: ( rule__Decorator__ElementAssignment_3 )
-            // InternalXdiagramDsl.g:4055:3: rule__Decorator__ElementAssignment_3
-            {
-            pushFollow(FOLLOW_2);
-            rule__Decorator__ElementAssignment_3();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getDecoratorAccess().getElementAssignment_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Decorator__Group__3__Impl"
-
-
     // $ANTLR start "rule__Anchor__Group__0"
-    // InternalXdiagramDsl.g:4064:1: rule__Anchor__Group__0 : rule__Anchor__Group__0__Impl rule__Anchor__Group__1 ;
+    // InternalXdiagramDsl.g:4010:1: rule__Anchor__Group__0 : rule__Anchor__Group__0__Impl rule__Anchor__Group__1 ;
     public final void rule__Anchor__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4068:1: ( rule__Anchor__Group__0__Impl rule__Anchor__Group__1 )
-            // InternalXdiagramDsl.g:4069:2: rule__Anchor__Group__0__Impl rule__Anchor__Group__1
+            // InternalXdiagramDsl.g:4014:1: ( rule__Anchor__Group__0__Impl rule__Anchor__Group__1 )
+            // InternalXdiagramDsl.g:4015:2: rule__Anchor__Group__0__Impl rule__Anchor__Group__1
             {
-            pushFollow(FOLLOW_29);
+            pushFollow(FOLLOW_27);
             rule__Anchor__Group__0__Impl();
 
             state._fsp--;
@@ -13544,20 +13384,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__Group__0__Impl"
-    // InternalXdiagramDsl.g:4076:1: rule__Anchor__Group__0__Impl : ( 'anchor' ) ;
+    // InternalXdiagramDsl.g:4022:1: rule__Anchor__Group__0__Impl : ( 'anchor' ) ;
     public final void rule__Anchor__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4080:1: ( ( 'anchor' ) )
-            // InternalXdiagramDsl.g:4081:1: ( 'anchor' )
+            // InternalXdiagramDsl.g:4026:1: ( ( 'anchor' ) )
+            // InternalXdiagramDsl.g:4027:1: ( 'anchor' )
             {
-            // InternalXdiagramDsl.g:4081:1: ( 'anchor' )
-            // InternalXdiagramDsl.g:4082:2: 'anchor'
+            // InternalXdiagramDsl.g:4027:1: ( 'anchor' )
+            // InternalXdiagramDsl.g:4028:2: 'anchor'
             {
              before(grammarAccess.getAnchorAccess().getAnchorKeyword_0()); 
-            match(input,57,FOLLOW_2); 
+            match(input,56,FOLLOW_2); 
              after(grammarAccess.getAnchorAccess().getAnchorKeyword_0()); 
 
             }
@@ -13581,14 +13421,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__Group__1"
-    // InternalXdiagramDsl.g:4091:1: rule__Anchor__Group__1 : rule__Anchor__Group__1__Impl rule__Anchor__Group__2 ;
+    // InternalXdiagramDsl.g:4037:1: rule__Anchor__Group__1 : rule__Anchor__Group__1__Impl rule__Anchor__Group__2 ;
     public final void rule__Anchor__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4095:1: ( rule__Anchor__Group__1__Impl rule__Anchor__Group__2 )
-            // InternalXdiagramDsl.g:4096:2: rule__Anchor__Group__1__Impl rule__Anchor__Group__2
+            // InternalXdiagramDsl.g:4041:1: ( rule__Anchor__Group__1__Impl rule__Anchor__Group__2 )
+            // InternalXdiagramDsl.g:4042:2: rule__Anchor__Group__1__Impl rule__Anchor__Group__2
             {
             pushFollow(FOLLOW_13);
             rule__Anchor__Group__1__Impl();
@@ -13619,21 +13459,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__Group__1__Impl"
-    // InternalXdiagramDsl.g:4103:1: rule__Anchor__Group__1__Impl : ( ( rule__Anchor__DirectionAssignment_1 ) ) ;
+    // InternalXdiagramDsl.g:4049:1: rule__Anchor__Group__1__Impl : ( ( rule__Anchor__DirectionAssignment_1 ) ) ;
     public final void rule__Anchor__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4107:1: ( ( ( rule__Anchor__DirectionAssignment_1 ) ) )
-            // InternalXdiagramDsl.g:4108:1: ( ( rule__Anchor__DirectionAssignment_1 ) )
+            // InternalXdiagramDsl.g:4053:1: ( ( ( rule__Anchor__DirectionAssignment_1 ) ) )
+            // InternalXdiagramDsl.g:4054:1: ( ( rule__Anchor__DirectionAssignment_1 ) )
             {
-            // InternalXdiagramDsl.g:4108:1: ( ( rule__Anchor__DirectionAssignment_1 ) )
-            // InternalXdiagramDsl.g:4109:2: ( rule__Anchor__DirectionAssignment_1 )
+            // InternalXdiagramDsl.g:4054:1: ( ( rule__Anchor__DirectionAssignment_1 ) )
+            // InternalXdiagramDsl.g:4055:2: ( rule__Anchor__DirectionAssignment_1 )
             {
              before(grammarAccess.getAnchorAccess().getDirectionAssignment_1()); 
-            // InternalXdiagramDsl.g:4110:2: ( rule__Anchor__DirectionAssignment_1 )
-            // InternalXdiagramDsl.g:4110:3: rule__Anchor__DirectionAssignment_1
+            // InternalXdiagramDsl.g:4056:2: ( rule__Anchor__DirectionAssignment_1 )
+            // InternalXdiagramDsl.g:4056:3: rule__Anchor__DirectionAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Anchor__DirectionAssignment_1();
@@ -13666,16 +13506,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__Group__2"
-    // InternalXdiagramDsl.g:4118:1: rule__Anchor__Group__2 : rule__Anchor__Group__2__Impl rule__Anchor__Group__3 ;
+    // InternalXdiagramDsl.g:4064:1: rule__Anchor__Group__2 : rule__Anchor__Group__2__Impl rule__Anchor__Group__3 ;
     public final void rule__Anchor__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4122:1: ( rule__Anchor__Group__2__Impl rule__Anchor__Group__3 )
-            // InternalXdiagramDsl.g:4123:2: rule__Anchor__Group__2__Impl rule__Anchor__Group__3
+            // InternalXdiagramDsl.g:4068:1: ( rule__Anchor__Group__2__Impl rule__Anchor__Group__3 )
+            // InternalXdiagramDsl.g:4069:2: rule__Anchor__Group__2__Impl rule__Anchor__Group__3
             {
-            pushFollow(FOLLOW_30);
+            pushFollow(FOLLOW_28);
             rule__Anchor__Group__2__Impl();
 
             state._fsp--;
@@ -13704,21 +13544,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__Group__2__Impl"
-    // InternalXdiagramDsl.g:4130:1: rule__Anchor__Group__2__Impl : ( ( rule__Anchor__ModelReferenceAssignment_2 ) ) ;
+    // InternalXdiagramDsl.g:4076:1: rule__Anchor__Group__2__Impl : ( ( rule__Anchor__ModelReferenceAssignment_2 ) ) ;
     public final void rule__Anchor__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4134:1: ( ( ( rule__Anchor__ModelReferenceAssignment_2 ) ) )
-            // InternalXdiagramDsl.g:4135:1: ( ( rule__Anchor__ModelReferenceAssignment_2 ) )
+            // InternalXdiagramDsl.g:4080:1: ( ( ( rule__Anchor__ModelReferenceAssignment_2 ) ) )
+            // InternalXdiagramDsl.g:4081:1: ( ( rule__Anchor__ModelReferenceAssignment_2 ) )
             {
-            // InternalXdiagramDsl.g:4135:1: ( ( rule__Anchor__ModelReferenceAssignment_2 ) )
-            // InternalXdiagramDsl.g:4136:2: ( rule__Anchor__ModelReferenceAssignment_2 )
+            // InternalXdiagramDsl.g:4081:1: ( ( rule__Anchor__ModelReferenceAssignment_2 ) )
+            // InternalXdiagramDsl.g:4082:2: ( rule__Anchor__ModelReferenceAssignment_2 )
             {
              before(grammarAccess.getAnchorAccess().getModelReferenceAssignment_2()); 
-            // InternalXdiagramDsl.g:4137:2: ( rule__Anchor__ModelReferenceAssignment_2 )
-            // InternalXdiagramDsl.g:4137:3: rule__Anchor__ModelReferenceAssignment_2
+            // InternalXdiagramDsl.g:4083:2: ( rule__Anchor__ModelReferenceAssignment_2 )
+            // InternalXdiagramDsl.g:4083:3: rule__Anchor__ModelReferenceAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Anchor__ModelReferenceAssignment_2();
@@ -13751,16 +13591,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__Group__3"
-    // InternalXdiagramDsl.g:4145:1: rule__Anchor__Group__3 : rule__Anchor__Group__3__Impl rule__Anchor__Group__4 ;
+    // InternalXdiagramDsl.g:4091:1: rule__Anchor__Group__3 : rule__Anchor__Group__3__Impl rule__Anchor__Group__4 ;
     public final void rule__Anchor__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4149:1: ( rule__Anchor__Group__3__Impl rule__Anchor__Group__4 )
-            // InternalXdiagramDsl.g:4150:2: rule__Anchor__Group__3__Impl rule__Anchor__Group__4
+            // InternalXdiagramDsl.g:4095:1: ( rule__Anchor__Group__3__Impl rule__Anchor__Group__4 )
+            // InternalXdiagramDsl.g:4096:2: rule__Anchor__Group__3__Impl rule__Anchor__Group__4
             {
-            pushFollow(FOLLOW_30);
+            pushFollow(FOLLOW_28);
             rule__Anchor__Group__3__Impl();
 
             state._fsp--;
@@ -13789,29 +13629,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__Group__3__Impl"
-    // InternalXdiagramDsl.g:4157:1: rule__Anchor__Group__3__Impl : ( ( rule__Anchor__Group_3__0 )? ) ;
+    // InternalXdiagramDsl.g:4103:1: rule__Anchor__Group__3__Impl : ( ( rule__Anchor__Group_3__0 )? ) ;
     public final void rule__Anchor__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4161:1: ( ( ( rule__Anchor__Group_3__0 )? ) )
-            // InternalXdiagramDsl.g:4162:1: ( ( rule__Anchor__Group_3__0 )? )
+            // InternalXdiagramDsl.g:4107:1: ( ( ( rule__Anchor__Group_3__0 )? ) )
+            // InternalXdiagramDsl.g:4108:1: ( ( rule__Anchor__Group_3__0 )? )
             {
-            // InternalXdiagramDsl.g:4162:1: ( ( rule__Anchor__Group_3__0 )? )
-            // InternalXdiagramDsl.g:4163:2: ( rule__Anchor__Group_3__0 )?
+            // InternalXdiagramDsl.g:4108:1: ( ( rule__Anchor__Group_3__0 )? )
+            // InternalXdiagramDsl.g:4109:2: ( rule__Anchor__Group_3__0 )?
             {
              before(grammarAccess.getAnchorAccess().getGroup_3()); 
-            // InternalXdiagramDsl.g:4164:2: ( rule__Anchor__Group_3__0 )?
+            // InternalXdiagramDsl.g:4110:2: ( rule__Anchor__Group_3__0 )?
             int alt40=2;
             int LA40_0 = input.LA(1);
 
-            if ( (LA40_0==59) ) {
+            if ( (LA40_0==58) ) {
                 alt40=1;
             }
             switch (alt40) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4164:3: rule__Anchor__Group_3__0
+                    // InternalXdiagramDsl.g:4110:3: rule__Anchor__Group_3__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Anchor__Group_3__0();
@@ -13847,16 +13687,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__Group__4"
-    // InternalXdiagramDsl.g:4172:1: rule__Anchor__Group__4 : rule__Anchor__Group__4__Impl rule__Anchor__Group__5 ;
+    // InternalXdiagramDsl.g:4118:1: rule__Anchor__Group__4 : rule__Anchor__Group__4__Impl rule__Anchor__Group__5 ;
     public final void rule__Anchor__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4176:1: ( rule__Anchor__Group__4__Impl rule__Anchor__Group__5 )
-            // InternalXdiagramDsl.g:4177:2: rule__Anchor__Group__4__Impl rule__Anchor__Group__5
+            // InternalXdiagramDsl.g:4122:1: ( rule__Anchor__Group__4__Impl rule__Anchor__Group__5 )
+            // InternalXdiagramDsl.g:4123:2: rule__Anchor__Group__4__Impl rule__Anchor__Group__5
             {
-            pushFollow(FOLLOW_30);
+            pushFollow(FOLLOW_28);
             rule__Anchor__Group__4__Impl();
 
             state._fsp--;
@@ -13885,20 +13725,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__Group__4__Impl"
-    // InternalXdiagramDsl.g:4184:1: rule__Anchor__Group__4__Impl : ( ( rule__Anchor__ConditionalAssignment_4 )? ) ;
+    // InternalXdiagramDsl.g:4130:1: rule__Anchor__Group__4__Impl : ( ( rule__Anchor__ConditionalAssignment_4 )? ) ;
     public final void rule__Anchor__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4188:1: ( ( ( rule__Anchor__ConditionalAssignment_4 )? ) )
-            // InternalXdiagramDsl.g:4189:1: ( ( rule__Anchor__ConditionalAssignment_4 )? )
+            // InternalXdiagramDsl.g:4134:1: ( ( ( rule__Anchor__ConditionalAssignment_4 )? ) )
+            // InternalXdiagramDsl.g:4135:1: ( ( rule__Anchor__ConditionalAssignment_4 )? )
             {
-            // InternalXdiagramDsl.g:4189:1: ( ( rule__Anchor__ConditionalAssignment_4 )? )
-            // InternalXdiagramDsl.g:4190:2: ( rule__Anchor__ConditionalAssignment_4 )?
+            // InternalXdiagramDsl.g:4135:1: ( ( rule__Anchor__ConditionalAssignment_4 )? )
+            // InternalXdiagramDsl.g:4136:2: ( rule__Anchor__ConditionalAssignment_4 )?
             {
              before(grammarAccess.getAnchorAccess().getConditionalAssignment_4()); 
-            // InternalXdiagramDsl.g:4191:2: ( rule__Anchor__ConditionalAssignment_4 )?
+            // InternalXdiagramDsl.g:4137:2: ( rule__Anchor__ConditionalAssignment_4 )?
             int alt41=2;
             int LA41_0 = input.LA(1);
 
@@ -13907,7 +13747,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
             }
             switch (alt41) {
                 case 1 :
-                    // InternalXdiagramDsl.g:4191:3: rule__Anchor__ConditionalAssignment_4
+                    // InternalXdiagramDsl.g:4137:3: rule__Anchor__ConditionalAssignment_4
                     {
                     pushFollow(FOLLOW_2);
                     rule__Anchor__ConditionalAssignment_4();
@@ -13943,14 +13783,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__Group__5"
-    // InternalXdiagramDsl.g:4199:1: rule__Anchor__Group__5 : rule__Anchor__Group__5__Impl ;
+    // InternalXdiagramDsl.g:4145:1: rule__Anchor__Group__5 : rule__Anchor__Group__5__Impl ;
     public final void rule__Anchor__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4203:1: ( rule__Anchor__Group__5__Impl )
-            // InternalXdiagramDsl.g:4204:2: rule__Anchor__Group__5__Impl
+            // InternalXdiagramDsl.g:4149:1: ( rule__Anchor__Group__5__Impl )
+            // InternalXdiagramDsl.g:4150:2: rule__Anchor__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Anchor__Group__5__Impl();
@@ -13976,20 +13816,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__Group__5__Impl"
-    // InternalXdiagramDsl.g:4210:1: rule__Anchor__Group__5__Impl : ( ';' ) ;
+    // InternalXdiagramDsl.g:4156:1: rule__Anchor__Group__5__Impl : ( ';' ) ;
     public final void rule__Anchor__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4214:1: ( ( ';' ) )
-            // InternalXdiagramDsl.g:4215:1: ( ';' )
+            // InternalXdiagramDsl.g:4160:1: ( ( ';' ) )
+            // InternalXdiagramDsl.g:4161:1: ( ';' )
             {
-            // InternalXdiagramDsl.g:4215:1: ( ';' )
-            // InternalXdiagramDsl.g:4216:2: ';'
+            // InternalXdiagramDsl.g:4161:1: ( ';' )
+            // InternalXdiagramDsl.g:4162:2: ';'
             {
              before(grammarAccess.getAnchorAccess().getSemicolonKeyword_5()); 
-            match(input,58,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getAnchorAccess().getSemicolonKeyword_5()); 
 
             }
@@ -14013,16 +13853,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__Group_3__0"
-    // InternalXdiagramDsl.g:4226:1: rule__Anchor__Group_3__0 : rule__Anchor__Group_3__0__Impl rule__Anchor__Group_3__1 ;
+    // InternalXdiagramDsl.g:4172:1: rule__Anchor__Group_3__0 : rule__Anchor__Group_3__0__Impl rule__Anchor__Group_3__1 ;
     public final void rule__Anchor__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4230:1: ( rule__Anchor__Group_3__0__Impl rule__Anchor__Group_3__1 )
-            // InternalXdiagramDsl.g:4231:2: rule__Anchor__Group_3__0__Impl rule__Anchor__Group_3__1
+            // InternalXdiagramDsl.g:4176:1: ( rule__Anchor__Group_3__0__Impl rule__Anchor__Group_3__1 )
+            // InternalXdiagramDsl.g:4177:2: rule__Anchor__Group_3__0__Impl rule__Anchor__Group_3__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_29);
             rule__Anchor__Group_3__0__Impl();
 
             state._fsp--;
@@ -14051,20 +13891,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__Group_3__0__Impl"
-    // InternalXdiagramDsl.g:4238:1: rule__Anchor__Group_3__0__Impl : ( 'max' ) ;
+    // InternalXdiagramDsl.g:4184:1: rule__Anchor__Group_3__0__Impl : ( 'max' ) ;
     public final void rule__Anchor__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4242:1: ( ( 'max' ) )
-            // InternalXdiagramDsl.g:4243:1: ( 'max' )
+            // InternalXdiagramDsl.g:4188:1: ( ( 'max' ) )
+            // InternalXdiagramDsl.g:4189:1: ( 'max' )
             {
-            // InternalXdiagramDsl.g:4243:1: ( 'max' )
-            // InternalXdiagramDsl.g:4244:2: 'max'
+            // InternalXdiagramDsl.g:4189:1: ( 'max' )
+            // InternalXdiagramDsl.g:4190:2: 'max'
             {
              before(grammarAccess.getAnchorAccess().getMaxKeyword_3_0()); 
-            match(input,59,FOLLOW_2); 
+            match(input,58,FOLLOW_2); 
              after(grammarAccess.getAnchorAccess().getMaxKeyword_3_0()); 
 
             }
@@ -14088,14 +13928,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__Group_3__1"
-    // InternalXdiagramDsl.g:4253:1: rule__Anchor__Group_3__1 : rule__Anchor__Group_3__1__Impl ;
+    // InternalXdiagramDsl.g:4199:1: rule__Anchor__Group_3__1 : rule__Anchor__Group_3__1__Impl ;
     public final void rule__Anchor__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4257:1: ( rule__Anchor__Group_3__1__Impl )
-            // InternalXdiagramDsl.g:4258:2: rule__Anchor__Group_3__1__Impl
+            // InternalXdiagramDsl.g:4203:1: ( rule__Anchor__Group_3__1__Impl )
+            // InternalXdiagramDsl.g:4204:2: rule__Anchor__Group_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Anchor__Group_3__1__Impl();
@@ -14121,21 +13961,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__Group_3__1__Impl"
-    // InternalXdiagramDsl.g:4264:1: rule__Anchor__Group_3__1__Impl : ( ( rule__Anchor__MaxAssignment_3_1 ) ) ;
+    // InternalXdiagramDsl.g:4210:1: rule__Anchor__Group_3__1__Impl : ( ( rule__Anchor__MaxAssignment_3_1 ) ) ;
     public final void rule__Anchor__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4268:1: ( ( ( rule__Anchor__MaxAssignment_3_1 ) ) )
-            // InternalXdiagramDsl.g:4269:1: ( ( rule__Anchor__MaxAssignment_3_1 ) )
+            // InternalXdiagramDsl.g:4214:1: ( ( ( rule__Anchor__MaxAssignment_3_1 ) ) )
+            // InternalXdiagramDsl.g:4215:1: ( ( rule__Anchor__MaxAssignment_3_1 ) )
             {
-            // InternalXdiagramDsl.g:4269:1: ( ( rule__Anchor__MaxAssignment_3_1 ) )
-            // InternalXdiagramDsl.g:4270:2: ( rule__Anchor__MaxAssignment_3_1 )
+            // InternalXdiagramDsl.g:4215:1: ( ( rule__Anchor__MaxAssignment_3_1 ) )
+            // InternalXdiagramDsl.g:4216:2: ( rule__Anchor__MaxAssignment_3_1 )
             {
              before(grammarAccess.getAnchorAccess().getMaxAssignment_3_1()); 
-            // InternalXdiagramDsl.g:4271:2: ( rule__Anchor__MaxAssignment_3_1 )
-            // InternalXdiagramDsl.g:4271:3: rule__Anchor__MaxAssignment_3_1
+            // InternalXdiagramDsl.g:4217:2: ( rule__Anchor__MaxAssignment_3_1 )
+            // InternalXdiagramDsl.g:4217:3: rule__Anchor__MaxAssignment_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Anchor__MaxAssignment_3_1();
@@ -14168,16 +14008,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Colors__Group__0"
-    // InternalXdiagramDsl.g:4280:1: rule__Colors__Group__0 : rule__Colors__Group__0__Impl rule__Colors__Group__1 ;
+    // InternalXdiagramDsl.g:4226:1: rule__Colors__Group__0 : rule__Colors__Group__0__Impl rule__Colors__Group__1 ;
     public final void rule__Colors__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4284:1: ( rule__Colors__Group__0__Impl rule__Colors__Group__1 )
-            // InternalXdiagramDsl.g:4285:2: rule__Colors__Group__0__Impl rule__Colors__Group__1
+            // InternalXdiagramDsl.g:4230:1: ( rule__Colors__Group__0__Impl rule__Colors__Group__1 )
+            // InternalXdiagramDsl.g:4231:2: rule__Colors__Group__0__Impl rule__Colors__Group__1
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_30);
             rule__Colors__Group__0__Impl();
 
             state._fsp--;
@@ -14206,21 +14046,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Colors__Group__0__Impl"
-    // InternalXdiagramDsl.g:4292:1: rule__Colors__Group__0__Impl : ( () ) ;
+    // InternalXdiagramDsl.g:4238:1: rule__Colors__Group__0__Impl : ( () ) ;
     public final void rule__Colors__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4296:1: ( ( () ) )
-            // InternalXdiagramDsl.g:4297:1: ( () )
+            // InternalXdiagramDsl.g:4242:1: ( ( () ) )
+            // InternalXdiagramDsl.g:4243:1: ( () )
             {
-            // InternalXdiagramDsl.g:4297:1: ( () )
-            // InternalXdiagramDsl.g:4298:2: ()
+            // InternalXdiagramDsl.g:4243:1: ( () )
+            // InternalXdiagramDsl.g:4244:2: ()
             {
              before(grammarAccess.getColorsAccess().getColorsAction_0()); 
-            // InternalXdiagramDsl.g:4299:2: ()
-            // InternalXdiagramDsl.g:4299:3: 
+            // InternalXdiagramDsl.g:4245:2: ()
+            // InternalXdiagramDsl.g:4245:3: 
             {
             }
 
@@ -14243,14 +14083,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Colors__Group__1"
-    // InternalXdiagramDsl.g:4307:1: rule__Colors__Group__1 : rule__Colors__Group__1__Impl rule__Colors__Group__2 ;
+    // InternalXdiagramDsl.g:4253:1: rule__Colors__Group__1 : rule__Colors__Group__1__Impl rule__Colors__Group__2 ;
     public final void rule__Colors__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4311:1: ( rule__Colors__Group__1__Impl rule__Colors__Group__2 )
-            // InternalXdiagramDsl.g:4312:2: rule__Colors__Group__1__Impl rule__Colors__Group__2
+            // InternalXdiagramDsl.g:4257:1: ( rule__Colors__Group__1__Impl rule__Colors__Group__2 )
+            // InternalXdiagramDsl.g:4258:2: rule__Colors__Group__1__Impl rule__Colors__Group__2
             {
             pushFollow(FOLLOW_6);
             rule__Colors__Group__1__Impl();
@@ -14281,20 +14121,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Colors__Group__1__Impl"
-    // InternalXdiagramDsl.g:4319:1: rule__Colors__Group__1__Impl : ( 'colors' ) ;
+    // InternalXdiagramDsl.g:4265:1: rule__Colors__Group__1__Impl : ( 'colors' ) ;
     public final void rule__Colors__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4323:1: ( ( 'colors' ) )
-            // InternalXdiagramDsl.g:4324:1: ( 'colors' )
+            // InternalXdiagramDsl.g:4269:1: ( ( 'colors' ) )
+            // InternalXdiagramDsl.g:4270:1: ( 'colors' )
             {
-            // InternalXdiagramDsl.g:4324:1: ( 'colors' )
-            // InternalXdiagramDsl.g:4325:2: 'colors'
+            // InternalXdiagramDsl.g:4270:1: ( 'colors' )
+            // InternalXdiagramDsl.g:4271:2: 'colors'
             {
              before(grammarAccess.getColorsAccess().getColorsKeyword_1()); 
-            match(input,60,FOLLOW_2); 
+            match(input,59,FOLLOW_2); 
              after(grammarAccess.getColorsAccess().getColorsKeyword_1()); 
 
             }
@@ -14318,16 +14158,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Colors__Group__2"
-    // InternalXdiagramDsl.g:4334:1: rule__Colors__Group__2 : rule__Colors__Group__2__Impl rule__Colors__Group__3 ;
+    // InternalXdiagramDsl.g:4280:1: rule__Colors__Group__2 : rule__Colors__Group__2__Impl rule__Colors__Group__3 ;
     public final void rule__Colors__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4338:1: ( rule__Colors__Group__2__Impl rule__Colors__Group__3 )
-            // InternalXdiagramDsl.g:4339:2: rule__Colors__Group__2__Impl rule__Colors__Group__3
+            // InternalXdiagramDsl.g:4284:1: ( rule__Colors__Group__2__Impl rule__Colors__Group__3 )
+            // InternalXdiagramDsl.g:4285:2: rule__Colors__Group__2__Impl rule__Colors__Group__3
             {
-            pushFollow(FOLLOW_32);
+            pushFollow(FOLLOW_31);
             rule__Colors__Group__2__Impl();
 
             state._fsp--;
@@ -14356,17 +14196,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Colors__Group__2__Impl"
-    // InternalXdiagramDsl.g:4346:1: rule__Colors__Group__2__Impl : ( '{' ) ;
+    // InternalXdiagramDsl.g:4292:1: rule__Colors__Group__2__Impl : ( '{' ) ;
     public final void rule__Colors__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4350:1: ( ( '{' ) )
-            // InternalXdiagramDsl.g:4351:1: ( '{' )
+            // InternalXdiagramDsl.g:4296:1: ( ( '{' ) )
+            // InternalXdiagramDsl.g:4297:1: ( '{' )
             {
-            // InternalXdiagramDsl.g:4351:1: ( '{' )
-            // InternalXdiagramDsl.g:4352:2: '{'
+            // InternalXdiagramDsl.g:4297:1: ( '{' )
+            // InternalXdiagramDsl.g:4298:2: '{'
             {
              before(grammarAccess.getColorsAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,43,FOLLOW_2); 
@@ -14393,16 +14233,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Colors__Group__3"
-    // InternalXdiagramDsl.g:4361:1: rule__Colors__Group__3 : rule__Colors__Group__3__Impl rule__Colors__Group__4 ;
+    // InternalXdiagramDsl.g:4307:1: rule__Colors__Group__3 : rule__Colors__Group__3__Impl rule__Colors__Group__4 ;
     public final void rule__Colors__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4365:1: ( rule__Colors__Group__3__Impl rule__Colors__Group__4 )
-            // InternalXdiagramDsl.g:4366:2: rule__Colors__Group__3__Impl rule__Colors__Group__4
+            // InternalXdiagramDsl.g:4311:1: ( rule__Colors__Group__3__Impl rule__Colors__Group__4 )
+            // InternalXdiagramDsl.g:4312:2: rule__Colors__Group__3__Impl rule__Colors__Group__4
             {
-            pushFollow(FOLLOW_32);
+            pushFollow(FOLLOW_31);
             rule__Colors__Group__3__Impl();
 
             state._fsp--;
@@ -14431,20 +14271,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Colors__Group__3__Impl"
-    // InternalXdiagramDsl.g:4373:1: rule__Colors__Group__3__Impl : ( ( rule__Colors__ColorsAssignment_3 )* ) ;
+    // InternalXdiagramDsl.g:4319:1: rule__Colors__Group__3__Impl : ( ( rule__Colors__ColorsAssignment_3 )* ) ;
     public final void rule__Colors__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4377:1: ( ( ( rule__Colors__ColorsAssignment_3 )* ) )
-            // InternalXdiagramDsl.g:4378:1: ( ( rule__Colors__ColorsAssignment_3 )* )
+            // InternalXdiagramDsl.g:4323:1: ( ( ( rule__Colors__ColorsAssignment_3 )* ) )
+            // InternalXdiagramDsl.g:4324:1: ( ( rule__Colors__ColorsAssignment_3 )* )
             {
-            // InternalXdiagramDsl.g:4378:1: ( ( rule__Colors__ColorsAssignment_3 )* )
-            // InternalXdiagramDsl.g:4379:2: ( rule__Colors__ColorsAssignment_3 )*
+            // InternalXdiagramDsl.g:4324:1: ( ( rule__Colors__ColorsAssignment_3 )* )
+            // InternalXdiagramDsl.g:4325:2: ( rule__Colors__ColorsAssignment_3 )*
             {
              before(grammarAccess.getColorsAccess().getColorsAssignment_3()); 
-            // InternalXdiagramDsl.g:4380:2: ( rule__Colors__ColorsAssignment_3 )*
+            // InternalXdiagramDsl.g:4326:2: ( rule__Colors__ColorsAssignment_3 )*
             loop42:
             do {
                 int alt42=2;
@@ -14457,9 +14297,9 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
                 switch (alt42) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:4380:3: rule__Colors__ColorsAssignment_3
+            	    // InternalXdiagramDsl.g:4326:3: rule__Colors__ColorsAssignment_3
             	    {
-            	    pushFollow(FOLLOW_33);
+            	    pushFollow(FOLLOW_32);
             	    rule__Colors__ColorsAssignment_3();
 
             	    state._fsp--;
@@ -14496,14 +14336,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Colors__Group__4"
-    // InternalXdiagramDsl.g:4388:1: rule__Colors__Group__4 : rule__Colors__Group__4__Impl ;
+    // InternalXdiagramDsl.g:4334:1: rule__Colors__Group__4 : rule__Colors__Group__4__Impl ;
     public final void rule__Colors__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4392:1: ( rule__Colors__Group__4__Impl )
-            // InternalXdiagramDsl.g:4393:2: rule__Colors__Group__4__Impl
+            // InternalXdiagramDsl.g:4338:1: ( rule__Colors__Group__4__Impl )
+            // InternalXdiagramDsl.g:4339:2: rule__Colors__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Colors__Group__4__Impl();
@@ -14529,17 +14369,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Colors__Group__4__Impl"
-    // InternalXdiagramDsl.g:4399:1: rule__Colors__Group__4__Impl : ( '}' ) ;
+    // InternalXdiagramDsl.g:4345:1: rule__Colors__Group__4__Impl : ( '}' ) ;
     public final void rule__Colors__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4403:1: ( ( '}' ) )
-            // InternalXdiagramDsl.g:4404:1: ( '}' )
+            // InternalXdiagramDsl.g:4349:1: ( ( '}' ) )
+            // InternalXdiagramDsl.g:4350:1: ( '}' )
             {
-            // InternalXdiagramDsl.g:4404:1: ( '}' )
-            // InternalXdiagramDsl.g:4405:2: '}'
+            // InternalXdiagramDsl.g:4350:1: ( '}' )
+            // InternalXdiagramDsl.g:4351:2: '}'
             {
              before(grammarAccess.getColorsAccess().getRightCurlyBracketKeyword_4()); 
             match(input,46,FOLLOW_2); 
@@ -14566,16 +14406,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomColor__Group__0"
-    // InternalXdiagramDsl.g:4415:1: rule__CustomColor__Group__0 : rule__CustomColor__Group__0__Impl rule__CustomColor__Group__1 ;
+    // InternalXdiagramDsl.g:4361:1: rule__CustomColor__Group__0 : rule__CustomColor__Group__0__Impl rule__CustomColor__Group__1 ;
     public final void rule__CustomColor__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4419:1: ( rule__CustomColor__Group__0__Impl rule__CustomColor__Group__1 )
-            // InternalXdiagramDsl.g:4420:2: rule__CustomColor__Group__0__Impl rule__CustomColor__Group__1
+            // InternalXdiagramDsl.g:4365:1: ( rule__CustomColor__Group__0__Impl rule__CustomColor__Group__1 )
+            // InternalXdiagramDsl.g:4366:2: rule__CustomColor__Group__0__Impl rule__CustomColor__Group__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_29);
             rule__CustomColor__Group__0__Impl();
 
             state._fsp--;
@@ -14604,21 +14444,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomColor__Group__0__Impl"
-    // InternalXdiagramDsl.g:4427:1: rule__CustomColor__Group__0__Impl : ( ( rule__CustomColor__NameAssignment_0 ) ) ;
+    // InternalXdiagramDsl.g:4373:1: rule__CustomColor__Group__0__Impl : ( ( rule__CustomColor__NameAssignment_0 ) ) ;
     public final void rule__CustomColor__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4431:1: ( ( ( rule__CustomColor__NameAssignment_0 ) ) )
-            // InternalXdiagramDsl.g:4432:1: ( ( rule__CustomColor__NameAssignment_0 ) )
+            // InternalXdiagramDsl.g:4377:1: ( ( ( rule__CustomColor__NameAssignment_0 ) ) )
+            // InternalXdiagramDsl.g:4378:1: ( ( rule__CustomColor__NameAssignment_0 ) )
             {
-            // InternalXdiagramDsl.g:4432:1: ( ( rule__CustomColor__NameAssignment_0 ) )
-            // InternalXdiagramDsl.g:4433:2: ( rule__CustomColor__NameAssignment_0 )
+            // InternalXdiagramDsl.g:4378:1: ( ( rule__CustomColor__NameAssignment_0 ) )
+            // InternalXdiagramDsl.g:4379:2: ( rule__CustomColor__NameAssignment_0 )
             {
              before(grammarAccess.getCustomColorAccess().getNameAssignment_0()); 
-            // InternalXdiagramDsl.g:4434:2: ( rule__CustomColor__NameAssignment_0 )
-            // InternalXdiagramDsl.g:4434:3: rule__CustomColor__NameAssignment_0
+            // InternalXdiagramDsl.g:4380:2: ( rule__CustomColor__NameAssignment_0 )
+            // InternalXdiagramDsl.g:4380:3: rule__CustomColor__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__CustomColor__NameAssignment_0();
@@ -14651,16 +14491,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomColor__Group__1"
-    // InternalXdiagramDsl.g:4442:1: rule__CustomColor__Group__1 : rule__CustomColor__Group__1__Impl rule__CustomColor__Group__2 ;
+    // InternalXdiagramDsl.g:4388:1: rule__CustomColor__Group__1 : rule__CustomColor__Group__1__Impl rule__CustomColor__Group__2 ;
     public final void rule__CustomColor__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4446:1: ( rule__CustomColor__Group__1__Impl rule__CustomColor__Group__2 )
-            // InternalXdiagramDsl.g:4447:2: rule__CustomColor__Group__1__Impl rule__CustomColor__Group__2
+            // InternalXdiagramDsl.g:4392:1: ( rule__CustomColor__Group__1__Impl rule__CustomColor__Group__2 )
+            // InternalXdiagramDsl.g:4393:2: rule__CustomColor__Group__1__Impl rule__CustomColor__Group__2
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_29);
             rule__CustomColor__Group__1__Impl();
 
             state._fsp--;
@@ -14689,21 +14529,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomColor__Group__1__Impl"
-    // InternalXdiagramDsl.g:4454:1: rule__CustomColor__Group__1__Impl : ( ( rule__CustomColor__RAssignment_1 ) ) ;
+    // InternalXdiagramDsl.g:4400:1: rule__CustomColor__Group__1__Impl : ( ( rule__CustomColor__RAssignment_1 ) ) ;
     public final void rule__CustomColor__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4458:1: ( ( ( rule__CustomColor__RAssignment_1 ) ) )
-            // InternalXdiagramDsl.g:4459:1: ( ( rule__CustomColor__RAssignment_1 ) )
+            // InternalXdiagramDsl.g:4404:1: ( ( ( rule__CustomColor__RAssignment_1 ) ) )
+            // InternalXdiagramDsl.g:4405:1: ( ( rule__CustomColor__RAssignment_1 ) )
             {
-            // InternalXdiagramDsl.g:4459:1: ( ( rule__CustomColor__RAssignment_1 ) )
-            // InternalXdiagramDsl.g:4460:2: ( rule__CustomColor__RAssignment_1 )
+            // InternalXdiagramDsl.g:4405:1: ( ( rule__CustomColor__RAssignment_1 ) )
+            // InternalXdiagramDsl.g:4406:2: ( rule__CustomColor__RAssignment_1 )
             {
              before(grammarAccess.getCustomColorAccess().getRAssignment_1()); 
-            // InternalXdiagramDsl.g:4461:2: ( rule__CustomColor__RAssignment_1 )
-            // InternalXdiagramDsl.g:4461:3: rule__CustomColor__RAssignment_1
+            // InternalXdiagramDsl.g:4407:2: ( rule__CustomColor__RAssignment_1 )
+            // InternalXdiagramDsl.g:4407:3: rule__CustomColor__RAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__CustomColor__RAssignment_1();
@@ -14736,16 +14576,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomColor__Group__2"
-    // InternalXdiagramDsl.g:4469:1: rule__CustomColor__Group__2 : rule__CustomColor__Group__2__Impl rule__CustomColor__Group__3 ;
+    // InternalXdiagramDsl.g:4415:1: rule__CustomColor__Group__2 : rule__CustomColor__Group__2__Impl rule__CustomColor__Group__3 ;
     public final void rule__CustomColor__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4473:1: ( rule__CustomColor__Group__2__Impl rule__CustomColor__Group__3 )
-            // InternalXdiagramDsl.g:4474:2: rule__CustomColor__Group__2__Impl rule__CustomColor__Group__3
+            // InternalXdiagramDsl.g:4419:1: ( rule__CustomColor__Group__2__Impl rule__CustomColor__Group__3 )
+            // InternalXdiagramDsl.g:4420:2: rule__CustomColor__Group__2__Impl rule__CustomColor__Group__3
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_29);
             rule__CustomColor__Group__2__Impl();
 
             state._fsp--;
@@ -14774,21 +14614,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomColor__Group__2__Impl"
-    // InternalXdiagramDsl.g:4481:1: rule__CustomColor__Group__2__Impl : ( ( rule__CustomColor__GAssignment_2 ) ) ;
+    // InternalXdiagramDsl.g:4427:1: rule__CustomColor__Group__2__Impl : ( ( rule__CustomColor__GAssignment_2 ) ) ;
     public final void rule__CustomColor__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4485:1: ( ( ( rule__CustomColor__GAssignment_2 ) ) )
-            // InternalXdiagramDsl.g:4486:1: ( ( rule__CustomColor__GAssignment_2 ) )
+            // InternalXdiagramDsl.g:4431:1: ( ( ( rule__CustomColor__GAssignment_2 ) ) )
+            // InternalXdiagramDsl.g:4432:1: ( ( rule__CustomColor__GAssignment_2 ) )
             {
-            // InternalXdiagramDsl.g:4486:1: ( ( rule__CustomColor__GAssignment_2 ) )
-            // InternalXdiagramDsl.g:4487:2: ( rule__CustomColor__GAssignment_2 )
+            // InternalXdiagramDsl.g:4432:1: ( ( rule__CustomColor__GAssignment_2 ) )
+            // InternalXdiagramDsl.g:4433:2: ( rule__CustomColor__GAssignment_2 )
             {
              before(grammarAccess.getCustomColorAccess().getGAssignment_2()); 
-            // InternalXdiagramDsl.g:4488:2: ( rule__CustomColor__GAssignment_2 )
-            // InternalXdiagramDsl.g:4488:3: rule__CustomColor__GAssignment_2
+            // InternalXdiagramDsl.g:4434:2: ( rule__CustomColor__GAssignment_2 )
+            // InternalXdiagramDsl.g:4434:3: rule__CustomColor__GAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__CustomColor__GAssignment_2();
@@ -14821,16 +14661,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomColor__Group__3"
-    // InternalXdiagramDsl.g:4496:1: rule__CustomColor__Group__3 : rule__CustomColor__Group__3__Impl rule__CustomColor__Group__4 ;
+    // InternalXdiagramDsl.g:4442:1: rule__CustomColor__Group__3 : rule__CustomColor__Group__3__Impl rule__CustomColor__Group__4 ;
     public final void rule__CustomColor__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4500:1: ( rule__CustomColor__Group__3__Impl rule__CustomColor__Group__4 )
-            // InternalXdiagramDsl.g:4501:2: rule__CustomColor__Group__3__Impl rule__CustomColor__Group__4
+            // InternalXdiagramDsl.g:4446:1: ( rule__CustomColor__Group__3__Impl rule__CustomColor__Group__4 )
+            // InternalXdiagramDsl.g:4447:2: rule__CustomColor__Group__3__Impl rule__CustomColor__Group__4
             {
-            pushFollow(FOLLOW_34);
+            pushFollow(FOLLOW_33);
             rule__CustomColor__Group__3__Impl();
 
             state._fsp--;
@@ -14859,21 +14699,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomColor__Group__3__Impl"
-    // InternalXdiagramDsl.g:4508:1: rule__CustomColor__Group__3__Impl : ( ( rule__CustomColor__BAssignment_3 ) ) ;
+    // InternalXdiagramDsl.g:4454:1: rule__CustomColor__Group__3__Impl : ( ( rule__CustomColor__BAssignment_3 ) ) ;
     public final void rule__CustomColor__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4512:1: ( ( ( rule__CustomColor__BAssignment_3 ) ) )
-            // InternalXdiagramDsl.g:4513:1: ( ( rule__CustomColor__BAssignment_3 ) )
+            // InternalXdiagramDsl.g:4458:1: ( ( ( rule__CustomColor__BAssignment_3 ) ) )
+            // InternalXdiagramDsl.g:4459:1: ( ( rule__CustomColor__BAssignment_3 ) )
             {
-            // InternalXdiagramDsl.g:4513:1: ( ( rule__CustomColor__BAssignment_3 ) )
-            // InternalXdiagramDsl.g:4514:2: ( rule__CustomColor__BAssignment_3 )
+            // InternalXdiagramDsl.g:4459:1: ( ( rule__CustomColor__BAssignment_3 ) )
+            // InternalXdiagramDsl.g:4460:2: ( rule__CustomColor__BAssignment_3 )
             {
              before(grammarAccess.getCustomColorAccess().getBAssignment_3()); 
-            // InternalXdiagramDsl.g:4515:2: ( rule__CustomColor__BAssignment_3 )
-            // InternalXdiagramDsl.g:4515:3: rule__CustomColor__BAssignment_3
+            // InternalXdiagramDsl.g:4461:2: ( rule__CustomColor__BAssignment_3 )
+            // InternalXdiagramDsl.g:4461:3: rule__CustomColor__BAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__CustomColor__BAssignment_3();
@@ -14906,14 +14746,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomColor__Group__4"
-    // InternalXdiagramDsl.g:4523:1: rule__CustomColor__Group__4 : rule__CustomColor__Group__4__Impl ;
+    // InternalXdiagramDsl.g:4469:1: rule__CustomColor__Group__4 : rule__CustomColor__Group__4__Impl ;
     public final void rule__CustomColor__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4527:1: ( rule__CustomColor__Group__4__Impl )
-            // InternalXdiagramDsl.g:4528:2: rule__CustomColor__Group__4__Impl
+            // InternalXdiagramDsl.g:4473:1: ( rule__CustomColor__Group__4__Impl )
+            // InternalXdiagramDsl.g:4474:2: rule__CustomColor__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CustomColor__Group__4__Impl();
@@ -14939,20 +14779,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomColor__Group__4__Impl"
-    // InternalXdiagramDsl.g:4534:1: rule__CustomColor__Group__4__Impl : ( ';' ) ;
+    // InternalXdiagramDsl.g:4480:1: rule__CustomColor__Group__4__Impl : ( ';' ) ;
     public final void rule__CustomColor__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4538:1: ( ( ';' ) )
-            // InternalXdiagramDsl.g:4539:1: ( ';' )
+            // InternalXdiagramDsl.g:4484:1: ( ( ';' ) )
+            // InternalXdiagramDsl.g:4485:1: ( ';' )
             {
-            // InternalXdiagramDsl.g:4539:1: ( ';' )
-            // InternalXdiagramDsl.g:4540:2: ';'
+            // InternalXdiagramDsl.g:4485:1: ( ';' )
+            // InternalXdiagramDsl.g:4486:2: ';'
             {
              before(grammarAccess.getCustomColorAccess().getSemicolonKeyword_4()); 
-            match(input,58,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getCustomColorAccess().getSemicolonKeyword_4()); 
 
             }
@@ -14976,14 +14816,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomFigure__Group__0"
-    // InternalXdiagramDsl.g:4550:1: rule__CustomFigure__Group__0 : rule__CustomFigure__Group__0__Impl rule__CustomFigure__Group__1 ;
+    // InternalXdiagramDsl.g:4496:1: rule__CustomFigure__Group__0 : rule__CustomFigure__Group__0__Impl rule__CustomFigure__Group__1 ;
     public final void rule__CustomFigure__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4554:1: ( rule__CustomFigure__Group__0__Impl rule__CustomFigure__Group__1 )
-            // InternalXdiagramDsl.g:4555:2: rule__CustomFigure__Group__0__Impl rule__CustomFigure__Group__1
+            // InternalXdiagramDsl.g:4500:1: ( rule__CustomFigure__Group__0__Impl rule__CustomFigure__Group__1 )
+            // InternalXdiagramDsl.g:4501:2: rule__CustomFigure__Group__0__Impl rule__CustomFigure__Group__1
             {
             pushFollow(FOLLOW_13);
             rule__CustomFigure__Group__0__Impl();
@@ -15014,20 +14854,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomFigure__Group__0__Impl"
-    // InternalXdiagramDsl.g:4562:1: rule__CustomFigure__Group__0__Impl : ( 'figure' ) ;
+    // InternalXdiagramDsl.g:4508:1: rule__CustomFigure__Group__0__Impl : ( 'figure' ) ;
     public final void rule__CustomFigure__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4566:1: ( ( 'figure' ) )
-            // InternalXdiagramDsl.g:4567:1: ( 'figure' )
+            // InternalXdiagramDsl.g:4512:1: ( ( 'figure' ) )
+            // InternalXdiagramDsl.g:4513:1: ( 'figure' )
             {
-            // InternalXdiagramDsl.g:4567:1: ( 'figure' )
-            // InternalXdiagramDsl.g:4568:2: 'figure'
+            // InternalXdiagramDsl.g:4513:1: ( 'figure' )
+            // InternalXdiagramDsl.g:4514:2: 'figure'
             {
              before(grammarAccess.getCustomFigureAccess().getFigureKeyword_0()); 
-            match(input,61,FOLLOW_2); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getCustomFigureAccess().getFigureKeyword_0()); 
 
             }
@@ -15051,16 +14891,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomFigure__Group__1"
-    // InternalXdiagramDsl.g:4577:1: rule__CustomFigure__Group__1 : rule__CustomFigure__Group__1__Impl rule__CustomFigure__Group__2 ;
+    // InternalXdiagramDsl.g:4523:1: rule__CustomFigure__Group__1 : rule__CustomFigure__Group__1__Impl rule__CustomFigure__Group__2 ;
     public final void rule__CustomFigure__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4581:1: ( rule__CustomFigure__Group__1__Impl rule__CustomFigure__Group__2 )
-            // InternalXdiagramDsl.g:4582:2: rule__CustomFigure__Group__1__Impl rule__CustomFigure__Group__2
+            // InternalXdiagramDsl.g:4527:1: ( rule__CustomFigure__Group__1__Impl rule__CustomFigure__Group__2 )
+            // InternalXdiagramDsl.g:4528:2: rule__CustomFigure__Group__1__Impl rule__CustomFigure__Group__2
             {
-            pushFollow(FOLLOW_35);
+            pushFollow(FOLLOW_34);
             rule__CustomFigure__Group__1__Impl();
 
             state._fsp--;
@@ -15089,21 +14929,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomFigure__Group__1__Impl"
-    // InternalXdiagramDsl.g:4589:1: rule__CustomFigure__Group__1__Impl : ( ( rule__CustomFigure__NameAssignment_1 ) ) ;
+    // InternalXdiagramDsl.g:4535:1: rule__CustomFigure__Group__1__Impl : ( ( rule__CustomFigure__NameAssignment_1 ) ) ;
     public final void rule__CustomFigure__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4593:1: ( ( ( rule__CustomFigure__NameAssignment_1 ) ) )
-            // InternalXdiagramDsl.g:4594:1: ( ( rule__CustomFigure__NameAssignment_1 ) )
+            // InternalXdiagramDsl.g:4539:1: ( ( ( rule__CustomFigure__NameAssignment_1 ) ) )
+            // InternalXdiagramDsl.g:4540:1: ( ( rule__CustomFigure__NameAssignment_1 ) )
             {
-            // InternalXdiagramDsl.g:4594:1: ( ( rule__CustomFigure__NameAssignment_1 ) )
-            // InternalXdiagramDsl.g:4595:2: ( rule__CustomFigure__NameAssignment_1 )
+            // InternalXdiagramDsl.g:4540:1: ( ( rule__CustomFigure__NameAssignment_1 ) )
+            // InternalXdiagramDsl.g:4541:2: ( rule__CustomFigure__NameAssignment_1 )
             {
              before(grammarAccess.getCustomFigureAccess().getNameAssignment_1()); 
-            // InternalXdiagramDsl.g:4596:2: ( rule__CustomFigure__NameAssignment_1 )
-            // InternalXdiagramDsl.g:4596:3: rule__CustomFigure__NameAssignment_1
+            // InternalXdiagramDsl.g:4542:2: ( rule__CustomFigure__NameAssignment_1 )
+            // InternalXdiagramDsl.g:4542:3: rule__CustomFigure__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__CustomFigure__NameAssignment_1();
@@ -15136,14 +14976,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomFigure__Group__2"
-    // InternalXdiagramDsl.g:4604:1: rule__CustomFigure__Group__2 : rule__CustomFigure__Group__2__Impl rule__CustomFigure__Group__3 ;
+    // InternalXdiagramDsl.g:4550:1: rule__CustomFigure__Group__2 : rule__CustomFigure__Group__2__Impl rule__CustomFigure__Group__3 ;
     public final void rule__CustomFigure__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4608:1: ( rule__CustomFigure__Group__2__Impl rule__CustomFigure__Group__3 )
-            // InternalXdiagramDsl.g:4609:2: rule__CustomFigure__Group__2__Impl rule__CustomFigure__Group__3
+            // InternalXdiagramDsl.g:4554:1: ( rule__CustomFigure__Group__2__Impl rule__CustomFigure__Group__3 )
+            // InternalXdiagramDsl.g:4555:2: rule__CustomFigure__Group__2__Impl rule__CustomFigure__Group__3
             {
             pushFollow(FOLLOW_19);
             rule__CustomFigure__Group__2__Impl();
@@ -15174,20 +15014,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomFigure__Group__2__Impl"
-    // InternalXdiagramDsl.g:4616:1: rule__CustomFigure__Group__2__Impl : ( 'as' ) ;
+    // InternalXdiagramDsl.g:4562:1: rule__CustomFigure__Group__2__Impl : ( 'as' ) ;
     public final void rule__CustomFigure__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4620:1: ( ( 'as' ) )
-            // InternalXdiagramDsl.g:4621:1: ( 'as' )
+            // InternalXdiagramDsl.g:4566:1: ( ( 'as' ) )
+            // InternalXdiagramDsl.g:4567:1: ( 'as' )
             {
-            // InternalXdiagramDsl.g:4621:1: ( 'as' )
-            // InternalXdiagramDsl.g:4622:2: 'as'
+            // InternalXdiagramDsl.g:4567:1: ( 'as' )
+            // InternalXdiagramDsl.g:4568:2: 'as'
             {
              before(grammarAccess.getCustomFigureAccess().getAsKeyword_2()); 
-            match(input,62,FOLLOW_2); 
+            match(input,61,FOLLOW_2); 
              after(grammarAccess.getCustomFigureAccess().getAsKeyword_2()); 
 
             }
@@ -15211,14 +15051,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomFigure__Group__3"
-    // InternalXdiagramDsl.g:4631:1: rule__CustomFigure__Group__3 : rule__CustomFigure__Group__3__Impl ;
+    // InternalXdiagramDsl.g:4577:1: rule__CustomFigure__Group__3 : rule__CustomFigure__Group__3__Impl ;
     public final void rule__CustomFigure__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4635:1: ( rule__CustomFigure__Group__3__Impl )
-            // InternalXdiagramDsl.g:4636:2: rule__CustomFigure__Group__3__Impl
+            // InternalXdiagramDsl.g:4581:1: ( rule__CustomFigure__Group__3__Impl )
+            // InternalXdiagramDsl.g:4582:2: rule__CustomFigure__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CustomFigure__Group__3__Impl();
@@ -15244,21 +15084,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomFigure__Group__3__Impl"
-    // InternalXdiagramDsl.g:4642:1: rule__CustomFigure__Group__3__Impl : ( ( rule__CustomFigure__ElementAssignment_3 ) ) ;
+    // InternalXdiagramDsl.g:4588:1: rule__CustomFigure__Group__3__Impl : ( ( rule__CustomFigure__ElementAssignment_3 ) ) ;
     public final void rule__CustomFigure__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4646:1: ( ( ( rule__CustomFigure__ElementAssignment_3 ) ) )
-            // InternalXdiagramDsl.g:4647:1: ( ( rule__CustomFigure__ElementAssignment_3 ) )
+            // InternalXdiagramDsl.g:4592:1: ( ( ( rule__CustomFigure__ElementAssignment_3 ) ) )
+            // InternalXdiagramDsl.g:4593:1: ( ( rule__CustomFigure__ElementAssignment_3 ) )
             {
-            // InternalXdiagramDsl.g:4647:1: ( ( rule__CustomFigure__ElementAssignment_3 ) )
-            // InternalXdiagramDsl.g:4648:2: ( rule__CustomFigure__ElementAssignment_3 )
+            // InternalXdiagramDsl.g:4593:1: ( ( rule__CustomFigure__ElementAssignment_3 ) )
+            // InternalXdiagramDsl.g:4594:2: ( rule__CustomFigure__ElementAssignment_3 )
             {
              before(grammarAccess.getCustomFigureAccess().getElementAssignment_3()); 
-            // InternalXdiagramDsl.g:4649:2: ( rule__CustomFigure__ElementAssignment_3 )
-            // InternalXdiagramDsl.g:4649:3: rule__CustomFigure__ElementAssignment_3
+            // InternalXdiagramDsl.g:4595:2: ( rule__CustomFigure__ElementAssignment_3 )
+            // InternalXdiagramDsl.g:4595:3: rule__CustomFigure__ElementAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__CustomFigure__ElementAssignment_3();
@@ -15291,14 +15131,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__Group__0"
-    // InternalXdiagramDsl.g:4658:1: rule__Custom__Group__0 : rule__Custom__Group__0__Impl rule__Custom__Group__1 ;
+    // InternalXdiagramDsl.g:4604:1: rule__Custom__Group__0 : rule__Custom__Group__0__Impl rule__Custom__Group__1 ;
     public final void rule__Custom__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4662:1: ( rule__Custom__Group__0__Impl rule__Custom__Group__1 )
-            // InternalXdiagramDsl.g:4663:2: rule__Custom__Group__0__Impl rule__Custom__Group__1
+            // InternalXdiagramDsl.g:4608:1: ( rule__Custom__Group__0__Impl rule__Custom__Group__1 )
+            // InternalXdiagramDsl.g:4609:2: rule__Custom__Group__0__Impl rule__Custom__Group__1
             {
             pushFollow(FOLLOW_13);
             rule__Custom__Group__0__Impl();
@@ -15329,20 +15169,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__Group__0__Impl"
-    // InternalXdiagramDsl.g:4670:1: rule__Custom__Group__0__Impl : ( 'figure' ) ;
+    // InternalXdiagramDsl.g:4616:1: rule__Custom__Group__0__Impl : ( 'figure' ) ;
     public final void rule__Custom__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4674:1: ( ( 'figure' ) )
-            // InternalXdiagramDsl.g:4675:1: ( 'figure' )
+            // InternalXdiagramDsl.g:4620:1: ( ( 'figure' ) )
+            // InternalXdiagramDsl.g:4621:1: ( 'figure' )
             {
-            // InternalXdiagramDsl.g:4675:1: ( 'figure' )
-            // InternalXdiagramDsl.g:4676:2: 'figure'
+            // InternalXdiagramDsl.g:4621:1: ( 'figure' )
+            // InternalXdiagramDsl.g:4622:2: 'figure'
             {
              before(grammarAccess.getCustomAccess().getFigureKeyword_0()); 
-            match(input,61,FOLLOW_2); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getCustomAccess().getFigureKeyword_0()); 
 
             }
@@ -15366,14 +15206,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__Group__1"
-    // InternalXdiagramDsl.g:4685:1: rule__Custom__Group__1 : rule__Custom__Group__1__Impl rule__Custom__Group__2 ;
+    // InternalXdiagramDsl.g:4631:1: rule__Custom__Group__1 : rule__Custom__Group__1__Impl rule__Custom__Group__2 ;
     public final void rule__Custom__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4689:1: ( rule__Custom__Group__1__Impl rule__Custom__Group__2 )
-            // InternalXdiagramDsl.g:4690:2: rule__Custom__Group__1__Impl rule__Custom__Group__2
+            // InternalXdiagramDsl.g:4635:1: ( rule__Custom__Group__1__Impl rule__Custom__Group__2 )
+            // InternalXdiagramDsl.g:4636:2: rule__Custom__Group__1__Impl rule__Custom__Group__2
             {
             pushFollow(FOLLOW_6);
             rule__Custom__Group__1__Impl();
@@ -15404,21 +15244,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__Group__1__Impl"
-    // InternalXdiagramDsl.g:4697:1: rule__Custom__Group__1__Impl : ( ( rule__Custom__FigureAssignment_1 ) ) ;
+    // InternalXdiagramDsl.g:4643:1: rule__Custom__Group__1__Impl : ( ( rule__Custom__FigureAssignment_1 ) ) ;
     public final void rule__Custom__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4701:1: ( ( ( rule__Custom__FigureAssignment_1 ) ) )
-            // InternalXdiagramDsl.g:4702:1: ( ( rule__Custom__FigureAssignment_1 ) )
+            // InternalXdiagramDsl.g:4647:1: ( ( ( rule__Custom__FigureAssignment_1 ) ) )
+            // InternalXdiagramDsl.g:4648:1: ( ( rule__Custom__FigureAssignment_1 ) )
             {
-            // InternalXdiagramDsl.g:4702:1: ( ( rule__Custom__FigureAssignment_1 ) )
-            // InternalXdiagramDsl.g:4703:2: ( rule__Custom__FigureAssignment_1 )
+            // InternalXdiagramDsl.g:4648:1: ( ( rule__Custom__FigureAssignment_1 ) )
+            // InternalXdiagramDsl.g:4649:2: ( rule__Custom__FigureAssignment_1 )
             {
              before(grammarAccess.getCustomAccess().getFigureAssignment_1()); 
-            // InternalXdiagramDsl.g:4704:2: ( rule__Custom__FigureAssignment_1 )
-            // InternalXdiagramDsl.g:4704:3: rule__Custom__FigureAssignment_1
+            // InternalXdiagramDsl.g:4650:2: ( rule__Custom__FigureAssignment_1 )
+            // InternalXdiagramDsl.g:4650:3: rule__Custom__FigureAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Custom__FigureAssignment_1();
@@ -15451,16 +15291,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__Group__2"
-    // InternalXdiagramDsl.g:4712:1: rule__Custom__Group__2 : rule__Custom__Group__2__Impl rule__Custom__Group__3 ;
+    // InternalXdiagramDsl.g:4658:1: rule__Custom__Group__2 : rule__Custom__Group__2__Impl rule__Custom__Group__3 ;
     public final void rule__Custom__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4716:1: ( rule__Custom__Group__2__Impl rule__Custom__Group__3 )
-            // InternalXdiagramDsl.g:4717:2: rule__Custom__Group__2__Impl rule__Custom__Group__3
+            // InternalXdiagramDsl.g:4662:1: ( rule__Custom__Group__2__Impl rule__Custom__Group__3 )
+            // InternalXdiagramDsl.g:4663:2: rule__Custom__Group__2__Impl rule__Custom__Group__3
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_35);
             rule__Custom__Group__2__Impl();
 
             state._fsp--;
@@ -15489,17 +15329,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__Group__2__Impl"
-    // InternalXdiagramDsl.g:4724:1: rule__Custom__Group__2__Impl : ( '{' ) ;
+    // InternalXdiagramDsl.g:4670:1: rule__Custom__Group__2__Impl : ( '{' ) ;
     public final void rule__Custom__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4728:1: ( ( '{' ) )
-            // InternalXdiagramDsl.g:4729:1: ( '{' )
+            // InternalXdiagramDsl.g:4674:1: ( ( '{' ) )
+            // InternalXdiagramDsl.g:4675:1: ( '{' )
             {
-            // InternalXdiagramDsl.g:4729:1: ( '{' )
-            // InternalXdiagramDsl.g:4730:2: '{'
+            // InternalXdiagramDsl.g:4675:1: ( '{' )
+            // InternalXdiagramDsl.g:4676:2: '{'
             {
              before(grammarAccess.getCustomAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,43,FOLLOW_2); 
@@ -15526,16 +15366,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__Group__3"
-    // InternalXdiagramDsl.g:4739:1: rule__Custom__Group__3 : rule__Custom__Group__3__Impl rule__Custom__Group__4 ;
+    // InternalXdiagramDsl.g:4685:1: rule__Custom__Group__3 : rule__Custom__Group__3__Impl rule__Custom__Group__4 ;
     public final void rule__Custom__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4743:1: ( rule__Custom__Group__3__Impl rule__Custom__Group__4 )
-            // InternalXdiagramDsl.g:4744:2: rule__Custom__Group__3__Impl rule__Custom__Group__4
+            // InternalXdiagramDsl.g:4689:1: ( rule__Custom__Group__3__Impl rule__Custom__Group__4 )
+            // InternalXdiagramDsl.g:4690:2: rule__Custom__Group__3__Impl rule__Custom__Group__4
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_35);
             rule__Custom__Group__3__Impl();
 
             state._fsp--;
@@ -15564,35 +15404,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__Group__3__Impl"
-    // InternalXdiagramDsl.g:4751:1: rule__Custom__Group__3__Impl : ( ( rule__Custom__FeaturesAssignment_3 )* ) ;
+    // InternalXdiagramDsl.g:4697:1: rule__Custom__Group__3__Impl : ( ( rule__Custom__FeaturesAssignment_3 )* ) ;
     public final void rule__Custom__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4755:1: ( ( ( rule__Custom__FeaturesAssignment_3 )* ) )
-            // InternalXdiagramDsl.g:4756:1: ( ( rule__Custom__FeaturesAssignment_3 )* )
+            // InternalXdiagramDsl.g:4701:1: ( ( ( rule__Custom__FeaturesAssignment_3 )* ) )
+            // InternalXdiagramDsl.g:4702:1: ( ( rule__Custom__FeaturesAssignment_3 )* )
             {
-            // InternalXdiagramDsl.g:4756:1: ( ( rule__Custom__FeaturesAssignment_3 )* )
-            // InternalXdiagramDsl.g:4757:2: ( rule__Custom__FeaturesAssignment_3 )*
+            // InternalXdiagramDsl.g:4702:1: ( ( rule__Custom__FeaturesAssignment_3 )* )
+            // InternalXdiagramDsl.g:4703:2: ( rule__Custom__FeaturesAssignment_3 )*
             {
              before(grammarAccess.getCustomAccess().getFeaturesAssignment_3()); 
-            // InternalXdiagramDsl.g:4758:2: ( rule__Custom__FeaturesAssignment_3 )*
+            // InternalXdiagramDsl.g:4704:2: ( rule__Custom__FeaturesAssignment_3 )*
             loop43:
             do {
                 int alt43=2;
                 int LA43_0 = input.LA(1);
 
-                if ( (LA43_0==57||LA43_0==67) ) {
+                if ( (LA43_0==56||LA43_0==66) ) {
                     alt43=1;
                 }
 
 
                 switch (alt43) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:4758:3: rule__Custom__FeaturesAssignment_3
+            	    // InternalXdiagramDsl.g:4704:3: rule__Custom__FeaturesAssignment_3
             	    {
-            	    pushFollow(FOLLOW_37);
+            	    pushFollow(FOLLOW_36);
             	    rule__Custom__FeaturesAssignment_3();
 
             	    state._fsp--;
@@ -15629,16 +15469,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__Group__4"
-    // InternalXdiagramDsl.g:4766:1: rule__Custom__Group__4 : rule__Custom__Group__4__Impl rule__Custom__Group__5 ;
+    // InternalXdiagramDsl.g:4712:1: rule__Custom__Group__4 : rule__Custom__Group__4__Impl rule__Custom__Group__5 ;
     public final void rule__Custom__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4770:1: ( rule__Custom__Group__4__Impl rule__Custom__Group__5 )
-            // InternalXdiagramDsl.g:4771:2: rule__Custom__Group__4__Impl rule__Custom__Group__5
+            // InternalXdiagramDsl.g:4716:1: ( rule__Custom__Group__4__Impl rule__Custom__Group__5 )
+            // InternalXdiagramDsl.g:4717:2: rule__Custom__Group__4__Impl rule__Custom__Group__5
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_35);
             rule__Custom__Group__4__Impl();
 
             state._fsp--;
@@ -15667,35 +15507,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__Group__4__Impl"
-    // InternalXdiagramDsl.g:4778:1: rule__Custom__Group__4__Impl : ( ( rule__Custom__Group_4__0 )* ) ;
+    // InternalXdiagramDsl.g:4724:1: rule__Custom__Group__4__Impl : ( ( rule__Custom__Group_4__0 )* ) ;
     public final void rule__Custom__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4782:1: ( ( ( rule__Custom__Group_4__0 )* ) )
-            // InternalXdiagramDsl.g:4783:1: ( ( rule__Custom__Group_4__0 )* )
+            // InternalXdiagramDsl.g:4728:1: ( ( ( rule__Custom__Group_4__0 )* ) )
+            // InternalXdiagramDsl.g:4729:1: ( ( rule__Custom__Group_4__0 )* )
             {
-            // InternalXdiagramDsl.g:4783:1: ( ( rule__Custom__Group_4__0 )* )
-            // InternalXdiagramDsl.g:4784:2: ( rule__Custom__Group_4__0 )*
+            // InternalXdiagramDsl.g:4729:1: ( ( rule__Custom__Group_4__0 )* )
+            // InternalXdiagramDsl.g:4730:2: ( rule__Custom__Group_4__0 )*
             {
              before(grammarAccess.getCustomAccess().getGroup_4()); 
-            // InternalXdiagramDsl.g:4785:2: ( rule__Custom__Group_4__0 )*
+            // InternalXdiagramDsl.g:4731:2: ( rule__Custom__Group_4__0 )*
             loop44:
             do {
                 int alt44=2;
                 int LA44_0 = input.LA(1);
 
-                if ( (LA44_0==63) ) {
+                if ( (LA44_0==62) ) {
                     alt44=1;
                 }
 
 
                 switch (alt44) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:4785:3: rule__Custom__Group_4__0
+            	    // InternalXdiagramDsl.g:4731:3: rule__Custom__Group_4__0
             	    {
-            	    pushFollow(FOLLOW_38);
+            	    pushFollow(FOLLOW_37);
             	    rule__Custom__Group_4__0();
 
             	    state._fsp--;
@@ -15732,14 +15572,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__Group__5"
-    // InternalXdiagramDsl.g:4793:1: rule__Custom__Group__5 : rule__Custom__Group__5__Impl ;
+    // InternalXdiagramDsl.g:4739:1: rule__Custom__Group__5 : rule__Custom__Group__5__Impl ;
     public final void rule__Custom__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4797:1: ( rule__Custom__Group__5__Impl )
-            // InternalXdiagramDsl.g:4798:2: rule__Custom__Group__5__Impl
+            // InternalXdiagramDsl.g:4743:1: ( rule__Custom__Group__5__Impl )
+            // InternalXdiagramDsl.g:4744:2: rule__Custom__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Custom__Group__5__Impl();
@@ -15765,17 +15605,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__Group__5__Impl"
-    // InternalXdiagramDsl.g:4804:1: rule__Custom__Group__5__Impl : ( '}' ) ;
+    // InternalXdiagramDsl.g:4750:1: rule__Custom__Group__5__Impl : ( '}' ) ;
     public final void rule__Custom__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4808:1: ( ( '}' ) )
-            // InternalXdiagramDsl.g:4809:1: ( '}' )
+            // InternalXdiagramDsl.g:4754:1: ( ( '}' ) )
+            // InternalXdiagramDsl.g:4755:1: ( '}' )
             {
-            // InternalXdiagramDsl.g:4809:1: ( '}' )
-            // InternalXdiagramDsl.g:4810:2: '}'
+            // InternalXdiagramDsl.g:4755:1: ( '}' )
+            // InternalXdiagramDsl.g:4756:2: '}'
             {
              before(grammarAccess.getCustomAccess().getRightCurlyBracketKeyword_5()); 
             match(input,46,FOLLOW_2); 
@@ -15802,16 +15642,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__Group_4__0"
-    // InternalXdiagramDsl.g:4820:1: rule__Custom__Group_4__0 : rule__Custom__Group_4__0__Impl rule__Custom__Group_4__1 ;
+    // InternalXdiagramDsl.g:4766:1: rule__Custom__Group_4__0 : rule__Custom__Group_4__0__Impl rule__Custom__Group_4__1 ;
     public final void rule__Custom__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4824:1: ( rule__Custom__Group_4__0__Impl rule__Custom__Group_4__1 )
-            // InternalXdiagramDsl.g:4825:2: rule__Custom__Group_4__0__Impl rule__Custom__Group_4__1
+            // InternalXdiagramDsl.g:4770:1: ( rule__Custom__Group_4__0__Impl rule__Custom__Group_4__1 )
+            // InternalXdiagramDsl.g:4771:2: rule__Custom__Group_4__0__Impl rule__Custom__Group_4__1
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_26);
             rule__Custom__Group_4__0__Impl();
 
             state._fsp--;
@@ -15840,20 +15680,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__Group_4__0__Impl"
-    // InternalXdiagramDsl.g:4832:1: rule__Custom__Group_4__0__Impl : ( 'child' ) ;
+    // InternalXdiagramDsl.g:4778:1: rule__Custom__Group_4__0__Impl : ( 'child' ) ;
     public final void rule__Custom__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4836:1: ( ( 'child' ) )
-            // InternalXdiagramDsl.g:4837:1: ( 'child' )
+            // InternalXdiagramDsl.g:4782:1: ( ( 'child' ) )
+            // InternalXdiagramDsl.g:4783:1: ( 'child' )
             {
-            // InternalXdiagramDsl.g:4837:1: ( 'child' )
-            // InternalXdiagramDsl.g:4838:2: 'child'
+            // InternalXdiagramDsl.g:4783:1: ( 'child' )
+            // InternalXdiagramDsl.g:4784:2: 'child'
             {
              before(grammarAccess.getCustomAccess().getChildKeyword_4_0()); 
-            match(input,63,FOLLOW_2); 
+            match(input,62,FOLLOW_2); 
              after(grammarAccess.getCustomAccess().getChildKeyword_4_0()); 
 
             }
@@ -15877,14 +15717,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__Group_4__1"
-    // InternalXdiagramDsl.g:4847:1: rule__Custom__Group_4__1 : rule__Custom__Group_4__1__Impl ;
+    // InternalXdiagramDsl.g:4793:1: rule__Custom__Group_4__1 : rule__Custom__Group_4__1__Impl ;
     public final void rule__Custom__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4851:1: ( rule__Custom__Group_4__1__Impl )
-            // InternalXdiagramDsl.g:4852:2: rule__Custom__Group_4__1__Impl
+            // InternalXdiagramDsl.g:4797:1: ( rule__Custom__Group_4__1__Impl )
+            // InternalXdiagramDsl.g:4798:2: rule__Custom__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Custom__Group_4__1__Impl();
@@ -15910,21 +15750,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__Group_4__1__Impl"
-    // InternalXdiagramDsl.g:4858:1: rule__Custom__Group_4__1__Impl : ( ( rule__Custom__ChildrenAssignment_4_1 ) ) ;
+    // InternalXdiagramDsl.g:4804:1: rule__Custom__Group_4__1__Impl : ( ( rule__Custom__ChildrenAssignment_4_1 ) ) ;
     public final void rule__Custom__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4862:1: ( ( ( rule__Custom__ChildrenAssignment_4_1 ) ) )
-            // InternalXdiagramDsl.g:4863:1: ( ( rule__Custom__ChildrenAssignment_4_1 ) )
+            // InternalXdiagramDsl.g:4808:1: ( ( ( rule__Custom__ChildrenAssignment_4_1 ) ) )
+            // InternalXdiagramDsl.g:4809:1: ( ( rule__Custom__ChildrenAssignment_4_1 ) )
             {
-            // InternalXdiagramDsl.g:4863:1: ( ( rule__Custom__ChildrenAssignment_4_1 ) )
-            // InternalXdiagramDsl.g:4864:2: ( rule__Custom__ChildrenAssignment_4_1 )
+            // InternalXdiagramDsl.g:4809:1: ( ( rule__Custom__ChildrenAssignment_4_1 ) )
+            // InternalXdiagramDsl.g:4810:2: ( rule__Custom__ChildrenAssignment_4_1 )
             {
              before(grammarAccess.getCustomAccess().getChildrenAssignment_4_1()); 
-            // InternalXdiagramDsl.g:4865:2: ( rule__Custom__ChildrenAssignment_4_1 )
-            // InternalXdiagramDsl.g:4865:3: rule__Custom__ChildrenAssignment_4_1
+            // InternalXdiagramDsl.g:4811:2: ( rule__Custom__ChildrenAssignment_4_1 )
+            // InternalXdiagramDsl.g:4811:3: rule__Custom__ChildrenAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__Custom__ChildrenAssignment_4_1();
@@ -15957,14 +15797,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__Group__0"
-    // InternalXdiagramDsl.g:4874:1: rule__Rectangle__Group__0 : rule__Rectangle__Group__0__Impl rule__Rectangle__Group__1 ;
+    // InternalXdiagramDsl.g:4820:1: rule__Rectangle__Group__0 : rule__Rectangle__Group__0__Impl rule__Rectangle__Group__1 ;
     public final void rule__Rectangle__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4878:1: ( rule__Rectangle__Group__0__Impl rule__Rectangle__Group__1 )
-            // InternalXdiagramDsl.g:4879:2: rule__Rectangle__Group__0__Impl rule__Rectangle__Group__1
+            // InternalXdiagramDsl.g:4824:1: ( rule__Rectangle__Group__0__Impl rule__Rectangle__Group__1 )
+            // InternalXdiagramDsl.g:4825:2: rule__Rectangle__Group__0__Impl rule__Rectangle__Group__1
             {
             pushFollow(FOLLOW_6);
             rule__Rectangle__Group__0__Impl();
@@ -15995,21 +15835,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__Group__0__Impl"
-    // InternalXdiagramDsl.g:4886:1: rule__Rectangle__Group__0__Impl : ( ( rule__Rectangle__Alternatives_0 ) ) ;
+    // InternalXdiagramDsl.g:4832:1: rule__Rectangle__Group__0__Impl : ( ( rule__Rectangle__Alternatives_0 ) ) ;
     public final void rule__Rectangle__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4890:1: ( ( ( rule__Rectangle__Alternatives_0 ) ) )
-            // InternalXdiagramDsl.g:4891:1: ( ( rule__Rectangle__Alternatives_0 ) )
+            // InternalXdiagramDsl.g:4836:1: ( ( ( rule__Rectangle__Alternatives_0 ) ) )
+            // InternalXdiagramDsl.g:4837:1: ( ( rule__Rectangle__Alternatives_0 ) )
             {
-            // InternalXdiagramDsl.g:4891:1: ( ( rule__Rectangle__Alternatives_0 ) )
-            // InternalXdiagramDsl.g:4892:2: ( rule__Rectangle__Alternatives_0 )
+            // InternalXdiagramDsl.g:4837:1: ( ( rule__Rectangle__Alternatives_0 ) )
+            // InternalXdiagramDsl.g:4838:2: ( rule__Rectangle__Alternatives_0 )
             {
              before(grammarAccess.getRectangleAccess().getAlternatives_0()); 
-            // InternalXdiagramDsl.g:4893:2: ( rule__Rectangle__Alternatives_0 )
-            // InternalXdiagramDsl.g:4893:3: rule__Rectangle__Alternatives_0
+            // InternalXdiagramDsl.g:4839:2: ( rule__Rectangle__Alternatives_0 )
+            // InternalXdiagramDsl.g:4839:3: rule__Rectangle__Alternatives_0
             {
             pushFollow(FOLLOW_2);
             rule__Rectangle__Alternatives_0();
@@ -16042,16 +15882,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__Group__1"
-    // InternalXdiagramDsl.g:4901:1: rule__Rectangle__Group__1 : rule__Rectangle__Group__1__Impl rule__Rectangle__Group__2 ;
+    // InternalXdiagramDsl.g:4847:1: rule__Rectangle__Group__1 : rule__Rectangle__Group__1__Impl rule__Rectangle__Group__2 ;
     public final void rule__Rectangle__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4905:1: ( rule__Rectangle__Group__1__Impl rule__Rectangle__Group__2 )
-            // InternalXdiagramDsl.g:4906:2: rule__Rectangle__Group__1__Impl rule__Rectangle__Group__2
+            // InternalXdiagramDsl.g:4851:1: ( rule__Rectangle__Group__1__Impl rule__Rectangle__Group__2 )
+            // InternalXdiagramDsl.g:4852:2: rule__Rectangle__Group__1__Impl rule__Rectangle__Group__2
             {
-            pushFollow(FOLLOW_39);
+            pushFollow(FOLLOW_38);
             rule__Rectangle__Group__1__Impl();
 
             state._fsp--;
@@ -16080,17 +15920,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__Group__1__Impl"
-    // InternalXdiagramDsl.g:4913:1: rule__Rectangle__Group__1__Impl : ( '{' ) ;
+    // InternalXdiagramDsl.g:4859:1: rule__Rectangle__Group__1__Impl : ( '{' ) ;
     public final void rule__Rectangle__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4917:1: ( ( '{' ) )
-            // InternalXdiagramDsl.g:4918:1: ( '{' )
+            // InternalXdiagramDsl.g:4863:1: ( ( '{' ) )
+            // InternalXdiagramDsl.g:4864:1: ( '{' )
             {
-            // InternalXdiagramDsl.g:4918:1: ( '{' )
-            // InternalXdiagramDsl.g:4919:2: '{'
+            // InternalXdiagramDsl.g:4864:1: ( '{' )
+            // InternalXdiagramDsl.g:4865:2: '{'
             {
              before(grammarAccess.getRectangleAccess().getLeftCurlyBracketKeyword_1()); 
             match(input,43,FOLLOW_2); 
@@ -16117,16 +15957,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__Group__2"
-    // InternalXdiagramDsl.g:4928:1: rule__Rectangle__Group__2 : rule__Rectangle__Group__2__Impl rule__Rectangle__Group__3 ;
+    // InternalXdiagramDsl.g:4874:1: rule__Rectangle__Group__2 : rule__Rectangle__Group__2__Impl rule__Rectangle__Group__3 ;
     public final void rule__Rectangle__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4932:1: ( rule__Rectangle__Group__2__Impl rule__Rectangle__Group__3 )
-            // InternalXdiagramDsl.g:4933:2: rule__Rectangle__Group__2__Impl rule__Rectangle__Group__3
+            // InternalXdiagramDsl.g:4878:1: ( rule__Rectangle__Group__2__Impl rule__Rectangle__Group__3 )
+            // InternalXdiagramDsl.g:4879:2: rule__Rectangle__Group__2__Impl rule__Rectangle__Group__3
             {
-            pushFollow(FOLLOW_39);
+            pushFollow(FOLLOW_38);
             rule__Rectangle__Group__2__Impl();
 
             state._fsp--;
@@ -16155,35 +15995,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__Group__2__Impl"
-    // InternalXdiagramDsl.g:4940:1: rule__Rectangle__Group__2__Impl : ( ( rule__Rectangle__FeaturesAssignment_2 )* ) ;
+    // InternalXdiagramDsl.g:4886:1: rule__Rectangle__Group__2__Impl : ( ( rule__Rectangle__FeaturesAssignment_2 )* ) ;
     public final void rule__Rectangle__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4944:1: ( ( ( rule__Rectangle__FeaturesAssignment_2 )* ) )
-            // InternalXdiagramDsl.g:4945:1: ( ( rule__Rectangle__FeaturesAssignment_2 )* )
+            // InternalXdiagramDsl.g:4890:1: ( ( ( rule__Rectangle__FeaturesAssignment_2 )* ) )
+            // InternalXdiagramDsl.g:4891:1: ( ( rule__Rectangle__FeaturesAssignment_2 )* )
             {
-            // InternalXdiagramDsl.g:4945:1: ( ( rule__Rectangle__FeaturesAssignment_2 )* )
-            // InternalXdiagramDsl.g:4946:2: ( rule__Rectangle__FeaturesAssignment_2 )*
+            // InternalXdiagramDsl.g:4891:1: ( ( rule__Rectangle__FeaturesAssignment_2 )* )
+            // InternalXdiagramDsl.g:4892:2: ( rule__Rectangle__FeaturesAssignment_2 )*
             {
              before(grammarAccess.getRectangleAccess().getFeaturesAssignment_2()); 
-            // InternalXdiagramDsl.g:4947:2: ( rule__Rectangle__FeaturesAssignment_2 )*
+            // InternalXdiagramDsl.g:4893:2: ( rule__Rectangle__FeaturesAssignment_2 )*
             loop45:
             do {
                 int alt45=2;
                 int LA45_0 = input.LA(1);
 
-                if ( (LA45_0==57||LA45_0==67||(LA45_0>=70 && LA45_0<=72)||(LA45_0>=74 && LA45_0<=76)||(LA45_0>=81 && LA45_0<=82)||(LA45_0>=94 && LA45_0<=95)) ) {
+                if ( (LA45_0==56||LA45_0==66||(LA45_0>=69 && LA45_0<=70)||LA45_0==72||(LA45_0>=74 && LA45_0<=76)||(LA45_0>=81 && LA45_0<=82)||(LA45_0>=94 && LA45_0<=95)) ) {
                     alt45=1;
                 }
 
 
                 switch (alt45) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:4947:3: rule__Rectangle__FeaturesAssignment_2
+            	    // InternalXdiagramDsl.g:4893:3: rule__Rectangle__FeaturesAssignment_2
             	    {
-            	    pushFollow(FOLLOW_40);
+            	    pushFollow(FOLLOW_39);
             	    rule__Rectangle__FeaturesAssignment_2();
 
             	    state._fsp--;
@@ -16220,16 +16060,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__Group__3"
-    // InternalXdiagramDsl.g:4955:1: rule__Rectangle__Group__3 : rule__Rectangle__Group__3__Impl rule__Rectangle__Group__4 ;
+    // InternalXdiagramDsl.g:4901:1: rule__Rectangle__Group__3 : rule__Rectangle__Group__3__Impl rule__Rectangle__Group__4 ;
     public final void rule__Rectangle__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4959:1: ( rule__Rectangle__Group__3__Impl rule__Rectangle__Group__4 )
-            // InternalXdiagramDsl.g:4960:2: rule__Rectangle__Group__3__Impl rule__Rectangle__Group__4
+            // InternalXdiagramDsl.g:4905:1: ( rule__Rectangle__Group__3__Impl rule__Rectangle__Group__4 )
+            // InternalXdiagramDsl.g:4906:2: rule__Rectangle__Group__3__Impl rule__Rectangle__Group__4
             {
-            pushFollow(FOLLOW_39);
+            pushFollow(FOLLOW_38);
             rule__Rectangle__Group__3__Impl();
 
             state._fsp--;
@@ -16258,35 +16098,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__Group__3__Impl"
-    // InternalXdiagramDsl.g:4967:1: rule__Rectangle__Group__3__Impl : ( ( rule__Rectangle__Group_3__0 )* ) ;
+    // InternalXdiagramDsl.g:4913:1: rule__Rectangle__Group__3__Impl : ( ( rule__Rectangle__Group_3__0 )* ) ;
     public final void rule__Rectangle__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4971:1: ( ( ( rule__Rectangle__Group_3__0 )* ) )
-            // InternalXdiagramDsl.g:4972:1: ( ( rule__Rectangle__Group_3__0 )* )
+            // InternalXdiagramDsl.g:4917:1: ( ( ( rule__Rectangle__Group_3__0 )* ) )
+            // InternalXdiagramDsl.g:4918:1: ( ( rule__Rectangle__Group_3__0 )* )
             {
-            // InternalXdiagramDsl.g:4972:1: ( ( rule__Rectangle__Group_3__0 )* )
-            // InternalXdiagramDsl.g:4973:2: ( rule__Rectangle__Group_3__0 )*
+            // InternalXdiagramDsl.g:4918:1: ( ( rule__Rectangle__Group_3__0 )* )
+            // InternalXdiagramDsl.g:4919:2: ( rule__Rectangle__Group_3__0 )*
             {
              before(grammarAccess.getRectangleAccess().getGroup_3()); 
-            // InternalXdiagramDsl.g:4974:2: ( rule__Rectangle__Group_3__0 )*
+            // InternalXdiagramDsl.g:4920:2: ( rule__Rectangle__Group_3__0 )*
             loop46:
             do {
                 int alt46=2;
                 int LA46_0 = input.LA(1);
 
-                if ( (LA46_0==63) ) {
+                if ( (LA46_0==62) ) {
                     alt46=1;
                 }
 
 
                 switch (alt46) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:4974:3: rule__Rectangle__Group_3__0
+            	    // InternalXdiagramDsl.g:4920:3: rule__Rectangle__Group_3__0
             	    {
-            	    pushFollow(FOLLOW_38);
+            	    pushFollow(FOLLOW_37);
             	    rule__Rectangle__Group_3__0();
 
             	    state._fsp--;
@@ -16323,14 +16163,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__Group__4"
-    // InternalXdiagramDsl.g:4982:1: rule__Rectangle__Group__4 : rule__Rectangle__Group__4__Impl ;
+    // InternalXdiagramDsl.g:4928:1: rule__Rectangle__Group__4 : rule__Rectangle__Group__4__Impl ;
     public final void rule__Rectangle__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4986:1: ( rule__Rectangle__Group__4__Impl )
-            // InternalXdiagramDsl.g:4987:2: rule__Rectangle__Group__4__Impl
+            // InternalXdiagramDsl.g:4932:1: ( rule__Rectangle__Group__4__Impl )
+            // InternalXdiagramDsl.g:4933:2: rule__Rectangle__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Rectangle__Group__4__Impl();
@@ -16356,17 +16196,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__Group__4__Impl"
-    // InternalXdiagramDsl.g:4993:1: rule__Rectangle__Group__4__Impl : ( '}' ) ;
+    // InternalXdiagramDsl.g:4939:1: rule__Rectangle__Group__4__Impl : ( '}' ) ;
     public final void rule__Rectangle__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:4997:1: ( ( '}' ) )
-            // InternalXdiagramDsl.g:4998:1: ( '}' )
+            // InternalXdiagramDsl.g:4943:1: ( ( '}' ) )
+            // InternalXdiagramDsl.g:4944:1: ( '}' )
             {
-            // InternalXdiagramDsl.g:4998:1: ( '}' )
-            // InternalXdiagramDsl.g:4999:2: '}'
+            // InternalXdiagramDsl.g:4944:1: ( '}' )
+            // InternalXdiagramDsl.g:4945:2: '}'
             {
              before(grammarAccess.getRectangleAccess().getRightCurlyBracketKeyword_4()); 
             match(input,46,FOLLOW_2); 
@@ -16393,16 +16233,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__Group_3__0"
-    // InternalXdiagramDsl.g:5009:1: rule__Rectangle__Group_3__0 : rule__Rectangle__Group_3__0__Impl rule__Rectangle__Group_3__1 ;
+    // InternalXdiagramDsl.g:4955:1: rule__Rectangle__Group_3__0 : rule__Rectangle__Group_3__0__Impl rule__Rectangle__Group_3__1 ;
     public final void rule__Rectangle__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5013:1: ( rule__Rectangle__Group_3__0__Impl rule__Rectangle__Group_3__1 )
-            // InternalXdiagramDsl.g:5014:2: rule__Rectangle__Group_3__0__Impl rule__Rectangle__Group_3__1
+            // InternalXdiagramDsl.g:4959:1: ( rule__Rectangle__Group_3__0__Impl rule__Rectangle__Group_3__1 )
+            // InternalXdiagramDsl.g:4960:2: rule__Rectangle__Group_3__0__Impl rule__Rectangle__Group_3__1
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_26);
             rule__Rectangle__Group_3__0__Impl();
 
             state._fsp--;
@@ -16431,20 +16271,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__Group_3__0__Impl"
-    // InternalXdiagramDsl.g:5021:1: rule__Rectangle__Group_3__0__Impl : ( 'child' ) ;
+    // InternalXdiagramDsl.g:4967:1: rule__Rectangle__Group_3__0__Impl : ( 'child' ) ;
     public final void rule__Rectangle__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5025:1: ( ( 'child' ) )
-            // InternalXdiagramDsl.g:5026:1: ( 'child' )
+            // InternalXdiagramDsl.g:4971:1: ( ( 'child' ) )
+            // InternalXdiagramDsl.g:4972:1: ( 'child' )
             {
-            // InternalXdiagramDsl.g:5026:1: ( 'child' )
-            // InternalXdiagramDsl.g:5027:2: 'child'
+            // InternalXdiagramDsl.g:4972:1: ( 'child' )
+            // InternalXdiagramDsl.g:4973:2: 'child'
             {
              before(grammarAccess.getRectangleAccess().getChildKeyword_3_0()); 
-            match(input,63,FOLLOW_2); 
+            match(input,62,FOLLOW_2); 
              after(grammarAccess.getRectangleAccess().getChildKeyword_3_0()); 
 
             }
@@ -16468,14 +16308,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__Group_3__1"
-    // InternalXdiagramDsl.g:5036:1: rule__Rectangle__Group_3__1 : rule__Rectangle__Group_3__1__Impl ;
+    // InternalXdiagramDsl.g:4982:1: rule__Rectangle__Group_3__1 : rule__Rectangle__Group_3__1__Impl ;
     public final void rule__Rectangle__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5040:1: ( rule__Rectangle__Group_3__1__Impl )
-            // InternalXdiagramDsl.g:5041:2: rule__Rectangle__Group_3__1__Impl
+            // InternalXdiagramDsl.g:4986:1: ( rule__Rectangle__Group_3__1__Impl )
+            // InternalXdiagramDsl.g:4987:2: rule__Rectangle__Group_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Rectangle__Group_3__1__Impl();
@@ -16501,21 +16341,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__Group_3__1__Impl"
-    // InternalXdiagramDsl.g:5047:1: rule__Rectangle__Group_3__1__Impl : ( ( rule__Rectangle__ChildrenAssignment_3_1 ) ) ;
+    // InternalXdiagramDsl.g:4993:1: rule__Rectangle__Group_3__1__Impl : ( ( rule__Rectangle__ChildrenAssignment_3_1 ) ) ;
     public final void rule__Rectangle__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5051:1: ( ( ( rule__Rectangle__ChildrenAssignment_3_1 ) ) )
-            // InternalXdiagramDsl.g:5052:1: ( ( rule__Rectangle__ChildrenAssignment_3_1 ) )
+            // InternalXdiagramDsl.g:4997:1: ( ( ( rule__Rectangle__ChildrenAssignment_3_1 ) ) )
+            // InternalXdiagramDsl.g:4998:1: ( ( rule__Rectangle__ChildrenAssignment_3_1 ) )
             {
-            // InternalXdiagramDsl.g:5052:1: ( ( rule__Rectangle__ChildrenAssignment_3_1 ) )
-            // InternalXdiagramDsl.g:5053:2: ( rule__Rectangle__ChildrenAssignment_3_1 )
+            // InternalXdiagramDsl.g:4998:1: ( ( rule__Rectangle__ChildrenAssignment_3_1 ) )
+            // InternalXdiagramDsl.g:4999:2: ( rule__Rectangle__ChildrenAssignment_3_1 )
             {
              before(grammarAccess.getRectangleAccess().getChildrenAssignment_3_1()); 
-            // InternalXdiagramDsl.g:5054:2: ( rule__Rectangle__ChildrenAssignment_3_1 )
-            // InternalXdiagramDsl.g:5054:3: rule__Rectangle__ChildrenAssignment_3_1
+            // InternalXdiagramDsl.g:5000:2: ( rule__Rectangle__ChildrenAssignment_3_1 )
+            // InternalXdiagramDsl.g:5000:3: rule__Rectangle__ChildrenAssignment_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Rectangle__ChildrenAssignment_3_1();
@@ -16548,16 +16388,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__Group__0"
-    // InternalXdiagramDsl.g:5063:1: rule__Rhombus__Group__0 : rule__Rhombus__Group__0__Impl rule__Rhombus__Group__1 ;
+    // InternalXdiagramDsl.g:5009:1: rule__Rhombus__Group__0 : rule__Rhombus__Group__0__Impl rule__Rhombus__Group__1 ;
     public final void rule__Rhombus__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5067:1: ( rule__Rhombus__Group__0__Impl rule__Rhombus__Group__1 )
-            // InternalXdiagramDsl.g:5068:2: rule__Rhombus__Group__0__Impl rule__Rhombus__Group__1
+            // InternalXdiagramDsl.g:5013:1: ( rule__Rhombus__Group__0__Impl rule__Rhombus__Group__1 )
+            // InternalXdiagramDsl.g:5014:2: rule__Rhombus__Group__0__Impl rule__Rhombus__Group__1
             {
-            pushFollow(FOLLOW_41);
+            pushFollow(FOLLOW_40);
             rule__Rhombus__Group__0__Impl();
 
             state._fsp--;
@@ -16586,21 +16426,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__Group__0__Impl"
-    // InternalXdiagramDsl.g:5075:1: rule__Rhombus__Group__0__Impl : ( () ) ;
+    // InternalXdiagramDsl.g:5021:1: rule__Rhombus__Group__0__Impl : ( () ) ;
     public final void rule__Rhombus__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5079:1: ( ( () ) )
-            // InternalXdiagramDsl.g:5080:1: ( () )
+            // InternalXdiagramDsl.g:5025:1: ( ( () ) )
+            // InternalXdiagramDsl.g:5026:1: ( () )
             {
-            // InternalXdiagramDsl.g:5080:1: ( () )
-            // InternalXdiagramDsl.g:5081:2: ()
+            // InternalXdiagramDsl.g:5026:1: ( () )
+            // InternalXdiagramDsl.g:5027:2: ()
             {
              before(grammarAccess.getRhombusAccess().getRhombusAction_0()); 
-            // InternalXdiagramDsl.g:5082:2: ()
-            // InternalXdiagramDsl.g:5082:3: 
+            // InternalXdiagramDsl.g:5028:2: ()
+            // InternalXdiagramDsl.g:5028:3: 
             {
             }
 
@@ -16623,14 +16463,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__Group__1"
-    // InternalXdiagramDsl.g:5090:1: rule__Rhombus__Group__1 : rule__Rhombus__Group__1__Impl rule__Rhombus__Group__2 ;
+    // InternalXdiagramDsl.g:5036:1: rule__Rhombus__Group__1 : rule__Rhombus__Group__1__Impl rule__Rhombus__Group__2 ;
     public final void rule__Rhombus__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5094:1: ( rule__Rhombus__Group__1__Impl rule__Rhombus__Group__2 )
-            // InternalXdiagramDsl.g:5095:2: rule__Rhombus__Group__1__Impl rule__Rhombus__Group__2
+            // InternalXdiagramDsl.g:5040:1: ( rule__Rhombus__Group__1__Impl rule__Rhombus__Group__2 )
+            // InternalXdiagramDsl.g:5041:2: rule__Rhombus__Group__1__Impl rule__Rhombus__Group__2
             {
             pushFollow(FOLLOW_6);
             rule__Rhombus__Group__1__Impl();
@@ -16661,20 +16501,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__Group__1__Impl"
-    // InternalXdiagramDsl.g:5102:1: rule__Rhombus__Group__1__Impl : ( 'rhombus' ) ;
+    // InternalXdiagramDsl.g:5048:1: rule__Rhombus__Group__1__Impl : ( 'rhombus' ) ;
     public final void rule__Rhombus__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5106:1: ( ( 'rhombus' ) )
-            // InternalXdiagramDsl.g:5107:1: ( 'rhombus' )
+            // InternalXdiagramDsl.g:5052:1: ( ( 'rhombus' ) )
+            // InternalXdiagramDsl.g:5053:1: ( 'rhombus' )
             {
-            // InternalXdiagramDsl.g:5107:1: ( 'rhombus' )
-            // InternalXdiagramDsl.g:5108:2: 'rhombus'
+            // InternalXdiagramDsl.g:5053:1: ( 'rhombus' )
+            // InternalXdiagramDsl.g:5054:2: 'rhombus'
             {
              before(grammarAccess.getRhombusAccess().getRhombusKeyword_1()); 
-            match(input,64,FOLLOW_2); 
+            match(input,63,FOLLOW_2); 
              after(grammarAccess.getRhombusAccess().getRhombusKeyword_1()); 
 
             }
@@ -16698,16 +16538,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__Group__2"
-    // InternalXdiagramDsl.g:5117:1: rule__Rhombus__Group__2 : rule__Rhombus__Group__2__Impl rule__Rhombus__Group__3 ;
+    // InternalXdiagramDsl.g:5063:1: rule__Rhombus__Group__2 : rule__Rhombus__Group__2__Impl rule__Rhombus__Group__3 ;
     public final void rule__Rhombus__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5121:1: ( rule__Rhombus__Group__2__Impl rule__Rhombus__Group__3 )
-            // InternalXdiagramDsl.g:5122:2: rule__Rhombus__Group__2__Impl rule__Rhombus__Group__3
+            // InternalXdiagramDsl.g:5067:1: ( rule__Rhombus__Group__2__Impl rule__Rhombus__Group__3 )
+            // InternalXdiagramDsl.g:5068:2: rule__Rhombus__Group__2__Impl rule__Rhombus__Group__3
             {
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_41);
             rule__Rhombus__Group__2__Impl();
 
             state._fsp--;
@@ -16736,17 +16576,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__Group__2__Impl"
-    // InternalXdiagramDsl.g:5129:1: rule__Rhombus__Group__2__Impl : ( '{' ) ;
+    // InternalXdiagramDsl.g:5075:1: rule__Rhombus__Group__2__Impl : ( '{' ) ;
     public final void rule__Rhombus__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5133:1: ( ( '{' ) )
-            // InternalXdiagramDsl.g:5134:1: ( '{' )
+            // InternalXdiagramDsl.g:5079:1: ( ( '{' ) )
+            // InternalXdiagramDsl.g:5080:1: ( '{' )
             {
-            // InternalXdiagramDsl.g:5134:1: ( '{' )
-            // InternalXdiagramDsl.g:5135:2: '{'
+            // InternalXdiagramDsl.g:5080:1: ( '{' )
+            // InternalXdiagramDsl.g:5081:2: '{'
             {
              before(grammarAccess.getRhombusAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,43,FOLLOW_2); 
@@ -16773,16 +16613,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__Group__3"
-    // InternalXdiagramDsl.g:5144:1: rule__Rhombus__Group__3 : rule__Rhombus__Group__3__Impl rule__Rhombus__Group__4 ;
+    // InternalXdiagramDsl.g:5090:1: rule__Rhombus__Group__3 : rule__Rhombus__Group__3__Impl rule__Rhombus__Group__4 ;
     public final void rule__Rhombus__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5148:1: ( rule__Rhombus__Group__3__Impl rule__Rhombus__Group__4 )
-            // InternalXdiagramDsl.g:5149:2: rule__Rhombus__Group__3__Impl rule__Rhombus__Group__4
+            // InternalXdiagramDsl.g:5094:1: ( rule__Rhombus__Group__3__Impl rule__Rhombus__Group__4 )
+            // InternalXdiagramDsl.g:5095:2: rule__Rhombus__Group__3__Impl rule__Rhombus__Group__4
             {
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_41);
             rule__Rhombus__Group__3__Impl();
 
             state._fsp--;
@@ -16811,35 +16651,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__Group__3__Impl"
-    // InternalXdiagramDsl.g:5156:1: rule__Rhombus__Group__3__Impl : ( ( rule__Rhombus__FeaturesAssignment_3 )* ) ;
+    // InternalXdiagramDsl.g:5102:1: rule__Rhombus__Group__3__Impl : ( ( rule__Rhombus__FeaturesAssignment_3 )* ) ;
     public final void rule__Rhombus__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5160:1: ( ( ( rule__Rhombus__FeaturesAssignment_3 )* ) )
-            // InternalXdiagramDsl.g:5161:1: ( ( rule__Rhombus__FeaturesAssignment_3 )* )
+            // InternalXdiagramDsl.g:5106:1: ( ( ( rule__Rhombus__FeaturesAssignment_3 )* ) )
+            // InternalXdiagramDsl.g:5107:1: ( ( rule__Rhombus__FeaturesAssignment_3 )* )
             {
-            // InternalXdiagramDsl.g:5161:1: ( ( rule__Rhombus__FeaturesAssignment_3 )* )
-            // InternalXdiagramDsl.g:5162:2: ( rule__Rhombus__FeaturesAssignment_3 )*
+            // InternalXdiagramDsl.g:5107:1: ( ( rule__Rhombus__FeaturesAssignment_3 )* )
+            // InternalXdiagramDsl.g:5108:2: ( rule__Rhombus__FeaturesAssignment_3 )*
             {
              before(grammarAccess.getRhombusAccess().getFeaturesAssignment_3()); 
-            // InternalXdiagramDsl.g:5163:2: ( rule__Rhombus__FeaturesAssignment_3 )*
+            // InternalXdiagramDsl.g:5109:2: ( rule__Rhombus__FeaturesAssignment_3 )*
             loop47:
             do {
                 int alt47=2;
                 int LA47_0 = input.LA(1);
 
-                if ( (LA47_0==57||LA47_0==67||(LA47_0>=70 && LA47_0<=72)||LA47_0==74||LA47_0==76||(LA47_0>=81 && LA47_0<=82)||(LA47_0>=94 && LA47_0<=95)) ) {
+                if ( (LA47_0==56||LA47_0==66||(LA47_0>=69 && LA47_0<=70)||LA47_0==72||LA47_0==74||LA47_0==76||(LA47_0>=81 && LA47_0<=82)||(LA47_0>=94 && LA47_0<=95)) ) {
                     alt47=1;
                 }
 
 
                 switch (alt47) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:5163:3: rule__Rhombus__FeaturesAssignment_3
+            	    // InternalXdiagramDsl.g:5109:3: rule__Rhombus__FeaturesAssignment_3
             	    {
-            	    pushFollow(FOLLOW_43);
+            	    pushFollow(FOLLOW_42);
             	    rule__Rhombus__FeaturesAssignment_3();
 
             	    state._fsp--;
@@ -16876,16 +16716,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__Group__4"
-    // InternalXdiagramDsl.g:5171:1: rule__Rhombus__Group__4 : rule__Rhombus__Group__4__Impl rule__Rhombus__Group__5 ;
+    // InternalXdiagramDsl.g:5117:1: rule__Rhombus__Group__4 : rule__Rhombus__Group__4__Impl rule__Rhombus__Group__5 ;
     public final void rule__Rhombus__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5175:1: ( rule__Rhombus__Group__4__Impl rule__Rhombus__Group__5 )
-            // InternalXdiagramDsl.g:5176:2: rule__Rhombus__Group__4__Impl rule__Rhombus__Group__5
+            // InternalXdiagramDsl.g:5121:1: ( rule__Rhombus__Group__4__Impl rule__Rhombus__Group__5 )
+            // InternalXdiagramDsl.g:5122:2: rule__Rhombus__Group__4__Impl rule__Rhombus__Group__5
             {
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_41);
             rule__Rhombus__Group__4__Impl();
 
             state._fsp--;
@@ -16914,35 +16754,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__Group__4__Impl"
-    // InternalXdiagramDsl.g:5183:1: rule__Rhombus__Group__4__Impl : ( ( rule__Rhombus__Group_4__0 )* ) ;
+    // InternalXdiagramDsl.g:5129:1: rule__Rhombus__Group__4__Impl : ( ( rule__Rhombus__Group_4__0 )* ) ;
     public final void rule__Rhombus__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5187:1: ( ( ( rule__Rhombus__Group_4__0 )* ) )
-            // InternalXdiagramDsl.g:5188:1: ( ( rule__Rhombus__Group_4__0 )* )
+            // InternalXdiagramDsl.g:5133:1: ( ( ( rule__Rhombus__Group_4__0 )* ) )
+            // InternalXdiagramDsl.g:5134:1: ( ( rule__Rhombus__Group_4__0 )* )
             {
-            // InternalXdiagramDsl.g:5188:1: ( ( rule__Rhombus__Group_4__0 )* )
-            // InternalXdiagramDsl.g:5189:2: ( rule__Rhombus__Group_4__0 )*
+            // InternalXdiagramDsl.g:5134:1: ( ( rule__Rhombus__Group_4__0 )* )
+            // InternalXdiagramDsl.g:5135:2: ( rule__Rhombus__Group_4__0 )*
             {
              before(grammarAccess.getRhombusAccess().getGroup_4()); 
-            // InternalXdiagramDsl.g:5190:2: ( rule__Rhombus__Group_4__0 )*
+            // InternalXdiagramDsl.g:5136:2: ( rule__Rhombus__Group_4__0 )*
             loop48:
             do {
                 int alt48=2;
                 int LA48_0 = input.LA(1);
 
-                if ( (LA48_0==63) ) {
+                if ( (LA48_0==62) ) {
                     alt48=1;
                 }
 
 
                 switch (alt48) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:5190:3: rule__Rhombus__Group_4__0
+            	    // InternalXdiagramDsl.g:5136:3: rule__Rhombus__Group_4__0
             	    {
-            	    pushFollow(FOLLOW_38);
+            	    pushFollow(FOLLOW_37);
             	    rule__Rhombus__Group_4__0();
 
             	    state._fsp--;
@@ -16979,14 +16819,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__Group__5"
-    // InternalXdiagramDsl.g:5198:1: rule__Rhombus__Group__5 : rule__Rhombus__Group__5__Impl ;
+    // InternalXdiagramDsl.g:5144:1: rule__Rhombus__Group__5 : rule__Rhombus__Group__5__Impl ;
     public final void rule__Rhombus__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5202:1: ( rule__Rhombus__Group__5__Impl )
-            // InternalXdiagramDsl.g:5203:2: rule__Rhombus__Group__5__Impl
+            // InternalXdiagramDsl.g:5148:1: ( rule__Rhombus__Group__5__Impl )
+            // InternalXdiagramDsl.g:5149:2: rule__Rhombus__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Rhombus__Group__5__Impl();
@@ -17012,17 +16852,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__Group__5__Impl"
-    // InternalXdiagramDsl.g:5209:1: rule__Rhombus__Group__5__Impl : ( '}' ) ;
+    // InternalXdiagramDsl.g:5155:1: rule__Rhombus__Group__5__Impl : ( '}' ) ;
     public final void rule__Rhombus__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5213:1: ( ( '}' ) )
-            // InternalXdiagramDsl.g:5214:1: ( '}' )
+            // InternalXdiagramDsl.g:5159:1: ( ( '}' ) )
+            // InternalXdiagramDsl.g:5160:1: ( '}' )
             {
-            // InternalXdiagramDsl.g:5214:1: ( '}' )
-            // InternalXdiagramDsl.g:5215:2: '}'
+            // InternalXdiagramDsl.g:5160:1: ( '}' )
+            // InternalXdiagramDsl.g:5161:2: '}'
             {
              before(grammarAccess.getRhombusAccess().getRightCurlyBracketKeyword_5()); 
             match(input,46,FOLLOW_2); 
@@ -17049,16 +16889,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__Group_4__0"
-    // InternalXdiagramDsl.g:5225:1: rule__Rhombus__Group_4__0 : rule__Rhombus__Group_4__0__Impl rule__Rhombus__Group_4__1 ;
+    // InternalXdiagramDsl.g:5171:1: rule__Rhombus__Group_4__0 : rule__Rhombus__Group_4__0__Impl rule__Rhombus__Group_4__1 ;
     public final void rule__Rhombus__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5229:1: ( rule__Rhombus__Group_4__0__Impl rule__Rhombus__Group_4__1 )
-            // InternalXdiagramDsl.g:5230:2: rule__Rhombus__Group_4__0__Impl rule__Rhombus__Group_4__1
+            // InternalXdiagramDsl.g:5175:1: ( rule__Rhombus__Group_4__0__Impl rule__Rhombus__Group_4__1 )
+            // InternalXdiagramDsl.g:5176:2: rule__Rhombus__Group_4__0__Impl rule__Rhombus__Group_4__1
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_26);
             rule__Rhombus__Group_4__0__Impl();
 
             state._fsp--;
@@ -17087,20 +16927,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__Group_4__0__Impl"
-    // InternalXdiagramDsl.g:5237:1: rule__Rhombus__Group_4__0__Impl : ( 'child' ) ;
+    // InternalXdiagramDsl.g:5183:1: rule__Rhombus__Group_4__0__Impl : ( 'child' ) ;
     public final void rule__Rhombus__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5241:1: ( ( 'child' ) )
-            // InternalXdiagramDsl.g:5242:1: ( 'child' )
+            // InternalXdiagramDsl.g:5187:1: ( ( 'child' ) )
+            // InternalXdiagramDsl.g:5188:1: ( 'child' )
             {
-            // InternalXdiagramDsl.g:5242:1: ( 'child' )
-            // InternalXdiagramDsl.g:5243:2: 'child'
+            // InternalXdiagramDsl.g:5188:1: ( 'child' )
+            // InternalXdiagramDsl.g:5189:2: 'child'
             {
              before(grammarAccess.getRhombusAccess().getChildKeyword_4_0()); 
-            match(input,63,FOLLOW_2); 
+            match(input,62,FOLLOW_2); 
              after(grammarAccess.getRhombusAccess().getChildKeyword_4_0()); 
 
             }
@@ -17124,14 +16964,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__Group_4__1"
-    // InternalXdiagramDsl.g:5252:1: rule__Rhombus__Group_4__1 : rule__Rhombus__Group_4__1__Impl ;
+    // InternalXdiagramDsl.g:5198:1: rule__Rhombus__Group_4__1 : rule__Rhombus__Group_4__1__Impl ;
     public final void rule__Rhombus__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5256:1: ( rule__Rhombus__Group_4__1__Impl )
-            // InternalXdiagramDsl.g:5257:2: rule__Rhombus__Group_4__1__Impl
+            // InternalXdiagramDsl.g:5202:1: ( rule__Rhombus__Group_4__1__Impl )
+            // InternalXdiagramDsl.g:5203:2: rule__Rhombus__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Rhombus__Group_4__1__Impl();
@@ -17157,21 +16997,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__Group_4__1__Impl"
-    // InternalXdiagramDsl.g:5263:1: rule__Rhombus__Group_4__1__Impl : ( ( rule__Rhombus__ChildrenAssignment_4_1 ) ) ;
+    // InternalXdiagramDsl.g:5209:1: rule__Rhombus__Group_4__1__Impl : ( ( rule__Rhombus__ChildrenAssignment_4_1 ) ) ;
     public final void rule__Rhombus__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5267:1: ( ( ( rule__Rhombus__ChildrenAssignment_4_1 ) ) )
-            // InternalXdiagramDsl.g:5268:1: ( ( rule__Rhombus__ChildrenAssignment_4_1 ) )
+            // InternalXdiagramDsl.g:5213:1: ( ( ( rule__Rhombus__ChildrenAssignment_4_1 ) ) )
+            // InternalXdiagramDsl.g:5214:1: ( ( rule__Rhombus__ChildrenAssignment_4_1 ) )
             {
-            // InternalXdiagramDsl.g:5268:1: ( ( rule__Rhombus__ChildrenAssignment_4_1 ) )
-            // InternalXdiagramDsl.g:5269:2: ( rule__Rhombus__ChildrenAssignment_4_1 )
+            // InternalXdiagramDsl.g:5214:1: ( ( rule__Rhombus__ChildrenAssignment_4_1 ) )
+            // InternalXdiagramDsl.g:5215:2: ( rule__Rhombus__ChildrenAssignment_4_1 )
             {
              before(grammarAccess.getRhombusAccess().getChildrenAssignment_4_1()); 
-            // InternalXdiagramDsl.g:5270:2: ( rule__Rhombus__ChildrenAssignment_4_1 )
-            // InternalXdiagramDsl.g:5270:3: rule__Rhombus__ChildrenAssignment_4_1
+            // InternalXdiagramDsl.g:5216:2: ( rule__Rhombus__ChildrenAssignment_4_1 )
+            // InternalXdiagramDsl.g:5216:3: rule__Rhombus__ChildrenAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__Rhombus__ChildrenAssignment_4_1();
@@ -17204,14 +17044,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__Group__0"
-    // InternalXdiagramDsl.g:5279:1: rule__Ellipse__Group__0 : rule__Ellipse__Group__0__Impl rule__Ellipse__Group__1 ;
+    // InternalXdiagramDsl.g:5225:1: rule__Ellipse__Group__0 : rule__Ellipse__Group__0__Impl rule__Ellipse__Group__1 ;
     public final void rule__Ellipse__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5283:1: ( rule__Ellipse__Group__0__Impl rule__Ellipse__Group__1 )
-            // InternalXdiagramDsl.g:5284:2: rule__Ellipse__Group__0__Impl rule__Ellipse__Group__1
+            // InternalXdiagramDsl.g:5229:1: ( rule__Ellipse__Group__0__Impl rule__Ellipse__Group__1 )
+            // InternalXdiagramDsl.g:5230:2: rule__Ellipse__Group__0__Impl rule__Ellipse__Group__1
             {
             pushFollow(FOLLOW_6);
             rule__Ellipse__Group__0__Impl();
@@ -17242,21 +17082,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__Group__0__Impl"
-    // InternalXdiagramDsl.g:5291:1: rule__Ellipse__Group__0__Impl : ( ( rule__Ellipse__Alternatives_0 ) ) ;
+    // InternalXdiagramDsl.g:5237:1: rule__Ellipse__Group__0__Impl : ( ( rule__Ellipse__Alternatives_0 ) ) ;
     public final void rule__Ellipse__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5295:1: ( ( ( rule__Ellipse__Alternatives_0 ) ) )
-            // InternalXdiagramDsl.g:5296:1: ( ( rule__Ellipse__Alternatives_0 ) )
+            // InternalXdiagramDsl.g:5241:1: ( ( ( rule__Ellipse__Alternatives_0 ) ) )
+            // InternalXdiagramDsl.g:5242:1: ( ( rule__Ellipse__Alternatives_0 ) )
             {
-            // InternalXdiagramDsl.g:5296:1: ( ( rule__Ellipse__Alternatives_0 ) )
-            // InternalXdiagramDsl.g:5297:2: ( rule__Ellipse__Alternatives_0 )
+            // InternalXdiagramDsl.g:5242:1: ( ( rule__Ellipse__Alternatives_0 ) )
+            // InternalXdiagramDsl.g:5243:2: ( rule__Ellipse__Alternatives_0 )
             {
              before(grammarAccess.getEllipseAccess().getAlternatives_0()); 
-            // InternalXdiagramDsl.g:5298:2: ( rule__Ellipse__Alternatives_0 )
-            // InternalXdiagramDsl.g:5298:3: rule__Ellipse__Alternatives_0
+            // InternalXdiagramDsl.g:5244:2: ( rule__Ellipse__Alternatives_0 )
+            // InternalXdiagramDsl.g:5244:3: rule__Ellipse__Alternatives_0
             {
             pushFollow(FOLLOW_2);
             rule__Ellipse__Alternatives_0();
@@ -17289,16 +17129,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__Group__1"
-    // InternalXdiagramDsl.g:5306:1: rule__Ellipse__Group__1 : rule__Ellipse__Group__1__Impl rule__Ellipse__Group__2 ;
+    // InternalXdiagramDsl.g:5252:1: rule__Ellipse__Group__1 : rule__Ellipse__Group__1__Impl rule__Ellipse__Group__2 ;
     public final void rule__Ellipse__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5310:1: ( rule__Ellipse__Group__1__Impl rule__Ellipse__Group__2 )
-            // InternalXdiagramDsl.g:5311:2: rule__Ellipse__Group__1__Impl rule__Ellipse__Group__2
+            // InternalXdiagramDsl.g:5256:1: ( rule__Ellipse__Group__1__Impl rule__Ellipse__Group__2 )
+            // InternalXdiagramDsl.g:5257:2: rule__Ellipse__Group__1__Impl rule__Ellipse__Group__2
             {
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_41);
             rule__Ellipse__Group__1__Impl();
 
             state._fsp--;
@@ -17327,17 +17167,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__Group__1__Impl"
-    // InternalXdiagramDsl.g:5318:1: rule__Ellipse__Group__1__Impl : ( '{' ) ;
+    // InternalXdiagramDsl.g:5264:1: rule__Ellipse__Group__1__Impl : ( '{' ) ;
     public final void rule__Ellipse__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5322:1: ( ( '{' ) )
-            // InternalXdiagramDsl.g:5323:1: ( '{' )
+            // InternalXdiagramDsl.g:5268:1: ( ( '{' ) )
+            // InternalXdiagramDsl.g:5269:1: ( '{' )
             {
-            // InternalXdiagramDsl.g:5323:1: ( '{' )
-            // InternalXdiagramDsl.g:5324:2: '{'
+            // InternalXdiagramDsl.g:5269:1: ( '{' )
+            // InternalXdiagramDsl.g:5270:2: '{'
             {
              before(grammarAccess.getEllipseAccess().getLeftCurlyBracketKeyword_1()); 
             match(input,43,FOLLOW_2); 
@@ -17364,16 +17204,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__Group__2"
-    // InternalXdiagramDsl.g:5333:1: rule__Ellipse__Group__2 : rule__Ellipse__Group__2__Impl rule__Ellipse__Group__3 ;
+    // InternalXdiagramDsl.g:5279:1: rule__Ellipse__Group__2 : rule__Ellipse__Group__2__Impl rule__Ellipse__Group__3 ;
     public final void rule__Ellipse__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5337:1: ( rule__Ellipse__Group__2__Impl rule__Ellipse__Group__3 )
-            // InternalXdiagramDsl.g:5338:2: rule__Ellipse__Group__2__Impl rule__Ellipse__Group__3
+            // InternalXdiagramDsl.g:5283:1: ( rule__Ellipse__Group__2__Impl rule__Ellipse__Group__3 )
+            // InternalXdiagramDsl.g:5284:2: rule__Ellipse__Group__2__Impl rule__Ellipse__Group__3
             {
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_41);
             rule__Ellipse__Group__2__Impl();
 
             state._fsp--;
@@ -17402,35 +17242,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__Group__2__Impl"
-    // InternalXdiagramDsl.g:5345:1: rule__Ellipse__Group__2__Impl : ( ( rule__Ellipse__FeaturesAssignment_2 )* ) ;
+    // InternalXdiagramDsl.g:5291:1: rule__Ellipse__Group__2__Impl : ( ( rule__Ellipse__FeaturesAssignment_2 )* ) ;
     public final void rule__Ellipse__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5349:1: ( ( ( rule__Ellipse__FeaturesAssignment_2 )* ) )
-            // InternalXdiagramDsl.g:5350:1: ( ( rule__Ellipse__FeaturesAssignment_2 )* )
+            // InternalXdiagramDsl.g:5295:1: ( ( ( rule__Ellipse__FeaturesAssignment_2 )* ) )
+            // InternalXdiagramDsl.g:5296:1: ( ( rule__Ellipse__FeaturesAssignment_2 )* )
             {
-            // InternalXdiagramDsl.g:5350:1: ( ( rule__Ellipse__FeaturesAssignment_2 )* )
-            // InternalXdiagramDsl.g:5351:2: ( rule__Ellipse__FeaturesAssignment_2 )*
+            // InternalXdiagramDsl.g:5296:1: ( ( rule__Ellipse__FeaturesAssignment_2 )* )
+            // InternalXdiagramDsl.g:5297:2: ( rule__Ellipse__FeaturesAssignment_2 )*
             {
              before(grammarAccess.getEllipseAccess().getFeaturesAssignment_2()); 
-            // InternalXdiagramDsl.g:5352:2: ( rule__Ellipse__FeaturesAssignment_2 )*
+            // InternalXdiagramDsl.g:5298:2: ( rule__Ellipse__FeaturesAssignment_2 )*
             loop49:
             do {
                 int alt49=2;
                 int LA49_0 = input.LA(1);
 
-                if ( (LA49_0==57||LA49_0==67||(LA49_0>=70 && LA49_0<=72)||LA49_0==74||LA49_0==76||(LA49_0>=81 && LA49_0<=82)||(LA49_0>=94 && LA49_0<=95)) ) {
+                if ( (LA49_0==56||LA49_0==66||(LA49_0>=69 && LA49_0<=70)||LA49_0==72||LA49_0==74||LA49_0==76||(LA49_0>=81 && LA49_0<=82)||(LA49_0>=94 && LA49_0<=95)) ) {
                     alt49=1;
                 }
 
 
                 switch (alt49) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:5352:3: rule__Ellipse__FeaturesAssignment_2
+            	    // InternalXdiagramDsl.g:5298:3: rule__Ellipse__FeaturesAssignment_2
             	    {
-            	    pushFollow(FOLLOW_43);
+            	    pushFollow(FOLLOW_42);
             	    rule__Ellipse__FeaturesAssignment_2();
 
             	    state._fsp--;
@@ -17467,16 +17307,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__Group__3"
-    // InternalXdiagramDsl.g:5360:1: rule__Ellipse__Group__3 : rule__Ellipse__Group__3__Impl rule__Ellipse__Group__4 ;
+    // InternalXdiagramDsl.g:5306:1: rule__Ellipse__Group__3 : rule__Ellipse__Group__3__Impl rule__Ellipse__Group__4 ;
     public final void rule__Ellipse__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5364:1: ( rule__Ellipse__Group__3__Impl rule__Ellipse__Group__4 )
-            // InternalXdiagramDsl.g:5365:2: rule__Ellipse__Group__3__Impl rule__Ellipse__Group__4
+            // InternalXdiagramDsl.g:5310:1: ( rule__Ellipse__Group__3__Impl rule__Ellipse__Group__4 )
+            // InternalXdiagramDsl.g:5311:2: rule__Ellipse__Group__3__Impl rule__Ellipse__Group__4
             {
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_41);
             rule__Ellipse__Group__3__Impl();
 
             state._fsp--;
@@ -17505,35 +17345,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__Group__3__Impl"
-    // InternalXdiagramDsl.g:5372:1: rule__Ellipse__Group__3__Impl : ( ( rule__Ellipse__Group_3__0 )* ) ;
+    // InternalXdiagramDsl.g:5318:1: rule__Ellipse__Group__3__Impl : ( ( rule__Ellipse__Group_3__0 )* ) ;
     public final void rule__Ellipse__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5376:1: ( ( ( rule__Ellipse__Group_3__0 )* ) )
-            // InternalXdiagramDsl.g:5377:1: ( ( rule__Ellipse__Group_3__0 )* )
+            // InternalXdiagramDsl.g:5322:1: ( ( ( rule__Ellipse__Group_3__0 )* ) )
+            // InternalXdiagramDsl.g:5323:1: ( ( rule__Ellipse__Group_3__0 )* )
             {
-            // InternalXdiagramDsl.g:5377:1: ( ( rule__Ellipse__Group_3__0 )* )
-            // InternalXdiagramDsl.g:5378:2: ( rule__Ellipse__Group_3__0 )*
+            // InternalXdiagramDsl.g:5323:1: ( ( rule__Ellipse__Group_3__0 )* )
+            // InternalXdiagramDsl.g:5324:2: ( rule__Ellipse__Group_3__0 )*
             {
              before(grammarAccess.getEllipseAccess().getGroup_3()); 
-            // InternalXdiagramDsl.g:5379:2: ( rule__Ellipse__Group_3__0 )*
+            // InternalXdiagramDsl.g:5325:2: ( rule__Ellipse__Group_3__0 )*
             loop50:
             do {
                 int alt50=2;
                 int LA50_0 = input.LA(1);
 
-                if ( (LA50_0==63) ) {
+                if ( (LA50_0==62) ) {
                     alt50=1;
                 }
 
 
                 switch (alt50) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:5379:3: rule__Ellipse__Group_3__0
+            	    // InternalXdiagramDsl.g:5325:3: rule__Ellipse__Group_3__0
             	    {
-            	    pushFollow(FOLLOW_38);
+            	    pushFollow(FOLLOW_37);
             	    rule__Ellipse__Group_3__0();
 
             	    state._fsp--;
@@ -17570,14 +17410,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__Group__4"
-    // InternalXdiagramDsl.g:5387:1: rule__Ellipse__Group__4 : rule__Ellipse__Group__4__Impl ;
+    // InternalXdiagramDsl.g:5333:1: rule__Ellipse__Group__4 : rule__Ellipse__Group__4__Impl ;
     public final void rule__Ellipse__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5391:1: ( rule__Ellipse__Group__4__Impl )
-            // InternalXdiagramDsl.g:5392:2: rule__Ellipse__Group__4__Impl
+            // InternalXdiagramDsl.g:5337:1: ( rule__Ellipse__Group__4__Impl )
+            // InternalXdiagramDsl.g:5338:2: rule__Ellipse__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Ellipse__Group__4__Impl();
@@ -17603,17 +17443,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__Group__4__Impl"
-    // InternalXdiagramDsl.g:5398:1: rule__Ellipse__Group__4__Impl : ( '}' ) ;
+    // InternalXdiagramDsl.g:5344:1: rule__Ellipse__Group__4__Impl : ( '}' ) ;
     public final void rule__Ellipse__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5402:1: ( ( '}' ) )
-            // InternalXdiagramDsl.g:5403:1: ( '}' )
+            // InternalXdiagramDsl.g:5348:1: ( ( '}' ) )
+            // InternalXdiagramDsl.g:5349:1: ( '}' )
             {
-            // InternalXdiagramDsl.g:5403:1: ( '}' )
-            // InternalXdiagramDsl.g:5404:2: '}'
+            // InternalXdiagramDsl.g:5349:1: ( '}' )
+            // InternalXdiagramDsl.g:5350:2: '}'
             {
              before(grammarAccess.getEllipseAccess().getRightCurlyBracketKeyword_4()); 
             match(input,46,FOLLOW_2); 
@@ -17640,16 +17480,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__Group_3__0"
-    // InternalXdiagramDsl.g:5414:1: rule__Ellipse__Group_3__0 : rule__Ellipse__Group_3__0__Impl rule__Ellipse__Group_3__1 ;
+    // InternalXdiagramDsl.g:5360:1: rule__Ellipse__Group_3__0 : rule__Ellipse__Group_3__0__Impl rule__Ellipse__Group_3__1 ;
     public final void rule__Ellipse__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5418:1: ( rule__Ellipse__Group_3__0__Impl rule__Ellipse__Group_3__1 )
-            // InternalXdiagramDsl.g:5419:2: rule__Ellipse__Group_3__0__Impl rule__Ellipse__Group_3__1
+            // InternalXdiagramDsl.g:5364:1: ( rule__Ellipse__Group_3__0__Impl rule__Ellipse__Group_3__1 )
+            // InternalXdiagramDsl.g:5365:2: rule__Ellipse__Group_3__0__Impl rule__Ellipse__Group_3__1
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_26);
             rule__Ellipse__Group_3__0__Impl();
 
             state._fsp--;
@@ -17678,20 +17518,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__Group_3__0__Impl"
-    // InternalXdiagramDsl.g:5426:1: rule__Ellipse__Group_3__0__Impl : ( 'child' ) ;
+    // InternalXdiagramDsl.g:5372:1: rule__Ellipse__Group_3__0__Impl : ( 'child' ) ;
     public final void rule__Ellipse__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5430:1: ( ( 'child' ) )
-            // InternalXdiagramDsl.g:5431:1: ( 'child' )
+            // InternalXdiagramDsl.g:5376:1: ( ( 'child' ) )
+            // InternalXdiagramDsl.g:5377:1: ( 'child' )
             {
-            // InternalXdiagramDsl.g:5431:1: ( 'child' )
-            // InternalXdiagramDsl.g:5432:2: 'child'
+            // InternalXdiagramDsl.g:5377:1: ( 'child' )
+            // InternalXdiagramDsl.g:5378:2: 'child'
             {
              before(grammarAccess.getEllipseAccess().getChildKeyword_3_0()); 
-            match(input,63,FOLLOW_2); 
+            match(input,62,FOLLOW_2); 
              after(grammarAccess.getEllipseAccess().getChildKeyword_3_0()); 
 
             }
@@ -17715,14 +17555,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__Group_3__1"
-    // InternalXdiagramDsl.g:5441:1: rule__Ellipse__Group_3__1 : rule__Ellipse__Group_3__1__Impl ;
+    // InternalXdiagramDsl.g:5387:1: rule__Ellipse__Group_3__1 : rule__Ellipse__Group_3__1__Impl ;
     public final void rule__Ellipse__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5445:1: ( rule__Ellipse__Group_3__1__Impl )
-            // InternalXdiagramDsl.g:5446:2: rule__Ellipse__Group_3__1__Impl
+            // InternalXdiagramDsl.g:5391:1: ( rule__Ellipse__Group_3__1__Impl )
+            // InternalXdiagramDsl.g:5392:2: rule__Ellipse__Group_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Ellipse__Group_3__1__Impl();
@@ -17748,21 +17588,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__Group_3__1__Impl"
-    // InternalXdiagramDsl.g:5452:1: rule__Ellipse__Group_3__1__Impl : ( ( rule__Ellipse__ChildrenAssignment_3_1 ) ) ;
+    // InternalXdiagramDsl.g:5398:1: rule__Ellipse__Group_3__1__Impl : ( ( rule__Ellipse__ChildrenAssignment_3_1 ) ) ;
     public final void rule__Ellipse__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5456:1: ( ( ( rule__Ellipse__ChildrenAssignment_3_1 ) ) )
-            // InternalXdiagramDsl.g:5457:1: ( ( rule__Ellipse__ChildrenAssignment_3_1 ) )
+            // InternalXdiagramDsl.g:5402:1: ( ( ( rule__Ellipse__ChildrenAssignment_3_1 ) ) )
+            // InternalXdiagramDsl.g:5403:1: ( ( rule__Ellipse__ChildrenAssignment_3_1 ) )
             {
-            // InternalXdiagramDsl.g:5457:1: ( ( rule__Ellipse__ChildrenAssignment_3_1 ) )
-            // InternalXdiagramDsl.g:5458:2: ( rule__Ellipse__ChildrenAssignment_3_1 )
+            // InternalXdiagramDsl.g:5403:1: ( ( rule__Ellipse__ChildrenAssignment_3_1 ) )
+            // InternalXdiagramDsl.g:5404:2: ( rule__Ellipse__ChildrenAssignment_3_1 )
             {
              before(grammarAccess.getEllipseAccess().getChildrenAssignment_3_1()); 
-            // InternalXdiagramDsl.g:5459:2: ( rule__Ellipse__ChildrenAssignment_3_1 )
-            // InternalXdiagramDsl.g:5459:3: rule__Ellipse__ChildrenAssignment_3_1
+            // InternalXdiagramDsl.g:5405:2: ( rule__Ellipse__ChildrenAssignment_3_1 )
+            // InternalXdiagramDsl.g:5405:3: rule__Ellipse__ChildrenAssignment_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Ellipse__ChildrenAssignment_3_1();
@@ -17795,14 +17635,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group__0"
-    // InternalXdiagramDsl.g:5468:1: rule__Polyline__Group__0 : rule__Polyline__Group__0__Impl rule__Polyline__Group__1 ;
+    // InternalXdiagramDsl.g:5414:1: rule__Polyline__Group__0 : rule__Polyline__Group__0__Impl rule__Polyline__Group__1 ;
     public final void rule__Polyline__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5472:1: ( rule__Polyline__Group__0__Impl rule__Polyline__Group__1 )
-            // InternalXdiagramDsl.g:5473:2: rule__Polyline__Group__0__Impl rule__Polyline__Group__1
+            // InternalXdiagramDsl.g:5418:1: ( rule__Polyline__Group__0__Impl rule__Polyline__Group__1 )
+            // InternalXdiagramDsl.g:5419:2: rule__Polyline__Group__0__Impl rule__Polyline__Group__1
             {
             pushFollow(FOLLOW_6);
             rule__Polyline__Group__0__Impl();
@@ -17833,21 +17673,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group__0__Impl"
-    // InternalXdiagramDsl.g:5480:1: rule__Polyline__Group__0__Impl : ( ( rule__Polyline__Alternatives_0 ) ) ;
+    // InternalXdiagramDsl.g:5426:1: rule__Polyline__Group__0__Impl : ( ( rule__Polyline__Alternatives_0 ) ) ;
     public final void rule__Polyline__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5484:1: ( ( ( rule__Polyline__Alternatives_0 ) ) )
-            // InternalXdiagramDsl.g:5485:1: ( ( rule__Polyline__Alternatives_0 ) )
+            // InternalXdiagramDsl.g:5430:1: ( ( ( rule__Polyline__Alternatives_0 ) ) )
+            // InternalXdiagramDsl.g:5431:1: ( ( rule__Polyline__Alternatives_0 ) )
             {
-            // InternalXdiagramDsl.g:5485:1: ( ( rule__Polyline__Alternatives_0 ) )
-            // InternalXdiagramDsl.g:5486:2: ( rule__Polyline__Alternatives_0 )
+            // InternalXdiagramDsl.g:5431:1: ( ( rule__Polyline__Alternatives_0 ) )
+            // InternalXdiagramDsl.g:5432:2: ( rule__Polyline__Alternatives_0 )
             {
              before(grammarAccess.getPolylineAccess().getAlternatives_0()); 
-            // InternalXdiagramDsl.g:5487:2: ( rule__Polyline__Alternatives_0 )
-            // InternalXdiagramDsl.g:5487:3: rule__Polyline__Alternatives_0
+            // InternalXdiagramDsl.g:5433:2: ( rule__Polyline__Alternatives_0 )
+            // InternalXdiagramDsl.g:5433:3: rule__Polyline__Alternatives_0
             {
             pushFollow(FOLLOW_2);
             rule__Polyline__Alternatives_0();
@@ -17880,16 +17720,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group__1"
-    // InternalXdiagramDsl.g:5495:1: rule__Polyline__Group__1 : rule__Polyline__Group__1__Impl rule__Polyline__Group__2 ;
+    // InternalXdiagramDsl.g:5441:1: rule__Polyline__Group__1 : rule__Polyline__Group__1__Impl rule__Polyline__Group__2 ;
     public final void rule__Polyline__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5499:1: ( rule__Polyline__Group__1__Impl rule__Polyline__Group__2 )
-            // InternalXdiagramDsl.g:5500:2: rule__Polyline__Group__1__Impl rule__Polyline__Group__2
+            // InternalXdiagramDsl.g:5445:1: ( rule__Polyline__Group__1__Impl rule__Polyline__Group__2 )
+            // InternalXdiagramDsl.g:5446:2: rule__Polyline__Group__1__Impl rule__Polyline__Group__2
             {
-            pushFollow(FOLLOW_44);
+            pushFollow(FOLLOW_43);
             rule__Polyline__Group__1__Impl();
 
             state._fsp--;
@@ -17918,17 +17758,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group__1__Impl"
-    // InternalXdiagramDsl.g:5507:1: rule__Polyline__Group__1__Impl : ( '{' ) ;
+    // InternalXdiagramDsl.g:5453:1: rule__Polyline__Group__1__Impl : ( '{' ) ;
     public final void rule__Polyline__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5511:1: ( ( '{' ) )
-            // InternalXdiagramDsl.g:5512:1: ( '{' )
+            // InternalXdiagramDsl.g:5457:1: ( ( '{' ) )
+            // InternalXdiagramDsl.g:5458:1: ( '{' )
             {
-            // InternalXdiagramDsl.g:5512:1: ( '{' )
-            // InternalXdiagramDsl.g:5513:2: '{'
+            // InternalXdiagramDsl.g:5458:1: ( '{' )
+            // InternalXdiagramDsl.g:5459:2: '{'
             {
              before(grammarAccess.getPolylineAccess().getLeftCurlyBracketKeyword_1()); 
             match(input,43,FOLLOW_2); 
@@ -17955,16 +17795,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group__2"
-    // InternalXdiagramDsl.g:5522:1: rule__Polyline__Group__2 : rule__Polyline__Group__2__Impl rule__Polyline__Group__3 ;
+    // InternalXdiagramDsl.g:5468:1: rule__Polyline__Group__2 : rule__Polyline__Group__2__Impl rule__Polyline__Group__3 ;
     public final void rule__Polyline__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5526:1: ( rule__Polyline__Group__2__Impl rule__Polyline__Group__3 )
-            // InternalXdiagramDsl.g:5527:2: rule__Polyline__Group__2__Impl rule__Polyline__Group__3
+            // InternalXdiagramDsl.g:5472:1: ( rule__Polyline__Group__2__Impl rule__Polyline__Group__3 )
+            // InternalXdiagramDsl.g:5473:2: rule__Polyline__Group__2__Impl rule__Polyline__Group__3
             {
-            pushFollow(FOLLOW_44);
+            pushFollow(FOLLOW_43);
             rule__Polyline__Group__2__Impl();
 
             state._fsp--;
@@ -17993,21 +17833,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group__2__Impl"
-    // InternalXdiagramDsl.g:5534:1: rule__Polyline__Group__2__Impl : ( ( rule__Polyline__FeaturesAssignment_2 ) ) ;
+    // InternalXdiagramDsl.g:5480:1: rule__Polyline__Group__2__Impl : ( ( rule__Polyline__FeaturesAssignment_2 ) ) ;
     public final void rule__Polyline__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5538:1: ( ( ( rule__Polyline__FeaturesAssignment_2 ) ) )
-            // InternalXdiagramDsl.g:5539:1: ( ( rule__Polyline__FeaturesAssignment_2 ) )
+            // InternalXdiagramDsl.g:5484:1: ( ( ( rule__Polyline__FeaturesAssignment_2 ) ) )
+            // InternalXdiagramDsl.g:5485:1: ( ( rule__Polyline__FeaturesAssignment_2 ) )
             {
-            // InternalXdiagramDsl.g:5539:1: ( ( rule__Polyline__FeaturesAssignment_2 ) )
-            // InternalXdiagramDsl.g:5540:2: ( rule__Polyline__FeaturesAssignment_2 )
+            // InternalXdiagramDsl.g:5485:1: ( ( rule__Polyline__FeaturesAssignment_2 ) )
+            // InternalXdiagramDsl.g:5486:2: ( rule__Polyline__FeaturesAssignment_2 )
             {
              before(grammarAccess.getPolylineAccess().getFeaturesAssignment_2()); 
-            // InternalXdiagramDsl.g:5541:2: ( rule__Polyline__FeaturesAssignment_2 )
-            // InternalXdiagramDsl.g:5541:3: rule__Polyline__FeaturesAssignment_2
+            // InternalXdiagramDsl.g:5487:2: ( rule__Polyline__FeaturesAssignment_2 )
+            // InternalXdiagramDsl.g:5487:3: rule__Polyline__FeaturesAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Polyline__FeaturesAssignment_2();
@@ -18040,16 +17880,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group__3"
-    // InternalXdiagramDsl.g:5549:1: rule__Polyline__Group__3 : rule__Polyline__Group__3__Impl rule__Polyline__Group__4 ;
+    // InternalXdiagramDsl.g:5495:1: rule__Polyline__Group__3 : rule__Polyline__Group__3__Impl rule__Polyline__Group__4 ;
     public final void rule__Polyline__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5553:1: ( rule__Polyline__Group__3__Impl rule__Polyline__Group__4 )
-            // InternalXdiagramDsl.g:5554:2: rule__Polyline__Group__3__Impl rule__Polyline__Group__4
+            // InternalXdiagramDsl.g:5499:1: ( rule__Polyline__Group__3__Impl rule__Polyline__Group__4 )
+            // InternalXdiagramDsl.g:5500:2: rule__Polyline__Group__3__Impl rule__Polyline__Group__4
             {
-            pushFollow(FOLLOW_45);
+            pushFollow(FOLLOW_44);
             rule__Polyline__Group__3__Impl();
 
             state._fsp--;
@@ -18078,21 +17918,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group__3__Impl"
-    // InternalXdiagramDsl.g:5561:1: rule__Polyline__Group__3__Impl : ( ( rule__Polyline__FeaturesAssignment_3 ) ) ;
+    // InternalXdiagramDsl.g:5507:1: rule__Polyline__Group__3__Impl : ( ( rule__Polyline__FeaturesAssignment_3 ) ) ;
     public final void rule__Polyline__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5565:1: ( ( ( rule__Polyline__FeaturesAssignment_3 ) ) )
-            // InternalXdiagramDsl.g:5566:1: ( ( rule__Polyline__FeaturesAssignment_3 ) )
+            // InternalXdiagramDsl.g:5511:1: ( ( ( rule__Polyline__FeaturesAssignment_3 ) ) )
+            // InternalXdiagramDsl.g:5512:1: ( ( rule__Polyline__FeaturesAssignment_3 ) )
             {
-            // InternalXdiagramDsl.g:5566:1: ( ( rule__Polyline__FeaturesAssignment_3 ) )
-            // InternalXdiagramDsl.g:5567:2: ( rule__Polyline__FeaturesAssignment_3 )
+            // InternalXdiagramDsl.g:5512:1: ( ( rule__Polyline__FeaturesAssignment_3 ) )
+            // InternalXdiagramDsl.g:5513:2: ( rule__Polyline__FeaturesAssignment_3 )
             {
              before(grammarAccess.getPolylineAccess().getFeaturesAssignment_3()); 
-            // InternalXdiagramDsl.g:5568:2: ( rule__Polyline__FeaturesAssignment_3 )
-            // InternalXdiagramDsl.g:5568:3: rule__Polyline__FeaturesAssignment_3
+            // InternalXdiagramDsl.g:5514:2: ( rule__Polyline__FeaturesAssignment_3 )
+            // InternalXdiagramDsl.g:5514:3: rule__Polyline__FeaturesAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__Polyline__FeaturesAssignment_3();
@@ -18125,16 +17965,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group__4"
-    // InternalXdiagramDsl.g:5576:1: rule__Polyline__Group__4 : rule__Polyline__Group__4__Impl rule__Polyline__Group__5 ;
+    // InternalXdiagramDsl.g:5522:1: rule__Polyline__Group__4 : rule__Polyline__Group__4__Impl rule__Polyline__Group__5 ;
     public final void rule__Polyline__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5580:1: ( rule__Polyline__Group__4__Impl rule__Polyline__Group__5 )
-            // InternalXdiagramDsl.g:5581:2: rule__Polyline__Group__4__Impl rule__Polyline__Group__5
+            // InternalXdiagramDsl.g:5526:1: ( rule__Polyline__Group__4__Impl rule__Polyline__Group__5 )
+            // InternalXdiagramDsl.g:5527:2: rule__Polyline__Group__4__Impl rule__Polyline__Group__5
             {
-            pushFollow(FOLLOW_45);
+            pushFollow(FOLLOW_44);
             rule__Polyline__Group__4__Impl();
 
             state._fsp--;
@@ -18163,20 +18003,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group__4__Impl"
-    // InternalXdiagramDsl.g:5588:1: rule__Polyline__Group__4__Impl : ( ( rule__Polyline__FeaturesAssignment_4 )* ) ;
+    // InternalXdiagramDsl.g:5534:1: rule__Polyline__Group__4__Impl : ( ( rule__Polyline__FeaturesAssignment_4 )* ) ;
     public final void rule__Polyline__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5592:1: ( ( ( rule__Polyline__FeaturesAssignment_4 )* ) )
-            // InternalXdiagramDsl.g:5593:1: ( ( rule__Polyline__FeaturesAssignment_4 )* )
+            // InternalXdiagramDsl.g:5538:1: ( ( ( rule__Polyline__FeaturesAssignment_4 )* ) )
+            // InternalXdiagramDsl.g:5539:1: ( ( rule__Polyline__FeaturesAssignment_4 )* )
             {
-            // InternalXdiagramDsl.g:5593:1: ( ( rule__Polyline__FeaturesAssignment_4 )* )
-            // InternalXdiagramDsl.g:5594:2: ( rule__Polyline__FeaturesAssignment_4 )*
+            // InternalXdiagramDsl.g:5539:1: ( ( rule__Polyline__FeaturesAssignment_4 )* )
+            // InternalXdiagramDsl.g:5540:2: ( rule__Polyline__FeaturesAssignment_4 )*
             {
              before(grammarAccess.getPolylineAccess().getFeaturesAssignment_4()); 
-            // InternalXdiagramDsl.g:5595:2: ( rule__Polyline__FeaturesAssignment_4 )*
+            // InternalXdiagramDsl.g:5541:2: ( rule__Polyline__FeaturesAssignment_4 )*
             loop51:
             do {
                 int alt51=2;
@@ -18189,9 +18029,9 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
                 switch (alt51) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:5595:3: rule__Polyline__FeaturesAssignment_4
+            	    // InternalXdiagramDsl.g:5541:3: rule__Polyline__FeaturesAssignment_4
             	    {
-            	    pushFollow(FOLLOW_46);
+            	    pushFollow(FOLLOW_45);
             	    rule__Polyline__FeaturesAssignment_4();
 
             	    state._fsp--;
@@ -18228,16 +18068,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group__5"
-    // InternalXdiagramDsl.g:5603:1: rule__Polyline__Group__5 : rule__Polyline__Group__5__Impl rule__Polyline__Group__6 ;
+    // InternalXdiagramDsl.g:5549:1: rule__Polyline__Group__5 : rule__Polyline__Group__5__Impl rule__Polyline__Group__6 ;
     public final void rule__Polyline__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5607:1: ( rule__Polyline__Group__5__Impl rule__Polyline__Group__6 )
-            // InternalXdiagramDsl.g:5608:2: rule__Polyline__Group__5__Impl rule__Polyline__Group__6
+            // InternalXdiagramDsl.g:5553:1: ( rule__Polyline__Group__5__Impl rule__Polyline__Group__6 )
+            // InternalXdiagramDsl.g:5554:2: rule__Polyline__Group__5__Impl rule__Polyline__Group__6
             {
-            pushFollow(FOLLOW_45);
+            pushFollow(FOLLOW_44);
             rule__Polyline__Group__5__Impl();
 
             state._fsp--;
@@ -18266,35 +18106,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group__5__Impl"
-    // InternalXdiagramDsl.g:5615:1: rule__Polyline__Group__5__Impl : ( ( rule__Polyline__FeaturesAssignment_5 )* ) ;
+    // InternalXdiagramDsl.g:5561:1: rule__Polyline__Group__5__Impl : ( ( rule__Polyline__FeaturesAssignment_5 )* ) ;
     public final void rule__Polyline__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5619:1: ( ( ( rule__Polyline__FeaturesAssignment_5 )* ) )
-            // InternalXdiagramDsl.g:5620:1: ( ( rule__Polyline__FeaturesAssignment_5 )* )
+            // InternalXdiagramDsl.g:5565:1: ( ( ( rule__Polyline__FeaturesAssignment_5 )* ) )
+            // InternalXdiagramDsl.g:5566:1: ( ( rule__Polyline__FeaturesAssignment_5 )* )
             {
-            // InternalXdiagramDsl.g:5620:1: ( ( rule__Polyline__FeaturesAssignment_5 )* )
-            // InternalXdiagramDsl.g:5621:2: ( rule__Polyline__FeaturesAssignment_5 )*
+            // InternalXdiagramDsl.g:5566:1: ( ( rule__Polyline__FeaturesAssignment_5 )* )
+            // InternalXdiagramDsl.g:5567:2: ( rule__Polyline__FeaturesAssignment_5 )*
             {
              before(grammarAccess.getPolylineAccess().getFeaturesAssignment_5()); 
-            // InternalXdiagramDsl.g:5622:2: ( rule__Polyline__FeaturesAssignment_5 )*
+            // InternalXdiagramDsl.g:5568:2: ( rule__Polyline__FeaturesAssignment_5 )*
             loop52:
             do {
                 int alt52=2;
                 int LA52_0 = input.LA(1);
 
-                if ( (LA52_0==57||LA52_0==67||(LA52_0>=70 && LA52_0<=72)||LA52_0==74||LA52_0==76||(LA52_0>=81 && LA52_0<=82)||(LA52_0>=94 && LA52_0<=95)) ) {
+                if ( (LA52_0==56||LA52_0==66||(LA52_0>=69 && LA52_0<=70)||LA52_0==72||LA52_0==74||LA52_0==76||(LA52_0>=81 && LA52_0<=82)||(LA52_0>=94 && LA52_0<=95)) ) {
                     alt52=1;
                 }
 
 
                 switch (alt52) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:5622:3: rule__Polyline__FeaturesAssignment_5
+            	    // InternalXdiagramDsl.g:5568:3: rule__Polyline__FeaturesAssignment_5
             	    {
-            	    pushFollow(FOLLOW_43);
+            	    pushFollow(FOLLOW_42);
             	    rule__Polyline__FeaturesAssignment_5();
 
             	    state._fsp--;
@@ -18331,16 +18171,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group__6"
-    // InternalXdiagramDsl.g:5630:1: rule__Polyline__Group__6 : rule__Polyline__Group__6__Impl rule__Polyline__Group__7 ;
+    // InternalXdiagramDsl.g:5576:1: rule__Polyline__Group__6 : rule__Polyline__Group__6__Impl rule__Polyline__Group__7 ;
     public final void rule__Polyline__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5634:1: ( rule__Polyline__Group__6__Impl rule__Polyline__Group__7 )
-            // InternalXdiagramDsl.g:5635:2: rule__Polyline__Group__6__Impl rule__Polyline__Group__7
+            // InternalXdiagramDsl.g:5580:1: ( rule__Polyline__Group__6__Impl rule__Polyline__Group__7 )
+            // InternalXdiagramDsl.g:5581:2: rule__Polyline__Group__6__Impl rule__Polyline__Group__7
             {
-            pushFollow(FOLLOW_45);
+            pushFollow(FOLLOW_44);
             rule__Polyline__Group__6__Impl();
 
             state._fsp--;
@@ -18369,35 +18209,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group__6__Impl"
-    // InternalXdiagramDsl.g:5642:1: rule__Polyline__Group__6__Impl : ( ( rule__Polyline__Group_6__0 )* ) ;
+    // InternalXdiagramDsl.g:5588:1: rule__Polyline__Group__6__Impl : ( ( rule__Polyline__Group_6__0 )* ) ;
     public final void rule__Polyline__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5646:1: ( ( ( rule__Polyline__Group_6__0 )* ) )
-            // InternalXdiagramDsl.g:5647:1: ( ( rule__Polyline__Group_6__0 )* )
+            // InternalXdiagramDsl.g:5592:1: ( ( ( rule__Polyline__Group_6__0 )* ) )
+            // InternalXdiagramDsl.g:5593:1: ( ( rule__Polyline__Group_6__0 )* )
             {
-            // InternalXdiagramDsl.g:5647:1: ( ( rule__Polyline__Group_6__0 )* )
-            // InternalXdiagramDsl.g:5648:2: ( rule__Polyline__Group_6__0 )*
+            // InternalXdiagramDsl.g:5593:1: ( ( rule__Polyline__Group_6__0 )* )
+            // InternalXdiagramDsl.g:5594:2: ( rule__Polyline__Group_6__0 )*
             {
              before(grammarAccess.getPolylineAccess().getGroup_6()); 
-            // InternalXdiagramDsl.g:5649:2: ( rule__Polyline__Group_6__0 )*
+            // InternalXdiagramDsl.g:5595:2: ( rule__Polyline__Group_6__0 )*
             loop53:
             do {
                 int alt53=2;
                 int LA53_0 = input.LA(1);
 
-                if ( (LA53_0==63) ) {
+                if ( (LA53_0==62) ) {
                     alt53=1;
                 }
 
 
                 switch (alt53) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:5649:3: rule__Polyline__Group_6__0
+            	    // InternalXdiagramDsl.g:5595:3: rule__Polyline__Group_6__0
             	    {
-            	    pushFollow(FOLLOW_38);
+            	    pushFollow(FOLLOW_37);
             	    rule__Polyline__Group_6__0();
 
             	    state._fsp--;
@@ -18434,14 +18274,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group__7"
-    // InternalXdiagramDsl.g:5657:1: rule__Polyline__Group__7 : rule__Polyline__Group__7__Impl ;
+    // InternalXdiagramDsl.g:5603:1: rule__Polyline__Group__7 : rule__Polyline__Group__7__Impl ;
     public final void rule__Polyline__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5661:1: ( rule__Polyline__Group__7__Impl )
-            // InternalXdiagramDsl.g:5662:2: rule__Polyline__Group__7__Impl
+            // InternalXdiagramDsl.g:5607:1: ( rule__Polyline__Group__7__Impl )
+            // InternalXdiagramDsl.g:5608:2: rule__Polyline__Group__7__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Polyline__Group__7__Impl();
@@ -18467,17 +18307,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group__7__Impl"
-    // InternalXdiagramDsl.g:5668:1: rule__Polyline__Group__7__Impl : ( '}' ) ;
+    // InternalXdiagramDsl.g:5614:1: rule__Polyline__Group__7__Impl : ( '}' ) ;
     public final void rule__Polyline__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5672:1: ( ( '}' ) )
-            // InternalXdiagramDsl.g:5673:1: ( '}' )
+            // InternalXdiagramDsl.g:5618:1: ( ( '}' ) )
+            // InternalXdiagramDsl.g:5619:1: ( '}' )
             {
-            // InternalXdiagramDsl.g:5673:1: ( '}' )
-            // InternalXdiagramDsl.g:5674:2: '}'
+            // InternalXdiagramDsl.g:5619:1: ( '}' )
+            // InternalXdiagramDsl.g:5620:2: '}'
             {
              before(grammarAccess.getPolylineAccess().getRightCurlyBracketKeyword_7()); 
             match(input,46,FOLLOW_2); 
@@ -18504,16 +18344,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group_6__0"
-    // InternalXdiagramDsl.g:5684:1: rule__Polyline__Group_6__0 : rule__Polyline__Group_6__0__Impl rule__Polyline__Group_6__1 ;
+    // InternalXdiagramDsl.g:5630:1: rule__Polyline__Group_6__0 : rule__Polyline__Group_6__0__Impl rule__Polyline__Group_6__1 ;
     public final void rule__Polyline__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5688:1: ( rule__Polyline__Group_6__0__Impl rule__Polyline__Group_6__1 )
-            // InternalXdiagramDsl.g:5689:2: rule__Polyline__Group_6__0__Impl rule__Polyline__Group_6__1
+            // InternalXdiagramDsl.g:5634:1: ( rule__Polyline__Group_6__0__Impl rule__Polyline__Group_6__1 )
+            // InternalXdiagramDsl.g:5635:2: rule__Polyline__Group_6__0__Impl rule__Polyline__Group_6__1
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_26);
             rule__Polyline__Group_6__0__Impl();
 
             state._fsp--;
@@ -18542,20 +18382,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group_6__0__Impl"
-    // InternalXdiagramDsl.g:5696:1: rule__Polyline__Group_6__0__Impl : ( 'child' ) ;
+    // InternalXdiagramDsl.g:5642:1: rule__Polyline__Group_6__0__Impl : ( 'child' ) ;
     public final void rule__Polyline__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5700:1: ( ( 'child' ) )
-            // InternalXdiagramDsl.g:5701:1: ( 'child' )
+            // InternalXdiagramDsl.g:5646:1: ( ( 'child' ) )
+            // InternalXdiagramDsl.g:5647:1: ( 'child' )
             {
-            // InternalXdiagramDsl.g:5701:1: ( 'child' )
-            // InternalXdiagramDsl.g:5702:2: 'child'
+            // InternalXdiagramDsl.g:5647:1: ( 'child' )
+            // InternalXdiagramDsl.g:5648:2: 'child'
             {
              before(grammarAccess.getPolylineAccess().getChildKeyword_6_0()); 
-            match(input,63,FOLLOW_2); 
+            match(input,62,FOLLOW_2); 
              after(grammarAccess.getPolylineAccess().getChildKeyword_6_0()); 
 
             }
@@ -18579,14 +18419,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group_6__1"
-    // InternalXdiagramDsl.g:5711:1: rule__Polyline__Group_6__1 : rule__Polyline__Group_6__1__Impl ;
+    // InternalXdiagramDsl.g:5657:1: rule__Polyline__Group_6__1 : rule__Polyline__Group_6__1__Impl ;
     public final void rule__Polyline__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5715:1: ( rule__Polyline__Group_6__1__Impl )
-            // InternalXdiagramDsl.g:5716:2: rule__Polyline__Group_6__1__Impl
+            // InternalXdiagramDsl.g:5661:1: ( rule__Polyline__Group_6__1__Impl )
+            // InternalXdiagramDsl.g:5662:2: rule__Polyline__Group_6__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Polyline__Group_6__1__Impl();
@@ -18612,21 +18452,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__Group_6__1__Impl"
-    // InternalXdiagramDsl.g:5722:1: rule__Polyline__Group_6__1__Impl : ( ( rule__Polyline__ChildrenAssignment_6_1 ) ) ;
+    // InternalXdiagramDsl.g:5668:1: rule__Polyline__Group_6__1__Impl : ( ( rule__Polyline__ChildrenAssignment_6_1 ) ) ;
     public final void rule__Polyline__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5726:1: ( ( ( rule__Polyline__ChildrenAssignment_6_1 ) ) )
-            // InternalXdiagramDsl.g:5727:1: ( ( rule__Polyline__ChildrenAssignment_6_1 ) )
+            // InternalXdiagramDsl.g:5672:1: ( ( ( rule__Polyline__ChildrenAssignment_6_1 ) ) )
+            // InternalXdiagramDsl.g:5673:1: ( ( rule__Polyline__ChildrenAssignment_6_1 ) )
             {
-            // InternalXdiagramDsl.g:5727:1: ( ( rule__Polyline__ChildrenAssignment_6_1 ) )
-            // InternalXdiagramDsl.g:5728:2: ( rule__Polyline__ChildrenAssignment_6_1 )
+            // InternalXdiagramDsl.g:5673:1: ( ( rule__Polyline__ChildrenAssignment_6_1 ) )
+            // InternalXdiagramDsl.g:5674:2: ( rule__Polyline__ChildrenAssignment_6_1 )
             {
              before(grammarAccess.getPolylineAccess().getChildrenAssignment_6_1()); 
-            // InternalXdiagramDsl.g:5729:2: ( rule__Polyline__ChildrenAssignment_6_1 )
-            // InternalXdiagramDsl.g:5729:3: rule__Polyline__ChildrenAssignment_6_1
+            // InternalXdiagramDsl.g:5675:2: ( rule__Polyline__ChildrenAssignment_6_1 )
+            // InternalXdiagramDsl.g:5675:3: rule__Polyline__ChildrenAssignment_6_1
             {
             pushFollow(FOLLOW_2);
             rule__Polyline__ChildrenAssignment_6_1();
@@ -18659,14 +18499,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__Group__0"
-    // InternalXdiagramDsl.g:5738:1: rule__Triangle__Group__0 : rule__Triangle__Group__0__Impl rule__Triangle__Group__1 ;
+    // InternalXdiagramDsl.g:5684:1: rule__Triangle__Group__0 : rule__Triangle__Group__0__Impl rule__Triangle__Group__1 ;
     public final void rule__Triangle__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5742:1: ( rule__Triangle__Group__0__Impl rule__Triangle__Group__1 )
-            // InternalXdiagramDsl.g:5743:2: rule__Triangle__Group__0__Impl rule__Triangle__Group__1
+            // InternalXdiagramDsl.g:5688:1: ( rule__Triangle__Group__0__Impl rule__Triangle__Group__1 )
+            // InternalXdiagramDsl.g:5689:2: rule__Triangle__Group__0__Impl rule__Triangle__Group__1
             {
             pushFollow(FOLLOW_19);
             rule__Triangle__Group__0__Impl();
@@ -18697,21 +18537,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__Group__0__Impl"
-    // InternalXdiagramDsl.g:5750:1: rule__Triangle__Group__0__Impl : ( () ) ;
+    // InternalXdiagramDsl.g:5696:1: rule__Triangle__Group__0__Impl : ( () ) ;
     public final void rule__Triangle__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5754:1: ( ( () ) )
-            // InternalXdiagramDsl.g:5755:1: ( () )
+            // InternalXdiagramDsl.g:5700:1: ( ( () ) )
+            // InternalXdiagramDsl.g:5701:1: ( () )
             {
-            // InternalXdiagramDsl.g:5755:1: ( () )
-            // InternalXdiagramDsl.g:5756:2: ()
+            // InternalXdiagramDsl.g:5701:1: ( () )
+            // InternalXdiagramDsl.g:5702:2: ()
             {
              before(grammarAccess.getTriangleAccess().getTriangleAction_0()); 
-            // InternalXdiagramDsl.g:5757:2: ()
-            // InternalXdiagramDsl.g:5757:3: 
+            // InternalXdiagramDsl.g:5703:2: ()
+            // InternalXdiagramDsl.g:5703:3: 
             {
             }
 
@@ -18734,14 +18574,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__Group__1"
-    // InternalXdiagramDsl.g:5765:1: rule__Triangle__Group__1 : rule__Triangle__Group__1__Impl rule__Triangle__Group__2 ;
+    // InternalXdiagramDsl.g:5711:1: rule__Triangle__Group__1 : rule__Triangle__Group__1__Impl rule__Triangle__Group__2 ;
     public final void rule__Triangle__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5769:1: ( rule__Triangle__Group__1__Impl rule__Triangle__Group__2 )
-            // InternalXdiagramDsl.g:5770:2: rule__Triangle__Group__1__Impl rule__Triangle__Group__2
+            // InternalXdiagramDsl.g:5715:1: ( rule__Triangle__Group__1__Impl rule__Triangle__Group__2 )
+            // InternalXdiagramDsl.g:5716:2: rule__Triangle__Group__1__Impl rule__Triangle__Group__2
             {
             pushFollow(FOLLOW_6);
             rule__Triangle__Group__1__Impl();
@@ -18772,20 +18612,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__Group__1__Impl"
-    // InternalXdiagramDsl.g:5777:1: rule__Triangle__Group__1__Impl : ( 'triangle' ) ;
+    // InternalXdiagramDsl.g:5723:1: rule__Triangle__Group__1__Impl : ( 'triangle' ) ;
     public final void rule__Triangle__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5781:1: ( ( 'triangle' ) )
-            // InternalXdiagramDsl.g:5782:1: ( 'triangle' )
+            // InternalXdiagramDsl.g:5727:1: ( ( 'triangle' ) )
+            // InternalXdiagramDsl.g:5728:1: ( 'triangle' )
             {
-            // InternalXdiagramDsl.g:5782:1: ( 'triangle' )
-            // InternalXdiagramDsl.g:5783:2: 'triangle'
+            // InternalXdiagramDsl.g:5728:1: ( 'triangle' )
+            // InternalXdiagramDsl.g:5729:2: 'triangle'
             {
              before(grammarAccess.getTriangleAccess().getTriangleKeyword_1()); 
-            match(input,65,FOLLOW_2); 
+            match(input,64,FOLLOW_2); 
              after(grammarAccess.getTriangleAccess().getTriangleKeyword_1()); 
 
             }
@@ -18809,16 +18649,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__Group__2"
-    // InternalXdiagramDsl.g:5792:1: rule__Triangle__Group__2 : rule__Triangle__Group__2__Impl rule__Triangle__Group__3 ;
+    // InternalXdiagramDsl.g:5738:1: rule__Triangle__Group__2 : rule__Triangle__Group__2__Impl rule__Triangle__Group__3 ;
     public final void rule__Triangle__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5796:1: ( rule__Triangle__Group__2__Impl rule__Triangle__Group__3 )
-            // InternalXdiagramDsl.g:5797:2: rule__Triangle__Group__2__Impl rule__Triangle__Group__3
+            // InternalXdiagramDsl.g:5742:1: ( rule__Triangle__Group__2__Impl rule__Triangle__Group__3 )
+            // InternalXdiagramDsl.g:5743:2: rule__Triangle__Group__2__Impl rule__Triangle__Group__3
             {
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_41);
             rule__Triangle__Group__2__Impl();
 
             state._fsp--;
@@ -18847,17 +18687,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__Group__2__Impl"
-    // InternalXdiagramDsl.g:5804:1: rule__Triangle__Group__2__Impl : ( '{' ) ;
+    // InternalXdiagramDsl.g:5750:1: rule__Triangle__Group__2__Impl : ( '{' ) ;
     public final void rule__Triangle__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5808:1: ( ( '{' ) )
-            // InternalXdiagramDsl.g:5809:1: ( '{' )
+            // InternalXdiagramDsl.g:5754:1: ( ( '{' ) )
+            // InternalXdiagramDsl.g:5755:1: ( '{' )
             {
-            // InternalXdiagramDsl.g:5809:1: ( '{' )
-            // InternalXdiagramDsl.g:5810:2: '{'
+            // InternalXdiagramDsl.g:5755:1: ( '{' )
+            // InternalXdiagramDsl.g:5756:2: '{'
             {
              before(grammarAccess.getTriangleAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,43,FOLLOW_2); 
@@ -18884,16 +18724,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__Group__3"
-    // InternalXdiagramDsl.g:5819:1: rule__Triangle__Group__3 : rule__Triangle__Group__3__Impl rule__Triangle__Group__4 ;
+    // InternalXdiagramDsl.g:5765:1: rule__Triangle__Group__3 : rule__Triangle__Group__3__Impl rule__Triangle__Group__4 ;
     public final void rule__Triangle__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5823:1: ( rule__Triangle__Group__3__Impl rule__Triangle__Group__4 )
-            // InternalXdiagramDsl.g:5824:2: rule__Triangle__Group__3__Impl rule__Triangle__Group__4
+            // InternalXdiagramDsl.g:5769:1: ( rule__Triangle__Group__3__Impl rule__Triangle__Group__4 )
+            // InternalXdiagramDsl.g:5770:2: rule__Triangle__Group__3__Impl rule__Triangle__Group__4
             {
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_41);
             rule__Triangle__Group__3__Impl();
 
             state._fsp--;
@@ -18922,35 +18762,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__Group__3__Impl"
-    // InternalXdiagramDsl.g:5831:1: rule__Triangle__Group__3__Impl : ( ( rule__Triangle__FeaturesAssignment_3 )* ) ;
+    // InternalXdiagramDsl.g:5777:1: rule__Triangle__Group__3__Impl : ( ( rule__Triangle__FeaturesAssignment_3 )* ) ;
     public final void rule__Triangle__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5835:1: ( ( ( rule__Triangle__FeaturesAssignment_3 )* ) )
-            // InternalXdiagramDsl.g:5836:1: ( ( rule__Triangle__FeaturesAssignment_3 )* )
+            // InternalXdiagramDsl.g:5781:1: ( ( ( rule__Triangle__FeaturesAssignment_3 )* ) )
+            // InternalXdiagramDsl.g:5782:1: ( ( rule__Triangle__FeaturesAssignment_3 )* )
             {
-            // InternalXdiagramDsl.g:5836:1: ( ( rule__Triangle__FeaturesAssignment_3 )* )
-            // InternalXdiagramDsl.g:5837:2: ( rule__Triangle__FeaturesAssignment_3 )*
+            // InternalXdiagramDsl.g:5782:1: ( ( rule__Triangle__FeaturesAssignment_3 )* )
+            // InternalXdiagramDsl.g:5783:2: ( rule__Triangle__FeaturesAssignment_3 )*
             {
              before(grammarAccess.getTriangleAccess().getFeaturesAssignment_3()); 
-            // InternalXdiagramDsl.g:5838:2: ( rule__Triangle__FeaturesAssignment_3 )*
+            // InternalXdiagramDsl.g:5784:2: ( rule__Triangle__FeaturesAssignment_3 )*
             loop54:
             do {
                 int alt54=2;
                 int LA54_0 = input.LA(1);
 
-                if ( (LA54_0==57||LA54_0==67||(LA54_0>=70 && LA54_0<=72)||LA54_0==74||LA54_0==76||(LA54_0>=81 && LA54_0<=82)||(LA54_0>=94 && LA54_0<=95)) ) {
+                if ( (LA54_0==56||LA54_0==66||(LA54_0>=69 && LA54_0<=70)||LA54_0==72||LA54_0==74||LA54_0==76||(LA54_0>=81 && LA54_0<=82)||(LA54_0>=94 && LA54_0<=95)) ) {
                     alt54=1;
                 }
 
 
                 switch (alt54) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:5838:3: rule__Triangle__FeaturesAssignment_3
+            	    // InternalXdiagramDsl.g:5784:3: rule__Triangle__FeaturesAssignment_3
             	    {
-            	    pushFollow(FOLLOW_43);
+            	    pushFollow(FOLLOW_42);
             	    rule__Triangle__FeaturesAssignment_3();
 
             	    state._fsp--;
@@ -18987,16 +18827,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__Group__4"
-    // InternalXdiagramDsl.g:5846:1: rule__Triangle__Group__4 : rule__Triangle__Group__4__Impl rule__Triangle__Group__5 ;
+    // InternalXdiagramDsl.g:5792:1: rule__Triangle__Group__4 : rule__Triangle__Group__4__Impl rule__Triangle__Group__5 ;
     public final void rule__Triangle__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5850:1: ( rule__Triangle__Group__4__Impl rule__Triangle__Group__5 )
-            // InternalXdiagramDsl.g:5851:2: rule__Triangle__Group__4__Impl rule__Triangle__Group__5
+            // InternalXdiagramDsl.g:5796:1: ( rule__Triangle__Group__4__Impl rule__Triangle__Group__5 )
+            // InternalXdiagramDsl.g:5797:2: rule__Triangle__Group__4__Impl rule__Triangle__Group__5
             {
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_41);
             rule__Triangle__Group__4__Impl();
 
             state._fsp--;
@@ -19025,35 +18865,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__Group__4__Impl"
-    // InternalXdiagramDsl.g:5858:1: rule__Triangle__Group__4__Impl : ( ( rule__Triangle__Group_4__0 )* ) ;
+    // InternalXdiagramDsl.g:5804:1: rule__Triangle__Group__4__Impl : ( ( rule__Triangle__Group_4__0 )* ) ;
     public final void rule__Triangle__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5862:1: ( ( ( rule__Triangle__Group_4__0 )* ) )
-            // InternalXdiagramDsl.g:5863:1: ( ( rule__Triangle__Group_4__0 )* )
+            // InternalXdiagramDsl.g:5808:1: ( ( ( rule__Triangle__Group_4__0 )* ) )
+            // InternalXdiagramDsl.g:5809:1: ( ( rule__Triangle__Group_4__0 )* )
             {
-            // InternalXdiagramDsl.g:5863:1: ( ( rule__Triangle__Group_4__0 )* )
-            // InternalXdiagramDsl.g:5864:2: ( rule__Triangle__Group_4__0 )*
+            // InternalXdiagramDsl.g:5809:1: ( ( rule__Triangle__Group_4__0 )* )
+            // InternalXdiagramDsl.g:5810:2: ( rule__Triangle__Group_4__0 )*
             {
              before(grammarAccess.getTriangleAccess().getGroup_4()); 
-            // InternalXdiagramDsl.g:5865:2: ( rule__Triangle__Group_4__0 )*
+            // InternalXdiagramDsl.g:5811:2: ( rule__Triangle__Group_4__0 )*
             loop55:
             do {
                 int alt55=2;
                 int LA55_0 = input.LA(1);
 
-                if ( (LA55_0==63) ) {
+                if ( (LA55_0==62) ) {
                     alt55=1;
                 }
 
 
                 switch (alt55) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:5865:3: rule__Triangle__Group_4__0
+            	    // InternalXdiagramDsl.g:5811:3: rule__Triangle__Group_4__0
             	    {
-            	    pushFollow(FOLLOW_38);
+            	    pushFollow(FOLLOW_37);
             	    rule__Triangle__Group_4__0();
 
             	    state._fsp--;
@@ -19090,14 +18930,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__Group__5"
-    // InternalXdiagramDsl.g:5873:1: rule__Triangle__Group__5 : rule__Triangle__Group__5__Impl ;
+    // InternalXdiagramDsl.g:5819:1: rule__Triangle__Group__5 : rule__Triangle__Group__5__Impl ;
     public final void rule__Triangle__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5877:1: ( rule__Triangle__Group__5__Impl )
-            // InternalXdiagramDsl.g:5878:2: rule__Triangle__Group__5__Impl
+            // InternalXdiagramDsl.g:5823:1: ( rule__Triangle__Group__5__Impl )
+            // InternalXdiagramDsl.g:5824:2: rule__Triangle__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Triangle__Group__5__Impl();
@@ -19123,17 +18963,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__Group__5__Impl"
-    // InternalXdiagramDsl.g:5884:1: rule__Triangle__Group__5__Impl : ( '}' ) ;
+    // InternalXdiagramDsl.g:5830:1: rule__Triangle__Group__5__Impl : ( '}' ) ;
     public final void rule__Triangle__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5888:1: ( ( '}' ) )
-            // InternalXdiagramDsl.g:5889:1: ( '}' )
+            // InternalXdiagramDsl.g:5834:1: ( ( '}' ) )
+            // InternalXdiagramDsl.g:5835:1: ( '}' )
             {
-            // InternalXdiagramDsl.g:5889:1: ( '}' )
-            // InternalXdiagramDsl.g:5890:2: '}'
+            // InternalXdiagramDsl.g:5835:1: ( '}' )
+            // InternalXdiagramDsl.g:5836:2: '}'
             {
              before(grammarAccess.getTriangleAccess().getRightCurlyBracketKeyword_5()); 
             match(input,46,FOLLOW_2); 
@@ -19160,16 +19000,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__Group_4__0"
-    // InternalXdiagramDsl.g:5900:1: rule__Triangle__Group_4__0 : rule__Triangle__Group_4__0__Impl rule__Triangle__Group_4__1 ;
+    // InternalXdiagramDsl.g:5846:1: rule__Triangle__Group_4__0 : rule__Triangle__Group_4__0__Impl rule__Triangle__Group_4__1 ;
     public final void rule__Triangle__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5904:1: ( rule__Triangle__Group_4__0__Impl rule__Triangle__Group_4__1 )
-            // InternalXdiagramDsl.g:5905:2: rule__Triangle__Group_4__0__Impl rule__Triangle__Group_4__1
+            // InternalXdiagramDsl.g:5850:1: ( rule__Triangle__Group_4__0__Impl rule__Triangle__Group_4__1 )
+            // InternalXdiagramDsl.g:5851:2: rule__Triangle__Group_4__0__Impl rule__Triangle__Group_4__1
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_26);
             rule__Triangle__Group_4__0__Impl();
 
             state._fsp--;
@@ -19198,20 +19038,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__Group_4__0__Impl"
-    // InternalXdiagramDsl.g:5912:1: rule__Triangle__Group_4__0__Impl : ( 'child' ) ;
+    // InternalXdiagramDsl.g:5858:1: rule__Triangle__Group_4__0__Impl : ( 'child' ) ;
     public final void rule__Triangle__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5916:1: ( ( 'child' ) )
-            // InternalXdiagramDsl.g:5917:1: ( 'child' )
+            // InternalXdiagramDsl.g:5862:1: ( ( 'child' ) )
+            // InternalXdiagramDsl.g:5863:1: ( 'child' )
             {
-            // InternalXdiagramDsl.g:5917:1: ( 'child' )
-            // InternalXdiagramDsl.g:5918:2: 'child'
+            // InternalXdiagramDsl.g:5863:1: ( 'child' )
+            // InternalXdiagramDsl.g:5864:2: 'child'
             {
              before(grammarAccess.getTriangleAccess().getChildKeyword_4_0()); 
-            match(input,63,FOLLOW_2); 
+            match(input,62,FOLLOW_2); 
              after(grammarAccess.getTriangleAccess().getChildKeyword_4_0()); 
 
             }
@@ -19235,14 +19075,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__Group_4__1"
-    // InternalXdiagramDsl.g:5927:1: rule__Triangle__Group_4__1 : rule__Triangle__Group_4__1__Impl ;
+    // InternalXdiagramDsl.g:5873:1: rule__Triangle__Group_4__1 : rule__Triangle__Group_4__1__Impl ;
     public final void rule__Triangle__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5931:1: ( rule__Triangle__Group_4__1__Impl )
-            // InternalXdiagramDsl.g:5932:2: rule__Triangle__Group_4__1__Impl
+            // InternalXdiagramDsl.g:5877:1: ( rule__Triangle__Group_4__1__Impl )
+            // InternalXdiagramDsl.g:5878:2: rule__Triangle__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Triangle__Group_4__1__Impl();
@@ -19268,21 +19108,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__Group_4__1__Impl"
-    // InternalXdiagramDsl.g:5938:1: rule__Triangle__Group_4__1__Impl : ( ( rule__Triangle__ChildrenAssignment_4_1 ) ) ;
+    // InternalXdiagramDsl.g:5884:1: rule__Triangle__Group_4__1__Impl : ( ( rule__Triangle__ChildrenAssignment_4_1 ) ) ;
     public final void rule__Triangle__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5942:1: ( ( ( rule__Triangle__ChildrenAssignment_4_1 ) ) )
-            // InternalXdiagramDsl.g:5943:1: ( ( rule__Triangle__ChildrenAssignment_4_1 ) )
+            // InternalXdiagramDsl.g:5888:1: ( ( ( rule__Triangle__ChildrenAssignment_4_1 ) ) )
+            // InternalXdiagramDsl.g:5889:1: ( ( rule__Triangle__ChildrenAssignment_4_1 ) )
             {
-            // InternalXdiagramDsl.g:5943:1: ( ( rule__Triangle__ChildrenAssignment_4_1 ) )
-            // InternalXdiagramDsl.g:5944:2: ( rule__Triangle__ChildrenAssignment_4_1 )
+            // InternalXdiagramDsl.g:5889:1: ( ( rule__Triangle__ChildrenAssignment_4_1 ) )
+            // InternalXdiagramDsl.g:5890:2: ( rule__Triangle__ChildrenAssignment_4_1 )
             {
              before(grammarAccess.getTriangleAccess().getChildrenAssignment_4_1()); 
-            // InternalXdiagramDsl.g:5945:2: ( rule__Triangle__ChildrenAssignment_4_1 )
-            // InternalXdiagramDsl.g:5945:3: rule__Triangle__ChildrenAssignment_4_1
+            // InternalXdiagramDsl.g:5891:2: ( rule__Triangle__ChildrenAssignment_4_1 )
+            // InternalXdiagramDsl.g:5891:3: rule__Triangle__ChildrenAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__Triangle__ChildrenAssignment_4_1();
@@ -19315,16 +19155,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Line__Group__0"
-    // InternalXdiagramDsl.g:5954:1: rule__Line__Group__0 : rule__Line__Group__0__Impl rule__Line__Group__1 ;
+    // InternalXdiagramDsl.g:5900:1: rule__Line__Group__0 : rule__Line__Group__0__Impl rule__Line__Group__1 ;
     public final void rule__Line__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5958:1: ( rule__Line__Group__0__Impl rule__Line__Group__1 )
-            // InternalXdiagramDsl.g:5959:2: rule__Line__Group__0__Impl rule__Line__Group__1
+            // InternalXdiagramDsl.g:5904:1: ( rule__Line__Group__0__Impl rule__Line__Group__1 )
+            // InternalXdiagramDsl.g:5905:2: rule__Line__Group__0__Impl rule__Line__Group__1
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_26);
             rule__Line__Group__0__Impl();
 
             state._fsp--;
@@ -19353,21 +19193,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Line__Group__0__Impl"
-    // InternalXdiagramDsl.g:5966:1: rule__Line__Group__0__Impl : ( () ) ;
+    // InternalXdiagramDsl.g:5912:1: rule__Line__Group__0__Impl : ( () ) ;
     public final void rule__Line__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5970:1: ( ( () ) )
-            // InternalXdiagramDsl.g:5971:1: ( () )
+            // InternalXdiagramDsl.g:5916:1: ( ( () ) )
+            // InternalXdiagramDsl.g:5917:1: ( () )
             {
-            // InternalXdiagramDsl.g:5971:1: ( () )
-            // InternalXdiagramDsl.g:5972:2: ()
+            // InternalXdiagramDsl.g:5917:1: ( () )
+            // InternalXdiagramDsl.g:5918:2: ()
             {
              before(grammarAccess.getLineAccess().getLineAction_0()); 
-            // InternalXdiagramDsl.g:5973:2: ()
-            // InternalXdiagramDsl.g:5973:3: 
+            // InternalXdiagramDsl.g:5919:2: ()
+            // InternalXdiagramDsl.g:5919:3: 
             {
             }
 
@@ -19390,14 +19230,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Line__Group__1"
-    // InternalXdiagramDsl.g:5981:1: rule__Line__Group__1 : rule__Line__Group__1__Impl rule__Line__Group__2 ;
+    // InternalXdiagramDsl.g:5927:1: rule__Line__Group__1 : rule__Line__Group__1__Impl rule__Line__Group__2 ;
     public final void rule__Line__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5985:1: ( rule__Line__Group__1__Impl rule__Line__Group__2 )
-            // InternalXdiagramDsl.g:5986:2: rule__Line__Group__1__Impl rule__Line__Group__2
+            // InternalXdiagramDsl.g:5931:1: ( rule__Line__Group__1__Impl rule__Line__Group__2 )
+            // InternalXdiagramDsl.g:5932:2: rule__Line__Group__1__Impl rule__Line__Group__2
             {
             pushFollow(FOLLOW_6);
             rule__Line__Group__1__Impl();
@@ -19428,21 +19268,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Line__Group__1__Impl"
-    // InternalXdiagramDsl.g:5993:1: rule__Line__Group__1__Impl : ( ( rule__Line__Alternatives_1 ) ) ;
+    // InternalXdiagramDsl.g:5939:1: rule__Line__Group__1__Impl : ( ( rule__Line__Alternatives_1 ) ) ;
     public final void rule__Line__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:5997:1: ( ( ( rule__Line__Alternatives_1 ) ) )
-            // InternalXdiagramDsl.g:5998:1: ( ( rule__Line__Alternatives_1 ) )
+            // InternalXdiagramDsl.g:5943:1: ( ( ( rule__Line__Alternatives_1 ) ) )
+            // InternalXdiagramDsl.g:5944:1: ( ( rule__Line__Alternatives_1 ) )
             {
-            // InternalXdiagramDsl.g:5998:1: ( ( rule__Line__Alternatives_1 ) )
-            // InternalXdiagramDsl.g:5999:2: ( rule__Line__Alternatives_1 )
+            // InternalXdiagramDsl.g:5944:1: ( ( rule__Line__Alternatives_1 ) )
+            // InternalXdiagramDsl.g:5945:2: ( rule__Line__Alternatives_1 )
             {
              before(grammarAccess.getLineAccess().getAlternatives_1()); 
-            // InternalXdiagramDsl.g:6000:2: ( rule__Line__Alternatives_1 )
-            // InternalXdiagramDsl.g:6000:3: rule__Line__Alternatives_1
+            // InternalXdiagramDsl.g:5946:2: ( rule__Line__Alternatives_1 )
+            // InternalXdiagramDsl.g:5946:3: rule__Line__Alternatives_1
             {
             pushFollow(FOLLOW_2);
             rule__Line__Alternatives_1();
@@ -19475,16 +19315,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Line__Group__2"
-    // InternalXdiagramDsl.g:6008:1: rule__Line__Group__2 : rule__Line__Group__2__Impl rule__Line__Group__3 ;
+    // InternalXdiagramDsl.g:5954:1: rule__Line__Group__2 : rule__Line__Group__2__Impl rule__Line__Group__3 ;
     public final void rule__Line__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6012:1: ( rule__Line__Group__2__Impl rule__Line__Group__3 )
-            // InternalXdiagramDsl.g:6013:2: rule__Line__Group__2__Impl rule__Line__Group__3
+            // InternalXdiagramDsl.g:5958:1: ( rule__Line__Group__2__Impl rule__Line__Group__3 )
+            // InternalXdiagramDsl.g:5959:2: rule__Line__Group__2__Impl rule__Line__Group__3
             {
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_46);
             rule__Line__Group__2__Impl();
 
             state._fsp--;
@@ -19513,17 +19353,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Line__Group__2__Impl"
-    // InternalXdiagramDsl.g:6020:1: rule__Line__Group__2__Impl : ( '{' ) ;
+    // InternalXdiagramDsl.g:5966:1: rule__Line__Group__2__Impl : ( '{' ) ;
     public final void rule__Line__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6024:1: ( ( '{' ) )
-            // InternalXdiagramDsl.g:6025:1: ( '{' )
+            // InternalXdiagramDsl.g:5970:1: ( ( '{' ) )
+            // InternalXdiagramDsl.g:5971:1: ( '{' )
             {
-            // InternalXdiagramDsl.g:6025:1: ( '{' )
-            // InternalXdiagramDsl.g:6026:2: '{'
+            // InternalXdiagramDsl.g:5971:1: ( '{' )
+            // InternalXdiagramDsl.g:5972:2: '{'
             {
              before(grammarAccess.getLineAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,43,FOLLOW_2); 
@@ -19550,16 +19390,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Line__Group__3"
-    // InternalXdiagramDsl.g:6035:1: rule__Line__Group__3 : rule__Line__Group__3__Impl rule__Line__Group__4 ;
+    // InternalXdiagramDsl.g:5981:1: rule__Line__Group__3 : rule__Line__Group__3__Impl rule__Line__Group__4 ;
     public final void rule__Line__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6039:1: ( rule__Line__Group__3__Impl rule__Line__Group__4 )
-            // InternalXdiagramDsl.g:6040:2: rule__Line__Group__3__Impl rule__Line__Group__4
+            // InternalXdiagramDsl.g:5985:1: ( rule__Line__Group__3__Impl rule__Line__Group__4 )
+            // InternalXdiagramDsl.g:5986:2: rule__Line__Group__3__Impl rule__Line__Group__4
             {
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_46);
             rule__Line__Group__3__Impl();
 
             state._fsp--;
@@ -19588,35 +19428,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Line__Group__3__Impl"
-    // InternalXdiagramDsl.g:6047:1: rule__Line__Group__3__Impl : ( ( rule__Line__FeaturesAssignment_3 )* ) ;
+    // InternalXdiagramDsl.g:5993:1: rule__Line__Group__3__Impl : ( ( rule__Line__FeaturesAssignment_3 )* ) ;
     public final void rule__Line__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6051:1: ( ( ( rule__Line__FeaturesAssignment_3 )* ) )
-            // InternalXdiagramDsl.g:6052:1: ( ( rule__Line__FeaturesAssignment_3 )* )
+            // InternalXdiagramDsl.g:5997:1: ( ( ( rule__Line__FeaturesAssignment_3 )* ) )
+            // InternalXdiagramDsl.g:5998:1: ( ( rule__Line__FeaturesAssignment_3 )* )
             {
-            // InternalXdiagramDsl.g:6052:1: ( ( rule__Line__FeaturesAssignment_3 )* )
-            // InternalXdiagramDsl.g:6053:2: ( rule__Line__FeaturesAssignment_3 )*
+            // InternalXdiagramDsl.g:5998:1: ( ( rule__Line__FeaturesAssignment_3 )* )
+            // InternalXdiagramDsl.g:5999:2: ( rule__Line__FeaturesAssignment_3 )*
             {
              before(grammarAccess.getLineAccess().getFeaturesAssignment_3()); 
-            // InternalXdiagramDsl.g:6054:2: ( rule__Line__FeaturesAssignment_3 )*
+            // InternalXdiagramDsl.g:6000:2: ( rule__Line__FeaturesAssignment_3 )*
             loop56:
             do {
                 int alt56=2;
                 int LA56_0 = input.LA(1);
 
-                if ( (LA56_0==70||LA56_0==72||LA56_0==74||(LA56_0>=81 && LA56_0<=82)||LA56_0==94) ) {
+                if ( (LA56_0==69||LA56_0==72||LA56_0==74||(LA56_0>=81 && LA56_0<=82)||LA56_0==94) ) {
                     alt56=1;
                 }
 
 
                 switch (alt56) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:6054:3: rule__Line__FeaturesAssignment_3
+            	    // InternalXdiagramDsl.g:6000:3: rule__Line__FeaturesAssignment_3
             	    {
-            	    pushFollow(FOLLOW_43);
+            	    pushFollow(FOLLOW_42);
             	    rule__Line__FeaturesAssignment_3();
 
             	    state._fsp--;
@@ -19653,14 +19493,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Line__Group__4"
-    // InternalXdiagramDsl.g:6062:1: rule__Line__Group__4 : rule__Line__Group__4__Impl ;
+    // InternalXdiagramDsl.g:6008:1: rule__Line__Group__4 : rule__Line__Group__4__Impl ;
     public final void rule__Line__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6066:1: ( rule__Line__Group__4__Impl )
-            // InternalXdiagramDsl.g:6067:2: rule__Line__Group__4__Impl
+            // InternalXdiagramDsl.g:6012:1: ( rule__Line__Group__4__Impl )
+            // InternalXdiagramDsl.g:6013:2: rule__Line__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Line__Group__4__Impl();
@@ -19686,17 +19526,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Line__Group__4__Impl"
-    // InternalXdiagramDsl.g:6073:1: rule__Line__Group__4__Impl : ( '}' ) ;
+    // InternalXdiagramDsl.g:6019:1: rule__Line__Group__4__Impl : ( '}' ) ;
     public final void rule__Line__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6077:1: ( ( '}' ) )
-            // InternalXdiagramDsl.g:6078:1: ( '}' )
+            // InternalXdiagramDsl.g:6023:1: ( ( '}' ) )
+            // InternalXdiagramDsl.g:6024:1: ( '}' )
             {
-            // InternalXdiagramDsl.g:6078:1: ( '}' )
-            // InternalXdiagramDsl.g:6079:2: '}'
+            // InternalXdiagramDsl.g:6024:1: ( '}' )
+            // InternalXdiagramDsl.g:6025:2: '}'
             {
              before(grammarAccess.getLineAccess().getRightCurlyBracketKeyword_4()); 
             match(input,46,FOLLOW_2); 
@@ -19723,16 +19563,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Arrow__Group__0"
-    // InternalXdiagramDsl.g:6089:1: rule__Arrow__Group__0 : rule__Arrow__Group__0__Impl rule__Arrow__Group__1 ;
+    // InternalXdiagramDsl.g:6035:1: rule__Arrow__Group__0 : rule__Arrow__Group__0__Impl rule__Arrow__Group__1 ;
     public final void rule__Arrow__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6093:1: ( rule__Arrow__Group__0__Impl rule__Arrow__Group__1 )
-            // InternalXdiagramDsl.g:6094:2: rule__Arrow__Group__0__Impl rule__Arrow__Group__1
+            // InternalXdiagramDsl.g:6039:1: ( rule__Arrow__Group__0__Impl rule__Arrow__Group__1 )
+            // InternalXdiagramDsl.g:6040:2: rule__Arrow__Group__0__Impl rule__Arrow__Group__1
             {
-            pushFollow(FOLLOW_48);
+            pushFollow(FOLLOW_47);
             rule__Arrow__Group__0__Impl();
 
             state._fsp--;
@@ -19761,21 +19601,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Arrow__Group__0__Impl"
-    // InternalXdiagramDsl.g:6101:1: rule__Arrow__Group__0__Impl : ( () ) ;
+    // InternalXdiagramDsl.g:6047:1: rule__Arrow__Group__0__Impl : ( () ) ;
     public final void rule__Arrow__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6105:1: ( ( () ) )
-            // InternalXdiagramDsl.g:6106:1: ( () )
+            // InternalXdiagramDsl.g:6051:1: ( ( () ) )
+            // InternalXdiagramDsl.g:6052:1: ( () )
             {
-            // InternalXdiagramDsl.g:6106:1: ( () )
-            // InternalXdiagramDsl.g:6107:2: ()
+            // InternalXdiagramDsl.g:6052:1: ( () )
+            // InternalXdiagramDsl.g:6053:2: ()
             {
              before(grammarAccess.getArrowAccess().getArrowAction_0()); 
-            // InternalXdiagramDsl.g:6108:2: ()
-            // InternalXdiagramDsl.g:6108:3: 
+            // InternalXdiagramDsl.g:6054:2: ()
+            // InternalXdiagramDsl.g:6054:3: 
             {
             }
 
@@ -19798,14 +19638,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Arrow__Group__1"
-    // InternalXdiagramDsl.g:6116:1: rule__Arrow__Group__1 : rule__Arrow__Group__1__Impl rule__Arrow__Group__2 ;
+    // InternalXdiagramDsl.g:6062:1: rule__Arrow__Group__1 : rule__Arrow__Group__1__Impl rule__Arrow__Group__2 ;
     public final void rule__Arrow__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6120:1: ( rule__Arrow__Group__1__Impl rule__Arrow__Group__2 )
-            // InternalXdiagramDsl.g:6121:2: rule__Arrow__Group__1__Impl rule__Arrow__Group__2
+            // InternalXdiagramDsl.g:6066:1: ( rule__Arrow__Group__1__Impl rule__Arrow__Group__2 )
+            // InternalXdiagramDsl.g:6067:2: rule__Arrow__Group__1__Impl rule__Arrow__Group__2
             {
             pushFollow(FOLLOW_6);
             rule__Arrow__Group__1__Impl();
@@ -19836,20 +19676,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Arrow__Group__1__Impl"
-    // InternalXdiagramDsl.g:6128:1: rule__Arrow__Group__1__Impl : ( 'arrow' ) ;
+    // InternalXdiagramDsl.g:6074:1: rule__Arrow__Group__1__Impl : ( 'arrow' ) ;
     public final void rule__Arrow__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6132:1: ( ( 'arrow' ) )
-            // InternalXdiagramDsl.g:6133:1: ( 'arrow' )
+            // InternalXdiagramDsl.g:6078:1: ( ( 'arrow' ) )
+            // InternalXdiagramDsl.g:6079:1: ( 'arrow' )
             {
-            // InternalXdiagramDsl.g:6133:1: ( 'arrow' )
-            // InternalXdiagramDsl.g:6134:2: 'arrow'
+            // InternalXdiagramDsl.g:6079:1: ( 'arrow' )
+            // InternalXdiagramDsl.g:6080:2: 'arrow'
             {
              before(grammarAccess.getArrowAccess().getArrowKeyword_1()); 
-            match(input,66,FOLLOW_2); 
+            match(input,65,FOLLOW_2); 
              after(grammarAccess.getArrowAccess().getArrowKeyword_1()); 
 
             }
@@ -19873,16 +19713,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Arrow__Group__2"
-    // InternalXdiagramDsl.g:6143:1: rule__Arrow__Group__2 : rule__Arrow__Group__2__Impl rule__Arrow__Group__3 ;
+    // InternalXdiagramDsl.g:6089:1: rule__Arrow__Group__2 : rule__Arrow__Group__2__Impl rule__Arrow__Group__3 ;
     public final void rule__Arrow__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6147:1: ( rule__Arrow__Group__2__Impl rule__Arrow__Group__3 )
-            // InternalXdiagramDsl.g:6148:2: rule__Arrow__Group__2__Impl rule__Arrow__Group__3
+            // InternalXdiagramDsl.g:6093:1: ( rule__Arrow__Group__2__Impl rule__Arrow__Group__3 )
+            // InternalXdiagramDsl.g:6094:2: rule__Arrow__Group__2__Impl rule__Arrow__Group__3
             {
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_46);
             rule__Arrow__Group__2__Impl();
 
             state._fsp--;
@@ -19911,17 +19751,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Arrow__Group__2__Impl"
-    // InternalXdiagramDsl.g:6155:1: rule__Arrow__Group__2__Impl : ( '{' ) ;
+    // InternalXdiagramDsl.g:6101:1: rule__Arrow__Group__2__Impl : ( '{' ) ;
     public final void rule__Arrow__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6159:1: ( ( '{' ) )
-            // InternalXdiagramDsl.g:6160:1: ( '{' )
+            // InternalXdiagramDsl.g:6105:1: ( ( '{' ) )
+            // InternalXdiagramDsl.g:6106:1: ( '{' )
             {
-            // InternalXdiagramDsl.g:6160:1: ( '{' )
-            // InternalXdiagramDsl.g:6161:2: '{'
+            // InternalXdiagramDsl.g:6106:1: ( '{' )
+            // InternalXdiagramDsl.g:6107:2: '{'
             {
              before(grammarAccess.getArrowAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,43,FOLLOW_2); 
@@ -19948,16 +19788,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Arrow__Group__3"
-    // InternalXdiagramDsl.g:6170:1: rule__Arrow__Group__3 : rule__Arrow__Group__3__Impl rule__Arrow__Group__4 ;
+    // InternalXdiagramDsl.g:6116:1: rule__Arrow__Group__3 : rule__Arrow__Group__3__Impl rule__Arrow__Group__4 ;
     public final void rule__Arrow__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6174:1: ( rule__Arrow__Group__3__Impl rule__Arrow__Group__4 )
-            // InternalXdiagramDsl.g:6175:2: rule__Arrow__Group__3__Impl rule__Arrow__Group__4
+            // InternalXdiagramDsl.g:6120:1: ( rule__Arrow__Group__3__Impl rule__Arrow__Group__4 )
+            // InternalXdiagramDsl.g:6121:2: rule__Arrow__Group__3__Impl rule__Arrow__Group__4
             {
-            pushFollow(FOLLOW_47);
+            pushFollow(FOLLOW_46);
             rule__Arrow__Group__3__Impl();
 
             state._fsp--;
@@ -19986,35 +19826,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Arrow__Group__3__Impl"
-    // InternalXdiagramDsl.g:6182:1: rule__Arrow__Group__3__Impl : ( ( rule__Arrow__FeaturesAssignment_3 )* ) ;
+    // InternalXdiagramDsl.g:6128:1: rule__Arrow__Group__3__Impl : ( ( rule__Arrow__FeaturesAssignment_3 )* ) ;
     public final void rule__Arrow__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6186:1: ( ( ( rule__Arrow__FeaturesAssignment_3 )* ) )
-            // InternalXdiagramDsl.g:6187:1: ( ( rule__Arrow__FeaturesAssignment_3 )* )
+            // InternalXdiagramDsl.g:6132:1: ( ( ( rule__Arrow__FeaturesAssignment_3 )* ) )
+            // InternalXdiagramDsl.g:6133:1: ( ( rule__Arrow__FeaturesAssignment_3 )* )
             {
-            // InternalXdiagramDsl.g:6187:1: ( ( rule__Arrow__FeaturesAssignment_3 )* )
-            // InternalXdiagramDsl.g:6188:2: ( rule__Arrow__FeaturesAssignment_3 )*
+            // InternalXdiagramDsl.g:6133:1: ( ( rule__Arrow__FeaturesAssignment_3 )* )
+            // InternalXdiagramDsl.g:6134:2: ( rule__Arrow__FeaturesAssignment_3 )*
             {
              before(grammarAccess.getArrowAccess().getFeaturesAssignment_3()); 
-            // InternalXdiagramDsl.g:6189:2: ( rule__Arrow__FeaturesAssignment_3 )*
+            // InternalXdiagramDsl.g:6135:2: ( rule__Arrow__FeaturesAssignment_3 )*
             loop57:
             do {
                 int alt57=2;
                 int LA57_0 = input.LA(1);
 
-                if ( (LA57_0==70||LA57_0==72||LA57_0==74||(LA57_0>=81 && LA57_0<=82)||LA57_0==94) ) {
+                if ( (LA57_0==69||LA57_0==72||LA57_0==74||(LA57_0>=81 && LA57_0<=82)||LA57_0==94) ) {
                     alt57=1;
                 }
 
 
                 switch (alt57) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:6189:3: rule__Arrow__FeaturesAssignment_3
+            	    // InternalXdiagramDsl.g:6135:3: rule__Arrow__FeaturesAssignment_3
             	    {
-            	    pushFollow(FOLLOW_43);
+            	    pushFollow(FOLLOW_42);
             	    rule__Arrow__FeaturesAssignment_3();
 
             	    state._fsp--;
@@ -20051,14 +19891,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Arrow__Group__4"
-    // InternalXdiagramDsl.g:6197:1: rule__Arrow__Group__4 : rule__Arrow__Group__4__Impl ;
+    // InternalXdiagramDsl.g:6143:1: rule__Arrow__Group__4 : rule__Arrow__Group__4__Impl ;
     public final void rule__Arrow__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6201:1: ( rule__Arrow__Group__4__Impl )
-            // InternalXdiagramDsl.g:6202:2: rule__Arrow__Group__4__Impl
+            // InternalXdiagramDsl.g:6147:1: ( rule__Arrow__Group__4__Impl )
+            // InternalXdiagramDsl.g:6148:2: rule__Arrow__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Arrow__Group__4__Impl();
@@ -20084,17 +19924,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Arrow__Group__4__Impl"
-    // InternalXdiagramDsl.g:6208:1: rule__Arrow__Group__4__Impl : ( '}' ) ;
+    // InternalXdiagramDsl.g:6154:1: rule__Arrow__Group__4__Impl : ( '}' ) ;
     public final void rule__Arrow__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6212:1: ( ( '}' ) )
-            // InternalXdiagramDsl.g:6213:1: ( '}' )
+            // InternalXdiagramDsl.g:6158:1: ( ( '}' ) )
+            // InternalXdiagramDsl.g:6159:1: ( '}' )
             {
-            // InternalXdiagramDsl.g:6213:1: ( '}' )
-            // InternalXdiagramDsl.g:6214:2: '}'
+            // InternalXdiagramDsl.g:6159:1: ( '}' )
+            // InternalXdiagramDsl.g:6160:2: '}'
             {
              before(grammarAccess.getArrowAccess().getRightCurlyBracketKeyword_4()); 
             match(input,46,FOLLOW_2); 
@@ -20121,14 +19961,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Contains__Group__0"
-    // InternalXdiagramDsl.g:6224:1: rule__Contains__Group__0 : rule__Contains__Group__0__Impl rule__Contains__Group__1 ;
+    // InternalXdiagramDsl.g:6170:1: rule__Contains__Group__0 : rule__Contains__Group__0__Impl rule__Contains__Group__1 ;
     public final void rule__Contains__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6228:1: ( rule__Contains__Group__0__Impl rule__Contains__Group__1 )
-            // InternalXdiagramDsl.g:6229:2: rule__Contains__Group__0__Impl rule__Contains__Group__1
+            // InternalXdiagramDsl.g:6174:1: ( rule__Contains__Group__0__Impl rule__Contains__Group__1 )
+            // InternalXdiagramDsl.g:6175:2: rule__Contains__Group__0__Impl rule__Contains__Group__1
             {
             pushFollow(FOLLOW_13);
             rule__Contains__Group__0__Impl();
@@ -20159,20 +19999,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Contains__Group__0__Impl"
-    // InternalXdiagramDsl.g:6236:1: rule__Contains__Group__0__Impl : ( 'contains' ) ;
+    // InternalXdiagramDsl.g:6182:1: rule__Contains__Group__0__Impl : ( 'contains' ) ;
     public final void rule__Contains__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6240:1: ( ( 'contains' ) )
-            // InternalXdiagramDsl.g:6241:1: ( 'contains' )
+            // InternalXdiagramDsl.g:6186:1: ( ( 'contains' ) )
+            // InternalXdiagramDsl.g:6187:1: ( 'contains' )
             {
-            // InternalXdiagramDsl.g:6241:1: ( 'contains' )
-            // InternalXdiagramDsl.g:6242:2: 'contains'
+            // InternalXdiagramDsl.g:6187:1: ( 'contains' )
+            // InternalXdiagramDsl.g:6188:2: 'contains'
             {
              before(grammarAccess.getContainsAccess().getContainsKeyword_0()); 
-            match(input,67,FOLLOW_2); 
+            match(input,66,FOLLOW_2); 
              after(grammarAccess.getContainsAccess().getContainsKeyword_0()); 
 
             }
@@ -20196,16 +20036,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Contains__Group__1"
-    // InternalXdiagramDsl.g:6251:1: rule__Contains__Group__1 : rule__Contains__Group__1__Impl rule__Contains__Group__2 ;
+    // InternalXdiagramDsl.g:6197:1: rule__Contains__Group__1 : rule__Contains__Group__1__Impl rule__Contains__Group__2 ;
     public final void rule__Contains__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6255:1: ( rule__Contains__Group__1__Impl rule__Contains__Group__2 )
-            // InternalXdiagramDsl.g:6256:2: rule__Contains__Group__1__Impl rule__Contains__Group__2
+            // InternalXdiagramDsl.g:6201:1: ( rule__Contains__Group__1__Impl rule__Contains__Group__2 )
+            // InternalXdiagramDsl.g:6202:2: rule__Contains__Group__1__Impl rule__Contains__Group__2
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             rule__Contains__Group__1__Impl();
 
             state._fsp--;
@@ -20234,21 +20074,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Contains__Group__1__Impl"
-    // InternalXdiagramDsl.g:6263:1: rule__Contains__Group__1__Impl : ( ( rule__Contains__ModelReferenceAssignment_1 ) ) ;
+    // InternalXdiagramDsl.g:6209:1: rule__Contains__Group__1__Impl : ( ( rule__Contains__ModelReferenceAssignment_1 ) ) ;
     public final void rule__Contains__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6267:1: ( ( ( rule__Contains__ModelReferenceAssignment_1 ) ) )
-            // InternalXdiagramDsl.g:6268:1: ( ( rule__Contains__ModelReferenceAssignment_1 ) )
+            // InternalXdiagramDsl.g:6213:1: ( ( ( rule__Contains__ModelReferenceAssignment_1 ) ) )
+            // InternalXdiagramDsl.g:6214:1: ( ( rule__Contains__ModelReferenceAssignment_1 ) )
             {
-            // InternalXdiagramDsl.g:6268:1: ( ( rule__Contains__ModelReferenceAssignment_1 ) )
-            // InternalXdiagramDsl.g:6269:2: ( rule__Contains__ModelReferenceAssignment_1 )
+            // InternalXdiagramDsl.g:6214:1: ( ( rule__Contains__ModelReferenceAssignment_1 ) )
+            // InternalXdiagramDsl.g:6215:2: ( rule__Contains__ModelReferenceAssignment_1 )
             {
              before(grammarAccess.getContainsAccess().getModelReferenceAssignment_1()); 
-            // InternalXdiagramDsl.g:6270:2: ( rule__Contains__ModelReferenceAssignment_1 )
-            // InternalXdiagramDsl.g:6270:3: rule__Contains__ModelReferenceAssignment_1
+            // InternalXdiagramDsl.g:6216:2: ( rule__Contains__ModelReferenceAssignment_1 )
+            // InternalXdiagramDsl.g:6216:3: rule__Contains__ModelReferenceAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Contains__ModelReferenceAssignment_1();
@@ -20281,16 +20121,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Contains__Group__2"
-    // InternalXdiagramDsl.g:6278:1: rule__Contains__Group__2 : rule__Contains__Group__2__Impl rule__Contains__Group__3 ;
+    // InternalXdiagramDsl.g:6224:1: rule__Contains__Group__2 : rule__Contains__Group__2__Impl rule__Contains__Group__3 ;
     public final void rule__Contains__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6282:1: ( rule__Contains__Group__2__Impl rule__Contains__Group__3 )
-            // InternalXdiagramDsl.g:6283:2: rule__Contains__Group__2__Impl rule__Contains__Group__3
+            // InternalXdiagramDsl.g:6228:1: ( rule__Contains__Group__2__Impl rule__Contains__Group__3 )
+            // InternalXdiagramDsl.g:6229:2: rule__Contains__Group__2__Impl rule__Contains__Group__3
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             rule__Contains__Group__2__Impl();
 
             state._fsp--;
@@ -20319,20 +20159,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Contains__Group__2__Impl"
-    // InternalXdiagramDsl.g:6290:1: rule__Contains__Group__2__Impl : ( ( rule__Contains__ConditionalAssignment_2 )? ) ;
+    // InternalXdiagramDsl.g:6236:1: rule__Contains__Group__2__Impl : ( ( rule__Contains__ConditionalAssignment_2 )? ) ;
     public final void rule__Contains__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6294:1: ( ( ( rule__Contains__ConditionalAssignment_2 )? ) )
-            // InternalXdiagramDsl.g:6295:1: ( ( rule__Contains__ConditionalAssignment_2 )? )
+            // InternalXdiagramDsl.g:6240:1: ( ( ( rule__Contains__ConditionalAssignment_2 )? ) )
+            // InternalXdiagramDsl.g:6241:1: ( ( rule__Contains__ConditionalAssignment_2 )? )
             {
-            // InternalXdiagramDsl.g:6295:1: ( ( rule__Contains__ConditionalAssignment_2 )? )
-            // InternalXdiagramDsl.g:6296:2: ( rule__Contains__ConditionalAssignment_2 )?
+            // InternalXdiagramDsl.g:6241:1: ( ( rule__Contains__ConditionalAssignment_2 )? )
+            // InternalXdiagramDsl.g:6242:2: ( rule__Contains__ConditionalAssignment_2 )?
             {
              before(grammarAccess.getContainsAccess().getConditionalAssignment_2()); 
-            // InternalXdiagramDsl.g:6297:2: ( rule__Contains__ConditionalAssignment_2 )?
+            // InternalXdiagramDsl.g:6243:2: ( rule__Contains__ConditionalAssignment_2 )?
             int alt58=2;
             int LA58_0 = input.LA(1);
 
@@ -20341,7 +20181,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
             }
             switch (alt58) {
                 case 1 :
-                    // InternalXdiagramDsl.g:6297:3: rule__Contains__ConditionalAssignment_2
+                    // InternalXdiagramDsl.g:6243:3: rule__Contains__ConditionalAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Contains__ConditionalAssignment_2();
@@ -20377,14 +20217,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Contains__Group__3"
-    // InternalXdiagramDsl.g:6305:1: rule__Contains__Group__3 : rule__Contains__Group__3__Impl ;
+    // InternalXdiagramDsl.g:6251:1: rule__Contains__Group__3 : rule__Contains__Group__3__Impl ;
     public final void rule__Contains__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6309:1: ( rule__Contains__Group__3__Impl )
-            // InternalXdiagramDsl.g:6310:2: rule__Contains__Group__3__Impl
+            // InternalXdiagramDsl.g:6255:1: ( rule__Contains__Group__3__Impl )
+            // InternalXdiagramDsl.g:6256:2: rule__Contains__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Contains__Group__3__Impl();
@@ -20410,20 +20250,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Contains__Group__3__Impl"
-    // InternalXdiagramDsl.g:6316:1: rule__Contains__Group__3__Impl : ( ';' ) ;
+    // InternalXdiagramDsl.g:6262:1: rule__Contains__Group__3__Impl : ( ';' ) ;
     public final void rule__Contains__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6320:1: ( ( ';' ) )
-            // InternalXdiagramDsl.g:6321:1: ( ';' )
+            // InternalXdiagramDsl.g:6266:1: ( ( ';' ) )
+            // InternalXdiagramDsl.g:6267:1: ( ';' )
             {
-            // InternalXdiagramDsl.g:6321:1: ( ';' )
-            // InternalXdiagramDsl.g:6322:2: ';'
+            // InternalXdiagramDsl.g:6267:1: ( ';' )
+            // InternalXdiagramDsl.g:6268:2: ';'
             {
              before(grammarAccess.getContainsAccess().getSemicolonKeyword_3()); 
-            match(input,58,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getContainsAccess().getSemicolonKeyword_3()); 
 
             }
@@ -20447,14 +20287,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__DoubleValue__Group__0"
-    // InternalXdiagramDsl.g:6332:1: rule__DoubleValue__Group__0 : rule__DoubleValue__Group__0__Impl rule__DoubleValue__Group__1 ;
+    // InternalXdiagramDsl.g:6278:1: rule__DoubleValue__Group__0 : rule__DoubleValue__Group__0__Impl rule__DoubleValue__Group__1 ;
     public final void rule__DoubleValue__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6336:1: ( rule__DoubleValue__Group__0__Impl rule__DoubleValue__Group__1 )
-            // InternalXdiagramDsl.g:6337:2: rule__DoubleValue__Group__0__Impl rule__DoubleValue__Group__1
+            // InternalXdiagramDsl.g:6282:1: ( rule__DoubleValue__Group__0__Impl rule__DoubleValue__Group__1 )
+            // InternalXdiagramDsl.g:6283:2: rule__DoubleValue__Group__0__Impl rule__DoubleValue__Group__1
             {
             pushFollow(FOLLOW_11);
             rule__DoubleValue__Group__0__Impl();
@@ -20485,21 +20325,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__DoubleValue__Group__0__Impl"
-    // InternalXdiagramDsl.g:6344:1: rule__DoubleValue__Group__0__Impl : ( ( rule__DoubleValue__ValueIntAssignment_0 ) ) ;
+    // InternalXdiagramDsl.g:6290:1: rule__DoubleValue__Group__0__Impl : ( ( rule__DoubleValue__ValueIntAssignment_0 ) ) ;
     public final void rule__DoubleValue__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6348:1: ( ( ( rule__DoubleValue__ValueIntAssignment_0 ) ) )
-            // InternalXdiagramDsl.g:6349:1: ( ( rule__DoubleValue__ValueIntAssignment_0 ) )
+            // InternalXdiagramDsl.g:6294:1: ( ( ( rule__DoubleValue__ValueIntAssignment_0 ) ) )
+            // InternalXdiagramDsl.g:6295:1: ( ( rule__DoubleValue__ValueIntAssignment_0 ) )
             {
-            // InternalXdiagramDsl.g:6349:1: ( ( rule__DoubleValue__ValueIntAssignment_0 ) )
-            // InternalXdiagramDsl.g:6350:2: ( rule__DoubleValue__ValueIntAssignment_0 )
+            // InternalXdiagramDsl.g:6295:1: ( ( rule__DoubleValue__ValueIntAssignment_0 ) )
+            // InternalXdiagramDsl.g:6296:2: ( rule__DoubleValue__ValueIntAssignment_0 )
             {
              before(grammarAccess.getDoubleValueAccess().getValueIntAssignment_0()); 
-            // InternalXdiagramDsl.g:6351:2: ( rule__DoubleValue__ValueIntAssignment_0 )
-            // InternalXdiagramDsl.g:6351:3: rule__DoubleValue__ValueIntAssignment_0
+            // InternalXdiagramDsl.g:6297:2: ( rule__DoubleValue__ValueIntAssignment_0 )
+            // InternalXdiagramDsl.g:6297:3: rule__DoubleValue__ValueIntAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__DoubleValue__ValueIntAssignment_0();
@@ -20532,16 +20372,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__DoubleValue__Group__1"
-    // InternalXdiagramDsl.g:6359:1: rule__DoubleValue__Group__1 : rule__DoubleValue__Group__1__Impl rule__DoubleValue__Group__2 ;
+    // InternalXdiagramDsl.g:6305:1: rule__DoubleValue__Group__1 : rule__DoubleValue__Group__1__Impl rule__DoubleValue__Group__2 ;
     public final void rule__DoubleValue__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6363:1: ( rule__DoubleValue__Group__1__Impl rule__DoubleValue__Group__2 )
-            // InternalXdiagramDsl.g:6364:2: rule__DoubleValue__Group__1__Impl rule__DoubleValue__Group__2
+            // InternalXdiagramDsl.g:6309:1: ( rule__DoubleValue__Group__1__Impl rule__DoubleValue__Group__2 )
+            // InternalXdiagramDsl.g:6310:2: rule__DoubleValue__Group__1__Impl rule__DoubleValue__Group__2
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_29);
             rule__DoubleValue__Group__1__Impl();
 
             state._fsp--;
@@ -20570,17 +20410,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__DoubleValue__Group__1__Impl"
-    // InternalXdiagramDsl.g:6371:1: rule__DoubleValue__Group__1__Impl : ( '.' ) ;
+    // InternalXdiagramDsl.g:6317:1: rule__DoubleValue__Group__1__Impl : ( '.' ) ;
     public final void rule__DoubleValue__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6375:1: ( ( '.' ) )
-            // InternalXdiagramDsl.g:6376:1: ( '.' )
+            // InternalXdiagramDsl.g:6321:1: ( ( '.' ) )
+            // InternalXdiagramDsl.g:6322:1: ( '.' )
             {
-            // InternalXdiagramDsl.g:6376:1: ( '.' )
-            // InternalXdiagramDsl.g:6377:2: '.'
+            // InternalXdiagramDsl.g:6322:1: ( '.' )
+            // InternalXdiagramDsl.g:6323:2: '.'
             {
              before(grammarAccess.getDoubleValueAccess().getFullStopKeyword_1()); 
             match(input,47,FOLLOW_2); 
@@ -20607,14 +20447,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__DoubleValue__Group__2"
-    // InternalXdiagramDsl.g:6386:1: rule__DoubleValue__Group__2 : rule__DoubleValue__Group__2__Impl ;
+    // InternalXdiagramDsl.g:6332:1: rule__DoubleValue__Group__2 : rule__DoubleValue__Group__2__Impl ;
     public final void rule__DoubleValue__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6390:1: ( rule__DoubleValue__Group__2__Impl )
-            // InternalXdiagramDsl.g:6391:2: rule__DoubleValue__Group__2__Impl
+            // InternalXdiagramDsl.g:6336:1: ( rule__DoubleValue__Group__2__Impl )
+            // InternalXdiagramDsl.g:6337:2: rule__DoubleValue__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__DoubleValue__Group__2__Impl();
@@ -20640,21 +20480,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__DoubleValue__Group__2__Impl"
-    // InternalXdiagramDsl.g:6397:1: rule__DoubleValue__Group__2__Impl : ( ( rule__DoubleValue__ValueDecimalAssignment_2 ) ) ;
+    // InternalXdiagramDsl.g:6343:1: rule__DoubleValue__Group__2__Impl : ( ( rule__DoubleValue__ValueDecimalAssignment_2 ) ) ;
     public final void rule__DoubleValue__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6401:1: ( ( ( rule__DoubleValue__ValueDecimalAssignment_2 ) ) )
-            // InternalXdiagramDsl.g:6402:1: ( ( rule__DoubleValue__ValueDecimalAssignment_2 ) )
+            // InternalXdiagramDsl.g:6347:1: ( ( ( rule__DoubleValue__ValueDecimalAssignment_2 ) ) )
+            // InternalXdiagramDsl.g:6348:1: ( ( rule__DoubleValue__ValueDecimalAssignment_2 ) )
             {
-            // InternalXdiagramDsl.g:6402:1: ( ( rule__DoubleValue__ValueDecimalAssignment_2 ) )
-            // InternalXdiagramDsl.g:6403:2: ( rule__DoubleValue__ValueDecimalAssignment_2 )
+            // InternalXdiagramDsl.g:6348:1: ( ( rule__DoubleValue__ValueDecimalAssignment_2 ) )
+            // InternalXdiagramDsl.g:6349:2: ( rule__DoubleValue__ValueDecimalAssignment_2 )
             {
              before(grammarAccess.getDoubleValueAccess().getValueDecimalAssignment_2()); 
-            // InternalXdiagramDsl.g:6404:2: ( rule__DoubleValue__ValueDecimalAssignment_2 )
-            // InternalXdiagramDsl.g:6404:3: rule__DoubleValue__ValueDecimalAssignment_2
+            // InternalXdiagramDsl.g:6350:2: ( rule__DoubleValue__ValueDecimalAssignment_2 )
+            // InternalXdiagramDsl.g:6350:3: rule__DoubleValue__ValueDecimalAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__DoubleValue__ValueDecimalAssignment_2();
@@ -20687,16 +20527,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__Group__0"
-    // InternalXdiagramDsl.g:6413:1: rule__Label__Group__0 : rule__Label__Group__0__Impl rule__Label__Group__1 ;
+    // InternalXdiagramDsl.g:6359:1: rule__Label__Group__0 : rule__Label__Group__0__Impl rule__Label__Group__1 ;
     public final void rule__Label__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6417:1: ( rule__Label__Group__0__Impl rule__Label__Group__1 )
-            // InternalXdiagramDsl.g:6418:2: rule__Label__Group__0__Impl rule__Label__Group__1
+            // InternalXdiagramDsl.g:6363:1: ( rule__Label__Group__0__Impl rule__Label__Group__1 )
+            // InternalXdiagramDsl.g:6364:2: rule__Label__Group__0__Impl rule__Label__Group__1
             {
-            pushFollow(FOLLOW_50);
+            pushFollow(FOLLOW_49);
             rule__Label__Group__0__Impl();
 
             state._fsp--;
@@ -20725,21 +20565,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__Group__0__Impl"
-    // InternalXdiagramDsl.g:6425:1: rule__Label__Group__0__Impl : ( () ) ;
+    // InternalXdiagramDsl.g:6371:1: rule__Label__Group__0__Impl : ( () ) ;
     public final void rule__Label__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6429:1: ( ( () ) )
-            // InternalXdiagramDsl.g:6430:1: ( () )
+            // InternalXdiagramDsl.g:6375:1: ( ( () ) )
+            // InternalXdiagramDsl.g:6376:1: ( () )
             {
-            // InternalXdiagramDsl.g:6430:1: ( () )
-            // InternalXdiagramDsl.g:6431:2: ()
+            // InternalXdiagramDsl.g:6376:1: ( () )
+            // InternalXdiagramDsl.g:6377:2: ()
             {
              before(grammarAccess.getLabelAccess().getLabelAction_0()); 
-            // InternalXdiagramDsl.g:6432:2: ()
-            // InternalXdiagramDsl.g:6432:3: 
+            // InternalXdiagramDsl.g:6378:2: ()
+            // InternalXdiagramDsl.g:6378:3: 
             {
             }
 
@@ -20762,14 +20602,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__Group__1"
-    // InternalXdiagramDsl.g:6440:1: rule__Label__Group__1 : rule__Label__Group__1__Impl rule__Label__Group__2 ;
+    // InternalXdiagramDsl.g:6386:1: rule__Label__Group__1 : rule__Label__Group__1__Impl rule__Label__Group__2 ;
     public final void rule__Label__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6444:1: ( rule__Label__Group__1__Impl rule__Label__Group__2 )
-            // InternalXdiagramDsl.g:6445:2: rule__Label__Group__1__Impl rule__Label__Group__2
+            // InternalXdiagramDsl.g:6390:1: ( rule__Label__Group__1__Impl rule__Label__Group__2 )
+            // InternalXdiagramDsl.g:6391:2: rule__Label__Group__1__Impl rule__Label__Group__2
             {
             pushFollow(FOLLOW_6);
             rule__Label__Group__1__Impl();
@@ -20800,20 +20640,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__Group__1__Impl"
-    // InternalXdiagramDsl.g:6452:1: rule__Label__Group__1__Impl : ( 'label' ) ;
+    // InternalXdiagramDsl.g:6398:1: rule__Label__Group__1__Impl : ( 'label' ) ;
     public final void rule__Label__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6456:1: ( ( 'label' ) )
-            // InternalXdiagramDsl.g:6457:1: ( 'label' )
+            // InternalXdiagramDsl.g:6402:1: ( ( 'label' ) )
+            // InternalXdiagramDsl.g:6403:1: ( 'label' )
             {
-            // InternalXdiagramDsl.g:6457:1: ( 'label' )
-            // InternalXdiagramDsl.g:6458:2: 'label'
+            // InternalXdiagramDsl.g:6403:1: ( 'label' )
+            // InternalXdiagramDsl.g:6404:2: 'label'
             {
              before(grammarAccess.getLabelAccess().getLabelKeyword_1()); 
-            match(input,68,FOLLOW_2); 
+            match(input,67,FOLLOW_2); 
              after(grammarAccess.getLabelAccess().getLabelKeyword_1()); 
 
             }
@@ -20837,16 +20677,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__Group__2"
-    // InternalXdiagramDsl.g:6467:1: rule__Label__Group__2 : rule__Label__Group__2__Impl rule__Label__Group__3 ;
+    // InternalXdiagramDsl.g:6413:1: rule__Label__Group__2 : rule__Label__Group__2__Impl rule__Label__Group__3 ;
     public final void rule__Label__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6471:1: ( rule__Label__Group__2__Impl rule__Label__Group__3 )
-            // InternalXdiagramDsl.g:6472:2: rule__Label__Group__2__Impl rule__Label__Group__3
+            // InternalXdiagramDsl.g:6417:1: ( rule__Label__Group__2__Impl rule__Label__Group__3 )
+            // InternalXdiagramDsl.g:6418:2: rule__Label__Group__2__Impl rule__Label__Group__3
             {
-            pushFollow(FOLLOW_51);
+            pushFollow(FOLLOW_50);
             rule__Label__Group__2__Impl();
 
             state._fsp--;
@@ -20875,17 +20715,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__Group__2__Impl"
-    // InternalXdiagramDsl.g:6479:1: rule__Label__Group__2__Impl : ( '{' ) ;
+    // InternalXdiagramDsl.g:6425:1: rule__Label__Group__2__Impl : ( '{' ) ;
     public final void rule__Label__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6483:1: ( ( '{' ) )
-            // InternalXdiagramDsl.g:6484:1: ( '{' )
+            // InternalXdiagramDsl.g:6429:1: ( ( '{' ) )
+            // InternalXdiagramDsl.g:6430:1: ( '{' )
             {
-            // InternalXdiagramDsl.g:6484:1: ( '{' )
-            // InternalXdiagramDsl.g:6485:2: '{'
+            // InternalXdiagramDsl.g:6430:1: ( '{' )
+            // InternalXdiagramDsl.g:6431:2: '{'
             {
              before(grammarAccess.getLabelAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,43,FOLLOW_2); 
@@ -20912,16 +20752,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__Group__3"
-    // InternalXdiagramDsl.g:6494:1: rule__Label__Group__3 : rule__Label__Group__3__Impl rule__Label__Group__4 ;
+    // InternalXdiagramDsl.g:6440:1: rule__Label__Group__3 : rule__Label__Group__3__Impl rule__Label__Group__4 ;
     public final void rule__Label__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6498:1: ( rule__Label__Group__3__Impl rule__Label__Group__4 )
-            // InternalXdiagramDsl.g:6499:2: rule__Label__Group__3__Impl rule__Label__Group__4
+            // InternalXdiagramDsl.g:6444:1: ( rule__Label__Group__3__Impl rule__Label__Group__4 )
+            // InternalXdiagramDsl.g:6445:2: rule__Label__Group__3__Impl rule__Label__Group__4
             {
-            pushFollow(FOLLOW_51);
+            pushFollow(FOLLOW_50);
             rule__Label__Group__3__Impl();
 
             state._fsp--;
@@ -20950,35 +20790,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__Group__3__Impl"
-    // InternalXdiagramDsl.g:6506:1: rule__Label__Group__3__Impl : ( ( rule__Label__FeaturesAssignment_3 )* ) ;
+    // InternalXdiagramDsl.g:6452:1: rule__Label__Group__3__Impl : ( ( rule__Label__FeaturesAssignment_3 )* ) ;
     public final void rule__Label__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6510:1: ( ( ( rule__Label__FeaturesAssignment_3 )* ) )
-            // InternalXdiagramDsl.g:6511:1: ( ( rule__Label__FeaturesAssignment_3 )* )
+            // InternalXdiagramDsl.g:6456:1: ( ( ( rule__Label__FeaturesAssignment_3 )* ) )
+            // InternalXdiagramDsl.g:6457:1: ( ( rule__Label__FeaturesAssignment_3 )* )
             {
-            // InternalXdiagramDsl.g:6511:1: ( ( rule__Label__FeaturesAssignment_3 )* )
-            // InternalXdiagramDsl.g:6512:2: ( rule__Label__FeaturesAssignment_3 )*
+            // InternalXdiagramDsl.g:6457:1: ( ( rule__Label__FeaturesAssignment_3 )* )
+            // InternalXdiagramDsl.g:6458:2: ( rule__Label__FeaturesAssignment_3 )*
             {
              before(grammarAccess.getLabelAccess().getFeaturesAssignment_3()); 
-            // InternalXdiagramDsl.g:6513:2: ( rule__Label__FeaturesAssignment_3 )*
+            // InternalXdiagramDsl.g:6459:2: ( rule__Label__FeaturesAssignment_3 )*
             loop59:
             do {
                 int alt59=2;
                 int LA59_0 = input.LA(1);
 
-                if ( (LA59_0==70||LA59_0==72||LA59_0==74||(LA59_0>=78 && LA59_0<=80)||LA59_0==94) ) {
+                if ( (LA59_0==69||LA59_0==72||LA59_0==74||(LA59_0>=78 && LA59_0<=80)||LA59_0==94) ) {
                     alt59=1;
                 }
 
 
                 switch (alt59) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:6513:3: rule__Label__FeaturesAssignment_3
+            	    // InternalXdiagramDsl.g:6459:3: rule__Label__FeaturesAssignment_3
             	    {
-            	    pushFollow(FOLLOW_52);
+            	    pushFollow(FOLLOW_51);
             	    rule__Label__FeaturesAssignment_3();
 
             	    state._fsp--;
@@ -21015,16 +20855,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__Group__4"
-    // InternalXdiagramDsl.g:6521:1: rule__Label__Group__4 : rule__Label__Group__4__Impl rule__Label__Group__5 ;
+    // InternalXdiagramDsl.g:6467:1: rule__Label__Group__4 : rule__Label__Group__4__Impl rule__Label__Group__5 ;
     public final void rule__Label__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6525:1: ( rule__Label__Group__4__Impl rule__Label__Group__5 )
-            // InternalXdiagramDsl.g:6526:2: rule__Label__Group__4__Impl rule__Label__Group__5
+            // InternalXdiagramDsl.g:6471:1: ( rule__Label__Group__4__Impl rule__Label__Group__5 )
+            // InternalXdiagramDsl.g:6472:2: rule__Label__Group__4__Impl rule__Label__Group__5
             {
-            pushFollow(FOLLOW_51);
+            pushFollow(FOLLOW_50);
             rule__Label__Group__4__Impl();
 
             state._fsp--;
@@ -21053,35 +20893,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__Group__4__Impl"
-    // InternalXdiagramDsl.g:6533:1: rule__Label__Group__4__Impl : ( ( rule__Label__Group_4__0 )* ) ;
+    // InternalXdiagramDsl.g:6479:1: rule__Label__Group__4__Impl : ( ( rule__Label__Group_4__0 )* ) ;
     public final void rule__Label__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6537:1: ( ( ( rule__Label__Group_4__0 )* ) )
-            // InternalXdiagramDsl.g:6538:1: ( ( rule__Label__Group_4__0 )* )
+            // InternalXdiagramDsl.g:6483:1: ( ( ( rule__Label__Group_4__0 )* ) )
+            // InternalXdiagramDsl.g:6484:1: ( ( rule__Label__Group_4__0 )* )
             {
-            // InternalXdiagramDsl.g:6538:1: ( ( rule__Label__Group_4__0 )* )
-            // InternalXdiagramDsl.g:6539:2: ( rule__Label__Group_4__0 )*
+            // InternalXdiagramDsl.g:6484:1: ( ( rule__Label__Group_4__0 )* )
+            // InternalXdiagramDsl.g:6485:2: ( rule__Label__Group_4__0 )*
             {
              before(grammarAccess.getLabelAccess().getGroup_4()); 
-            // InternalXdiagramDsl.g:6540:2: ( rule__Label__Group_4__0 )*
+            // InternalXdiagramDsl.g:6486:2: ( rule__Label__Group_4__0 )*
             loop60:
             do {
                 int alt60=2;
                 int LA60_0 = input.LA(1);
 
-                if ( (LA60_0==63) ) {
+                if ( (LA60_0==62) ) {
                     alt60=1;
                 }
 
 
                 switch (alt60) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:6540:3: rule__Label__Group_4__0
+            	    // InternalXdiagramDsl.g:6486:3: rule__Label__Group_4__0
             	    {
-            	    pushFollow(FOLLOW_38);
+            	    pushFollow(FOLLOW_37);
             	    rule__Label__Group_4__0();
 
             	    state._fsp--;
@@ -21118,14 +20958,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__Group__5"
-    // InternalXdiagramDsl.g:6548:1: rule__Label__Group__5 : rule__Label__Group__5__Impl ;
+    // InternalXdiagramDsl.g:6494:1: rule__Label__Group__5 : rule__Label__Group__5__Impl ;
     public final void rule__Label__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6552:1: ( rule__Label__Group__5__Impl )
-            // InternalXdiagramDsl.g:6553:2: rule__Label__Group__5__Impl
+            // InternalXdiagramDsl.g:6498:1: ( rule__Label__Group__5__Impl )
+            // InternalXdiagramDsl.g:6499:2: rule__Label__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Label__Group__5__Impl();
@@ -21151,17 +20991,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__Group__5__Impl"
-    // InternalXdiagramDsl.g:6559:1: rule__Label__Group__5__Impl : ( '}' ) ;
+    // InternalXdiagramDsl.g:6505:1: rule__Label__Group__5__Impl : ( '}' ) ;
     public final void rule__Label__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6563:1: ( ( '}' ) )
-            // InternalXdiagramDsl.g:6564:1: ( '}' )
+            // InternalXdiagramDsl.g:6509:1: ( ( '}' ) )
+            // InternalXdiagramDsl.g:6510:1: ( '}' )
             {
-            // InternalXdiagramDsl.g:6564:1: ( '}' )
-            // InternalXdiagramDsl.g:6565:2: '}'
+            // InternalXdiagramDsl.g:6510:1: ( '}' )
+            // InternalXdiagramDsl.g:6511:2: '}'
             {
              before(grammarAccess.getLabelAccess().getRightCurlyBracketKeyword_5()); 
             match(input,46,FOLLOW_2); 
@@ -21188,16 +21028,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__Group_4__0"
-    // InternalXdiagramDsl.g:6575:1: rule__Label__Group_4__0 : rule__Label__Group_4__0__Impl rule__Label__Group_4__1 ;
+    // InternalXdiagramDsl.g:6521:1: rule__Label__Group_4__0 : rule__Label__Group_4__0__Impl rule__Label__Group_4__1 ;
     public final void rule__Label__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6579:1: ( rule__Label__Group_4__0__Impl rule__Label__Group_4__1 )
-            // InternalXdiagramDsl.g:6580:2: rule__Label__Group_4__0__Impl rule__Label__Group_4__1
+            // InternalXdiagramDsl.g:6525:1: ( rule__Label__Group_4__0__Impl rule__Label__Group_4__1 )
+            // InternalXdiagramDsl.g:6526:2: rule__Label__Group_4__0__Impl rule__Label__Group_4__1
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_26);
             rule__Label__Group_4__0__Impl();
 
             state._fsp--;
@@ -21226,20 +21066,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__Group_4__0__Impl"
-    // InternalXdiagramDsl.g:6587:1: rule__Label__Group_4__0__Impl : ( 'child' ) ;
+    // InternalXdiagramDsl.g:6533:1: rule__Label__Group_4__0__Impl : ( 'child' ) ;
     public final void rule__Label__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6591:1: ( ( 'child' ) )
-            // InternalXdiagramDsl.g:6592:1: ( 'child' )
+            // InternalXdiagramDsl.g:6537:1: ( ( 'child' ) )
+            // InternalXdiagramDsl.g:6538:1: ( 'child' )
             {
-            // InternalXdiagramDsl.g:6592:1: ( 'child' )
-            // InternalXdiagramDsl.g:6593:2: 'child'
+            // InternalXdiagramDsl.g:6538:1: ( 'child' )
+            // InternalXdiagramDsl.g:6539:2: 'child'
             {
              before(grammarAccess.getLabelAccess().getChildKeyword_4_0()); 
-            match(input,63,FOLLOW_2); 
+            match(input,62,FOLLOW_2); 
              after(grammarAccess.getLabelAccess().getChildKeyword_4_0()); 
 
             }
@@ -21263,14 +21103,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__Group_4__1"
-    // InternalXdiagramDsl.g:6602:1: rule__Label__Group_4__1 : rule__Label__Group_4__1__Impl ;
+    // InternalXdiagramDsl.g:6548:1: rule__Label__Group_4__1 : rule__Label__Group_4__1__Impl ;
     public final void rule__Label__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6606:1: ( rule__Label__Group_4__1__Impl )
-            // InternalXdiagramDsl.g:6607:2: rule__Label__Group_4__1__Impl
+            // InternalXdiagramDsl.g:6552:1: ( rule__Label__Group_4__1__Impl )
+            // InternalXdiagramDsl.g:6553:2: rule__Label__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Label__Group_4__1__Impl();
@@ -21296,21 +21136,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__Group_4__1__Impl"
-    // InternalXdiagramDsl.g:6613:1: rule__Label__Group_4__1__Impl : ( ( rule__Label__ChildrenAssignment_4_1 ) ) ;
+    // InternalXdiagramDsl.g:6559:1: rule__Label__Group_4__1__Impl : ( ( rule__Label__ChildrenAssignment_4_1 ) ) ;
     public final void rule__Label__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6617:1: ( ( ( rule__Label__ChildrenAssignment_4_1 ) ) )
-            // InternalXdiagramDsl.g:6618:1: ( ( rule__Label__ChildrenAssignment_4_1 ) )
+            // InternalXdiagramDsl.g:6563:1: ( ( ( rule__Label__ChildrenAssignment_4_1 ) ) )
+            // InternalXdiagramDsl.g:6564:1: ( ( rule__Label__ChildrenAssignment_4_1 ) )
             {
-            // InternalXdiagramDsl.g:6618:1: ( ( rule__Label__ChildrenAssignment_4_1 ) )
-            // InternalXdiagramDsl.g:6619:2: ( rule__Label__ChildrenAssignment_4_1 )
+            // InternalXdiagramDsl.g:6564:1: ( ( rule__Label__ChildrenAssignment_4_1 ) )
+            // InternalXdiagramDsl.g:6565:2: ( rule__Label__ChildrenAssignment_4_1 )
             {
              before(grammarAccess.getLabelAccess().getChildrenAssignment_4_1()); 
-            // InternalXdiagramDsl.g:6620:2: ( rule__Label__ChildrenAssignment_4_1 )
-            // InternalXdiagramDsl.g:6620:3: rule__Label__ChildrenAssignment_4_1
+            // InternalXdiagramDsl.g:6566:2: ( rule__Label__ChildrenAssignment_4_1 )
+            // InternalXdiagramDsl.g:6566:3: rule__Label__ChildrenAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__Label__ChildrenAssignment_4_1();
@@ -21343,14 +21183,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__Group__0"
-    // InternalXdiagramDsl.g:6629:1: rule__Image__Group__0 : rule__Image__Group__0__Impl rule__Image__Group__1 ;
+    // InternalXdiagramDsl.g:6575:1: rule__Image__Group__0 : rule__Image__Group__0__Impl rule__Image__Group__1 ;
     public final void rule__Image__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6633:1: ( rule__Image__Group__0__Impl rule__Image__Group__1 )
-            // InternalXdiagramDsl.g:6634:2: rule__Image__Group__0__Impl rule__Image__Group__1
+            // InternalXdiagramDsl.g:6579:1: ( rule__Image__Group__0__Impl rule__Image__Group__1 )
+            // InternalXdiagramDsl.g:6580:2: rule__Image__Group__0__Impl rule__Image__Group__1
             {
             pushFollow(FOLLOW_8);
             rule__Image__Group__0__Impl();
@@ -21381,20 +21221,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__Group__0__Impl"
-    // InternalXdiagramDsl.g:6641:1: rule__Image__Group__0__Impl : ( 'image' ) ;
+    // InternalXdiagramDsl.g:6587:1: rule__Image__Group__0__Impl : ( 'image' ) ;
     public final void rule__Image__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6645:1: ( ( 'image' ) )
-            // InternalXdiagramDsl.g:6646:1: ( 'image' )
+            // InternalXdiagramDsl.g:6591:1: ( ( 'image' ) )
+            // InternalXdiagramDsl.g:6592:1: ( 'image' )
             {
-            // InternalXdiagramDsl.g:6646:1: ( 'image' )
-            // InternalXdiagramDsl.g:6647:2: 'image'
+            // InternalXdiagramDsl.g:6592:1: ( 'image' )
+            // InternalXdiagramDsl.g:6593:2: 'image'
             {
              before(grammarAccess.getImageAccess().getImageKeyword_0()); 
-            match(input,69,FOLLOW_2); 
+            match(input,68,FOLLOW_2); 
              after(grammarAccess.getImageAccess().getImageKeyword_0()); 
 
             }
@@ -21418,14 +21258,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__Group__1"
-    // InternalXdiagramDsl.g:6656:1: rule__Image__Group__1 : rule__Image__Group__1__Impl rule__Image__Group__2 ;
+    // InternalXdiagramDsl.g:6602:1: rule__Image__Group__1 : rule__Image__Group__1__Impl rule__Image__Group__2 ;
     public final void rule__Image__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6660:1: ( rule__Image__Group__1__Impl rule__Image__Group__2 )
-            // InternalXdiagramDsl.g:6661:2: rule__Image__Group__1__Impl rule__Image__Group__2
+            // InternalXdiagramDsl.g:6606:1: ( rule__Image__Group__1__Impl rule__Image__Group__2 )
+            // InternalXdiagramDsl.g:6607:2: rule__Image__Group__1__Impl rule__Image__Group__2
             {
             pushFollow(FOLLOW_6);
             rule__Image__Group__1__Impl();
@@ -21456,21 +21296,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__Group__1__Impl"
-    // InternalXdiagramDsl.g:6668:1: rule__Image__Group__1__Impl : ( ( rule__Image__ImageIdAssignment_1 ) ) ;
+    // InternalXdiagramDsl.g:6614:1: rule__Image__Group__1__Impl : ( ( rule__Image__ImageIdAssignment_1 ) ) ;
     public final void rule__Image__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6672:1: ( ( ( rule__Image__ImageIdAssignment_1 ) ) )
-            // InternalXdiagramDsl.g:6673:1: ( ( rule__Image__ImageIdAssignment_1 ) )
+            // InternalXdiagramDsl.g:6618:1: ( ( ( rule__Image__ImageIdAssignment_1 ) ) )
+            // InternalXdiagramDsl.g:6619:1: ( ( rule__Image__ImageIdAssignment_1 ) )
             {
-            // InternalXdiagramDsl.g:6673:1: ( ( rule__Image__ImageIdAssignment_1 ) )
-            // InternalXdiagramDsl.g:6674:2: ( rule__Image__ImageIdAssignment_1 )
+            // InternalXdiagramDsl.g:6619:1: ( ( rule__Image__ImageIdAssignment_1 ) )
+            // InternalXdiagramDsl.g:6620:2: ( rule__Image__ImageIdAssignment_1 )
             {
              before(grammarAccess.getImageAccess().getImageIdAssignment_1()); 
-            // InternalXdiagramDsl.g:6675:2: ( rule__Image__ImageIdAssignment_1 )
-            // InternalXdiagramDsl.g:6675:3: rule__Image__ImageIdAssignment_1
+            // InternalXdiagramDsl.g:6621:2: ( rule__Image__ImageIdAssignment_1 )
+            // InternalXdiagramDsl.g:6621:3: rule__Image__ImageIdAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Image__ImageIdAssignment_1();
@@ -21503,16 +21343,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__Group__2"
-    // InternalXdiagramDsl.g:6683:1: rule__Image__Group__2 : rule__Image__Group__2__Impl rule__Image__Group__3 ;
+    // InternalXdiagramDsl.g:6629:1: rule__Image__Group__2 : rule__Image__Group__2__Impl rule__Image__Group__3 ;
     public final void rule__Image__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6687:1: ( rule__Image__Group__2__Impl rule__Image__Group__3 )
-            // InternalXdiagramDsl.g:6688:2: rule__Image__Group__2__Impl rule__Image__Group__3
+            // InternalXdiagramDsl.g:6633:1: ( rule__Image__Group__2__Impl rule__Image__Group__3 )
+            // InternalXdiagramDsl.g:6634:2: rule__Image__Group__2__Impl rule__Image__Group__3
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_52);
             rule__Image__Group__2__Impl();
 
             state._fsp--;
@@ -21541,17 +21381,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__Group__2__Impl"
-    // InternalXdiagramDsl.g:6695:1: rule__Image__Group__2__Impl : ( '{' ) ;
+    // InternalXdiagramDsl.g:6641:1: rule__Image__Group__2__Impl : ( '{' ) ;
     public final void rule__Image__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6699:1: ( ( '{' ) )
-            // InternalXdiagramDsl.g:6700:1: ( '{' )
+            // InternalXdiagramDsl.g:6645:1: ( ( '{' ) )
+            // InternalXdiagramDsl.g:6646:1: ( '{' )
             {
-            // InternalXdiagramDsl.g:6700:1: ( '{' )
-            // InternalXdiagramDsl.g:6701:2: '{'
+            // InternalXdiagramDsl.g:6646:1: ( '{' )
+            // InternalXdiagramDsl.g:6647:2: '{'
             {
              before(grammarAccess.getImageAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,43,FOLLOW_2); 
@@ -21578,16 +21418,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__Group__3"
-    // InternalXdiagramDsl.g:6710:1: rule__Image__Group__3 : rule__Image__Group__3__Impl rule__Image__Group__4 ;
+    // InternalXdiagramDsl.g:6656:1: rule__Image__Group__3 : rule__Image__Group__3__Impl rule__Image__Group__4 ;
     public final void rule__Image__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6714:1: ( rule__Image__Group__3__Impl rule__Image__Group__4 )
-            // InternalXdiagramDsl.g:6715:2: rule__Image__Group__3__Impl rule__Image__Group__4
+            // InternalXdiagramDsl.g:6660:1: ( rule__Image__Group__3__Impl rule__Image__Group__4 )
+            // InternalXdiagramDsl.g:6661:2: rule__Image__Group__3__Impl rule__Image__Group__4
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_52);
             rule__Image__Group__3__Impl();
 
             state._fsp--;
@@ -21616,35 +21456,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__Group__3__Impl"
-    // InternalXdiagramDsl.g:6722:1: rule__Image__Group__3__Impl : ( ( rule__Image__FeaturesAssignment_3 )* ) ;
+    // InternalXdiagramDsl.g:6668:1: rule__Image__Group__3__Impl : ( ( rule__Image__FeaturesAssignment_3 )* ) ;
     public final void rule__Image__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6726:1: ( ( ( rule__Image__FeaturesAssignment_3 )* ) )
-            // InternalXdiagramDsl.g:6727:1: ( ( rule__Image__FeaturesAssignment_3 )* )
+            // InternalXdiagramDsl.g:6672:1: ( ( ( rule__Image__FeaturesAssignment_3 )* ) )
+            // InternalXdiagramDsl.g:6673:1: ( ( rule__Image__FeaturesAssignment_3 )* )
             {
-            // InternalXdiagramDsl.g:6727:1: ( ( rule__Image__FeaturesAssignment_3 )* )
-            // InternalXdiagramDsl.g:6728:2: ( rule__Image__FeaturesAssignment_3 )*
+            // InternalXdiagramDsl.g:6673:1: ( ( rule__Image__FeaturesAssignment_3 )* )
+            // InternalXdiagramDsl.g:6674:2: ( rule__Image__FeaturesAssignment_3 )*
             {
              before(grammarAccess.getImageAccess().getFeaturesAssignment_3()); 
-            // InternalXdiagramDsl.g:6729:2: ( rule__Image__FeaturesAssignment_3 )*
+            // InternalXdiagramDsl.g:6675:2: ( rule__Image__FeaturesAssignment_3 )*
             loop61:
             do {
                 int alt61=2;
                 int LA61_0 = input.LA(1);
 
-                if ( ((LA61_0>=71 && LA61_0<=72)||LA61_0==74) ) {
+                if ( (LA61_0==70||LA61_0==72||LA61_0==74) ) {
                     alt61=1;
                 }
 
 
                 switch (alt61) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:6729:3: rule__Image__FeaturesAssignment_3
+            	    // InternalXdiagramDsl.g:6675:3: rule__Image__FeaturesAssignment_3
             	    {
-            	    pushFollow(FOLLOW_54);
+            	    pushFollow(FOLLOW_53);
             	    rule__Image__FeaturesAssignment_3();
 
             	    state._fsp--;
@@ -21681,16 +21521,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__Group__4"
-    // InternalXdiagramDsl.g:6737:1: rule__Image__Group__4 : rule__Image__Group__4__Impl rule__Image__Group__5 ;
+    // InternalXdiagramDsl.g:6683:1: rule__Image__Group__4 : rule__Image__Group__4__Impl rule__Image__Group__5 ;
     public final void rule__Image__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6741:1: ( rule__Image__Group__4__Impl rule__Image__Group__5 )
-            // InternalXdiagramDsl.g:6742:2: rule__Image__Group__4__Impl rule__Image__Group__5
+            // InternalXdiagramDsl.g:6687:1: ( rule__Image__Group__4__Impl rule__Image__Group__5 )
+            // InternalXdiagramDsl.g:6688:2: rule__Image__Group__4__Impl rule__Image__Group__5
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_52);
             rule__Image__Group__4__Impl();
 
             state._fsp--;
@@ -21719,35 +21559,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__Group__4__Impl"
-    // InternalXdiagramDsl.g:6749:1: rule__Image__Group__4__Impl : ( ( rule__Image__Group_4__0 )* ) ;
+    // InternalXdiagramDsl.g:6695:1: rule__Image__Group__4__Impl : ( ( rule__Image__Group_4__0 )* ) ;
     public final void rule__Image__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6753:1: ( ( ( rule__Image__Group_4__0 )* ) )
-            // InternalXdiagramDsl.g:6754:1: ( ( rule__Image__Group_4__0 )* )
+            // InternalXdiagramDsl.g:6699:1: ( ( ( rule__Image__Group_4__0 )* ) )
+            // InternalXdiagramDsl.g:6700:1: ( ( rule__Image__Group_4__0 )* )
             {
-            // InternalXdiagramDsl.g:6754:1: ( ( rule__Image__Group_4__0 )* )
-            // InternalXdiagramDsl.g:6755:2: ( rule__Image__Group_4__0 )*
+            // InternalXdiagramDsl.g:6700:1: ( ( rule__Image__Group_4__0 )* )
+            // InternalXdiagramDsl.g:6701:2: ( rule__Image__Group_4__0 )*
             {
              before(grammarAccess.getImageAccess().getGroup_4()); 
-            // InternalXdiagramDsl.g:6756:2: ( rule__Image__Group_4__0 )*
+            // InternalXdiagramDsl.g:6702:2: ( rule__Image__Group_4__0 )*
             loop62:
             do {
                 int alt62=2;
                 int LA62_0 = input.LA(1);
 
-                if ( (LA62_0==63) ) {
+                if ( (LA62_0==62) ) {
                     alt62=1;
                 }
 
 
                 switch (alt62) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:6756:3: rule__Image__Group_4__0
+            	    // InternalXdiagramDsl.g:6702:3: rule__Image__Group_4__0
             	    {
-            	    pushFollow(FOLLOW_38);
+            	    pushFollow(FOLLOW_37);
             	    rule__Image__Group_4__0();
 
             	    state._fsp--;
@@ -21784,14 +21624,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__Group__5"
-    // InternalXdiagramDsl.g:6764:1: rule__Image__Group__5 : rule__Image__Group__5__Impl ;
+    // InternalXdiagramDsl.g:6710:1: rule__Image__Group__5 : rule__Image__Group__5__Impl ;
     public final void rule__Image__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6768:1: ( rule__Image__Group__5__Impl )
-            // InternalXdiagramDsl.g:6769:2: rule__Image__Group__5__Impl
+            // InternalXdiagramDsl.g:6714:1: ( rule__Image__Group__5__Impl )
+            // InternalXdiagramDsl.g:6715:2: rule__Image__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Image__Group__5__Impl();
@@ -21817,17 +21657,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__Group__5__Impl"
-    // InternalXdiagramDsl.g:6775:1: rule__Image__Group__5__Impl : ( '}' ) ;
+    // InternalXdiagramDsl.g:6721:1: rule__Image__Group__5__Impl : ( '}' ) ;
     public final void rule__Image__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6779:1: ( ( '}' ) )
-            // InternalXdiagramDsl.g:6780:1: ( '}' )
+            // InternalXdiagramDsl.g:6725:1: ( ( '}' ) )
+            // InternalXdiagramDsl.g:6726:1: ( '}' )
             {
-            // InternalXdiagramDsl.g:6780:1: ( '}' )
-            // InternalXdiagramDsl.g:6781:2: '}'
+            // InternalXdiagramDsl.g:6726:1: ( '}' )
+            // InternalXdiagramDsl.g:6727:2: '}'
             {
              before(grammarAccess.getImageAccess().getRightCurlyBracketKeyword_5()); 
             match(input,46,FOLLOW_2); 
@@ -21854,16 +21694,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__Group_4__0"
-    // InternalXdiagramDsl.g:6791:1: rule__Image__Group_4__0 : rule__Image__Group_4__0__Impl rule__Image__Group_4__1 ;
+    // InternalXdiagramDsl.g:6737:1: rule__Image__Group_4__0 : rule__Image__Group_4__0__Impl rule__Image__Group_4__1 ;
     public final void rule__Image__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6795:1: ( rule__Image__Group_4__0__Impl rule__Image__Group_4__1 )
-            // InternalXdiagramDsl.g:6796:2: rule__Image__Group_4__0__Impl rule__Image__Group_4__1
+            // InternalXdiagramDsl.g:6741:1: ( rule__Image__Group_4__0__Impl rule__Image__Group_4__1 )
+            // InternalXdiagramDsl.g:6742:2: rule__Image__Group_4__0__Impl rule__Image__Group_4__1
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_26);
             rule__Image__Group_4__0__Impl();
 
             state._fsp--;
@@ -21892,20 +21732,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__Group_4__0__Impl"
-    // InternalXdiagramDsl.g:6803:1: rule__Image__Group_4__0__Impl : ( 'child' ) ;
+    // InternalXdiagramDsl.g:6749:1: rule__Image__Group_4__0__Impl : ( 'child' ) ;
     public final void rule__Image__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6807:1: ( ( 'child' ) )
-            // InternalXdiagramDsl.g:6808:1: ( 'child' )
+            // InternalXdiagramDsl.g:6753:1: ( ( 'child' ) )
+            // InternalXdiagramDsl.g:6754:1: ( 'child' )
             {
-            // InternalXdiagramDsl.g:6808:1: ( 'child' )
-            // InternalXdiagramDsl.g:6809:2: 'child'
+            // InternalXdiagramDsl.g:6754:1: ( 'child' )
+            // InternalXdiagramDsl.g:6755:2: 'child'
             {
              before(grammarAccess.getImageAccess().getChildKeyword_4_0()); 
-            match(input,63,FOLLOW_2); 
+            match(input,62,FOLLOW_2); 
              after(grammarAccess.getImageAccess().getChildKeyword_4_0()); 
 
             }
@@ -21929,14 +21769,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__Group_4__1"
-    // InternalXdiagramDsl.g:6818:1: rule__Image__Group_4__1 : rule__Image__Group_4__1__Impl ;
+    // InternalXdiagramDsl.g:6764:1: rule__Image__Group_4__1 : rule__Image__Group_4__1__Impl ;
     public final void rule__Image__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6822:1: ( rule__Image__Group_4__1__Impl )
-            // InternalXdiagramDsl.g:6823:2: rule__Image__Group_4__1__Impl
+            // InternalXdiagramDsl.g:6768:1: ( rule__Image__Group_4__1__Impl )
+            // InternalXdiagramDsl.g:6769:2: rule__Image__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Image__Group_4__1__Impl();
@@ -21962,21 +21802,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__Group_4__1__Impl"
-    // InternalXdiagramDsl.g:6829:1: rule__Image__Group_4__1__Impl : ( ( rule__Image__ChildrenAssignment_4_1 ) ) ;
+    // InternalXdiagramDsl.g:6775:1: rule__Image__Group_4__1__Impl : ( ( rule__Image__ChildrenAssignment_4_1 ) ) ;
     public final void rule__Image__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6833:1: ( ( ( rule__Image__ChildrenAssignment_4_1 ) ) )
-            // InternalXdiagramDsl.g:6834:1: ( ( rule__Image__ChildrenAssignment_4_1 ) )
+            // InternalXdiagramDsl.g:6779:1: ( ( ( rule__Image__ChildrenAssignment_4_1 ) ) )
+            // InternalXdiagramDsl.g:6780:1: ( ( rule__Image__ChildrenAssignment_4_1 ) )
             {
-            // InternalXdiagramDsl.g:6834:1: ( ( rule__Image__ChildrenAssignment_4_1 ) )
-            // InternalXdiagramDsl.g:6835:2: ( rule__Image__ChildrenAssignment_4_1 )
+            // InternalXdiagramDsl.g:6780:1: ( ( rule__Image__ChildrenAssignment_4_1 ) )
+            // InternalXdiagramDsl.g:6781:2: ( rule__Image__ChildrenAssignment_4_1 )
             {
              before(grammarAccess.getImageAccess().getChildrenAssignment_4_1()); 
-            // InternalXdiagramDsl.g:6836:2: ( rule__Image__ChildrenAssignment_4_1 )
-            // InternalXdiagramDsl.g:6836:3: rule__Image__ChildrenAssignment_4_1
+            // InternalXdiagramDsl.g:6782:2: ( rule__Image__ChildrenAssignment_4_1 )
+            // InternalXdiagramDsl.g:6782:3: rule__Image__ChildrenAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__Image__ChildrenAssignment_4_1();
@@ -22009,16 +21849,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__Group__0"
-    // InternalXdiagramDsl.g:6845:1: rule__Invisible__Group__0 : rule__Invisible__Group__0__Impl rule__Invisible__Group__1 ;
+    // InternalXdiagramDsl.g:6791:1: rule__Invisible__Group__0 : rule__Invisible__Group__0__Impl rule__Invisible__Group__1 ;
     public final void rule__Invisible__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6849:1: ( rule__Invisible__Group__0__Impl rule__Invisible__Group__1 )
-            // InternalXdiagramDsl.g:6850:2: rule__Invisible__Group__0__Impl rule__Invisible__Group__1
+            // InternalXdiagramDsl.g:6795:1: ( rule__Invisible__Group__0__Impl rule__Invisible__Group__1 )
+            // InternalXdiagramDsl.g:6796:2: rule__Invisible__Group__0__Impl rule__Invisible__Group__1
             {
-            pushFollow(FOLLOW_55);
+            pushFollow(FOLLOW_54);
             rule__Invisible__Group__0__Impl();
 
             state._fsp--;
@@ -22047,21 +21887,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__Group__0__Impl"
-    // InternalXdiagramDsl.g:6857:1: rule__Invisible__Group__0__Impl : ( () ) ;
+    // InternalXdiagramDsl.g:6803:1: rule__Invisible__Group__0__Impl : ( () ) ;
     public final void rule__Invisible__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6861:1: ( ( () ) )
-            // InternalXdiagramDsl.g:6862:1: ( () )
+            // InternalXdiagramDsl.g:6807:1: ( ( () ) )
+            // InternalXdiagramDsl.g:6808:1: ( () )
             {
-            // InternalXdiagramDsl.g:6862:1: ( () )
-            // InternalXdiagramDsl.g:6863:2: ()
+            // InternalXdiagramDsl.g:6808:1: ( () )
+            // InternalXdiagramDsl.g:6809:2: ()
             {
              before(grammarAccess.getInvisibleAccess().getInvisibleAction_0()); 
-            // InternalXdiagramDsl.g:6864:2: ()
-            // InternalXdiagramDsl.g:6864:3: 
+            // InternalXdiagramDsl.g:6810:2: ()
+            // InternalXdiagramDsl.g:6810:3: 
             {
             }
 
@@ -22084,14 +21924,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__Group__1"
-    // InternalXdiagramDsl.g:6872:1: rule__Invisible__Group__1 : rule__Invisible__Group__1__Impl rule__Invisible__Group__2 ;
+    // InternalXdiagramDsl.g:6818:1: rule__Invisible__Group__1 : rule__Invisible__Group__1__Impl rule__Invisible__Group__2 ;
     public final void rule__Invisible__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6876:1: ( rule__Invisible__Group__1__Impl rule__Invisible__Group__2 )
-            // InternalXdiagramDsl.g:6877:2: rule__Invisible__Group__1__Impl rule__Invisible__Group__2
+            // InternalXdiagramDsl.g:6822:1: ( rule__Invisible__Group__1__Impl rule__Invisible__Group__2 )
+            // InternalXdiagramDsl.g:6823:2: rule__Invisible__Group__1__Impl rule__Invisible__Group__2
             {
             pushFollow(FOLLOW_6);
             rule__Invisible__Group__1__Impl();
@@ -22122,20 +21962,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__Group__1__Impl"
-    // InternalXdiagramDsl.g:6884:1: rule__Invisible__Group__1__Impl : ( 'invisible' ) ;
+    // InternalXdiagramDsl.g:6830:1: rule__Invisible__Group__1__Impl : ( 'invisible' ) ;
     public final void rule__Invisible__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6888:1: ( ( 'invisible' ) )
-            // InternalXdiagramDsl.g:6889:1: ( 'invisible' )
+            // InternalXdiagramDsl.g:6834:1: ( ( 'invisible' ) )
+            // InternalXdiagramDsl.g:6835:1: ( 'invisible' )
             {
-            // InternalXdiagramDsl.g:6889:1: ( 'invisible' )
-            // InternalXdiagramDsl.g:6890:2: 'invisible'
+            // InternalXdiagramDsl.g:6835:1: ( 'invisible' )
+            // InternalXdiagramDsl.g:6836:2: 'invisible'
             {
              before(grammarAccess.getInvisibleAccess().getInvisibleKeyword_1()); 
-            match(input,70,FOLLOW_2); 
+            match(input,69,FOLLOW_2); 
              after(grammarAccess.getInvisibleAccess().getInvisibleKeyword_1()); 
 
             }
@@ -22159,16 +21999,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__Group__2"
-    // InternalXdiagramDsl.g:6899:1: rule__Invisible__Group__2 : rule__Invisible__Group__2__Impl rule__Invisible__Group__3 ;
+    // InternalXdiagramDsl.g:6845:1: rule__Invisible__Group__2 : rule__Invisible__Group__2__Impl rule__Invisible__Group__3 ;
     public final void rule__Invisible__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6903:1: ( rule__Invisible__Group__2__Impl rule__Invisible__Group__3 )
-            // InternalXdiagramDsl.g:6904:2: rule__Invisible__Group__2__Impl rule__Invisible__Group__3
+            // InternalXdiagramDsl.g:6849:1: ( rule__Invisible__Group__2__Impl rule__Invisible__Group__3 )
+            // InternalXdiagramDsl.g:6850:2: rule__Invisible__Group__2__Impl rule__Invisible__Group__3
             {
-            pushFollow(FOLLOW_56);
+            pushFollow(FOLLOW_55);
             rule__Invisible__Group__2__Impl();
 
             state._fsp--;
@@ -22197,17 +22037,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__Group__2__Impl"
-    // InternalXdiagramDsl.g:6911:1: rule__Invisible__Group__2__Impl : ( '{' ) ;
+    // InternalXdiagramDsl.g:6857:1: rule__Invisible__Group__2__Impl : ( '{' ) ;
     public final void rule__Invisible__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6915:1: ( ( '{' ) )
-            // InternalXdiagramDsl.g:6916:1: ( '{' )
+            // InternalXdiagramDsl.g:6861:1: ( ( '{' ) )
+            // InternalXdiagramDsl.g:6862:1: ( '{' )
             {
-            // InternalXdiagramDsl.g:6916:1: ( '{' )
-            // InternalXdiagramDsl.g:6917:2: '{'
+            // InternalXdiagramDsl.g:6862:1: ( '{' )
+            // InternalXdiagramDsl.g:6863:2: '{'
             {
              before(grammarAccess.getInvisibleAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,43,FOLLOW_2); 
@@ -22234,16 +22074,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__Group__3"
-    // InternalXdiagramDsl.g:6926:1: rule__Invisible__Group__3 : rule__Invisible__Group__3__Impl rule__Invisible__Group__4 ;
+    // InternalXdiagramDsl.g:6872:1: rule__Invisible__Group__3 : rule__Invisible__Group__3__Impl rule__Invisible__Group__4 ;
     public final void rule__Invisible__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6930:1: ( rule__Invisible__Group__3__Impl rule__Invisible__Group__4 )
-            // InternalXdiagramDsl.g:6931:2: rule__Invisible__Group__3__Impl rule__Invisible__Group__4
+            // InternalXdiagramDsl.g:6876:1: ( rule__Invisible__Group__3__Impl rule__Invisible__Group__4 )
+            // InternalXdiagramDsl.g:6877:2: rule__Invisible__Group__3__Impl rule__Invisible__Group__4
             {
-            pushFollow(FOLLOW_56);
+            pushFollow(FOLLOW_55);
             rule__Invisible__Group__3__Impl();
 
             state._fsp--;
@@ -22272,35 +22112,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__Group__3__Impl"
-    // InternalXdiagramDsl.g:6938:1: rule__Invisible__Group__3__Impl : ( ( rule__Invisible__FeaturesAssignment_3 )* ) ;
+    // InternalXdiagramDsl.g:6884:1: rule__Invisible__Group__3__Impl : ( ( rule__Invisible__FeaturesAssignment_3 )* ) ;
     public final void rule__Invisible__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6942:1: ( ( ( rule__Invisible__FeaturesAssignment_3 )* ) )
-            // InternalXdiagramDsl.g:6943:1: ( ( rule__Invisible__FeaturesAssignment_3 )* )
+            // InternalXdiagramDsl.g:6888:1: ( ( ( rule__Invisible__FeaturesAssignment_3 )* ) )
+            // InternalXdiagramDsl.g:6889:1: ( ( rule__Invisible__FeaturesAssignment_3 )* )
             {
-            // InternalXdiagramDsl.g:6943:1: ( ( rule__Invisible__FeaturesAssignment_3 )* )
-            // InternalXdiagramDsl.g:6944:2: ( rule__Invisible__FeaturesAssignment_3 )*
+            // InternalXdiagramDsl.g:6889:1: ( ( rule__Invisible__FeaturesAssignment_3 )* )
+            // InternalXdiagramDsl.g:6890:2: ( rule__Invisible__FeaturesAssignment_3 )*
             {
              before(grammarAccess.getInvisibleAccess().getFeaturesAssignment_3()); 
-            // InternalXdiagramDsl.g:6945:2: ( rule__Invisible__FeaturesAssignment_3 )*
+            // InternalXdiagramDsl.g:6891:2: ( rule__Invisible__FeaturesAssignment_3 )*
             loop63:
             do {
                 int alt63=2;
                 int LA63_0 = input.LA(1);
 
-                if ( (LA63_0==57||LA63_0==67||LA63_0==72||LA63_0==74||LA63_0==76) ) {
+                if ( (LA63_0==56||LA63_0==66||LA63_0==72||LA63_0==74||LA63_0==76) ) {
                     alt63=1;
                 }
 
 
                 switch (alt63) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:6945:3: rule__Invisible__FeaturesAssignment_3
+            	    // InternalXdiagramDsl.g:6891:3: rule__Invisible__FeaturesAssignment_3
             	    {
-            	    pushFollow(FOLLOW_57);
+            	    pushFollow(FOLLOW_56);
             	    rule__Invisible__FeaturesAssignment_3();
 
             	    state._fsp--;
@@ -22337,16 +22177,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__Group__4"
-    // InternalXdiagramDsl.g:6953:1: rule__Invisible__Group__4 : rule__Invisible__Group__4__Impl rule__Invisible__Group__5 ;
+    // InternalXdiagramDsl.g:6899:1: rule__Invisible__Group__4 : rule__Invisible__Group__4__Impl rule__Invisible__Group__5 ;
     public final void rule__Invisible__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6957:1: ( rule__Invisible__Group__4__Impl rule__Invisible__Group__5 )
-            // InternalXdiagramDsl.g:6958:2: rule__Invisible__Group__4__Impl rule__Invisible__Group__5
+            // InternalXdiagramDsl.g:6903:1: ( rule__Invisible__Group__4__Impl rule__Invisible__Group__5 )
+            // InternalXdiagramDsl.g:6904:2: rule__Invisible__Group__4__Impl rule__Invisible__Group__5
             {
-            pushFollow(FOLLOW_56);
+            pushFollow(FOLLOW_55);
             rule__Invisible__Group__4__Impl();
 
             state._fsp--;
@@ -22375,35 +22215,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__Group__4__Impl"
-    // InternalXdiagramDsl.g:6965:1: rule__Invisible__Group__4__Impl : ( ( rule__Invisible__Group_4__0 )* ) ;
+    // InternalXdiagramDsl.g:6911:1: rule__Invisible__Group__4__Impl : ( ( rule__Invisible__Group_4__0 )* ) ;
     public final void rule__Invisible__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6969:1: ( ( ( rule__Invisible__Group_4__0 )* ) )
-            // InternalXdiagramDsl.g:6970:1: ( ( rule__Invisible__Group_4__0 )* )
+            // InternalXdiagramDsl.g:6915:1: ( ( ( rule__Invisible__Group_4__0 )* ) )
+            // InternalXdiagramDsl.g:6916:1: ( ( rule__Invisible__Group_4__0 )* )
             {
-            // InternalXdiagramDsl.g:6970:1: ( ( rule__Invisible__Group_4__0 )* )
-            // InternalXdiagramDsl.g:6971:2: ( rule__Invisible__Group_4__0 )*
+            // InternalXdiagramDsl.g:6916:1: ( ( rule__Invisible__Group_4__0 )* )
+            // InternalXdiagramDsl.g:6917:2: ( rule__Invisible__Group_4__0 )*
             {
              before(grammarAccess.getInvisibleAccess().getGroup_4()); 
-            // InternalXdiagramDsl.g:6972:2: ( rule__Invisible__Group_4__0 )*
+            // InternalXdiagramDsl.g:6918:2: ( rule__Invisible__Group_4__0 )*
             loop64:
             do {
                 int alt64=2;
                 int LA64_0 = input.LA(1);
 
-                if ( (LA64_0==63) ) {
+                if ( (LA64_0==62) ) {
                     alt64=1;
                 }
 
 
                 switch (alt64) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:6972:3: rule__Invisible__Group_4__0
+            	    // InternalXdiagramDsl.g:6918:3: rule__Invisible__Group_4__0
             	    {
-            	    pushFollow(FOLLOW_38);
+            	    pushFollow(FOLLOW_37);
             	    rule__Invisible__Group_4__0();
 
             	    state._fsp--;
@@ -22440,14 +22280,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__Group__5"
-    // InternalXdiagramDsl.g:6980:1: rule__Invisible__Group__5 : rule__Invisible__Group__5__Impl ;
+    // InternalXdiagramDsl.g:6926:1: rule__Invisible__Group__5 : rule__Invisible__Group__5__Impl ;
     public final void rule__Invisible__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6984:1: ( rule__Invisible__Group__5__Impl )
-            // InternalXdiagramDsl.g:6985:2: rule__Invisible__Group__5__Impl
+            // InternalXdiagramDsl.g:6930:1: ( rule__Invisible__Group__5__Impl )
+            // InternalXdiagramDsl.g:6931:2: rule__Invisible__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Invisible__Group__5__Impl();
@@ -22473,17 +22313,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__Group__5__Impl"
-    // InternalXdiagramDsl.g:6991:1: rule__Invisible__Group__5__Impl : ( '}' ) ;
+    // InternalXdiagramDsl.g:6937:1: rule__Invisible__Group__5__Impl : ( '}' ) ;
     public final void rule__Invisible__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:6995:1: ( ( '}' ) )
-            // InternalXdiagramDsl.g:6996:1: ( '}' )
+            // InternalXdiagramDsl.g:6941:1: ( ( '}' ) )
+            // InternalXdiagramDsl.g:6942:1: ( '}' )
             {
-            // InternalXdiagramDsl.g:6996:1: ( '}' )
-            // InternalXdiagramDsl.g:6997:2: '}'
+            // InternalXdiagramDsl.g:6942:1: ( '}' )
+            // InternalXdiagramDsl.g:6943:2: '}'
             {
              before(grammarAccess.getInvisibleAccess().getRightCurlyBracketKeyword_5()); 
             match(input,46,FOLLOW_2); 
@@ -22510,16 +22350,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__Group_4__0"
-    // InternalXdiagramDsl.g:7007:1: rule__Invisible__Group_4__0 : rule__Invisible__Group_4__0__Impl rule__Invisible__Group_4__1 ;
+    // InternalXdiagramDsl.g:6953:1: rule__Invisible__Group_4__0 : rule__Invisible__Group_4__0__Impl rule__Invisible__Group_4__1 ;
     public final void rule__Invisible__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7011:1: ( rule__Invisible__Group_4__0__Impl rule__Invisible__Group_4__1 )
-            // InternalXdiagramDsl.g:7012:2: rule__Invisible__Group_4__0__Impl rule__Invisible__Group_4__1
+            // InternalXdiagramDsl.g:6957:1: ( rule__Invisible__Group_4__0__Impl rule__Invisible__Group_4__1 )
+            // InternalXdiagramDsl.g:6958:2: rule__Invisible__Group_4__0__Impl rule__Invisible__Group_4__1
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_26);
             rule__Invisible__Group_4__0__Impl();
 
             state._fsp--;
@@ -22548,20 +22388,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__Group_4__0__Impl"
-    // InternalXdiagramDsl.g:7019:1: rule__Invisible__Group_4__0__Impl : ( 'child' ) ;
+    // InternalXdiagramDsl.g:6965:1: rule__Invisible__Group_4__0__Impl : ( 'child' ) ;
     public final void rule__Invisible__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7023:1: ( ( 'child' ) )
-            // InternalXdiagramDsl.g:7024:1: ( 'child' )
+            // InternalXdiagramDsl.g:6969:1: ( ( 'child' ) )
+            // InternalXdiagramDsl.g:6970:1: ( 'child' )
             {
-            // InternalXdiagramDsl.g:7024:1: ( 'child' )
-            // InternalXdiagramDsl.g:7025:2: 'child'
+            // InternalXdiagramDsl.g:6970:1: ( 'child' )
+            // InternalXdiagramDsl.g:6971:2: 'child'
             {
              before(grammarAccess.getInvisibleAccess().getChildKeyword_4_0()); 
-            match(input,63,FOLLOW_2); 
+            match(input,62,FOLLOW_2); 
              after(grammarAccess.getInvisibleAccess().getChildKeyword_4_0()); 
 
             }
@@ -22585,14 +22425,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__Group_4__1"
-    // InternalXdiagramDsl.g:7034:1: rule__Invisible__Group_4__1 : rule__Invisible__Group_4__1__Impl ;
+    // InternalXdiagramDsl.g:6980:1: rule__Invisible__Group_4__1 : rule__Invisible__Group_4__1__Impl ;
     public final void rule__Invisible__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7038:1: ( rule__Invisible__Group_4__1__Impl )
-            // InternalXdiagramDsl.g:7039:2: rule__Invisible__Group_4__1__Impl
+            // InternalXdiagramDsl.g:6984:1: ( rule__Invisible__Group_4__1__Impl )
+            // InternalXdiagramDsl.g:6985:2: rule__Invisible__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Invisible__Group_4__1__Impl();
@@ -22618,21 +22458,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__Group_4__1__Impl"
-    // InternalXdiagramDsl.g:7045:1: rule__Invisible__Group_4__1__Impl : ( ( rule__Invisible__ChildrenAssignment_4_1 ) ) ;
+    // InternalXdiagramDsl.g:6991:1: rule__Invisible__Group_4__1__Impl : ( ( rule__Invisible__ChildrenAssignment_4_1 ) ) ;
     public final void rule__Invisible__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7049:1: ( ( ( rule__Invisible__ChildrenAssignment_4_1 ) ) )
-            // InternalXdiagramDsl.g:7050:1: ( ( rule__Invisible__ChildrenAssignment_4_1 ) )
+            // InternalXdiagramDsl.g:6995:1: ( ( ( rule__Invisible__ChildrenAssignment_4_1 ) ) )
+            // InternalXdiagramDsl.g:6996:1: ( ( rule__Invisible__ChildrenAssignment_4_1 ) )
             {
-            // InternalXdiagramDsl.g:7050:1: ( ( rule__Invisible__ChildrenAssignment_4_1 ) )
-            // InternalXdiagramDsl.g:7051:2: ( rule__Invisible__ChildrenAssignment_4_1 )
+            // InternalXdiagramDsl.g:6996:1: ( ( rule__Invisible__ChildrenAssignment_4_1 ) )
+            // InternalXdiagramDsl.g:6997:2: ( rule__Invisible__ChildrenAssignment_4_1 )
             {
              before(grammarAccess.getInvisibleAccess().getChildrenAssignment_4_1()); 
-            // InternalXdiagramDsl.g:7052:2: ( rule__Invisible__ChildrenAssignment_4_1 )
-            // InternalXdiagramDsl.g:7052:3: rule__Invisible__ChildrenAssignment_4_1
+            // InternalXdiagramDsl.g:6998:2: ( rule__Invisible__ChildrenAssignment_4_1 )
+            // InternalXdiagramDsl.g:6998:3: rule__Invisible__ChildrenAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__Invisible__ChildrenAssignment_4_1();
@@ -22665,16 +22505,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Foreground__Group__0"
-    // InternalXdiagramDsl.g:7061:1: rule__Foreground__Group__0 : rule__Foreground__Group__0__Impl rule__Foreground__Group__1 ;
+    // InternalXdiagramDsl.g:7007:1: rule__Foreground__Group__0 : rule__Foreground__Group__0__Impl rule__Foreground__Group__1 ;
     public final void rule__Foreground__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7065:1: ( rule__Foreground__Group__0__Impl rule__Foreground__Group__1 )
-            // InternalXdiagramDsl.g:7066:2: rule__Foreground__Group__0__Impl rule__Foreground__Group__1
+            // InternalXdiagramDsl.g:7011:1: ( rule__Foreground__Group__0__Impl rule__Foreground__Group__1 )
+            // InternalXdiagramDsl.g:7012:2: rule__Foreground__Group__0__Impl rule__Foreground__Group__1
             {
-            pushFollow(FOLLOW_58);
+            pushFollow(FOLLOW_57);
             rule__Foreground__Group__0__Impl();
 
             state._fsp--;
@@ -22703,21 +22543,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Foreground__Group__0__Impl"
-    // InternalXdiagramDsl.g:7073:1: rule__Foreground__Group__0__Impl : ( ( rule__Foreground__TypeAssignment_0 ) ) ;
+    // InternalXdiagramDsl.g:7019:1: rule__Foreground__Group__0__Impl : ( ( rule__Foreground__TypeAssignment_0 ) ) ;
     public final void rule__Foreground__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7077:1: ( ( ( rule__Foreground__TypeAssignment_0 ) ) )
-            // InternalXdiagramDsl.g:7078:1: ( ( rule__Foreground__TypeAssignment_0 ) )
+            // InternalXdiagramDsl.g:7023:1: ( ( ( rule__Foreground__TypeAssignment_0 ) ) )
+            // InternalXdiagramDsl.g:7024:1: ( ( rule__Foreground__TypeAssignment_0 ) )
             {
-            // InternalXdiagramDsl.g:7078:1: ( ( rule__Foreground__TypeAssignment_0 ) )
-            // InternalXdiagramDsl.g:7079:2: ( rule__Foreground__TypeAssignment_0 )
+            // InternalXdiagramDsl.g:7024:1: ( ( rule__Foreground__TypeAssignment_0 ) )
+            // InternalXdiagramDsl.g:7025:2: ( rule__Foreground__TypeAssignment_0 )
             {
              before(grammarAccess.getForegroundAccess().getTypeAssignment_0()); 
-            // InternalXdiagramDsl.g:7080:2: ( rule__Foreground__TypeAssignment_0 )
-            // InternalXdiagramDsl.g:7080:3: rule__Foreground__TypeAssignment_0
+            // InternalXdiagramDsl.g:7026:2: ( rule__Foreground__TypeAssignment_0 )
+            // InternalXdiagramDsl.g:7026:3: rule__Foreground__TypeAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Foreground__TypeAssignment_0();
@@ -22750,16 +22590,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Foreground__Group__1"
-    // InternalXdiagramDsl.g:7088:1: rule__Foreground__Group__1 : rule__Foreground__Group__1__Impl rule__Foreground__Group__2 ;
+    // InternalXdiagramDsl.g:7034:1: rule__Foreground__Group__1 : rule__Foreground__Group__1__Impl rule__Foreground__Group__2 ;
     public final void rule__Foreground__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7092:1: ( rule__Foreground__Group__1__Impl rule__Foreground__Group__2 )
-            // InternalXdiagramDsl.g:7093:2: rule__Foreground__Group__1__Impl rule__Foreground__Group__2
+            // InternalXdiagramDsl.g:7038:1: ( rule__Foreground__Group__1__Impl rule__Foreground__Group__2 )
+            // InternalXdiagramDsl.g:7039:2: rule__Foreground__Group__1__Impl rule__Foreground__Group__2
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             rule__Foreground__Group__1__Impl();
 
             state._fsp--;
@@ -22788,21 +22628,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Foreground__Group__1__Impl"
-    // InternalXdiagramDsl.g:7100:1: rule__Foreground__Group__1__Impl : ( ( rule__Foreground__ColorAssignment_1 ) ) ;
+    // InternalXdiagramDsl.g:7046:1: rule__Foreground__Group__1__Impl : ( ( rule__Foreground__ColorAssignment_1 ) ) ;
     public final void rule__Foreground__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7104:1: ( ( ( rule__Foreground__ColorAssignment_1 ) ) )
-            // InternalXdiagramDsl.g:7105:1: ( ( rule__Foreground__ColorAssignment_1 ) )
+            // InternalXdiagramDsl.g:7050:1: ( ( ( rule__Foreground__ColorAssignment_1 ) ) )
+            // InternalXdiagramDsl.g:7051:1: ( ( rule__Foreground__ColorAssignment_1 ) )
             {
-            // InternalXdiagramDsl.g:7105:1: ( ( rule__Foreground__ColorAssignment_1 ) )
-            // InternalXdiagramDsl.g:7106:2: ( rule__Foreground__ColorAssignment_1 )
+            // InternalXdiagramDsl.g:7051:1: ( ( rule__Foreground__ColorAssignment_1 ) )
+            // InternalXdiagramDsl.g:7052:2: ( rule__Foreground__ColorAssignment_1 )
             {
              before(grammarAccess.getForegroundAccess().getColorAssignment_1()); 
-            // InternalXdiagramDsl.g:7107:2: ( rule__Foreground__ColorAssignment_1 )
-            // InternalXdiagramDsl.g:7107:3: rule__Foreground__ColorAssignment_1
+            // InternalXdiagramDsl.g:7053:2: ( rule__Foreground__ColorAssignment_1 )
+            // InternalXdiagramDsl.g:7053:3: rule__Foreground__ColorAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Foreground__ColorAssignment_1();
@@ -22835,16 +22675,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Foreground__Group__2"
-    // InternalXdiagramDsl.g:7115:1: rule__Foreground__Group__2 : rule__Foreground__Group__2__Impl rule__Foreground__Group__3 ;
+    // InternalXdiagramDsl.g:7061:1: rule__Foreground__Group__2 : rule__Foreground__Group__2__Impl rule__Foreground__Group__3 ;
     public final void rule__Foreground__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7119:1: ( rule__Foreground__Group__2__Impl rule__Foreground__Group__3 )
-            // InternalXdiagramDsl.g:7120:2: rule__Foreground__Group__2__Impl rule__Foreground__Group__3
+            // InternalXdiagramDsl.g:7065:1: ( rule__Foreground__Group__2__Impl rule__Foreground__Group__3 )
+            // InternalXdiagramDsl.g:7066:2: rule__Foreground__Group__2__Impl rule__Foreground__Group__3
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             rule__Foreground__Group__2__Impl();
 
             state._fsp--;
@@ -22873,20 +22713,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Foreground__Group__2__Impl"
-    // InternalXdiagramDsl.g:7127:1: rule__Foreground__Group__2__Impl : ( ( rule__Foreground__ConditionalAssignment_2 )? ) ;
+    // InternalXdiagramDsl.g:7073:1: rule__Foreground__Group__2__Impl : ( ( rule__Foreground__ConditionalAssignment_2 )? ) ;
     public final void rule__Foreground__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7131:1: ( ( ( rule__Foreground__ConditionalAssignment_2 )? ) )
-            // InternalXdiagramDsl.g:7132:1: ( ( rule__Foreground__ConditionalAssignment_2 )? )
+            // InternalXdiagramDsl.g:7077:1: ( ( ( rule__Foreground__ConditionalAssignment_2 )? ) )
+            // InternalXdiagramDsl.g:7078:1: ( ( rule__Foreground__ConditionalAssignment_2 )? )
             {
-            // InternalXdiagramDsl.g:7132:1: ( ( rule__Foreground__ConditionalAssignment_2 )? )
-            // InternalXdiagramDsl.g:7133:2: ( rule__Foreground__ConditionalAssignment_2 )?
+            // InternalXdiagramDsl.g:7078:1: ( ( rule__Foreground__ConditionalAssignment_2 )? )
+            // InternalXdiagramDsl.g:7079:2: ( rule__Foreground__ConditionalAssignment_2 )?
             {
              before(grammarAccess.getForegroundAccess().getConditionalAssignment_2()); 
-            // InternalXdiagramDsl.g:7134:2: ( rule__Foreground__ConditionalAssignment_2 )?
+            // InternalXdiagramDsl.g:7080:2: ( rule__Foreground__ConditionalAssignment_2 )?
             int alt65=2;
             int LA65_0 = input.LA(1);
 
@@ -22895,7 +22735,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
             }
             switch (alt65) {
                 case 1 :
-                    // InternalXdiagramDsl.g:7134:3: rule__Foreground__ConditionalAssignment_2
+                    // InternalXdiagramDsl.g:7080:3: rule__Foreground__ConditionalAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Foreground__ConditionalAssignment_2();
@@ -22931,14 +22771,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Foreground__Group__3"
-    // InternalXdiagramDsl.g:7142:1: rule__Foreground__Group__3 : rule__Foreground__Group__3__Impl ;
+    // InternalXdiagramDsl.g:7088:1: rule__Foreground__Group__3 : rule__Foreground__Group__3__Impl ;
     public final void rule__Foreground__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7146:1: ( rule__Foreground__Group__3__Impl )
-            // InternalXdiagramDsl.g:7147:2: rule__Foreground__Group__3__Impl
+            // InternalXdiagramDsl.g:7092:1: ( rule__Foreground__Group__3__Impl )
+            // InternalXdiagramDsl.g:7093:2: rule__Foreground__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Foreground__Group__3__Impl();
@@ -22964,20 +22804,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Foreground__Group__3__Impl"
-    // InternalXdiagramDsl.g:7153:1: rule__Foreground__Group__3__Impl : ( ';' ) ;
+    // InternalXdiagramDsl.g:7099:1: rule__Foreground__Group__3__Impl : ( ';' ) ;
     public final void rule__Foreground__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7157:1: ( ( ';' ) )
-            // InternalXdiagramDsl.g:7158:1: ( ';' )
+            // InternalXdiagramDsl.g:7103:1: ( ( ';' ) )
+            // InternalXdiagramDsl.g:7104:1: ( ';' )
             {
-            // InternalXdiagramDsl.g:7158:1: ( ';' )
-            // InternalXdiagramDsl.g:7159:2: ';'
+            // InternalXdiagramDsl.g:7104:1: ( ';' )
+            // InternalXdiagramDsl.g:7105:2: ';'
             {
              before(grammarAccess.getForegroundAccess().getSemicolonKeyword_3()); 
-            match(input,58,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getForegroundAccess().getSemicolonKeyword_3()); 
 
             }
@@ -23001,16 +22841,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Background__Group__0"
-    // InternalXdiagramDsl.g:7169:1: rule__Background__Group__0 : rule__Background__Group__0__Impl rule__Background__Group__1 ;
+    // InternalXdiagramDsl.g:7115:1: rule__Background__Group__0 : rule__Background__Group__0__Impl rule__Background__Group__1 ;
     public final void rule__Background__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7173:1: ( rule__Background__Group__0__Impl rule__Background__Group__1 )
-            // InternalXdiagramDsl.g:7174:2: rule__Background__Group__0__Impl rule__Background__Group__1
+            // InternalXdiagramDsl.g:7119:1: ( rule__Background__Group__0__Impl rule__Background__Group__1 )
+            // InternalXdiagramDsl.g:7120:2: rule__Background__Group__0__Impl rule__Background__Group__1
             {
-            pushFollow(FOLLOW_58);
+            pushFollow(FOLLOW_57);
             rule__Background__Group__0__Impl();
 
             state._fsp--;
@@ -23039,21 +22879,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Background__Group__0__Impl"
-    // InternalXdiagramDsl.g:7181:1: rule__Background__Group__0__Impl : ( ( rule__Background__TypeAssignment_0 ) ) ;
+    // InternalXdiagramDsl.g:7127:1: rule__Background__Group__0__Impl : ( ( rule__Background__TypeAssignment_0 ) ) ;
     public final void rule__Background__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7185:1: ( ( ( rule__Background__TypeAssignment_0 ) ) )
-            // InternalXdiagramDsl.g:7186:1: ( ( rule__Background__TypeAssignment_0 ) )
+            // InternalXdiagramDsl.g:7131:1: ( ( ( rule__Background__TypeAssignment_0 ) ) )
+            // InternalXdiagramDsl.g:7132:1: ( ( rule__Background__TypeAssignment_0 ) )
             {
-            // InternalXdiagramDsl.g:7186:1: ( ( rule__Background__TypeAssignment_0 ) )
-            // InternalXdiagramDsl.g:7187:2: ( rule__Background__TypeAssignment_0 )
+            // InternalXdiagramDsl.g:7132:1: ( ( rule__Background__TypeAssignment_0 ) )
+            // InternalXdiagramDsl.g:7133:2: ( rule__Background__TypeAssignment_0 )
             {
              before(grammarAccess.getBackgroundAccess().getTypeAssignment_0()); 
-            // InternalXdiagramDsl.g:7188:2: ( rule__Background__TypeAssignment_0 )
-            // InternalXdiagramDsl.g:7188:3: rule__Background__TypeAssignment_0
+            // InternalXdiagramDsl.g:7134:2: ( rule__Background__TypeAssignment_0 )
+            // InternalXdiagramDsl.g:7134:3: rule__Background__TypeAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Background__TypeAssignment_0();
@@ -23086,16 +22926,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Background__Group__1"
-    // InternalXdiagramDsl.g:7196:1: rule__Background__Group__1 : rule__Background__Group__1__Impl rule__Background__Group__2 ;
+    // InternalXdiagramDsl.g:7142:1: rule__Background__Group__1 : rule__Background__Group__1__Impl rule__Background__Group__2 ;
     public final void rule__Background__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7200:1: ( rule__Background__Group__1__Impl rule__Background__Group__2 )
-            // InternalXdiagramDsl.g:7201:2: rule__Background__Group__1__Impl rule__Background__Group__2
+            // InternalXdiagramDsl.g:7146:1: ( rule__Background__Group__1__Impl rule__Background__Group__2 )
+            // InternalXdiagramDsl.g:7147:2: rule__Background__Group__1__Impl rule__Background__Group__2
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             rule__Background__Group__1__Impl();
 
             state._fsp--;
@@ -23124,21 +22964,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Background__Group__1__Impl"
-    // InternalXdiagramDsl.g:7208:1: rule__Background__Group__1__Impl : ( ( rule__Background__ColorAssignment_1 ) ) ;
+    // InternalXdiagramDsl.g:7154:1: rule__Background__Group__1__Impl : ( ( rule__Background__ColorAssignment_1 ) ) ;
     public final void rule__Background__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7212:1: ( ( ( rule__Background__ColorAssignment_1 ) ) )
-            // InternalXdiagramDsl.g:7213:1: ( ( rule__Background__ColorAssignment_1 ) )
+            // InternalXdiagramDsl.g:7158:1: ( ( ( rule__Background__ColorAssignment_1 ) ) )
+            // InternalXdiagramDsl.g:7159:1: ( ( rule__Background__ColorAssignment_1 ) )
             {
-            // InternalXdiagramDsl.g:7213:1: ( ( rule__Background__ColorAssignment_1 ) )
-            // InternalXdiagramDsl.g:7214:2: ( rule__Background__ColorAssignment_1 )
+            // InternalXdiagramDsl.g:7159:1: ( ( rule__Background__ColorAssignment_1 ) )
+            // InternalXdiagramDsl.g:7160:2: ( rule__Background__ColorAssignment_1 )
             {
              before(grammarAccess.getBackgroundAccess().getColorAssignment_1()); 
-            // InternalXdiagramDsl.g:7215:2: ( rule__Background__ColorAssignment_1 )
-            // InternalXdiagramDsl.g:7215:3: rule__Background__ColorAssignment_1
+            // InternalXdiagramDsl.g:7161:2: ( rule__Background__ColorAssignment_1 )
+            // InternalXdiagramDsl.g:7161:3: rule__Background__ColorAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Background__ColorAssignment_1();
@@ -23171,16 +23011,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Background__Group__2"
-    // InternalXdiagramDsl.g:7223:1: rule__Background__Group__2 : rule__Background__Group__2__Impl rule__Background__Group__3 ;
+    // InternalXdiagramDsl.g:7169:1: rule__Background__Group__2 : rule__Background__Group__2__Impl rule__Background__Group__3 ;
     public final void rule__Background__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7227:1: ( rule__Background__Group__2__Impl rule__Background__Group__3 )
-            // InternalXdiagramDsl.g:7228:2: rule__Background__Group__2__Impl rule__Background__Group__3
+            // InternalXdiagramDsl.g:7173:1: ( rule__Background__Group__2__Impl rule__Background__Group__3 )
+            // InternalXdiagramDsl.g:7174:2: rule__Background__Group__2__Impl rule__Background__Group__3
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             rule__Background__Group__2__Impl();
 
             state._fsp--;
@@ -23209,20 +23049,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Background__Group__2__Impl"
-    // InternalXdiagramDsl.g:7235:1: rule__Background__Group__2__Impl : ( ( rule__Background__ConditionalAssignment_2 )? ) ;
+    // InternalXdiagramDsl.g:7181:1: rule__Background__Group__2__Impl : ( ( rule__Background__ConditionalAssignment_2 )? ) ;
     public final void rule__Background__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7239:1: ( ( ( rule__Background__ConditionalAssignment_2 )? ) )
-            // InternalXdiagramDsl.g:7240:1: ( ( rule__Background__ConditionalAssignment_2 )? )
+            // InternalXdiagramDsl.g:7185:1: ( ( ( rule__Background__ConditionalAssignment_2 )? ) )
+            // InternalXdiagramDsl.g:7186:1: ( ( rule__Background__ConditionalAssignment_2 )? )
             {
-            // InternalXdiagramDsl.g:7240:1: ( ( rule__Background__ConditionalAssignment_2 )? )
-            // InternalXdiagramDsl.g:7241:2: ( rule__Background__ConditionalAssignment_2 )?
+            // InternalXdiagramDsl.g:7186:1: ( ( rule__Background__ConditionalAssignment_2 )? )
+            // InternalXdiagramDsl.g:7187:2: ( rule__Background__ConditionalAssignment_2 )?
             {
              before(grammarAccess.getBackgroundAccess().getConditionalAssignment_2()); 
-            // InternalXdiagramDsl.g:7242:2: ( rule__Background__ConditionalAssignment_2 )?
+            // InternalXdiagramDsl.g:7188:2: ( rule__Background__ConditionalAssignment_2 )?
             int alt66=2;
             int LA66_0 = input.LA(1);
 
@@ -23231,7 +23071,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
             }
             switch (alt66) {
                 case 1 :
-                    // InternalXdiagramDsl.g:7242:3: rule__Background__ConditionalAssignment_2
+                    // InternalXdiagramDsl.g:7188:3: rule__Background__ConditionalAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Background__ConditionalAssignment_2();
@@ -23267,14 +23107,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Background__Group__3"
-    // InternalXdiagramDsl.g:7250:1: rule__Background__Group__3 : rule__Background__Group__3__Impl ;
+    // InternalXdiagramDsl.g:7196:1: rule__Background__Group__3 : rule__Background__Group__3__Impl ;
     public final void rule__Background__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7254:1: ( rule__Background__Group__3__Impl )
-            // InternalXdiagramDsl.g:7255:2: rule__Background__Group__3__Impl
+            // InternalXdiagramDsl.g:7200:1: ( rule__Background__Group__3__Impl )
+            // InternalXdiagramDsl.g:7201:2: rule__Background__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Background__Group__3__Impl();
@@ -23300,20 +23140,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Background__Group__3__Impl"
-    // InternalXdiagramDsl.g:7261:1: rule__Background__Group__3__Impl : ( ';' ) ;
+    // InternalXdiagramDsl.g:7207:1: rule__Background__Group__3__Impl : ( ';' ) ;
     public final void rule__Background__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7265:1: ( ( ';' ) )
-            // InternalXdiagramDsl.g:7266:1: ( ';' )
+            // InternalXdiagramDsl.g:7211:1: ( ( ';' ) )
+            // InternalXdiagramDsl.g:7212:1: ( ';' )
             {
-            // InternalXdiagramDsl.g:7266:1: ( ';' )
-            // InternalXdiagramDsl.g:7267:2: ';'
+            // InternalXdiagramDsl.g:7212:1: ( ';' )
+            // InternalXdiagramDsl.g:7213:2: ';'
             {
              before(grammarAccess.getBackgroundAccess().getSemicolonKeyword_3()); 
-            match(input,58,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getBackgroundAccess().getSemicolonKeyword_3()); 
 
             }
@@ -23337,16 +23177,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Transparency__Group__0"
-    // InternalXdiagramDsl.g:7277:1: rule__Transparency__Group__0 : rule__Transparency__Group__0__Impl rule__Transparency__Group__1 ;
+    // InternalXdiagramDsl.g:7223:1: rule__Transparency__Group__0 : rule__Transparency__Group__0__Impl rule__Transparency__Group__1 ;
     public final void rule__Transparency__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7281:1: ( rule__Transparency__Group__0__Impl rule__Transparency__Group__1 )
-            // InternalXdiagramDsl.g:7282:2: rule__Transparency__Group__0__Impl rule__Transparency__Group__1
+            // InternalXdiagramDsl.g:7227:1: ( rule__Transparency__Group__0__Impl rule__Transparency__Group__1 )
+            // InternalXdiagramDsl.g:7228:2: rule__Transparency__Group__0__Impl rule__Transparency__Group__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_29);
             rule__Transparency__Group__0__Impl();
 
             state._fsp--;
@@ -23375,20 +23215,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Transparency__Group__0__Impl"
-    // InternalXdiagramDsl.g:7289:1: rule__Transparency__Group__0__Impl : ( 'transparency' ) ;
+    // InternalXdiagramDsl.g:7235:1: rule__Transparency__Group__0__Impl : ( 'transparency' ) ;
     public final void rule__Transparency__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7293:1: ( ( 'transparency' ) )
-            // InternalXdiagramDsl.g:7294:1: ( 'transparency' )
+            // InternalXdiagramDsl.g:7239:1: ( ( 'transparency' ) )
+            // InternalXdiagramDsl.g:7240:1: ( 'transparency' )
             {
-            // InternalXdiagramDsl.g:7294:1: ( 'transparency' )
-            // InternalXdiagramDsl.g:7295:2: 'transparency'
+            // InternalXdiagramDsl.g:7240:1: ( 'transparency' )
+            // InternalXdiagramDsl.g:7241:2: 'transparency'
             {
              before(grammarAccess.getTransparencyAccess().getTransparencyKeyword_0()); 
-            match(input,71,FOLLOW_2); 
+            match(input,70,FOLLOW_2); 
              after(grammarAccess.getTransparencyAccess().getTransparencyKeyword_0()); 
 
             }
@@ -23412,16 +23252,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Transparency__Group__1"
-    // InternalXdiagramDsl.g:7304:1: rule__Transparency__Group__1 : rule__Transparency__Group__1__Impl rule__Transparency__Group__2 ;
+    // InternalXdiagramDsl.g:7250:1: rule__Transparency__Group__1 : rule__Transparency__Group__1__Impl rule__Transparency__Group__2 ;
     public final void rule__Transparency__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7308:1: ( rule__Transparency__Group__1__Impl rule__Transparency__Group__2 )
-            // InternalXdiagramDsl.g:7309:2: rule__Transparency__Group__1__Impl rule__Transparency__Group__2
+            // InternalXdiagramDsl.g:7254:1: ( rule__Transparency__Group__1__Impl rule__Transparency__Group__2 )
+            // InternalXdiagramDsl.g:7255:2: rule__Transparency__Group__1__Impl rule__Transparency__Group__2
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_58);
             rule__Transparency__Group__1__Impl();
 
             state._fsp--;
@@ -23450,21 +23290,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Transparency__Group__1__Impl"
-    // InternalXdiagramDsl.g:7316:1: rule__Transparency__Group__1__Impl : ( ( rule__Transparency__PercentAssignment_1 ) ) ;
+    // InternalXdiagramDsl.g:7262:1: rule__Transparency__Group__1__Impl : ( ( rule__Transparency__PercentAssignment_1 ) ) ;
     public final void rule__Transparency__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7320:1: ( ( ( rule__Transparency__PercentAssignment_1 ) ) )
-            // InternalXdiagramDsl.g:7321:1: ( ( rule__Transparency__PercentAssignment_1 ) )
+            // InternalXdiagramDsl.g:7266:1: ( ( ( rule__Transparency__PercentAssignment_1 ) ) )
+            // InternalXdiagramDsl.g:7267:1: ( ( rule__Transparency__PercentAssignment_1 ) )
             {
-            // InternalXdiagramDsl.g:7321:1: ( ( rule__Transparency__PercentAssignment_1 ) )
-            // InternalXdiagramDsl.g:7322:2: ( rule__Transparency__PercentAssignment_1 )
+            // InternalXdiagramDsl.g:7267:1: ( ( rule__Transparency__PercentAssignment_1 ) )
+            // InternalXdiagramDsl.g:7268:2: ( rule__Transparency__PercentAssignment_1 )
             {
              before(grammarAccess.getTransparencyAccess().getPercentAssignment_1()); 
-            // InternalXdiagramDsl.g:7323:2: ( rule__Transparency__PercentAssignment_1 )
-            // InternalXdiagramDsl.g:7323:3: rule__Transparency__PercentAssignment_1
+            // InternalXdiagramDsl.g:7269:2: ( rule__Transparency__PercentAssignment_1 )
+            // InternalXdiagramDsl.g:7269:3: rule__Transparency__PercentAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Transparency__PercentAssignment_1();
@@ -23497,16 +23337,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Transparency__Group__2"
-    // InternalXdiagramDsl.g:7331:1: rule__Transparency__Group__2 : rule__Transparency__Group__2__Impl rule__Transparency__Group__3 ;
+    // InternalXdiagramDsl.g:7277:1: rule__Transparency__Group__2 : rule__Transparency__Group__2__Impl rule__Transparency__Group__3 ;
     public final void rule__Transparency__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7335:1: ( rule__Transparency__Group__2__Impl rule__Transparency__Group__3 )
-            // InternalXdiagramDsl.g:7336:2: rule__Transparency__Group__2__Impl rule__Transparency__Group__3
+            // InternalXdiagramDsl.g:7281:1: ( rule__Transparency__Group__2__Impl rule__Transparency__Group__3 )
+            // InternalXdiagramDsl.g:7282:2: rule__Transparency__Group__2__Impl rule__Transparency__Group__3
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             rule__Transparency__Group__2__Impl();
 
             state._fsp--;
@@ -23535,20 +23375,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Transparency__Group__2__Impl"
-    // InternalXdiagramDsl.g:7343:1: rule__Transparency__Group__2__Impl : ( '%' ) ;
+    // InternalXdiagramDsl.g:7289:1: rule__Transparency__Group__2__Impl : ( '%' ) ;
     public final void rule__Transparency__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7347:1: ( ( '%' ) )
-            // InternalXdiagramDsl.g:7348:1: ( '%' )
+            // InternalXdiagramDsl.g:7293:1: ( ( '%' ) )
+            // InternalXdiagramDsl.g:7294:1: ( '%' )
             {
-            // InternalXdiagramDsl.g:7348:1: ( '%' )
-            // InternalXdiagramDsl.g:7349:2: '%'
+            // InternalXdiagramDsl.g:7294:1: ( '%' )
+            // InternalXdiagramDsl.g:7295:2: '%'
             {
              before(grammarAccess.getTransparencyAccess().getPercentSignKeyword_2()); 
-            match(input,56,FOLLOW_2); 
+            match(input,71,FOLLOW_2); 
              after(grammarAccess.getTransparencyAccess().getPercentSignKeyword_2()); 
 
             }
@@ -23572,16 +23412,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Transparency__Group__3"
-    // InternalXdiagramDsl.g:7358:1: rule__Transparency__Group__3 : rule__Transparency__Group__3__Impl rule__Transparency__Group__4 ;
+    // InternalXdiagramDsl.g:7304:1: rule__Transparency__Group__3 : rule__Transparency__Group__3__Impl rule__Transparency__Group__4 ;
     public final void rule__Transparency__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7362:1: ( rule__Transparency__Group__3__Impl rule__Transparency__Group__4 )
-            // InternalXdiagramDsl.g:7363:2: rule__Transparency__Group__3__Impl rule__Transparency__Group__4
+            // InternalXdiagramDsl.g:7308:1: ( rule__Transparency__Group__3__Impl rule__Transparency__Group__4 )
+            // InternalXdiagramDsl.g:7309:2: rule__Transparency__Group__3__Impl rule__Transparency__Group__4
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             rule__Transparency__Group__3__Impl();
 
             state._fsp--;
@@ -23610,20 +23450,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Transparency__Group__3__Impl"
-    // InternalXdiagramDsl.g:7370:1: rule__Transparency__Group__3__Impl : ( ( rule__Transparency__ConditionalAssignment_3 )? ) ;
+    // InternalXdiagramDsl.g:7316:1: rule__Transparency__Group__3__Impl : ( ( rule__Transparency__ConditionalAssignment_3 )? ) ;
     public final void rule__Transparency__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7374:1: ( ( ( rule__Transparency__ConditionalAssignment_3 )? ) )
-            // InternalXdiagramDsl.g:7375:1: ( ( rule__Transparency__ConditionalAssignment_3 )? )
+            // InternalXdiagramDsl.g:7320:1: ( ( ( rule__Transparency__ConditionalAssignment_3 )? ) )
+            // InternalXdiagramDsl.g:7321:1: ( ( rule__Transparency__ConditionalAssignment_3 )? )
             {
-            // InternalXdiagramDsl.g:7375:1: ( ( rule__Transparency__ConditionalAssignment_3 )? )
-            // InternalXdiagramDsl.g:7376:2: ( rule__Transparency__ConditionalAssignment_3 )?
+            // InternalXdiagramDsl.g:7321:1: ( ( rule__Transparency__ConditionalAssignment_3 )? )
+            // InternalXdiagramDsl.g:7322:2: ( rule__Transparency__ConditionalAssignment_3 )?
             {
              before(grammarAccess.getTransparencyAccess().getConditionalAssignment_3()); 
-            // InternalXdiagramDsl.g:7377:2: ( rule__Transparency__ConditionalAssignment_3 )?
+            // InternalXdiagramDsl.g:7323:2: ( rule__Transparency__ConditionalAssignment_3 )?
             int alt67=2;
             int LA67_0 = input.LA(1);
 
@@ -23632,7 +23472,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
             }
             switch (alt67) {
                 case 1 :
-                    // InternalXdiagramDsl.g:7377:3: rule__Transparency__ConditionalAssignment_3
+                    // InternalXdiagramDsl.g:7323:3: rule__Transparency__ConditionalAssignment_3
                     {
                     pushFollow(FOLLOW_2);
                     rule__Transparency__ConditionalAssignment_3();
@@ -23668,14 +23508,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Transparency__Group__4"
-    // InternalXdiagramDsl.g:7385:1: rule__Transparency__Group__4 : rule__Transparency__Group__4__Impl ;
+    // InternalXdiagramDsl.g:7331:1: rule__Transparency__Group__4 : rule__Transparency__Group__4__Impl ;
     public final void rule__Transparency__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7389:1: ( rule__Transparency__Group__4__Impl )
-            // InternalXdiagramDsl.g:7390:2: rule__Transparency__Group__4__Impl
+            // InternalXdiagramDsl.g:7335:1: ( rule__Transparency__Group__4__Impl )
+            // InternalXdiagramDsl.g:7336:2: rule__Transparency__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Transparency__Group__4__Impl();
@@ -23701,20 +23541,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Transparency__Group__4__Impl"
-    // InternalXdiagramDsl.g:7396:1: rule__Transparency__Group__4__Impl : ( ';' ) ;
+    // InternalXdiagramDsl.g:7342:1: rule__Transparency__Group__4__Impl : ( ';' ) ;
     public final void rule__Transparency__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7400:1: ( ( ';' ) )
-            // InternalXdiagramDsl.g:7401:1: ( ';' )
+            // InternalXdiagramDsl.g:7346:1: ( ( ';' ) )
+            // InternalXdiagramDsl.g:7347:1: ( ';' )
             {
-            // InternalXdiagramDsl.g:7401:1: ( ';' )
-            // InternalXdiagramDsl.g:7402:2: ';'
+            // InternalXdiagramDsl.g:7347:1: ( ';' )
+            // InternalXdiagramDsl.g:7348:2: ';'
             {
              before(grammarAccess.getTransparencyAccess().getSemicolonKeyword_4()); 
-            match(input,58,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getTransparencyAccess().getSemicolonKeyword_4()); 
 
             }
@@ -23738,16 +23578,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group__0"
-    // InternalXdiagramDsl.g:7412:1: rule__Size__Group__0 : rule__Size__Group__0__Impl rule__Size__Group__1 ;
+    // InternalXdiagramDsl.g:7358:1: rule__Size__Group__0 : rule__Size__Group__0__Impl rule__Size__Group__1 ;
     public final void rule__Size__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7416:1: ( rule__Size__Group__0__Impl rule__Size__Group__1 )
-            // InternalXdiagramDsl.g:7417:2: rule__Size__Group__0__Impl rule__Size__Group__1
+            // InternalXdiagramDsl.g:7362:1: ( rule__Size__Group__0__Impl rule__Size__Group__1 )
+            // InternalXdiagramDsl.g:7363:2: rule__Size__Group__0__Impl rule__Size__Group__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_29);
             rule__Size__Group__0__Impl();
 
             state._fsp--;
@@ -23776,17 +23616,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group__0__Impl"
-    // InternalXdiagramDsl.g:7424:1: rule__Size__Group__0__Impl : ( 'size' ) ;
+    // InternalXdiagramDsl.g:7370:1: rule__Size__Group__0__Impl : ( 'size' ) ;
     public final void rule__Size__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7428:1: ( ( 'size' ) )
-            // InternalXdiagramDsl.g:7429:1: ( 'size' )
+            // InternalXdiagramDsl.g:7374:1: ( ( 'size' ) )
+            // InternalXdiagramDsl.g:7375:1: ( 'size' )
             {
-            // InternalXdiagramDsl.g:7429:1: ( 'size' )
-            // InternalXdiagramDsl.g:7430:2: 'size'
+            // InternalXdiagramDsl.g:7375:1: ( 'size' )
+            // InternalXdiagramDsl.g:7376:2: 'size'
             {
              before(grammarAccess.getSizeAccess().getSizeKeyword_0()); 
             match(input,72,FOLLOW_2); 
@@ -23813,14 +23653,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group__1"
-    // InternalXdiagramDsl.g:7439:1: rule__Size__Group__1 : rule__Size__Group__1__Impl rule__Size__Group__2 ;
+    // InternalXdiagramDsl.g:7385:1: rule__Size__Group__1 : rule__Size__Group__1__Impl rule__Size__Group__2 ;
     public final void rule__Size__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7443:1: ( rule__Size__Group__1__Impl rule__Size__Group__2 )
-            // InternalXdiagramDsl.g:7444:2: rule__Size__Group__1__Impl rule__Size__Group__2
+            // InternalXdiagramDsl.g:7389:1: ( rule__Size__Group__1__Impl rule__Size__Group__2 )
+            // InternalXdiagramDsl.g:7390:2: rule__Size__Group__1__Impl rule__Size__Group__2
             {
             pushFollow(FOLLOW_59);
             rule__Size__Group__1__Impl();
@@ -23851,21 +23691,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group__1__Impl"
-    // InternalXdiagramDsl.g:7451:1: rule__Size__Group__1__Impl : ( ( rule__Size__WidthAssignment_1 ) ) ;
+    // InternalXdiagramDsl.g:7397:1: rule__Size__Group__1__Impl : ( ( rule__Size__WidthAssignment_1 ) ) ;
     public final void rule__Size__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7455:1: ( ( ( rule__Size__WidthAssignment_1 ) ) )
-            // InternalXdiagramDsl.g:7456:1: ( ( rule__Size__WidthAssignment_1 ) )
+            // InternalXdiagramDsl.g:7401:1: ( ( ( rule__Size__WidthAssignment_1 ) ) )
+            // InternalXdiagramDsl.g:7402:1: ( ( rule__Size__WidthAssignment_1 ) )
             {
-            // InternalXdiagramDsl.g:7456:1: ( ( rule__Size__WidthAssignment_1 ) )
-            // InternalXdiagramDsl.g:7457:2: ( rule__Size__WidthAssignment_1 )
+            // InternalXdiagramDsl.g:7402:1: ( ( rule__Size__WidthAssignment_1 ) )
+            // InternalXdiagramDsl.g:7403:2: ( rule__Size__WidthAssignment_1 )
             {
              before(grammarAccess.getSizeAccess().getWidthAssignment_1()); 
-            // InternalXdiagramDsl.g:7458:2: ( rule__Size__WidthAssignment_1 )
-            // InternalXdiagramDsl.g:7458:3: rule__Size__WidthAssignment_1
+            // InternalXdiagramDsl.g:7404:2: ( rule__Size__WidthAssignment_1 )
+            // InternalXdiagramDsl.g:7404:3: rule__Size__WidthAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Size__WidthAssignment_1();
@@ -23898,14 +23738,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group__2"
-    // InternalXdiagramDsl.g:7466:1: rule__Size__Group__2 : rule__Size__Group__2__Impl rule__Size__Group__3 ;
+    // InternalXdiagramDsl.g:7412:1: rule__Size__Group__2 : rule__Size__Group__2__Impl rule__Size__Group__3 ;
     public final void rule__Size__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7470:1: ( rule__Size__Group__2__Impl rule__Size__Group__3 )
-            // InternalXdiagramDsl.g:7471:2: rule__Size__Group__2__Impl rule__Size__Group__3
+            // InternalXdiagramDsl.g:7416:1: ( rule__Size__Group__2__Impl rule__Size__Group__3 )
+            // InternalXdiagramDsl.g:7417:2: rule__Size__Group__2__Impl rule__Size__Group__3
             {
             pushFollow(FOLLOW_59);
             rule__Size__Group__2__Impl();
@@ -23936,20 +23776,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group__2__Impl"
-    // InternalXdiagramDsl.g:7478:1: rule__Size__Group__2__Impl : ( ( rule__Size__WidthRelativeAssignment_2 )? ) ;
+    // InternalXdiagramDsl.g:7424:1: rule__Size__Group__2__Impl : ( ( rule__Size__WidthRelativeAssignment_2 )? ) ;
     public final void rule__Size__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7482:1: ( ( ( rule__Size__WidthRelativeAssignment_2 )? ) )
-            // InternalXdiagramDsl.g:7483:1: ( ( rule__Size__WidthRelativeAssignment_2 )? )
+            // InternalXdiagramDsl.g:7428:1: ( ( ( rule__Size__WidthRelativeAssignment_2 )? ) )
+            // InternalXdiagramDsl.g:7429:1: ( ( rule__Size__WidthRelativeAssignment_2 )? )
             {
-            // InternalXdiagramDsl.g:7483:1: ( ( rule__Size__WidthRelativeAssignment_2 )? )
-            // InternalXdiagramDsl.g:7484:2: ( rule__Size__WidthRelativeAssignment_2 )?
+            // InternalXdiagramDsl.g:7429:1: ( ( rule__Size__WidthRelativeAssignment_2 )? )
+            // InternalXdiagramDsl.g:7430:2: ( rule__Size__WidthRelativeAssignment_2 )?
             {
              before(grammarAccess.getSizeAccess().getWidthRelativeAssignment_2()); 
-            // InternalXdiagramDsl.g:7485:2: ( rule__Size__WidthRelativeAssignment_2 )?
+            // InternalXdiagramDsl.g:7431:2: ( rule__Size__WidthRelativeAssignment_2 )?
             int alt68=2;
             int LA68_0 = input.LA(1);
 
@@ -23958,7 +23798,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
             }
             switch (alt68) {
                 case 1 :
-                    // InternalXdiagramDsl.g:7485:3: rule__Size__WidthRelativeAssignment_2
+                    // InternalXdiagramDsl.g:7431:3: rule__Size__WidthRelativeAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Size__WidthRelativeAssignment_2();
@@ -23994,14 +23834,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group__3"
-    // InternalXdiagramDsl.g:7493:1: rule__Size__Group__3 : rule__Size__Group__3__Impl rule__Size__Group__4 ;
+    // InternalXdiagramDsl.g:7439:1: rule__Size__Group__3 : rule__Size__Group__3__Impl rule__Size__Group__4 ;
     public final void rule__Size__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7497:1: ( rule__Size__Group__3__Impl rule__Size__Group__4 )
-            // InternalXdiagramDsl.g:7498:2: rule__Size__Group__3__Impl rule__Size__Group__4
+            // InternalXdiagramDsl.g:7443:1: ( rule__Size__Group__3__Impl rule__Size__Group__4 )
+            // InternalXdiagramDsl.g:7444:2: rule__Size__Group__3__Impl rule__Size__Group__4
             {
             pushFollow(FOLLOW_59);
             rule__Size__Group__3__Impl();
@@ -24032,20 +23872,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group__3__Impl"
-    // InternalXdiagramDsl.g:7505:1: rule__Size__Group__3__Impl : ( ( rule__Size__Group_3__0 )? ) ;
+    // InternalXdiagramDsl.g:7451:1: rule__Size__Group__3__Impl : ( ( rule__Size__Group_3__0 )? ) ;
     public final void rule__Size__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7509:1: ( ( ( rule__Size__Group_3__0 )? ) )
-            // InternalXdiagramDsl.g:7510:1: ( ( rule__Size__Group_3__0 )? )
+            // InternalXdiagramDsl.g:7455:1: ( ( ( rule__Size__Group_3__0 )? ) )
+            // InternalXdiagramDsl.g:7456:1: ( ( rule__Size__Group_3__0 )? )
             {
-            // InternalXdiagramDsl.g:7510:1: ( ( rule__Size__Group_3__0 )? )
-            // InternalXdiagramDsl.g:7511:2: ( rule__Size__Group_3__0 )?
+            // InternalXdiagramDsl.g:7456:1: ( ( rule__Size__Group_3__0 )? )
+            // InternalXdiagramDsl.g:7457:2: ( rule__Size__Group_3__0 )?
             {
              before(grammarAccess.getSizeAccess().getGroup_3()); 
-            // InternalXdiagramDsl.g:7512:2: ( rule__Size__Group_3__0 )?
+            // InternalXdiagramDsl.g:7458:2: ( rule__Size__Group_3__0 )?
             int alt69=2;
             int LA69_0 = input.LA(1);
 
@@ -24054,7 +23894,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
             }
             switch (alt69) {
                 case 1 :
-                    // InternalXdiagramDsl.g:7512:3: rule__Size__Group_3__0
+                    // InternalXdiagramDsl.g:7458:3: rule__Size__Group_3__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Size__Group_3__0();
@@ -24090,14 +23930,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group__4"
-    // InternalXdiagramDsl.g:7520:1: rule__Size__Group__4 : rule__Size__Group__4__Impl rule__Size__Group__5 ;
+    // InternalXdiagramDsl.g:7466:1: rule__Size__Group__4 : rule__Size__Group__4__Impl rule__Size__Group__5 ;
     public final void rule__Size__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7524:1: ( rule__Size__Group__4__Impl rule__Size__Group__5 )
-            // InternalXdiagramDsl.g:7525:2: rule__Size__Group__4__Impl rule__Size__Group__5
+            // InternalXdiagramDsl.g:7470:1: ( rule__Size__Group__4__Impl rule__Size__Group__5 )
+            // InternalXdiagramDsl.g:7471:2: rule__Size__Group__4__Impl rule__Size__Group__5
             {
             pushFollow(FOLLOW_59);
             rule__Size__Group__4__Impl();
@@ -24128,20 +23968,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group__4__Impl"
-    // InternalXdiagramDsl.g:7532:1: rule__Size__Group__4__Impl : ( ( rule__Size__ResizableAssignment_4 )? ) ;
+    // InternalXdiagramDsl.g:7478:1: rule__Size__Group__4__Impl : ( ( rule__Size__ResizableAssignment_4 )? ) ;
     public final void rule__Size__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7536:1: ( ( ( rule__Size__ResizableAssignment_4 )? ) )
-            // InternalXdiagramDsl.g:7537:1: ( ( rule__Size__ResizableAssignment_4 )? )
+            // InternalXdiagramDsl.g:7482:1: ( ( ( rule__Size__ResizableAssignment_4 )? ) )
+            // InternalXdiagramDsl.g:7483:1: ( ( rule__Size__ResizableAssignment_4 )? )
             {
-            // InternalXdiagramDsl.g:7537:1: ( ( rule__Size__ResizableAssignment_4 )? )
-            // InternalXdiagramDsl.g:7538:2: ( rule__Size__ResizableAssignment_4 )?
+            // InternalXdiagramDsl.g:7483:1: ( ( rule__Size__ResizableAssignment_4 )? )
+            // InternalXdiagramDsl.g:7484:2: ( rule__Size__ResizableAssignment_4 )?
             {
              before(grammarAccess.getSizeAccess().getResizableAssignment_4()); 
-            // InternalXdiagramDsl.g:7539:2: ( rule__Size__ResizableAssignment_4 )?
+            // InternalXdiagramDsl.g:7485:2: ( rule__Size__ResizableAssignment_4 )?
             int alt70=2;
             int LA70_0 = input.LA(1);
 
@@ -24150,7 +23990,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
             }
             switch (alt70) {
                 case 1 :
-                    // InternalXdiagramDsl.g:7539:3: rule__Size__ResizableAssignment_4
+                    // InternalXdiagramDsl.g:7485:3: rule__Size__ResizableAssignment_4
                     {
                     pushFollow(FOLLOW_2);
                     rule__Size__ResizableAssignment_4();
@@ -24186,14 +24026,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group__5"
-    // InternalXdiagramDsl.g:7547:1: rule__Size__Group__5 : rule__Size__Group__5__Impl rule__Size__Group__6 ;
+    // InternalXdiagramDsl.g:7493:1: rule__Size__Group__5 : rule__Size__Group__5__Impl rule__Size__Group__6 ;
     public final void rule__Size__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7551:1: ( rule__Size__Group__5__Impl rule__Size__Group__6 )
-            // InternalXdiagramDsl.g:7552:2: rule__Size__Group__5__Impl rule__Size__Group__6
+            // InternalXdiagramDsl.g:7497:1: ( rule__Size__Group__5__Impl rule__Size__Group__6 )
+            // InternalXdiagramDsl.g:7498:2: rule__Size__Group__5__Impl rule__Size__Group__6
             {
             pushFollow(FOLLOW_59);
             rule__Size__Group__5__Impl();
@@ -24224,20 +24064,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group__5__Impl"
-    // InternalXdiagramDsl.g:7559:1: rule__Size__Group__5__Impl : ( ( rule__Size__ConditionalAssignment_5 )? ) ;
+    // InternalXdiagramDsl.g:7505:1: rule__Size__Group__5__Impl : ( ( rule__Size__ConditionalAssignment_5 )? ) ;
     public final void rule__Size__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7563:1: ( ( ( rule__Size__ConditionalAssignment_5 )? ) )
-            // InternalXdiagramDsl.g:7564:1: ( ( rule__Size__ConditionalAssignment_5 )? )
+            // InternalXdiagramDsl.g:7509:1: ( ( ( rule__Size__ConditionalAssignment_5 )? ) )
+            // InternalXdiagramDsl.g:7510:1: ( ( rule__Size__ConditionalAssignment_5 )? )
             {
-            // InternalXdiagramDsl.g:7564:1: ( ( rule__Size__ConditionalAssignment_5 )? )
-            // InternalXdiagramDsl.g:7565:2: ( rule__Size__ConditionalAssignment_5 )?
+            // InternalXdiagramDsl.g:7510:1: ( ( rule__Size__ConditionalAssignment_5 )? )
+            // InternalXdiagramDsl.g:7511:2: ( rule__Size__ConditionalAssignment_5 )?
             {
              before(grammarAccess.getSizeAccess().getConditionalAssignment_5()); 
-            // InternalXdiagramDsl.g:7566:2: ( rule__Size__ConditionalAssignment_5 )?
+            // InternalXdiagramDsl.g:7512:2: ( rule__Size__ConditionalAssignment_5 )?
             int alt71=2;
             int LA71_0 = input.LA(1);
 
@@ -24246,7 +24086,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
             }
             switch (alt71) {
                 case 1 :
-                    // InternalXdiagramDsl.g:7566:3: rule__Size__ConditionalAssignment_5
+                    // InternalXdiagramDsl.g:7512:3: rule__Size__ConditionalAssignment_5
                     {
                     pushFollow(FOLLOW_2);
                     rule__Size__ConditionalAssignment_5();
@@ -24282,14 +24122,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group__6"
-    // InternalXdiagramDsl.g:7574:1: rule__Size__Group__6 : rule__Size__Group__6__Impl ;
+    // InternalXdiagramDsl.g:7520:1: rule__Size__Group__6 : rule__Size__Group__6__Impl ;
     public final void rule__Size__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7578:1: ( rule__Size__Group__6__Impl )
-            // InternalXdiagramDsl.g:7579:2: rule__Size__Group__6__Impl
+            // InternalXdiagramDsl.g:7524:1: ( rule__Size__Group__6__Impl )
+            // InternalXdiagramDsl.g:7525:2: rule__Size__Group__6__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Size__Group__6__Impl();
@@ -24315,20 +24155,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group__6__Impl"
-    // InternalXdiagramDsl.g:7585:1: rule__Size__Group__6__Impl : ( ';' ) ;
+    // InternalXdiagramDsl.g:7531:1: rule__Size__Group__6__Impl : ( ';' ) ;
     public final void rule__Size__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7589:1: ( ( ';' ) )
-            // InternalXdiagramDsl.g:7590:1: ( ';' )
+            // InternalXdiagramDsl.g:7535:1: ( ( ';' ) )
+            // InternalXdiagramDsl.g:7536:1: ( ';' )
             {
-            // InternalXdiagramDsl.g:7590:1: ( ';' )
-            // InternalXdiagramDsl.g:7591:2: ';'
+            // InternalXdiagramDsl.g:7536:1: ( ';' )
+            // InternalXdiagramDsl.g:7537:2: ';'
             {
              before(grammarAccess.getSizeAccess().getSemicolonKeyword_6()); 
-            match(input,58,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getSizeAccess().getSemicolonKeyword_6()); 
 
             }
@@ -24352,14 +24192,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group_3__0"
-    // InternalXdiagramDsl.g:7601:1: rule__Size__Group_3__0 : rule__Size__Group_3__0__Impl rule__Size__Group_3__1 ;
+    // InternalXdiagramDsl.g:7547:1: rule__Size__Group_3__0 : rule__Size__Group_3__0__Impl rule__Size__Group_3__1 ;
     public final void rule__Size__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7605:1: ( rule__Size__Group_3__0__Impl rule__Size__Group_3__1 )
-            // InternalXdiagramDsl.g:7606:2: rule__Size__Group_3__0__Impl rule__Size__Group_3__1
+            // InternalXdiagramDsl.g:7551:1: ( rule__Size__Group_3__0__Impl rule__Size__Group_3__1 )
+            // InternalXdiagramDsl.g:7552:2: rule__Size__Group_3__0__Impl rule__Size__Group_3__1
             {
             pushFollow(FOLLOW_60);
             rule__Size__Group_3__0__Impl();
@@ -24390,21 +24230,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group_3__0__Impl"
-    // InternalXdiagramDsl.g:7613:1: rule__Size__Group_3__0__Impl : ( ( rule__Size__HeightAssignment_3_0 ) ) ;
+    // InternalXdiagramDsl.g:7559:1: rule__Size__Group_3__0__Impl : ( ( rule__Size__HeightAssignment_3_0 ) ) ;
     public final void rule__Size__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7617:1: ( ( ( rule__Size__HeightAssignment_3_0 ) ) )
-            // InternalXdiagramDsl.g:7618:1: ( ( rule__Size__HeightAssignment_3_0 ) )
+            // InternalXdiagramDsl.g:7563:1: ( ( ( rule__Size__HeightAssignment_3_0 ) ) )
+            // InternalXdiagramDsl.g:7564:1: ( ( rule__Size__HeightAssignment_3_0 ) )
             {
-            // InternalXdiagramDsl.g:7618:1: ( ( rule__Size__HeightAssignment_3_0 ) )
-            // InternalXdiagramDsl.g:7619:2: ( rule__Size__HeightAssignment_3_0 )
+            // InternalXdiagramDsl.g:7564:1: ( ( rule__Size__HeightAssignment_3_0 ) )
+            // InternalXdiagramDsl.g:7565:2: ( rule__Size__HeightAssignment_3_0 )
             {
              before(grammarAccess.getSizeAccess().getHeightAssignment_3_0()); 
-            // InternalXdiagramDsl.g:7620:2: ( rule__Size__HeightAssignment_3_0 )
-            // InternalXdiagramDsl.g:7620:3: rule__Size__HeightAssignment_3_0
+            // InternalXdiagramDsl.g:7566:2: ( rule__Size__HeightAssignment_3_0 )
+            // InternalXdiagramDsl.g:7566:3: rule__Size__HeightAssignment_3_0
             {
             pushFollow(FOLLOW_2);
             rule__Size__HeightAssignment_3_0();
@@ -24437,14 +24277,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group_3__1"
-    // InternalXdiagramDsl.g:7628:1: rule__Size__Group_3__1 : rule__Size__Group_3__1__Impl ;
+    // InternalXdiagramDsl.g:7574:1: rule__Size__Group_3__1 : rule__Size__Group_3__1__Impl ;
     public final void rule__Size__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7632:1: ( rule__Size__Group_3__1__Impl )
-            // InternalXdiagramDsl.g:7633:2: rule__Size__Group_3__1__Impl
+            // InternalXdiagramDsl.g:7578:1: ( rule__Size__Group_3__1__Impl )
+            // InternalXdiagramDsl.g:7579:2: rule__Size__Group_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Size__Group_3__1__Impl();
@@ -24470,20 +24310,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__Group_3__1__Impl"
-    // InternalXdiagramDsl.g:7639:1: rule__Size__Group_3__1__Impl : ( ( rule__Size__HeightRelativeAssignment_3_1 )? ) ;
+    // InternalXdiagramDsl.g:7585:1: rule__Size__Group_3__1__Impl : ( ( rule__Size__HeightRelativeAssignment_3_1 )? ) ;
     public final void rule__Size__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7643:1: ( ( ( rule__Size__HeightRelativeAssignment_3_1 )? ) )
-            // InternalXdiagramDsl.g:7644:1: ( ( rule__Size__HeightRelativeAssignment_3_1 )? )
+            // InternalXdiagramDsl.g:7589:1: ( ( ( rule__Size__HeightRelativeAssignment_3_1 )? ) )
+            // InternalXdiagramDsl.g:7590:1: ( ( rule__Size__HeightRelativeAssignment_3_1 )? )
             {
-            // InternalXdiagramDsl.g:7644:1: ( ( rule__Size__HeightRelativeAssignment_3_1 )? )
-            // InternalXdiagramDsl.g:7645:2: ( rule__Size__HeightRelativeAssignment_3_1 )?
+            // InternalXdiagramDsl.g:7590:1: ( ( rule__Size__HeightRelativeAssignment_3_1 )? )
+            // InternalXdiagramDsl.g:7591:2: ( rule__Size__HeightRelativeAssignment_3_1 )?
             {
              before(grammarAccess.getSizeAccess().getHeightRelativeAssignment_3_1()); 
-            // InternalXdiagramDsl.g:7646:2: ( rule__Size__HeightRelativeAssignment_3_1 )?
+            // InternalXdiagramDsl.g:7592:2: ( rule__Size__HeightRelativeAssignment_3_1 )?
             int alt72=2;
             int LA72_0 = input.LA(1);
 
@@ -24492,7 +24332,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
             }
             switch (alt72) {
                 case 1 :
-                    // InternalXdiagramDsl.g:7646:3: rule__Size__HeightRelativeAssignment_3_1
+                    // InternalXdiagramDsl.g:7592:3: rule__Size__HeightRelativeAssignment_3_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Size__HeightRelativeAssignment_3_1();
@@ -24528,16 +24368,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Point__Group__0"
-    // InternalXdiagramDsl.g:7655:1: rule__Point__Group__0 : rule__Point__Group__0__Impl rule__Point__Group__1 ;
+    // InternalXdiagramDsl.g:7601:1: rule__Point__Group__0 : rule__Point__Group__0__Impl rule__Point__Group__1 ;
     public final void rule__Point__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7659:1: ( rule__Point__Group__0__Impl rule__Point__Group__1 )
-            // InternalXdiagramDsl.g:7660:2: rule__Point__Group__0__Impl rule__Point__Group__1
+            // InternalXdiagramDsl.g:7605:1: ( rule__Point__Group__0__Impl rule__Point__Group__1 )
+            // InternalXdiagramDsl.g:7606:2: rule__Point__Group__0__Impl rule__Point__Group__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_29);
             rule__Point__Group__0__Impl();
 
             state._fsp--;
@@ -24566,17 +24406,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Point__Group__0__Impl"
-    // InternalXdiagramDsl.g:7667:1: rule__Point__Group__0__Impl : ( 'point' ) ;
+    // InternalXdiagramDsl.g:7613:1: rule__Point__Group__0__Impl : ( 'point' ) ;
     public final void rule__Point__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7671:1: ( ( 'point' ) )
-            // InternalXdiagramDsl.g:7672:1: ( 'point' )
+            // InternalXdiagramDsl.g:7617:1: ( ( 'point' ) )
+            // InternalXdiagramDsl.g:7618:1: ( 'point' )
             {
-            // InternalXdiagramDsl.g:7672:1: ( 'point' )
-            // InternalXdiagramDsl.g:7673:2: 'point'
+            // InternalXdiagramDsl.g:7618:1: ( 'point' )
+            // InternalXdiagramDsl.g:7619:2: 'point'
             {
              before(grammarAccess.getPointAccess().getPointKeyword_0()); 
             match(input,73,FOLLOW_2); 
@@ -24603,16 +24443,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Point__Group__1"
-    // InternalXdiagramDsl.g:7682:1: rule__Point__Group__1 : rule__Point__Group__1__Impl rule__Point__Group__2 ;
+    // InternalXdiagramDsl.g:7628:1: rule__Point__Group__1 : rule__Point__Group__1__Impl rule__Point__Group__2 ;
     public final void rule__Point__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7686:1: ( rule__Point__Group__1__Impl rule__Point__Group__2 )
-            // InternalXdiagramDsl.g:7687:2: rule__Point__Group__1__Impl rule__Point__Group__2
+            // InternalXdiagramDsl.g:7632:1: ( rule__Point__Group__1__Impl rule__Point__Group__2 )
+            // InternalXdiagramDsl.g:7633:2: rule__Point__Group__1__Impl rule__Point__Group__2
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_29);
             rule__Point__Group__1__Impl();
 
             state._fsp--;
@@ -24641,21 +24481,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Point__Group__1__Impl"
-    // InternalXdiagramDsl.g:7694:1: rule__Point__Group__1__Impl : ( ( rule__Point__XAssignment_1 ) ) ;
+    // InternalXdiagramDsl.g:7640:1: rule__Point__Group__1__Impl : ( ( rule__Point__XAssignment_1 ) ) ;
     public final void rule__Point__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7698:1: ( ( ( rule__Point__XAssignment_1 ) ) )
-            // InternalXdiagramDsl.g:7699:1: ( ( rule__Point__XAssignment_1 ) )
+            // InternalXdiagramDsl.g:7644:1: ( ( ( rule__Point__XAssignment_1 ) ) )
+            // InternalXdiagramDsl.g:7645:1: ( ( rule__Point__XAssignment_1 ) )
             {
-            // InternalXdiagramDsl.g:7699:1: ( ( rule__Point__XAssignment_1 ) )
-            // InternalXdiagramDsl.g:7700:2: ( rule__Point__XAssignment_1 )
+            // InternalXdiagramDsl.g:7645:1: ( ( rule__Point__XAssignment_1 ) )
+            // InternalXdiagramDsl.g:7646:2: ( rule__Point__XAssignment_1 )
             {
              before(grammarAccess.getPointAccess().getXAssignment_1()); 
-            // InternalXdiagramDsl.g:7701:2: ( rule__Point__XAssignment_1 )
-            // InternalXdiagramDsl.g:7701:3: rule__Point__XAssignment_1
+            // InternalXdiagramDsl.g:7647:2: ( rule__Point__XAssignment_1 )
+            // InternalXdiagramDsl.g:7647:3: rule__Point__XAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Point__XAssignment_1();
@@ -24688,16 +24528,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Point__Group__2"
-    // InternalXdiagramDsl.g:7709:1: rule__Point__Group__2 : rule__Point__Group__2__Impl rule__Point__Group__3 ;
+    // InternalXdiagramDsl.g:7655:1: rule__Point__Group__2 : rule__Point__Group__2__Impl rule__Point__Group__3 ;
     public final void rule__Point__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7713:1: ( rule__Point__Group__2__Impl rule__Point__Group__3 )
-            // InternalXdiagramDsl.g:7714:2: rule__Point__Group__2__Impl rule__Point__Group__3
+            // InternalXdiagramDsl.g:7659:1: ( rule__Point__Group__2__Impl rule__Point__Group__3 )
+            // InternalXdiagramDsl.g:7660:2: rule__Point__Group__2__Impl rule__Point__Group__3
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             rule__Point__Group__2__Impl();
 
             state._fsp--;
@@ -24726,21 +24566,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Point__Group__2__Impl"
-    // InternalXdiagramDsl.g:7721:1: rule__Point__Group__2__Impl : ( ( rule__Point__YAssignment_2 ) ) ;
+    // InternalXdiagramDsl.g:7667:1: rule__Point__Group__2__Impl : ( ( rule__Point__YAssignment_2 ) ) ;
     public final void rule__Point__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7725:1: ( ( ( rule__Point__YAssignment_2 ) ) )
-            // InternalXdiagramDsl.g:7726:1: ( ( rule__Point__YAssignment_2 ) )
+            // InternalXdiagramDsl.g:7671:1: ( ( ( rule__Point__YAssignment_2 ) ) )
+            // InternalXdiagramDsl.g:7672:1: ( ( rule__Point__YAssignment_2 ) )
             {
-            // InternalXdiagramDsl.g:7726:1: ( ( rule__Point__YAssignment_2 ) )
-            // InternalXdiagramDsl.g:7727:2: ( rule__Point__YAssignment_2 )
+            // InternalXdiagramDsl.g:7672:1: ( ( rule__Point__YAssignment_2 ) )
+            // InternalXdiagramDsl.g:7673:2: ( rule__Point__YAssignment_2 )
             {
              before(grammarAccess.getPointAccess().getYAssignment_2()); 
-            // InternalXdiagramDsl.g:7728:2: ( rule__Point__YAssignment_2 )
-            // InternalXdiagramDsl.g:7728:3: rule__Point__YAssignment_2
+            // InternalXdiagramDsl.g:7674:2: ( rule__Point__YAssignment_2 )
+            // InternalXdiagramDsl.g:7674:3: rule__Point__YAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Point__YAssignment_2();
@@ -24773,16 +24613,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Point__Group__3"
-    // InternalXdiagramDsl.g:7736:1: rule__Point__Group__3 : rule__Point__Group__3__Impl rule__Point__Group__4 ;
+    // InternalXdiagramDsl.g:7682:1: rule__Point__Group__3 : rule__Point__Group__3__Impl rule__Point__Group__4 ;
     public final void rule__Point__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7740:1: ( rule__Point__Group__3__Impl rule__Point__Group__4 )
-            // InternalXdiagramDsl.g:7741:2: rule__Point__Group__3__Impl rule__Point__Group__4
+            // InternalXdiagramDsl.g:7686:1: ( rule__Point__Group__3__Impl rule__Point__Group__4 )
+            // InternalXdiagramDsl.g:7687:2: rule__Point__Group__3__Impl rule__Point__Group__4
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             rule__Point__Group__3__Impl();
 
             state._fsp--;
@@ -24811,20 +24651,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Point__Group__3__Impl"
-    // InternalXdiagramDsl.g:7748:1: rule__Point__Group__3__Impl : ( ( rule__Point__ConditionalAssignment_3 )? ) ;
+    // InternalXdiagramDsl.g:7694:1: rule__Point__Group__3__Impl : ( ( rule__Point__ConditionalAssignment_3 )? ) ;
     public final void rule__Point__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7752:1: ( ( ( rule__Point__ConditionalAssignment_3 )? ) )
-            // InternalXdiagramDsl.g:7753:1: ( ( rule__Point__ConditionalAssignment_3 )? )
+            // InternalXdiagramDsl.g:7698:1: ( ( ( rule__Point__ConditionalAssignment_3 )? ) )
+            // InternalXdiagramDsl.g:7699:1: ( ( rule__Point__ConditionalAssignment_3 )? )
             {
-            // InternalXdiagramDsl.g:7753:1: ( ( rule__Point__ConditionalAssignment_3 )? )
-            // InternalXdiagramDsl.g:7754:2: ( rule__Point__ConditionalAssignment_3 )?
+            // InternalXdiagramDsl.g:7699:1: ( ( rule__Point__ConditionalAssignment_3 )? )
+            // InternalXdiagramDsl.g:7700:2: ( rule__Point__ConditionalAssignment_3 )?
             {
              before(grammarAccess.getPointAccess().getConditionalAssignment_3()); 
-            // InternalXdiagramDsl.g:7755:2: ( rule__Point__ConditionalAssignment_3 )?
+            // InternalXdiagramDsl.g:7701:2: ( rule__Point__ConditionalAssignment_3 )?
             int alt73=2;
             int LA73_0 = input.LA(1);
 
@@ -24833,7 +24673,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
             }
             switch (alt73) {
                 case 1 :
-                    // InternalXdiagramDsl.g:7755:3: rule__Point__ConditionalAssignment_3
+                    // InternalXdiagramDsl.g:7701:3: rule__Point__ConditionalAssignment_3
                     {
                     pushFollow(FOLLOW_2);
                     rule__Point__ConditionalAssignment_3();
@@ -24869,14 +24709,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Point__Group__4"
-    // InternalXdiagramDsl.g:7763:1: rule__Point__Group__4 : rule__Point__Group__4__Impl ;
+    // InternalXdiagramDsl.g:7709:1: rule__Point__Group__4 : rule__Point__Group__4__Impl ;
     public final void rule__Point__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7767:1: ( rule__Point__Group__4__Impl )
-            // InternalXdiagramDsl.g:7768:2: rule__Point__Group__4__Impl
+            // InternalXdiagramDsl.g:7713:1: ( rule__Point__Group__4__Impl )
+            // InternalXdiagramDsl.g:7714:2: rule__Point__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Point__Group__4__Impl();
@@ -24902,20 +24742,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Point__Group__4__Impl"
-    // InternalXdiagramDsl.g:7774:1: rule__Point__Group__4__Impl : ( ';' ) ;
+    // InternalXdiagramDsl.g:7720:1: rule__Point__Group__4__Impl : ( ';' ) ;
     public final void rule__Point__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7778:1: ( ( ';' ) )
-            // InternalXdiagramDsl.g:7779:1: ( ';' )
+            // InternalXdiagramDsl.g:7724:1: ( ( ';' ) )
+            // InternalXdiagramDsl.g:7725:1: ( ';' )
             {
-            // InternalXdiagramDsl.g:7779:1: ( ';' )
-            // InternalXdiagramDsl.g:7780:2: ';'
+            // InternalXdiagramDsl.g:7725:1: ( ';' )
+            // InternalXdiagramDsl.g:7726:2: ';'
             {
              before(grammarAccess.getPointAccess().getSemicolonKeyword_4()); 
-            match(input,58,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getPointAccess().getSemicolonKeyword_4()); 
 
             }
@@ -24939,16 +24779,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Position__Group__0"
-    // InternalXdiagramDsl.g:7790:1: rule__Position__Group__0 : rule__Position__Group__0__Impl rule__Position__Group__1 ;
+    // InternalXdiagramDsl.g:7736:1: rule__Position__Group__0 : rule__Position__Group__0__Impl rule__Position__Group__1 ;
     public final void rule__Position__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7794:1: ( rule__Position__Group__0__Impl rule__Position__Group__1 )
-            // InternalXdiagramDsl.g:7795:2: rule__Position__Group__0__Impl rule__Position__Group__1
+            // InternalXdiagramDsl.g:7740:1: ( rule__Position__Group__0__Impl rule__Position__Group__1 )
+            // InternalXdiagramDsl.g:7741:2: rule__Position__Group__0__Impl rule__Position__Group__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_29);
             rule__Position__Group__0__Impl();
 
             state._fsp--;
@@ -24977,17 +24817,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Position__Group__0__Impl"
-    // InternalXdiagramDsl.g:7802:1: rule__Position__Group__0__Impl : ( 'position' ) ;
+    // InternalXdiagramDsl.g:7748:1: rule__Position__Group__0__Impl : ( 'position' ) ;
     public final void rule__Position__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7806:1: ( ( 'position' ) )
-            // InternalXdiagramDsl.g:7807:1: ( 'position' )
+            // InternalXdiagramDsl.g:7752:1: ( ( 'position' ) )
+            // InternalXdiagramDsl.g:7753:1: ( 'position' )
             {
-            // InternalXdiagramDsl.g:7807:1: ( 'position' )
-            // InternalXdiagramDsl.g:7808:2: 'position'
+            // InternalXdiagramDsl.g:7753:1: ( 'position' )
+            // InternalXdiagramDsl.g:7754:2: 'position'
             {
              before(grammarAccess.getPositionAccess().getPositionKeyword_0()); 
             match(input,74,FOLLOW_2); 
@@ -25014,14 +24854,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Position__Group__1"
-    // InternalXdiagramDsl.g:7817:1: rule__Position__Group__1 : rule__Position__Group__1__Impl rule__Position__Group__2 ;
+    // InternalXdiagramDsl.g:7763:1: rule__Position__Group__1 : rule__Position__Group__1__Impl rule__Position__Group__2 ;
     public final void rule__Position__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7821:1: ( rule__Position__Group__1__Impl rule__Position__Group__2 )
-            // InternalXdiagramDsl.g:7822:2: rule__Position__Group__1__Impl rule__Position__Group__2
+            // InternalXdiagramDsl.g:7767:1: ( rule__Position__Group__1__Impl rule__Position__Group__2 )
+            // InternalXdiagramDsl.g:7768:2: rule__Position__Group__1__Impl rule__Position__Group__2
             {
             pushFollow(FOLLOW_61);
             rule__Position__Group__1__Impl();
@@ -25052,21 +24892,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Position__Group__1__Impl"
-    // InternalXdiagramDsl.g:7829:1: rule__Position__Group__1__Impl : ( ( rule__Position__XAssignment_1 ) ) ;
+    // InternalXdiagramDsl.g:7775:1: rule__Position__Group__1__Impl : ( ( rule__Position__XAssignment_1 ) ) ;
     public final void rule__Position__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7833:1: ( ( ( rule__Position__XAssignment_1 ) ) )
-            // InternalXdiagramDsl.g:7834:1: ( ( rule__Position__XAssignment_1 ) )
+            // InternalXdiagramDsl.g:7779:1: ( ( ( rule__Position__XAssignment_1 ) ) )
+            // InternalXdiagramDsl.g:7780:1: ( ( rule__Position__XAssignment_1 ) )
             {
-            // InternalXdiagramDsl.g:7834:1: ( ( rule__Position__XAssignment_1 ) )
-            // InternalXdiagramDsl.g:7835:2: ( rule__Position__XAssignment_1 )
+            // InternalXdiagramDsl.g:7780:1: ( ( rule__Position__XAssignment_1 ) )
+            // InternalXdiagramDsl.g:7781:2: ( rule__Position__XAssignment_1 )
             {
              before(grammarAccess.getPositionAccess().getXAssignment_1()); 
-            // InternalXdiagramDsl.g:7836:2: ( rule__Position__XAssignment_1 )
-            // InternalXdiagramDsl.g:7836:3: rule__Position__XAssignment_1
+            // InternalXdiagramDsl.g:7782:2: ( rule__Position__XAssignment_1 )
+            // InternalXdiagramDsl.g:7782:3: rule__Position__XAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Position__XAssignment_1();
@@ -25099,14 +24939,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Position__Group__2"
-    // InternalXdiagramDsl.g:7844:1: rule__Position__Group__2 : rule__Position__Group__2__Impl rule__Position__Group__3 ;
+    // InternalXdiagramDsl.g:7790:1: rule__Position__Group__2 : rule__Position__Group__2__Impl rule__Position__Group__3 ;
     public final void rule__Position__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7848:1: ( rule__Position__Group__2__Impl rule__Position__Group__3 )
-            // InternalXdiagramDsl.g:7849:2: rule__Position__Group__2__Impl rule__Position__Group__3
+            // InternalXdiagramDsl.g:7794:1: ( rule__Position__Group__2__Impl rule__Position__Group__3 )
+            // InternalXdiagramDsl.g:7795:2: rule__Position__Group__2__Impl rule__Position__Group__3
             {
             pushFollow(FOLLOW_61);
             rule__Position__Group__2__Impl();
@@ -25137,29 +24977,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Position__Group__2__Impl"
-    // InternalXdiagramDsl.g:7856:1: rule__Position__Group__2__Impl : ( ( rule__Position__XRelativeAssignment_2 )? ) ;
+    // InternalXdiagramDsl.g:7802:1: rule__Position__Group__2__Impl : ( ( rule__Position__XRelativeAssignment_2 )? ) ;
     public final void rule__Position__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7860:1: ( ( ( rule__Position__XRelativeAssignment_2 )? ) )
-            // InternalXdiagramDsl.g:7861:1: ( ( rule__Position__XRelativeAssignment_2 )? )
+            // InternalXdiagramDsl.g:7806:1: ( ( ( rule__Position__XRelativeAssignment_2 )? ) )
+            // InternalXdiagramDsl.g:7807:1: ( ( rule__Position__XRelativeAssignment_2 )? )
             {
-            // InternalXdiagramDsl.g:7861:1: ( ( rule__Position__XRelativeAssignment_2 )? )
-            // InternalXdiagramDsl.g:7862:2: ( rule__Position__XRelativeAssignment_2 )?
+            // InternalXdiagramDsl.g:7807:1: ( ( rule__Position__XRelativeAssignment_2 )? )
+            // InternalXdiagramDsl.g:7808:2: ( rule__Position__XRelativeAssignment_2 )?
             {
              before(grammarAccess.getPositionAccess().getXRelativeAssignment_2()); 
-            // InternalXdiagramDsl.g:7863:2: ( rule__Position__XRelativeAssignment_2 )?
+            // InternalXdiagramDsl.g:7809:2: ( rule__Position__XRelativeAssignment_2 )?
             int alt74=2;
             int LA74_0 = input.LA(1);
 
-            if ( (LA74_0==56) ) {
+            if ( (LA74_0==71) ) {
                 alt74=1;
             }
             switch (alt74) {
                 case 1 :
-                    // InternalXdiagramDsl.g:7863:3: rule__Position__XRelativeAssignment_2
+                    // InternalXdiagramDsl.g:7809:3: rule__Position__XRelativeAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Position__XRelativeAssignment_2();
@@ -25195,16 +25035,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Position__Group__3"
-    // InternalXdiagramDsl.g:7871:1: rule__Position__Group__3 : rule__Position__Group__3__Impl rule__Position__Group__4 ;
+    // InternalXdiagramDsl.g:7817:1: rule__Position__Group__3 : rule__Position__Group__3__Impl rule__Position__Group__4 ;
     public final void rule__Position__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7875:1: ( rule__Position__Group__3__Impl rule__Position__Group__4 )
-            // InternalXdiagramDsl.g:7876:2: rule__Position__Group__3__Impl rule__Position__Group__4
+            // InternalXdiagramDsl.g:7821:1: ( rule__Position__Group__3__Impl rule__Position__Group__4 )
+            // InternalXdiagramDsl.g:7822:2: rule__Position__Group__3__Impl rule__Position__Group__4
             {
-            pushFollow(FOLLOW_62);
+            pushFollow(FOLLOW_61);
             rule__Position__Group__3__Impl();
 
             state._fsp--;
@@ -25233,31 +25073,42 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Position__Group__3__Impl"
-    // InternalXdiagramDsl.g:7883:1: rule__Position__Group__3__Impl : ( ( rule__Position__YAssignment_3 ) ) ;
+    // InternalXdiagramDsl.g:7829:1: rule__Position__Group__3__Impl : ( ( rule__Position__Group_3__0 )? ) ;
     public final void rule__Position__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7887:1: ( ( ( rule__Position__YAssignment_3 ) ) )
-            // InternalXdiagramDsl.g:7888:1: ( ( rule__Position__YAssignment_3 ) )
+            // InternalXdiagramDsl.g:7833:1: ( ( ( rule__Position__Group_3__0 )? ) )
+            // InternalXdiagramDsl.g:7834:1: ( ( rule__Position__Group_3__0 )? )
             {
-            // InternalXdiagramDsl.g:7888:1: ( ( rule__Position__YAssignment_3 ) )
-            // InternalXdiagramDsl.g:7889:2: ( rule__Position__YAssignment_3 )
+            // InternalXdiagramDsl.g:7834:1: ( ( rule__Position__Group_3__0 )? )
+            // InternalXdiagramDsl.g:7835:2: ( rule__Position__Group_3__0 )?
             {
-             before(grammarAccess.getPositionAccess().getYAssignment_3()); 
-            // InternalXdiagramDsl.g:7890:2: ( rule__Position__YAssignment_3 )
-            // InternalXdiagramDsl.g:7890:3: rule__Position__YAssignment_3
-            {
-            pushFollow(FOLLOW_2);
-            rule__Position__YAssignment_3();
+             before(grammarAccess.getPositionAccess().getGroup_3()); 
+            // InternalXdiagramDsl.g:7836:2: ( rule__Position__Group_3__0 )?
+            int alt75=2;
+            int LA75_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA75_0==RULE_INT) ) {
+                alt75=1;
+            }
+            switch (alt75) {
+                case 1 :
+                    // InternalXdiagramDsl.g:7836:3: rule__Position__Group_3__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Position__Group_3__0();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
-             after(grammarAccess.getPositionAccess().getYAssignment_3()); 
+             after(grammarAccess.getPositionAccess().getGroup_3()); 
 
             }
 
@@ -25280,16 +25131,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Position__Group__4"
-    // InternalXdiagramDsl.g:7898:1: rule__Position__Group__4 : rule__Position__Group__4__Impl rule__Position__Group__5 ;
+    // InternalXdiagramDsl.g:7844:1: rule__Position__Group__4 : rule__Position__Group__4__Impl rule__Position__Group__5 ;
     public final void rule__Position__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7902:1: ( rule__Position__Group__4__Impl rule__Position__Group__5 )
-            // InternalXdiagramDsl.g:7903:2: rule__Position__Group__4__Impl rule__Position__Group__5
+            // InternalXdiagramDsl.g:7848:1: ( rule__Position__Group__4__Impl rule__Position__Group__5 )
+            // InternalXdiagramDsl.g:7849:2: rule__Position__Group__4__Impl rule__Position__Group__5
             {
-            pushFollow(FOLLOW_62);
+            pushFollow(FOLLOW_61);
             rule__Position__Group__4__Impl();
 
             state._fsp--;
@@ -25318,32 +25169,32 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Position__Group__4__Impl"
-    // InternalXdiagramDsl.g:7910:1: rule__Position__Group__4__Impl : ( ( rule__Position__YRelativeAssignment_4 )? ) ;
+    // InternalXdiagramDsl.g:7856:1: rule__Position__Group__4__Impl : ( ( rule__Position__ConditionalAssignment_4 )? ) ;
     public final void rule__Position__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7914:1: ( ( ( rule__Position__YRelativeAssignment_4 )? ) )
-            // InternalXdiagramDsl.g:7915:1: ( ( rule__Position__YRelativeAssignment_4 )? )
+            // InternalXdiagramDsl.g:7860:1: ( ( ( rule__Position__ConditionalAssignment_4 )? ) )
+            // InternalXdiagramDsl.g:7861:1: ( ( rule__Position__ConditionalAssignment_4 )? )
             {
-            // InternalXdiagramDsl.g:7915:1: ( ( rule__Position__YRelativeAssignment_4 )? )
-            // InternalXdiagramDsl.g:7916:2: ( rule__Position__YRelativeAssignment_4 )?
+            // InternalXdiagramDsl.g:7861:1: ( ( rule__Position__ConditionalAssignment_4 )? )
+            // InternalXdiagramDsl.g:7862:2: ( rule__Position__ConditionalAssignment_4 )?
             {
-             before(grammarAccess.getPositionAccess().getYRelativeAssignment_4()); 
-            // InternalXdiagramDsl.g:7917:2: ( rule__Position__YRelativeAssignment_4 )?
-            int alt75=2;
-            int LA75_0 = input.LA(1);
+             before(grammarAccess.getPositionAccess().getConditionalAssignment_4()); 
+            // InternalXdiagramDsl.g:7863:2: ( rule__Position__ConditionalAssignment_4 )?
+            int alt76=2;
+            int LA76_0 = input.LA(1);
 
-            if ( (LA75_0==56) ) {
-                alt75=1;
+            if ( (LA76_0==50) ) {
+                alt76=1;
             }
-            switch (alt75) {
+            switch (alt76) {
                 case 1 :
-                    // InternalXdiagramDsl.g:7917:3: rule__Position__YRelativeAssignment_4
+                    // InternalXdiagramDsl.g:7863:3: rule__Position__ConditionalAssignment_4
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Position__YRelativeAssignment_4();
+                    rule__Position__ConditionalAssignment_4();
 
                     state._fsp--;
 
@@ -25353,7 +25204,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
             }
 
-             after(grammarAccess.getPositionAccess().getYRelativeAssignment_4()); 
+             after(grammarAccess.getPositionAccess().getConditionalAssignment_4()); 
 
             }
 
@@ -25376,22 +25227,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Position__Group__5"
-    // InternalXdiagramDsl.g:7925:1: rule__Position__Group__5 : rule__Position__Group__5__Impl rule__Position__Group__6 ;
+    // InternalXdiagramDsl.g:7871:1: rule__Position__Group__5 : rule__Position__Group__5__Impl ;
     public final void rule__Position__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7929:1: ( rule__Position__Group__5__Impl rule__Position__Group__6 )
-            // InternalXdiagramDsl.g:7930:2: rule__Position__Group__5__Impl rule__Position__Group__6
+            // InternalXdiagramDsl.g:7875:1: ( rule__Position__Group__5__Impl )
+            // InternalXdiagramDsl.g:7876:2: rule__Position__Group__5__Impl
             {
-            pushFollow(FOLLOW_62);
-            rule__Position__Group__5__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__Position__Group__6();
+            rule__Position__Group__5__Impl();
 
             state._fsp--;
 
@@ -25414,42 +25260,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Position__Group__5__Impl"
-    // InternalXdiagramDsl.g:7937:1: rule__Position__Group__5__Impl : ( ( rule__Position__ConditionalAssignment_5 )? ) ;
+    // InternalXdiagramDsl.g:7882:1: rule__Position__Group__5__Impl : ( ';' ) ;
     public final void rule__Position__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7941:1: ( ( ( rule__Position__ConditionalAssignment_5 )? ) )
-            // InternalXdiagramDsl.g:7942:1: ( ( rule__Position__ConditionalAssignment_5 )? )
+            // InternalXdiagramDsl.g:7886:1: ( ( ';' ) )
+            // InternalXdiagramDsl.g:7887:1: ( ';' )
             {
-            // InternalXdiagramDsl.g:7942:1: ( ( rule__Position__ConditionalAssignment_5 )? )
-            // InternalXdiagramDsl.g:7943:2: ( rule__Position__ConditionalAssignment_5 )?
+            // InternalXdiagramDsl.g:7887:1: ( ';' )
+            // InternalXdiagramDsl.g:7888:2: ';'
             {
-             before(grammarAccess.getPositionAccess().getConditionalAssignment_5()); 
-            // InternalXdiagramDsl.g:7944:2: ( rule__Position__ConditionalAssignment_5 )?
-            int alt76=2;
-            int LA76_0 = input.LA(1);
-
-            if ( (LA76_0==50) ) {
-                alt76=1;
-            }
-            switch (alt76) {
-                case 1 :
-                    // InternalXdiagramDsl.g:7944:3: rule__Position__ConditionalAssignment_5
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Position__ConditionalAssignment_5();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getPositionAccess().getConditionalAssignment_5()); 
+             before(grammarAccess.getPositionAccess().getSemicolonKeyword_5()); 
+            match(input,57,FOLLOW_2); 
+             after(grammarAccess.getPositionAccess().getSemicolonKeyword_5()); 
 
             }
 
@@ -25471,18 +25296,23 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__Position__Group__5__Impl"
 
 
-    // $ANTLR start "rule__Position__Group__6"
-    // InternalXdiagramDsl.g:7952:1: rule__Position__Group__6 : rule__Position__Group__6__Impl ;
-    public final void rule__Position__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__Position__Group_3__0"
+    // InternalXdiagramDsl.g:7898:1: rule__Position__Group_3__0 : rule__Position__Group_3__0__Impl rule__Position__Group_3__1 ;
+    public final void rule__Position__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7956:1: ( rule__Position__Group__6__Impl )
-            // InternalXdiagramDsl.g:7957:2: rule__Position__Group__6__Impl
+            // InternalXdiagramDsl.g:7902:1: ( rule__Position__Group_3__0__Impl rule__Position__Group_3__1 )
+            // InternalXdiagramDsl.g:7903:2: rule__Position__Group_3__0__Impl rule__Position__Group_3__1
             {
+            pushFollow(FOLLOW_58);
+            rule__Position__Group_3__0__Impl();
+
+            state._fsp--;
+
             pushFollow(FOLLOW_2);
-            rule__Position__Group__6__Impl();
+            rule__Position__Group_3__1();
 
             state._fsp--;
 
@@ -25501,25 +25331,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Position__Group__6"
+    // $ANTLR end "rule__Position__Group_3__0"
 
 
-    // $ANTLR start "rule__Position__Group__6__Impl"
-    // InternalXdiagramDsl.g:7963:1: rule__Position__Group__6__Impl : ( ';' ) ;
-    public final void rule__Position__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Position__Group_3__0__Impl"
+    // InternalXdiagramDsl.g:7910:1: rule__Position__Group_3__0__Impl : ( ( rule__Position__YAssignment_3_0 ) ) ;
+    public final void rule__Position__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7967:1: ( ( ';' ) )
-            // InternalXdiagramDsl.g:7968:1: ( ';' )
+            // InternalXdiagramDsl.g:7914:1: ( ( ( rule__Position__YAssignment_3_0 ) ) )
+            // InternalXdiagramDsl.g:7915:1: ( ( rule__Position__YAssignment_3_0 ) )
             {
-            // InternalXdiagramDsl.g:7968:1: ( ';' )
-            // InternalXdiagramDsl.g:7969:2: ';'
+            // InternalXdiagramDsl.g:7915:1: ( ( rule__Position__YAssignment_3_0 ) )
+            // InternalXdiagramDsl.g:7916:2: ( rule__Position__YAssignment_3_0 )
             {
-             before(grammarAccess.getPositionAccess().getSemicolonKeyword_6()); 
-            match(input,58,FOLLOW_2); 
-             after(grammarAccess.getPositionAccess().getSemicolonKeyword_6()); 
+             before(grammarAccess.getPositionAccess().getYAssignment_3_0()); 
+            // InternalXdiagramDsl.g:7917:2: ( rule__Position__YAssignment_3_0 )
+            // InternalXdiagramDsl.g:7917:3: rule__Position__YAssignment_3_0
+            {
+            pushFollow(FOLLOW_2);
+            rule__Position__YAssignment_3_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPositionAccess().getYAssignment_3_0()); 
 
             }
 
@@ -25538,20 +25378,111 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Position__Group__6__Impl"
+    // $ANTLR end "rule__Position__Group_3__0__Impl"
+
+
+    // $ANTLR start "rule__Position__Group_3__1"
+    // InternalXdiagramDsl.g:7925:1: rule__Position__Group_3__1 : rule__Position__Group_3__1__Impl ;
+    public final void rule__Position__Group_3__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalXdiagramDsl.g:7929:1: ( rule__Position__Group_3__1__Impl )
+            // InternalXdiagramDsl.g:7930:2: rule__Position__Group_3__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Position__Group_3__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Position__Group_3__1"
+
+
+    // $ANTLR start "rule__Position__Group_3__1__Impl"
+    // InternalXdiagramDsl.g:7936:1: rule__Position__Group_3__1__Impl : ( ( rule__Position__YRelativeAssignment_3_1 )? ) ;
+    public final void rule__Position__Group_3__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalXdiagramDsl.g:7940:1: ( ( ( rule__Position__YRelativeAssignment_3_1 )? ) )
+            // InternalXdiagramDsl.g:7941:1: ( ( rule__Position__YRelativeAssignment_3_1 )? )
+            {
+            // InternalXdiagramDsl.g:7941:1: ( ( rule__Position__YRelativeAssignment_3_1 )? )
+            // InternalXdiagramDsl.g:7942:2: ( rule__Position__YRelativeAssignment_3_1 )?
+            {
+             before(grammarAccess.getPositionAccess().getYRelativeAssignment_3_1()); 
+            // InternalXdiagramDsl.g:7943:2: ( rule__Position__YRelativeAssignment_3_1 )?
+            int alt77=2;
+            int LA77_0 = input.LA(1);
+
+            if ( (LA77_0==71) ) {
+                alt77=1;
+            }
+            switch (alt77) {
+                case 1 :
+                    // InternalXdiagramDsl.g:7943:3: rule__Position__YRelativeAssignment_3_1
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Position__YRelativeAssignment_3_1();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getPositionAccess().getYRelativeAssignment_3_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Position__Group_3__1__Impl"
 
 
     // $ANTLR start "rule__Corner__Group__0"
-    // InternalXdiagramDsl.g:7979:1: rule__Corner__Group__0 : rule__Corner__Group__0__Impl rule__Corner__Group__1 ;
+    // InternalXdiagramDsl.g:7952:1: rule__Corner__Group__0 : rule__Corner__Group__0__Impl rule__Corner__Group__1 ;
     public final void rule__Corner__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7983:1: ( rule__Corner__Group__0__Impl rule__Corner__Group__1 )
-            // InternalXdiagramDsl.g:7984:2: rule__Corner__Group__0__Impl rule__Corner__Group__1
+            // InternalXdiagramDsl.g:7956:1: ( rule__Corner__Group__0__Impl rule__Corner__Group__1 )
+            // InternalXdiagramDsl.g:7957:2: rule__Corner__Group__0__Impl rule__Corner__Group__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_29);
             rule__Corner__Group__0__Impl();
 
             state._fsp--;
@@ -25580,17 +25511,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Corner__Group__0__Impl"
-    // InternalXdiagramDsl.g:7991:1: rule__Corner__Group__0__Impl : ( 'corner' ) ;
+    // InternalXdiagramDsl.g:7964:1: rule__Corner__Group__0__Impl : ( 'corner' ) ;
     public final void rule__Corner__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:7995:1: ( ( 'corner' ) )
-            // InternalXdiagramDsl.g:7996:1: ( 'corner' )
+            // InternalXdiagramDsl.g:7968:1: ( ( 'corner' ) )
+            // InternalXdiagramDsl.g:7969:1: ( 'corner' )
             {
-            // InternalXdiagramDsl.g:7996:1: ( 'corner' )
-            // InternalXdiagramDsl.g:7997:2: 'corner'
+            // InternalXdiagramDsl.g:7969:1: ( 'corner' )
+            // InternalXdiagramDsl.g:7970:2: 'corner'
             {
              before(grammarAccess.getCornerAccess().getCornerKeyword_0()); 
             match(input,75,FOLLOW_2); 
@@ -25617,16 +25548,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Corner__Group__1"
-    // InternalXdiagramDsl.g:8006:1: rule__Corner__Group__1 : rule__Corner__Group__1__Impl rule__Corner__Group__2 ;
+    // InternalXdiagramDsl.g:7979:1: rule__Corner__Group__1 : rule__Corner__Group__1__Impl rule__Corner__Group__2 ;
     public final void rule__Corner__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8010:1: ( rule__Corner__Group__1__Impl rule__Corner__Group__2 )
-            // InternalXdiagramDsl.g:8011:2: rule__Corner__Group__1__Impl rule__Corner__Group__2
+            // InternalXdiagramDsl.g:7983:1: ( rule__Corner__Group__1__Impl rule__Corner__Group__2 )
+            // InternalXdiagramDsl.g:7984:2: rule__Corner__Group__1__Impl rule__Corner__Group__2
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             rule__Corner__Group__1__Impl();
 
             state._fsp--;
@@ -25655,21 +25586,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Corner__Group__1__Impl"
-    // InternalXdiagramDsl.g:8018:1: rule__Corner__Group__1__Impl : ( ( rule__Corner__AngleAssignment_1 ) ) ;
+    // InternalXdiagramDsl.g:7991:1: rule__Corner__Group__1__Impl : ( ( rule__Corner__AngleAssignment_1 ) ) ;
     public final void rule__Corner__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8022:1: ( ( ( rule__Corner__AngleAssignment_1 ) ) )
-            // InternalXdiagramDsl.g:8023:1: ( ( rule__Corner__AngleAssignment_1 ) )
+            // InternalXdiagramDsl.g:7995:1: ( ( ( rule__Corner__AngleAssignment_1 ) ) )
+            // InternalXdiagramDsl.g:7996:1: ( ( rule__Corner__AngleAssignment_1 ) )
             {
-            // InternalXdiagramDsl.g:8023:1: ( ( rule__Corner__AngleAssignment_1 ) )
-            // InternalXdiagramDsl.g:8024:2: ( rule__Corner__AngleAssignment_1 )
+            // InternalXdiagramDsl.g:7996:1: ( ( rule__Corner__AngleAssignment_1 ) )
+            // InternalXdiagramDsl.g:7997:2: ( rule__Corner__AngleAssignment_1 )
             {
              before(grammarAccess.getCornerAccess().getAngleAssignment_1()); 
-            // InternalXdiagramDsl.g:8025:2: ( rule__Corner__AngleAssignment_1 )
-            // InternalXdiagramDsl.g:8025:3: rule__Corner__AngleAssignment_1
+            // InternalXdiagramDsl.g:7998:2: ( rule__Corner__AngleAssignment_1 )
+            // InternalXdiagramDsl.g:7998:3: rule__Corner__AngleAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Corner__AngleAssignment_1();
@@ -25702,16 +25633,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Corner__Group__2"
-    // InternalXdiagramDsl.g:8033:1: rule__Corner__Group__2 : rule__Corner__Group__2__Impl rule__Corner__Group__3 ;
+    // InternalXdiagramDsl.g:8006:1: rule__Corner__Group__2 : rule__Corner__Group__2__Impl rule__Corner__Group__3 ;
     public final void rule__Corner__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8037:1: ( rule__Corner__Group__2__Impl rule__Corner__Group__3 )
-            // InternalXdiagramDsl.g:8038:2: rule__Corner__Group__2__Impl rule__Corner__Group__3
+            // InternalXdiagramDsl.g:8010:1: ( rule__Corner__Group__2__Impl rule__Corner__Group__3 )
+            // InternalXdiagramDsl.g:8011:2: rule__Corner__Group__2__Impl rule__Corner__Group__3
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             rule__Corner__Group__2__Impl();
 
             state._fsp--;
@@ -25740,29 +25671,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Corner__Group__2__Impl"
-    // InternalXdiagramDsl.g:8045:1: rule__Corner__Group__2__Impl : ( ( rule__Corner__ConditionalAssignment_2 )? ) ;
+    // InternalXdiagramDsl.g:8018:1: rule__Corner__Group__2__Impl : ( ( rule__Corner__ConditionalAssignment_2 )? ) ;
     public final void rule__Corner__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8049:1: ( ( ( rule__Corner__ConditionalAssignment_2 )? ) )
-            // InternalXdiagramDsl.g:8050:1: ( ( rule__Corner__ConditionalAssignment_2 )? )
+            // InternalXdiagramDsl.g:8022:1: ( ( ( rule__Corner__ConditionalAssignment_2 )? ) )
+            // InternalXdiagramDsl.g:8023:1: ( ( rule__Corner__ConditionalAssignment_2 )? )
             {
-            // InternalXdiagramDsl.g:8050:1: ( ( rule__Corner__ConditionalAssignment_2 )? )
-            // InternalXdiagramDsl.g:8051:2: ( rule__Corner__ConditionalAssignment_2 )?
+            // InternalXdiagramDsl.g:8023:1: ( ( rule__Corner__ConditionalAssignment_2 )? )
+            // InternalXdiagramDsl.g:8024:2: ( rule__Corner__ConditionalAssignment_2 )?
             {
              before(grammarAccess.getCornerAccess().getConditionalAssignment_2()); 
-            // InternalXdiagramDsl.g:8052:2: ( rule__Corner__ConditionalAssignment_2 )?
-            int alt77=2;
-            int LA77_0 = input.LA(1);
+            // InternalXdiagramDsl.g:8025:2: ( rule__Corner__ConditionalAssignment_2 )?
+            int alt78=2;
+            int LA78_0 = input.LA(1);
 
-            if ( (LA77_0==50) ) {
-                alt77=1;
+            if ( (LA78_0==50) ) {
+                alt78=1;
             }
-            switch (alt77) {
+            switch (alt78) {
                 case 1 :
-                    // InternalXdiagramDsl.g:8052:3: rule__Corner__ConditionalAssignment_2
+                    // InternalXdiagramDsl.g:8025:3: rule__Corner__ConditionalAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Corner__ConditionalAssignment_2();
@@ -25798,14 +25729,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Corner__Group__3"
-    // InternalXdiagramDsl.g:8060:1: rule__Corner__Group__3 : rule__Corner__Group__3__Impl ;
+    // InternalXdiagramDsl.g:8033:1: rule__Corner__Group__3 : rule__Corner__Group__3__Impl ;
     public final void rule__Corner__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8064:1: ( rule__Corner__Group__3__Impl )
-            // InternalXdiagramDsl.g:8065:2: rule__Corner__Group__3__Impl
+            // InternalXdiagramDsl.g:8037:1: ( rule__Corner__Group__3__Impl )
+            // InternalXdiagramDsl.g:8038:2: rule__Corner__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Corner__Group__3__Impl();
@@ -25831,20 +25762,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Corner__Group__3__Impl"
-    // InternalXdiagramDsl.g:8071:1: rule__Corner__Group__3__Impl : ( ';' ) ;
+    // InternalXdiagramDsl.g:8044:1: rule__Corner__Group__3__Impl : ( ';' ) ;
     public final void rule__Corner__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8075:1: ( ( ';' ) )
-            // InternalXdiagramDsl.g:8076:1: ( ';' )
+            // InternalXdiagramDsl.g:8048:1: ( ( ';' ) )
+            // InternalXdiagramDsl.g:8049:1: ( ';' )
             {
-            // InternalXdiagramDsl.g:8076:1: ( ';' )
-            // InternalXdiagramDsl.g:8077:2: ';'
+            // InternalXdiagramDsl.g:8049:1: ( ';' )
+            // InternalXdiagramDsl.g:8050:2: ';'
             {
              before(grammarAccess.getCornerAccess().getSemicolonKeyword_3()); 
-            match(input,58,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getCornerAccess().getSemicolonKeyword_3()); 
 
             }
@@ -25868,16 +25799,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__Group__0"
-    // InternalXdiagramDsl.g:8087:1: rule__Layout__Group__0 : rule__Layout__Group__0__Impl rule__Layout__Group__1 ;
+    // InternalXdiagramDsl.g:8060:1: rule__Layout__Group__0 : rule__Layout__Group__0__Impl rule__Layout__Group__1 ;
     public final void rule__Layout__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8091:1: ( rule__Layout__Group__0__Impl rule__Layout__Group__1 )
-            // InternalXdiagramDsl.g:8092:2: rule__Layout__Group__0__Impl rule__Layout__Group__1
+            // InternalXdiagramDsl.g:8064:1: ( rule__Layout__Group__0__Impl rule__Layout__Group__1 )
+            // InternalXdiagramDsl.g:8065:2: rule__Layout__Group__0__Impl rule__Layout__Group__1
             {
-            pushFollow(FOLLOW_63);
+            pushFollow(FOLLOW_62);
             rule__Layout__Group__0__Impl();
 
             state._fsp--;
@@ -25906,17 +25837,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__Group__0__Impl"
-    // InternalXdiagramDsl.g:8099:1: rule__Layout__Group__0__Impl : ( 'layout' ) ;
+    // InternalXdiagramDsl.g:8072:1: rule__Layout__Group__0__Impl : ( 'layout' ) ;
     public final void rule__Layout__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8103:1: ( ( 'layout' ) )
-            // InternalXdiagramDsl.g:8104:1: ( 'layout' )
+            // InternalXdiagramDsl.g:8076:1: ( ( 'layout' ) )
+            // InternalXdiagramDsl.g:8077:1: ( 'layout' )
             {
-            // InternalXdiagramDsl.g:8104:1: ( 'layout' )
-            // InternalXdiagramDsl.g:8105:2: 'layout'
+            // InternalXdiagramDsl.g:8077:1: ( 'layout' )
+            // InternalXdiagramDsl.g:8078:2: 'layout'
             {
              before(grammarAccess.getLayoutAccess().getLayoutKeyword_0()); 
             match(input,76,FOLLOW_2); 
@@ -25943,16 +25874,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__Group__1"
-    // InternalXdiagramDsl.g:8114:1: rule__Layout__Group__1 : rule__Layout__Group__1__Impl rule__Layout__Group__2 ;
+    // InternalXdiagramDsl.g:8087:1: rule__Layout__Group__1 : rule__Layout__Group__1__Impl rule__Layout__Group__2 ;
     public final void rule__Layout__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8118:1: ( rule__Layout__Group__1__Impl rule__Layout__Group__2 )
-            // InternalXdiagramDsl.g:8119:2: rule__Layout__Group__1__Impl rule__Layout__Group__2
+            // InternalXdiagramDsl.g:8091:1: ( rule__Layout__Group__1__Impl rule__Layout__Group__2 )
+            // InternalXdiagramDsl.g:8092:2: rule__Layout__Group__1__Impl rule__Layout__Group__2
             {
-            pushFollow(FOLLOW_64);
+            pushFollow(FOLLOW_63);
             rule__Layout__Group__1__Impl();
 
             state._fsp--;
@@ -25981,21 +25912,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__Group__1__Impl"
-    // InternalXdiagramDsl.g:8126:1: rule__Layout__Group__1__Impl : ( ( rule__Layout__Alternatives_1 ) ) ;
+    // InternalXdiagramDsl.g:8099:1: rule__Layout__Group__1__Impl : ( ( rule__Layout__Alternatives_1 ) ) ;
     public final void rule__Layout__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8130:1: ( ( ( rule__Layout__Alternatives_1 ) ) )
-            // InternalXdiagramDsl.g:8131:1: ( ( rule__Layout__Alternatives_1 ) )
+            // InternalXdiagramDsl.g:8103:1: ( ( ( rule__Layout__Alternatives_1 ) ) )
+            // InternalXdiagramDsl.g:8104:1: ( ( rule__Layout__Alternatives_1 ) )
             {
-            // InternalXdiagramDsl.g:8131:1: ( ( rule__Layout__Alternatives_1 ) )
-            // InternalXdiagramDsl.g:8132:2: ( rule__Layout__Alternatives_1 )
+            // InternalXdiagramDsl.g:8104:1: ( ( rule__Layout__Alternatives_1 ) )
+            // InternalXdiagramDsl.g:8105:2: ( rule__Layout__Alternatives_1 )
             {
              before(grammarAccess.getLayoutAccess().getAlternatives_1()); 
-            // InternalXdiagramDsl.g:8133:2: ( rule__Layout__Alternatives_1 )
-            // InternalXdiagramDsl.g:8133:3: rule__Layout__Alternatives_1
+            // InternalXdiagramDsl.g:8106:2: ( rule__Layout__Alternatives_1 )
+            // InternalXdiagramDsl.g:8106:3: rule__Layout__Alternatives_1
             {
             pushFollow(FOLLOW_2);
             rule__Layout__Alternatives_1();
@@ -26028,16 +25959,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__Group__2"
-    // InternalXdiagramDsl.g:8141:1: rule__Layout__Group__2 : rule__Layout__Group__2__Impl rule__Layout__Group__3 ;
+    // InternalXdiagramDsl.g:8114:1: rule__Layout__Group__2 : rule__Layout__Group__2__Impl rule__Layout__Group__3 ;
     public final void rule__Layout__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8145:1: ( rule__Layout__Group__2__Impl rule__Layout__Group__3 )
-            // InternalXdiagramDsl.g:8146:2: rule__Layout__Group__2__Impl rule__Layout__Group__3
+            // InternalXdiagramDsl.g:8118:1: ( rule__Layout__Group__2__Impl rule__Layout__Group__3 )
+            // InternalXdiagramDsl.g:8119:2: rule__Layout__Group__2__Impl rule__Layout__Group__3
             {
-            pushFollow(FOLLOW_64);
+            pushFollow(FOLLOW_63);
             rule__Layout__Group__2__Impl();
 
             state._fsp--;
@@ -26066,29 +25997,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__Group__2__Impl"
-    // InternalXdiagramDsl.g:8153:1: rule__Layout__Group__2__Impl : ( ( rule__Layout__Group_2__0 )? ) ;
+    // InternalXdiagramDsl.g:8126:1: rule__Layout__Group__2__Impl : ( ( rule__Layout__Group_2__0 )? ) ;
     public final void rule__Layout__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8157:1: ( ( ( rule__Layout__Group_2__0 )? ) )
-            // InternalXdiagramDsl.g:8158:1: ( ( rule__Layout__Group_2__0 )? )
+            // InternalXdiagramDsl.g:8130:1: ( ( ( rule__Layout__Group_2__0 )? ) )
+            // InternalXdiagramDsl.g:8131:1: ( ( rule__Layout__Group_2__0 )? )
             {
-            // InternalXdiagramDsl.g:8158:1: ( ( rule__Layout__Group_2__0 )? )
-            // InternalXdiagramDsl.g:8159:2: ( rule__Layout__Group_2__0 )?
+            // InternalXdiagramDsl.g:8131:1: ( ( rule__Layout__Group_2__0 )? )
+            // InternalXdiagramDsl.g:8132:2: ( rule__Layout__Group_2__0 )?
             {
              before(grammarAccess.getLayoutAccess().getGroup_2()); 
-            // InternalXdiagramDsl.g:8160:2: ( rule__Layout__Group_2__0 )?
-            int alt78=2;
-            int LA78_0 = input.LA(1);
+            // InternalXdiagramDsl.g:8133:2: ( rule__Layout__Group_2__0 )?
+            int alt79=2;
+            int LA79_0 = input.LA(1);
 
-            if ( (LA78_0==77) ) {
-                alt78=1;
+            if ( (LA79_0==77) ) {
+                alt79=1;
             }
-            switch (alt78) {
+            switch (alt79) {
                 case 1 :
-                    // InternalXdiagramDsl.g:8160:3: rule__Layout__Group_2__0
+                    // InternalXdiagramDsl.g:8133:3: rule__Layout__Group_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Layout__Group_2__0();
@@ -26124,16 +26055,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__Group__3"
-    // InternalXdiagramDsl.g:8168:1: rule__Layout__Group__3 : rule__Layout__Group__3__Impl rule__Layout__Group__4 ;
+    // InternalXdiagramDsl.g:8141:1: rule__Layout__Group__3 : rule__Layout__Group__3__Impl rule__Layout__Group__4 ;
     public final void rule__Layout__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8172:1: ( rule__Layout__Group__3__Impl rule__Layout__Group__4 )
-            // InternalXdiagramDsl.g:8173:2: rule__Layout__Group__3__Impl rule__Layout__Group__4
+            // InternalXdiagramDsl.g:8145:1: ( rule__Layout__Group__3__Impl rule__Layout__Group__4 )
+            // InternalXdiagramDsl.g:8146:2: rule__Layout__Group__3__Impl rule__Layout__Group__4
             {
-            pushFollow(FOLLOW_64);
+            pushFollow(FOLLOW_63);
             rule__Layout__Group__3__Impl();
 
             state._fsp--;
@@ -26162,29 +26093,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__Group__3__Impl"
-    // InternalXdiagramDsl.g:8180:1: rule__Layout__Group__3__Impl : ( ( rule__Layout__ConditionalAssignment_3 )? ) ;
+    // InternalXdiagramDsl.g:8153:1: rule__Layout__Group__3__Impl : ( ( rule__Layout__ConditionalAssignment_3 )? ) ;
     public final void rule__Layout__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8184:1: ( ( ( rule__Layout__ConditionalAssignment_3 )? ) )
-            // InternalXdiagramDsl.g:8185:1: ( ( rule__Layout__ConditionalAssignment_3 )? )
+            // InternalXdiagramDsl.g:8157:1: ( ( ( rule__Layout__ConditionalAssignment_3 )? ) )
+            // InternalXdiagramDsl.g:8158:1: ( ( rule__Layout__ConditionalAssignment_3 )? )
             {
-            // InternalXdiagramDsl.g:8185:1: ( ( rule__Layout__ConditionalAssignment_3 )? )
-            // InternalXdiagramDsl.g:8186:2: ( rule__Layout__ConditionalAssignment_3 )?
+            // InternalXdiagramDsl.g:8158:1: ( ( rule__Layout__ConditionalAssignment_3 )? )
+            // InternalXdiagramDsl.g:8159:2: ( rule__Layout__ConditionalAssignment_3 )?
             {
              before(grammarAccess.getLayoutAccess().getConditionalAssignment_3()); 
-            // InternalXdiagramDsl.g:8187:2: ( rule__Layout__ConditionalAssignment_3 )?
-            int alt79=2;
-            int LA79_0 = input.LA(1);
+            // InternalXdiagramDsl.g:8160:2: ( rule__Layout__ConditionalAssignment_3 )?
+            int alt80=2;
+            int LA80_0 = input.LA(1);
 
-            if ( (LA79_0==50) ) {
-                alt79=1;
+            if ( (LA80_0==50) ) {
+                alt80=1;
             }
-            switch (alt79) {
+            switch (alt80) {
                 case 1 :
-                    // InternalXdiagramDsl.g:8187:3: rule__Layout__ConditionalAssignment_3
+                    // InternalXdiagramDsl.g:8160:3: rule__Layout__ConditionalAssignment_3
                     {
                     pushFollow(FOLLOW_2);
                     rule__Layout__ConditionalAssignment_3();
@@ -26220,14 +26151,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__Group__4"
-    // InternalXdiagramDsl.g:8195:1: rule__Layout__Group__4 : rule__Layout__Group__4__Impl ;
+    // InternalXdiagramDsl.g:8168:1: rule__Layout__Group__4 : rule__Layout__Group__4__Impl ;
     public final void rule__Layout__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8199:1: ( rule__Layout__Group__4__Impl )
-            // InternalXdiagramDsl.g:8200:2: rule__Layout__Group__4__Impl
+            // InternalXdiagramDsl.g:8172:1: ( rule__Layout__Group__4__Impl )
+            // InternalXdiagramDsl.g:8173:2: rule__Layout__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Layout__Group__4__Impl();
@@ -26253,20 +26184,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__Group__4__Impl"
-    // InternalXdiagramDsl.g:8206:1: rule__Layout__Group__4__Impl : ( ';' ) ;
+    // InternalXdiagramDsl.g:8179:1: rule__Layout__Group__4__Impl : ( ';' ) ;
     public final void rule__Layout__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8210:1: ( ( ';' ) )
-            // InternalXdiagramDsl.g:8211:1: ( ';' )
+            // InternalXdiagramDsl.g:8183:1: ( ( ';' ) )
+            // InternalXdiagramDsl.g:8184:1: ( ';' )
             {
-            // InternalXdiagramDsl.g:8211:1: ( ';' )
-            // InternalXdiagramDsl.g:8212:2: ';'
+            // InternalXdiagramDsl.g:8184:1: ( ';' )
+            // InternalXdiagramDsl.g:8185:2: ';'
             {
              before(grammarAccess.getLayoutAccess().getSemicolonKeyword_4()); 
-            match(input,58,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getLayoutAccess().getSemicolonKeyword_4()); 
 
             }
@@ -26290,16 +26221,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__Group_2__0"
-    // InternalXdiagramDsl.g:8222:1: rule__Layout__Group_2__0 : rule__Layout__Group_2__0__Impl rule__Layout__Group_2__1 ;
+    // InternalXdiagramDsl.g:8195:1: rule__Layout__Group_2__0 : rule__Layout__Group_2__0__Impl rule__Layout__Group_2__1 ;
     public final void rule__Layout__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8226:1: ( rule__Layout__Group_2__0__Impl rule__Layout__Group_2__1 )
-            // InternalXdiagramDsl.g:8227:2: rule__Layout__Group_2__0__Impl rule__Layout__Group_2__1
+            // InternalXdiagramDsl.g:8199:1: ( rule__Layout__Group_2__0__Impl rule__Layout__Group_2__1 )
+            // InternalXdiagramDsl.g:8200:2: rule__Layout__Group_2__0__Impl rule__Layout__Group_2__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_29);
             rule__Layout__Group_2__0__Impl();
 
             state._fsp--;
@@ -26328,17 +26259,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__Group_2__0__Impl"
-    // InternalXdiagramDsl.g:8234:1: rule__Layout__Group_2__0__Impl : ( 'margin' ) ;
+    // InternalXdiagramDsl.g:8207:1: rule__Layout__Group_2__0__Impl : ( 'margin' ) ;
     public final void rule__Layout__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8238:1: ( ( 'margin' ) )
-            // InternalXdiagramDsl.g:8239:1: ( 'margin' )
+            // InternalXdiagramDsl.g:8211:1: ( ( 'margin' ) )
+            // InternalXdiagramDsl.g:8212:1: ( 'margin' )
             {
-            // InternalXdiagramDsl.g:8239:1: ( 'margin' )
-            // InternalXdiagramDsl.g:8240:2: 'margin'
+            // InternalXdiagramDsl.g:8212:1: ( 'margin' )
+            // InternalXdiagramDsl.g:8213:2: 'margin'
             {
              before(grammarAccess.getLayoutAccess().getMarginKeyword_2_0()); 
             match(input,77,FOLLOW_2); 
@@ -26365,14 +26296,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__Group_2__1"
-    // InternalXdiagramDsl.g:8249:1: rule__Layout__Group_2__1 : rule__Layout__Group_2__1__Impl ;
+    // InternalXdiagramDsl.g:8222:1: rule__Layout__Group_2__1 : rule__Layout__Group_2__1__Impl ;
     public final void rule__Layout__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8253:1: ( rule__Layout__Group_2__1__Impl )
-            // InternalXdiagramDsl.g:8254:2: rule__Layout__Group_2__1__Impl
+            // InternalXdiagramDsl.g:8226:1: ( rule__Layout__Group_2__1__Impl )
+            // InternalXdiagramDsl.g:8227:2: rule__Layout__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Layout__Group_2__1__Impl();
@@ -26398,21 +26329,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__Group_2__1__Impl"
-    // InternalXdiagramDsl.g:8260:1: rule__Layout__Group_2__1__Impl : ( ( rule__Layout__MarginAssignment_2_1 ) ) ;
+    // InternalXdiagramDsl.g:8233:1: rule__Layout__Group_2__1__Impl : ( ( rule__Layout__MarginAssignment_2_1 ) ) ;
     public final void rule__Layout__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8264:1: ( ( ( rule__Layout__MarginAssignment_2_1 ) ) )
-            // InternalXdiagramDsl.g:8265:1: ( ( rule__Layout__MarginAssignment_2_1 ) )
+            // InternalXdiagramDsl.g:8237:1: ( ( ( rule__Layout__MarginAssignment_2_1 ) ) )
+            // InternalXdiagramDsl.g:8238:1: ( ( rule__Layout__MarginAssignment_2_1 ) )
             {
-            // InternalXdiagramDsl.g:8265:1: ( ( rule__Layout__MarginAssignment_2_1 ) )
-            // InternalXdiagramDsl.g:8266:2: ( rule__Layout__MarginAssignment_2_1 )
+            // InternalXdiagramDsl.g:8238:1: ( ( rule__Layout__MarginAssignment_2_1 ) )
+            // InternalXdiagramDsl.g:8239:2: ( rule__Layout__MarginAssignment_2_1 )
             {
              before(grammarAccess.getLayoutAccess().getMarginAssignment_2_1()); 
-            // InternalXdiagramDsl.g:8267:2: ( rule__Layout__MarginAssignment_2_1 )
-            // InternalXdiagramDsl.g:8267:3: rule__Layout__MarginAssignment_2_1
+            // InternalXdiagramDsl.g:8240:2: ( rule__Layout__MarginAssignment_2_1 )
+            // InternalXdiagramDsl.g:8240:3: rule__Layout__MarginAssignment_2_1
             {
             pushFollow(FOLLOW_2);
             rule__Layout__MarginAssignment_2_1();
@@ -26445,16 +26376,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Visible__Group__0"
-    // InternalXdiagramDsl.g:8276:1: rule__Visible__Group__0 : rule__Visible__Group__0__Impl rule__Visible__Group__1 ;
+    // InternalXdiagramDsl.g:8249:1: rule__Visible__Group__0 : rule__Visible__Group__0__Impl rule__Visible__Group__1 ;
     public final void rule__Visible__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8280:1: ( rule__Visible__Group__0__Impl rule__Visible__Group__1 )
-            // InternalXdiagramDsl.g:8281:2: rule__Visible__Group__0__Impl rule__Visible__Group__1
+            // InternalXdiagramDsl.g:8253:1: ( rule__Visible__Group__0__Impl rule__Visible__Group__1 )
+            // InternalXdiagramDsl.g:8254:2: rule__Visible__Group__0__Impl rule__Visible__Group__1
             {
-            pushFollow(FOLLOW_65);
+            pushFollow(FOLLOW_64);
             rule__Visible__Group__0__Impl();
 
             state._fsp--;
@@ -26483,20 +26414,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Visible__Group__0__Impl"
-    // InternalXdiagramDsl.g:8288:1: rule__Visible__Group__0__Impl : ( 'invisible' ) ;
+    // InternalXdiagramDsl.g:8261:1: rule__Visible__Group__0__Impl : ( 'invisible' ) ;
     public final void rule__Visible__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8292:1: ( ( 'invisible' ) )
-            // InternalXdiagramDsl.g:8293:1: ( 'invisible' )
+            // InternalXdiagramDsl.g:8265:1: ( ( 'invisible' ) )
+            // InternalXdiagramDsl.g:8266:1: ( 'invisible' )
             {
-            // InternalXdiagramDsl.g:8293:1: ( 'invisible' )
-            // InternalXdiagramDsl.g:8294:2: 'invisible'
+            // InternalXdiagramDsl.g:8266:1: ( 'invisible' )
+            // InternalXdiagramDsl.g:8267:2: 'invisible'
             {
              before(grammarAccess.getVisibleAccess().getInvisibleKeyword_0()); 
-            match(input,70,FOLLOW_2); 
+            match(input,69,FOLLOW_2); 
              after(grammarAccess.getVisibleAccess().getInvisibleKeyword_0()); 
 
             }
@@ -26520,16 +26451,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Visible__Group__1"
-    // InternalXdiagramDsl.g:8303:1: rule__Visible__Group__1 : rule__Visible__Group__1__Impl rule__Visible__Group__2 ;
+    // InternalXdiagramDsl.g:8276:1: rule__Visible__Group__1 : rule__Visible__Group__1__Impl rule__Visible__Group__2 ;
     public final void rule__Visible__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8307:1: ( rule__Visible__Group__1__Impl rule__Visible__Group__2 )
-            // InternalXdiagramDsl.g:8308:2: rule__Visible__Group__1__Impl rule__Visible__Group__2
+            // InternalXdiagramDsl.g:8280:1: ( rule__Visible__Group__1__Impl rule__Visible__Group__2 )
+            // InternalXdiagramDsl.g:8281:2: rule__Visible__Group__1__Impl rule__Visible__Group__2
             {
-            pushFollow(FOLLOW_34);
+            pushFollow(FOLLOW_33);
             rule__Visible__Group__1__Impl();
 
             state._fsp--;
@@ -26558,21 +26489,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Visible__Group__1__Impl"
-    // InternalXdiagramDsl.g:8315:1: rule__Visible__Group__1__Impl : ( ( rule__Visible__ConditionalAssignment_1 ) ) ;
+    // InternalXdiagramDsl.g:8288:1: rule__Visible__Group__1__Impl : ( ( rule__Visible__ConditionalAssignment_1 ) ) ;
     public final void rule__Visible__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8319:1: ( ( ( rule__Visible__ConditionalAssignment_1 ) ) )
-            // InternalXdiagramDsl.g:8320:1: ( ( rule__Visible__ConditionalAssignment_1 ) )
+            // InternalXdiagramDsl.g:8292:1: ( ( ( rule__Visible__ConditionalAssignment_1 ) ) )
+            // InternalXdiagramDsl.g:8293:1: ( ( rule__Visible__ConditionalAssignment_1 ) )
             {
-            // InternalXdiagramDsl.g:8320:1: ( ( rule__Visible__ConditionalAssignment_1 ) )
-            // InternalXdiagramDsl.g:8321:2: ( rule__Visible__ConditionalAssignment_1 )
+            // InternalXdiagramDsl.g:8293:1: ( ( rule__Visible__ConditionalAssignment_1 ) )
+            // InternalXdiagramDsl.g:8294:2: ( rule__Visible__ConditionalAssignment_1 )
             {
              before(grammarAccess.getVisibleAccess().getConditionalAssignment_1()); 
-            // InternalXdiagramDsl.g:8322:2: ( rule__Visible__ConditionalAssignment_1 )
-            // InternalXdiagramDsl.g:8322:3: rule__Visible__ConditionalAssignment_1
+            // InternalXdiagramDsl.g:8295:2: ( rule__Visible__ConditionalAssignment_1 )
+            // InternalXdiagramDsl.g:8295:3: rule__Visible__ConditionalAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Visible__ConditionalAssignment_1();
@@ -26605,14 +26536,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Visible__Group__2"
-    // InternalXdiagramDsl.g:8330:1: rule__Visible__Group__2 : rule__Visible__Group__2__Impl ;
+    // InternalXdiagramDsl.g:8303:1: rule__Visible__Group__2 : rule__Visible__Group__2__Impl ;
     public final void rule__Visible__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8334:1: ( rule__Visible__Group__2__Impl )
-            // InternalXdiagramDsl.g:8335:2: rule__Visible__Group__2__Impl
+            // InternalXdiagramDsl.g:8307:1: ( rule__Visible__Group__2__Impl )
+            // InternalXdiagramDsl.g:8308:2: rule__Visible__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Visible__Group__2__Impl();
@@ -26638,20 +26569,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Visible__Group__2__Impl"
-    // InternalXdiagramDsl.g:8341:1: rule__Visible__Group__2__Impl : ( ';' ) ;
+    // InternalXdiagramDsl.g:8314:1: rule__Visible__Group__2__Impl : ( ';' ) ;
     public final void rule__Visible__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8345:1: ( ( ';' ) )
-            // InternalXdiagramDsl.g:8346:1: ( ';' )
+            // InternalXdiagramDsl.g:8318:1: ( ( ';' ) )
+            // InternalXdiagramDsl.g:8319:1: ( ';' )
             {
-            // InternalXdiagramDsl.g:8346:1: ( ';' )
-            // InternalXdiagramDsl.g:8347:2: ';'
+            // InternalXdiagramDsl.g:8319:1: ( ';' )
+            // InternalXdiagramDsl.g:8320:2: ';'
             {
              before(grammarAccess.getVisibleAccess().getSemicolonKeyword_2()); 
-            match(input,58,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getVisibleAccess().getSemicolonKeyword_2()); 
 
             }
@@ -26675,16 +26606,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextValue__Group__0"
-    // InternalXdiagramDsl.g:8357:1: rule__TextValue__Group__0 : rule__TextValue__Group__0__Impl rule__TextValue__Group__1 ;
+    // InternalXdiagramDsl.g:8330:1: rule__TextValue__Group__0 : rule__TextValue__Group__0__Impl rule__TextValue__Group__1 ;
     public final void rule__TextValue__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8361:1: ( rule__TextValue__Group__0__Impl rule__TextValue__Group__1 )
-            // InternalXdiagramDsl.g:8362:2: rule__TextValue__Group__0__Impl rule__TextValue__Group__1
+            // InternalXdiagramDsl.g:8334:1: ( rule__TextValue__Group__0__Impl rule__TextValue__Group__1 )
+            // InternalXdiagramDsl.g:8335:2: rule__TextValue__Group__0__Impl rule__TextValue__Group__1
             {
-            pushFollow(FOLLOW_66);
+            pushFollow(FOLLOW_65);
             rule__TextValue__Group__0__Impl();
 
             state._fsp--;
@@ -26713,21 +26644,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextValue__Group__0__Impl"
-    // InternalXdiagramDsl.g:8369:1: rule__TextValue__Group__0__Impl : ( () ) ;
+    // InternalXdiagramDsl.g:8342:1: rule__TextValue__Group__0__Impl : ( () ) ;
     public final void rule__TextValue__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8373:1: ( ( () ) )
-            // InternalXdiagramDsl.g:8374:1: ( () )
+            // InternalXdiagramDsl.g:8346:1: ( ( () ) )
+            // InternalXdiagramDsl.g:8347:1: ( () )
             {
-            // InternalXdiagramDsl.g:8374:1: ( () )
-            // InternalXdiagramDsl.g:8375:2: ()
+            // InternalXdiagramDsl.g:8347:1: ( () )
+            // InternalXdiagramDsl.g:8348:2: ()
             {
              before(grammarAccess.getTextValueAccess().getTextValueAction_0()); 
-            // InternalXdiagramDsl.g:8376:2: ()
-            // InternalXdiagramDsl.g:8376:3: 
+            // InternalXdiagramDsl.g:8349:2: ()
+            // InternalXdiagramDsl.g:8349:3: 
             {
             }
 
@@ -26750,16 +26681,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextValue__Group__1"
-    // InternalXdiagramDsl.g:8384:1: rule__TextValue__Group__1 : rule__TextValue__Group__1__Impl rule__TextValue__Group__2 ;
+    // InternalXdiagramDsl.g:8357:1: rule__TextValue__Group__1 : rule__TextValue__Group__1__Impl rule__TextValue__Group__2 ;
     public final void rule__TextValue__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8388:1: ( rule__TextValue__Group__1__Impl rule__TextValue__Group__2 )
-            // InternalXdiagramDsl.g:8389:2: rule__TextValue__Group__1__Impl rule__TextValue__Group__2
+            // InternalXdiagramDsl.g:8361:1: ( rule__TextValue__Group__1__Impl rule__TextValue__Group__2 )
+            // InternalXdiagramDsl.g:8362:2: rule__TextValue__Group__1__Impl rule__TextValue__Group__2
             {
-            pushFollow(FOLLOW_67);
+            pushFollow(FOLLOW_66);
             rule__TextValue__Group__1__Impl();
 
             state._fsp--;
@@ -26788,17 +26719,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextValue__Group__1__Impl"
-    // InternalXdiagramDsl.g:8396:1: rule__TextValue__Group__1__Impl : ( 'text' ) ;
+    // InternalXdiagramDsl.g:8369:1: rule__TextValue__Group__1__Impl : ( 'text' ) ;
     public final void rule__TextValue__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8400:1: ( ( 'text' ) )
-            // InternalXdiagramDsl.g:8401:1: ( 'text' )
+            // InternalXdiagramDsl.g:8373:1: ( ( 'text' ) )
+            // InternalXdiagramDsl.g:8374:1: ( 'text' )
             {
-            // InternalXdiagramDsl.g:8401:1: ( 'text' )
-            // InternalXdiagramDsl.g:8402:2: 'text'
+            // InternalXdiagramDsl.g:8374:1: ( 'text' )
+            // InternalXdiagramDsl.g:8375:2: 'text'
             {
              before(grammarAccess.getTextValueAccess().getTextKeyword_1()); 
             match(input,78,FOLLOW_2); 
@@ -26825,16 +26756,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextValue__Group__2"
-    // InternalXdiagramDsl.g:8411:1: rule__TextValue__Group__2 : rule__TextValue__Group__2__Impl rule__TextValue__Group__3 ;
+    // InternalXdiagramDsl.g:8384:1: rule__TextValue__Group__2 : rule__TextValue__Group__2__Impl rule__TextValue__Group__3 ;
     public final void rule__TextValue__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8415:1: ( rule__TextValue__Group__2__Impl rule__TextValue__Group__3 )
-            // InternalXdiagramDsl.g:8416:2: rule__TextValue__Group__2__Impl rule__TextValue__Group__3
+            // InternalXdiagramDsl.g:8388:1: ( rule__TextValue__Group__2__Impl rule__TextValue__Group__3 )
+            // InternalXdiagramDsl.g:8389:2: rule__TextValue__Group__2__Impl rule__TextValue__Group__3
             {
-            pushFollow(FOLLOW_67);
+            pushFollow(FOLLOW_66);
             rule__TextValue__Group__2__Impl();
 
             state._fsp--;
@@ -26863,35 +26794,35 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextValue__Group__2__Impl"
-    // InternalXdiagramDsl.g:8423:1: rule__TextValue__Group__2__Impl : ( ( rule__TextValue__PartsAssignment_2 )* ) ;
+    // InternalXdiagramDsl.g:8396:1: rule__TextValue__Group__2__Impl : ( ( rule__TextValue__PartsAssignment_2 )* ) ;
     public final void rule__TextValue__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8427:1: ( ( ( rule__TextValue__PartsAssignment_2 )* ) )
-            // InternalXdiagramDsl.g:8428:1: ( ( rule__TextValue__PartsAssignment_2 )* )
+            // InternalXdiagramDsl.g:8400:1: ( ( ( rule__TextValue__PartsAssignment_2 )* ) )
+            // InternalXdiagramDsl.g:8401:1: ( ( rule__TextValue__PartsAssignment_2 )* )
             {
-            // InternalXdiagramDsl.g:8428:1: ( ( rule__TextValue__PartsAssignment_2 )* )
-            // InternalXdiagramDsl.g:8429:2: ( rule__TextValue__PartsAssignment_2 )*
+            // InternalXdiagramDsl.g:8401:1: ( ( rule__TextValue__PartsAssignment_2 )* )
+            // InternalXdiagramDsl.g:8402:2: ( rule__TextValue__PartsAssignment_2 )*
             {
              before(grammarAccess.getTextValueAccess().getPartsAssignment_2()); 
-            // InternalXdiagramDsl.g:8430:2: ( rule__TextValue__PartsAssignment_2 )*
-            loop80:
+            // InternalXdiagramDsl.g:8403:2: ( rule__TextValue__PartsAssignment_2 )*
+            loop81:
             do {
-                int alt80=2;
-                int LA80_0 = input.LA(1);
+                int alt81=2;
+                int LA81_0 = input.LA(1);
 
-                if ( ((LA80_0>=RULE_ID && LA80_0<=RULE_STRING)||LA80_0==100) ) {
-                    alt80=1;
+                if ( ((LA81_0>=RULE_ID && LA81_0<=RULE_STRING)||LA81_0==100) ) {
+                    alt81=1;
                 }
 
 
-                switch (alt80) {
+                switch (alt81) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:8430:3: rule__TextValue__PartsAssignment_2
+            	    // InternalXdiagramDsl.g:8403:3: rule__TextValue__PartsAssignment_2
             	    {
-            	    pushFollow(FOLLOW_68);
+            	    pushFollow(FOLLOW_67);
             	    rule__TextValue__PartsAssignment_2();
 
             	    state._fsp--;
@@ -26901,7 +26832,7 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
             	    break;
 
             	default :
-            	    break loop80;
+            	    break loop81;
                 }
             } while (true);
 
@@ -26928,16 +26859,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextValue__Group__3"
-    // InternalXdiagramDsl.g:8438:1: rule__TextValue__Group__3 : rule__TextValue__Group__3__Impl rule__TextValue__Group__4 ;
+    // InternalXdiagramDsl.g:8411:1: rule__TextValue__Group__3 : rule__TextValue__Group__3__Impl rule__TextValue__Group__4 ;
     public final void rule__TextValue__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8442:1: ( rule__TextValue__Group__3__Impl rule__TextValue__Group__4 )
-            // InternalXdiagramDsl.g:8443:2: rule__TextValue__Group__3__Impl rule__TextValue__Group__4
+            // InternalXdiagramDsl.g:8415:1: ( rule__TextValue__Group__3__Impl rule__TextValue__Group__4 )
+            // InternalXdiagramDsl.g:8416:2: rule__TextValue__Group__3__Impl rule__TextValue__Group__4
             {
-            pushFollow(FOLLOW_67);
+            pushFollow(FOLLOW_66);
             rule__TextValue__Group__3__Impl();
 
             state._fsp--;
@@ -26966,29 +26897,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextValue__Group__3__Impl"
-    // InternalXdiagramDsl.g:8450:1: rule__TextValue__Group__3__Impl : ( ( rule__TextValue__ConditionalAssignment_3 )? ) ;
+    // InternalXdiagramDsl.g:8423:1: rule__TextValue__Group__3__Impl : ( ( rule__TextValue__ConditionalAssignment_3 )? ) ;
     public final void rule__TextValue__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8454:1: ( ( ( rule__TextValue__ConditionalAssignment_3 )? ) )
-            // InternalXdiagramDsl.g:8455:1: ( ( rule__TextValue__ConditionalAssignment_3 )? )
+            // InternalXdiagramDsl.g:8427:1: ( ( ( rule__TextValue__ConditionalAssignment_3 )? ) )
+            // InternalXdiagramDsl.g:8428:1: ( ( rule__TextValue__ConditionalAssignment_3 )? )
             {
-            // InternalXdiagramDsl.g:8455:1: ( ( rule__TextValue__ConditionalAssignment_3 )? )
-            // InternalXdiagramDsl.g:8456:2: ( rule__TextValue__ConditionalAssignment_3 )?
+            // InternalXdiagramDsl.g:8428:1: ( ( rule__TextValue__ConditionalAssignment_3 )? )
+            // InternalXdiagramDsl.g:8429:2: ( rule__TextValue__ConditionalAssignment_3 )?
             {
              before(grammarAccess.getTextValueAccess().getConditionalAssignment_3()); 
-            // InternalXdiagramDsl.g:8457:2: ( rule__TextValue__ConditionalAssignment_3 )?
-            int alt81=2;
-            int LA81_0 = input.LA(1);
+            // InternalXdiagramDsl.g:8430:2: ( rule__TextValue__ConditionalAssignment_3 )?
+            int alt82=2;
+            int LA82_0 = input.LA(1);
 
-            if ( (LA81_0==50) ) {
-                alt81=1;
+            if ( (LA82_0==50) ) {
+                alt82=1;
             }
-            switch (alt81) {
+            switch (alt82) {
                 case 1 :
-                    // InternalXdiagramDsl.g:8457:3: rule__TextValue__ConditionalAssignment_3
+                    // InternalXdiagramDsl.g:8430:3: rule__TextValue__ConditionalAssignment_3
                     {
                     pushFollow(FOLLOW_2);
                     rule__TextValue__ConditionalAssignment_3();
@@ -27024,14 +26955,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextValue__Group__4"
-    // InternalXdiagramDsl.g:8465:1: rule__TextValue__Group__4 : rule__TextValue__Group__4__Impl ;
+    // InternalXdiagramDsl.g:8438:1: rule__TextValue__Group__4 : rule__TextValue__Group__4__Impl ;
     public final void rule__TextValue__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8469:1: ( rule__TextValue__Group__4__Impl )
-            // InternalXdiagramDsl.g:8470:2: rule__TextValue__Group__4__Impl
+            // InternalXdiagramDsl.g:8442:1: ( rule__TextValue__Group__4__Impl )
+            // InternalXdiagramDsl.g:8443:2: rule__TextValue__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TextValue__Group__4__Impl();
@@ -27057,20 +26988,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextValue__Group__4__Impl"
-    // InternalXdiagramDsl.g:8476:1: rule__TextValue__Group__4__Impl : ( ';' ) ;
+    // InternalXdiagramDsl.g:8449:1: rule__TextValue__Group__4__Impl : ( ';' ) ;
     public final void rule__TextValue__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8480:1: ( ( ';' ) )
-            // InternalXdiagramDsl.g:8481:1: ( ';' )
+            // InternalXdiagramDsl.g:8453:1: ( ( ';' ) )
+            // InternalXdiagramDsl.g:8454:1: ( ';' )
             {
-            // InternalXdiagramDsl.g:8481:1: ( ';' )
-            // InternalXdiagramDsl.g:8482:2: ';'
+            // InternalXdiagramDsl.g:8454:1: ( ';' )
+            // InternalXdiagramDsl.g:8455:2: ';'
             {
              before(grammarAccess.getTextValueAccess().getSemicolonKeyword_4()); 
-            match(input,58,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getTextValueAccess().getSemicolonKeyword_4()); 
 
             }
@@ -27094,16 +27025,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextPart__Group_1__0"
-    // InternalXdiagramDsl.g:8492:1: rule__TextPart__Group_1__0 : rule__TextPart__Group_1__0__Impl rule__TextPart__Group_1__1 ;
+    // InternalXdiagramDsl.g:8465:1: rule__TextPart__Group_1__0 : rule__TextPart__Group_1__0__Impl rule__TextPart__Group_1__1 ;
     public final void rule__TextPart__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8496:1: ( rule__TextPart__Group_1__0__Impl rule__TextPart__Group_1__1 )
-            // InternalXdiagramDsl.g:8497:2: rule__TextPart__Group_1__0__Impl rule__TextPart__Group_1__1
+            // InternalXdiagramDsl.g:8469:1: ( rule__TextPart__Group_1__0__Impl rule__TextPart__Group_1__1 )
+            // InternalXdiagramDsl.g:8470:2: rule__TextPart__Group_1__0__Impl rule__TextPart__Group_1__1
             {
-            pushFollow(FOLLOW_69);
+            pushFollow(FOLLOW_68);
             rule__TextPart__Group_1__0__Impl();
 
             state._fsp--;
@@ -27132,29 +27063,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextPart__Group_1__0__Impl"
-    // InternalXdiagramDsl.g:8504:1: rule__TextPart__Group_1__0__Impl : ( ( rule__TextPart__EditableAssignment_1_0 )? ) ;
+    // InternalXdiagramDsl.g:8477:1: rule__TextPart__Group_1__0__Impl : ( ( rule__TextPart__EditableAssignment_1_0 )? ) ;
     public final void rule__TextPart__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8508:1: ( ( ( rule__TextPart__EditableAssignment_1_0 )? ) )
-            // InternalXdiagramDsl.g:8509:1: ( ( rule__TextPart__EditableAssignment_1_0 )? )
+            // InternalXdiagramDsl.g:8481:1: ( ( ( rule__TextPart__EditableAssignment_1_0 )? ) )
+            // InternalXdiagramDsl.g:8482:1: ( ( rule__TextPart__EditableAssignment_1_0 )? )
             {
-            // InternalXdiagramDsl.g:8509:1: ( ( rule__TextPart__EditableAssignment_1_0 )? )
-            // InternalXdiagramDsl.g:8510:2: ( rule__TextPart__EditableAssignment_1_0 )?
+            // InternalXdiagramDsl.g:8482:1: ( ( rule__TextPart__EditableAssignment_1_0 )? )
+            // InternalXdiagramDsl.g:8483:2: ( rule__TextPart__EditableAssignment_1_0 )?
             {
              before(grammarAccess.getTextPartAccess().getEditableAssignment_1_0()); 
-            // InternalXdiagramDsl.g:8511:2: ( rule__TextPart__EditableAssignment_1_0 )?
-            int alt82=2;
-            int LA82_0 = input.LA(1);
+            // InternalXdiagramDsl.g:8484:2: ( rule__TextPart__EditableAssignment_1_0 )?
+            int alt83=2;
+            int LA83_0 = input.LA(1);
 
-            if ( (LA82_0==100) ) {
-                alt82=1;
+            if ( (LA83_0==100) ) {
+                alt83=1;
             }
-            switch (alt82) {
+            switch (alt83) {
                 case 1 :
-                    // InternalXdiagramDsl.g:8511:3: rule__TextPart__EditableAssignment_1_0
+                    // InternalXdiagramDsl.g:8484:3: rule__TextPart__EditableAssignment_1_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__TextPart__EditableAssignment_1_0();
@@ -27190,14 +27121,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextPart__Group_1__1"
-    // InternalXdiagramDsl.g:8519:1: rule__TextPart__Group_1__1 : rule__TextPart__Group_1__1__Impl ;
+    // InternalXdiagramDsl.g:8492:1: rule__TextPart__Group_1__1 : rule__TextPart__Group_1__1__Impl ;
     public final void rule__TextPart__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8523:1: ( rule__TextPart__Group_1__1__Impl )
-            // InternalXdiagramDsl.g:8524:2: rule__TextPart__Group_1__1__Impl
+            // InternalXdiagramDsl.g:8496:1: ( rule__TextPart__Group_1__1__Impl )
+            // InternalXdiagramDsl.g:8497:2: rule__TextPart__Group_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TextPart__Group_1__1__Impl();
@@ -27223,21 +27154,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextPart__Group_1__1__Impl"
-    // InternalXdiagramDsl.g:8530:1: rule__TextPart__Group_1__1__Impl : ( ( rule__TextPart__ModelAttributeAssignment_1_1 ) ) ;
+    // InternalXdiagramDsl.g:8503:1: rule__TextPart__Group_1__1__Impl : ( ( rule__TextPart__ModelAttributeAssignment_1_1 ) ) ;
     public final void rule__TextPart__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8534:1: ( ( ( rule__TextPart__ModelAttributeAssignment_1_1 ) ) )
-            // InternalXdiagramDsl.g:8535:1: ( ( rule__TextPart__ModelAttributeAssignment_1_1 ) )
+            // InternalXdiagramDsl.g:8507:1: ( ( ( rule__TextPart__ModelAttributeAssignment_1_1 ) ) )
+            // InternalXdiagramDsl.g:8508:1: ( ( rule__TextPart__ModelAttributeAssignment_1_1 ) )
             {
-            // InternalXdiagramDsl.g:8535:1: ( ( rule__TextPart__ModelAttributeAssignment_1_1 ) )
-            // InternalXdiagramDsl.g:8536:2: ( rule__TextPart__ModelAttributeAssignment_1_1 )
+            // InternalXdiagramDsl.g:8508:1: ( ( rule__TextPart__ModelAttributeAssignment_1_1 ) )
+            // InternalXdiagramDsl.g:8509:2: ( rule__TextPart__ModelAttributeAssignment_1_1 )
             {
              before(grammarAccess.getTextPartAccess().getModelAttributeAssignment_1_1()); 
-            // InternalXdiagramDsl.g:8537:2: ( rule__TextPart__ModelAttributeAssignment_1_1 )
-            // InternalXdiagramDsl.g:8537:3: rule__TextPart__ModelAttributeAssignment_1_1
+            // InternalXdiagramDsl.g:8510:2: ( rule__TextPart__ModelAttributeAssignment_1_1 )
+            // InternalXdiagramDsl.g:8510:3: rule__TextPart__ModelAttributeAssignment_1_1
             {
             pushFollow(FOLLOW_2);
             rule__TextPart__ModelAttributeAssignment_1_1();
@@ -27270,16 +27201,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__Group__0"
-    // InternalXdiagramDsl.g:8546:1: rule__FontProperties__Group__0 : rule__FontProperties__Group__0__Impl rule__FontProperties__Group__1 ;
+    // InternalXdiagramDsl.g:8519:1: rule__FontProperties__Group__0 : rule__FontProperties__Group__0__Impl rule__FontProperties__Group__1 ;
     public final void rule__FontProperties__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8550:1: ( rule__FontProperties__Group__0__Impl rule__FontProperties__Group__1 )
-            // InternalXdiagramDsl.g:8551:2: rule__FontProperties__Group__0__Impl rule__FontProperties__Group__1
+            // InternalXdiagramDsl.g:8523:1: ( rule__FontProperties__Group__0__Impl rule__FontProperties__Group__1 )
+            // InternalXdiagramDsl.g:8524:2: rule__FontProperties__Group__0__Impl rule__FontProperties__Group__1
             {
-            pushFollow(FOLLOW_70);
+            pushFollow(FOLLOW_69);
             rule__FontProperties__Group__0__Impl();
 
             state._fsp--;
@@ -27308,21 +27239,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__Group__0__Impl"
-    // InternalXdiagramDsl.g:8558:1: rule__FontProperties__Group__0__Impl : ( () ) ;
+    // InternalXdiagramDsl.g:8531:1: rule__FontProperties__Group__0__Impl : ( () ) ;
     public final void rule__FontProperties__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8562:1: ( ( () ) )
-            // InternalXdiagramDsl.g:8563:1: ( () )
+            // InternalXdiagramDsl.g:8535:1: ( ( () ) )
+            // InternalXdiagramDsl.g:8536:1: ( () )
             {
-            // InternalXdiagramDsl.g:8563:1: ( () )
-            // InternalXdiagramDsl.g:8564:2: ()
+            // InternalXdiagramDsl.g:8536:1: ( () )
+            // InternalXdiagramDsl.g:8537:2: ()
             {
              before(grammarAccess.getFontPropertiesAccess().getFontPropertiesAction_0()); 
-            // InternalXdiagramDsl.g:8565:2: ()
-            // InternalXdiagramDsl.g:8565:3: 
+            // InternalXdiagramDsl.g:8538:2: ()
+            // InternalXdiagramDsl.g:8538:3: 
             {
             }
 
@@ -27345,16 +27276,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__Group__1"
-    // InternalXdiagramDsl.g:8573:1: rule__FontProperties__Group__1 : rule__FontProperties__Group__1__Impl rule__FontProperties__Group__2 ;
+    // InternalXdiagramDsl.g:8546:1: rule__FontProperties__Group__1 : rule__FontProperties__Group__1__Impl rule__FontProperties__Group__2 ;
     public final void rule__FontProperties__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8577:1: ( rule__FontProperties__Group__1__Impl rule__FontProperties__Group__2 )
-            // InternalXdiagramDsl.g:8578:2: rule__FontProperties__Group__1__Impl rule__FontProperties__Group__2
+            // InternalXdiagramDsl.g:8550:1: ( rule__FontProperties__Group__1__Impl rule__FontProperties__Group__2 )
+            // InternalXdiagramDsl.g:8551:2: rule__FontProperties__Group__1__Impl rule__FontProperties__Group__2
             {
-            pushFollow(FOLLOW_71);
+            pushFollow(FOLLOW_70);
             rule__FontProperties__Group__1__Impl();
 
             state._fsp--;
@@ -27383,17 +27314,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__Group__1__Impl"
-    // InternalXdiagramDsl.g:8585:1: rule__FontProperties__Group__1__Impl : ( 'font' ) ;
+    // InternalXdiagramDsl.g:8558:1: rule__FontProperties__Group__1__Impl : ( 'font' ) ;
     public final void rule__FontProperties__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8589:1: ( ( 'font' ) )
-            // InternalXdiagramDsl.g:8590:1: ( 'font' )
+            // InternalXdiagramDsl.g:8562:1: ( ( 'font' ) )
+            // InternalXdiagramDsl.g:8563:1: ( 'font' )
             {
-            // InternalXdiagramDsl.g:8590:1: ( 'font' )
-            // InternalXdiagramDsl.g:8591:2: 'font'
+            // InternalXdiagramDsl.g:8563:1: ( 'font' )
+            // InternalXdiagramDsl.g:8564:2: 'font'
             {
              before(grammarAccess.getFontPropertiesAccess().getFontKeyword_1()); 
             match(input,79,FOLLOW_2); 
@@ -27420,16 +27351,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__Group__2"
-    // InternalXdiagramDsl.g:8600:1: rule__FontProperties__Group__2 : rule__FontProperties__Group__2__Impl rule__FontProperties__Group__3 ;
+    // InternalXdiagramDsl.g:8573:1: rule__FontProperties__Group__2 : rule__FontProperties__Group__2__Impl rule__FontProperties__Group__3 ;
     public final void rule__FontProperties__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8604:1: ( rule__FontProperties__Group__2__Impl rule__FontProperties__Group__3 )
-            // InternalXdiagramDsl.g:8605:2: rule__FontProperties__Group__2__Impl rule__FontProperties__Group__3
+            // InternalXdiagramDsl.g:8577:1: ( rule__FontProperties__Group__2__Impl rule__FontProperties__Group__3 )
+            // InternalXdiagramDsl.g:8578:2: rule__FontProperties__Group__2__Impl rule__FontProperties__Group__3
             {
-            pushFollow(FOLLOW_71);
+            pushFollow(FOLLOW_70);
             rule__FontProperties__Group__2__Impl();
 
             state._fsp--;
@@ -27458,29 +27389,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__Group__2__Impl"
-    // InternalXdiagramDsl.g:8612:1: rule__FontProperties__Group__2__Impl : ( ( rule__FontProperties__Alternatives_2 )? ) ;
+    // InternalXdiagramDsl.g:8585:1: rule__FontProperties__Group__2__Impl : ( ( rule__FontProperties__Alternatives_2 )? ) ;
     public final void rule__FontProperties__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8616:1: ( ( ( rule__FontProperties__Alternatives_2 )? ) )
-            // InternalXdiagramDsl.g:8617:1: ( ( rule__FontProperties__Alternatives_2 )? )
+            // InternalXdiagramDsl.g:8589:1: ( ( ( rule__FontProperties__Alternatives_2 )? ) )
+            // InternalXdiagramDsl.g:8590:1: ( ( rule__FontProperties__Alternatives_2 )? )
             {
-            // InternalXdiagramDsl.g:8617:1: ( ( rule__FontProperties__Alternatives_2 )? )
-            // InternalXdiagramDsl.g:8618:2: ( rule__FontProperties__Alternatives_2 )?
+            // InternalXdiagramDsl.g:8590:1: ( ( rule__FontProperties__Alternatives_2 )? )
+            // InternalXdiagramDsl.g:8591:2: ( rule__FontProperties__Alternatives_2 )?
             {
              before(grammarAccess.getFontPropertiesAccess().getAlternatives_2()); 
-            // InternalXdiagramDsl.g:8619:2: ( rule__FontProperties__Alternatives_2 )?
-            int alt83=2;
-            int LA83_0 = input.LA(1);
+            // InternalXdiagramDsl.g:8592:2: ( rule__FontProperties__Alternatives_2 )?
+            int alt84=2;
+            int LA84_0 = input.LA(1);
 
-            if ( ((LA83_0>=11 && LA83_0<=13)||LA83_0==101) ) {
-                alt83=1;
+            if ( ((LA84_0>=11 && LA84_0<=13)||LA84_0==101) ) {
+                alt84=1;
             }
-            switch (alt83) {
+            switch (alt84) {
                 case 1 :
-                    // InternalXdiagramDsl.g:8619:3: rule__FontProperties__Alternatives_2
+                    // InternalXdiagramDsl.g:8592:3: rule__FontProperties__Alternatives_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__FontProperties__Alternatives_2();
@@ -27516,16 +27447,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__Group__3"
-    // InternalXdiagramDsl.g:8627:1: rule__FontProperties__Group__3 : rule__FontProperties__Group__3__Impl rule__FontProperties__Group__4 ;
+    // InternalXdiagramDsl.g:8600:1: rule__FontProperties__Group__3 : rule__FontProperties__Group__3__Impl rule__FontProperties__Group__4 ;
     public final void rule__FontProperties__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8631:1: ( rule__FontProperties__Group__3__Impl rule__FontProperties__Group__4 )
-            // InternalXdiagramDsl.g:8632:2: rule__FontProperties__Group__3__Impl rule__FontProperties__Group__4
+            // InternalXdiagramDsl.g:8604:1: ( rule__FontProperties__Group__3__Impl rule__FontProperties__Group__4 )
+            // InternalXdiagramDsl.g:8605:2: rule__FontProperties__Group__3__Impl rule__FontProperties__Group__4
             {
-            pushFollow(FOLLOW_71);
+            pushFollow(FOLLOW_70);
             rule__FontProperties__Group__3__Impl();
 
             state._fsp--;
@@ -27554,29 +27485,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__Group__3__Impl"
-    // InternalXdiagramDsl.g:8639:1: rule__FontProperties__Group__3__Impl : ( ( rule__FontProperties__SizeAssignment_3 )? ) ;
+    // InternalXdiagramDsl.g:8612:1: rule__FontProperties__Group__3__Impl : ( ( rule__FontProperties__SizeAssignment_3 )? ) ;
     public final void rule__FontProperties__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8643:1: ( ( ( rule__FontProperties__SizeAssignment_3 )? ) )
-            // InternalXdiagramDsl.g:8644:1: ( ( rule__FontProperties__SizeAssignment_3 )? )
+            // InternalXdiagramDsl.g:8616:1: ( ( ( rule__FontProperties__SizeAssignment_3 )? ) )
+            // InternalXdiagramDsl.g:8617:1: ( ( rule__FontProperties__SizeAssignment_3 )? )
             {
-            // InternalXdiagramDsl.g:8644:1: ( ( rule__FontProperties__SizeAssignment_3 )? )
-            // InternalXdiagramDsl.g:8645:2: ( rule__FontProperties__SizeAssignment_3 )?
+            // InternalXdiagramDsl.g:8617:1: ( ( rule__FontProperties__SizeAssignment_3 )? )
+            // InternalXdiagramDsl.g:8618:2: ( rule__FontProperties__SizeAssignment_3 )?
             {
              before(grammarAccess.getFontPropertiesAccess().getSizeAssignment_3()); 
-            // InternalXdiagramDsl.g:8646:2: ( rule__FontProperties__SizeAssignment_3 )?
-            int alt84=2;
-            int LA84_0 = input.LA(1);
+            // InternalXdiagramDsl.g:8619:2: ( rule__FontProperties__SizeAssignment_3 )?
+            int alt85=2;
+            int LA85_0 = input.LA(1);
 
-            if ( (LA84_0==RULE_INT) ) {
-                alt84=1;
+            if ( (LA85_0==RULE_INT) ) {
+                alt85=1;
             }
-            switch (alt84) {
+            switch (alt85) {
                 case 1 :
-                    // InternalXdiagramDsl.g:8646:3: rule__FontProperties__SizeAssignment_3
+                    // InternalXdiagramDsl.g:8619:3: rule__FontProperties__SizeAssignment_3
                     {
                     pushFollow(FOLLOW_2);
                     rule__FontProperties__SizeAssignment_3();
@@ -27612,16 +27543,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__Group__4"
-    // InternalXdiagramDsl.g:8654:1: rule__FontProperties__Group__4 : rule__FontProperties__Group__4__Impl rule__FontProperties__Group__5 ;
+    // InternalXdiagramDsl.g:8627:1: rule__FontProperties__Group__4 : rule__FontProperties__Group__4__Impl rule__FontProperties__Group__5 ;
     public final void rule__FontProperties__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8658:1: ( rule__FontProperties__Group__4__Impl rule__FontProperties__Group__5 )
-            // InternalXdiagramDsl.g:8659:2: rule__FontProperties__Group__4__Impl rule__FontProperties__Group__5
+            // InternalXdiagramDsl.g:8631:1: ( rule__FontProperties__Group__4__Impl rule__FontProperties__Group__5 )
+            // InternalXdiagramDsl.g:8632:2: rule__FontProperties__Group__4__Impl rule__FontProperties__Group__5
             {
-            pushFollow(FOLLOW_71);
+            pushFollow(FOLLOW_70);
             rule__FontProperties__Group__4__Impl();
 
             state._fsp--;
@@ -27650,29 +27581,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__Group__4__Impl"
-    // InternalXdiagramDsl.g:8666:1: rule__FontProperties__Group__4__Impl : ( ( rule__FontProperties__BoldAssignment_4 )? ) ;
+    // InternalXdiagramDsl.g:8639:1: rule__FontProperties__Group__4__Impl : ( ( rule__FontProperties__BoldAssignment_4 )? ) ;
     public final void rule__FontProperties__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8670:1: ( ( ( rule__FontProperties__BoldAssignment_4 )? ) )
-            // InternalXdiagramDsl.g:8671:1: ( ( rule__FontProperties__BoldAssignment_4 )? )
+            // InternalXdiagramDsl.g:8643:1: ( ( ( rule__FontProperties__BoldAssignment_4 )? ) )
+            // InternalXdiagramDsl.g:8644:1: ( ( rule__FontProperties__BoldAssignment_4 )? )
             {
-            // InternalXdiagramDsl.g:8671:1: ( ( rule__FontProperties__BoldAssignment_4 )? )
-            // InternalXdiagramDsl.g:8672:2: ( rule__FontProperties__BoldAssignment_4 )?
+            // InternalXdiagramDsl.g:8644:1: ( ( rule__FontProperties__BoldAssignment_4 )? )
+            // InternalXdiagramDsl.g:8645:2: ( rule__FontProperties__BoldAssignment_4 )?
             {
              before(grammarAccess.getFontPropertiesAccess().getBoldAssignment_4()); 
-            // InternalXdiagramDsl.g:8673:2: ( rule__FontProperties__BoldAssignment_4 )?
-            int alt85=2;
-            int LA85_0 = input.LA(1);
+            // InternalXdiagramDsl.g:8646:2: ( rule__FontProperties__BoldAssignment_4 )?
+            int alt86=2;
+            int LA86_0 = input.LA(1);
 
-            if ( (LA85_0==102) ) {
-                alt85=1;
+            if ( (LA86_0==102) ) {
+                alt86=1;
             }
-            switch (alt85) {
+            switch (alt86) {
                 case 1 :
-                    // InternalXdiagramDsl.g:8673:3: rule__FontProperties__BoldAssignment_4
+                    // InternalXdiagramDsl.g:8646:3: rule__FontProperties__BoldAssignment_4
                     {
                     pushFollow(FOLLOW_2);
                     rule__FontProperties__BoldAssignment_4();
@@ -27708,16 +27639,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__Group__5"
-    // InternalXdiagramDsl.g:8681:1: rule__FontProperties__Group__5 : rule__FontProperties__Group__5__Impl rule__FontProperties__Group__6 ;
+    // InternalXdiagramDsl.g:8654:1: rule__FontProperties__Group__5 : rule__FontProperties__Group__5__Impl rule__FontProperties__Group__6 ;
     public final void rule__FontProperties__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8685:1: ( rule__FontProperties__Group__5__Impl rule__FontProperties__Group__6 )
-            // InternalXdiagramDsl.g:8686:2: rule__FontProperties__Group__5__Impl rule__FontProperties__Group__6
+            // InternalXdiagramDsl.g:8658:1: ( rule__FontProperties__Group__5__Impl rule__FontProperties__Group__6 )
+            // InternalXdiagramDsl.g:8659:2: rule__FontProperties__Group__5__Impl rule__FontProperties__Group__6
             {
-            pushFollow(FOLLOW_71);
+            pushFollow(FOLLOW_70);
             rule__FontProperties__Group__5__Impl();
 
             state._fsp--;
@@ -27746,29 +27677,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__Group__5__Impl"
-    // InternalXdiagramDsl.g:8693:1: rule__FontProperties__Group__5__Impl : ( ( rule__FontProperties__ItalicsAssignment_5 )? ) ;
+    // InternalXdiagramDsl.g:8666:1: rule__FontProperties__Group__5__Impl : ( ( rule__FontProperties__ItalicsAssignment_5 )? ) ;
     public final void rule__FontProperties__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8697:1: ( ( ( rule__FontProperties__ItalicsAssignment_5 )? ) )
-            // InternalXdiagramDsl.g:8698:1: ( ( rule__FontProperties__ItalicsAssignment_5 )? )
+            // InternalXdiagramDsl.g:8670:1: ( ( ( rule__FontProperties__ItalicsAssignment_5 )? ) )
+            // InternalXdiagramDsl.g:8671:1: ( ( rule__FontProperties__ItalicsAssignment_5 )? )
             {
-            // InternalXdiagramDsl.g:8698:1: ( ( rule__FontProperties__ItalicsAssignment_5 )? )
-            // InternalXdiagramDsl.g:8699:2: ( rule__FontProperties__ItalicsAssignment_5 )?
+            // InternalXdiagramDsl.g:8671:1: ( ( rule__FontProperties__ItalicsAssignment_5 )? )
+            // InternalXdiagramDsl.g:8672:2: ( rule__FontProperties__ItalicsAssignment_5 )?
             {
              before(grammarAccess.getFontPropertiesAccess().getItalicsAssignment_5()); 
-            // InternalXdiagramDsl.g:8700:2: ( rule__FontProperties__ItalicsAssignment_5 )?
-            int alt86=2;
-            int LA86_0 = input.LA(1);
+            // InternalXdiagramDsl.g:8673:2: ( rule__FontProperties__ItalicsAssignment_5 )?
+            int alt87=2;
+            int LA87_0 = input.LA(1);
 
-            if ( (LA86_0==103) ) {
-                alt86=1;
+            if ( (LA87_0==103) ) {
+                alt87=1;
             }
-            switch (alt86) {
+            switch (alt87) {
                 case 1 :
-                    // InternalXdiagramDsl.g:8700:3: rule__FontProperties__ItalicsAssignment_5
+                    // InternalXdiagramDsl.g:8673:3: rule__FontProperties__ItalicsAssignment_5
                     {
                     pushFollow(FOLLOW_2);
                     rule__FontProperties__ItalicsAssignment_5();
@@ -27804,16 +27735,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__Group__6"
-    // InternalXdiagramDsl.g:8708:1: rule__FontProperties__Group__6 : rule__FontProperties__Group__6__Impl rule__FontProperties__Group__7 ;
+    // InternalXdiagramDsl.g:8681:1: rule__FontProperties__Group__6 : rule__FontProperties__Group__6__Impl rule__FontProperties__Group__7 ;
     public final void rule__FontProperties__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8712:1: ( rule__FontProperties__Group__6__Impl rule__FontProperties__Group__7 )
-            // InternalXdiagramDsl.g:8713:2: rule__FontProperties__Group__6__Impl rule__FontProperties__Group__7
+            // InternalXdiagramDsl.g:8685:1: ( rule__FontProperties__Group__6__Impl rule__FontProperties__Group__7 )
+            // InternalXdiagramDsl.g:8686:2: rule__FontProperties__Group__6__Impl rule__FontProperties__Group__7
             {
-            pushFollow(FOLLOW_71);
+            pushFollow(FOLLOW_70);
             rule__FontProperties__Group__6__Impl();
 
             state._fsp--;
@@ -27842,29 +27773,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__Group__6__Impl"
-    // InternalXdiagramDsl.g:8720:1: rule__FontProperties__Group__6__Impl : ( ( rule__FontProperties__ConditionalAssignment_6 )? ) ;
+    // InternalXdiagramDsl.g:8693:1: rule__FontProperties__Group__6__Impl : ( ( rule__FontProperties__ConditionalAssignment_6 )? ) ;
     public final void rule__FontProperties__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8724:1: ( ( ( rule__FontProperties__ConditionalAssignment_6 )? ) )
-            // InternalXdiagramDsl.g:8725:1: ( ( rule__FontProperties__ConditionalAssignment_6 )? )
+            // InternalXdiagramDsl.g:8697:1: ( ( ( rule__FontProperties__ConditionalAssignment_6 )? ) )
+            // InternalXdiagramDsl.g:8698:1: ( ( rule__FontProperties__ConditionalAssignment_6 )? )
             {
-            // InternalXdiagramDsl.g:8725:1: ( ( rule__FontProperties__ConditionalAssignment_6 )? )
-            // InternalXdiagramDsl.g:8726:2: ( rule__FontProperties__ConditionalAssignment_6 )?
+            // InternalXdiagramDsl.g:8698:1: ( ( rule__FontProperties__ConditionalAssignment_6 )? )
+            // InternalXdiagramDsl.g:8699:2: ( rule__FontProperties__ConditionalAssignment_6 )?
             {
              before(grammarAccess.getFontPropertiesAccess().getConditionalAssignment_6()); 
-            // InternalXdiagramDsl.g:8727:2: ( rule__FontProperties__ConditionalAssignment_6 )?
-            int alt87=2;
-            int LA87_0 = input.LA(1);
+            // InternalXdiagramDsl.g:8700:2: ( rule__FontProperties__ConditionalAssignment_6 )?
+            int alt88=2;
+            int LA88_0 = input.LA(1);
 
-            if ( (LA87_0==50) ) {
-                alt87=1;
+            if ( (LA88_0==50) ) {
+                alt88=1;
             }
-            switch (alt87) {
+            switch (alt88) {
                 case 1 :
-                    // InternalXdiagramDsl.g:8727:3: rule__FontProperties__ConditionalAssignment_6
+                    // InternalXdiagramDsl.g:8700:3: rule__FontProperties__ConditionalAssignment_6
                     {
                     pushFollow(FOLLOW_2);
                     rule__FontProperties__ConditionalAssignment_6();
@@ -27900,14 +27831,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__Group__7"
-    // InternalXdiagramDsl.g:8735:1: rule__FontProperties__Group__7 : rule__FontProperties__Group__7__Impl ;
+    // InternalXdiagramDsl.g:8708:1: rule__FontProperties__Group__7 : rule__FontProperties__Group__7__Impl ;
     public final void rule__FontProperties__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8739:1: ( rule__FontProperties__Group__7__Impl )
-            // InternalXdiagramDsl.g:8740:2: rule__FontProperties__Group__7__Impl
+            // InternalXdiagramDsl.g:8712:1: ( rule__FontProperties__Group__7__Impl )
+            // InternalXdiagramDsl.g:8713:2: rule__FontProperties__Group__7__Impl
             {
             pushFollow(FOLLOW_2);
             rule__FontProperties__Group__7__Impl();
@@ -27933,20 +27864,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__Group__7__Impl"
-    // InternalXdiagramDsl.g:8746:1: rule__FontProperties__Group__7__Impl : ( ';' ) ;
+    // InternalXdiagramDsl.g:8719:1: rule__FontProperties__Group__7__Impl : ( ';' ) ;
     public final void rule__FontProperties__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8750:1: ( ( ';' ) )
-            // InternalXdiagramDsl.g:8751:1: ( ';' )
+            // InternalXdiagramDsl.g:8723:1: ( ( ';' ) )
+            // InternalXdiagramDsl.g:8724:1: ( ';' )
             {
-            // InternalXdiagramDsl.g:8751:1: ( ';' )
-            // InternalXdiagramDsl.g:8752:2: ';'
+            // InternalXdiagramDsl.g:8724:1: ( ';' )
+            // InternalXdiagramDsl.g:8725:2: ';'
             {
              before(grammarAccess.getFontPropertiesAccess().getSemicolonKeyword_7()); 
-            match(input,58,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getFontPropertiesAccess().getSemicolonKeyword_7()); 
 
             }
@@ -27970,16 +27901,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextAlign__Group__0"
-    // InternalXdiagramDsl.g:8762:1: rule__TextAlign__Group__0 : rule__TextAlign__Group__0__Impl rule__TextAlign__Group__1 ;
+    // InternalXdiagramDsl.g:8735:1: rule__TextAlign__Group__0 : rule__TextAlign__Group__0__Impl rule__TextAlign__Group__1 ;
     public final void rule__TextAlign__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8766:1: ( rule__TextAlign__Group__0__Impl rule__TextAlign__Group__1 )
-            // InternalXdiagramDsl.g:8767:2: rule__TextAlign__Group__0__Impl rule__TextAlign__Group__1
+            // InternalXdiagramDsl.g:8739:1: ( rule__TextAlign__Group__0__Impl rule__TextAlign__Group__1 )
+            // InternalXdiagramDsl.g:8740:2: rule__TextAlign__Group__0__Impl rule__TextAlign__Group__1
             {
-            pushFollow(FOLLOW_72);
+            pushFollow(FOLLOW_71);
             rule__TextAlign__Group__0__Impl();
 
             state._fsp--;
@@ -28008,17 +27939,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextAlign__Group__0__Impl"
-    // InternalXdiagramDsl.g:8774:1: rule__TextAlign__Group__0__Impl : ( 'align' ) ;
+    // InternalXdiagramDsl.g:8747:1: rule__TextAlign__Group__0__Impl : ( 'align' ) ;
     public final void rule__TextAlign__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8778:1: ( ( 'align' ) )
-            // InternalXdiagramDsl.g:8779:1: ( 'align' )
+            // InternalXdiagramDsl.g:8751:1: ( ( 'align' ) )
+            // InternalXdiagramDsl.g:8752:1: ( 'align' )
             {
-            // InternalXdiagramDsl.g:8779:1: ( 'align' )
-            // InternalXdiagramDsl.g:8780:2: 'align'
+            // InternalXdiagramDsl.g:8752:1: ( 'align' )
+            // InternalXdiagramDsl.g:8753:2: 'align'
             {
              before(grammarAccess.getTextAlignAccess().getAlignKeyword_0()); 
             match(input,80,FOLLOW_2); 
@@ -28045,16 +27976,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextAlign__Group__1"
-    // InternalXdiagramDsl.g:8789:1: rule__TextAlign__Group__1 : rule__TextAlign__Group__1__Impl rule__TextAlign__Group__2 ;
+    // InternalXdiagramDsl.g:8762:1: rule__TextAlign__Group__1 : rule__TextAlign__Group__1__Impl rule__TextAlign__Group__2 ;
     public final void rule__TextAlign__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8793:1: ( rule__TextAlign__Group__1__Impl rule__TextAlign__Group__2 )
-            // InternalXdiagramDsl.g:8794:2: rule__TextAlign__Group__1__Impl rule__TextAlign__Group__2
+            // InternalXdiagramDsl.g:8766:1: ( rule__TextAlign__Group__1__Impl rule__TextAlign__Group__2 )
+            // InternalXdiagramDsl.g:8767:2: rule__TextAlign__Group__1__Impl rule__TextAlign__Group__2
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             rule__TextAlign__Group__1__Impl();
 
             state._fsp--;
@@ -28083,21 +28014,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextAlign__Group__1__Impl"
-    // InternalXdiagramDsl.g:8801:1: rule__TextAlign__Group__1__Impl : ( ( rule__TextAlign__ValueAssignment_1 ) ) ;
+    // InternalXdiagramDsl.g:8774:1: rule__TextAlign__Group__1__Impl : ( ( rule__TextAlign__ValueAssignment_1 ) ) ;
     public final void rule__TextAlign__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8805:1: ( ( ( rule__TextAlign__ValueAssignment_1 ) ) )
-            // InternalXdiagramDsl.g:8806:1: ( ( rule__TextAlign__ValueAssignment_1 ) )
+            // InternalXdiagramDsl.g:8778:1: ( ( ( rule__TextAlign__ValueAssignment_1 ) ) )
+            // InternalXdiagramDsl.g:8779:1: ( ( rule__TextAlign__ValueAssignment_1 ) )
             {
-            // InternalXdiagramDsl.g:8806:1: ( ( rule__TextAlign__ValueAssignment_1 ) )
-            // InternalXdiagramDsl.g:8807:2: ( rule__TextAlign__ValueAssignment_1 )
+            // InternalXdiagramDsl.g:8779:1: ( ( rule__TextAlign__ValueAssignment_1 ) )
+            // InternalXdiagramDsl.g:8780:2: ( rule__TextAlign__ValueAssignment_1 )
             {
              before(grammarAccess.getTextAlignAccess().getValueAssignment_1()); 
-            // InternalXdiagramDsl.g:8808:2: ( rule__TextAlign__ValueAssignment_1 )
-            // InternalXdiagramDsl.g:8808:3: rule__TextAlign__ValueAssignment_1
+            // InternalXdiagramDsl.g:8781:2: ( rule__TextAlign__ValueAssignment_1 )
+            // InternalXdiagramDsl.g:8781:3: rule__TextAlign__ValueAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__TextAlign__ValueAssignment_1();
@@ -28130,16 +28061,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextAlign__Group__2"
-    // InternalXdiagramDsl.g:8816:1: rule__TextAlign__Group__2 : rule__TextAlign__Group__2__Impl rule__TextAlign__Group__3 ;
+    // InternalXdiagramDsl.g:8789:1: rule__TextAlign__Group__2 : rule__TextAlign__Group__2__Impl rule__TextAlign__Group__3 ;
     public final void rule__TextAlign__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8820:1: ( rule__TextAlign__Group__2__Impl rule__TextAlign__Group__3 )
-            // InternalXdiagramDsl.g:8821:2: rule__TextAlign__Group__2__Impl rule__TextAlign__Group__3
+            // InternalXdiagramDsl.g:8793:1: ( rule__TextAlign__Group__2__Impl rule__TextAlign__Group__3 )
+            // InternalXdiagramDsl.g:8794:2: rule__TextAlign__Group__2__Impl rule__TextAlign__Group__3
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             rule__TextAlign__Group__2__Impl();
 
             state._fsp--;
@@ -28168,29 +28099,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextAlign__Group__2__Impl"
-    // InternalXdiagramDsl.g:8828:1: rule__TextAlign__Group__2__Impl : ( ( rule__TextAlign__ConditionalAssignment_2 )? ) ;
+    // InternalXdiagramDsl.g:8801:1: rule__TextAlign__Group__2__Impl : ( ( rule__TextAlign__ConditionalAssignment_2 )? ) ;
     public final void rule__TextAlign__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8832:1: ( ( ( rule__TextAlign__ConditionalAssignment_2 )? ) )
-            // InternalXdiagramDsl.g:8833:1: ( ( rule__TextAlign__ConditionalAssignment_2 )? )
+            // InternalXdiagramDsl.g:8805:1: ( ( ( rule__TextAlign__ConditionalAssignment_2 )? ) )
+            // InternalXdiagramDsl.g:8806:1: ( ( rule__TextAlign__ConditionalAssignment_2 )? )
             {
-            // InternalXdiagramDsl.g:8833:1: ( ( rule__TextAlign__ConditionalAssignment_2 )? )
-            // InternalXdiagramDsl.g:8834:2: ( rule__TextAlign__ConditionalAssignment_2 )?
+            // InternalXdiagramDsl.g:8806:1: ( ( rule__TextAlign__ConditionalAssignment_2 )? )
+            // InternalXdiagramDsl.g:8807:2: ( rule__TextAlign__ConditionalAssignment_2 )?
             {
              before(grammarAccess.getTextAlignAccess().getConditionalAssignment_2()); 
-            // InternalXdiagramDsl.g:8835:2: ( rule__TextAlign__ConditionalAssignment_2 )?
-            int alt88=2;
-            int LA88_0 = input.LA(1);
+            // InternalXdiagramDsl.g:8808:2: ( rule__TextAlign__ConditionalAssignment_2 )?
+            int alt89=2;
+            int LA89_0 = input.LA(1);
 
-            if ( (LA88_0==50) ) {
-                alt88=1;
+            if ( (LA89_0==50) ) {
+                alt89=1;
             }
-            switch (alt88) {
+            switch (alt89) {
                 case 1 :
-                    // InternalXdiagramDsl.g:8835:3: rule__TextAlign__ConditionalAssignment_2
+                    // InternalXdiagramDsl.g:8808:3: rule__TextAlign__ConditionalAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__TextAlign__ConditionalAssignment_2();
@@ -28226,14 +28157,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextAlign__Group__3"
-    // InternalXdiagramDsl.g:8843:1: rule__TextAlign__Group__3 : rule__TextAlign__Group__3__Impl ;
+    // InternalXdiagramDsl.g:8816:1: rule__TextAlign__Group__3 : rule__TextAlign__Group__3__Impl ;
     public final void rule__TextAlign__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8847:1: ( rule__TextAlign__Group__3__Impl )
-            // InternalXdiagramDsl.g:8848:2: rule__TextAlign__Group__3__Impl
+            // InternalXdiagramDsl.g:8820:1: ( rule__TextAlign__Group__3__Impl )
+            // InternalXdiagramDsl.g:8821:2: rule__TextAlign__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TextAlign__Group__3__Impl();
@@ -28259,20 +28190,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextAlign__Group__3__Impl"
-    // InternalXdiagramDsl.g:8854:1: rule__TextAlign__Group__3__Impl : ( ';' ) ;
+    // InternalXdiagramDsl.g:8827:1: rule__TextAlign__Group__3__Impl : ( ';' ) ;
     public final void rule__TextAlign__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8858:1: ( ( ';' ) )
-            // InternalXdiagramDsl.g:8859:1: ( ';' )
+            // InternalXdiagramDsl.g:8831:1: ( ( ';' ) )
+            // InternalXdiagramDsl.g:8832:1: ( ';' )
             {
-            // InternalXdiagramDsl.g:8859:1: ( ';' )
-            // InternalXdiagramDsl.g:8860:2: ';'
+            // InternalXdiagramDsl.g:8832:1: ( ';' )
+            // InternalXdiagramDsl.g:8833:2: ';'
             {
              before(grammarAccess.getTextAlignAccess().getSemicolonKeyword_3()); 
-            match(input,58,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getTextAlignAccess().getSemicolonKeyword_3()); 
 
             }
@@ -28296,16 +28227,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineStyle__Group__0"
-    // InternalXdiagramDsl.g:8870:1: rule__LineStyle__Group__0 : rule__LineStyle__Group__0__Impl rule__LineStyle__Group__1 ;
+    // InternalXdiagramDsl.g:8843:1: rule__LineStyle__Group__0 : rule__LineStyle__Group__0__Impl rule__LineStyle__Group__1 ;
     public final void rule__LineStyle__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8874:1: ( rule__LineStyle__Group__0__Impl rule__LineStyle__Group__1 )
-            // InternalXdiagramDsl.g:8875:2: rule__LineStyle__Group__0__Impl rule__LineStyle__Group__1
+            // InternalXdiagramDsl.g:8847:1: ( rule__LineStyle__Group__0__Impl rule__LineStyle__Group__1 )
+            // InternalXdiagramDsl.g:8848:2: rule__LineStyle__Group__0__Impl rule__LineStyle__Group__1
             {
-            pushFollow(FOLLOW_73);
+            pushFollow(FOLLOW_72);
             rule__LineStyle__Group__0__Impl();
 
             state._fsp--;
@@ -28334,21 +28265,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineStyle__Group__0__Impl"
-    // InternalXdiagramDsl.g:8882:1: rule__LineStyle__Group__0__Impl : ( () ) ;
+    // InternalXdiagramDsl.g:8855:1: rule__LineStyle__Group__0__Impl : ( () ) ;
     public final void rule__LineStyle__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8886:1: ( ( () ) )
-            // InternalXdiagramDsl.g:8887:1: ( () )
+            // InternalXdiagramDsl.g:8859:1: ( ( () ) )
+            // InternalXdiagramDsl.g:8860:1: ( () )
             {
-            // InternalXdiagramDsl.g:8887:1: ( () )
-            // InternalXdiagramDsl.g:8888:2: ()
+            // InternalXdiagramDsl.g:8860:1: ( () )
+            // InternalXdiagramDsl.g:8861:2: ()
             {
              before(grammarAccess.getLineStyleAccess().getLineStyleAction_0()); 
-            // InternalXdiagramDsl.g:8889:2: ()
-            // InternalXdiagramDsl.g:8889:3: 
+            // InternalXdiagramDsl.g:8862:2: ()
+            // InternalXdiagramDsl.g:8862:3: 
             {
             }
 
@@ -28371,16 +28302,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineStyle__Group__1"
-    // InternalXdiagramDsl.g:8897:1: rule__LineStyle__Group__1 : rule__LineStyle__Group__1__Impl rule__LineStyle__Group__2 ;
+    // InternalXdiagramDsl.g:8870:1: rule__LineStyle__Group__1 : rule__LineStyle__Group__1__Impl rule__LineStyle__Group__2 ;
     public final void rule__LineStyle__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8901:1: ( rule__LineStyle__Group__1__Impl rule__LineStyle__Group__2 )
-            // InternalXdiagramDsl.g:8902:2: rule__LineStyle__Group__1__Impl rule__LineStyle__Group__2
+            // InternalXdiagramDsl.g:8874:1: ( rule__LineStyle__Group__1__Impl rule__LineStyle__Group__2 )
+            // InternalXdiagramDsl.g:8875:2: rule__LineStyle__Group__1__Impl rule__LineStyle__Group__2
             {
-            pushFollow(FOLLOW_74);
+            pushFollow(FOLLOW_73);
             rule__LineStyle__Group__1__Impl();
 
             state._fsp--;
@@ -28409,17 +28340,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineStyle__Group__1__Impl"
-    // InternalXdiagramDsl.g:8909:1: rule__LineStyle__Group__1__Impl : ( 'linestyle' ) ;
+    // InternalXdiagramDsl.g:8882:1: rule__LineStyle__Group__1__Impl : ( 'linestyle' ) ;
     public final void rule__LineStyle__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8913:1: ( ( 'linestyle' ) )
-            // InternalXdiagramDsl.g:8914:1: ( 'linestyle' )
+            // InternalXdiagramDsl.g:8886:1: ( ( 'linestyle' ) )
+            // InternalXdiagramDsl.g:8887:1: ( 'linestyle' )
             {
-            // InternalXdiagramDsl.g:8914:1: ( 'linestyle' )
-            // InternalXdiagramDsl.g:8915:2: 'linestyle'
+            // InternalXdiagramDsl.g:8887:1: ( 'linestyle' )
+            // InternalXdiagramDsl.g:8888:2: 'linestyle'
             {
              before(grammarAccess.getLineStyleAccess().getLinestyleKeyword_1()); 
             match(input,81,FOLLOW_2); 
@@ -28446,16 +28377,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineStyle__Group__2"
-    // InternalXdiagramDsl.g:8924:1: rule__LineStyle__Group__2 : rule__LineStyle__Group__2__Impl rule__LineStyle__Group__3 ;
+    // InternalXdiagramDsl.g:8897:1: rule__LineStyle__Group__2 : rule__LineStyle__Group__2__Impl rule__LineStyle__Group__3 ;
     public final void rule__LineStyle__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8928:1: ( rule__LineStyle__Group__2__Impl rule__LineStyle__Group__3 )
-            // InternalXdiagramDsl.g:8929:2: rule__LineStyle__Group__2__Impl rule__LineStyle__Group__3
+            // InternalXdiagramDsl.g:8901:1: ( rule__LineStyle__Group__2__Impl rule__LineStyle__Group__3 )
+            // InternalXdiagramDsl.g:8902:2: rule__LineStyle__Group__2__Impl rule__LineStyle__Group__3
             {
-            pushFollow(FOLLOW_74);
+            pushFollow(FOLLOW_73);
             rule__LineStyle__Group__2__Impl();
 
             state._fsp--;
@@ -28484,29 +28415,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineStyle__Group__2__Impl"
-    // InternalXdiagramDsl.g:8936:1: rule__LineStyle__Group__2__Impl : ( ( rule__LineStyle__StyleAssignment_2 )? ) ;
+    // InternalXdiagramDsl.g:8909:1: rule__LineStyle__Group__2__Impl : ( ( rule__LineStyle__StyleAssignment_2 )? ) ;
     public final void rule__LineStyle__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8940:1: ( ( ( rule__LineStyle__StyleAssignment_2 )? ) )
-            // InternalXdiagramDsl.g:8941:1: ( ( rule__LineStyle__StyleAssignment_2 )? )
+            // InternalXdiagramDsl.g:8913:1: ( ( ( rule__LineStyle__StyleAssignment_2 )? ) )
+            // InternalXdiagramDsl.g:8914:1: ( ( rule__LineStyle__StyleAssignment_2 )? )
             {
-            // InternalXdiagramDsl.g:8941:1: ( ( rule__LineStyle__StyleAssignment_2 )? )
-            // InternalXdiagramDsl.g:8942:2: ( rule__LineStyle__StyleAssignment_2 )?
+            // InternalXdiagramDsl.g:8914:1: ( ( rule__LineStyle__StyleAssignment_2 )? )
+            // InternalXdiagramDsl.g:8915:2: ( rule__LineStyle__StyleAssignment_2 )?
             {
              before(grammarAccess.getLineStyleAccess().getStyleAssignment_2()); 
-            // InternalXdiagramDsl.g:8943:2: ( rule__LineStyle__StyleAssignment_2 )?
-            int alt89=2;
-            int LA89_0 = input.LA(1);
+            // InternalXdiagramDsl.g:8916:2: ( rule__LineStyle__StyleAssignment_2 )?
+            int alt90=2;
+            int LA90_0 = input.LA(1);
 
-            if ( ((LA89_0>=39 && LA89_0<=41)) ) {
-                alt89=1;
+            if ( ((LA90_0>=39 && LA90_0<=41)) ) {
+                alt90=1;
             }
-            switch (alt89) {
+            switch (alt90) {
                 case 1 :
-                    // InternalXdiagramDsl.g:8943:3: rule__LineStyle__StyleAssignment_2
+                    // InternalXdiagramDsl.g:8916:3: rule__LineStyle__StyleAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__LineStyle__StyleAssignment_2();
@@ -28542,16 +28473,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineStyle__Group__3"
-    // InternalXdiagramDsl.g:8951:1: rule__LineStyle__Group__3 : rule__LineStyle__Group__3__Impl rule__LineStyle__Group__4 ;
+    // InternalXdiagramDsl.g:8924:1: rule__LineStyle__Group__3 : rule__LineStyle__Group__3__Impl rule__LineStyle__Group__4 ;
     public final void rule__LineStyle__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8955:1: ( rule__LineStyle__Group__3__Impl rule__LineStyle__Group__4 )
-            // InternalXdiagramDsl.g:8956:2: rule__LineStyle__Group__3__Impl rule__LineStyle__Group__4
+            // InternalXdiagramDsl.g:8928:1: ( rule__LineStyle__Group__3__Impl rule__LineStyle__Group__4 )
+            // InternalXdiagramDsl.g:8929:2: rule__LineStyle__Group__3__Impl rule__LineStyle__Group__4
             {
-            pushFollow(FOLLOW_74);
+            pushFollow(FOLLOW_73);
             rule__LineStyle__Group__3__Impl();
 
             state._fsp--;
@@ -28580,29 +28511,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineStyle__Group__3__Impl"
-    // InternalXdiagramDsl.g:8963:1: rule__LineStyle__Group__3__Impl : ( ( rule__LineStyle__ManhattanAssignment_3 )? ) ;
+    // InternalXdiagramDsl.g:8936:1: rule__LineStyle__Group__3__Impl : ( ( rule__LineStyle__ManhattanAssignment_3 )? ) ;
     public final void rule__LineStyle__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8967:1: ( ( ( rule__LineStyle__ManhattanAssignment_3 )? ) )
-            // InternalXdiagramDsl.g:8968:1: ( ( rule__LineStyle__ManhattanAssignment_3 )? )
+            // InternalXdiagramDsl.g:8940:1: ( ( ( rule__LineStyle__ManhattanAssignment_3 )? ) )
+            // InternalXdiagramDsl.g:8941:1: ( ( rule__LineStyle__ManhattanAssignment_3 )? )
             {
-            // InternalXdiagramDsl.g:8968:1: ( ( rule__LineStyle__ManhattanAssignment_3 )? )
-            // InternalXdiagramDsl.g:8969:2: ( rule__LineStyle__ManhattanAssignment_3 )?
+            // InternalXdiagramDsl.g:8941:1: ( ( rule__LineStyle__ManhattanAssignment_3 )? )
+            // InternalXdiagramDsl.g:8942:2: ( rule__LineStyle__ManhattanAssignment_3 )?
             {
              before(grammarAccess.getLineStyleAccess().getManhattanAssignment_3()); 
-            // InternalXdiagramDsl.g:8970:2: ( rule__LineStyle__ManhattanAssignment_3 )?
-            int alt90=2;
-            int LA90_0 = input.LA(1);
+            // InternalXdiagramDsl.g:8943:2: ( rule__LineStyle__ManhattanAssignment_3 )?
+            int alt91=2;
+            int LA91_0 = input.LA(1);
 
-            if ( (LA90_0==104) ) {
-                alt90=1;
+            if ( (LA91_0==104) ) {
+                alt91=1;
             }
-            switch (alt90) {
+            switch (alt91) {
                 case 1 :
-                    // InternalXdiagramDsl.g:8970:3: rule__LineStyle__ManhattanAssignment_3
+                    // InternalXdiagramDsl.g:8943:3: rule__LineStyle__ManhattanAssignment_3
                     {
                     pushFollow(FOLLOW_2);
                     rule__LineStyle__ManhattanAssignment_3();
@@ -28638,16 +28569,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineStyle__Group__4"
-    // InternalXdiagramDsl.g:8978:1: rule__LineStyle__Group__4 : rule__LineStyle__Group__4__Impl rule__LineStyle__Group__5 ;
+    // InternalXdiagramDsl.g:8951:1: rule__LineStyle__Group__4 : rule__LineStyle__Group__4__Impl rule__LineStyle__Group__5 ;
     public final void rule__LineStyle__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8982:1: ( rule__LineStyle__Group__4__Impl rule__LineStyle__Group__5 )
-            // InternalXdiagramDsl.g:8983:2: rule__LineStyle__Group__4__Impl rule__LineStyle__Group__5
+            // InternalXdiagramDsl.g:8955:1: ( rule__LineStyle__Group__4__Impl rule__LineStyle__Group__5 )
+            // InternalXdiagramDsl.g:8956:2: rule__LineStyle__Group__4__Impl rule__LineStyle__Group__5
             {
-            pushFollow(FOLLOW_74);
+            pushFollow(FOLLOW_73);
             rule__LineStyle__Group__4__Impl();
 
             state._fsp--;
@@ -28676,29 +28607,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineStyle__Group__4__Impl"
-    // InternalXdiagramDsl.g:8990:1: rule__LineStyle__Group__4__Impl : ( ( rule__LineStyle__ConditionalAssignment_4 )? ) ;
+    // InternalXdiagramDsl.g:8963:1: rule__LineStyle__Group__4__Impl : ( ( rule__LineStyle__ConditionalAssignment_4 )? ) ;
     public final void rule__LineStyle__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:8994:1: ( ( ( rule__LineStyle__ConditionalAssignment_4 )? ) )
-            // InternalXdiagramDsl.g:8995:1: ( ( rule__LineStyle__ConditionalAssignment_4 )? )
+            // InternalXdiagramDsl.g:8967:1: ( ( ( rule__LineStyle__ConditionalAssignment_4 )? ) )
+            // InternalXdiagramDsl.g:8968:1: ( ( rule__LineStyle__ConditionalAssignment_4 )? )
             {
-            // InternalXdiagramDsl.g:8995:1: ( ( rule__LineStyle__ConditionalAssignment_4 )? )
-            // InternalXdiagramDsl.g:8996:2: ( rule__LineStyle__ConditionalAssignment_4 )?
+            // InternalXdiagramDsl.g:8968:1: ( ( rule__LineStyle__ConditionalAssignment_4 )? )
+            // InternalXdiagramDsl.g:8969:2: ( rule__LineStyle__ConditionalAssignment_4 )?
             {
              before(grammarAccess.getLineStyleAccess().getConditionalAssignment_4()); 
-            // InternalXdiagramDsl.g:8997:2: ( rule__LineStyle__ConditionalAssignment_4 )?
-            int alt91=2;
-            int LA91_0 = input.LA(1);
+            // InternalXdiagramDsl.g:8970:2: ( rule__LineStyle__ConditionalAssignment_4 )?
+            int alt92=2;
+            int LA92_0 = input.LA(1);
 
-            if ( (LA91_0==50) ) {
-                alt91=1;
+            if ( (LA92_0==50) ) {
+                alt92=1;
             }
-            switch (alt91) {
+            switch (alt92) {
                 case 1 :
-                    // InternalXdiagramDsl.g:8997:3: rule__LineStyle__ConditionalAssignment_4
+                    // InternalXdiagramDsl.g:8970:3: rule__LineStyle__ConditionalAssignment_4
                     {
                     pushFollow(FOLLOW_2);
                     rule__LineStyle__ConditionalAssignment_4();
@@ -28734,14 +28665,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineStyle__Group__5"
-    // InternalXdiagramDsl.g:9005:1: rule__LineStyle__Group__5 : rule__LineStyle__Group__5__Impl ;
+    // InternalXdiagramDsl.g:8978:1: rule__LineStyle__Group__5 : rule__LineStyle__Group__5__Impl ;
     public final void rule__LineStyle__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9009:1: ( rule__LineStyle__Group__5__Impl )
-            // InternalXdiagramDsl.g:9010:2: rule__LineStyle__Group__5__Impl
+            // InternalXdiagramDsl.g:8982:1: ( rule__LineStyle__Group__5__Impl )
+            // InternalXdiagramDsl.g:8983:2: rule__LineStyle__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__LineStyle__Group__5__Impl();
@@ -28767,20 +28698,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineStyle__Group__5__Impl"
-    // InternalXdiagramDsl.g:9016:1: rule__LineStyle__Group__5__Impl : ( ';' ) ;
+    // InternalXdiagramDsl.g:8989:1: rule__LineStyle__Group__5__Impl : ( ';' ) ;
     public final void rule__LineStyle__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9020:1: ( ( ';' ) )
-            // InternalXdiagramDsl.g:9021:1: ( ';' )
+            // InternalXdiagramDsl.g:8993:1: ( ( ';' ) )
+            // InternalXdiagramDsl.g:8994:1: ( ';' )
             {
-            // InternalXdiagramDsl.g:9021:1: ( ';' )
-            // InternalXdiagramDsl.g:9022:2: ';'
+            // InternalXdiagramDsl.g:8994:1: ( ';' )
+            // InternalXdiagramDsl.g:8995:2: ';'
             {
              before(grammarAccess.getLineStyleAccess().getSemicolonKeyword_5()); 
-            match(input,58,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getLineStyleAccess().getSemicolonKeyword_5()); 
 
             }
@@ -28804,16 +28735,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineWidth__Group__0"
-    // InternalXdiagramDsl.g:9032:1: rule__LineWidth__Group__0 : rule__LineWidth__Group__0__Impl rule__LineWidth__Group__1 ;
+    // InternalXdiagramDsl.g:9005:1: rule__LineWidth__Group__0 : rule__LineWidth__Group__0__Impl rule__LineWidth__Group__1 ;
     public final void rule__LineWidth__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9036:1: ( rule__LineWidth__Group__0__Impl rule__LineWidth__Group__1 )
-            // InternalXdiagramDsl.g:9037:2: rule__LineWidth__Group__0__Impl rule__LineWidth__Group__1
+            // InternalXdiagramDsl.g:9009:1: ( rule__LineWidth__Group__0__Impl rule__LineWidth__Group__1 )
+            // InternalXdiagramDsl.g:9010:2: rule__LineWidth__Group__0__Impl rule__LineWidth__Group__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_29);
             rule__LineWidth__Group__0__Impl();
 
             state._fsp--;
@@ -28842,17 +28773,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineWidth__Group__0__Impl"
-    // InternalXdiagramDsl.g:9044:1: rule__LineWidth__Group__0__Impl : ( 'linewidth' ) ;
+    // InternalXdiagramDsl.g:9017:1: rule__LineWidth__Group__0__Impl : ( 'linewidth' ) ;
     public final void rule__LineWidth__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9048:1: ( ( 'linewidth' ) )
-            // InternalXdiagramDsl.g:9049:1: ( 'linewidth' )
+            // InternalXdiagramDsl.g:9021:1: ( ( 'linewidth' ) )
+            // InternalXdiagramDsl.g:9022:1: ( 'linewidth' )
             {
-            // InternalXdiagramDsl.g:9049:1: ( 'linewidth' )
-            // InternalXdiagramDsl.g:9050:2: 'linewidth'
+            // InternalXdiagramDsl.g:9022:1: ( 'linewidth' )
+            // InternalXdiagramDsl.g:9023:2: 'linewidth'
             {
              before(grammarAccess.getLineWidthAccess().getLinewidthKeyword_0()); 
             match(input,82,FOLLOW_2); 
@@ -28879,16 +28810,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineWidth__Group__1"
-    // InternalXdiagramDsl.g:9059:1: rule__LineWidth__Group__1 : rule__LineWidth__Group__1__Impl rule__LineWidth__Group__2 ;
+    // InternalXdiagramDsl.g:9032:1: rule__LineWidth__Group__1 : rule__LineWidth__Group__1__Impl rule__LineWidth__Group__2 ;
     public final void rule__LineWidth__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9063:1: ( rule__LineWidth__Group__1__Impl rule__LineWidth__Group__2 )
-            // InternalXdiagramDsl.g:9064:2: rule__LineWidth__Group__1__Impl rule__LineWidth__Group__2
+            // InternalXdiagramDsl.g:9036:1: ( rule__LineWidth__Group__1__Impl rule__LineWidth__Group__2 )
+            // InternalXdiagramDsl.g:9037:2: rule__LineWidth__Group__1__Impl rule__LineWidth__Group__2
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             rule__LineWidth__Group__1__Impl();
 
             state._fsp--;
@@ -28917,21 +28848,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineWidth__Group__1__Impl"
-    // InternalXdiagramDsl.g:9071:1: rule__LineWidth__Group__1__Impl : ( ( rule__LineWidth__WidthAssignment_1 ) ) ;
+    // InternalXdiagramDsl.g:9044:1: rule__LineWidth__Group__1__Impl : ( ( rule__LineWidth__WidthAssignment_1 ) ) ;
     public final void rule__LineWidth__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9075:1: ( ( ( rule__LineWidth__WidthAssignment_1 ) ) )
-            // InternalXdiagramDsl.g:9076:1: ( ( rule__LineWidth__WidthAssignment_1 ) )
+            // InternalXdiagramDsl.g:9048:1: ( ( ( rule__LineWidth__WidthAssignment_1 ) ) )
+            // InternalXdiagramDsl.g:9049:1: ( ( rule__LineWidth__WidthAssignment_1 ) )
             {
-            // InternalXdiagramDsl.g:9076:1: ( ( rule__LineWidth__WidthAssignment_1 ) )
-            // InternalXdiagramDsl.g:9077:2: ( rule__LineWidth__WidthAssignment_1 )
+            // InternalXdiagramDsl.g:9049:1: ( ( rule__LineWidth__WidthAssignment_1 ) )
+            // InternalXdiagramDsl.g:9050:2: ( rule__LineWidth__WidthAssignment_1 )
             {
              before(grammarAccess.getLineWidthAccess().getWidthAssignment_1()); 
-            // InternalXdiagramDsl.g:9078:2: ( rule__LineWidth__WidthAssignment_1 )
-            // InternalXdiagramDsl.g:9078:3: rule__LineWidth__WidthAssignment_1
+            // InternalXdiagramDsl.g:9051:2: ( rule__LineWidth__WidthAssignment_1 )
+            // InternalXdiagramDsl.g:9051:3: rule__LineWidth__WidthAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__LineWidth__WidthAssignment_1();
@@ -28964,16 +28895,16 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineWidth__Group__2"
-    // InternalXdiagramDsl.g:9086:1: rule__LineWidth__Group__2 : rule__LineWidth__Group__2__Impl rule__LineWidth__Group__3 ;
+    // InternalXdiagramDsl.g:9059:1: rule__LineWidth__Group__2 : rule__LineWidth__Group__2__Impl rule__LineWidth__Group__3 ;
     public final void rule__LineWidth__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9090:1: ( rule__LineWidth__Group__2__Impl rule__LineWidth__Group__3 )
-            // InternalXdiagramDsl.g:9091:2: rule__LineWidth__Group__2__Impl rule__LineWidth__Group__3
+            // InternalXdiagramDsl.g:9063:1: ( rule__LineWidth__Group__2__Impl rule__LineWidth__Group__3 )
+            // InternalXdiagramDsl.g:9064:2: rule__LineWidth__Group__2__Impl rule__LineWidth__Group__3
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             rule__LineWidth__Group__2__Impl();
 
             state._fsp--;
@@ -29002,29 +28933,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineWidth__Group__2__Impl"
-    // InternalXdiagramDsl.g:9098:1: rule__LineWidth__Group__2__Impl : ( ( rule__LineWidth__ConditionalAssignment_2 )? ) ;
+    // InternalXdiagramDsl.g:9071:1: rule__LineWidth__Group__2__Impl : ( ( rule__LineWidth__ConditionalAssignment_2 )? ) ;
     public final void rule__LineWidth__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9102:1: ( ( ( rule__LineWidth__ConditionalAssignment_2 )? ) )
-            // InternalXdiagramDsl.g:9103:1: ( ( rule__LineWidth__ConditionalAssignment_2 )? )
+            // InternalXdiagramDsl.g:9075:1: ( ( ( rule__LineWidth__ConditionalAssignment_2 )? ) )
+            // InternalXdiagramDsl.g:9076:1: ( ( rule__LineWidth__ConditionalAssignment_2 )? )
             {
-            // InternalXdiagramDsl.g:9103:1: ( ( rule__LineWidth__ConditionalAssignment_2 )? )
-            // InternalXdiagramDsl.g:9104:2: ( rule__LineWidth__ConditionalAssignment_2 )?
+            // InternalXdiagramDsl.g:9076:1: ( ( rule__LineWidth__ConditionalAssignment_2 )? )
+            // InternalXdiagramDsl.g:9077:2: ( rule__LineWidth__ConditionalAssignment_2 )?
             {
              before(grammarAccess.getLineWidthAccess().getConditionalAssignment_2()); 
-            // InternalXdiagramDsl.g:9105:2: ( rule__LineWidth__ConditionalAssignment_2 )?
-            int alt92=2;
-            int LA92_0 = input.LA(1);
+            // InternalXdiagramDsl.g:9078:2: ( rule__LineWidth__ConditionalAssignment_2 )?
+            int alt93=2;
+            int LA93_0 = input.LA(1);
 
-            if ( (LA92_0==50) ) {
-                alt92=1;
+            if ( (LA93_0==50) ) {
+                alt93=1;
             }
-            switch (alt92) {
+            switch (alt93) {
                 case 1 :
-                    // InternalXdiagramDsl.g:9105:3: rule__LineWidth__ConditionalAssignment_2
+                    // InternalXdiagramDsl.g:9078:3: rule__LineWidth__ConditionalAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__LineWidth__ConditionalAssignment_2();
@@ -29060,14 +28991,14 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineWidth__Group__3"
-    // InternalXdiagramDsl.g:9113:1: rule__LineWidth__Group__3 : rule__LineWidth__Group__3__Impl ;
+    // InternalXdiagramDsl.g:9086:1: rule__LineWidth__Group__3 : rule__LineWidth__Group__3__Impl ;
     public final void rule__LineWidth__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9117:1: ( rule__LineWidth__Group__3__Impl )
-            // InternalXdiagramDsl.g:9118:2: rule__LineWidth__Group__3__Impl
+            // InternalXdiagramDsl.g:9090:1: ( rule__LineWidth__Group__3__Impl )
+            // InternalXdiagramDsl.g:9091:2: rule__LineWidth__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__LineWidth__Group__3__Impl();
@@ -29093,20 +29024,20 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineWidth__Group__3__Impl"
-    // InternalXdiagramDsl.g:9124:1: rule__LineWidth__Group__3__Impl : ( ';' ) ;
+    // InternalXdiagramDsl.g:9097:1: rule__LineWidth__Group__3__Impl : ( ';' ) ;
     public final void rule__LineWidth__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9128:1: ( ( ';' ) )
-            // InternalXdiagramDsl.g:9129:1: ( ';' )
+            // InternalXdiagramDsl.g:9101:1: ( ( ';' ) )
+            // InternalXdiagramDsl.g:9102:1: ( ';' )
             {
-            // InternalXdiagramDsl.g:9129:1: ( ';' )
-            // InternalXdiagramDsl.g:9130:2: ';'
+            // InternalXdiagramDsl.g:9102:1: ( ';' )
+            // InternalXdiagramDsl.g:9103:2: ';'
             {
              before(grammarAccess.getLineWidthAccess().getSemicolonKeyword_3()); 
-            match(input,58,FOLLOW_2); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getLineWidthAccess().getSemicolonKeyword_3()); 
 
             }
@@ -29130,17 +29061,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__XDiagram__MetamodelAssignment_0"
-    // InternalXdiagramDsl.g:9140:1: rule__XDiagram__MetamodelAssignment_0 : ( ruleMetaModel ) ;
+    // InternalXdiagramDsl.g:9113:1: rule__XDiagram__MetamodelAssignment_0 : ( ruleMetaModel ) ;
     public final void rule__XDiagram__MetamodelAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9144:1: ( ( ruleMetaModel ) )
-            // InternalXdiagramDsl.g:9145:2: ( ruleMetaModel )
+            // InternalXdiagramDsl.g:9117:1: ( ( ruleMetaModel ) )
+            // InternalXdiagramDsl.g:9118:2: ( ruleMetaModel )
             {
-            // InternalXdiagramDsl.g:9145:2: ( ruleMetaModel )
-            // InternalXdiagramDsl.g:9146:3: ruleMetaModel
+            // InternalXdiagramDsl.g:9118:2: ( ruleMetaModel )
+            // InternalXdiagramDsl.g:9119:3: ruleMetaModel
             {
              before(grammarAccess.getXDiagramAccess().getMetamodelMetaModelParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -29171,17 +29102,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__XDiagram__DiagramAssignment_1"
-    // InternalXdiagramDsl.g:9155:1: rule__XDiagram__DiagramAssignment_1 : ( ruleDiagram ) ;
+    // InternalXdiagramDsl.g:9128:1: rule__XDiagram__DiagramAssignment_1 : ( ruleDiagram ) ;
     public final void rule__XDiagram__DiagramAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9159:1: ( ( ruleDiagram ) )
-            // InternalXdiagramDsl.g:9160:2: ( ruleDiagram )
+            // InternalXdiagramDsl.g:9132:1: ( ( ruleDiagram ) )
+            // InternalXdiagramDsl.g:9133:2: ( ruleDiagram )
             {
-            // InternalXdiagramDsl.g:9160:2: ( ruleDiagram )
-            // InternalXdiagramDsl.g:9161:3: ruleDiagram
+            // InternalXdiagramDsl.g:9133:2: ( ruleDiagram )
+            // InternalXdiagramDsl.g:9134:3: ruleDiagram
             {
              before(grammarAccess.getXDiagramAccess().getDiagramDiagramParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -29212,17 +29143,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__XDiagram__CustomColorsAssignment_2"
-    // InternalXdiagramDsl.g:9170:1: rule__XDiagram__CustomColorsAssignment_2 : ( ruleColors ) ;
+    // InternalXdiagramDsl.g:9143:1: rule__XDiagram__CustomColorsAssignment_2 : ( ruleColors ) ;
     public final void rule__XDiagram__CustomColorsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9174:1: ( ( ruleColors ) )
-            // InternalXdiagramDsl.g:9175:2: ( ruleColors )
+            // InternalXdiagramDsl.g:9147:1: ( ( ruleColors ) )
+            // InternalXdiagramDsl.g:9148:2: ( ruleColors )
             {
-            // InternalXdiagramDsl.g:9175:2: ( ruleColors )
-            // InternalXdiagramDsl.g:9176:3: ruleColors
+            // InternalXdiagramDsl.g:9148:2: ( ruleColors )
+            // InternalXdiagramDsl.g:9149:3: ruleColors
             {
              before(grammarAccess.getXDiagramAccess().getCustomColorsColorsParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -29253,17 +29184,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__XDiagram__ElementsAssignment_3_0"
-    // InternalXdiagramDsl.g:9185:1: rule__XDiagram__ElementsAssignment_3_0 : ( ruleDiagramElement ) ;
+    // InternalXdiagramDsl.g:9158:1: rule__XDiagram__ElementsAssignment_3_0 : ( ruleDiagramElement ) ;
     public final void rule__XDiagram__ElementsAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9189:1: ( ( ruleDiagramElement ) )
-            // InternalXdiagramDsl.g:9190:2: ( ruleDiagramElement )
+            // InternalXdiagramDsl.g:9162:1: ( ( ruleDiagramElement ) )
+            // InternalXdiagramDsl.g:9163:2: ( ruleDiagramElement )
             {
-            // InternalXdiagramDsl.g:9190:2: ( ruleDiagramElement )
-            // InternalXdiagramDsl.g:9191:3: ruleDiagramElement
+            // InternalXdiagramDsl.g:9163:2: ( ruleDiagramElement )
+            // InternalXdiagramDsl.g:9164:3: ruleDiagramElement
             {
              before(grammarAccess.getXDiagramAccess().getElementsDiagramElementParserRuleCall_3_0_0()); 
             pushFollow(FOLLOW_2);
@@ -29294,17 +29225,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__XDiagram__FiguresAssignment_3_1"
-    // InternalXdiagramDsl.g:9200:1: rule__XDiagram__FiguresAssignment_3_1 : ( ruleCustomFigure ) ;
+    // InternalXdiagramDsl.g:9173:1: rule__XDiagram__FiguresAssignment_3_1 : ( ruleCustomFigure ) ;
     public final void rule__XDiagram__FiguresAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9204:1: ( ( ruleCustomFigure ) )
-            // InternalXdiagramDsl.g:9205:2: ( ruleCustomFigure )
+            // InternalXdiagramDsl.g:9177:1: ( ( ruleCustomFigure ) )
+            // InternalXdiagramDsl.g:9178:2: ( ruleCustomFigure )
             {
-            // InternalXdiagramDsl.g:9205:2: ( ruleCustomFigure )
-            // InternalXdiagramDsl.g:9206:3: ruleCustomFigure
+            // InternalXdiagramDsl.g:9178:2: ( ruleCustomFigure )
+            // InternalXdiagramDsl.g:9179:3: ruleCustomFigure
             {
              before(grammarAccess.getXDiagramAccess().getFiguresCustomFigureParserRuleCall_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -29335,17 +29266,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__MetaModel__PluginAssignment_3"
-    // InternalXdiagramDsl.g:9215:1: rule__MetaModel__PluginAssignment_3 : ( RULE_STRING ) ;
+    // InternalXdiagramDsl.g:9188:1: rule__MetaModel__PluginAssignment_3 : ( RULE_STRING ) ;
     public final void rule__MetaModel__PluginAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9219:1: ( ( RULE_STRING ) )
-            // InternalXdiagramDsl.g:9220:2: ( RULE_STRING )
+            // InternalXdiagramDsl.g:9192:1: ( ( RULE_STRING ) )
+            // InternalXdiagramDsl.g:9193:2: ( RULE_STRING )
             {
-            // InternalXdiagramDsl.g:9220:2: ( RULE_STRING )
-            // InternalXdiagramDsl.g:9221:3: RULE_STRING
+            // InternalXdiagramDsl.g:9193:2: ( RULE_STRING )
+            // InternalXdiagramDsl.g:9194:3: RULE_STRING
             {
              before(grammarAccess.getMetaModelAccess().getPluginSTRINGTerminalRuleCall_3_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -29372,17 +29303,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__MetaModel__EcorePathAssignment_5"
-    // InternalXdiagramDsl.g:9230:1: rule__MetaModel__EcorePathAssignment_5 : ( RULE_STRING ) ;
+    // InternalXdiagramDsl.g:9203:1: rule__MetaModel__EcorePathAssignment_5 : ( RULE_STRING ) ;
     public final void rule__MetaModel__EcorePathAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9234:1: ( ( RULE_STRING ) )
-            // InternalXdiagramDsl.g:9235:2: ( RULE_STRING )
+            // InternalXdiagramDsl.g:9207:1: ( ( RULE_STRING ) )
+            // InternalXdiagramDsl.g:9208:2: ( RULE_STRING )
             {
-            // InternalXdiagramDsl.g:9235:2: ( RULE_STRING )
-            // InternalXdiagramDsl.g:9236:3: RULE_STRING
+            // InternalXdiagramDsl.g:9208:2: ( RULE_STRING )
+            // InternalXdiagramDsl.g:9209:3: RULE_STRING
             {
              before(grammarAccess.getMetaModelAccess().getEcorePathSTRINGTerminalRuleCall_5_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -29409,21 +29340,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Diagram__ModelClassAssignment_1"
-    // InternalXdiagramDsl.g:9245:1: rule__Diagram__ModelClassAssignment_1 : ( ( ruleQualifiedName ) ) ;
+    // InternalXdiagramDsl.g:9218:1: rule__Diagram__ModelClassAssignment_1 : ( ( ruleQualifiedName ) ) ;
     public final void rule__Diagram__ModelClassAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9249:1: ( ( ( ruleQualifiedName ) ) )
-            // InternalXdiagramDsl.g:9250:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:9222:1: ( ( ( ruleQualifiedName ) ) )
+            // InternalXdiagramDsl.g:9223:2: ( ( ruleQualifiedName ) )
             {
-            // InternalXdiagramDsl.g:9250:2: ( ( ruleQualifiedName ) )
-            // InternalXdiagramDsl.g:9251:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:9223:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:9224:3: ( ruleQualifiedName )
             {
              before(grammarAccess.getDiagramAccess().getModelClassEClassCrossReference_1_0()); 
-            // InternalXdiagramDsl.g:9252:3: ( ruleQualifiedName )
-            // InternalXdiagramDsl.g:9253:4: ruleQualifiedName
+            // InternalXdiagramDsl.g:9225:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:9226:4: ruleQualifiedName
             {
              before(grammarAccess.getDiagramAccess().getModelClassEClassQualifiedNameParserRuleCall_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -29458,17 +29389,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Diagram__ContainsAssignment_3"
-    // InternalXdiagramDsl.g:9264:1: rule__Diagram__ContainsAssignment_3 : ( ruleContains ) ;
+    // InternalXdiagramDsl.g:9237:1: rule__Diagram__ContainsAssignment_3 : ( ruleContains ) ;
     public final void rule__Diagram__ContainsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9268:1: ( ( ruleContains ) )
-            // InternalXdiagramDsl.g:9269:2: ( ruleContains )
+            // InternalXdiagramDsl.g:9241:1: ( ( ruleContains ) )
+            // InternalXdiagramDsl.g:9242:2: ( ruleContains )
             {
-            // InternalXdiagramDsl.g:9269:2: ( ruleContains )
-            // InternalXdiagramDsl.g:9270:3: ruleContains
+            // InternalXdiagramDsl.g:9242:2: ( ruleContains )
+            // InternalXdiagramDsl.g:9243:3: ruleContains
             {
              before(grammarAccess.getDiagramAccess().getContainsContainsParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -29499,21 +29430,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FeatureConditional__ModelAttributeAssignment_1"
-    // InternalXdiagramDsl.g:9279:1: rule__FeatureConditional__ModelAttributeAssignment_1 : ( ( ruleQualifiedName ) ) ;
+    // InternalXdiagramDsl.g:9252:1: rule__FeatureConditional__ModelAttributeAssignment_1 : ( ( ruleQualifiedName ) ) ;
     public final void rule__FeatureConditional__ModelAttributeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9283:1: ( ( ( ruleQualifiedName ) ) )
-            // InternalXdiagramDsl.g:9284:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:9256:1: ( ( ( ruleQualifiedName ) ) )
+            // InternalXdiagramDsl.g:9257:2: ( ( ruleQualifiedName ) )
             {
-            // InternalXdiagramDsl.g:9284:2: ( ( ruleQualifiedName ) )
-            // InternalXdiagramDsl.g:9285:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:9257:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:9258:3: ( ruleQualifiedName )
             {
              before(grammarAccess.getFeatureConditionalAccess().getModelAttributeEAttributeCrossReference_1_0()); 
-            // InternalXdiagramDsl.g:9286:3: ( ruleQualifiedName )
-            // InternalXdiagramDsl.g:9287:4: ruleQualifiedName
+            // InternalXdiagramDsl.g:9259:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:9260:4: ruleQualifiedName
             {
              before(grammarAccess.getFeatureConditionalAccess().getModelAttributeEAttributeQualifiedNameParserRuleCall_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -29548,17 +29479,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FeatureConditional__OperatorAssignment_2"
-    // InternalXdiagramDsl.g:9298:1: rule__FeatureConditional__OperatorAssignment_2 : ( ruleOperator ) ;
+    // InternalXdiagramDsl.g:9271:1: rule__FeatureConditional__OperatorAssignment_2 : ( ruleOperator ) ;
     public final void rule__FeatureConditional__OperatorAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9302:1: ( ( ruleOperator ) )
-            // InternalXdiagramDsl.g:9303:2: ( ruleOperator )
+            // InternalXdiagramDsl.g:9275:1: ( ( ruleOperator ) )
+            // InternalXdiagramDsl.g:9276:2: ( ruleOperator )
             {
-            // InternalXdiagramDsl.g:9303:2: ( ruleOperator )
-            // InternalXdiagramDsl.g:9304:3: ruleOperator
+            // InternalXdiagramDsl.g:9276:2: ( ruleOperator )
+            // InternalXdiagramDsl.g:9277:3: ruleOperator
             {
              before(grammarAccess.getFeatureConditionalAccess().getOperatorOperatorEnumRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -29589,17 +29520,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FeatureConditional__ValueAssignment_3"
-    // InternalXdiagramDsl.g:9313:1: rule__FeatureConditional__ValueAssignment_3 : ( ruleValue ) ;
+    // InternalXdiagramDsl.g:9286:1: rule__FeatureConditional__ValueAssignment_3 : ( ruleValue ) ;
     public final void rule__FeatureConditional__ValueAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9317:1: ( ( ruleValue ) )
-            // InternalXdiagramDsl.g:9318:2: ( ruleValue )
+            // InternalXdiagramDsl.g:9290:1: ( ( ruleValue ) )
+            // InternalXdiagramDsl.g:9291:2: ( ruleValue )
             {
-            // InternalXdiagramDsl.g:9318:2: ( ruleValue )
-            // InternalXdiagramDsl.g:9319:3: ruleValue
+            // InternalXdiagramDsl.g:9291:2: ( ruleValue )
+            // InternalXdiagramDsl.g:9292:3: ruleValue
             {
              before(grammarAccess.getFeatureConditionalAccess().getValueValueParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -29630,21 +29561,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Node__ModelClassAssignment_1"
-    // InternalXdiagramDsl.g:9328:1: rule__Node__ModelClassAssignment_1 : ( ( ruleQualifiedName ) ) ;
+    // InternalXdiagramDsl.g:9301:1: rule__Node__ModelClassAssignment_1 : ( ( ruleQualifiedName ) ) ;
     public final void rule__Node__ModelClassAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9332:1: ( ( ( ruleQualifiedName ) ) )
-            // InternalXdiagramDsl.g:9333:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:9305:1: ( ( ( ruleQualifiedName ) ) )
+            // InternalXdiagramDsl.g:9306:2: ( ( ruleQualifiedName ) )
             {
-            // InternalXdiagramDsl.g:9333:2: ( ( ruleQualifiedName ) )
-            // InternalXdiagramDsl.g:9334:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:9306:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:9307:3: ( ruleQualifiedName )
             {
              before(grammarAccess.getNodeAccess().getModelClassEClassCrossReference_1_0()); 
-            // InternalXdiagramDsl.g:9335:3: ( ruleQualifiedName )
-            // InternalXdiagramDsl.g:9336:4: ruleQualifiedName
+            // InternalXdiagramDsl.g:9308:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:9309:4: ruleQualifiedName
             {
              before(grammarAccess.getNodeAccess().getModelClassEClassQualifiedNameParserRuleCall_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -29679,17 +29610,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Node__RootFigureAssignment_2"
-    // InternalXdiagramDsl.g:9347:1: rule__Node__RootFigureAssignment_2 : ( ruleConnectableElement ) ;
+    // InternalXdiagramDsl.g:9320:1: rule__Node__RootFigureAssignment_2 : ( ruleConnectableElement ) ;
     public final void rule__Node__RootFigureAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9351:1: ( ( ruleConnectableElement ) )
-            // InternalXdiagramDsl.g:9352:2: ( ruleConnectableElement )
+            // InternalXdiagramDsl.g:9324:1: ( ( ruleConnectableElement ) )
+            // InternalXdiagramDsl.g:9325:2: ( ruleConnectableElement )
             {
-            // InternalXdiagramDsl.g:9352:2: ( ruleConnectableElement )
-            // InternalXdiagramDsl.g:9353:3: ruleConnectableElement
+            // InternalXdiagramDsl.g:9325:2: ( ruleConnectableElement )
+            // InternalXdiagramDsl.g:9326:3: ruleConnectableElement
             {
              before(grammarAccess.getNodeAccess().getRootFigureConnectableElementParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -29720,21 +29651,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Link__ReferenceAssignment_1_0_0"
-    // InternalXdiagramDsl.g:9362:1: rule__Link__ReferenceAssignment_1_0_0 : ( ( 'reference' ) ) ;
+    // InternalXdiagramDsl.g:9335:1: rule__Link__ReferenceAssignment_1_0_0 : ( ( 'reference' ) ) ;
     public final void rule__Link__ReferenceAssignment_1_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9366:1: ( ( ( 'reference' ) ) )
-            // InternalXdiagramDsl.g:9367:2: ( ( 'reference' ) )
+            // InternalXdiagramDsl.g:9339:1: ( ( ( 'reference' ) ) )
+            // InternalXdiagramDsl.g:9340:2: ( ( 'reference' ) )
             {
-            // InternalXdiagramDsl.g:9367:2: ( ( 'reference' ) )
-            // InternalXdiagramDsl.g:9368:3: ( 'reference' )
+            // InternalXdiagramDsl.g:9340:2: ( ( 'reference' ) )
+            // InternalXdiagramDsl.g:9341:3: ( 'reference' )
             {
              before(grammarAccess.getLinkAccess().getReferenceReferenceKeyword_1_0_0_0()); 
-            // InternalXdiagramDsl.g:9369:3: ( 'reference' )
-            // InternalXdiagramDsl.g:9370:4: 'reference'
+            // InternalXdiagramDsl.g:9342:3: ( 'reference' )
+            // InternalXdiagramDsl.g:9343:4: 'reference'
             {
              before(grammarAccess.getLinkAccess().getReferenceReferenceKeyword_1_0_0_0()); 
             match(input,83,FOLLOW_2); 
@@ -29765,21 +29696,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Link__ModelReferenceAssignment_1_0_1"
-    // InternalXdiagramDsl.g:9381:1: rule__Link__ModelReferenceAssignment_1_0_1 : ( ( ruleQualifiedName ) ) ;
+    // InternalXdiagramDsl.g:9354:1: rule__Link__ModelReferenceAssignment_1_0_1 : ( ( ruleQualifiedName ) ) ;
     public final void rule__Link__ModelReferenceAssignment_1_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9385:1: ( ( ( ruleQualifiedName ) ) )
-            // InternalXdiagramDsl.g:9386:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:9358:1: ( ( ( ruleQualifiedName ) ) )
+            // InternalXdiagramDsl.g:9359:2: ( ( ruleQualifiedName ) )
             {
-            // InternalXdiagramDsl.g:9386:2: ( ( ruleQualifiedName ) )
-            // InternalXdiagramDsl.g:9387:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:9359:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:9360:3: ( ruleQualifiedName )
             {
              before(grammarAccess.getLinkAccess().getModelReferenceEReferenceCrossReference_1_0_1_0()); 
-            // InternalXdiagramDsl.g:9388:3: ( ruleQualifiedName )
-            // InternalXdiagramDsl.g:9389:4: ruleQualifiedName
+            // InternalXdiagramDsl.g:9361:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:9362:4: ruleQualifiedName
             {
              before(grammarAccess.getLinkAccess().getModelReferenceEReferenceQualifiedNameParserRuleCall_1_0_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -29814,21 +29745,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Link__ComplexAssignment_1_1_0"
-    // InternalXdiagramDsl.g:9400:1: rule__Link__ComplexAssignment_1_1_0 : ( ( 'class' ) ) ;
+    // InternalXdiagramDsl.g:9373:1: rule__Link__ComplexAssignment_1_1_0 : ( ( 'class' ) ) ;
     public final void rule__Link__ComplexAssignment_1_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9404:1: ( ( ( 'class' ) ) )
-            // InternalXdiagramDsl.g:9405:2: ( ( 'class' ) )
+            // InternalXdiagramDsl.g:9377:1: ( ( ( 'class' ) ) )
+            // InternalXdiagramDsl.g:9378:2: ( ( 'class' ) )
             {
-            // InternalXdiagramDsl.g:9405:2: ( ( 'class' ) )
-            // InternalXdiagramDsl.g:9406:3: ( 'class' )
+            // InternalXdiagramDsl.g:9378:2: ( ( 'class' ) )
+            // InternalXdiagramDsl.g:9379:3: ( 'class' )
             {
              before(grammarAccess.getLinkAccess().getComplexClassKeyword_1_1_0_0()); 
-            // InternalXdiagramDsl.g:9407:3: ( 'class' )
-            // InternalXdiagramDsl.g:9408:4: 'class'
+            // InternalXdiagramDsl.g:9380:3: ( 'class' )
+            // InternalXdiagramDsl.g:9381:4: 'class'
             {
              before(grammarAccess.getLinkAccess().getComplexClassKeyword_1_1_0_0()); 
             match(input,84,FOLLOW_2); 
@@ -29859,21 +29790,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Link__ModelClassAssignment_1_1_1"
-    // InternalXdiagramDsl.g:9419:1: rule__Link__ModelClassAssignment_1_1_1 : ( ( ruleQualifiedName ) ) ;
+    // InternalXdiagramDsl.g:9392:1: rule__Link__ModelClassAssignment_1_1_1 : ( ( ruleQualifiedName ) ) ;
     public final void rule__Link__ModelClassAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9423:1: ( ( ( ruleQualifiedName ) ) )
-            // InternalXdiagramDsl.g:9424:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:9396:1: ( ( ( ruleQualifiedName ) ) )
+            // InternalXdiagramDsl.g:9397:2: ( ( ruleQualifiedName ) )
             {
-            // InternalXdiagramDsl.g:9424:2: ( ( ruleQualifiedName ) )
-            // InternalXdiagramDsl.g:9425:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:9397:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:9398:3: ( ruleQualifiedName )
             {
              before(grammarAccess.getLinkAccess().getModelClassEClassCrossReference_1_1_1_0()); 
-            // InternalXdiagramDsl.g:9426:3: ( ruleQualifiedName )
-            // InternalXdiagramDsl.g:9427:4: ruleQualifiedName
+            // InternalXdiagramDsl.g:9399:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:9400:4: ruleQualifiedName
             {
              before(grammarAccess.getLinkAccess().getModelClassEClassQualifiedNameParserRuleCall_1_1_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -29908,21 +29839,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Link__SourceReferenceAssignment_1_1_3"
-    // InternalXdiagramDsl.g:9438:1: rule__Link__SourceReferenceAssignment_1_1_3 : ( ( ruleQualifiedName ) ) ;
+    // InternalXdiagramDsl.g:9411:1: rule__Link__SourceReferenceAssignment_1_1_3 : ( ( ruleQualifiedName ) ) ;
     public final void rule__Link__SourceReferenceAssignment_1_1_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9442:1: ( ( ( ruleQualifiedName ) ) )
-            // InternalXdiagramDsl.g:9443:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:9415:1: ( ( ( ruleQualifiedName ) ) )
+            // InternalXdiagramDsl.g:9416:2: ( ( ruleQualifiedName ) )
             {
-            // InternalXdiagramDsl.g:9443:2: ( ( ruleQualifiedName ) )
-            // InternalXdiagramDsl.g:9444:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:9416:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:9417:3: ( ruleQualifiedName )
             {
              before(grammarAccess.getLinkAccess().getSourceReferenceEReferenceCrossReference_1_1_3_0()); 
-            // InternalXdiagramDsl.g:9445:3: ( ruleQualifiedName )
-            // InternalXdiagramDsl.g:9446:4: ruleQualifiedName
+            // InternalXdiagramDsl.g:9418:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:9419:4: ruleQualifiedName
             {
              before(grammarAccess.getLinkAccess().getSourceReferenceEReferenceQualifiedNameParserRuleCall_1_1_3_0_1()); 
             pushFollow(FOLLOW_2);
@@ -29957,21 +29888,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Link__TargetReferenceAssignment_1_1_5"
-    // InternalXdiagramDsl.g:9457:1: rule__Link__TargetReferenceAssignment_1_1_5 : ( ( ruleQualifiedName ) ) ;
+    // InternalXdiagramDsl.g:9430:1: rule__Link__TargetReferenceAssignment_1_1_5 : ( ( ruleQualifiedName ) ) ;
     public final void rule__Link__TargetReferenceAssignment_1_1_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9461:1: ( ( ( ruleQualifiedName ) ) )
-            // InternalXdiagramDsl.g:9462:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:9434:1: ( ( ( ruleQualifiedName ) ) )
+            // InternalXdiagramDsl.g:9435:2: ( ( ruleQualifiedName ) )
             {
-            // InternalXdiagramDsl.g:9462:2: ( ( ruleQualifiedName ) )
-            // InternalXdiagramDsl.g:9463:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:9435:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:9436:3: ( ruleQualifiedName )
             {
              before(grammarAccess.getLinkAccess().getTargetReferenceEReferenceCrossReference_1_1_5_0()); 
-            // InternalXdiagramDsl.g:9464:3: ( ruleQualifiedName )
-            // InternalXdiagramDsl.g:9465:4: ruleQualifiedName
+            // InternalXdiagramDsl.g:9437:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:9438:4: ruleQualifiedName
             {
              before(grammarAccess.getLinkAccess().getTargetReferenceEReferenceQualifiedNameParserRuleCall_1_1_5_0_1()); 
             pushFollow(FOLLOW_2);
@@ -30006,17 +29937,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Link__FeaturesAssignment_3"
-    // InternalXdiagramDsl.g:9476:1: rule__Link__FeaturesAssignment_3 : ( ruleLinkFeature ) ;
+    // InternalXdiagramDsl.g:9449:1: rule__Link__FeaturesAssignment_3 : ( ruleLinkFeature ) ;
     public final void rule__Link__FeaturesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9480:1: ( ( ruleLinkFeature ) )
-            // InternalXdiagramDsl.g:9481:2: ( ruleLinkFeature )
+            // InternalXdiagramDsl.g:9453:1: ( ( ruleLinkFeature ) )
+            // InternalXdiagramDsl.g:9454:2: ( ruleLinkFeature )
             {
-            // InternalXdiagramDsl.g:9481:2: ( ruleLinkFeature )
-            // InternalXdiagramDsl.g:9482:3: ruleLinkFeature
+            // InternalXdiagramDsl.g:9454:2: ( ruleLinkFeature )
+            // InternalXdiagramDsl.g:9455:3: ruleLinkFeature
             {
              before(grammarAccess.getLinkAccess().getFeaturesLinkFeatureParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -30047,17 +29978,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Link__DecoratorsAssignment_4"
-    // InternalXdiagramDsl.g:9491:1: rule__Link__DecoratorsAssignment_4 : ( ruleDecorator ) ;
+    // InternalXdiagramDsl.g:9464:1: rule__Link__DecoratorsAssignment_4 : ( ruleDecorator ) ;
     public final void rule__Link__DecoratorsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9495:1: ( ( ruleDecorator ) )
-            // InternalXdiagramDsl.g:9496:2: ( ruleDecorator )
+            // InternalXdiagramDsl.g:9468:1: ( ( ruleDecorator ) )
+            // InternalXdiagramDsl.g:9469:2: ( ruleDecorator )
             {
-            // InternalXdiagramDsl.g:9496:2: ( ruleDecorator )
-            // InternalXdiagramDsl.g:9497:3: ruleDecorator
+            // InternalXdiagramDsl.g:9469:2: ( ruleDecorator )
+            // InternalXdiagramDsl.g:9470:3: ruleDecorator
             {
              before(grammarAccess.getLinkAccess().getDecoratorsDecoratorParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -30087,63 +30018,26 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__Link__DecoratorsAssignment_4"
 
 
-    // $ANTLR start "rule__Decorator__PositionAssignment_1"
-    // InternalXdiagramDsl.g:9506:1: rule__Decorator__PositionAssignment_1 : ( RULE_INT ) ;
-    public final void rule__Decorator__PositionAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Decorator__ElementAssignment_1"
+    // InternalXdiagramDsl.g:9479:1: rule__Decorator__ElementAssignment_1 : ( ruleDecoratorElement ) ;
+    public final void rule__Decorator__ElementAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9510:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:9511:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:9483:1: ( ( ruleDecoratorElement ) )
+            // InternalXdiagramDsl.g:9484:2: ( ruleDecoratorElement )
             {
-            // InternalXdiagramDsl.g:9511:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:9512:3: RULE_INT
+            // InternalXdiagramDsl.g:9484:2: ( ruleDecoratorElement )
+            // InternalXdiagramDsl.g:9485:3: ruleDecoratorElement
             {
-             before(grammarAccess.getDecoratorAccess().getPositionINTTerminalRuleCall_1_0()); 
-            match(input,RULE_INT,FOLLOW_2); 
-             after(grammarAccess.getDecoratorAccess().getPositionINTTerminalRuleCall_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Decorator__PositionAssignment_1"
-
-
-    // $ANTLR start "rule__Decorator__ElementAssignment_3"
-    // InternalXdiagramDsl.g:9521:1: rule__Decorator__ElementAssignment_3 : ( ruleDecoratorElement ) ;
-    public final void rule__Decorator__ElementAssignment_3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalXdiagramDsl.g:9525:1: ( ( ruleDecoratorElement ) )
-            // InternalXdiagramDsl.g:9526:2: ( ruleDecoratorElement )
-            {
-            // InternalXdiagramDsl.g:9526:2: ( ruleDecoratorElement )
-            // InternalXdiagramDsl.g:9527:3: ruleDecoratorElement
-            {
-             before(grammarAccess.getDecoratorAccess().getElementDecoratorElementParserRuleCall_3_0()); 
+             before(grammarAccess.getDecoratorAccess().getElementDecoratorElementParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
             ruleDecoratorElement();
 
             state._fsp--;
 
-             after(grammarAccess.getDecoratorAccess().getElementDecoratorElementParserRuleCall_3_0()); 
+             after(grammarAccess.getDecoratorAccess().getElementDecoratorElementParserRuleCall_1_0()); 
 
             }
 
@@ -30162,21 +30056,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Decorator__ElementAssignment_3"
+    // $ANTLR end "rule__Decorator__ElementAssignment_1"
 
 
     // $ANTLR start "rule__Anchor__DirectionAssignment_1"
-    // InternalXdiagramDsl.g:9536:1: rule__Anchor__DirectionAssignment_1 : ( ruleAnchorDirection ) ;
+    // InternalXdiagramDsl.g:9494:1: rule__Anchor__DirectionAssignment_1 : ( ruleAnchorDirection ) ;
     public final void rule__Anchor__DirectionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9540:1: ( ( ruleAnchorDirection ) )
-            // InternalXdiagramDsl.g:9541:2: ( ruleAnchorDirection )
+            // InternalXdiagramDsl.g:9498:1: ( ( ruleAnchorDirection ) )
+            // InternalXdiagramDsl.g:9499:2: ( ruleAnchorDirection )
             {
-            // InternalXdiagramDsl.g:9541:2: ( ruleAnchorDirection )
-            // InternalXdiagramDsl.g:9542:3: ruleAnchorDirection
+            // InternalXdiagramDsl.g:9499:2: ( ruleAnchorDirection )
+            // InternalXdiagramDsl.g:9500:3: ruleAnchorDirection
             {
              before(grammarAccess.getAnchorAccess().getDirectionAnchorDirectionEnumRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -30207,21 +30101,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__ModelReferenceAssignment_2"
-    // InternalXdiagramDsl.g:9551:1: rule__Anchor__ModelReferenceAssignment_2 : ( ( ruleQualifiedName ) ) ;
+    // InternalXdiagramDsl.g:9509:1: rule__Anchor__ModelReferenceAssignment_2 : ( ( ruleQualifiedName ) ) ;
     public final void rule__Anchor__ModelReferenceAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9555:1: ( ( ( ruleQualifiedName ) ) )
-            // InternalXdiagramDsl.g:9556:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:9513:1: ( ( ( ruleQualifiedName ) ) )
+            // InternalXdiagramDsl.g:9514:2: ( ( ruleQualifiedName ) )
             {
-            // InternalXdiagramDsl.g:9556:2: ( ( ruleQualifiedName ) )
-            // InternalXdiagramDsl.g:9557:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:9514:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:9515:3: ( ruleQualifiedName )
             {
              before(grammarAccess.getAnchorAccess().getModelReferenceEReferenceCrossReference_2_0()); 
-            // InternalXdiagramDsl.g:9558:3: ( ruleQualifiedName )
-            // InternalXdiagramDsl.g:9559:4: ruleQualifiedName
+            // InternalXdiagramDsl.g:9516:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:9517:4: ruleQualifiedName
             {
              before(grammarAccess.getAnchorAccess().getModelReferenceEReferenceQualifiedNameParserRuleCall_2_0_1()); 
             pushFollow(FOLLOW_2);
@@ -30256,17 +30150,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__MaxAssignment_3_1"
-    // InternalXdiagramDsl.g:9570:1: rule__Anchor__MaxAssignment_3_1 : ( RULE_INT ) ;
+    // InternalXdiagramDsl.g:9528:1: rule__Anchor__MaxAssignment_3_1 : ( RULE_INT ) ;
     public final void rule__Anchor__MaxAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9574:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:9575:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:9532:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:9533:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:9575:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:9576:3: RULE_INT
+            // InternalXdiagramDsl.g:9533:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:9534:3: RULE_INT
             {
              before(grammarAccess.getAnchorAccess().getMaxINTTerminalRuleCall_3_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -30293,17 +30187,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Anchor__ConditionalAssignment_4"
-    // InternalXdiagramDsl.g:9585:1: rule__Anchor__ConditionalAssignment_4 : ( ruleFeatureConditional ) ;
+    // InternalXdiagramDsl.g:9543:1: rule__Anchor__ConditionalAssignment_4 : ( ruleFeatureConditional ) ;
     public final void rule__Anchor__ConditionalAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9589:1: ( ( ruleFeatureConditional ) )
-            // InternalXdiagramDsl.g:9590:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:9547:1: ( ( ruleFeatureConditional ) )
+            // InternalXdiagramDsl.g:9548:2: ( ruleFeatureConditional )
             {
-            // InternalXdiagramDsl.g:9590:2: ( ruleFeatureConditional )
-            // InternalXdiagramDsl.g:9591:3: ruleFeatureConditional
+            // InternalXdiagramDsl.g:9548:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:9549:3: ruleFeatureConditional
             {
              before(grammarAccess.getAnchorAccess().getConditionalFeatureConditionalParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -30334,17 +30228,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Colors__ColorsAssignment_3"
-    // InternalXdiagramDsl.g:9600:1: rule__Colors__ColorsAssignment_3 : ( ruleCustomColor ) ;
+    // InternalXdiagramDsl.g:9558:1: rule__Colors__ColorsAssignment_3 : ( ruleCustomColor ) ;
     public final void rule__Colors__ColorsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9604:1: ( ( ruleCustomColor ) )
-            // InternalXdiagramDsl.g:9605:2: ( ruleCustomColor )
+            // InternalXdiagramDsl.g:9562:1: ( ( ruleCustomColor ) )
+            // InternalXdiagramDsl.g:9563:2: ( ruleCustomColor )
             {
-            // InternalXdiagramDsl.g:9605:2: ( ruleCustomColor )
-            // InternalXdiagramDsl.g:9606:3: ruleCustomColor
+            // InternalXdiagramDsl.g:9563:2: ( ruleCustomColor )
+            // InternalXdiagramDsl.g:9564:3: ruleCustomColor
             {
              before(grammarAccess.getColorsAccess().getColorsCustomColorParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -30375,17 +30269,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomColor__NameAssignment_0"
-    // InternalXdiagramDsl.g:9615:1: rule__CustomColor__NameAssignment_0 : ( RULE_ID ) ;
+    // InternalXdiagramDsl.g:9573:1: rule__CustomColor__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__CustomColor__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9619:1: ( ( RULE_ID ) )
-            // InternalXdiagramDsl.g:9620:2: ( RULE_ID )
+            // InternalXdiagramDsl.g:9577:1: ( ( RULE_ID ) )
+            // InternalXdiagramDsl.g:9578:2: ( RULE_ID )
             {
-            // InternalXdiagramDsl.g:9620:2: ( RULE_ID )
-            // InternalXdiagramDsl.g:9621:3: RULE_ID
+            // InternalXdiagramDsl.g:9578:2: ( RULE_ID )
+            // InternalXdiagramDsl.g:9579:3: RULE_ID
             {
              before(grammarAccess.getCustomColorAccess().getNameIDTerminalRuleCall_0_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -30412,17 +30306,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomColor__RAssignment_1"
-    // InternalXdiagramDsl.g:9630:1: rule__CustomColor__RAssignment_1 : ( RULE_INT ) ;
+    // InternalXdiagramDsl.g:9588:1: rule__CustomColor__RAssignment_1 : ( RULE_INT ) ;
     public final void rule__CustomColor__RAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9634:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:9635:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:9592:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:9593:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:9635:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:9636:3: RULE_INT
+            // InternalXdiagramDsl.g:9593:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:9594:3: RULE_INT
             {
              before(grammarAccess.getCustomColorAccess().getRINTTerminalRuleCall_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -30449,17 +30343,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomColor__GAssignment_2"
-    // InternalXdiagramDsl.g:9645:1: rule__CustomColor__GAssignment_2 : ( RULE_INT ) ;
+    // InternalXdiagramDsl.g:9603:1: rule__CustomColor__GAssignment_2 : ( RULE_INT ) ;
     public final void rule__CustomColor__GAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9649:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:9650:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:9607:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:9608:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:9650:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:9651:3: RULE_INT
+            // InternalXdiagramDsl.g:9608:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:9609:3: RULE_INT
             {
              before(grammarAccess.getCustomColorAccess().getGINTTerminalRuleCall_2_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -30486,17 +30380,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomColor__BAssignment_3"
-    // InternalXdiagramDsl.g:9660:1: rule__CustomColor__BAssignment_3 : ( RULE_INT ) ;
+    // InternalXdiagramDsl.g:9618:1: rule__CustomColor__BAssignment_3 : ( RULE_INT ) ;
     public final void rule__CustomColor__BAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9664:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:9665:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:9622:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:9623:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:9665:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:9666:3: RULE_INT
+            // InternalXdiagramDsl.g:9623:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:9624:3: RULE_INT
             {
              before(grammarAccess.getCustomColorAccess().getBINTTerminalRuleCall_3_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -30523,17 +30417,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Color__DefaultAssignment_0"
-    // InternalXdiagramDsl.g:9675:1: rule__Color__DefaultAssignment_0 : ( ruleDefaultColor ) ;
+    // InternalXdiagramDsl.g:9633:1: rule__Color__DefaultAssignment_0 : ( ruleDefaultColor ) ;
     public final void rule__Color__DefaultAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9679:1: ( ( ruleDefaultColor ) )
-            // InternalXdiagramDsl.g:9680:2: ( ruleDefaultColor )
+            // InternalXdiagramDsl.g:9637:1: ( ( ruleDefaultColor ) )
+            // InternalXdiagramDsl.g:9638:2: ( ruleDefaultColor )
             {
-            // InternalXdiagramDsl.g:9680:2: ( ruleDefaultColor )
-            // InternalXdiagramDsl.g:9681:3: ruleDefaultColor
+            // InternalXdiagramDsl.g:9638:2: ( ruleDefaultColor )
+            // InternalXdiagramDsl.g:9639:3: ruleDefaultColor
             {
              before(grammarAccess.getColorAccess().getDefaultDefaultColorEnumRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -30564,21 +30458,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Color__CustomAssignment_1"
-    // InternalXdiagramDsl.g:9690:1: rule__Color__CustomAssignment_1 : ( ( RULE_ID ) ) ;
+    // InternalXdiagramDsl.g:9648:1: rule__Color__CustomAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__Color__CustomAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9694:1: ( ( ( RULE_ID ) ) )
-            // InternalXdiagramDsl.g:9695:2: ( ( RULE_ID ) )
+            // InternalXdiagramDsl.g:9652:1: ( ( ( RULE_ID ) ) )
+            // InternalXdiagramDsl.g:9653:2: ( ( RULE_ID ) )
             {
-            // InternalXdiagramDsl.g:9695:2: ( ( RULE_ID ) )
-            // InternalXdiagramDsl.g:9696:3: ( RULE_ID )
+            // InternalXdiagramDsl.g:9653:2: ( ( RULE_ID ) )
+            // InternalXdiagramDsl.g:9654:3: ( RULE_ID )
             {
              before(grammarAccess.getColorAccess().getCustomCustomColorCrossReference_1_0()); 
-            // InternalXdiagramDsl.g:9697:3: ( RULE_ID )
-            // InternalXdiagramDsl.g:9698:4: RULE_ID
+            // InternalXdiagramDsl.g:9655:3: ( RULE_ID )
+            // InternalXdiagramDsl.g:9656:4: RULE_ID
             {
              before(grammarAccess.getColorAccess().getCustomCustomColorIDTerminalRuleCall_1_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -30609,17 +30503,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomFigure__NameAssignment_1"
-    // InternalXdiagramDsl.g:9709:1: rule__CustomFigure__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalXdiagramDsl.g:9667:1: rule__CustomFigure__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__CustomFigure__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9713:1: ( ( RULE_ID ) )
-            // InternalXdiagramDsl.g:9714:2: ( RULE_ID )
+            // InternalXdiagramDsl.g:9671:1: ( ( RULE_ID ) )
+            // InternalXdiagramDsl.g:9672:2: ( RULE_ID )
             {
-            // InternalXdiagramDsl.g:9714:2: ( RULE_ID )
-            // InternalXdiagramDsl.g:9715:3: RULE_ID
+            // InternalXdiagramDsl.g:9672:2: ( RULE_ID )
+            // InternalXdiagramDsl.g:9673:3: RULE_ID
             {
              before(grammarAccess.getCustomFigureAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -30646,17 +30540,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__CustomFigure__ElementAssignment_3"
-    // InternalXdiagramDsl.g:9724:1: rule__CustomFigure__ElementAssignment_3 : ( ruleConnectableElement ) ;
+    // InternalXdiagramDsl.g:9682:1: rule__CustomFigure__ElementAssignment_3 : ( ruleConnectableElement ) ;
     public final void rule__CustomFigure__ElementAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9728:1: ( ( ruleConnectableElement ) )
-            // InternalXdiagramDsl.g:9729:2: ( ruleConnectableElement )
+            // InternalXdiagramDsl.g:9686:1: ( ( ruleConnectableElement ) )
+            // InternalXdiagramDsl.g:9687:2: ( ruleConnectableElement )
             {
-            // InternalXdiagramDsl.g:9729:2: ( ruleConnectableElement )
-            // InternalXdiagramDsl.g:9730:3: ruleConnectableElement
+            // InternalXdiagramDsl.g:9687:2: ( ruleConnectableElement )
+            // InternalXdiagramDsl.g:9688:3: ruleConnectableElement
             {
              before(grammarAccess.getCustomFigureAccess().getElementConnectableElementParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -30687,21 +30581,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__FigureAssignment_1"
-    // InternalXdiagramDsl.g:9739:1: rule__Custom__FigureAssignment_1 : ( ( RULE_ID ) ) ;
+    // InternalXdiagramDsl.g:9697:1: rule__Custom__FigureAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__Custom__FigureAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9743:1: ( ( ( RULE_ID ) ) )
-            // InternalXdiagramDsl.g:9744:2: ( ( RULE_ID ) )
+            // InternalXdiagramDsl.g:9701:1: ( ( ( RULE_ID ) ) )
+            // InternalXdiagramDsl.g:9702:2: ( ( RULE_ID ) )
             {
-            // InternalXdiagramDsl.g:9744:2: ( ( RULE_ID ) )
-            // InternalXdiagramDsl.g:9745:3: ( RULE_ID )
+            // InternalXdiagramDsl.g:9702:2: ( ( RULE_ID ) )
+            // InternalXdiagramDsl.g:9703:3: ( RULE_ID )
             {
              before(grammarAccess.getCustomAccess().getFigureCustomFigureCrossReference_1_0()); 
-            // InternalXdiagramDsl.g:9746:3: ( RULE_ID )
-            // InternalXdiagramDsl.g:9747:4: RULE_ID
+            // InternalXdiagramDsl.g:9704:3: ( RULE_ID )
+            // InternalXdiagramDsl.g:9705:4: RULE_ID
             {
              before(grammarAccess.getCustomAccess().getFigureCustomFigureIDTerminalRuleCall_1_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -30732,17 +30626,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__FeaturesAssignment_3"
-    // InternalXdiagramDsl.g:9758:1: rule__Custom__FeaturesAssignment_3 : ( ruleLinkedFeature ) ;
+    // InternalXdiagramDsl.g:9716:1: rule__Custom__FeaturesAssignment_3 : ( ruleLinkedFeature ) ;
     public final void rule__Custom__FeaturesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9762:1: ( ( ruleLinkedFeature ) )
-            // InternalXdiagramDsl.g:9763:2: ( ruleLinkedFeature )
+            // InternalXdiagramDsl.g:9720:1: ( ( ruleLinkedFeature ) )
+            // InternalXdiagramDsl.g:9721:2: ( ruleLinkedFeature )
             {
-            // InternalXdiagramDsl.g:9763:2: ( ruleLinkedFeature )
-            // InternalXdiagramDsl.g:9764:3: ruleLinkedFeature
+            // InternalXdiagramDsl.g:9721:2: ( ruleLinkedFeature )
+            // InternalXdiagramDsl.g:9722:3: ruleLinkedFeature
             {
              before(grammarAccess.getCustomAccess().getFeaturesLinkedFeatureParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -30773,17 +30667,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Custom__ChildrenAssignment_4_1"
-    // InternalXdiagramDsl.g:9773:1: rule__Custom__ChildrenAssignment_4_1 : ( ruleChildElement ) ;
+    // InternalXdiagramDsl.g:9731:1: rule__Custom__ChildrenAssignment_4_1 : ( ruleChildElement ) ;
     public final void rule__Custom__ChildrenAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9777:1: ( ( ruleChildElement ) )
-            // InternalXdiagramDsl.g:9778:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:9735:1: ( ( ruleChildElement ) )
+            // InternalXdiagramDsl.g:9736:2: ( ruleChildElement )
             {
-            // InternalXdiagramDsl.g:9778:2: ( ruleChildElement )
-            // InternalXdiagramDsl.g:9779:3: ruleChildElement
+            // InternalXdiagramDsl.g:9736:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:9737:3: ruleChildElement
             {
              before(grammarAccess.getCustomAccess().getChildrenChildElementParserRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -30814,21 +30708,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__RectangleAssignment_0_0"
-    // InternalXdiagramDsl.g:9788:1: rule__Rectangle__RectangleAssignment_0_0 : ( ( 'rectangle' ) ) ;
+    // InternalXdiagramDsl.g:9746:1: rule__Rectangle__RectangleAssignment_0_0 : ( ( 'rectangle' ) ) ;
     public final void rule__Rectangle__RectangleAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9792:1: ( ( ( 'rectangle' ) ) )
-            // InternalXdiagramDsl.g:9793:2: ( ( 'rectangle' ) )
+            // InternalXdiagramDsl.g:9750:1: ( ( ( 'rectangle' ) ) )
+            // InternalXdiagramDsl.g:9751:2: ( ( 'rectangle' ) )
             {
-            // InternalXdiagramDsl.g:9793:2: ( ( 'rectangle' ) )
-            // InternalXdiagramDsl.g:9794:3: ( 'rectangle' )
+            // InternalXdiagramDsl.g:9751:2: ( ( 'rectangle' ) )
+            // InternalXdiagramDsl.g:9752:3: ( 'rectangle' )
             {
              before(grammarAccess.getRectangleAccess().getRectangleRectangleKeyword_0_0_0()); 
-            // InternalXdiagramDsl.g:9795:3: ( 'rectangle' )
-            // InternalXdiagramDsl.g:9796:4: 'rectangle'
+            // InternalXdiagramDsl.g:9753:3: ( 'rectangle' )
+            // InternalXdiagramDsl.g:9754:4: 'rectangle'
             {
              before(grammarAccess.getRectangleAccess().getRectangleRectangleKeyword_0_0_0()); 
             match(input,85,FOLLOW_2); 
@@ -30859,21 +30753,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__SquareAssignment_0_1"
-    // InternalXdiagramDsl.g:9807:1: rule__Rectangle__SquareAssignment_0_1 : ( ( 'square' ) ) ;
+    // InternalXdiagramDsl.g:9765:1: rule__Rectangle__SquareAssignment_0_1 : ( ( 'square' ) ) ;
     public final void rule__Rectangle__SquareAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9811:1: ( ( ( 'square' ) ) )
-            // InternalXdiagramDsl.g:9812:2: ( ( 'square' ) )
+            // InternalXdiagramDsl.g:9769:1: ( ( ( 'square' ) ) )
+            // InternalXdiagramDsl.g:9770:2: ( ( 'square' ) )
             {
-            // InternalXdiagramDsl.g:9812:2: ( ( 'square' ) )
-            // InternalXdiagramDsl.g:9813:3: ( 'square' )
+            // InternalXdiagramDsl.g:9770:2: ( ( 'square' ) )
+            // InternalXdiagramDsl.g:9771:3: ( 'square' )
             {
              before(grammarAccess.getRectangleAccess().getSquareSquareKeyword_0_1_0()); 
-            // InternalXdiagramDsl.g:9814:3: ( 'square' )
-            // InternalXdiagramDsl.g:9815:4: 'square'
+            // InternalXdiagramDsl.g:9772:3: ( 'square' )
+            // InternalXdiagramDsl.g:9773:4: 'square'
             {
              before(grammarAccess.getRectangleAccess().getSquareSquareKeyword_0_1_0()); 
             match(input,86,FOLLOW_2); 
@@ -30904,17 +30798,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__FeaturesAssignment_2"
-    // InternalXdiagramDsl.g:9826:1: rule__Rectangle__FeaturesAssignment_2 : ( ruleRectangleFeature ) ;
+    // InternalXdiagramDsl.g:9784:1: rule__Rectangle__FeaturesAssignment_2 : ( ruleRectangleFeature ) ;
     public final void rule__Rectangle__FeaturesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9830:1: ( ( ruleRectangleFeature ) )
-            // InternalXdiagramDsl.g:9831:2: ( ruleRectangleFeature )
+            // InternalXdiagramDsl.g:9788:1: ( ( ruleRectangleFeature ) )
+            // InternalXdiagramDsl.g:9789:2: ( ruleRectangleFeature )
             {
-            // InternalXdiagramDsl.g:9831:2: ( ruleRectangleFeature )
-            // InternalXdiagramDsl.g:9832:3: ruleRectangleFeature
+            // InternalXdiagramDsl.g:9789:2: ( ruleRectangleFeature )
+            // InternalXdiagramDsl.g:9790:3: ruleRectangleFeature
             {
              before(grammarAccess.getRectangleAccess().getFeaturesRectangleFeatureParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -30945,17 +30839,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rectangle__ChildrenAssignment_3_1"
-    // InternalXdiagramDsl.g:9841:1: rule__Rectangle__ChildrenAssignment_3_1 : ( ruleChildElement ) ;
+    // InternalXdiagramDsl.g:9799:1: rule__Rectangle__ChildrenAssignment_3_1 : ( ruleChildElement ) ;
     public final void rule__Rectangle__ChildrenAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9845:1: ( ( ruleChildElement ) )
-            // InternalXdiagramDsl.g:9846:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:9803:1: ( ( ruleChildElement ) )
+            // InternalXdiagramDsl.g:9804:2: ( ruleChildElement )
             {
-            // InternalXdiagramDsl.g:9846:2: ( ruleChildElement )
-            // InternalXdiagramDsl.g:9847:3: ruleChildElement
+            // InternalXdiagramDsl.g:9804:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:9805:3: ruleChildElement
             {
              before(grammarAccess.getRectangleAccess().getChildrenChildElementParserRuleCall_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -30986,17 +30880,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__FeaturesAssignment_3"
-    // InternalXdiagramDsl.g:9856:1: rule__Rhombus__FeaturesAssignment_3 : ( ruleConnectableElementFeature ) ;
+    // InternalXdiagramDsl.g:9814:1: rule__Rhombus__FeaturesAssignment_3 : ( ruleConnectableElementFeature ) ;
     public final void rule__Rhombus__FeaturesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9860:1: ( ( ruleConnectableElementFeature ) )
-            // InternalXdiagramDsl.g:9861:2: ( ruleConnectableElementFeature )
+            // InternalXdiagramDsl.g:9818:1: ( ( ruleConnectableElementFeature ) )
+            // InternalXdiagramDsl.g:9819:2: ( ruleConnectableElementFeature )
             {
-            // InternalXdiagramDsl.g:9861:2: ( ruleConnectableElementFeature )
-            // InternalXdiagramDsl.g:9862:3: ruleConnectableElementFeature
+            // InternalXdiagramDsl.g:9819:2: ( ruleConnectableElementFeature )
+            // InternalXdiagramDsl.g:9820:3: ruleConnectableElementFeature
             {
              before(grammarAccess.getRhombusAccess().getFeaturesConnectableElementFeatureParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -31027,17 +30921,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Rhombus__ChildrenAssignment_4_1"
-    // InternalXdiagramDsl.g:9871:1: rule__Rhombus__ChildrenAssignment_4_1 : ( ruleChildElement ) ;
+    // InternalXdiagramDsl.g:9829:1: rule__Rhombus__ChildrenAssignment_4_1 : ( ruleChildElement ) ;
     public final void rule__Rhombus__ChildrenAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9875:1: ( ( ruleChildElement ) )
-            // InternalXdiagramDsl.g:9876:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:9833:1: ( ( ruleChildElement ) )
+            // InternalXdiagramDsl.g:9834:2: ( ruleChildElement )
             {
-            // InternalXdiagramDsl.g:9876:2: ( ruleChildElement )
-            // InternalXdiagramDsl.g:9877:3: ruleChildElement
+            // InternalXdiagramDsl.g:9834:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:9835:3: ruleChildElement
             {
              before(grammarAccess.getRhombusAccess().getChildrenChildElementParserRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -31068,21 +30962,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__EllipseAssignment_0_0"
-    // InternalXdiagramDsl.g:9886:1: rule__Ellipse__EllipseAssignment_0_0 : ( ( 'ellipse' ) ) ;
+    // InternalXdiagramDsl.g:9844:1: rule__Ellipse__EllipseAssignment_0_0 : ( ( 'ellipse' ) ) ;
     public final void rule__Ellipse__EllipseAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9890:1: ( ( ( 'ellipse' ) ) )
-            // InternalXdiagramDsl.g:9891:2: ( ( 'ellipse' ) )
+            // InternalXdiagramDsl.g:9848:1: ( ( ( 'ellipse' ) ) )
+            // InternalXdiagramDsl.g:9849:2: ( ( 'ellipse' ) )
             {
-            // InternalXdiagramDsl.g:9891:2: ( ( 'ellipse' ) )
-            // InternalXdiagramDsl.g:9892:3: ( 'ellipse' )
+            // InternalXdiagramDsl.g:9849:2: ( ( 'ellipse' ) )
+            // InternalXdiagramDsl.g:9850:3: ( 'ellipse' )
             {
              before(grammarAccess.getEllipseAccess().getEllipseEllipseKeyword_0_0_0()); 
-            // InternalXdiagramDsl.g:9893:3: ( 'ellipse' )
-            // InternalXdiagramDsl.g:9894:4: 'ellipse'
+            // InternalXdiagramDsl.g:9851:3: ( 'ellipse' )
+            // InternalXdiagramDsl.g:9852:4: 'ellipse'
             {
              before(grammarAccess.getEllipseAccess().getEllipseEllipseKeyword_0_0_0()); 
             match(input,87,FOLLOW_2); 
@@ -31113,21 +31007,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__CircleAssignment_0_1"
-    // InternalXdiagramDsl.g:9905:1: rule__Ellipse__CircleAssignment_0_1 : ( ( 'circle' ) ) ;
+    // InternalXdiagramDsl.g:9863:1: rule__Ellipse__CircleAssignment_0_1 : ( ( 'circle' ) ) ;
     public final void rule__Ellipse__CircleAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9909:1: ( ( ( 'circle' ) ) )
-            // InternalXdiagramDsl.g:9910:2: ( ( 'circle' ) )
+            // InternalXdiagramDsl.g:9867:1: ( ( ( 'circle' ) ) )
+            // InternalXdiagramDsl.g:9868:2: ( ( 'circle' ) )
             {
-            // InternalXdiagramDsl.g:9910:2: ( ( 'circle' ) )
-            // InternalXdiagramDsl.g:9911:3: ( 'circle' )
+            // InternalXdiagramDsl.g:9868:2: ( ( 'circle' ) )
+            // InternalXdiagramDsl.g:9869:3: ( 'circle' )
             {
              before(grammarAccess.getEllipseAccess().getCircleCircleKeyword_0_1_0()); 
-            // InternalXdiagramDsl.g:9912:3: ( 'circle' )
-            // InternalXdiagramDsl.g:9913:4: 'circle'
+            // InternalXdiagramDsl.g:9870:3: ( 'circle' )
+            // InternalXdiagramDsl.g:9871:4: 'circle'
             {
              before(grammarAccess.getEllipseAccess().getCircleCircleKeyword_0_1_0()); 
             match(input,88,FOLLOW_2); 
@@ -31158,17 +31052,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__FeaturesAssignment_2"
-    // InternalXdiagramDsl.g:9924:1: rule__Ellipse__FeaturesAssignment_2 : ( ruleConnectableElementFeature ) ;
+    // InternalXdiagramDsl.g:9882:1: rule__Ellipse__FeaturesAssignment_2 : ( ruleConnectableElementFeature ) ;
     public final void rule__Ellipse__FeaturesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9928:1: ( ( ruleConnectableElementFeature ) )
-            // InternalXdiagramDsl.g:9929:2: ( ruleConnectableElementFeature )
+            // InternalXdiagramDsl.g:9886:1: ( ( ruleConnectableElementFeature ) )
+            // InternalXdiagramDsl.g:9887:2: ( ruleConnectableElementFeature )
             {
-            // InternalXdiagramDsl.g:9929:2: ( ruleConnectableElementFeature )
-            // InternalXdiagramDsl.g:9930:3: ruleConnectableElementFeature
+            // InternalXdiagramDsl.g:9887:2: ( ruleConnectableElementFeature )
+            // InternalXdiagramDsl.g:9888:3: ruleConnectableElementFeature
             {
              before(grammarAccess.getEllipseAccess().getFeaturesConnectableElementFeatureParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -31199,17 +31093,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Ellipse__ChildrenAssignment_3_1"
-    // InternalXdiagramDsl.g:9939:1: rule__Ellipse__ChildrenAssignment_3_1 : ( ruleChildElement ) ;
+    // InternalXdiagramDsl.g:9897:1: rule__Ellipse__ChildrenAssignment_3_1 : ( ruleChildElement ) ;
     public final void rule__Ellipse__ChildrenAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9943:1: ( ( ruleChildElement ) )
-            // InternalXdiagramDsl.g:9944:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:9901:1: ( ( ruleChildElement ) )
+            // InternalXdiagramDsl.g:9902:2: ( ruleChildElement )
             {
-            // InternalXdiagramDsl.g:9944:2: ( ruleChildElement )
-            // InternalXdiagramDsl.g:9945:3: ruleChildElement
+            // InternalXdiagramDsl.g:9902:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:9903:3: ruleChildElement
             {
              before(grammarAccess.getEllipseAccess().getChildrenChildElementParserRuleCall_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -31240,21 +31134,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__PolygonAssignment_0_0"
-    // InternalXdiagramDsl.g:9954:1: rule__Polyline__PolygonAssignment_0_0 : ( ( 'polygon' ) ) ;
+    // InternalXdiagramDsl.g:9912:1: rule__Polyline__PolygonAssignment_0_0 : ( ( 'polygon' ) ) ;
     public final void rule__Polyline__PolygonAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9958:1: ( ( ( 'polygon' ) ) )
-            // InternalXdiagramDsl.g:9959:2: ( ( 'polygon' ) )
+            // InternalXdiagramDsl.g:9916:1: ( ( ( 'polygon' ) ) )
+            // InternalXdiagramDsl.g:9917:2: ( ( 'polygon' ) )
             {
-            // InternalXdiagramDsl.g:9959:2: ( ( 'polygon' ) )
-            // InternalXdiagramDsl.g:9960:3: ( 'polygon' )
+            // InternalXdiagramDsl.g:9917:2: ( ( 'polygon' ) )
+            // InternalXdiagramDsl.g:9918:3: ( 'polygon' )
             {
              before(grammarAccess.getPolylineAccess().getPolygonPolygonKeyword_0_0_0()); 
-            // InternalXdiagramDsl.g:9961:3: ( 'polygon' )
-            // InternalXdiagramDsl.g:9962:4: 'polygon'
+            // InternalXdiagramDsl.g:9919:3: ( 'polygon' )
+            // InternalXdiagramDsl.g:9920:4: 'polygon'
             {
              before(grammarAccess.getPolylineAccess().getPolygonPolygonKeyword_0_0_0()); 
             match(input,89,FOLLOW_2); 
@@ -31285,21 +31179,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__PolylineAssignment_0_1"
-    // InternalXdiagramDsl.g:9973:1: rule__Polyline__PolylineAssignment_0_1 : ( ( 'polyline' ) ) ;
+    // InternalXdiagramDsl.g:9931:1: rule__Polyline__PolylineAssignment_0_1 : ( ( 'polyline' ) ) ;
     public final void rule__Polyline__PolylineAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9977:1: ( ( ( 'polyline' ) ) )
-            // InternalXdiagramDsl.g:9978:2: ( ( 'polyline' ) )
+            // InternalXdiagramDsl.g:9935:1: ( ( ( 'polyline' ) ) )
+            // InternalXdiagramDsl.g:9936:2: ( ( 'polyline' ) )
             {
-            // InternalXdiagramDsl.g:9978:2: ( ( 'polyline' ) )
-            // InternalXdiagramDsl.g:9979:3: ( 'polyline' )
+            // InternalXdiagramDsl.g:9936:2: ( ( 'polyline' ) )
+            // InternalXdiagramDsl.g:9937:3: ( 'polyline' )
             {
              before(grammarAccess.getPolylineAccess().getPolylinePolylineKeyword_0_1_0()); 
-            // InternalXdiagramDsl.g:9980:3: ( 'polyline' )
-            // InternalXdiagramDsl.g:9981:4: 'polyline'
+            // InternalXdiagramDsl.g:9938:3: ( 'polyline' )
+            // InternalXdiagramDsl.g:9939:4: 'polyline'
             {
              before(grammarAccess.getPolylineAccess().getPolylinePolylineKeyword_0_1_0()); 
             match(input,90,FOLLOW_2); 
@@ -31330,17 +31224,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__FeaturesAssignment_2"
-    // InternalXdiagramDsl.g:9992:1: rule__Polyline__FeaturesAssignment_2 : ( rulePoint ) ;
+    // InternalXdiagramDsl.g:9950:1: rule__Polyline__FeaturesAssignment_2 : ( rulePoint ) ;
     public final void rule__Polyline__FeaturesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:9996:1: ( ( rulePoint ) )
-            // InternalXdiagramDsl.g:9997:2: ( rulePoint )
+            // InternalXdiagramDsl.g:9954:1: ( ( rulePoint ) )
+            // InternalXdiagramDsl.g:9955:2: ( rulePoint )
             {
-            // InternalXdiagramDsl.g:9997:2: ( rulePoint )
-            // InternalXdiagramDsl.g:9998:3: rulePoint
+            // InternalXdiagramDsl.g:9955:2: ( rulePoint )
+            // InternalXdiagramDsl.g:9956:3: rulePoint
             {
              before(grammarAccess.getPolylineAccess().getFeaturesPointParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -31371,17 +31265,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__FeaturesAssignment_3"
-    // InternalXdiagramDsl.g:10007:1: rule__Polyline__FeaturesAssignment_3 : ( rulePoint ) ;
+    // InternalXdiagramDsl.g:9965:1: rule__Polyline__FeaturesAssignment_3 : ( rulePoint ) ;
     public final void rule__Polyline__FeaturesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10011:1: ( ( rulePoint ) )
-            // InternalXdiagramDsl.g:10012:2: ( rulePoint )
+            // InternalXdiagramDsl.g:9969:1: ( ( rulePoint ) )
+            // InternalXdiagramDsl.g:9970:2: ( rulePoint )
             {
-            // InternalXdiagramDsl.g:10012:2: ( rulePoint )
-            // InternalXdiagramDsl.g:10013:3: rulePoint
+            // InternalXdiagramDsl.g:9970:2: ( rulePoint )
+            // InternalXdiagramDsl.g:9971:3: rulePoint
             {
              before(grammarAccess.getPolylineAccess().getFeaturesPointParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -31412,17 +31306,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__FeaturesAssignment_4"
-    // InternalXdiagramDsl.g:10022:1: rule__Polyline__FeaturesAssignment_4 : ( rulePoint ) ;
+    // InternalXdiagramDsl.g:9980:1: rule__Polyline__FeaturesAssignment_4 : ( rulePoint ) ;
     public final void rule__Polyline__FeaturesAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10026:1: ( ( rulePoint ) )
-            // InternalXdiagramDsl.g:10027:2: ( rulePoint )
+            // InternalXdiagramDsl.g:9984:1: ( ( rulePoint ) )
+            // InternalXdiagramDsl.g:9985:2: ( rulePoint )
             {
-            // InternalXdiagramDsl.g:10027:2: ( rulePoint )
-            // InternalXdiagramDsl.g:10028:3: rulePoint
+            // InternalXdiagramDsl.g:9985:2: ( rulePoint )
+            // InternalXdiagramDsl.g:9986:3: rulePoint
             {
              before(grammarAccess.getPolylineAccess().getFeaturesPointParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -31453,17 +31347,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__FeaturesAssignment_5"
-    // InternalXdiagramDsl.g:10037:1: rule__Polyline__FeaturesAssignment_5 : ( ruleConnectableElementFeature ) ;
+    // InternalXdiagramDsl.g:9995:1: rule__Polyline__FeaturesAssignment_5 : ( ruleConnectableElementFeature ) ;
     public final void rule__Polyline__FeaturesAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10041:1: ( ( ruleConnectableElementFeature ) )
-            // InternalXdiagramDsl.g:10042:2: ( ruleConnectableElementFeature )
+            // InternalXdiagramDsl.g:9999:1: ( ( ruleConnectableElementFeature ) )
+            // InternalXdiagramDsl.g:10000:2: ( ruleConnectableElementFeature )
             {
-            // InternalXdiagramDsl.g:10042:2: ( ruleConnectableElementFeature )
-            // InternalXdiagramDsl.g:10043:3: ruleConnectableElementFeature
+            // InternalXdiagramDsl.g:10000:2: ( ruleConnectableElementFeature )
+            // InternalXdiagramDsl.g:10001:3: ruleConnectableElementFeature
             {
              before(grammarAccess.getPolylineAccess().getFeaturesConnectableElementFeatureParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
@@ -31494,17 +31388,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Polyline__ChildrenAssignment_6_1"
-    // InternalXdiagramDsl.g:10052:1: rule__Polyline__ChildrenAssignment_6_1 : ( ruleChildElement ) ;
+    // InternalXdiagramDsl.g:10010:1: rule__Polyline__ChildrenAssignment_6_1 : ( ruleChildElement ) ;
     public final void rule__Polyline__ChildrenAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10056:1: ( ( ruleChildElement ) )
-            // InternalXdiagramDsl.g:10057:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:10014:1: ( ( ruleChildElement ) )
+            // InternalXdiagramDsl.g:10015:2: ( ruleChildElement )
             {
-            // InternalXdiagramDsl.g:10057:2: ( ruleChildElement )
-            // InternalXdiagramDsl.g:10058:3: ruleChildElement
+            // InternalXdiagramDsl.g:10015:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:10016:3: ruleChildElement
             {
              before(grammarAccess.getPolylineAccess().getChildrenChildElementParserRuleCall_6_1_0()); 
             pushFollow(FOLLOW_2);
@@ -31535,17 +31429,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__FeaturesAssignment_3"
-    // InternalXdiagramDsl.g:10067:1: rule__Triangle__FeaturesAssignment_3 : ( ruleConnectableElementFeature ) ;
+    // InternalXdiagramDsl.g:10025:1: rule__Triangle__FeaturesAssignment_3 : ( ruleConnectableElementFeature ) ;
     public final void rule__Triangle__FeaturesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10071:1: ( ( ruleConnectableElementFeature ) )
-            // InternalXdiagramDsl.g:10072:2: ( ruleConnectableElementFeature )
+            // InternalXdiagramDsl.g:10029:1: ( ( ruleConnectableElementFeature ) )
+            // InternalXdiagramDsl.g:10030:2: ( ruleConnectableElementFeature )
             {
-            // InternalXdiagramDsl.g:10072:2: ( ruleConnectableElementFeature )
-            // InternalXdiagramDsl.g:10073:3: ruleConnectableElementFeature
+            // InternalXdiagramDsl.g:10030:2: ( ruleConnectableElementFeature )
+            // InternalXdiagramDsl.g:10031:3: ruleConnectableElementFeature
             {
              before(grammarAccess.getTriangleAccess().getFeaturesConnectableElementFeatureParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -31576,17 +31470,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Triangle__ChildrenAssignment_4_1"
-    // InternalXdiagramDsl.g:10082:1: rule__Triangle__ChildrenAssignment_4_1 : ( ruleChildElement ) ;
+    // InternalXdiagramDsl.g:10040:1: rule__Triangle__ChildrenAssignment_4_1 : ( ruleChildElement ) ;
     public final void rule__Triangle__ChildrenAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10086:1: ( ( ruleChildElement ) )
-            // InternalXdiagramDsl.g:10087:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:10044:1: ( ( ruleChildElement ) )
+            // InternalXdiagramDsl.g:10045:2: ( ruleChildElement )
             {
-            // InternalXdiagramDsl.g:10087:2: ( ruleChildElement )
-            // InternalXdiagramDsl.g:10088:3: ruleChildElement
+            // InternalXdiagramDsl.g:10045:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:10046:3: ruleChildElement
             {
              before(grammarAccess.getTriangleAccess().getChildrenChildElementParserRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -31617,21 +31511,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Line__HorizontalAssignment_1_0"
-    // InternalXdiagramDsl.g:10097:1: rule__Line__HorizontalAssignment_1_0 : ( ( 'hline' ) ) ;
+    // InternalXdiagramDsl.g:10055:1: rule__Line__HorizontalAssignment_1_0 : ( ( 'hline' ) ) ;
     public final void rule__Line__HorizontalAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10101:1: ( ( ( 'hline' ) ) )
-            // InternalXdiagramDsl.g:10102:2: ( ( 'hline' ) )
+            // InternalXdiagramDsl.g:10059:1: ( ( ( 'hline' ) ) )
+            // InternalXdiagramDsl.g:10060:2: ( ( 'hline' ) )
             {
-            // InternalXdiagramDsl.g:10102:2: ( ( 'hline' ) )
-            // InternalXdiagramDsl.g:10103:3: ( 'hline' )
+            // InternalXdiagramDsl.g:10060:2: ( ( 'hline' ) )
+            // InternalXdiagramDsl.g:10061:3: ( 'hline' )
             {
              before(grammarAccess.getLineAccess().getHorizontalHlineKeyword_1_0_0()); 
-            // InternalXdiagramDsl.g:10104:3: ( 'hline' )
-            // InternalXdiagramDsl.g:10105:4: 'hline'
+            // InternalXdiagramDsl.g:10062:3: ( 'hline' )
+            // InternalXdiagramDsl.g:10063:4: 'hline'
             {
              before(grammarAccess.getLineAccess().getHorizontalHlineKeyword_1_0_0()); 
             match(input,91,FOLLOW_2); 
@@ -31662,21 +31556,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Line__VerticalAssignment_1_1"
-    // InternalXdiagramDsl.g:10116:1: rule__Line__VerticalAssignment_1_1 : ( ( 'vline' ) ) ;
+    // InternalXdiagramDsl.g:10074:1: rule__Line__VerticalAssignment_1_1 : ( ( 'vline' ) ) ;
     public final void rule__Line__VerticalAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10120:1: ( ( ( 'vline' ) ) )
-            // InternalXdiagramDsl.g:10121:2: ( ( 'vline' ) )
+            // InternalXdiagramDsl.g:10078:1: ( ( ( 'vline' ) ) )
+            // InternalXdiagramDsl.g:10079:2: ( ( 'vline' ) )
             {
-            // InternalXdiagramDsl.g:10121:2: ( ( 'vline' ) )
-            // InternalXdiagramDsl.g:10122:3: ( 'vline' )
+            // InternalXdiagramDsl.g:10079:2: ( ( 'vline' ) )
+            // InternalXdiagramDsl.g:10080:3: ( 'vline' )
             {
              before(grammarAccess.getLineAccess().getVerticalVlineKeyword_1_1_0()); 
-            // InternalXdiagramDsl.g:10123:3: ( 'vline' )
-            // InternalXdiagramDsl.g:10124:4: 'vline'
+            // InternalXdiagramDsl.g:10081:3: ( 'vline' )
+            // InternalXdiagramDsl.g:10082:4: 'vline'
             {
              before(grammarAccess.getLineAccess().getVerticalVlineKeyword_1_1_0()); 
             match(input,92,FOLLOW_2); 
@@ -31707,17 +31601,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Line__FeaturesAssignment_3"
-    // InternalXdiagramDsl.g:10135:1: rule__Line__FeaturesAssignment_3 : ( ruleLineFeature ) ;
+    // InternalXdiagramDsl.g:10093:1: rule__Line__FeaturesAssignment_3 : ( ruleLineFeature ) ;
     public final void rule__Line__FeaturesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10139:1: ( ( ruleLineFeature ) )
-            // InternalXdiagramDsl.g:10140:2: ( ruleLineFeature )
+            // InternalXdiagramDsl.g:10097:1: ( ( ruleLineFeature ) )
+            // InternalXdiagramDsl.g:10098:2: ( ruleLineFeature )
             {
-            // InternalXdiagramDsl.g:10140:2: ( ruleLineFeature )
-            // InternalXdiagramDsl.g:10141:3: ruleLineFeature
+            // InternalXdiagramDsl.g:10098:2: ( ruleLineFeature )
+            // InternalXdiagramDsl.g:10099:3: ruleLineFeature
             {
              before(grammarAccess.getLineAccess().getFeaturesLineFeatureParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -31748,17 +31642,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Arrow__FeaturesAssignment_3"
-    // InternalXdiagramDsl.g:10150:1: rule__Arrow__FeaturesAssignment_3 : ( ruleLineFeature ) ;
+    // InternalXdiagramDsl.g:10108:1: rule__Arrow__FeaturesAssignment_3 : ( ruleLineFeature ) ;
     public final void rule__Arrow__FeaturesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10154:1: ( ( ruleLineFeature ) )
-            // InternalXdiagramDsl.g:10155:2: ( ruleLineFeature )
+            // InternalXdiagramDsl.g:10112:1: ( ( ruleLineFeature ) )
+            // InternalXdiagramDsl.g:10113:2: ( ruleLineFeature )
             {
-            // InternalXdiagramDsl.g:10155:2: ( ruleLineFeature )
-            // InternalXdiagramDsl.g:10156:3: ruleLineFeature
+            // InternalXdiagramDsl.g:10113:2: ( ruleLineFeature )
+            // InternalXdiagramDsl.g:10114:3: ruleLineFeature
             {
              before(grammarAccess.getArrowAccess().getFeaturesLineFeatureParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -31789,21 +31683,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Contains__ModelReferenceAssignment_1"
-    // InternalXdiagramDsl.g:10165:1: rule__Contains__ModelReferenceAssignment_1 : ( ( ruleQualifiedName ) ) ;
+    // InternalXdiagramDsl.g:10123:1: rule__Contains__ModelReferenceAssignment_1 : ( ( ruleQualifiedName ) ) ;
     public final void rule__Contains__ModelReferenceAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10169:1: ( ( ( ruleQualifiedName ) ) )
-            // InternalXdiagramDsl.g:10170:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:10127:1: ( ( ( ruleQualifiedName ) ) )
+            // InternalXdiagramDsl.g:10128:2: ( ( ruleQualifiedName ) )
             {
-            // InternalXdiagramDsl.g:10170:2: ( ( ruleQualifiedName ) )
-            // InternalXdiagramDsl.g:10171:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:10128:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:10129:3: ( ruleQualifiedName )
             {
              before(grammarAccess.getContainsAccess().getModelReferenceEReferenceCrossReference_1_0()); 
-            // InternalXdiagramDsl.g:10172:3: ( ruleQualifiedName )
-            // InternalXdiagramDsl.g:10173:4: ruleQualifiedName
+            // InternalXdiagramDsl.g:10130:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:10131:4: ruleQualifiedName
             {
              before(grammarAccess.getContainsAccess().getModelReferenceEReferenceQualifiedNameParserRuleCall_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -31838,17 +31732,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Contains__ConditionalAssignment_2"
-    // InternalXdiagramDsl.g:10184:1: rule__Contains__ConditionalAssignment_2 : ( ruleFeatureConditional ) ;
+    // InternalXdiagramDsl.g:10142:1: rule__Contains__ConditionalAssignment_2 : ( ruleFeatureConditional ) ;
     public final void rule__Contains__ConditionalAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10188:1: ( ( ruleFeatureConditional ) )
-            // InternalXdiagramDsl.g:10189:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10146:1: ( ( ruleFeatureConditional ) )
+            // InternalXdiagramDsl.g:10147:2: ( ruleFeatureConditional )
             {
-            // InternalXdiagramDsl.g:10189:2: ( ruleFeatureConditional )
-            // InternalXdiagramDsl.g:10190:3: ruleFeatureConditional
+            // InternalXdiagramDsl.g:10147:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10148:3: ruleFeatureConditional
             {
              before(grammarAccess.getContainsAccess().getConditionalFeatureConditionalParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -31879,17 +31773,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__IntValue__ValueAssignment"
-    // InternalXdiagramDsl.g:10199:1: rule__IntValue__ValueAssignment : ( RULE_INT ) ;
+    // InternalXdiagramDsl.g:10157:1: rule__IntValue__ValueAssignment : ( RULE_INT ) ;
     public final void rule__IntValue__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10203:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:10204:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10161:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:10162:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:10204:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:10205:3: RULE_INT
+            // InternalXdiagramDsl.g:10162:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10163:3: RULE_INT
             {
              before(grammarAccess.getIntValueAccess().getValueINTTerminalRuleCall_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -31916,17 +31810,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__DoubleValue__ValueIntAssignment_0"
-    // InternalXdiagramDsl.g:10214:1: rule__DoubleValue__ValueIntAssignment_0 : ( RULE_INT ) ;
+    // InternalXdiagramDsl.g:10172:1: rule__DoubleValue__ValueIntAssignment_0 : ( RULE_INT ) ;
     public final void rule__DoubleValue__ValueIntAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10218:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:10219:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10176:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:10177:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:10219:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:10220:3: RULE_INT
+            // InternalXdiagramDsl.g:10177:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10178:3: RULE_INT
             {
              before(grammarAccess.getDoubleValueAccess().getValueIntINTTerminalRuleCall_0_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -31953,17 +31847,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__DoubleValue__ValueDecimalAssignment_2"
-    // InternalXdiagramDsl.g:10229:1: rule__DoubleValue__ValueDecimalAssignment_2 : ( RULE_INT ) ;
+    // InternalXdiagramDsl.g:10187:1: rule__DoubleValue__ValueDecimalAssignment_2 : ( RULE_INT ) ;
     public final void rule__DoubleValue__ValueDecimalAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10233:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:10234:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10191:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:10192:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:10234:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:10235:3: RULE_INT
+            // InternalXdiagramDsl.g:10192:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10193:3: RULE_INT
             {
              before(grammarAccess.getDoubleValueAccess().getValueDecimalINTTerminalRuleCall_2_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -31990,21 +31884,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__StringValue__NullAssignment_0"
-    // InternalXdiagramDsl.g:10244:1: rule__StringValue__NullAssignment_0 : ( ( 'null' ) ) ;
+    // InternalXdiagramDsl.g:10202:1: rule__StringValue__NullAssignment_0 : ( ( 'null' ) ) ;
     public final void rule__StringValue__NullAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10248:1: ( ( ( 'null' ) ) )
-            // InternalXdiagramDsl.g:10249:2: ( ( 'null' ) )
+            // InternalXdiagramDsl.g:10206:1: ( ( ( 'null' ) ) )
+            // InternalXdiagramDsl.g:10207:2: ( ( 'null' ) )
             {
-            // InternalXdiagramDsl.g:10249:2: ( ( 'null' ) )
-            // InternalXdiagramDsl.g:10250:3: ( 'null' )
+            // InternalXdiagramDsl.g:10207:2: ( ( 'null' ) )
+            // InternalXdiagramDsl.g:10208:3: ( 'null' )
             {
              before(grammarAccess.getStringValueAccess().getNullNullKeyword_0_0()); 
-            // InternalXdiagramDsl.g:10251:3: ( 'null' )
-            // InternalXdiagramDsl.g:10252:4: 'null'
+            // InternalXdiagramDsl.g:10209:3: ( 'null' )
+            // InternalXdiagramDsl.g:10210:4: 'null'
             {
              before(grammarAccess.getStringValueAccess().getNullNullKeyword_0_0()); 
             match(input,93,FOLLOW_2); 
@@ -32035,17 +31929,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__StringValue__ValueAssignment_1"
-    // InternalXdiagramDsl.g:10263:1: rule__StringValue__ValueAssignment_1 : ( RULE_STRING ) ;
+    // InternalXdiagramDsl.g:10221:1: rule__StringValue__ValueAssignment_1 : ( RULE_STRING ) ;
     public final void rule__StringValue__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10267:1: ( ( RULE_STRING ) )
-            // InternalXdiagramDsl.g:10268:2: ( RULE_STRING )
+            // InternalXdiagramDsl.g:10225:1: ( ( RULE_STRING ) )
+            // InternalXdiagramDsl.g:10226:2: ( RULE_STRING )
             {
-            // InternalXdiagramDsl.g:10268:2: ( RULE_STRING )
-            // InternalXdiagramDsl.g:10269:3: RULE_STRING
+            // InternalXdiagramDsl.g:10226:2: ( RULE_STRING )
+            // InternalXdiagramDsl.g:10227:3: RULE_STRING
             {
              before(grammarAccess.getStringValueAccess().getValueSTRINGTerminalRuleCall_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -32072,17 +31966,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BooleanValue__ValueAssignment"
-    // InternalXdiagramDsl.g:10278:1: rule__BooleanValue__ValueAssignment : ( ruleBooleanLiteral ) ;
+    // InternalXdiagramDsl.g:10236:1: rule__BooleanValue__ValueAssignment : ( ruleBooleanLiteral ) ;
     public final void rule__BooleanValue__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10282:1: ( ( ruleBooleanLiteral ) )
-            // InternalXdiagramDsl.g:10283:2: ( ruleBooleanLiteral )
+            // InternalXdiagramDsl.g:10240:1: ( ( ruleBooleanLiteral ) )
+            // InternalXdiagramDsl.g:10241:2: ( ruleBooleanLiteral )
             {
-            // InternalXdiagramDsl.g:10283:2: ( ruleBooleanLiteral )
-            // InternalXdiagramDsl.g:10284:3: ruleBooleanLiteral
+            // InternalXdiagramDsl.g:10241:2: ( ruleBooleanLiteral )
+            // InternalXdiagramDsl.g:10242:3: ruleBooleanLiteral
             {
              before(grammarAccess.getBooleanValueAccess().getValueBooleanLiteralEnumRuleCall_0()); 
             pushFollow(FOLLOW_2);
@@ -32113,17 +32007,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__EnumValue__NameAssignment"
-    // InternalXdiagramDsl.g:10293:1: rule__EnumValue__NameAssignment : ( RULE_ID ) ;
+    // InternalXdiagramDsl.g:10251:1: rule__EnumValue__NameAssignment : ( RULE_ID ) ;
     public final void rule__EnumValue__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10297:1: ( ( RULE_ID ) )
-            // InternalXdiagramDsl.g:10298:2: ( RULE_ID )
+            // InternalXdiagramDsl.g:10255:1: ( ( RULE_ID ) )
+            // InternalXdiagramDsl.g:10256:2: ( RULE_ID )
             {
-            // InternalXdiagramDsl.g:10298:2: ( RULE_ID )
-            // InternalXdiagramDsl.g:10299:3: RULE_ID
+            // InternalXdiagramDsl.g:10256:2: ( RULE_ID )
+            // InternalXdiagramDsl.g:10257:3: RULE_ID
             {
              before(grammarAccess.getEnumValueAccess().getNameIDTerminalRuleCall_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -32150,17 +32044,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__FeaturesAssignment_3"
-    // InternalXdiagramDsl.g:10308:1: rule__Label__FeaturesAssignment_3 : ( ruleLabelFeature ) ;
+    // InternalXdiagramDsl.g:10266:1: rule__Label__FeaturesAssignment_3 : ( ruleLabelFeature ) ;
     public final void rule__Label__FeaturesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10312:1: ( ( ruleLabelFeature ) )
-            // InternalXdiagramDsl.g:10313:2: ( ruleLabelFeature )
+            // InternalXdiagramDsl.g:10270:1: ( ( ruleLabelFeature ) )
+            // InternalXdiagramDsl.g:10271:2: ( ruleLabelFeature )
             {
-            // InternalXdiagramDsl.g:10313:2: ( ruleLabelFeature )
-            // InternalXdiagramDsl.g:10314:3: ruleLabelFeature
+            // InternalXdiagramDsl.g:10271:2: ( ruleLabelFeature )
+            // InternalXdiagramDsl.g:10272:3: ruleLabelFeature
             {
              before(grammarAccess.getLabelAccess().getFeaturesLabelFeatureParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -32191,17 +32085,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Label__ChildrenAssignment_4_1"
-    // InternalXdiagramDsl.g:10323:1: rule__Label__ChildrenAssignment_4_1 : ( ruleChildElement ) ;
+    // InternalXdiagramDsl.g:10281:1: rule__Label__ChildrenAssignment_4_1 : ( ruleChildElement ) ;
     public final void rule__Label__ChildrenAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10327:1: ( ( ruleChildElement ) )
-            // InternalXdiagramDsl.g:10328:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:10285:1: ( ( ruleChildElement ) )
+            // InternalXdiagramDsl.g:10286:2: ( ruleChildElement )
             {
-            // InternalXdiagramDsl.g:10328:2: ( ruleChildElement )
-            // InternalXdiagramDsl.g:10329:3: ruleChildElement
+            // InternalXdiagramDsl.g:10286:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:10287:3: ruleChildElement
             {
              before(grammarAccess.getLabelAccess().getChildrenChildElementParserRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -32232,17 +32126,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__ImageIdAssignment_1"
-    // InternalXdiagramDsl.g:10338:1: rule__Image__ImageIdAssignment_1 : ( RULE_STRING ) ;
+    // InternalXdiagramDsl.g:10296:1: rule__Image__ImageIdAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Image__ImageIdAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10342:1: ( ( RULE_STRING ) )
-            // InternalXdiagramDsl.g:10343:2: ( RULE_STRING )
+            // InternalXdiagramDsl.g:10300:1: ( ( RULE_STRING ) )
+            // InternalXdiagramDsl.g:10301:2: ( RULE_STRING )
             {
-            // InternalXdiagramDsl.g:10343:2: ( RULE_STRING )
-            // InternalXdiagramDsl.g:10344:3: RULE_STRING
+            // InternalXdiagramDsl.g:10301:2: ( RULE_STRING )
+            // InternalXdiagramDsl.g:10302:3: RULE_STRING
             {
              before(grammarAccess.getImageAccess().getImageIdSTRINGTerminalRuleCall_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -32269,17 +32163,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__FeaturesAssignment_3"
-    // InternalXdiagramDsl.g:10353:1: rule__Image__FeaturesAssignment_3 : ( ruleImageFeature ) ;
+    // InternalXdiagramDsl.g:10311:1: rule__Image__FeaturesAssignment_3 : ( ruleImageFeature ) ;
     public final void rule__Image__FeaturesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10357:1: ( ( ruleImageFeature ) )
-            // InternalXdiagramDsl.g:10358:2: ( ruleImageFeature )
+            // InternalXdiagramDsl.g:10315:1: ( ( ruleImageFeature ) )
+            // InternalXdiagramDsl.g:10316:2: ( ruleImageFeature )
             {
-            // InternalXdiagramDsl.g:10358:2: ( ruleImageFeature )
-            // InternalXdiagramDsl.g:10359:3: ruleImageFeature
+            // InternalXdiagramDsl.g:10316:2: ( ruleImageFeature )
+            // InternalXdiagramDsl.g:10317:3: ruleImageFeature
             {
              before(grammarAccess.getImageAccess().getFeaturesImageFeatureParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -32310,17 +32204,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Image__ChildrenAssignment_4_1"
-    // InternalXdiagramDsl.g:10368:1: rule__Image__ChildrenAssignment_4_1 : ( ruleChildElement ) ;
+    // InternalXdiagramDsl.g:10326:1: rule__Image__ChildrenAssignment_4_1 : ( ruleChildElement ) ;
     public final void rule__Image__ChildrenAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10372:1: ( ( ruleChildElement ) )
-            // InternalXdiagramDsl.g:10373:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:10330:1: ( ( ruleChildElement ) )
+            // InternalXdiagramDsl.g:10331:2: ( ruleChildElement )
             {
-            // InternalXdiagramDsl.g:10373:2: ( ruleChildElement )
-            // InternalXdiagramDsl.g:10374:3: ruleChildElement
+            // InternalXdiagramDsl.g:10331:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:10332:3: ruleChildElement
             {
              before(grammarAccess.getImageAccess().getChildrenChildElementParserRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -32351,17 +32245,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__FeaturesAssignment_3"
-    // InternalXdiagramDsl.g:10383:1: rule__Invisible__FeaturesAssignment_3 : ( ruleInvisibleFeature ) ;
+    // InternalXdiagramDsl.g:10341:1: rule__Invisible__FeaturesAssignment_3 : ( ruleInvisibleFeature ) ;
     public final void rule__Invisible__FeaturesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10387:1: ( ( ruleInvisibleFeature ) )
-            // InternalXdiagramDsl.g:10388:2: ( ruleInvisibleFeature )
+            // InternalXdiagramDsl.g:10345:1: ( ( ruleInvisibleFeature ) )
+            // InternalXdiagramDsl.g:10346:2: ( ruleInvisibleFeature )
             {
-            // InternalXdiagramDsl.g:10388:2: ( ruleInvisibleFeature )
-            // InternalXdiagramDsl.g:10389:3: ruleInvisibleFeature
+            // InternalXdiagramDsl.g:10346:2: ( ruleInvisibleFeature )
+            // InternalXdiagramDsl.g:10347:3: ruleInvisibleFeature
             {
              before(grammarAccess.getInvisibleAccess().getFeaturesInvisibleFeatureParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -32392,17 +32286,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Invisible__ChildrenAssignment_4_1"
-    // InternalXdiagramDsl.g:10398:1: rule__Invisible__ChildrenAssignment_4_1 : ( ruleChildElement ) ;
+    // InternalXdiagramDsl.g:10356:1: rule__Invisible__ChildrenAssignment_4_1 : ( ruleChildElement ) ;
     public final void rule__Invisible__ChildrenAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10402:1: ( ( ruleChildElement ) )
-            // InternalXdiagramDsl.g:10403:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:10360:1: ( ( ruleChildElement ) )
+            // InternalXdiagramDsl.g:10361:2: ( ruleChildElement )
             {
-            // InternalXdiagramDsl.g:10403:2: ( ruleChildElement )
-            // InternalXdiagramDsl.g:10404:3: ruleChildElement
+            // InternalXdiagramDsl.g:10361:2: ( ruleChildElement )
+            // InternalXdiagramDsl.g:10362:3: ruleChildElement
             {
              before(grammarAccess.getInvisibleAccess().getChildrenChildElementParserRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -32433,21 +32327,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Foreground__TypeAssignment_0"
-    // InternalXdiagramDsl.g:10413:1: rule__Foreground__TypeAssignment_0 : ( ( 'foreground' ) ) ;
+    // InternalXdiagramDsl.g:10371:1: rule__Foreground__TypeAssignment_0 : ( ( 'foreground' ) ) ;
     public final void rule__Foreground__TypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10417:1: ( ( ( 'foreground' ) ) )
-            // InternalXdiagramDsl.g:10418:2: ( ( 'foreground' ) )
+            // InternalXdiagramDsl.g:10375:1: ( ( ( 'foreground' ) ) )
+            // InternalXdiagramDsl.g:10376:2: ( ( 'foreground' ) )
             {
-            // InternalXdiagramDsl.g:10418:2: ( ( 'foreground' ) )
-            // InternalXdiagramDsl.g:10419:3: ( 'foreground' )
+            // InternalXdiagramDsl.g:10376:2: ( ( 'foreground' ) )
+            // InternalXdiagramDsl.g:10377:3: ( 'foreground' )
             {
              before(grammarAccess.getForegroundAccess().getTypeForegroundKeyword_0_0()); 
-            // InternalXdiagramDsl.g:10420:3: ( 'foreground' )
-            // InternalXdiagramDsl.g:10421:4: 'foreground'
+            // InternalXdiagramDsl.g:10378:3: ( 'foreground' )
+            // InternalXdiagramDsl.g:10379:4: 'foreground'
             {
              before(grammarAccess.getForegroundAccess().getTypeForegroundKeyword_0_0()); 
             match(input,94,FOLLOW_2); 
@@ -32478,17 +32372,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Foreground__ColorAssignment_1"
-    // InternalXdiagramDsl.g:10432:1: rule__Foreground__ColorAssignment_1 : ( ruleColor ) ;
+    // InternalXdiagramDsl.g:10390:1: rule__Foreground__ColorAssignment_1 : ( ruleColor ) ;
     public final void rule__Foreground__ColorAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10436:1: ( ( ruleColor ) )
-            // InternalXdiagramDsl.g:10437:2: ( ruleColor )
+            // InternalXdiagramDsl.g:10394:1: ( ( ruleColor ) )
+            // InternalXdiagramDsl.g:10395:2: ( ruleColor )
             {
-            // InternalXdiagramDsl.g:10437:2: ( ruleColor )
-            // InternalXdiagramDsl.g:10438:3: ruleColor
+            // InternalXdiagramDsl.g:10395:2: ( ruleColor )
+            // InternalXdiagramDsl.g:10396:3: ruleColor
             {
              before(grammarAccess.getForegroundAccess().getColorColorParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -32519,17 +32413,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Foreground__ConditionalAssignment_2"
-    // InternalXdiagramDsl.g:10447:1: rule__Foreground__ConditionalAssignment_2 : ( ruleFeatureConditional ) ;
+    // InternalXdiagramDsl.g:10405:1: rule__Foreground__ConditionalAssignment_2 : ( ruleFeatureConditional ) ;
     public final void rule__Foreground__ConditionalAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10451:1: ( ( ruleFeatureConditional ) )
-            // InternalXdiagramDsl.g:10452:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10409:1: ( ( ruleFeatureConditional ) )
+            // InternalXdiagramDsl.g:10410:2: ( ruleFeatureConditional )
             {
-            // InternalXdiagramDsl.g:10452:2: ( ruleFeatureConditional )
-            // InternalXdiagramDsl.g:10453:3: ruleFeatureConditional
+            // InternalXdiagramDsl.g:10410:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10411:3: ruleFeatureConditional
             {
              before(grammarAccess.getForegroundAccess().getConditionalFeatureConditionalParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -32560,21 +32454,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Background__TypeAssignment_0"
-    // InternalXdiagramDsl.g:10462:1: rule__Background__TypeAssignment_0 : ( ( 'background' ) ) ;
+    // InternalXdiagramDsl.g:10420:1: rule__Background__TypeAssignment_0 : ( ( 'background' ) ) ;
     public final void rule__Background__TypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10466:1: ( ( ( 'background' ) ) )
-            // InternalXdiagramDsl.g:10467:2: ( ( 'background' ) )
+            // InternalXdiagramDsl.g:10424:1: ( ( ( 'background' ) ) )
+            // InternalXdiagramDsl.g:10425:2: ( ( 'background' ) )
             {
-            // InternalXdiagramDsl.g:10467:2: ( ( 'background' ) )
-            // InternalXdiagramDsl.g:10468:3: ( 'background' )
+            // InternalXdiagramDsl.g:10425:2: ( ( 'background' ) )
+            // InternalXdiagramDsl.g:10426:3: ( 'background' )
             {
              before(grammarAccess.getBackgroundAccess().getTypeBackgroundKeyword_0_0()); 
-            // InternalXdiagramDsl.g:10469:3: ( 'background' )
-            // InternalXdiagramDsl.g:10470:4: 'background'
+            // InternalXdiagramDsl.g:10427:3: ( 'background' )
+            // InternalXdiagramDsl.g:10428:4: 'background'
             {
              before(grammarAccess.getBackgroundAccess().getTypeBackgroundKeyword_0_0()); 
             match(input,95,FOLLOW_2); 
@@ -32605,17 +32499,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Background__ColorAssignment_1"
-    // InternalXdiagramDsl.g:10481:1: rule__Background__ColorAssignment_1 : ( ruleColor ) ;
+    // InternalXdiagramDsl.g:10439:1: rule__Background__ColorAssignment_1 : ( ruleColor ) ;
     public final void rule__Background__ColorAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10485:1: ( ( ruleColor ) )
-            // InternalXdiagramDsl.g:10486:2: ( ruleColor )
+            // InternalXdiagramDsl.g:10443:1: ( ( ruleColor ) )
+            // InternalXdiagramDsl.g:10444:2: ( ruleColor )
             {
-            // InternalXdiagramDsl.g:10486:2: ( ruleColor )
-            // InternalXdiagramDsl.g:10487:3: ruleColor
+            // InternalXdiagramDsl.g:10444:2: ( ruleColor )
+            // InternalXdiagramDsl.g:10445:3: ruleColor
             {
              before(grammarAccess.getBackgroundAccess().getColorColorParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -32646,17 +32540,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Background__ConditionalAssignment_2"
-    // InternalXdiagramDsl.g:10496:1: rule__Background__ConditionalAssignment_2 : ( ruleFeatureConditional ) ;
+    // InternalXdiagramDsl.g:10454:1: rule__Background__ConditionalAssignment_2 : ( ruleFeatureConditional ) ;
     public final void rule__Background__ConditionalAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10500:1: ( ( ruleFeatureConditional ) )
-            // InternalXdiagramDsl.g:10501:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10458:1: ( ( ruleFeatureConditional ) )
+            // InternalXdiagramDsl.g:10459:2: ( ruleFeatureConditional )
             {
-            // InternalXdiagramDsl.g:10501:2: ( ruleFeatureConditional )
-            // InternalXdiagramDsl.g:10502:3: ruleFeatureConditional
+            // InternalXdiagramDsl.g:10459:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10460:3: ruleFeatureConditional
             {
              before(grammarAccess.getBackgroundAccess().getConditionalFeatureConditionalParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -32687,17 +32581,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Transparency__PercentAssignment_1"
-    // InternalXdiagramDsl.g:10511:1: rule__Transparency__PercentAssignment_1 : ( RULE_INT ) ;
+    // InternalXdiagramDsl.g:10469:1: rule__Transparency__PercentAssignment_1 : ( RULE_INT ) ;
     public final void rule__Transparency__PercentAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10515:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:10516:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10473:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:10474:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:10516:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:10517:3: RULE_INT
+            // InternalXdiagramDsl.g:10474:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10475:3: RULE_INT
             {
              before(grammarAccess.getTransparencyAccess().getPercentINTTerminalRuleCall_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -32724,17 +32618,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Transparency__ConditionalAssignment_3"
-    // InternalXdiagramDsl.g:10526:1: rule__Transparency__ConditionalAssignment_3 : ( ruleFeatureConditional ) ;
+    // InternalXdiagramDsl.g:10484:1: rule__Transparency__ConditionalAssignment_3 : ( ruleFeatureConditional ) ;
     public final void rule__Transparency__ConditionalAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10530:1: ( ( ruleFeatureConditional ) )
-            // InternalXdiagramDsl.g:10531:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10488:1: ( ( ruleFeatureConditional ) )
+            // InternalXdiagramDsl.g:10489:2: ( ruleFeatureConditional )
             {
-            // InternalXdiagramDsl.g:10531:2: ( ruleFeatureConditional )
-            // InternalXdiagramDsl.g:10532:3: ruleFeatureConditional
+            // InternalXdiagramDsl.g:10489:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10490:3: ruleFeatureConditional
             {
              before(grammarAccess.getTransparencyAccess().getConditionalFeatureConditionalParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -32765,17 +32659,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__WidthAssignment_1"
-    // InternalXdiagramDsl.g:10541:1: rule__Size__WidthAssignment_1 : ( RULE_INT ) ;
+    // InternalXdiagramDsl.g:10499:1: rule__Size__WidthAssignment_1 : ( RULE_INT ) ;
     public final void rule__Size__WidthAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10545:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:10546:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10503:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:10504:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:10546:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:10547:3: RULE_INT
+            // InternalXdiagramDsl.g:10504:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10505:3: RULE_INT
             {
              before(grammarAccess.getSizeAccess().getWidthINTTerminalRuleCall_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -32802,21 +32696,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__WidthRelativeAssignment_2"
-    // InternalXdiagramDsl.g:10556:1: rule__Size__WidthRelativeAssignment_2 : ( ( ']' ) ) ;
+    // InternalXdiagramDsl.g:10514:1: rule__Size__WidthRelativeAssignment_2 : ( ( ']' ) ) ;
     public final void rule__Size__WidthRelativeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10560:1: ( ( ( ']' ) ) )
-            // InternalXdiagramDsl.g:10561:2: ( ( ']' ) )
+            // InternalXdiagramDsl.g:10518:1: ( ( ( ']' ) ) )
+            // InternalXdiagramDsl.g:10519:2: ( ( ']' ) )
             {
-            // InternalXdiagramDsl.g:10561:2: ( ( ']' ) )
-            // InternalXdiagramDsl.g:10562:3: ( ']' )
+            // InternalXdiagramDsl.g:10519:2: ( ( ']' ) )
+            // InternalXdiagramDsl.g:10520:3: ( ']' )
             {
              before(grammarAccess.getSizeAccess().getWidthRelativeRightSquareBracketKeyword_2_0()); 
-            // InternalXdiagramDsl.g:10563:3: ( ']' )
-            // InternalXdiagramDsl.g:10564:4: ']'
+            // InternalXdiagramDsl.g:10521:3: ( ']' )
+            // InternalXdiagramDsl.g:10522:4: ']'
             {
              before(grammarAccess.getSizeAccess().getWidthRelativeRightSquareBracketKeyword_2_0()); 
             match(input,96,FOLLOW_2); 
@@ -32847,17 +32741,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__HeightAssignment_3_0"
-    // InternalXdiagramDsl.g:10575:1: rule__Size__HeightAssignment_3_0 : ( RULE_INT ) ;
+    // InternalXdiagramDsl.g:10533:1: rule__Size__HeightAssignment_3_0 : ( RULE_INT ) ;
     public final void rule__Size__HeightAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10579:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:10580:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10537:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:10538:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:10580:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:10581:3: RULE_INT
+            // InternalXdiagramDsl.g:10538:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10539:3: RULE_INT
             {
              before(grammarAccess.getSizeAccess().getHeightINTTerminalRuleCall_3_0_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -32884,21 +32778,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__HeightRelativeAssignment_3_1"
-    // InternalXdiagramDsl.g:10590:1: rule__Size__HeightRelativeAssignment_3_1 : ( ( ']' ) ) ;
+    // InternalXdiagramDsl.g:10548:1: rule__Size__HeightRelativeAssignment_3_1 : ( ( ']' ) ) ;
     public final void rule__Size__HeightRelativeAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10594:1: ( ( ( ']' ) ) )
-            // InternalXdiagramDsl.g:10595:2: ( ( ']' ) )
+            // InternalXdiagramDsl.g:10552:1: ( ( ( ']' ) ) )
+            // InternalXdiagramDsl.g:10553:2: ( ( ']' ) )
             {
-            // InternalXdiagramDsl.g:10595:2: ( ( ']' ) )
-            // InternalXdiagramDsl.g:10596:3: ( ']' )
+            // InternalXdiagramDsl.g:10553:2: ( ( ']' ) )
+            // InternalXdiagramDsl.g:10554:3: ( ']' )
             {
              before(grammarAccess.getSizeAccess().getHeightRelativeRightSquareBracketKeyword_3_1_0()); 
-            // InternalXdiagramDsl.g:10597:3: ( ']' )
-            // InternalXdiagramDsl.g:10598:4: ']'
+            // InternalXdiagramDsl.g:10555:3: ( ']' )
+            // InternalXdiagramDsl.g:10556:4: ']'
             {
              before(grammarAccess.getSizeAccess().getHeightRelativeRightSquareBracketKeyword_3_1_0()); 
             match(input,96,FOLLOW_2); 
@@ -32929,21 +32823,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__ResizableAssignment_4"
-    // InternalXdiagramDsl.g:10609:1: rule__Size__ResizableAssignment_4 : ( ( 'resizable' ) ) ;
+    // InternalXdiagramDsl.g:10567:1: rule__Size__ResizableAssignment_4 : ( ( 'resizable' ) ) ;
     public final void rule__Size__ResizableAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10613:1: ( ( ( 'resizable' ) ) )
-            // InternalXdiagramDsl.g:10614:2: ( ( 'resizable' ) )
+            // InternalXdiagramDsl.g:10571:1: ( ( ( 'resizable' ) ) )
+            // InternalXdiagramDsl.g:10572:2: ( ( 'resizable' ) )
             {
-            // InternalXdiagramDsl.g:10614:2: ( ( 'resizable' ) )
-            // InternalXdiagramDsl.g:10615:3: ( 'resizable' )
+            // InternalXdiagramDsl.g:10572:2: ( ( 'resizable' ) )
+            // InternalXdiagramDsl.g:10573:3: ( 'resizable' )
             {
              before(grammarAccess.getSizeAccess().getResizableResizableKeyword_4_0()); 
-            // InternalXdiagramDsl.g:10616:3: ( 'resizable' )
-            // InternalXdiagramDsl.g:10617:4: 'resizable'
+            // InternalXdiagramDsl.g:10574:3: ( 'resizable' )
+            // InternalXdiagramDsl.g:10575:4: 'resizable'
             {
              before(grammarAccess.getSizeAccess().getResizableResizableKeyword_4_0()); 
             match(input,97,FOLLOW_2); 
@@ -32974,17 +32868,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Size__ConditionalAssignment_5"
-    // InternalXdiagramDsl.g:10628:1: rule__Size__ConditionalAssignment_5 : ( ruleFeatureConditional ) ;
+    // InternalXdiagramDsl.g:10586:1: rule__Size__ConditionalAssignment_5 : ( ruleFeatureConditional ) ;
     public final void rule__Size__ConditionalAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10632:1: ( ( ruleFeatureConditional ) )
-            // InternalXdiagramDsl.g:10633:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10590:1: ( ( ruleFeatureConditional ) )
+            // InternalXdiagramDsl.g:10591:2: ( ruleFeatureConditional )
             {
-            // InternalXdiagramDsl.g:10633:2: ( ruleFeatureConditional )
-            // InternalXdiagramDsl.g:10634:3: ruleFeatureConditional
+            // InternalXdiagramDsl.g:10591:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10592:3: ruleFeatureConditional
             {
              before(grammarAccess.getSizeAccess().getConditionalFeatureConditionalParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
@@ -33015,17 +32909,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Point__XAssignment_1"
-    // InternalXdiagramDsl.g:10643:1: rule__Point__XAssignment_1 : ( RULE_INT ) ;
+    // InternalXdiagramDsl.g:10601:1: rule__Point__XAssignment_1 : ( RULE_INT ) ;
     public final void rule__Point__XAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10647:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:10648:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10605:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:10606:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:10648:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:10649:3: RULE_INT
+            // InternalXdiagramDsl.g:10606:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10607:3: RULE_INT
             {
              before(grammarAccess.getPointAccess().getXINTTerminalRuleCall_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -33052,17 +32946,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Point__YAssignment_2"
-    // InternalXdiagramDsl.g:10658:1: rule__Point__YAssignment_2 : ( RULE_INT ) ;
+    // InternalXdiagramDsl.g:10616:1: rule__Point__YAssignment_2 : ( RULE_INT ) ;
     public final void rule__Point__YAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10662:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:10663:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10620:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:10621:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:10663:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:10664:3: RULE_INT
+            // InternalXdiagramDsl.g:10621:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10622:3: RULE_INT
             {
              before(grammarAccess.getPointAccess().getYINTTerminalRuleCall_2_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -33089,17 +32983,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Point__ConditionalAssignment_3"
-    // InternalXdiagramDsl.g:10673:1: rule__Point__ConditionalAssignment_3 : ( ruleFeatureConditional ) ;
+    // InternalXdiagramDsl.g:10631:1: rule__Point__ConditionalAssignment_3 : ( ruleFeatureConditional ) ;
     public final void rule__Point__ConditionalAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10677:1: ( ( ruleFeatureConditional ) )
-            // InternalXdiagramDsl.g:10678:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10635:1: ( ( ruleFeatureConditional ) )
+            // InternalXdiagramDsl.g:10636:2: ( ruleFeatureConditional )
             {
-            // InternalXdiagramDsl.g:10678:2: ( ruleFeatureConditional )
-            // InternalXdiagramDsl.g:10679:3: ruleFeatureConditional
+            // InternalXdiagramDsl.g:10636:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10637:3: ruleFeatureConditional
             {
              before(grammarAccess.getPointAccess().getConditionalFeatureConditionalParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -33130,17 +33024,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Position__XAssignment_1"
-    // InternalXdiagramDsl.g:10688:1: rule__Position__XAssignment_1 : ( RULE_INT ) ;
+    // InternalXdiagramDsl.g:10646:1: rule__Position__XAssignment_1 : ( RULE_INT ) ;
     public final void rule__Position__XAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10692:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:10693:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10650:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:10651:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:10693:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:10694:3: RULE_INT
+            // InternalXdiagramDsl.g:10651:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10652:3: RULE_INT
             {
              before(grammarAccess.getPositionAccess().getXINTTerminalRuleCall_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -33167,24 +33061,24 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Position__XRelativeAssignment_2"
-    // InternalXdiagramDsl.g:10703:1: rule__Position__XRelativeAssignment_2 : ( ( '%' ) ) ;
+    // InternalXdiagramDsl.g:10661:1: rule__Position__XRelativeAssignment_2 : ( ( '%' ) ) ;
     public final void rule__Position__XRelativeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10707:1: ( ( ( '%' ) ) )
-            // InternalXdiagramDsl.g:10708:2: ( ( '%' ) )
+            // InternalXdiagramDsl.g:10665:1: ( ( ( '%' ) ) )
+            // InternalXdiagramDsl.g:10666:2: ( ( '%' ) )
             {
-            // InternalXdiagramDsl.g:10708:2: ( ( '%' ) )
-            // InternalXdiagramDsl.g:10709:3: ( '%' )
-            {
-             before(grammarAccess.getPositionAccess().getXRelativePercentSignKeyword_2_0()); 
-            // InternalXdiagramDsl.g:10710:3: ( '%' )
-            // InternalXdiagramDsl.g:10711:4: '%'
+            // InternalXdiagramDsl.g:10666:2: ( ( '%' ) )
+            // InternalXdiagramDsl.g:10667:3: ( '%' )
             {
              before(grammarAccess.getPositionAccess().getXRelativePercentSignKeyword_2_0()); 
-            match(input,56,FOLLOW_2); 
+            // InternalXdiagramDsl.g:10668:3: ( '%' )
+            // InternalXdiagramDsl.g:10669:4: '%'
+            {
+             before(grammarAccess.getPositionAccess().getXRelativePercentSignKeyword_2_0()); 
+            match(input,71,FOLLOW_2); 
              after(grammarAccess.getPositionAccess().getXRelativePercentSignKeyword_2_0()); 
 
             }
@@ -33211,22 +33105,22 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__Position__XRelativeAssignment_2"
 
 
-    // $ANTLR start "rule__Position__YAssignment_3"
-    // InternalXdiagramDsl.g:10722:1: rule__Position__YAssignment_3 : ( RULE_INT ) ;
-    public final void rule__Position__YAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__Position__YAssignment_3_0"
+    // InternalXdiagramDsl.g:10680:1: rule__Position__YAssignment_3_0 : ( RULE_INT ) ;
+    public final void rule__Position__YAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10726:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:10727:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10684:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:10685:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:10727:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:10728:3: RULE_INT
+            // InternalXdiagramDsl.g:10685:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10686:3: RULE_INT
             {
-             before(grammarAccess.getPositionAccess().getYINTTerminalRuleCall_3_0()); 
+             before(grammarAccess.getPositionAccess().getYINTTerminalRuleCall_3_0_0()); 
             match(input,RULE_INT,FOLLOW_2); 
-             after(grammarAccess.getPositionAccess().getYINTTerminalRuleCall_3_0()); 
+             after(grammarAccess.getPositionAccess().getYINTTerminalRuleCall_3_0_0()); 
 
             }
 
@@ -33245,33 +33139,33 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Position__YAssignment_3"
+    // $ANTLR end "rule__Position__YAssignment_3_0"
 
 
-    // $ANTLR start "rule__Position__YRelativeAssignment_4"
-    // InternalXdiagramDsl.g:10737:1: rule__Position__YRelativeAssignment_4 : ( ( '%' ) ) ;
-    public final void rule__Position__YRelativeAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__Position__YRelativeAssignment_3_1"
+    // InternalXdiagramDsl.g:10695:1: rule__Position__YRelativeAssignment_3_1 : ( ( '%' ) ) ;
+    public final void rule__Position__YRelativeAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10741:1: ( ( ( '%' ) ) )
-            // InternalXdiagramDsl.g:10742:2: ( ( '%' ) )
+            // InternalXdiagramDsl.g:10699:1: ( ( ( '%' ) ) )
+            // InternalXdiagramDsl.g:10700:2: ( ( '%' ) )
             {
-            // InternalXdiagramDsl.g:10742:2: ( ( '%' ) )
-            // InternalXdiagramDsl.g:10743:3: ( '%' )
+            // InternalXdiagramDsl.g:10700:2: ( ( '%' ) )
+            // InternalXdiagramDsl.g:10701:3: ( '%' )
             {
-             before(grammarAccess.getPositionAccess().getYRelativePercentSignKeyword_4_0()); 
-            // InternalXdiagramDsl.g:10744:3: ( '%' )
-            // InternalXdiagramDsl.g:10745:4: '%'
+             before(grammarAccess.getPositionAccess().getYRelativePercentSignKeyword_3_1_0()); 
+            // InternalXdiagramDsl.g:10702:3: ( '%' )
+            // InternalXdiagramDsl.g:10703:4: '%'
             {
-             before(grammarAccess.getPositionAccess().getYRelativePercentSignKeyword_4_0()); 
-            match(input,56,FOLLOW_2); 
-             after(grammarAccess.getPositionAccess().getYRelativePercentSignKeyword_4_0()); 
+             before(grammarAccess.getPositionAccess().getYRelativePercentSignKeyword_3_1_0()); 
+            match(input,71,FOLLOW_2); 
+             after(grammarAccess.getPositionAccess().getYRelativePercentSignKeyword_3_1_0()); 
 
             }
 
-             after(grammarAccess.getPositionAccess().getYRelativePercentSignKeyword_4_0()); 
+             after(grammarAccess.getPositionAccess().getYRelativePercentSignKeyword_3_1_0()); 
 
             }
 
@@ -33290,29 +33184,29 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Position__YRelativeAssignment_4"
+    // $ANTLR end "rule__Position__YRelativeAssignment_3_1"
 
 
-    // $ANTLR start "rule__Position__ConditionalAssignment_5"
-    // InternalXdiagramDsl.g:10756:1: rule__Position__ConditionalAssignment_5 : ( ruleFeatureConditional ) ;
-    public final void rule__Position__ConditionalAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__Position__ConditionalAssignment_4"
+    // InternalXdiagramDsl.g:10714:1: rule__Position__ConditionalAssignment_4 : ( ruleFeatureConditional ) ;
+    public final void rule__Position__ConditionalAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10760:1: ( ( ruleFeatureConditional ) )
-            // InternalXdiagramDsl.g:10761:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10718:1: ( ( ruleFeatureConditional ) )
+            // InternalXdiagramDsl.g:10719:2: ( ruleFeatureConditional )
             {
-            // InternalXdiagramDsl.g:10761:2: ( ruleFeatureConditional )
-            // InternalXdiagramDsl.g:10762:3: ruleFeatureConditional
+            // InternalXdiagramDsl.g:10719:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10720:3: ruleFeatureConditional
             {
-             before(grammarAccess.getPositionAccess().getConditionalFeatureConditionalParserRuleCall_5_0()); 
+             before(grammarAccess.getPositionAccess().getConditionalFeatureConditionalParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
             ruleFeatureConditional();
 
             state._fsp--;
 
-             after(grammarAccess.getPositionAccess().getConditionalFeatureConditionalParserRuleCall_5_0()); 
+             after(grammarAccess.getPositionAccess().getConditionalFeatureConditionalParserRuleCall_4_0()); 
 
             }
 
@@ -33331,21 +33225,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Position__ConditionalAssignment_5"
+    // $ANTLR end "rule__Position__ConditionalAssignment_4"
 
 
     // $ANTLR start "rule__Corner__AngleAssignment_1"
-    // InternalXdiagramDsl.g:10771:1: rule__Corner__AngleAssignment_1 : ( RULE_INT ) ;
+    // InternalXdiagramDsl.g:10729:1: rule__Corner__AngleAssignment_1 : ( RULE_INT ) ;
     public final void rule__Corner__AngleAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10775:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:10776:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10733:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:10734:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:10776:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:10777:3: RULE_INT
+            // InternalXdiagramDsl.g:10734:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10735:3: RULE_INT
             {
              before(grammarAccess.getCornerAccess().getAngleINTTerminalRuleCall_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -33372,17 +33266,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Corner__ConditionalAssignment_2"
-    // InternalXdiagramDsl.g:10786:1: rule__Corner__ConditionalAssignment_2 : ( ruleFeatureConditional ) ;
+    // InternalXdiagramDsl.g:10744:1: rule__Corner__ConditionalAssignment_2 : ( ruleFeatureConditional ) ;
     public final void rule__Corner__ConditionalAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10790:1: ( ( ruleFeatureConditional ) )
-            // InternalXdiagramDsl.g:10791:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10748:1: ( ( ruleFeatureConditional ) )
+            // InternalXdiagramDsl.g:10749:2: ( ruleFeatureConditional )
             {
-            // InternalXdiagramDsl.g:10791:2: ( ruleFeatureConditional )
-            // InternalXdiagramDsl.g:10792:3: ruleFeatureConditional
+            // InternalXdiagramDsl.g:10749:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10750:3: ruleFeatureConditional
             {
              before(grammarAccess.getCornerAccess().getConditionalFeatureConditionalParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -33413,21 +33307,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__VerticalAssignment_1_0"
-    // InternalXdiagramDsl.g:10801:1: rule__Layout__VerticalAssignment_1_0 : ( ( 'vertical' ) ) ;
+    // InternalXdiagramDsl.g:10759:1: rule__Layout__VerticalAssignment_1_0 : ( ( 'vertical' ) ) ;
     public final void rule__Layout__VerticalAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10805:1: ( ( ( 'vertical' ) ) )
-            // InternalXdiagramDsl.g:10806:2: ( ( 'vertical' ) )
+            // InternalXdiagramDsl.g:10763:1: ( ( ( 'vertical' ) ) )
+            // InternalXdiagramDsl.g:10764:2: ( ( 'vertical' ) )
             {
-            // InternalXdiagramDsl.g:10806:2: ( ( 'vertical' ) )
-            // InternalXdiagramDsl.g:10807:3: ( 'vertical' )
+            // InternalXdiagramDsl.g:10764:2: ( ( 'vertical' ) )
+            // InternalXdiagramDsl.g:10765:3: ( 'vertical' )
             {
              before(grammarAccess.getLayoutAccess().getVerticalVerticalKeyword_1_0_0()); 
-            // InternalXdiagramDsl.g:10808:3: ( 'vertical' )
-            // InternalXdiagramDsl.g:10809:4: 'vertical'
+            // InternalXdiagramDsl.g:10766:3: ( 'vertical' )
+            // InternalXdiagramDsl.g:10767:4: 'vertical'
             {
              before(grammarAccess.getLayoutAccess().getVerticalVerticalKeyword_1_0_0()); 
             match(input,98,FOLLOW_2); 
@@ -33458,21 +33352,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__HorizontalAssignment_1_1"
-    // InternalXdiagramDsl.g:10820:1: rule__Layout__HorizontalAssignment_1_1 : ( ( 'horizontal' ) ) ;
+    // InternalXdiagramDsl.g:10778:1: rule__Layout__HorizontalAssignment_1_1 : ( ( 'horizontal' ) ) ;
     public final void rule__Layout__HorizontalAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10824:1: ( ( ( 'horizontal' ) ) )
-            // InternalXdiagramDsl.g:10825:2: ( ( 'horizontal' ) )
+            // InternalXdiagramDsl.g:10782:1: ( ( ( 'horizontal' ) ) )
+            // InternalXdiagramDsl.g:10783:2: ( ( 'horizontal' ) )
             {
-            // InternalXdiagramDsl.g:10825:2: ( ( 'horizontal' ) )
-            // InternalXdiagramDsl.g:10826:3: ( 'horizontal' )
+            // InternalXdiagramDsl.g:10783:2: ( ( 'horizontal' ) )
+            // InternalXdiagramDsl.g:10784:3: ( 'horizontal' )
             {
              before(grammarAccess.getLayoutAccess().getHorizontalHorizontalKeyword_1_1_0()); 
-            // InternalXdiagramDsl.g:10827:3: ( 'horizontal' )
-            // InternalXdiagramDsl.g:10828:4: 'horizontal'
+            // InternalXdiagramDsl.g:10785:3: ( 'horizontal' )
+            // InternalXdiagramDsl.g:10786:4: 'horizontal'
             {
              before(grammarAccess.getLayoutAccess().getHorizontalHorizontalKeyword_1_1_0()); 
             match(input,99,FOLLOW_2); 
@@ -33503,17 +33397,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__MarginAssignment_2_1"
-    // InternalXdiagramDsl.g:10839:1: rule__Layout__MarginAssignment_2_1 : ( RULE_INT ) ;
+    // InternalXdiagramDsl.g:10797:1: rule__Layout__MarginAssignment_2_1 : ( RULE_INT ) ;
     public final void rule__Layout__MarginAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10843:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:10844:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10801:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:10802:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:10844:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:10845:3: RULE_INT
+            // InternalXdiagramDsl.g:10802:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10803:3: RULE_INT
             {
              before(grammarAccess.getLayoutAccess().getMarginINTTerminalRuleCall_2_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -33540,17 +33434,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Layout__ConditionalAssignment_3"
-    // InternalXdiagramDsl.g:10854:1: rule__Layout__ConditionalAssignment_3 : ( ruleFeatureConditional ) ;
+    // InternalXdiagramDsl.g:10812:1: rule__Layout__ConditionalAssignment_3 : ( ruleFeatureConditional ) ;
     public final void rule__Layout__ConditionalAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10858:1: ( ( ruleFeatureConditional ) )
-            // InternalXdiagramDsl.g:10859:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10816:1: ( ( ruleFeatureConditional ) )
+            // InternalXdiagramDsl.g:10817:2: ( ruleFeatureConditional )
             {
-            // InternalXdiagramDsl.g:10859:2: ( ruleFeatureConditional )
-            // InternalXdiagramDsl.g:10860:3: ruleFeatureConditional
+            // InternalXdiagramDsl.g:10817:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10818:3: ruleFeatureConditional
             {
              before(grammarAccess.getLayoutAccess().getConditionalFeatureConditionalParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -33581,17 +33475,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Visible__ConditionalAssignment_1"
-    // InternalXdiagramDsl.g:10869:1: rule__Visible__ConditionalAssignment_1 : ( ruleFeatureConditional ) ;
+    // InternalXdiagramDsl.g:10827:1: rule__Visible__ConditionalAssignment_1 : ( ruleFeatureConditional ) ;
     public final void rule__Visible__ConditionalAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10873:1: ( ( ruleFeatureConditional ) )
-            // InternalXdiagramDsl.g:10874:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10831:1: ( ( ruleFeatureConditional ) )
+            // InternalXdiagramDsl.g:10832:2: ( ruleFeatureConditional )
             {
-            // InternalXdiagramDsl.g:10874:2: ( ruleFeatureConditional )
-            // InternalXdiagramDsl.g:10875:3: ruleFeatureConditional
+            // InternalXdiagramDsl.g:10832:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10833:3: ruleFeatureConditional
             {
              before(grammarAccess.getVisibleAccess().getConditionalFeatureConditionalParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -33622,17 +33516,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextValue__PartsAssignment_2"
-    // InternalXdiagramDsl.g:10884:1: rule__TextValue__PartsAssignment_2 : ( ruleTextPart ) ;
+    // InternalXdiagramDsl.g:10842:1: rule__TextValue__PartsAssignment_2 : ( ruleTextPart ) ;
     public final void rule__TextValue__PartsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10888:1: ( ( ruleTextPart ) )
-            // InternalXdiagramDsl.g:10889:2: ( ruleTextPart )
+            // InternalXdiagramDsl.g:10846:1: ( ( ruleTextPart ) )
+            // InternalXdiagramDsl.g:10847:2: ( ruleTextPart )
             {
-            // InternalXdiagramDsl.g:10889:2: ( ruleTextPart )
-            // InternalXdiagramDsl.g:10890:3: ruleTextPart
+            // InternalXdiagramDsl.g:10847:2: ( ruleTextPart )
+            // InternalXdiagramDsl.g:10848:3: ruleTextPart
             {
              before(grammarAccess.getTextValueAccess().getPartsTextPartParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -33663,17 +33557,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextValue__ConditionalAssignment_3"
-    // InternalXdiagramDsl.g:10899:1: rule__TextValue__ConditionalAssignment_3 : ( ruleFeatureConditional ) ;
+    // InternalXdiagramDsl.g:10857:1: rule__TextValue__ConditionalAssignment_3 : ( ruleFeatureConditional ) ;
     public final void rule__TextValue__ConditionalAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10903:1: ( ( ruleFeatureConditional ) )
-            // InternalXdiagramDsl.g:10904:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10861:1: ( ( ruleFeatureConditional ) )
+            // InternalXdiagramDsl.g:10862:2: ( ruleFeatureConditional )
             {
-            // InternalXdiagramDsl.g:10904:2: ( ruleFeatureConditional )
-            // InternalXdiagramDsl.g:10905:3: ruleFeatureConditional
+            // InternalXdiagramDsl.g:10862:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:10863:3: ruleFeatureConditional
             {
              before(grammarAccess.getTextValueAccess().getConditionalFeatureConditionalParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -33704,17 +33598,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextPart__TextAssignment_0"
-    // InternalXdiagramDsl.g:10914:1: rule__TextPart__TextAssignment_0 : ( RULE_STRING ) ;
+    // InternalXdiagramDsl.g:10872:1: rule__TextPart__TextAssignment_0 : ( RULE_STRING ) ;
     public final void rule__TextPart__TextAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10918:1: ( ( RULE_STRING ) )
-            // InternalXdiagramDsl.g:10919:2: ( RULE_STRING )
+            // InternalXdiagramDsl.g:10876:1: ( ( RULE_STRING ) )
+            // InternalXdiagramDsl.g:10877:2: ( RULE_STRING )
             {
-            // InternalXdiagramDsl.g:10919:2: ( RULE_STRING )
-            // InternalXdiagramDsl.g:10920:3: RULE_STRING
+            // InternalXdiagramDsl.g:10877:2: ( RULE_STRING )
+            // InternalXdiagramDsl.g:10878:3: RULE_STRING
             {
              before(grammarAccess.getTextPartAccess().getTextSTRINGTerminalRuleCall_0_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -33741,21 +33635,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextPart__EditableAssignment_1_0"
-    // InternalXdiagramDsl.g:10929:1: rule__TextPart__EditableAssignment_1_0 : ( ( 'edit:' ) ) ;
+    // InternalXdiagramDsl.g:10887:1: rule__TextPart__EditableAssignment_1_0 : ( ( 'edit:' ) ) ;
     public final void rule__TextPart__EditableAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10933:1: ( ( ( 'edit:' ) ) )
-            // InternalXdiagramDsl.g:10934:2: ( ( 'edit:' ) )
+            // InternalXdiagramDsl.g:10891:1: ( ( ( 'edit:' ) ) )
+            // InternalXdiagramDsl.g:10892:2: ( ( 'edit:' ) )
             {
-            // InternalXdiagramDsl.g:10934:2: ( ( 'edit:' ) )
-            // InternalXdiagramDsl.g:10935:3: ( 'edit:' )
+            // InternalXdiagramDsl.g:10892:2: ( ( 'edit:' ) )
+            // InternalXdiagramDsl.g:10893:3: ( 'edit:' )
             {
              before(grammarAccess.getTextPartAccess().getEditableEditKeyword_1_0_0()); 
-            // InternalXdiagramDsl.g:10936:3: ( 'edit:' )
-            // InternalXdiagramDsl.g:10937:4: 'edit:'
+            // InternalXdiagramDsl.g:10894:3: ( 'edit:' )
+            // InternalXdiagramDsl.g:10895:4: 'edit:'
             {
              before(grammarAccess.getTextPartAccess().getEditableEditKeyword_1_0_0()); 
             match(input,100,FOLLOW_2); 
@@ -33786,21 +33680,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextPart__ModelAttributeAssignment_1_1"
-    // InternalXdiagramDsl.g:10948:1: rule__TextPart__ModelAttributeAssignment_1_1 : ( ( ruleQualifiedName ) ) ;
+    // InternalXdiagramDsl.g:10906:1: rule__TextPart__ModelAttributeAssignment_1_1 : ( ( ruleQualifiedName ) ) ;
     public final void rule__TextPart__ModelAttributeAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10952:1: ( ( ( ruleQualifiedName ) ) )
-            // InternalXdiagramDsl.g:10953:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:10910:1: ( ( ( ruleQualifiedName ) ) )
+            // InternalXdiagramDsl.g:10911:2: ( ( ruleQualifiedName ) )
             {
-            // InternalXdiagramDsl.g:10953:2: ( ( ruleQualifiedName ) )
-            // InternalXdiagramDsl.g:10954:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:10911:2: ( ( ruleQualifiedName ) )
+            // InternalXdiagramDsl.g:10912:3: ( ruleQualifiedName )
             {
              before(grammarAccess.getTextPartAccess().getModelAttributeEAttributeCrossReference_1_1_0()); 
-            // InternalXdiagramDsl.g:10955:3: ( ruleQualifiedName )
-            // InternalXdiagramDsl.g:10956:4: ruleQualifiedName
+            // InternalXdiagramDsl.g:10913:3: ( ruleQualifiedName )
+            // InternalXdiagramDsl.g:10914:4: ruleQualifiedName
             {
              before(grammarAccess.getTextPartAccess().getModelAttributeEAttributeQualifiedNameParserRuleCall_1_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -33835,21 +33729,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__FaceAssignment_2_0"
-    // InternalXdiagramDsl.g:10967:1: rule__FontProperties__FaceAssignment_2_0 : ( ( 'arial' ) ) ;
+    // InternalXdiagramDsl.g:10925:1: rule__FontProperties__FaceAssignment_2_0 : ( ( 'arial' ) ) ;
     public final void rule__FontProperties__FaceAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10971:1: ( ( ( 'arial' ) ) )
-            // InternalXdiagramDsl.g:10972:2: ( ( 'arial' ) )
+            // InternalXdiagramDsl.g:10929:1: ( ( ( 'arial' ) ) )
+            // InternalXdiagramDsl.g:10930:2: ( ( 'arial' ) )
             {
-            // InternalXdiagramDsl.g:10972:2: ( ( 'arial' ) )
-            // InternalXdiagramDsl.g:10973:3: ( 'arial' )
+            // InternalXdiagramDsl.g:10930:2: ( ( 'arial' ) )
+            // InternalXdiagramDsl.g:10931:3: ( 'arial' )
             {
              before(grammarAccess.getFontPropertiesAccess().getFaceArialKeyword_2_0_0()); 
-            // InternalXdiagramDsl.g:10974:3: ( 'arial' )
-            // InternalXdiagramDsl.g:10975:4: 'arial'
+            // InternalXdiagramDsl.g:10932:3: ( 'arial' )
+            // InternalXdiagramDsl.g:10933:4: 'arial'
             {
              before(grammarAccess.getFontPropertiesAccess().getFaceArialKeyword_2_0_0()); 
             match(input,101,FOLLOW_2); 
@@ -33880,17 +33774,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__SizeAssignment_3"
-    // InternalXdiagramDsl.g:10986:1: rule__FontProperties__SizeAssignment_3 : ( RULE_INT ) ;
+    // InternalXdiagramDsl.g:10944:1: rule__FontProperties__SizeAssignment_3 : ( RULE_INT ) ;
     public final void rule__FontProperties__SizeAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:10990:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:10991:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10948:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:10949:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:10991:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:10992:3: RULE_INT
+            // InternalXdiagramDsl.g:10949:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:10950:3: RULE_INT
             {
              before(grammarAccess.getFontPropertiesAccess().getSizeINTTerminalRuleCall_3_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -33917,21 +33811,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__BoldAssignment_4"
-    // InternalXdiagramDsl.g:11001:1: rule__FontProperties__BoldAssignment_4 : ( ( 'bold' ) ) ;
+    // InternalXdiagramDsl.g:10959:1: rule__FontProperties__BoldAssignment_4 : ( ( 'bold' ) ) ;
     public final void rule__FontProperties__BoldAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:11005:1: ( ( ( 'bold' ) ) )
-            // InternalXdiagramDsl.g:11006:2: ( ( 'bold' ) )
+            // InternalXdiagramDsl.g:10963:1: ( ( ( 'bold' ) ) )
+            // InternalXdiagramDsl.g:10964:2: ( ( 'bold' ) )
             {
-            // InternalXdiagramDsl.g:11006:2: ( ( 'bold' ) )
-            // InternalXdiagramDsl.g:11007:3: ( 'bold' )
+            // InternalXdiagramDsl.g:10964:2: ( ( 'bold' ) )
+            // InternalXdiagramDsl.g:10965:3: ( 'bold' )
             {
              before(grammarAccess.getFontPropertiesAccess().getBoldBoldKeyword_4_0()); 
-            // InternalXdiagramDsl.g:11008:3: ( 'bold' )
-            // InternalXdiagramDsl.g:11009:4: 'bold'
+            // InternalXdiagramDsl.g:10966:3: ( 'bold' )
+            // InternalXdiagramDsl.g:10967:4: 'bold'
             {
              before(grammarAccess.getFontPropertiesAccess().getBoldBoldKeyword_4_0()); 
             match(input,102,FOLLOW_2); 
@@ -33962,21 +33856,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__ItalicsAssignment_5"
-    // InternalXdiagramDsl.g:11020:1: rule__FontProperties__ItalicsAssignment_5 : ( ( 'italics' ) ) ;
+    // InternalXdiagramDsl.g:10978:1: rule__FontProperties__ItalicsAssignment_5 : ( ( 'italics' ) ) ;
     public final void rule__FontProperties__ItalicsAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:11024:1: ( ( ( 'italics' ) ) )
-            // InternalXdiagramDsl.g:11025:2: ( ( 'italics' ) )
+            // InternalXdiagramDsl.g:10982:1: ( ( ( 'italics' ) ) )
+            // InternalXdiagramDsl.g:10983:2: ( ( 'italics' ) )
             {
-            // InternalXdiagramDsl.g:11025:2: ( ( 'italics' ) )
-            // InternalXdiagramDsl.g:11026:3: ( 'italics' )
+            // InternalXdiagramDsl.g:10983:2: ( ( 'italics' ) )
+            // InternalXdiagramDsl.g:10984:3: ( 'italics' )
             {
              before(grammarAccess.getFontPropertiesAccess().getItalicsItalicsKeyword_5_0()); 
-            // InternalXdiagramDsl.g:11027:3: ( 'italics' )
-            // InternalXdiagramDsl.g:11028:4: 'italics'
+            // InternalXdiagramDsl.g:10985:3: ( 'italics' )
+            // InternalXdiagramDsl.g:10986:4: 'italics'
             {
              before(grammarAccess.getFontPropertiesAccess().getItalicsItalicsKeyword_5_0()); 
             match(input,103,FOLLOW_2); 
@@ -34007,17 +33901,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FontProperties__ConditionalAssignment_6"
-    // InternalXdiagramDsl.g:11039:1: rule__FontProperties__ConditionalAssignment_6 : ( ruleFeatureConditional ) ;
+    // InternalXdiagramDsl.g:10997:1: rule__FontProperties__ConditionalAssignment_6 : ( ruleFeatureConditional ) ;
     public final void rule__FontProperties__ConditionalAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:11043:1: ( ( ruleFeatureConditional ) )
-            // InternalXdiagramDsl.g:11044:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:11001:1: ( ( ruleFeatureConditional ) )
+            // InternalXdiagramDsl.g:11002:2: ( ruleFeatureConditional )
             {
-            // InternalXdiagramDsl.g:11044:2: ( ruleFeatureConditional )
-            // InternalXdiagramDsl.g:11045:3: ruleFeatureConditional
+            // InternalXdiagramDsl.g:11002:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:11003:3: ruleFeatureConditional
             {
              before(grammarAccess.getFontPropertiesAccess().getConditionalFeatureConditionalParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
@@ -34048,17 +33942,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextAlign__ValueAssignment_1"
-    // InternalXdiagramDsl.g:11054:1: rule__TextAlign__ValueAssignment_1 : ( ruleTextAlignValue ) ;
+    // InternalXdiagramDsl.g:11012:1: rule__TextAlign__ValueAssignment_1 : ( ruleTextAlignValue ) ;
     public final void rule__TextAlign__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:11058:1: ( ( ruleTextAlignValue ) )
-            // InternalXdiagramDsl.g:11059:2: ( ruleTextAlignValue )
+            // InternalXdiagramDsl.g:11016:1: ( ( ruleTextAlignValue ) )
+            // InternalXdiagramDsl.g:11017:2: ( ruleTextAlignValue )
             {
-            // InternalXdiagramDsl.g:11059:2: ( ruleTextAlignValue )
-            // InternalXdiagramDsl.g:11060:3: ruleTextAlignValue
+            // InternalXdiagramDsl.g:11017:2: ( ruleTextAlignValue )
+            // InternalXdiagramDsl.g:11018:3: ruleTextAlignValue
             {
              before(grammarAccess.getTextAlignAccess().getValueTextAlignValueEnumRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -34089,17 +33983,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TextAlign__ConditionalAssignment_2"
-    // InternalXdiagramDsl.g:11069:1: rule__TextAlign__ConditionalAssignment_2 : ( ruleFeatureConditional ) ;
+    // InternalXdiagramDsl.g:11027:1: rule__TextAlign__ConditionalAssignment_2 : ( ruleFeatureConditional ) ;
     public final void rule__TextAlign__ConditionalAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:11073:1: ( ( ruleFeatureConditional ) )
-            // InternalXdiagramDsl.g:11074:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:11031:1: ( ( ruleFeatureConditional ) )
+            // InternalXdiagramDsl.g:11032:2: ( ruleFeatureConditional )
             {
-            // InternalXdiagramDsl.g:11074:2: ( ruleFeatureConditional )
-            // InternalXdiagramDsl.g:11075:3: ruleFeatureConditional
+            // InternalXdiagramDsl.g:11032:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:11033:3: ruleFeatureConditional
             {
              before(grammarAccess.getTextAlignAccess().getConditionalFeatureConditionalParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -34130,17 +34024,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineStyle__StyleAssignment_2"
-    // InternalXdiagramDsl.g:11084:1: rule__LineStyle__StyleAssignment_2 : ( ruleLineType ) ;
+    // InternalXdiagramDsl.g:11042:1: rule__LineStyle__StyleAssignment_2 : ( ruleLineType ) ;
     public final void rule__LineStyle__StyleAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:11088:1: ( ( ruleLineType ) )
-            // InternalXdiagramDsl.g:11089:2: ( ruleLineType )
+            // InternalXdiagramDsl.g:11046:1: ( ( ruleLineType ) )
+            // InternalXdiagramDsl.g:11047:2: ( ruleLineType )
             {
-            // InternalXdiagramDsl.g:11089:2: ( ruleLineType )
-            // InternalXdiagramDsl.g:11090:3: ruleLineType
+            // InternalXdiagramDsl.g:11047:2: ( ruleLineType )
+            // InternalXdiagramDsl.g:11048:3: ruleLineType
             {
              before(grammarAccess.getLineStyleAccess().getStyleLineTypeEnumRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -34171,21 +34065,21 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineStyle__ManhattanAssignment_3"
-    // InternalXdiagramDsl.g:11099:1: rule__LineStyle__ManhattanAssignment_3 : ( ( 'manhattan' ) ) ;
+    // InternalXdiagramDsl.g:11057:1: rule__LineStyle__ManhattanAssignment_3 : ( ( 'manhattan' ) ) ;
     public final void rule__LineStyle__ManhattanAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:11103:1: ( ( ( 'manhattan' ) ) )
-            // InternalXdiagramDsl.g:11104:2: ( ( 'manhattan' ) )
+            // InternalXdiagramDsl.g:11061:1: ( ( ( 'manhattan' ) ) )
+            // InternalXdiagramDsl.g:11062:2: ( ( 'manhattan' ) )
             {
-            // InternalXdiagramDsl.g:11104:2: ( ( 'manhattan' ) )
-            // InternalXdiagramDsl.g:11105:3: ( 'manhattan' )
+            // InternalXdiagramDsl.g:11062:2: ( ( 'manhattan' ) )
+            // InternalXdiagramDsl.g:11063:3: ( 'manhattan' )
             {
              before(grammarAccess.getLineStyleAccess().getManhattanManhattanKeyword_3_0()); 
-            // InternalXdiagramDsl.g:11106:3: ( 'manhattan' )
-            // InternalXdiagramDsl.g:11107:4: 'manhattan'
+            // InternalXdiagramDsl.g:11064:3: ( 'manhattan' )
+            // InternalXdiagramDsl.g:11065:4: 'manhattan'
             {
              before(grammarAccess.getLineStyleAccess().getManhattanManhattanKeyword_3_0()); 
             match(input,104,FOLLOW_2); 
@@ -34216,17 +34110,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineStyle__ConditionalAssignment_4"
-    // InternalXdiagramDsl.g:11118:1: rule__LineStyle__ConditionalAssignment_4 : ( ruleFeatureConditional ) ;
+    // InternalXdiagramDsl.g:11076:1: rule__LineStyle__ConditionalAssignment_4 : ( ruleFeatureConditional ) ;
     public final void rule__LineStyle__ConditionalAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:11122:1: ( ( ruleFeatureConditional ) )
-            // InternalXdiagramDsl.g:11123:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:11080:1: ( ( ruleFeatureConditional ) )
+            // InternalXdiagramDsl.g:11081:2: ( ruleFeatureConditional )
             {
-            // InternalXdiagramDsl.g:11123:2: ( ruleFeatureConditional )
-            // InternalXdiagramDsl.g:11124:3: ruleFeatureConditional
+            // InternalXdiagramDsl.g:11081:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:11082:3: ruleFeatureConditional
             {
              before(grammarAccess.getLineStyleAccess().getConditionalFeatureConditionalParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -34257,17 +34151,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineWidth__WidthAssignment_1"
-    // InternalXdiagramDsl.g:11133:1: rule__LineWidth__WidthAssignment_1 : ( RULE_INT ) ;
+    // InternalXdiagramDsl.g:11091:1: rule__LineWidth__WidthAssignment_1 : ( RULE_INT ) ;
     public final void rule__LineWidth__WidthAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:11137:1: ( ( RULE_INT ) )
-            // InternalXdiagramDsl.g:11138:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:11095:1: ( ( RULE_INT ) )
+            // InternalXdiagramDsl.g:11096:2: ( RULE_INT )
             {
-            // InternalXdiagramDsl.g:11138:2: ( RULE_INT )
-            // InternalXdiagramDsl.g:11139:3: RULE_INT
+            // InternalXdiagramDsl.g:11096:2: ( RULE_INT )
+            // InternalXdiagramDsl.g:11097:3: RULE_INT
             {
              before(grammarAccess.getLineWidthAccess().getWidthINTTerminalRuleCall_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -34294,17 +34188,17 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LineWidth__ConditionalAssignment_2"
-    // InternalXdiagramDsl.g:11148:1: rule__LineWidth__ConditionalAssignment_2 : ( ruleFeatureConditional ) ;
+    // InternalXdiagramDsl.g:11106:1: rule__LineWidth__ConditionalAssignment_2 : ( ruleFeatureConditional ) ;
     public final void rule__LineWidth__ConditionalAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalXdiagramDsl.g:11152:1: ( ( ruleFeatureConditional ) )
-            // InternalXdiagramDsl.g:11153:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:11110:1: ( ( ruleFeatureConditional ) )
+            // InternalXdiagramDsl.g:11111:2: ( ruleFeatureConditional )
             {
-            // InternalXdiagramDsl.g:11153:2: ( ruleFeatureConditional )
-            // InternalXdiagramDsl.g:11154:3: ruleFeatureConditional
+            // InternalXdiagramDsl.g:11111:2: ( ruleFeatureConditional )
+            // InternalXdiagramDsl.g:11112:3: ruleFeatureConditional
             {
              before(grammarAccess.getLineWidthAccess().getConditionalFeatureConditionalParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -34341,8 +34235,8 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0002000000000000L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x3018000000000000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x2018000000000002L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x1818000000000000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x1018000000000002L});
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000080000000000L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000100000000000L});
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000020L});
@@ -34352,65 +34246,64 @@ public class InternalXdiagramDslParser extends AbstractInternalContentAssistPars
     public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000800000000002L});
     public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000400000000000L,0x0000000000000008L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000008L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000400000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000004L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000300000000L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000C00000070L,0x0000000020000000L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x2000000000000000L,0x0000000007E00073L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x9000000000000000L,0x0000000007E00039L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000000000L,0x0000000000180000L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0080400000000000L,0x0000000040060000L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000000002L,0x0000000040060000L});
     public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0080000000000002L});
     public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0020000000000000L});
     public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0040000000000000L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x2000000000000000L,0x000000001FE00077L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x000000000000C000L});
-    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0C04000000000000L});
-    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000400000000010L});
-    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0400000000000000L});
-    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x4000000000000000L});
-    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x8200400000000000L,0x0000000000000008L});
-    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0200000000000002L,0x0000000000000008L});
-    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x8000000000000002L});
-    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x8200400000000000L,0x00000000C0061DC8L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0200000000000002L,0x00000000C0061DC8L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x8200400000000000L,0x00000000C00615C8L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0200000000000002L,0x00000000C00615C8L});
-    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000200L});
-    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x8200400000000000L,0x00000000C00617C8L});
-    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000200L});
-    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0200400000000000L,0x00000000C00615C8L});
-    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0404000000000000L});
-    public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
-    public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x8200400000000000L,0x00000000C007D5C8L});
-    public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0200000000000002L,0x00000000C007D5C8L});
-    public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x8000400000000000L,0x0000000000000580L});
-    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000580L});
-    public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x8200400000000000L,0x0000000000001508L});
-    public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0200000000000002L,0x0000000000001508L});
-    public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x00000000FFFF0010L});
-    public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0404000000000040L,0x0000000300000000L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x9000000000000000L,0x000000001FE0003BL});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x000000000000C000L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0604000000000000L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0800000000000000L});
+    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000400000000010L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0200000000000000L});
+    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x4100400000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0100000000000002L,0x0000000000000004L});
+    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x4000000000000002L});
+    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x4100400000000000L,0x00000000C0061D64L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0100000000000002L,0x00000000C0061D64L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x8000000000000000L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x4100400000000000L,0x00000000C0061564L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0100000000000002L,0x00000000C0061564L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000200L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x4100400000000000L,0x00000000C0061764L});
+    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000200L});
+    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0100400000000000L,0x00000000C0061564L});
+    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
+    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0204000000000000L});
+    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
+    public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x4100400000000000L,0x00000000C007D564L});
+    public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0100000000000002L,0x00000000C007D564L});
+    public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x4000400000000000L,0x0000000000000540L});
+    public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000540L});
+    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x4100400000000000L,0x0000000000001504L});
+    public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0100000000000002L,0x0000000000001504L});
+    public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x00000000FFFF0010L});
+    public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0204000000000040L,0x0000000300000000L});
     public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0000000000000000L,0x0000000100000000L});
-    public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x0100000000000040L});
-    public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x0504000000000000L});
-    public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x0000000000000000L,0x0000000C00000000L});
-    public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x0404000000000000L,0x0000000000002000L});
-    public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
-    public static final BitSet FOLLOW_67 = new BitSet(new long[]{0x0404000000000030L,0x0000001000000000L});
-    public static final BitSet FOLLOW_68 = new BitSet(new long[]{0x0000000000000032L,0x0000001000000000L});
-    public static final BitSet FOLLOW_69 = new BitSet(new long[]{0x0000000000000030L,0x0000001000000000L});
-    public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_71 = new BitSet(new long[]{0x0404000000003840L,0x000000E000000000L});
-    public static final BitSet FOLLOW_72 = new BitSet(new long[]{0x0000007000000000L});
-    public static final BitSet FOLLOW_73 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_74 = new BitSet(new long[]{0x0404038000000000L,0x0000010000000000L});
+    public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x0204000000000040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x0000000000000000L,0x0000000C00000000L});
+    public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x0204000000000000L,0x0000000000002000L});
+    public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x0204000000000030L,0x0000001000000000L});
+    public static final BitSet FOLLOW_67 = new BitSet(new long[]{0x0000000000000032L,0x0000001000000000L});
+    public static final BitSet FOLLOW_68 = new BitSet(new long[]{0x0000000000000030L,0x0000001000000000L});
+    public static final BitSet FOLLOW_69 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0204000000003840L,0x000000E000000000L});
+    public static final BitSet FOLLOW_71 = new BitSet(new long[]{0x0000007000000000L});
+    public static final BitSet FOLLOW_72 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_73 = new BitSet(new long[]{0x0204038000000000L,0x0000010000000000L});
 
 }

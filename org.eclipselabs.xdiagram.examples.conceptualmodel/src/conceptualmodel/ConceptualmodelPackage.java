@@ -269,13 +269,22 @@ public interface ConceptualmodelPackage extends EPackage {
 	int PACKAGE__ENTITIES = 1;
 
 	/**
+	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE__COMMENTS = 2;
+
+	/**
 	 * The number of structural features of the '<em>Package</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_FEATURE_COUNT = 2;
+	int PACKAGE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Package</em>' class.
@@ -287,6 +296,52 @@ public interface ConceptualmodelPackage extends EPackage {
 	int PACKAGE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link conceptualmodel.impl.CommentImpl <em>Comment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see conceptualmodel.impl.CommentImpl
+	 * @see conceptualmodel.impl.ConceptualmodelPackageImpl#getComment()
+	 * @generated
+	 */
+	int COMMENT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMENT__TEXT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMENT__ENTITY = 1;
+
+	/**
+	 * The number of structural features of the '<em>Comment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMENT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Comment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link conceptualmodel.AssociationType <em>Association Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -294,7 +349,7 @@ public interface ConceptualmodelPackage extends EPackage {
 	 * @see conceptualmodel.impl.ConceptualmodelPackageImpl#getAssociationType()
 	 * @generated
 	 */
-	int ASSOCIATION_TYPE = 4;
+	int ASSOCIATION_TYPE = 5;
 
 
 	/**
@@ -481,6 +536,49 @@ public interface ConceptualmodelPackage extends EPackage {
 	EReference getPackage_Entities();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link conceptualmodel.Package#getComments <em>Comments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Comments</em>'.
+	 * @see conceptualmodel.Package#getComments()
+	 * @see #getPackage()
+	 * @generated
+	 */
+	EReference getPackage_Comments();
+
+	/**
+	 * Returns the meta object for class '{@link conceptualmodel.Comment <em>Comment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Comment</em>'.
+	 * @see conceptualmodel.Comment
+	 * @generated
+	 */
+	EClass getComment();
+
+	/**
+	 * Returns the meta object for the attribute '{@link conceptualmodel.Comment#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see conceptualmodel.Comment#getText()
+	 * @see #getComment()
+	 * @generated
+	 */
+	EAttribute getComment_Text();
+
+	/**
+	 * Returns the meta object for the reference '{@link conceptualmodel.Comment#getEntity <em>Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Entity</em>'.
+	 * @see conceptualmodel.Comment#getEntity()
+	 * @see #getComment()
+	 * @generated
+	 */
+	EReference getComment_Entity();
+
+	/**
 	 * Returns the meta object for enum '{@link conceptualmodel.AssociationType <em>Association Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -656,6 +754,40 @@ public interface ConceptualmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PACKAGE__ENTITIES = eINSTANCE.getPackage_Entities();
+
+		/**
+		 * The meta object literal for the '<em><b>Comments</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PACKAGE__COMMENTS = eINSTANCE.getPackage_Comments();
+
+		/**
+		 * The meta object literal for the '{@link conceptualmodel.impl.CommentImpl <em>Comment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see conceptualmodel.impl.CommentImpl
+		 * @see conceptualmodel.impl.ConceptualmodelPackageImpl#getComment()
+		 * @generated
+		 */
+		EClass COMMENT = eINSTANCE.getComment();
+
+		/**
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMMENT__TEXT = eINSTANCE.getComment_Text();
+
+		/**
+		 * The meta object literal for the '<em><b>Entity</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMMENT__ENTITY = eINSTANCE.getComment_Entity();
 
 		/**
 		 * The meta object literal for the '{@link conceptualmodel.AssociationType <em>Association Type</em>}' enum.

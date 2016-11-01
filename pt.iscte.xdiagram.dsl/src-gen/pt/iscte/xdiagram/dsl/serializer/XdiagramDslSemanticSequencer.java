@@ -435,18 +435,15 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Decorator returns Decorator
 	 *
 	 * Constraint:
-	 *     (position=INT element=DecoratorElement)
+	 *     element=DecoratorElement
 	 */
 	protected void sequence_Decorator(ISerializationContext context, Decorator semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, ModelPackage.Literals.DECORATOR__POSITION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelPackage.Literals.DECORATOR__POSITION));
 			if (transientValues.isValueTransient(semanticObject, ModelPackage.Literals.DECORATOR__ELEMENT) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelPackage.Literals.DECORATOR__ELEMENT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getDecoratorAccess().getPositionINTTerminalRuleCall_1_0(), semanticObject.getPosition());
-		feeder.accept(grammarAccess.getDecoratorAccess().getElementDecoratorElementParserRuleCall_3_0(), semanticObject.getElement());
+		feeder.accept(grammarAccess.getDecoratorAccess().getElementDecoratorElementParserRuleCall_1_0(), semanticObject.getElement());
 		feeder.finish();
 	}
 	
@@ -835,7 +832,7 @@ public class XdiagramDslSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Position returns Position
 	 *
 	 * Constraint:
-	 *     (x=INT xRelative?='%'? y=INT yRelative?='%'? conditional=FeatureConditional?)
+	 *     (x=INT xRelative?='%'? (y=INT yRelative?='%'?)? conditional=FeatureConditional?)
 	 */
 	protected void sequence_Position(ISerializationContext context, Position semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

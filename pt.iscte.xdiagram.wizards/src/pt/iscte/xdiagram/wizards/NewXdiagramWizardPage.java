@@ -14,9 +14,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
@@ -30,12 +33,19 @@ import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.dialogs.ElementListSelectionDialog;
+import org.eclipse.ui.dialogs.ResourceListSelectionDialog;
+import org.eclipse.ui.dialogs.ResourceSelectionDialog;
 
 /**
  * The "New" wizard page allows setting the container for the new file as well
@@ -52,6 +62,7 @@ public class NewXdiagramWizardPage extends WizardPage {
 	private Text projectNameText;
 	private Text fileText;
 	private Text diagramIdText;
+	private Text diagramTypeText;
 	private Text diagramNameText;
 	private String ecoreProjectName;
 
@@ -69,23 +80,63 @@ public class NewXdiagramWizardPage extends WizardPage {
 		container = new Composite(parent, SWT.NONE);
 		container.setLayout(new GridLayout(2, false));
 
-		ecorePluginText = createField(container, "&Ecore project:", true);
-		ecoreFileText = createField(container, "&Ecore file:", true);
+		ecorePluginText = createField(container, "&Ecore project:", false);
+		ecorePluginText.setToolTipText("id of the plugin that contains the ecore file");
+		ecoreFileText = createField(container, "&Ecore file:", false);
+		ecoreFileText.setToolTipText("relative path to the ecore file");
 
+		Button button = new Button(container, SWT.PUSH);
+		button.setText("&Browse...");
+		button.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				List<IResource> list = new ArrayList<>();
+				try {
+					ResourcesPlugin.getWorkspace().getRoot().accept((r) -> {
+						if("ecore".equals(r.getFileExtension())) list.add(r);
+						return true;
+					});
+				} catch (CoreException ex) {
+					ex.printStackTrace();
+				}
+
+				ResourceListSelectionDialog dialog = new ResourceListSelectionDialog(null, list.toArray(new IResource[list.size()]));
+				dialog.setTitle("Please select an .ecore file.");
+				dialog.open();
+				Object[] sel = dialog.getResult();
+				if(sel != null && sel.length > 0) {
+					IFile f = (IFile) sel[0];
+					initialize(f);
+				}
+			}
+		});
+		new Label(container, SWT.NONE);
 
 		new Label(container, SWT.HORIZONTAL | SWT.SEPARATOR).setLayoutData(new GridData(SWT.FILL, SWT.NONE, true, false, 2, 1));
-		
+
 		projectNameText = createField(container,"&Project name:", false);
 		diagramIdText = createField(container, "&Diagram id:", false);
+		diagramTypeText = createField(container, "&Diagram type:", false);
 		diagramNameText = createField(container, "&Diagram description:",false);
 		fileText = createField(container,"&Specification file:",false);
 
 		new Label(container, SWT.NULL).setText("Root class:");
-		
+
 		rootCombo = new Combo(container, SWT.DROP_DOWN | SWT.BORDER | SWT.READ_ONLY);
-		
+
+
 		//----------------
-		initialize();
+		if (selection != null && selection.isEmpty() == false
+				&& selection instanceof IStructuredSelection) {
+			IStructuredSelection ssel = (IStructuredSelection) selection;
+			if (ssel.size() > 1)
+				return;
+			Object obj = ssel.getFirstElement();
+			if (obj instanceof IFile) {
+				initialize((IFile) obj);
+			}
+		}
+
 		dialogChanged();
 		setControl(container);
 		setPageComplete(false);
@@ -115,28 +166,19 @@ public class NewXdiagramWizardPage extends WizardPage {
 
 
 
-	private void initialize() {
-		if (selection != null && selection.isEmpty() == false
-				&& selection instanceof IStructuredSelection) {
-			IStructuredSelection ssel = (IStructuredSelection) selection;
-			if (ssel.size() > 1)
-				return;
-			Object obj = ssel.getFirstElement();
-			if (obj instanceof IFile) {
-				IFile ecoreFile = (IFile) obj;
-
-				String fileName = ecoreFile.getName().substring(0, ecoreFile.getName().lastIndexOf('.'));
-				ecorePluginText.setText(ecoreFile.getProject().getName());
-				ecoreFileText.setText(ecoreFile.getProjectRelativePath().toString());
-				diagramIdText.setText(fileName + "Diagram");
-				fileText.setText(fileName + ".xdia");
-				ecoreProjectName = ecoreFile.getProject().getName();
-				projectNameText.setText(ecoreProjectName + ".xdiagram");
-			}
-		}
+	private void initialize(IFile ecoreFile) {
+		assert ecoreFile != null;
+		String fileName = ecoreFile.getName().substring(0, ecoreFile.getName().lastIndexOf('.'));
+		ecorePluginText.setText(ecoreFile.getProject().getName());
+		ecoreFileText.setText(ecoreFile.getProjectRelativePath().toString());
+		diagramIdText.setText(fileName + "Diagram");
+		diagramTypeText.setText(fileName);
+		fileText.setText(fileName + ".xdia");
+		ecoreProjectName = ecoreFile.getProject().getName();
+		projectNameText.setText(ecoreProjectName + ".xdiagram");
 	}
 
-
+	// TODO validate ecore project
 	private void dialogChanged() {
 		IResource ecoreFile = ResourcesPlugin.getWorkspace().getRoot().findMember(new Path(getEcoreProjectName() + "/" + getEcoreFilePath()));
 		String fileName = getFileName();
@@ -158,12 +200,6 @@ public class NewXdiagramWizardPage extends WizardPage {
 		Resource resource = rs.getResource(modelLocation, true);
 		ePackage = (EPackage) resource.getContents().get(0);
 
-//		list.removeAll();
-//		for (EClassifier eClassifier : ePackage.getEClassifiers()) {
-//			if(eClassifier instanceof EClass && !((EClass) eClassifier).isAbstract())
-//				list.add(eClassifier.getName());
-//		}
-
 		int rootSel = rootCombo.getSelectionIndex();
 		List<String> list = new ArrayList<>();
 		for (EClassifier eClassifier : ePackage.getEClassifiers()) {
@@ -181,7 +217,7 @@ public class NewXdiagramWizardPage extends WizardPage {
 		else {
 			rootCombo.select(0);
 		}
-		
+
 		if(getProjectName().isEmpty()) {
 			updateStatus("Project name must be defined.");
 			return;
@@ -190,7 +226,7 @@ public class NewXdiagramWizardPage extends WizardPage {
 			updateStatus("A project exists in the workspace with the specified name.");
 			return;
 		}
-		
+
 		if (fileName.length() == 0) {
 			updateStatus("File name must be specified");
 			return;
@@ -247,6 +283,10 @@ public class NewXdiagramWizardPage extends WizardPage {
 		return diagramIdText.getText();
 	}
 
+	public String getDiagramType() {
+		return diagramTypeText.getText();
+	}
+
 	public String getDiagramDescription() {
 		return diagramNameText.getText();
 	}
@@ -261,5 +301,5 @@ public class NewXdiagramWizardPage extends WizardPage {
 	public EPackage getEPackage() {
 		return ePackage;
 	}
-	
+
 }

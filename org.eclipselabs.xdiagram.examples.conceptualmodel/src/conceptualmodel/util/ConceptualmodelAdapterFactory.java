@@ -4,6 +4,7 @@ package conceptualmodel.util;
 
 import conceptualmodel.Association;
 import conceptualmodel.Attribute;
+import conceptualmodel.Comment;
 import conceptualmodel.ConceptualmodelPackage;
 import conceptualmodel.Entity;
 
@@ -87,6 +88,10 @@ public class ConceptualmodelAdapterFactory extends AdapterFactoryImpl {
 				return createPackageAdapter();
 			}
 			@Override
+			public Adapter caseComment(Comment object) {
+				return createCommentAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -159,6 +164,20 @@ public class ConceptualmodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPackageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link conceptualmodel.Comment <em>Comment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see conceptualmodel.Comment
+	 * @generated
+	 */
+	public Adapter createCommentAdapter() {
 		return null;
 	}
 

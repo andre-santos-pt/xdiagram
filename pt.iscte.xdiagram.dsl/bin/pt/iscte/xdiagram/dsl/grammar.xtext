@@ -147,7 +147,7 @@ LinkFeature returns Feature:
 
 
 Decorator:
-	'decorator' position=INT '%' element = DecoratorElement
+	'decorator' element = DecoratorElement
 ;
 
 
@@ -506,7 +506,7 @@ Point:
 ;
 
 Position:
-	'position' x=INT (xRelative?='%')? y=INT (yRelative?='%')?
+	'position' x=INT (xRelative?='%')? (y=INT (yRelative?='%')?)?
 	(conditional=FeatureConditional)?
 	';'
 ;

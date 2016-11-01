@@ -25,6 +25,7 @@ import org.osgi.framework.Bundle;
 
 import pt.iscte.xdiagram.dsl.model.Custom;
 import pt.iscte.xdiagram.dsl.model.CustomFigure;
+import pt.iscte.xdiagram.dsl.model.Feature;
 import pt.iscte.xdiagram.dsl.model.FeatureContainer;
 import pt.iscte.xdiagram.dsl.model.Image;
 import pt.iscte.xdiagram.dsl.model.Line;
@@ -45,9 +46,16 @@ public enum ElementCreation {
 	POLYLINE {
 		protected GraphicsAlgorithm create(FeatureContainer element, Diagram diagram, GraphicsAlgorithmContainer container, Bundle bundle) {
 			Polyline p = (Polyline) element;
-			return p.isPolygon() ?
+			org.eclipse.graphiti.mm.algorithms.Polyline fig = p.isPolygon() ?
 					Graphiti.getGaService().createPolygon(container) :
 						Graphiti.getGaService().createPolyline(container);
+			for(Feature f : p.getFeatures())
+				if(f instanceof pt.iscte.xdiagram.dsl.model.Point) {
+					pt.iscte.xdiagram.dsl.model.Point point = (pt.iscte.xdiagram.dsl.model.Point) f;
+					fig.getPoints().add(Graphiti.getGaService().createPoint(point.getX(), point.getY()));
+				}
+				
+			return fig;
 		}
 	},
 	

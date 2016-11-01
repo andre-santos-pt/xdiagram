@@ -1073,10 +1073,11 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:56:7: ( '%' )
-            // InternalXdiagramDsl.g:56:9: '%'
+            // InternalXdiagramDsl.g:56:7: ( 'anchor' )
+            // InternalXdiagramDsl.g:56:9: 'anchor'
             {
-            match('%'); 
+            match("anchor"); 
+
 
             }
 
@@ -1093,11 +1094,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:57:7: ( 'anchor' )
-            // InternalXdiagramDsl.g:57:9: 'anchor'
+            // InternalXdiagramDsl.g:57:7: ( ';' )
+            // InternalXdiagramDsl.g:57:9: ';'
             {
-            match("anchor"); 
-
+            match(';'); 
 
             }
 
@@ -1114,10 +1114,11 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:58:7: ( ';' )
-            // InternalXdiagramDsl.g:58:9: ';'
+            // InternalXdiagramDsl.g:58:7: ( 'max' )
+            // InternalXdiagramDsl.g:58:9: 'max'
             {
-            match(';'); 
+            match("max"); 
+
 
             }
 
@@ -1134,10 +1135,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:59:7: ( 'max' )
-            // InternalXdiagramDsl.g:59:9: 'max'
+            // InternalXdiagramDsl.g:59:7: ( 'colors' )
+            // InternalXdiagramDsl.g:59:9: 'colors'
             {
-            match("max"); 
+            match("colors"); 
 
 
             }
@@ -1155,10 +1156,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:60:7: ( 'colors' )
-            // InternalXdiagramDsl.g:60:9: 'colors'
+            // InternalXdiagramDsl.g:60:7: ( 'figure' )
+            // InternalXdiagramDsl.g:60:9: 'figure'
             {
-            match("colors"); 
+            match("figure"); 
 
 
             }
@@ -1176,10 +1177,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:61:7: ( 'figure' )
-            // InternalXdiagramDsl.g:61:9: 'figure'
+            // InternalXdiagramDsl.g:61:7: ( 'as' )
+            // InternalXdiagramDsl.g:61:9: 'as'
             {
-            match("figure"); 
+            match("as"); 
 
 
             }
@@ -1197,10 +1198,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:62:7: ( 'as' )
-            // InternalXdiagramDsl.g:62:9: 'as'
+            // InternalXdiagramDsl.g:62:7: ( 'child' )
+            // InternalXdiagramDsl.g:62:9: 'child'
             {
-            match("as"); 
+            match("child"); 
 
 
             }
@@ -1218,10 +1219,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:63:7: ( 'child' )
-            // InternalXdiagramDsl.g:63:9: 'child'
+            // InternalXdiagramDsl.g:63:7: ( 'rhombus' )
+            // InternalXdiagramDsl.g:63:9: 'rhombus'
             {
-            match("child"); 
+            match("rhombus"); 
 
 
             }
@@ -1239,10 +1240,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:64:7: ( 'rhombus' )
-            // InternalXdiagramDsl.g:64:9: 'rhombus'
+            // InternalXdiagramDsl.g:64:7: ( 'triangle' )
+            // InternalXdiagramDsl.g:64:9: 'triangle'
             {
-            match("rhombus"); 
+            match("triangle"); 
 
 
             }
@@ -1260,10 +1261,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = T__65;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:65:7: ( 'triangle' )
-            // InternalXdiagramDsl.g:65:9: 'triangle'
+            // InternalXdiagramDsl.g:65:7: ( 'arrow' )
+            // InternalXdiagramDsl.g:65:9: 'arrow'
             {
-            match("triangle"); 
+            match("arrow"); 
 
 
             }
@@ -1281,10 +1282,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = T__66;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:66:7: ( 'arrow' )
-            // InternalXdiagramDsl.g:66:9: 'arrow'
+            // InternalXdiagramDsl.g:66:7: ( 'contains' )
+            // InternalXdiagramDsl.g:66:9: 'contains'
             {
-            match("arrow"); 
+            match("contains"); 
 
 
             }
@@ -1302,10 +1303,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = T__67;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:67:7: ( 'contains' )
-            // InternalXdiagramDsl.g:67:9: 'contains'
+            // InternalXdiagramDsl.g:67:7: ( 'label' )
+            // InternalXdiagramDsl.g:67:9: 'label'
             {
-            match("contains"); 
+            match("label"); 
 
 
             }
@@ -1323,10 +1324,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = T__68;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:68:7: ( 'label' )
-            // InternalXdiagramDsl.g:68:9: 'label'
+            // InternalXdiagramDsl.g:68:7: ( 'image' )
+            // InternalXdiagramDsl.g:68:9: 'image'
             {
-            match("label"); 
+            match("image"); 
 
 
             }
@@ -1344,10 +1345,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = T__69;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:69:7: ( 'image' )
-            // InternalXdiagramDsl.g:69:9: 'image'
+            // InternalXdiagramDsl.g:69:7: ( 'invisible' )
+            // InternalXdiagramDsl.g:69:9: 'invisible'
             {
-            match("image"); 
+            match("invisible"); 
 
 
             }
@@ -1365,10 +1366,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = T__70;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:70:7: ( 'invisible' )
-            // InternalXdiagramDsl.g:70:9: 'invisible'
+            // InternalXdiagramDsl.g:70:7: ( 'transparency' )
+            // InternalXdiagramDsl.g:70:9: 'transparency'
             {
-            match("invisible"); 
+            match("transparency"); 
 
 
             }
@@ -1386,11 +1387,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = T__71;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:71:7: ( 'transparency' )
-            // InternalXdiagramDsl.g:71:9: 'transparency'
+            // InternalXdiagramDsl.g:71:7: ( '%' )
+            // InternalXdiagramDsl.g:71:9: '%'
             {
-            match("transparency"); 
-
+            match('%'); 
 
             }
 
@@ -2099,10 +2099,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:11163:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalXdiagramDsl.g:11163:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalXdiagramDsl.g:11121:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalXdiagramDsl.g:11121:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalXdiagramDsl.g:11163:11: ( '^' )?
+            // InternalXdiagramDsl.g:11121:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -2111,7 +2111,7 @@ public class InternalXdiagramDslLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalXdiagramDsl.g:11163:11: '^'
+                    // InternalXdiagramDsl.g:11121:11: '^'
                     {
                     match('^'); 
 
@@ -2129,7 +2129,7 @@ public class InternalXdiagramDslLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalXdiagramDsl.g:11163:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalXdiagramDsl.g:11121:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -2178,10 +2178,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:11165:10: ( ( '0' .. '9' )+ )
-            // InternalXdiagramDsl.g:11165:12: ( '0' .. '9' )+
+            // InternalXdiagramDsl.g:11123:10: ( ( '0' .. '9' )+ )
+            // InternalXdiagramDsl.g:11123:12: ( '0' .. '9' )+
             {
-            // InternalXdiagramDsl.g:11165:12: ( '0' .. '9' )+
+            // InternalXdiagramDsl.g:11123:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -2195,7 +2195,7 @@ public class InternalXdiagramDslLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:11165:13: '0' .. '9'
+            	    // InternalXdiagramDsl.g:11123:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2227,10 +2227,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:11167:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalXdiagramDsl.g:11167:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalXdiagramDsl.g:11125:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalXdiagramDsl.g:11125:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalXdiagramDsl.g:11167:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalXdiagramDsl.g:11125:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -2248,10 +2248,10 @@ public class InternalXdiagramDslLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalXdiagramDsl.g:11167:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalXdiagramDsl.g:11125:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalXdiagramDsl.g:11167:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalXdiagramDsl.g:11125:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -2267,7 +2267,7 @@ public class InternalXdiagramDslLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalXdiagramDsl.g:11167:21: '\\\\' .
+                    	    // InternalXdiagramDsl.g:11125:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -2275,7 +2275,7 @@ public class InternalXdiagramDslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalXdiagramDsl.g:11167:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalXdiagramDsl.g:11125:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2300,10 +2300,10 @@ public class InternalXdiagramDslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalXdiagramDsl.g:11167:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalXdiagramDsl.g:11125:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalXdiagramDsl.g:11167:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalXdiagramDsl.g:11125:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -2319,7 +2319,7 @@ public class InternalXdiagramDslLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalXdiagramDsl.g:11167:54: '\\\\' .
+                    	    // InternalXdiagramDsl.g:11125:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -2327,7 +2327,7 @@ public class InternalXdiagramDslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalXdiagramDsl.g:11167:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalXdiagramDsl.g:11125:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2370,12 +2370,12 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:11169:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalXdiagramDsl.g:11169:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalXdiagramDsl.g:11127:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalXdiagramDsl.g:11127:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalXdiagramDsl.g:11169:24: ( options {greedy=false; } : . )*
+            // InternalXdiagramDsl.g:11127:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -2400,7 +2400,7 @@ public class InternalXdiagramDslLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:11169:52: .
+            	    // InternalXdiagramDsl.g:11127:52: .
             	    {
             	    matchAny(); 
 
@@ -2430,12 +2430,12 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:11171:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalXdiagramDsl.g:11171:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalXdiagramDsl.g:11129:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalXdiagramDsl.g:11129:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalXdiagramDsl.g:11171:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalXdiagramDsl.g:11129:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -2448,7 +2448,7 @@ public class InternalXdiagramDslLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalXdiagramDsl.g:11171:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalXdiagramDsl.g:11129:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2468,7 +2468,7 @@ public class InternalXdiagramDslLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalXdiagramDsl.g:11171:40: ( ( '\\r' )? '\\n' )?
+            // InternalXdiagramDsl.g:11129:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -2477,9 +2477,9 @@ public class InternalXdiagramDslLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalXdiagramDsl.g:11171:41: ( '\\r' )? '\\n'
+                    // InternalXdiagramDsl.g:11129:41: ( '\\r' )? '\\n'
                     {
-                    // InternalXdiagramDsl.g:11171:41: ( '\\r' )?
+                    // InternalXdiagramDsl.g:11129:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -2488,7 +2488,7 @@ public class InternalXdiagramDslLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalXdiagramDsl.g:11171:41: '\\r'
+                            // InternalXdiagramDsl.g:11129:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2520,10 +2520,10 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:11173:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalXdiagramDsl.g:11173:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalXdiagramDsl.g:11131:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalXdiagramDsl.g:11131:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalXdiagramDsl.g:11173:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalXdiagramDsl.g:11131:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -2577,8 +2577,8 @@ public class InternalXdiagramDslLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXdiagramDsl.g:11175:16: ( . )
-            // InternalXdiagramDsl.g:11175:18: .
+            // InternalXdiagramDsl.g:11133:16: ( . )
+            // InternalXdiagramDsl.g:11133:18: .
             {
             matchAny(); 
 
@@ -3320,11 +3320,11 @@ public class InternalXdiagramDslLexer extends Lexer {
     static final String DFA12_maxS =
         "\1\uffff\1\154\1\157\1\162\1\164\1\165\1\150\1\161\1\162\1\157\1\151\2\145\1\151\1\163\3\165\1\uffff\1\76\1\157\1\uffff\1\154\5\uffff\1\157\1\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\162\1\151\1\uffff\1\165\1\156\1\151\1\141\1\162\1\155\1\170\1\165\1\162\1\166\1\172\2\141\1\164\2\151\1\172\2\165\1\145\1\165\1\143\1\154\1\163\1\147\1\157\1\170\1\164\1\154\1\156\1\146\1\171\1\165\1\143\1\172\1\162\1\151\1\166\1\144\1\154\1\143\1\154\1\147\2\162\1\165\1\163\2\uffff\1\163\1\164\1\141\1\143\1\uffff\1\157\1\154\1\151\5\uffff\1\151\1\162\6\uffff\1\164\1\156\1\162\1\157\1\164\1\156\1\164\1\154\1\163\1\143\1\145\1\154\1\164\1\145\1\141\1\156\1\147\1\157\1\151\1\uffff\1\147\1\154\1\147\1\166\1\164\1\166\1\145\1\151\1\162\1\141\1\171\1\145\1\143\1\145\1\153\1\144\1\172\1\145\1\164\1\151\1\150\1\155\1\157\1\172\1\150\1\141\1\154\1\145\1\153\1\164\1\145\1\157\1\141\1\150\1\uffff\1\157\1\141\1\147\1\171\1\145\1\154\1\150\1\163\1\165\1\164\1\145\1\160\1\147\1\156\1\151\1\171\1\150\1\164\1\147\1\157\1\162\1\151\1\164\1\156\1\151\1\141\1\151\1\145\1\151\1\162\1\141\2\145\1\144\1\163\1\154\1\163\3\172\1\156\1\163\1\145\1\155\1\163\1\145\1\151\1\157\3\145\1\172\1\144\1\143\1\162\1\172\1\156\1\153\1\172\1\147\1\172\1\uffff\1\162\1\141\1\172\1\164\1\142\1\157\1\151\1\uffff\1\141\1\155\1\157\2\172\1\167\1\172\1\154\1\165\1\172\1\157\1\167\1\154\1\156\3\172\1\163\1\145\1\162\1\172\1\147\1\154\1\151\2\164\1\154\2\145\2\162\1\145\1\160\1\72\1\145\1\172\1\156\1\143\1\172\1\145\1\163\1\151\2\162\2\172\1\145\1\172\3\uffff\1\147\1\160\1\164\2\151\1\172\1\143\1\151\2\172\1\162\1\uffff\1\172\2\145\1\uffff\2\172\1\uffff\1\162\1\uffff\1\145\1\156\1\141\1\172\1\165\2\156\1\164\1\157\1\167\2\uffff\1\164\1\151\1\uffff\1\172\1\164\1\uffff\1\162\3\172\3\uffff\1\151\1\172\1\145\1\uffff\1\162\1\145\1\156\1\172\1\151\1\157\1\151\2\144\2\141\1\55\1\163\1\uffff\1\172\1\157\2\141\1\uffff\1\162\1\172\1\156\2\172\2\uffff\1\172\1\uffff\1\154\1\141\1\172\1\156\1\142\1\uffff\1\163\1\156\2\uffff\1\172\1\uffff\2\172\2\uffff\1\157\1\156\1\147\1\142\1\uffff\1\163\2\172\1\164\1\144\1\172\1\171\1\144\1\uffff\2\172\3\uffff\1\141\1\uffff\1\172\1\157\1\172\1\55\1\uffff\1\157\2\156\2\172\1\155\1\164\1\uffff\1\145\1\uffff\1\156\1\172\1\154\1\172\1\uffff\1\163\3\uffff\1\145\1\162\1\uffff\1\147\1\154\1\172\1\147\3\uffff\1\165\1\143\2\154\1\172\2\uffff\1\141\1\145\1\uffff\1\154\1\164\2\uffff\1\172\1\uffff\1\165\2\uffff\1\156\1\172\1\145\2\uffff\1\172\1\157\1\172\1\164\1\uffff\1\172\1\uffff\2\172\1\145\1\172\1\145\1\uffff\1\172\1\156\3\145\1\uffff\1\156\1\154\1\145\1\150\1\uffff\1\156\1\172\1\uffff\1\172\1\uffff\1\162\1\uffff\1\141\3\uffff\1\156\1\uffff\1\172\1\uffff\1\144\7\172\1\144\2\uffff\1\172\1\154\1\143\1\uffff\1\172\7\uffff\1\172\1\uffff\1\172\1\171\3\uffff\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\22\uffff\1\26\2\uffff\1\41\1\uffff\1\44\1\45\1\46\1\56\1\60\1\uffff\1\126\1\uffff\1\137\1\140\3\uffff\1\144\1\145\2\uffff\1\137\57\uffff\1\26\1\27\4\uffff\1\41\3\uffff\1\44\1\45\1\46\1\56\1\60\2\uffff\1\126\1\140\1\141\1\142\1\143\1\144\23\uffff\1\50\42\uffff\1\64\75\uffff\1\12\7\uffff\1\61\60\uffff\1\21\1\104\1\30\13\uffff\1\76\3\uffff\1\10\2\uffff\1\22\1\uffff\1\134\12\uffff\1\16\1\52\2\uffff\1\32\2\uffff\1\20\4\uffff\1\23\1\51\1\123\3\uffff\1\105\15\uffff\1\132\4\uffff\1\122\5\uffff\1\65\1\112\1\uffff\1\3\5\uffff\1\73\2\uffff\1\15\1\6\1\uffff\1\35\2\uffff\1\17\1\11\4\uffff\1\34\10\uffff\1\72\2\uffff\1\70\1\133\1\106\1\uffff\1\31\4\uffff\1\77\7\uffff\1\43\1\uffff\1\121\4\uffff\1\62\1\uffff\1\101\1\33\1\116\2\uffff\1\54\4\uffff\1\7\1\53\1\114\5\uffff\1\13\1\103\2\uffff\1\14\2\uffff\1\102\1\57\1\uffff\1\63\1\uffff\1\25\1\42\3\uffff\1\36\1\37\4\uffff\1\1\1\uffff\1\2\5\uffff\1\135\5\uffff\1\66\4\uffff\1\24\2\uffff\1\117\1\uffff\1\47\1\uffff\1\115\1\uffff\1\130\1\71\1\67\1\uffff\1\4\1\uffff\1\5\11\uffff\1\100\1\120\3\uffff\1\74\1\uffff\1\111\1\113\1\127\1\136\1\40\1\107\1\110\1\uffff\1\55\2\uffff\1\125\1\124\1\131\1\uffff\1\75";
+        "\22\uffff\1\26\2\uffff\1\41\1\uffff\1\44\1\45\1\46\1\57\1\75\1\uffff\1\126\1\uffff\1\137\1\140\3\uffff\1\144\1\145\2\uffff\1\137\57\uffff\1\26\1\27\4\uffff\1\41\3\uffff\1\44\1\45\1\46\1\57\1\75\2\uffff\1\126\1\140\1\141\1\142\1\143\1\144\23\uffff\1\50\42\uffff\1\63\75\uffff\1\12\7\uffff\1\60\60\uffff\1\21\1\104\1\30\13\uffff\1\76\3\uffff\1\10\2\uffff\1\22\1\uffff\1\134\12\uffff\1\16\1\52\2\uffff\1\32\2\uffff\1\20\4\uffff\1\23\1\51\1\123\3\uffff\1\105\15\uffff\1\132\4\uffff\1\122\5\uffff\1\64\1\112\1\uffff\1\3\5\uffff\1\72\2\uffff\1\15\1\6\1\uffff\1\35\2\uffff\1\17\1\11\4\uffff\1\34\10\uffff\1\71\2\uffff\1\67\1\133\1\106\1\uffff\1\31\4\uffff\1\77\7\uffff\1\43\1\uffff\1\121\4\uffff\1\61\1\uffff\1\101\1\33\1\116\2\uffff\1\54\4\uffff\1\7\1\53\1\114\5\uffff\1\13\1\103\2\uffff\1\14\2\uffff\1\102\1\56\1\uffff\1\62\1\uffff\1\25\1\42\3\uffff\1\36\1\37\4\uffff\1\1\1\uffff\1\2\5\uffff\1\135\5\uffff\1\65\4\uffff\1\24\2\uffff\1\117\1\uffff\1\47\1\uffff\1\115\1\uffff\1\130\1\70\1\66\1\uffff\1\4\1\uffff\1\5\11\uffff\1\100\1\120\3\uffff\1\73\1\uffff\1\111\1\113\1\127\1\136\1\40\1\107\1\110\1\uffff\1\55\2\uffff\1\125\1\124\1\131\1\uffff\1\74";
     static final String DFA12_specialS =
         "\1\2\40\uffff\1\0\1\1\u01f0\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\45\2\44\2\45\1\44\22\45\1\44\1\45\1\41\2\45\1\32\1\45\1\42\2\45\1\31\3\45\1\30\1\43\12\40\1\45\1\33\1\23\1\22\3\45\32\37\2\45\1\35\1\36\1\37\1\45\1\16\1\11\1\2\1\24\1\26\1\20\1\10\1\34\1\4\2\37\1\15\1\13\1\17\1\5\1\21\1\37\1\12\1\7\1\3\1\37\1\1\1\6\1\37\1\14\1\37\1\25\1\45\1\27\uff82\45",
+            "\11\45\2\44\2\45\1\44\22\45\1\44\1\45\1\41\2\45\1\33\1\45\1\42\2\45\1\31\3\45\1\30\1\43\12\40\1\45\1\32\1\23\1\22\3\45\32\37\2\45\1\35\1\36\1\37\1\45\1\16\1\11\1\2\1\24\1\26\1\20\1\10\1\34\1\4\2\37\1\15\1\13\1\17\1\5\1\21\1\37\1\12\1\7\1\3\1\37\1\1\1\6\1\37\1\14\1\37\1\25\1\45\1\27\uff82\45",
             "\1\46\6\uffff\1\47",
             "\1\52\2\uffff\1\53\1\55\2\uffff\1\54\2\uffff\1\51",
             "\1\61\3\uffff\1\57\3\uffff\1\56\10\uffff\1\60",
@@ -3967,9 +3967,9 @@ public class InternalXdiagramDslLexer extends Lexer {
 
                         else if ( (LA12_0=='*') ) {s = 25;}
 
-                        else if ( (LA12_0=='%') ) {s = 26;}
+                        else if ( (LA12_0==';') ) {s = 26;}
 
-                        else if ( (LA12_0==';') ) {s = 27;}
+                        else if ( (LA12_0=='%') ) {s = 27;}
 
                         else if ( (LA12_0=='h') ) {s = 28;}
 

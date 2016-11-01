@@ -55,7 +55,7 @@ public class NewXdiagramWizard extends Wizard implements INewWizard {
 		String ecoreFilePath = page.getEcoreFilePath();
 		String diagramId = page.getDiagramId();
 		String diagramDesc = page.getDiagramDescription();
-		String diagramType = diagramId.substring(0, diagramId.indexOf("Diagram")); // TODO review
+		String diagramType = page.getDiagramType();
 		String specFile = page.getFileName();
 		String ePackageName = page.getEPackageName();
 		String ePackageURI = page.getEPackage().getNsURI();

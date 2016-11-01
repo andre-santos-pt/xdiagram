@@ -1021,32 +1021,10 @@ ruleDecorator returns [EObject current=null]
 		}
 		(
 			(
-				lv_position_1_0=RULE_INT
 				{
-					newLeafNode(lv_position_1_0, grammarAccess.getDecoratorAccess().getPositionINTTerminalRuleCall_1_0());
+					newCompositeNode(grammarAccess.getDecoratorAccess().getElementDecoratorElementParserRuleCall_1_0());
 				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDecoratorRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"position",
-						lv_position_1_0,
-						"org.eclipse.xtext.common.Terminals.INT");
-				}
-			)
-		)
-		otherlv_2='%'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getDecoratorAccess().getPercentSignKeyword_2());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getDecoratorAccess().getElementDecoratorElementParserRuleCall_3_0());
-				}
-				lv_element_3_0=ruleDecoratorElement
+				lv_element_1_0=ruleDecoratorElement
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDecoratorRule());
@@ -1054,7 +1032,7 @@ ruleDecorator returns [EObject current=null]
 					set(
 						$current,
 						"element",
-						lv_element_3_0,
+						lv_element_1_0,
 						"pt.iscte.xdiagram.dsl.XdiagramDsl.DecoratorElement");
 					afterParserOrEnumRuleCall();
 				}
@@ -3892,40 +3870,42 @@ rulePosition returns [EObject current=null]
 		)?
 		(
 			(
-				lv_y_3_0=RULE_INT
-				{
-					newLeafNode(lv_y_3_0, grammarAccess.getPositionAccess().getYINTTerminalRuleCall_3_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getPositionRule());
+				(
+					lv_y_3_0=RULE_INT
+					{
+						newLeafNode(lv_y_3_0, grammarAccess.getPositionAccess().getYINTTerminalRuleCall_3_0_0());
 					}
-					setWithLastConsumed(
-						$current,
-						"y",
-						lv_y_3_0,
-						"org.eclipse.xtext.common.Terminals.INT");
-				}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getPositionRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"y",
+							lv_y_3_0,
+							"org.eclipse.xtext.common.Terminals.INT");
+					}
+				)
 			)
-		)
-		(
 			(
-				lv_yRelative_4_0='%'
-				{
-					newLeafNode(lv_yRelative_4_0, grammarAccess.getPositionAccess().getYRelativePercentSignKeyword_4_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getPositionRule());
+				(
+					lv_yRelative_4_0='%'
+					{
+						newLeafNode(lv_yRelative_4_0, grammarAccess.getPositionAccess().getYRelativePercentSignKeyword_3_1_0());
 					}
-					setWithLastConsumed($current, "yRelative", true, "\%");
-				}
-			)
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getPositionRule());
+						}
+						setWithLastConsumed($current, "yRelative", true, "\%");
+					}
+				)
+			)?
 		)?
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getPositionAccess().getConditionalFeatureConditionalParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getPositionAccess().getConditionalFeatureConditionalParserRuleCall_4_0());
 				}
 				lv_conditional_5_0=ruleFeatureConditional
 				{
@@ -3943,7 +3923,7 @@ rulePosition returns [EObject current=null]
 		)?
 		otherlv_6=';'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getPositionAccess().getSemicolonKeyword_6());
+			newLeafNode(otherlv_6, grammarAccess.getPositionAccess().getSemicolonKeyword_5());
 		}
 	)
 ;

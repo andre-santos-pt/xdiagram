@@ -90,7 +90,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//Link/decorators"/>
     </genClasses>
     <genClasses ecoreClass="XdiagramDsl.ecore#//Decorator">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XdiagramDsl.ecore#//Decorator/position"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XdiagramDsl.ecore#//Decorator/element"/>
     </genClasses>
     <genClasses ecoreClass="XdiagramDsl.ecore#//Anchor">

@@ -696,36 +696,24 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.Decorator");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDecoratorKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cPositionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cPositionINTTerminalRuleCall_1_0 = (RuleCall)cPositionAssignment_1.eContents().get(0);
-		private final Keyword cPercentSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cElementAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cElementDecoratorElementParserRuleCall_3_0 = (RuleCall)cElementAssignment_3.eContents().get(0);
+		private final Assignment cElementAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cElementDecoratorElementParserRuleCall_1_0 = (RuleCall)cElementAssignment_1.eContents().get(0);
 		
 		//Decorator:
-		//	'decorator' position=INT '%' element=DecoratorElement;
+		//	'decorator' element=DecoratorElement;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'decorator' position=INT '%' element=DecoratorElement
+		//'decorator' element=DecoratorElement
 		public Group getGroup() { return cGroup; }
 		
 		//'decorator'
 		public Keyword getDecoratorKeyword_0() { return cDecoratorKeyword_0; }
 		
-		//position=INT
-		public Assignment getPositionAssignment_1() { return cPositionAssignment_1; }
-		
-		//INT
-		public RuleCall getPositionINTTerminalRuleCall_1_0() { return cPositionINTTerminalRuleCall_1_0; }
-		
-		//'%'
-		public Keyword getPercentSignKeyword_2() { return cPercentSignKeyword_2; }
-		
 		//element=DecoratorElement
-		public Assignment getElementAssignment_3() { return cElementAssignment_3; }
+		public Assignment getElementAssignment_1() { return cElementAssignment_1; }
 		
 		//DecoratorElement
-		public RuleCall getElementDecoratorElementParserRuleCall_3_0() { return cElementDecoratorElementParserRuleCall_3_0; }
+		public RuleCall getElementDecoratorElementParserRuleCall_1_0() { return cElementDecoratorElementParserRuleCall_1_0; }
 	}
 	public class AnchorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.Anchor");
@@ -2406,21 +2394,22 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cXINTTerminalRuleCall_1_0 = (RuleCall)cXAssignment_1.eContents().get(0);
 		private final Assignment cXRelativeAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final Keyword cXRelativePercentSignKeyword_2_0 = (Keyword)cXRelativeAssignment_2.eContents().get(0);
-		private final Assignment cYAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cYINTTerminalRuleCall_3_0 = (RuleCall)cYAssignment_3.eContents().get(0);
-		private final Assignment cYRelativeAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final Keyword cYRelativePercentSignKeyword_4_0 = (Keyword)cYRelativeAssignment_4.eContents().get(0);
-		private final Assignment cConditionalAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cConditionalFeatureConditionalParserRuleCall_5_0 = (RuleCall)cConditionalAssignment_5.eContents().get(0);
-		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Assignment cYAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
+		private final RuleCall cYINTTerminalRuleCall_3_0_0 = (RuleCall)cYAssignment_3_0.eContents().get(0);
+		private final Assignment cYRelativeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final Keyword cYRelativePercentSignKeyword_3_1_0 = (Keyword)cYRelativeAssignment_3_1.eContents().get(0);
+		private final Assignment cConditionalAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cConditionalFeatureConditionalParserRuleCall_4_0 = (RuleCall)cConditionalAssignment_4.eContents().get(0);
+		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Position:
-		//	'position' x=INT xRelative?='%'? y=INT yRelative?='%'?
+		//	'position' x=INT xRelative?='%'? (y=INT yRelative?='%'?)?
 		//	conditional=FeatureConditional?
 		//	';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'position' x=INT xRelative?='%'? y=INT yRelative?='%'? conditional=FeatureConditional? ';'
+		//'position' x=INT xRelative?='%'? (y=INT yRelative?='%'?)? conditional=FeatureConditional? ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'position'
@@ -2438,26 +2427,29 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'%'
 		public Keyword getXRelativePercentSignKeyword_2_0() { return cXRelativePercentSignKeyword_2_0; }
 		
+		//(y=INT yRelative?='%'?)?
+		public Group getGroup_3() { return cGroup_3; }
+		
 		//y=INT
-		public Assignment getYAssignment_3() { return cYAssignment_3; }
+		public Assignment getYAssignment_3_0() { return cYAssignment_3_0; }
 		
 		//INT
-		public RuleCall getYINTTerminalRuleCall_3_0() { return cYINTTerminalRuleCall_3_0; }
+		public RuleCall getYINTTerminalRuleCall_3_0_0() { return cYINTTerminalRuleCall_3_0_0; }
 		
 		//yRelative?='%'?
-		public Assignment getYRelativeAssignment_4() { return cYRelativeAssignment_4; }
+		public Assignment getYRelativeAssignment_3_1() { return cYRelativeAssignment_3_1; }
 		
 		//'%'
-		public Keyword getYRelativePercentSignKeyword_4_0() { return cYRelativePercentSignKeyword_4_0; }
+		public Keyword getYRelativePercentSignKeyword_3_1_0() { return cYRelativePercentSignKeyword_3_1_0; }
 		
 		//conditional=FeatureConditional?
-		public Assignment getConditionalAssignment_5() { return cConditionalAssignment_5; }
+		public Assignment getConditionalAssignment_4() { return cConditionalAssignment_4; }
 		
 		//FeatureConditional
-		public RuleCall getConditionalFeatureConditionalParserRuleCall_5_0() { return cConditionalFeatureConditionalParserRuleCall_5_0; }
+		public RuleCall getConditionalFeatureConditionalParserRuleCall_4_0() { return cConditionalFeatureConditionalParserRuleCall_4_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
+		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
 	}
 	public class CornerElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "pt.iscte.xdiagram.dsl.XdiagramDsl.Corner");
@@ -3571,7 +3563,7 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Decorator:
-	//	'decorator' position=INT '%' element=DecoratorElement;
+	//	'decorator' element=DecoratorElement;
 	public DecoratorElements getDecoratorAccess() {
 		return pDecorator;
 	}
@@ -4099,7 +4091,7 @@ public class XdiagramDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Position:
-	//	'position' x=INT xRelative?='%'? y=INT yRelative?='%'?
+	//	'position' x=INT xRelative?='%'? (y=INT yRelative?='%'?)?
 	//	conditional=FeatureConditional?
 	//	';';
 	public PositionElements getPositionAccess() {

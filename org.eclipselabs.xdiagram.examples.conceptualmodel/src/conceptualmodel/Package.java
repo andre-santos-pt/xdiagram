@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link conceptualmodel.Package#getNamespace <em>Namespace</em>}</li>
  *   <li>{@link conceptualmodel.Package#getEntities <em>Entities</em>}</li>
+ *   <li>{@link conceptualmodel.Package#getComments <em>Comments</em>}</li>
  * </ul>
  *
  * @see conceptualmodel.ConceptualmodelPackage#getPackage()
@@ -65,5 +66,21 @@ public interface Package extends EObject {
 	 * @generated
 	 */
 	EList<Entity> getEntities();
+
+	/**
+	 * Returns the value of the '<em><b>Comments</b></em>' containment reference list.
+	 * The list contents are of type {@link conceptualmodel.Comment}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Comments</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Comments</em>' containment reference list.
+	 * @see conceptualmodel.ConceptualmodelPackage#getPackage_Comments()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Comment> getComments();
 
 } // Package

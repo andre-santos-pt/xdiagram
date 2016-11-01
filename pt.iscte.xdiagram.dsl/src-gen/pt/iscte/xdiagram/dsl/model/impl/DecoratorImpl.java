@@ -24,7 +24,6 @@ import pt.iscte.xdiagram.dsl.model.ModelPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.DecoratorImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link pt.iscte.xdiagram.dsl.model.impl.DecoratorImpl#getElement <em>Element</em>}</li>
  * </ul>
  *
@@ -32,26 +31,6 @@ import pt.iscte.xdiagram.dsl.model.ModelPackage;
  */
 public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decorator
 {
-  /**
-   * The default value of the '{@link #getPosition() <em>Position</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPosition()
-   * @generated
-   * @ordered
-   */
-  protected static final int POSITION_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getPosition() <em>Position</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPosition()
-   * @generated
-   * @ordered
-   */
-  protected int position = POSITION_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getElement() <em>Element</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -81,29 +60,6 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
   protected EClass eStaticClass()
   {
     return ModelPackage.Literals.DECORATOR;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public int getPosition()
-  {
-    return position;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setPosition(int newPosition)
-  {
-    int oldPosition = position;
-    position = newPosition;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.DECORATOR__POSITION, oldPosition, position));
   }
 
   /**
@@ -180,8 +136,6 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
   {
     switch (featureID)
     {
-      case ModelPackage.DECORATOR__POSITION:
-        return getPosition();
       case ModelPackage.DECORATOR__ELEMENT:
         return getElement();
     }
@@ -198,9 +152,6 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
   {
     switch (featureID)
     {
-      case ModelPackage.DECORATOR__POSITION:
-        setPosition((Integer)newValue);
-        return;
       case ModelPackage.DECORATOR__ELEMENT:
         setElement((FeatureContainer)newValue);
         return;
@@ -218,9 +169,6 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
   {
     switch (featureID)
     {
-      case ModelPackage.DECORATOR__POSITION:
-        setPosition(POSITION_EDEFAULT);
-        return;
       case ModelPackage.DECORATOR__ELEMENT:
         setElement((FeatureContainer)null);
         return;
@@ -238,29 +186,10 @@ public class DecoratorImpl extends MinimalEObjectImpl.Container implements Decor
   {
     switch (featureID)
     {
-      case ModelPackage.DECORATOR__POSITION:
-        return position != POSITION_EDEFAULT;
       case ModelPackage.DECORATOR__ELEMENT:
         return element != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (position: ");
-    result.append(position);
-    result.append(')');
-    return result.toString();
   }
 
 } //DecoratorImpl

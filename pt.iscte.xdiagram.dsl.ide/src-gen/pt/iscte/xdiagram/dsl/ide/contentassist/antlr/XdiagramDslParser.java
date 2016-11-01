@@ -119,6 +119,7 @@ public class XdiagramDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSizeAccess().getGroup_3(), "rule__Size__Group_3__0");
 					put(grammarAccess.getPointAccess().getGroup(), "rule__Point__Group__0");
 					put(grammarAccess.getPositionAccess().getGroup(), "rule__Position__Group__0");
+					put(grammarAccess.getPositionAccess().getGroup_3(), "rule__Position__Group_3__0");
 					put(grammarAccess.getCornerAccess().getGroup(), "rule__Corner__Group__0");
 					put(grammarAccess.getLayoutAccess().getGroup(), "rule__Layout__Group__0");
 					put(grammarAccess.getLayoutAccess().getGroup_2(), "rule__Layout__Group_2__0");
@@ -152,8 +153,7 @@ public class XdiagramDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLinkAccess().getTargetReferenceAssignment_1_1_5(), "rule__Link__TargetReferenceAssignment_1_1_5");
 					put(grammarAccess.getLinkAccess().getFeaturesAssignment_3(), "rule__Link__FeaturesAssignment_3");
 					put(grammarAccess.getLinkAccess().getDecoratorsAssignment_4(), "rule__Link__DecoratorsAssignment_4");
-					put(grammarAccess.getDecoratorAccess().getPositionAssignment_1(), "rule__Decorator__PositionAssignment_1");
-					put(grammarAccess.getDecoratorAccess().getElementAssignment_3(), "rule__Decorator__ElementAssignment_3");
+					put(grammarAccess.getDecoratorAccess().getElementAssignment_1(), "rule__Decorator__ElementAssignment_1");
 					put(grammarAccess.getAnchorAccess().getDirectionAssignment_1(), "rule__Anchor__DirectionAssignment_1");
 					put(grammarAccess.getAnchorAccess().getModelReferenceAssignment_2(), "rule__Anchor__ModelReferenceAssignment_2");
 					put(grammarAccess.getAnchorAccess().getMaxAssignment_3_1(), "rule__Anchor__MaxAssignment_3_1");
@@ -228,9 +228,9 @@ public class XdiagramDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPointAccess().getConditionalAssignment_3(), "rule__Point__ConditionalAssignment_3");
 					put(grammarAccess.getPositionAccess().getXAssignment_1(), "rule__Position__XAssignment_1");
 					put(grammarAccess.getPositionAccess().getXRelativeAssignment_2(), "rule__Position__XRelativeAssignment_2");
-					put(grammarAccess.getPositionAccess().getYAssignment_3(), "rule__Position__YAssignment_3");
-					put(grammarAccess.getPositionAccess().getYRelativeAssignment_4(), "rule__Position__YRelativeAssignment_4");
-					put(grammarAccess.getPositionAccess().getConditionalAssignment_5(), "rule__Position__ConditionalAssignment_5");
+					put(grammarAccess.getPositionAccess().getYAssignment_3_0(), "rule__Position__YAssignment_3_0");
+					put(grammarAccess.getPositionAccess().getYRelativeAssignment_3_1(), "rule__Position__YRelativeAssignment_3_1");
+					put(grammarAccess.getPositionAccess().getConditionalAssignment_4(), "rule__Position__ConditionalAssignment_4");
 					put(grammarAccess.getCornerAccess().getAngleAssignment_1(), "rule__Corner__AngleAssignment_1");
 					put(grammarAccess.getCornerAccess().getConditionalAssignment_2(), "rule__Corner__ConditionalAssignment_2");
 					put(grammarAccess.getLayoutAccess().getVerticalAssignment_1_0(), "rule__Layout__VerticalAssignment_1_0");

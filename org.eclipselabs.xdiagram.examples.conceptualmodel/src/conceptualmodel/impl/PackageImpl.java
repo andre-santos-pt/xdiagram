@@ -2,6 +2,7 @@
  */
 package conceptualmodel.impl;
 
+import conceptualmodel.Comment;
 import conceptualmodel.ConceptualmodelPackage;
 import conceptualmodel.Entity;
 
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link conceptualmodel.impl.PackageImpl#getNamespace <em>Namespace</em>}</li>
  *   <li>{@link conceptualmodel.impl.PackageImpl#getEntities <em>Entities</em>}</li>
+ *   <li>{@link conceptualmodel.impl.PackageImpl#getComments <em>Comments</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,6 +67,16 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements concept
 	 * @ordered
 	 */
 	protected EList<Entity> entities;
+
+	/**
+	 * The cached value of the '{@link #getComments() <em>Comments</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getComments()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Comment> comments;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,11 +135,25 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements concept
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Comment> getComments() {
+		if (comments == null) {
+			comments = new EObjectContainmentEList<Comment>(Comment.class, this, ConceptualmodelPackage.PACKAGE__COMMENTS);
+		}
+		return comments;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ConceptualmodelPackage.PACKAGE__ENTITIES:
 				return ((InternalEList<?>)getEntities()).basicRemove(otherEnd, msgs);
+			case ConceptualmodelPackage.PACKAGE__COMMENTS:
+				return ((InternalEList<?>)getComments()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -144,6 +170,8 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements concept
 				return getNamespace();
 			case ConceptualmodelPackage.PACKAGE__ENTITIES:
 				return getEntities();
+			case ConceptualmodelPackage.PACKAGE__COMMENTS:
+				return getComments();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -164,6 +192,10 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements concept
 				getEntities().clear();
 				getEntities().addAll((Collection<? extends Entity>)newValue);
 				return;
+			case ConceptualmodelPackage.PACKAGE__COMMENTS:
+				getComments().clear();
+				getComments().addAll((Collection<? extends Comment>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -182,6 +214,9 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements concept
 			case ConceptualmodelPackage.PACKAGE__ENTITIES:
 				getEntities().clear();
 				return;
+			case ConceptualmodelPackage.PACKAGE__COMMENTS:
+				getComments().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -198,6 +233,8 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements concept
 				return NAMESPACE_EDEFAULT == null ? namespace != null : !NAMESPACE_EDEFAULT.equals(namespace);
 			case ConceptualmodelPackage.PACKAGE__ENTITIES:
 				return entities != null && !entities.isEmpty();
+			case ConceptualmodelPackage.PACKAGE__COMMENTS:
+				return comments != null && !comments.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

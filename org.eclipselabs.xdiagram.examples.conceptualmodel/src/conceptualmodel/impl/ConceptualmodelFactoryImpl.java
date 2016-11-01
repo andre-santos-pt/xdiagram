@@ -5,6 +5,7 @@ package conceptualmodel.impl;
 import conceptualmodel.Association;
 import conceptualmodel.AssociationType;
 import conceptualmodel.Attribute;
+import conceptualmodel.Comment;
 import conceptualmodel.ConceptualmodelFactory;
 import conceptualmodel.ConceptualmodelPackage;
 import conceptualmodel.Entity;
@@ -66,6 +67,7 @@ public class ConceptualmodelFactoryImpl extends EFactoryImpl implements Conceptu
 			case ConceptualmodelPackage.ATTRIBUTE: return createAttribute();
 			case ConceptualmodelPackage.ASSOCIATION: return createAssociation();
 			case ConceptualmodelPackage.PACKAGE: return createPackage();
+			case ConceptualmodelPackage.COMMENT: return createComment();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -139,6 +141,16 @@ public class ConceptualmodelFactoryImpl extends EFactoryImpl implements Conceptu
 	public conceptualmodel.Package createPackage() {
 		PackageImpl package_ = new PackageImpl();
 		return package_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Comment createComment() {
+		CommentImpl comment = new CommentImpl();
+		return comment;
 	}
 
 	/**
