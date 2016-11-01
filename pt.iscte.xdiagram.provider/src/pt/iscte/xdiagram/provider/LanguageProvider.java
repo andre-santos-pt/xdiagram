@@ -623,8 +623,9 @@ public final class LanguageProvider implements GraphicsProvider {
 		}
 		// simple link
 		else {
-			EObject sourceObject = anchorHandler.get(source);
-			EObject targetObject = anchorHandler.get(target);
+//			EObject sourceObject = anchorHandler.get(source);
+			EObject sourceObject = ((ContainerShape) source.eContainer()).getLink().getBusinessObjects().get(0);
+//			EObject targetObject = anchorHandler.get(target);
 
 			link = matchLink(sourceObject);
 		}
@@ -661,19 +662,26 @@ public final class LanguageProvider implements GraphicsProvider {
 			boolean active = decorator.getElement() instanceof Label;
 			ConnectionDecorator dec = 
 					Graphiti.getPeCreateService().createConnectionDecorator(connection, active, position, true);
-
 			GraphicsAlgorithm decFig = ElementCreation.createNodeFigure(decorator.getElement(), diagram, dec, bundle);
 			featureChain.update(decorator.getElement(), eObject, diagram, decFig, dec);
 		}
 	}
 
 
+	/*
+	 * TODO: bug
+	 * java.lang.NullPointerException
+	at pt.iscte.xdiagram.provider.LanguageProvider.matchLink(LanguageProvider.java:676)
+	at pt.iscte.xdiagram.provider.LanguageProvider.createConnectionFigure(LanguageProvider.java:629)
+	at pt.iscte.xdiagram.interpreter.internal.CreateConnectionFeature.add(CreateConnectionFeature.java:35)
+	at org.eclipse.graphiti.internal.command.AddFeatureCommandWithContext.execute(AddFeatureCommandWithContext.java:76)
+	 */
 	private Link matchLink(EObject sourceObject) {
 		assert sourceObject != null;
 		for(Link l : links.values()) {
 			EReference ref = l.getModelReference();
 			EClass refOwner = (EClass) ref.eContainer();
-			if(refOwner.isSuperTypeOf(sourceObject.eClass()))
+			if(refOwner.isSuperTypeOf(sourceObject.eClass()))  // bug: null
 				return l;
 		}
 		return null;
@@ -729,7 +737,11 @@ public final class LanguageProvider implements GraphicsProvider {
 		return gFeatureProvider.getUpdateFeature(updateContext);
 	}
 
-
+/* TODO bug
+ * java.lang.ClassCastException: org.eclipse.emf.ecore.change.impl.ChangeDescriptionImpl cannot be cast to org.eclipse.graphiti.mm.pictograms.PictogramElement
+	at pt.iscte.xdiagram.provider.LanguageProvider.internalUpdate(LanguageProvider.java:735)
+	at pt.iscte.xdiagram.provider.internal.FeatureHandlerChain$Listener.notifyChanged(FeatureHandlerChain.java:117)
+	*/
 	public void internalUpdate(PictogramElement element) {
 		while(!(element.eContainer() instanceof Diagram))
 			element = (PictogramElement) element.eContainer();

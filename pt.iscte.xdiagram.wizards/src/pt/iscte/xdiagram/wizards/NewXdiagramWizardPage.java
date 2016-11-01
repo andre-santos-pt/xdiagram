@@ -164,7 +164,7 @@ public class NewXdiagramWizardPage extends WizardPage {
 //				list.add(eClassifier.getName());
 //		}
 
-		
+		int rootSel = rootCombo.getSelectionIndex();
 		List<String> list = new ArrayList<>();
 		for (EClassifier eClassifier : ePackage.getEClassifiers()) {
 			if(eClassifier instanceof EClass && !((EClass) eClassifier).isAbstract())
@@ -174,6 +174,9 @@ public class NewXdiagramWizardPage extends WizardPage {
 		if(list.size() == 0) {
 			updateStatus("Ecore model must contain at least one class");
 			return;
+		}
+		else if(rootSel != -1) {
+			rootCombo.select(rootSel);
 		}
 		else {
 			rootCombo.select(0);

@@ -5,6 +5,7 @@
 <diagramType id="conceptualmodelDiagramType" name="Conceptual Diagram" type="conceptualmodel" />
 </extension>
 
+
  <extension
 	         point="org.eclipse.graphiti.ui.imageProviders">
 	      <imageProvider
@@ -12,6 +13,7 @@
 	            id="org.eclipselabs.xdiagram.examples.conceptualmodel.imageProvider">
 	      </imageProvider>
 	   </extension>
+
 
 <extension point="org.eclipse.graphiti.ui.diagramTypeProviders" >
 <diagramTypeProvider class="pt.iscte.xdiagram.interpreter.XDiagramTypeProvider" id="conceptualmodelDiagramProvider" name=" Type Provider" >
@@ -24,7 +26,7 @@
 
 
 <extension point="pt.iscte.xdiagram.interpreter.providers" >
-<provider diagramType="conceptualmodelDiagram" ePackageURI="http://org.eclipselabs.xdiagram.examples/ConceptualModel" provider="pt.iscte.xdiagram.provider.LanguageProvider" >
+<provider diagramType="conceptualmodel" ePackageURI="http://org.eclipselabs.xdiagram.examples/ConceptualModel" provider="pt.iscte.xdiagram.provider.LanguageProvider" >
 <property id="file" value="conceptualmodel.xdia" />
 </provider>
 </extension>

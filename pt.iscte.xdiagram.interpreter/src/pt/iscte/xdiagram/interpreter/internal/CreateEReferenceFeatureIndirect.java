@@ -21,7 +21,7 @@ public class CreateEReferenceFeatureIndirect extends AbstractCreateEReferenceFea
 	private final EReference targetRef;
 
 	public CreateEReferenceFeatureIndirect(GenericFeatureProvider fp, EReference eReference, EReference target, EClass objectType) {
-		super(fp, eReference, (EClass) eReference.eContainer(), target.getEReferenceType());
+		super(fp, objectType.getName(), eReference, (EClass) eReference.eContainer(), target.getEReferenceType());
 		this.targetRef = target;
 	}
 

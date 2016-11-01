@@ -278,15 +278,6 @@ public class ConceptualmodelPackageImpl extends EPackageImpl implements Conceptu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPackage_Packages() {
-		return (EReference)packageEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getAssociationType() {
 		return associationTypeEEnum;
 	}
@@ -339,7 +330,6 @@ public class ConceptualmodelPackageImpl extends EPackageImpl implements Conceptu
 		packageEClass = createEClass(PACKAGE);
 		createEAttribute(packageEClass, PACKAGE__NAMESPACE);
 		createEReference(packageEClass, PACKAGE__ENTITIES);
-		createEReference(packageEClass, PACKAGE__PACKAGES);
 
 		// Create enums
 		associationTypeEEnum = createEEnum(ASSOCIATION_TYPE);
@@ -395,7 +385,6 @@ public class ConceptualmodelPackageImpl extends EPackageImpl implements Conceptu
 		initEClass(packageEClass, conceptualmodel.Package.class, "Package", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPackage_Namespace(), ecorePackage.getEString(), "namespace", null, 1, 1, conceptualmodel.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPackage_Entities(), this.getEntity(), null, "entities", null, 0, -1, conceptualmodel.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPackage_Packages(), this.getPackage(), null, "packages", null, 0, -1, conceptualmodel.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(associationTypeEEnum, AssociationType.class, "AssociationType");

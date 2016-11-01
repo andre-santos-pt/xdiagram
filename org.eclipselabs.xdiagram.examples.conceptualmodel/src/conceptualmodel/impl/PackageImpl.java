@@ -31,7 +31,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link conceptualmodel.impl.PackageImpl#getNamespace <em>Namespace</em>}</li>
  *   <li>{@link conceptualmodel.impl.PackageImpl#getEntities <em>Entities</em>}</li>
- *   <li>{@link conceptualmodel.impl.PackageImpl#getPackages <em>Packages</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,16 +65,6 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements concept
 	 * @ordered
 	 */
 	protected EList<Entity> entities;
-
-	/**
-	 * The cached value of the '{@link #getPackages() <em>Packages</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPackages()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<conceptualmodel.Package> packages;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,25 +123,11 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements concept
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<conceptualmodel.Package> getPackages() {
-		if (packages == null) {
-			packages = new EObjectContainmentEList<conceptualmodel.Package>(conceptualmodel.Package.class, this, ConceptualmodelPackage.PACKAGE__PACKAGES);
-		}
-		return packages;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ConceptualmodelPackage.PACKAGE__ENTITIES:
 				return ((InternalEList<?>)getEntities()).basicRemove(otherEnd, msgs);
-			case ConceptualmodelPackage.PACKAGE__PACKAGES:
-				return ((InternalEList<?>)getPackages()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -169,8 +144,6 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements concept
 				return getNamespace();
 			case ConceptualmodelPackage.PACKAGE__ENTITIES:
 				return getEntities();
-			case ConceptualmodelPackage.PACKAGE__PACKAGES:
-				return getPackages();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -191,10 +164,6 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements concept
 				getEntities().clear();
 				getEntities().addAll((Collection<? extends Entity>)newValue);
 				return;
-			case ConceptualmodelPackage.PACKAGE__PACKAGES:
-				getPackages().clear();
-				getPackages().addAll((Collection<? extends conceptualmodel.Package>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -213,9 +182,6 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements concept
 			case ConceptualmodelPackage.PACKAGE__ENTITIES:
 				getEntities().clear();
 				return;
-			case ConceptualmodelPackage.PACKAGE__PACKAGES:
-				getPackages().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -232,8 +198,6 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements concept
 				return NAMESPACE_EDEFAULT == null ? namespace != null : !NAMESPACE_EDEFAULT.equals(namespace);
 			case ConceptualmodelPackage.PACKAGE__ENTITIES:
 				return entities != null && !entities.isEmpty();
-			case ConceptualmodelPackage.PACKAGE__PACKAGES:
-				return packages != null && !packages.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

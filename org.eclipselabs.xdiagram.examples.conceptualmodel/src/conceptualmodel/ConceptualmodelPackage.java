@@ -269,22 +269,13 @@ public interface ConceptualmodelPackage extends EPackage {
 	int PACKAGE__ENTITIES = 1;
 
 	/**
-	 * The feature id for the '<em><b>Packages</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACKAGE__PACKAGES = 2;
-
-	/**
 	 * The number of structural features of the '<em>Package</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PACKAGE_FEATURE_COUNT = 3;
+	int PACKAGE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Package</em>' class.
@@ -490,17 +481,6 @@ public interface ConceptualmodelPackage extends EPackage {
 	EReference getPackage_Entities();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link conceptualmodel.Package#getPackages <em>Packages</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Packages</em>'.
-	 * @see conceptualmodel.Package#getPackages()
-	 * @see #getPackage()
-	 * @generated
-	 */
-	EReference getPackage_Packages();
-
-	/**
 	 * Returns the meta object for enum '{@link conceptualmodel.AssociationType <em>Association Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -676,14 +656,6 @@ public interface ConceptualmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PACKAGE__ENTITIES = eINSTANCE.getPackage_Entities();
-
-		/**
-		 * The meta object literal for the '<em><b>Packages</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PACKAGE__PACKAGES = eINSTANCE.getPackage_Packages();
 
 		/**
 		 * The meta object literal for the '{@link conceptualmodel.AssociationType <em>Association Type</em>}' enum.

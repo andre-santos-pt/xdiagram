@@ -170,7 +170,11 @@ public class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
               String _name_2 = r.getName();
               QualifiedName qname = QualifiedName.create(_name_1, _name_2);
               EObjectDescription rdesc = new EObjectDescription(qname, r, null);
-              this.referenceLinksMap.put(qname, rdesc);
+              boolean _isContainment = r.isContainment();
+              boolean _not = (!_isContainment);
+              if (_not) {
+                this.referenceLinksMap.put(qname, rdesc);
+              }
               EClassifier _eType = r.getEType();
               String _name_3 = _eType.getName();
               String _name_4 = r.getName();
@@ -184,8 +188,8 @@ public class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
               QualifiedName _create_1 = QualifiedName.create(_name_6);
               EObjectDescription _eObjectDescription_2 = new EObjectDescription(_create_1, r, null);
               this.outgoingRef.put(classQname, _eObjectDescription_2);
-              boolean _isContainment = r.isContainment();
-              if (_isContainment) {
+              boolean _isContainment_1 = r.isContainment();
+              if (_isContainment_1) {
                 String _name_7 = ((EClass)c).getName();
                 QualifiedName _create_2 = QualifiedName.create(_name_7);
                 qname = _create_2;

@@ -5,11 +5,11 @@ metamodel {
 
 diagram Package {
 	contains entities;
-	contains packages;
 }
 
-color lightgray 240 240 240;
-
+colors {
+	lightgray 240 240 240;
+}
 
 node Entity rectangle {
 	size 200 100 resizable;
@@ -18,15 +18,13 @@ node Entity rectangle {
 	child image "class_icon.gif" {
 		size 32 32;
 		position 10% 0;
-	}
-		
+	}	
 	child label {
 		text "<<abstract>>";
 		position 50% 0;
 		size 150 15;
 		invisible if abstract = false;	
 	}
-	
 	child label {
 		position 50% 15;
 		text edit:name;
@@ -52,14 +50,6 @@ node Attribute label {
 	align left;
 }
 
-node Package rectangle {
-	contains entities;
-	contains packages;
-	background yellow;
-	size 500 500;
-	layout horizontal margin 5;
-}
-
 link reference Entity.extends {
 	foreground black;
 	decorator 100% triangle {
@@ -69,7 +59,6 @@ link reference Entity.extends {
 	}	 
 }
 
-
 link class Association source Entity.associations target to {
 	decorator 0% rhombus {
 		size 20 20;
@@ -77,16 +66,13 @@ link class Association source Entity.associations target to {
 		background white if type = AGGREGATION;
 		invisible if type = REFERENCE;
 	}
-	
 	decorator 50% label {
 		text name;
 	}
-	
 	decorator 85% label {
 		text cardinality;
 		font 16;
-	}
-		
+	}	
 	decorator 100% arrow {
 		invisible if type <> REFERENCE;
 		size 10 10;

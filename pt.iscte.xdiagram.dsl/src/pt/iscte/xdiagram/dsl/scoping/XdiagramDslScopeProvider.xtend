@@ -120,7 +120,8 @@ class XdiagramDslScopeProvider extends AbstractXdiagramDslScopeProvider {
 					for (r : c.EAllReferences) {
 						var qname = QualifiedName.create(c.name, r.name)
 						var rdesc = new EObjectDescription(qname, r, null);
-						referenceLinksMap.put(qname, rdesc);
+						if(!r.isContainment)
+							referenceLinksMap.put(qname, rdesc);
 						
 						var iname = QualifiedName.create(r.EType.name, r.name);
 						incomingRef.put(QualifiedName.create(r.EType.name), new EObjectDescription(iname,r,null));

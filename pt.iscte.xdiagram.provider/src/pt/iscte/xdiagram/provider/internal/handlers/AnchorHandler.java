@@ -32,10 +32,10 @@ import pt.iscte.xdiagram.provider.internal.FeatureHandler;
 
 public class AnchorHandler implements FeatureHandler {
 
-	private Map<org.eclipse.graphiti.mm.pictograms.Anchor, EObject> anchors;
+//	private Map<org.eclipse.graphiti.mm.pictograms.Anchor, EObject> anchors;
 	
 	public AnchorHandler() {
-		anchors = Maps.newHashMap(); // weakHashMap?
+//		anchors = Maps.newHashMap(); // weakHashMap?
 	}
 	
 	@Override
@@ -49,7 +49,7 @@ public class AnchorHandler implements FeatureHandler {
 		// TODO connect to anchor
 		ChopboxAnchor gAnchor = Graphiti.getPeCreateService().createChopboxAnchor((AnchorContainer) container);
 //		System.out.println(figure + "    ?? " + eObject + "\n\t" + gAnchor);
-		anchors.put(gAnchor, eObject);
+//		anchors.put(gAnchor, eObject);
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public class AnchorHandler implements FeatureHandler {
 		// only for top-level node figures
 		if(element.eContainer() instanceof Node && !LanguageProvider.hasFeature(element, pt.iscte.xdiagram.dsl.model.Anchor.class, true)) {
 			ChopboxAnchor gAnchor = Graphiti.getPeCreateService().createChopboxAnchor((AnchorContainer) container);
-			anchors.put(gAnchor, eObject);
+//			anchors.put(gAnchor, eObject);
 //			System.out.println(eObject + "\n\t" + gAnchor);
 		}
 			
@@ -65,9 +65,9 @@ public class AnchorHandler implements FeatureHandler {
 	
 	
 
-	public EObject get(org.eclipse.graphiti.mm.pictograms.Anchor a) {
-		return anchors.get(a);
-	}
+//	public EObject get(org.eclipse.graphiti.mm.pictograms.Anchor a) {
+//		return anchors.get(a);
+//	}
 
 	@Override
 	public boolean accept(FeatureContainer element) {

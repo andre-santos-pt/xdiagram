@@ -52,6 +52,13 @@
 			 -->
 	    </propertySections>
 	</extension>
+ <extension
+       point="org.eclipse.graphiti.ui.imageProviders">
+    <imageProvider
+          class="pt.iscte.xdiagram.interpreter.XDiagramImageProvider"
+          id="pt.iscte.xdiagram.interpreter.imageProvider">
+    </imageProvider>
+ </extension>
  
 
 

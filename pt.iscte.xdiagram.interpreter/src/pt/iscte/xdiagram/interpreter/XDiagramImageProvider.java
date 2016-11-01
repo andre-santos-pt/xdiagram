@@ -43,6 +43,7 @@ public class XDiagramImageProvider extends AbstractImageProvider {
 				if(i != -1 && i+1 < path.length()) {
 					String id = path.substring(i+1);
 					addImageFilePath(bundle.getSymbolicName() + ":" + id, path);
+					System.out.println(bundle.getSymbolicName() + ":" + id + " -- " + path);
 				}
 			}
 		}

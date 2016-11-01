@@ -20,7 +20,7 @@ import org.eclipse.graphiti.mm.pictograms.Connection;
 public class CreateEReferenceFeature extends AbstractCreateEReferenceFeature {
 	
 	public CreateEReferenceFeature(GenericFeatureProvider fp, EReference eReference) {
-		super(fp, eReference, (EClass) eReference.eContainer(), eReference.getEReferenceType());
+		super(fp, eReference.getName(), eReference, (EClass) eReference.eContainer(), eReference.getEReferenceType());
 	}
 
 	public Connection create(ICreateConnectionContext context) {

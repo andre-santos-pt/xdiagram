@@ -26,10 +26,10 @@ public abstract class AbstractCreateEReferenceFeature extends AbstractCreateConn
 	protected final GraphicsProvider provider;
 	
 	public AbstractCreateEReferenceFeature(
-			GenericFeatureProvider fp, EReference eReference, 
+			GenericFeatureProvider fp, String name, EReference eReference, 
 			EClass sourceType, EClass targetType) {
 		
-		super(fp, eReference.getName(), tooltip(sourceType, targetType));
+		super(fp, name, tooltip(sourceType, targetType));
 		
 		this.eReference = eReference;
 		this.sourceType = sourceType;

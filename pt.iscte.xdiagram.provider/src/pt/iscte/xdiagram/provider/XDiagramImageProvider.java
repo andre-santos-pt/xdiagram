@@ -128,7 +128,7 @@ public class XDiagramImageProvider extends AbstractImageProvider {
 //						id = id.substring(0, id.indexOf('.'));
 //						if(isValidJavaIdentifier(id)) {
 							addImageFilePath(bundle.getSymbolicName() + ":" + id, path);
-							System.out.println(bundle.getSymbolicName() + ":" + id + " ---- " + path);
+//							System.out.println(bundle.getSymbolicName() + ":" + id + " ---- " + path);
 //						}
 					}
 				}
@@ -136,29 +136,29 @@ public class XDiagramImageProvider extends AbstractImageProvider {
 		}
 	}
 
-	private IContributor findPlugin() {
-		IExtensionRegistry reg = Platform.getExtensionRegistry();
-
-		for(IConfigurationElement a : reg.getConfigurationElementsFor(ExtensionPointIds.GRAPHITI_IMAGE_PROVIDERS_EXT)) {
-			IContributor contributor = a.getContributor();
-
-			if(a.getName().equals("imageProvider") && a.getAttribute("class").equals(XDiagramImageProvider.class.getName())) {
-				String providerId = a.getAttribute("id");
-
-				for(IConfigurationElement b : reg.getConfigurationElementsFor(ExtensionPointIds.GRAPHITI_DIAGRAM_TYPE_PROVIDERS_EXT)) {
-
-					if(b.getName().equals("diagramTypeProvider")) {
-						for(IConfigurationElement c : b.getChildren("imageProvider")) {
-							String id = c.getAttribute("id");
-							if(id.equals(providerId))
-								return contributor;
-						}
-					}
-				}	
-			}
-		}
-		return null;
-	}
+//	private IContributor findPlugin() {
+//		IExtensionRegistry reg = Platform.getExtensionRegistry();
+//
+//		for(IConfigurationElement a : reg.getConfigurationElementsFor(ExtensionPointIds.GRAPHITI_IMAGE_PROVIDERS_EXT)) {
+//			IContributor contributor = a.getContributor();
+//
+//			if(a.getName().equals("imageProvider") && a.getAttribute("class").equals(XDiagramImageProvider.class.getName())) {
+//				String providerId = a.getAttribute("id");
+//
+//				for(IConfigurationElement b : reg.getConfigurationElementsFor(ExtensionPointIds.GRAPHITI_DIAGRAM_TYPE_PROVIDERS_EXT)) {
+//
+//					if(b.getName().equals("diagramTypeProvider")) {
+//						for(IConfigurationElement c : b.getChildren("imageProvider")) {
+//							String id = c.getAttribute("id");
+//							if(id.equals(providerId))
+//								return contributor;
+//						}
+//					}
+//				}	
+//			}
+//		}
+//		return null;
+//	}
 
 	private final static boolean isValidJavaIdentifier(String s) {
 		// an empty or null string cannot be a valid identifier
